@@ -16,6 +16,7 @@ let prop = defineProps({
   }
 })
 
+
 const showYaAnim = ref(false)
 const _randomNum = Math.floor(Math.random() * 10000);
 let _key = ref('')
