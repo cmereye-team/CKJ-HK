@@ -179,7 +179,7 @@ const problemData = {
     <div class="index_title pageCon">{{$t('pages.dental-service.title')}}</div>
     <ServiceIntroduce :introduceData="orthodonticsIntroduceData" />
     <div class="ltimg">
-      <img srcset="https://static.cmereye.com/imgs/2024/05/7a249ac493f2f191.webp 768w, https://static.cmereye.com/imgs/2024/05/da662d9a9e97417b.webp" src="https://static.cmereye.com/imgs/2024/05/da662d9a9e97417b.webp" />
+      <img srcset="https://static.cmereye.com/imgs/2024/05/f8cf5af81800962b.png 768w, https://static.cmereye.com/imgs/2024/05/da662d9a9e97417b.webp" src="https://static.cmereye.com/imgs/2024/05/da662d9a9e97417b.webp" />
     </div>
     <div class="step">
       <div class="dentistryServices-title">
