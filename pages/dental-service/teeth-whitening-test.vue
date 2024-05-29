@@ -112,7 +112,7 @@ const stepData = {
   infoLists: [
     {
       name: '專業牙科團隊',
-      text: '30分鐘滲透美白因子，能快速滲透到牙齒各個部位。'
+      text: '由合資格的經驗醫護進行治療操作，確保過程的專業性和安全性。'
     },
     {
       name: '舒適療程體驗',
@@ -254,6 +254,39 @@ const Blue_light_whitening_technology = {
     '大分子染色劑（深色）分解為小分子（淺色或無色），從而實現美白效果'
   ]
 }
+let effectImgCur = ref('1')
+const effectImg = [
+  {
+    id: '1',
+    img: 'https://static.cmereye.com/imgs/2024/05/2e21c3c33d33fbcd.webp'
+  },
+  {
+    id: '2',
+    img: 'https://static.cmereye.com/imgs/2024/05/e657e0bbc95c69dc.webp'
+  },
+  {
+    id: '3',
+    img: 'https://static.cmereye.com/imgs/2024/05/08cbbd39c861f252.webp'
+  },
+  {
+    id: '4',
+    img: 'https://static.cmereye.com/imgs/2024/05/122944eab685afd1.webp'
+  },
+  {
+    id: '5',
+    img: 'https://static.cmereye.com/imgs/2024/05/ce7de6b79b002930.webp'
+  },
+]
+
+const handley = (bool = false) => {
+  if(bool){
+    effectImgCur.value = '1'
+    return
+  }
+  if(effectImgCur.value < '5'){
+    effectImgCur.value = String(Number(effectImgCur.value) + 1)
+  }
+}
 </script>
 
 
@@ -332,7 +365,7 @@ const Blue_light_whitening_technology = {
             {{stepData.title}}
           </div>
         </div>
-        <div class="step-in">
+        <div class="step-in pcIn">
           <div class="step-in-list">
             <div class="lists-in" v-for="(item,index) in stepData.stepLists.slice(0, 5)" :key="index">
               <img :src="item.img" :alt="item.text" :title="item.text">
@@ -348,9 +381,17 @@ const Blue_light_whitening_technology = {
             <div class="line"></div>
           </div>
         </div>
+        <div class="step-in mbIn">
+          <div class="step-in-list">
+            <div class="lists-in" v-for="(item,index) in stepData.stepLists" :key="index">
+              <img :src="item.img" :alt="item.text" :title="item.text">
+              <p>{{item.text}}</p>
+            </div>
+          </div>
+        </div>
         <div class="step-info">
           <div class="infobg">
-            <img src="https://static.cmereye.com/imgs/2024/05/c1fd7f501e059f40.webp" alt="">
+            <img srcset="https://static.cmereye.com/imgs/2024/05/cbb4198d0a4133a5.png 768w,https://static.cmereye.com/imgs/2024/05/c1fd7f501e059f40.webp" src="https://static.cmereye.com/imgs/2024/05/c1fd7f501e059f40.webp" alt="">
             <div>
               <p>牙齒美白不僅是對的投資，更是對<span>自我信心</span>的提升。</p>
               <p>讓我們幫助您擁有一個<span>閃耀的笑容</span>，展現出最好的自己。</p>
@@ -377,12 +418,47 @@ const Blue_light_whitening_technology = {
             <p>使用<span>VITA比色板</span>作為標準，</p>
             <p>藍光美白一般都能讓牙齒提升少則<span>3-5個</span>色階，多則可能<span>10-14個</span>色階</p>
           </div>
+          <div class="gif">
+            <img src="https://s3-alpha-sig.figma.com/img/3802/30b7/e86dbf8a0fa2e716e7a6d40b7ffd3d80?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=J13ebwhKE5weg-lVjVsWoYWMTssy59xzfFyBqRGz3APDVc8Q9~Cfw2dL8zIsL-BOp63Yk5GalKdlAOVNTozY1lDCwH9X5k6G1FMWiK5wniBpXfHsx5E1XS7rq2HeCikmFJWrQcgahE1Y0d2cbzbEGezd5l9s5GSp1vWerh4pIJo4VT~Nq1IPOdOJMlMdY7-lHd25lWcpoqjlTEeMyZjaJ38PGNHc5Tgr2mT6B0QMveW-Ap4nd2keZrFBxclDsOm7oGBOzlT29iEl4RG~wpwnStHFoUx5goFbIHinJOM67jZKjcnU6bG6s1W-ss-puF8M5HvrTxmUaQxaIWvSw4WUjA__" alt="">
+          </div>
           <div class="image">
             <img src="https://static.cmereye.com/imgs/2024/05/4459f188130c0cce.png" alt="藍光美白效果" title="藍光美白效果">
           </div>
         </div>
         <div class="effect-r">
-
+          <div class="effect-r-t">
+            <div class="effect-r-t-k">
+              <img class="b" :src="effectImg[Number(effectImgCur)-1].img" alt="">
+              <img class="k" src="https://static.cmereye.com/imgs/2024/05/585c88596a22b9fd.png" alt="">
+            </div>
+            <div class="effect-r-t-y">
+              <div v-for="(item,index) in effectImg" :key="index">
+                <svg v-if="Number(item.id) <= Number(effectImgCur)" xmlns="http://www.w3.org/2000/svg" width="26" height="25" viewBox="0 0 26 25" fill="none">
+                <path d="M24.1053 2.72735C23.9009 2.48059 21.4108 -1.20456 15.3085 1.43289C15.3085 1.43289 14.0655 1.8455 13.2856 1.8455C12.5014 1.8455 11.2626 1.43289 11.2626 1.43289C5.1603 -1.20456 2.67018 2.48059 2.46579 2.72735C-0.700048 6.59858 1.71083 16.8935 4.77657 20.7486C10.3658 27.771 11.0373 22.666 13.2856 22.3505C15.5296 22.662 16.2053 27.771 21.7945 20.7486C24.8603 16.8935 27.2711 6.59453 24.1053 2.72735Z" fill="#FC1682"/>
+                </svg>
+                <svg v-else xmlns="http://www.w3.org/2000/svg" width="27" height="25" viewBox="0 0 27 25" fill="none">
+                <path d="M24.1053 2.75079C23.9009 2.50403 21.4108 -1.18112 15.3085 1.45633C15.3085 1.45633 14.0655 1.86894 13.2855 1.86894C12.5014 1.86894 11.2626 1.45633 11.2626 1.45633C5.16031 -1.18112 2.67018 2.50403 2.46579 2.75079C-0.700049 6.62201 1.71083 16.917 4.77657 20.772C10.3658 27.7944 11.0373 22.6894 13.2855 22.3739C15.5296 22.6854 16.2053 27.7944 21.7945 20.772C24.8603 16.917 27.2711 6.61797 24.1053 2.75079Z" stroke="#FC1682" stroke-miterlimit="10"/>
+                </svg>
+              </div>
+            </div>
+            <div class="effect-r-t-b">
+              <div class="l" @click="handley(true)">
+                <img src="https://static.cmereye.com/imgs/2024/05/cf4e7a6037ff4d3c.png" alt="">
+              </div>
+              <div class="r" @click="handley()">
+                <img src="https://static.cmereye.com/imgs/2024/05/688a272087d1bced.png" alt="">
+              </div>
+            </div>
+            <div class="effect-r-t-h" v-if="effectImgCur === '5'">
+              <img src="https://static.cmereye.com/imgs/2024/05/bf9188f97039ad04.png" alt="">
+            </div>
+            <div class="effect-r-t-r">
+              <img src="https://static.cmereye.com/imgs/2024/05/af34b28c6443802f.png" alt="">
+            </div>
+          </div>
+          <div class="effect-r-b">
+            <PageAnimBtnTypeTwo :str="'點擊預約'" />
+          </div>
         </div>
       </div>
       <div class="maintain">
@@ -781,6 +857,9 @@ const Blue_light_whitening_technology = {
         transform: translateY(-50%);
       }
     }
+    &.mbIn{
+      display: none;
+    }
   }
   &-info{
     .infobg{
@@ -868,9 +947,13 @@ const Blue_light_whitening_technology = {
 }
 .effect{
   width: 100%;
-  margin-top: 140px;
+  margin: 140px auto 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
   &-l{
     max-width: 1000px;
+    margin-right: 100px;
     .context{
       width: 100%;
       text-align: center;
@@ -884,9 +967,129 @@ const Blue_light_whitening_technology = {
         }
       }
     }
+    .gif{
+      display: none;
+    }
   }
   &-r{
-    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &-t{
+      position: relative;
+      &-k{
+        overflow: hidden;
+        border-radius: 50px;
+        position: relative;
+        .b{
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%,-50%);
+          border-radius: 70px;
+          z-index: 0;
+          width: calc(100% - 20px);
+          height: calc(100% - 20px);
+        }
+        .k{
+          width: 396px;
+          height: auto;
+          position: relative;
+          z-index: 1;
+        }
+      }
+      &-y{
+        position: absolute;
+        top: 10%;
+        left: 50%;
+        transform: translate(-50%);
+        display: grid;
+        z-index: 2;
+        grid-template-columns: repeat(5,1fr);
+        gap: 5px;
+      }
+      &-b{
+        position: absolute;
+        bottom: 40px;
+        right: 40px;
+        display: flex;
+        align-items: flex-end;
+        z-index: 3;
+        .l{
+          cursor: pointer;
+          width: 63px;
+          img{
+            width: 100%;
+          }
+        }
+        .r{
+          cursor: pointer;
+          width: 104px;
+          margin-left: 6px;
+          img{
+            width: 100%;
+          }
+        } 
+      }
+      &-h{
+        position: absolute;
+        left: 30%;
+        top: 35%;
+        width: 216px;
+        height: auto;
+        opacity: 0;
+        animation: hanim 4s forwards;
+        img{
+          width: 100%;
+        }
+      }
+      &-r{
+        position: absolute;
+        bottom: 90%;
+        left: 75%;
+        width: 268px;
+        img{
+          width: 100%;
+        }
+      }
+    }
+    &-b{
+      margin-top: 40px;
+    }
+  }
+  &::after{
+    content: '';
+    position: absolute;
+    bottom: 25%;
+    left: 0;
+    width: 100%;
+    height: 212px;
+    background: #F8CDCD;
+    z-index: -1;
+  }
+}
+@keyframes hanim {
+  0%{
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  20%{
+    opacity: 1;
+    transform: rotate(20deg);
+  }
+  40%{
+    transform: rotate(-20deg);
+  }
+  60%{
+    transform: rotate(10deg);
+  }
+  80%{
+    transform: rotate(-10deg);
+
+  }
+  100%{
+    transform: rotate(0deg);
+    opacity: 0;
   }
 }
 @media (min-width: 768px) and (max-width: 1920px) {
@@ -957,19 +1160,23 @@ const Blue_light_whitening_technology = {
   .maintain{
     margin-top: 5.1042vw;
     &-in{
-    width: calc(100% - 3.125vw);
-    max-width: 33.9063vw;
-    margin: 2.9688vw auto 0;
-    font-size: .9896vw;
-    letter-spacing: .2969vw;
-    &-l{
-      margin-right: 3.6979vw;
-      &::after{
-        left: .8854vw;
-        top: .7292vw;
+      width: calc(100% - 3.125vw);
+      max-width: 33.9063vw;
+      margin: 2.9688vw auto 0;
+      font-size: .9896vw;
+      letter-spacing: .2969vw;
+      &-l{
+        margin-right: 3.6979vw;
+        svg{
+          width: 10.2604vw;
+          height: 10.2604vw;
+        }
+        &::after{
+          left: .8854vw;
+          top: .7292vw;
+        }
       }
     }
-  }
   }
   .note {
     margin-top: 5.2083vw;
@@ -988,6 +1195,170 @@ const Blue_light_whitening_technology = {
           }
         }
       }
+    }
+  }
+  .note2{
+    margin: 6.25vw auto 0;
+    max-width: 52.8125vw;
+    &-lists{
+      margin-top: 2.9688vw;
+      gap: 1.8229vw 5.9375vw;
+      .list-in{
+        gap: 1.6406vw;
+        .image{
+          width: 7.7344vw;
+        }
+        .text{
+          font-size: .9375vw;
+        }
+      }
+    }
+  }
+  .Blue_light_whitening_technology{
+    margin-top: 5.5208vw;
+    &-topText{
+      max-width: 67.7083vw;
+      margin: 2.9688vw auto 0;
+      p{
+        font-size: .9896vw;
+      }
+    }
+    &-content{
+      max-width: 60.625vw;
+      gap: 3.125vw;
+      .lists-in{
+        h3{
+          font-size: 1.1979vw;
+          margin-bottom: .5208vw;
+        }
+        p{
+          max-width: 9.8958vw;
+          font-size: .9896vw;
+          letter-spacing: .1979vw;
+        }
+      }
+    }
+  }
+  .step{
+    margin-top: 5.5208vw;
+    &-in{
+      margin-top: .3646vw;
+      &-list{
+        max-width: 70.3125vw;
+        margin: 2.6042vw auto;
+        gap: 3.6458vw;
+        .lists-in{
+          p{
+            margin-top: .5208vw;
+            letter-spacing: .1979vw;
+            font-size: .9896vw;
+          }
+        }
+        &:nth-of-type(2){
+          max-width: 56.25vw;
+        }
+        &::before{
+          width: .7292vw;
+          height: 1.0938vw;
+          left: -2.6042vw;
+        }
+        &::after{
+          width: .7292vw;
+          height: 1.0938vw;
+          right: -2.6042vw;
+        }
+      }
+    }
+    &-info{
+      .infobg{
+        max-width: 100vw;
+        &>div{
+          max-width: 66.6667vw;
+          p{
+            font-size: 1.1979vw;
+          }
+        }
+      }
+      .lists{
+        max-width: 57.5vw;
+        margin: -9.375vw auto 0;
+        gap: 3.125vw;
+        &-in{
+          .centerBox{
+            h3{
+              font-size: 1.1979vw;
+              margin-bottom: .2604vw;
+              margin-top: 4.4271vw;
+            }
+            p{
+              font-size: .9896vw;
+              letter-spacing: .1042vw;
+              max-width: 9.4271vw;
+            }
+          }
+        }
+      }
+    }
+  }
+  .effect{
+    margin: 7.2917vw auto 0;
+    &-l{
+      max-width: 52.0833vw;
+      margin-right: 5.2083vw;
+      .context{
+        margin: 1.8229vw 0 .5208vw;
+        p{
+          font-size: .9896vw;
+          letter-spacing: .1979vw;
+        }
+      }
+    }
+    &-r{
+      &-t{
+        &-k{
+          border-radius: 2.6042vw;
+          .b{
+            border-radius: 3.6458vw;
+            width: calc(100% - 1.0417vw);
+            height: calc(100% - 1.0417vw);
+          }
+          .k{
+            width: 20.625vw;
+          }
+        }
+        &-y{
+          gap: .2604vw;
+          &>div{
+            width: 1.25vw;
+            svg{
+              width: 100%;
+            }
+          }
+        }
+        &-b{
+          bottom: 2.0833vw;
+          right: 2.0833vw;
+          .l{
+            width: 3.2813vw;
+          }
+          .r{
+            width: 5.4167vw;
+            margin-left: .3125vw;
+          } 
+        }
+        &-h{
+          width: 11.25vw;
+        }
+        &-r{
+          width: 13.9583vw;
+        }
+      }
+      &-b{
+        margin-top: 2.0833vw;
+      }
+    }
+    &::after{
+      height: 11.0417vw;
     }
   }
 }
@@ -1186,6 +1557,203 @@ const Blue_light_whitening_technology = {
           padding: 0 5px;
         }
       }
+    }
+  }
+  .step{
+    &-in{
+      padding: 0 30px;
+      &-list{
+        grid-template-columns: repeat(2,1fr);
+        gap: 30px;
+        margin: 45px auto;
+        .lists-in{
+          p{
+            font-family: "Noto Sans HK";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 200%; /* 32px */
+            letter-spacing: 1.6px;
+            text-align: left;
+          }
+          &:nth-of-type(2){
+            p{
+              text-align: center;
+            }
+          }
+        }
+        &::before,&::after{
+          display: none;
+        }
+      }
+      &.pcIn{
+        display: none;
+      }
+      &.mbIn{
+        display: grid;
+      }
+    }
+    &-info{
+      margin-top: 30px;
+      .infobg{
+        &>div{
+          position: initial;
+          width: 100%;
+          transform: none;
+          padding: 20px 30px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          p{
+            max-width: 100%;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 200%; /* 32px */
+            letter-spacing: 1.6px;
+            &:nth-of-type(1){
+              max-width: 65%;
+            }
+            &:nth-of-type(2){
+              max-width: 86%;
+            }
+          }
+        }
+      }
+      .lists{
+        grid-template-columns: repeat(1,1fr);
+        margin: 0 auto;
+        gap: 0;
+        display: block;
+        padding: 0 10px;
+        &-in{
+          width: 100%;
+          padding-bottom: calc(246 / 330 * 100%);
+          background-size: calc(246 / 330 * 100%) 100%;
+          background-position: center left;
+          z-index: 3;
+          .centerBox{
+            width: calc(246 / 330 * 100%);
+            height: 100%;
+            h3{
+              font-size: 16px;
+              margin-top: 60px;
+            }
+            p{
+              font-size: 16px;
+              width: 55%;
+              font-weight: 400;
+              line-height: 200%; /* 32px */
+              letter-spacing: 1.6px;
+            }
+          }
+          &:nth-of-type(2){
+            background-position: center right;
+            margin-top: -80px;
+            z-index: 2;
+            .centerBox{
+              left: auto;
+              right: 0;
+            }
+          }
+          &:nth-of-type(3){
+            margin-top: -70px;
+            z-index: 1;
+          }
+        }
+      }
+    }
+  }
+  .effect{
+    flex-direction: column;
+    margin: 60px auto 0;
+    padding-bottom: 40px;
+    &-l{
+      margin-right: 0;
+      .context{
+        margin: 49px 0 0;
+        padding: 0 30px;
+        p{
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 200%;
+          letter-spacing: 1.6px;
+        }
+      }
+      .gif{
+        display: block;
+        background: url(https://static.cmereye.com/imgs/2024/05/b6919cb8f6c06963.png) no-repeat;
+        background-size: 100% auto;
+        background-position: 0 30px;
+        margin-top: -80px;
+      }
+      .image{
+        height: calc(965 / 347 * (100vw - 100px));
+        width: 100%;
+        position: relative;
+        overflow: hidden;
+        padding: 0 30px;
+        margin-top: -60px;
+        img{
+          position: absolute;
+          height: calc(100vw - 100px);
+          width: calc(965 / 347 * (100vw - 100px));
+          max-width: 1000px;
+          transform: rotate(90deg);
+          transform-origin: calc((100vw - 80px) / 2) calc((100vw - 80px) / 2);
+        }
+      }
+    }
+    &-r{
+      padding: 80px 40px 0;
+      width: 100%;
+      &-t{
+        &-k{
+          border-radius: 30px;
+          .b{
+            width: calc(100% - 30px);
+            height: calc(100% - 30px);
+            border-radius: 30px;
+          }
+          .k{
+            width: 100%;
+          }
+        }
+        &-y{
+          gap: 2px;
+          &>div{
+            width: 20px;
+            svg{
+              width: 100%;
+            }
+          }
+        }
+        &-b{
+          .l{
+            width: 46px;
+          }
+          .r{
+            width: 76px;
+          }
+        }
+        &-h{
+          width: 158px;
+        }
+        &-r{
+          bottom: 93%;
+          left: auto;
+          right: -30px;
+          width: 184px;
+          z-index: 4;
+        }
+      }
+      
+    }
+    &::after{
+      height: 310px;
+      bottom: 0;
+
     }
   }
 }
