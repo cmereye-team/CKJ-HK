@@ -1047,7 +1047,7 @@ const handley = (bool = false) => {
         width: 216px;
         height: auto;
         opacity: 0;
-        animation: hanim 4s forwards;
+        animation: hanim 1s forwards;
         img{
           width: 100%;
         }
@@ -1080,25 +1080,15 @@ const handley = (bool = false) => {
 @keyframes hanim {
   0%{
     opacity: 0;
-    transform: scale(0.3);
+    transform: scale(0.1);
   }
-  20%{
+  50%{
     opacity: 1;
-    transform: rotate(20deg);
-  }
-  40%{
-    transform: rotate(-20deg);
-  }
-  60%{
-    transform: rotate(10deg);
-  }
-  80%{
-    transform: rotate(-10deg);
-
+    transform: scale(1);
   }
   100%{
-    transform: rotate(0deg);
     opacity: 0;
+    transform: scale(1);
   }
 }
 @media (min-width: 768px) and (max-width: 1920px) {
@@ -1111,7 +1101,6 @@ const handley = (bool = false) => {
     &-lists{
       margin-top: 2.0833vw;
       &-in{
-        max-width: 22.9167vw;
         &>div:last-child{
           margin-top: 1.5625vw;
           font-size: 1.1458vw;
