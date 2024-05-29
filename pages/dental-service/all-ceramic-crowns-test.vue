@@ -169,33 +169,6 @@ const problemData = {
     },
   ]
 }
-// let foiblesSwiperRef ={
-//   slideToLoop: (a)=>{}
-// }
-// const setFoiblesSwiperRef = (swiper:any) => {
-//   foiblesSwiperRef = swiper;
-// }
-// const handleLineCur = (_value:number) =>{
-//   foiblesSwiperRef.slideToLoop(_value-1)
-// }
-
-// let foiblesCurrent = ref(1)
-
-// //走马灯事件
-// const onSlideChange = (swiper:any) => {
-//   foiblesCurrent.value = swiper.realIndex + 1
-// }
-
-// let windowWidth = ref(1920)
-
-// onMounted(()=>{
-//   getWindowWidth()
-//   window.addEventListener('resize',getWindowWidth)
-// })
-
-// const getWindowWidth = () => {
-//   windowWidth.value = window.innerWidth
-// }
 </script>
 
 

@@ -353,6 +353,7 @@ const handley = (bool = false) => {
         <div class="Blue_light_whitening_technology-content">
           <div class="lists-in" v-for="(item,index) in Blue_light_whitening_technology.lists" :key="index">
             <div class="image">
+              <img src="https://static.cmereye.com/imgs/2024/05/ee9c1ce6cd3e202d.png" alt="">
             </div>
             <h3>{{item.name}}</h3>
             <p>{{item.text}}</p>
@@ -776,7 +777,15 @@ const handley = (bool = false) => {
         width: 100%;
         height: 0;
         padding-bottom: 100%;
-        background: radial-gradient(53.85% 53.85% at 50% 50%, rgba(0, 174, 255, 0.14) 28.5%, rgba(255, 255, 255, 0.00) 100%);
+        // background: radial-gradient(53.85% 53.85% at 50% 50%, rgba(0, 174, 255, 0.14) 28.5%, rgba(255, 255, 255, 0.00) 100%);
+        img{
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          width: 150px;
+          height: 150px;
+          transform: translate(-50%,-50%);
+        }
       }
       h3{
         font-size: 23px;
@@ -1227,6 +1236,12 @@ const handley = (bool = false) => {
       max-width: 60.625vw;
       gap: 3.125vw;
       .lists-in{
+        .image{
+          img{
+            width: 7.8125vw;
+            height: 7.8125vw;
+          }
+        }
         h3{
           font-size: 1.1979vw;
           margin-bottom: .5208vw;
@@ -1548,6 +1563,12 @@ const handley = (bool = false) => {
       gap: 30px 38px;
       margin-top: 45px;
       .lists-in{
+        .image{
+          img{
+            width: 98px;
+            height: 98px;
+          }
+        }
         h3{
           font-size: 16px;
         }
