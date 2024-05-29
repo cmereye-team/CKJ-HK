@@ -22,7 +22,7 @@ useHead({
 const headerConfig = {
   img: 'https://static.cmereye.com/imgs/2024/05/56ed1adf64868f0a.jpg',
   bg: '',
-  mbImg: 'https://static.cmereye.com/imgs/2024/05/c85b910b79d8c36c.jpg',
+  mbImg: 'https://static.cmereye.com/imgs/2024/05/d3f203b50b4e597a.jpeg',
   pageName: 'scaling-and-polishing-test',
   pcText: [],
   mbText: []
