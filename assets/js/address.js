@@ -175,22 +175,22 @@ export default [
     },
   ],
   // 寶安區
-  [
-    {
-      id: '401',
-      name: 'contactUs.addressLists.address_401.name',
-      tabname: 'contactUs.addressLists.address_401.tabname',
-      address: 'contactUs.addressLists.address_401.address',
-      time: 'contactUs.addressLists.address_401.time',
-      phone: phoneNum,
-      busRoutes: 'contactUs.addressLists.address_401.busRoutes',
-      metroRoutes: 'contactUs.addressLists.address_401.metroRoutes',
-      addressUrl: 'https://static.cmereye.com/imgs/2023/05/009aa648694461bb.png',
-      googleMap: 'https://goo.gl/maps/ntfTf49VNaY9D9VL6?coh=178572&entry=tt',
-      baiduMap: 'https://j.map.baidu.com/89/2LD',
-      imgLists: ['https://static.cmereye.com/imgs/2024/02/dfdf5b2634ade064.png']
-    },
-  ],
+  // [
+  //   {
+  //     id: '401',
+  //     name: 'contactUs.addressLists.address_401.name',
+  //     tabname: 'contactUs.addressLists.address_401.tabname',
+  //     address: 'contactUs.addressLists.address_401.address',
+  //     time: 'contactUs.addressLists.address_401.time',
+  //     phone: phoneNum,
+  //     busRoutes: 'contactUs.addressLists.address_401.busRoutes',
+  //     metroRoutes: 'contactUs.addressLists.address_401.metroRoutes',
+  //     addressUrl: 'https://static.cmereye.com/imgs/2023/05/009aa648694461bb.png',
+  //     googleMap: 'https://goo.gl/maps/ntfTf49VNaY9D9VL6?coh=178572&entry=tt',
+  //     baiduMap: 'https://j.map.baidu.com/89/2LD',
+  //     imgLists: ['https://static.cmereye.com/imgs/2024/02/dfdf5b2634ade064.png']
+  //   },
+  // ],
   // 龍華區
   [
     {
@@ -207,19 +207,19 @@ export default [
       baiduMap: 'https://j.map.baidu.com/3a/nbch',
       imgLists: ['https://static.cmereye.com/imgs/2024/02/36aaa47a0c940e94.png']
     },
-    {
-      id: '502',
-      name: 'contactUs.addressLists.address_502.name',
-      tabname: 'contactUs.addressLists.address_502.tabname',
-      address: 'contactUs.addressLists.address_502.address',
-      time: 'contactUs.addressLists.address_502.time',
-      phone: phoneNum,
-      busRoutes: 'contactUs.addressLists.address_502.busRoutes',
-      metroRoutes: 'contactUs.addressLists.address_502.metroRoutes',
-      addressUrl: 'https://static.cmereye.com/imgs/2023/05/2d4f2be9d307d63a.png',
-      googleMap: 'https://goo.gl/maps/VKT1orRbiS8mAiN39?coh=178572&entry=tt門診門',
-      baiduMap: 'https://j.map.baidu.com/c5/AZ4c',
-      imgLists: ['https://static.cmereye.com/imgs/2024/02/9aee3ddfaa56d78f.png']
-    },
+    // {
+    //   id: '502',
+    //   name: 'contactUs.addressLists.address_502.name',
+    //   tabname: 'contactUs.addressLists.address_502.tabname',
+    //   address: 'contactUs.addressLists.address_502.address',
+    //   time: 'contactUs.addressLists.address_502.time',
+    //   phone: phoneNum,
+    //   busRoutes: 'contactUs.addressLists.address_502.busRoutes',
+    //   metroRoutes: 'contactUs.addressLists.address_502.metroRoutes',
+    //   addressUrl: 'https://static.cmereye.com/imgs/2023/05/2d4f2be9d307d63a.png',
+    //   googleMap: 'https://goo.gl/maps/VKT1orRbiS8mAiN39?coh=178572&entry=tt門診門',
+    //   baiduMap: 'https://j.map.baidu.com/c5/AZ4c',
+    //   imgLists: ['https://static.cmereye.com/imgs/2024/02/9aee3ddfaa56d78f.png']
+    // },
   ]
 ]

@@ -184,7 +184,7 @@ const handletab2 = async (id:string,dpc:Boolean = false)=>{
   }, 500);
 }
 const changeAreaTabCur = (_idx:any) => {
-  if(_idx === 4){
+  if(_idx === 3){
     handletab2('102',true)
   }else{
     handletab2('101',true)
