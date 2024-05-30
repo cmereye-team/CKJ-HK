@@ -334,6 +334,7 @@ watch(
     <ServiceProblem :problemData="problemData" />
     <serviceCard />
     <NewAddress />
+    <ContactForm-new />
   </div>
   <div class="YaNavBox shownav" v-if="shownav_2">
     <img class="close" src="@/assets/images/icon_7.svg" alt="" @click.stop="shownav_2 = !shownav_2">

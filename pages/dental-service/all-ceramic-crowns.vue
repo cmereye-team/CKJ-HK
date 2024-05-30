@@ -278,6 +278,7 @@ const problemData = {
     <ServiceProblem :problemData="problemData" />
     <serviceCard />
     <NewAddress />
+    <ContactForm-new />
   </div>
   <PageFooter />
   <PageNavbar />

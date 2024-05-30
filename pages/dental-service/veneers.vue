@@ -449,6 +449,7 @@ const caseLists = [
     <ServiceProblem :problemData="problemData" />
     <serviceCard />
     <NewAddress />
+    <ContactForm-new />
   </div>
   <PageFooter />
   <PageNavbar />

@@ -554,6 +554,7 @@ const caseLists = [
     </div>
     <serviceCard />
     <NewAddress />
+    <ContactForm-new />
   </div>
   <PageFooter />
   <PageNavbar />

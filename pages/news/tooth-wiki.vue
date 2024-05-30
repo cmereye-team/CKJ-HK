@@ -278,6 +278,7 @@ const handleClick = (event,_id) =>{
         <div class="lists" v-else></div>
       </div>
       <NewAddress />
+      <ContactForm-new />
     </div>
     <PageFooter />
     <PageNavbar />

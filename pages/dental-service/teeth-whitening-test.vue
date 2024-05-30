@@ -516,6 +516,7 @@ const handley = (bool = false) => {
       <ServiceProblem :problemData="problemData" />
       <serviceCard />
       <NewAddress />
+      <ContactForm-new />
     </div>
     <PageFooter />
     <PageNavbar />

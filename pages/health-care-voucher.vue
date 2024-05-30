@@ -382,6 +382,7 @@ const handleLocale = (l) =>{
         </div>
       </div>
       <NewAddress />
+      <ContactForm-new />
     </div>
     <PageFooter />
     <PageNavbar :langType="langCur" />

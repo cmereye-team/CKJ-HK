@@ -10,6 +10,7 @@ useHead({
     <div class="service">
       <serviceCard :isIndexShow="true" />
       <NewAddress />
+      <ContactForm-new />
     </div>
     <PageFooter />
     <PageNavbar />

@@ -862,6 +862,7 @@ const { height } = useWindowSize()
       </div> -->
       <serviceCard />
       <NewAddress />
+      <ContactForm-new />
     </div>
     <PageFooter />
     <PageNavbar :showDialogBox="(top<(height / 3 * 2)) && (bottom > (height / 3))" />

@@ -422,6 +422,7 @@ const reason2Data = {
     <ServiceProblem :problemData="problemData" />
     <serviceCard />
     <NewAddress />
+    <ContactForm-new />
   </div>
   <PageFooter />
   <PageNavbar />

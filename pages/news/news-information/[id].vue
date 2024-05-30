@@ -314,6 +314,7 @@ if(process.server){
       </div>
       <!-- <div @click="handlegetData">獲取數據</div> -->
       <NewAddress />
+      <ContactForm-new />
     </div>
     <PageFooter />
     <PageNavbar />

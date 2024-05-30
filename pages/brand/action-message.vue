@@ -99,6 +99,7 @@ const introduceData = {
         </div>
       </div>
       <NewAddress />
+      <ContactForm-new />
     </div>
     <PageFooter />
     <PageNavbar />
