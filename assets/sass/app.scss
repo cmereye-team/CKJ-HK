@@ -100,7 +100,7 @@ body{
   background: #ffffff;
 }
 .pageIn{
-  padding: 140px 0;
+  padding: 140px 0 0;
   position: relative;
   z-index: 1;
 }
@@ -188,7 +188,7 @@ body{
 }
 @media (min-width: 768px) and (max-width: 1600px) {
   .pageIn{
-    padding: 120px 0;
+    padding: 120px 0 0;
   }
   .pageCon{
     margin: 0 auto;
@@ -222,7 +222,7 @@ body{
     width: 100%;
   } 
   .pageIn{
-    padding: 90px 0;
+    padding: 90px 0 0;
   }
   .pcBox{
     display: none;

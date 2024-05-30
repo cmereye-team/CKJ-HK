@@ -289,7 +289,7 @@ const { height } = useWindowSize()
 <style lang="scss" scoped>
   .doctorPage{
     background: #fff;
-    padding-bottom: 143px;
+    // padding-bottom: 143px;
     position: relative;
     z-index: 1;
     .index_title{
@@ -579,7 +579,7 @@ const { height } = useWindowSize()
   }
 @media (min-width: 768px) and (max-width: 1920px) {
   .doctorPage{
-    padding-bottom: 7.4479vw;
+    // padding-bottom: 7.4479vw;
     &-in{
       padding-top: 7.4479vw;
       &-text{
@@ -726,7 +726,7 @@ const { height } = useWindowSize()
 }
   @media screen and (max-width: 768px) {
     .doctorPage{
-      padding-bottom: 90px;
+      // padding-bottom: 90px;
       &-in{
         padding-top: 0px;
         &-text{
