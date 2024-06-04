@@ -22,7 +22,7 @@ useHead({
 })
 
 const headerConfig = {
-  img: 'https://static.cmereye.com/imgs/2024/03/a3810742ef7ca6cf.jpg',
+  img: 'https://static.cmereye.com/imgs/2024/06/c7331d32919bcad4.jpg',
   bg: '',
   mbImg: 'https://static.cmereye.com/imgs/2024/03/b16577acd828007a.jpg',
   pageName: 'implant',

@@ -10,12 +10,12 @@ defineProps({
     type: Object,
     default() {
       return {
-        img: 'https://static.cmereye.com/imgs/2023/05/71929ca4c90a8d1e.png',
-        bg: 'https://static.cmereye.com/imgs/2023/05/d8084e8da90409aa.jpg',
-        mbImg: 'https://static.cmereye.com/imgs/2023/04/b0d950232420bf46.jpg',
+        img: 'https://static.cmereye.com/imgs/2024/06/d1a92001b420ca10.jpg',
+        bg: '',
+        mbImg: 'https://static.cmereye.com/imgs/2024/01/a59e0a87dfb394f1.jpg',
         pageName: 'index',
-        pcText: ['重拾自信笑容', '愛牙愛己，由你做起'],
-        mbText: ['重拾自信笑容', '愛牙愛己，由你做起'],
+        pcText: [],
+        mbText: [],
       }
     },
   },
@@ -257,15 +257,12 @@ const handleopenwechat = () =>{
   window.location.href = "weixin://"
 }
 
-
-//温馨提示：代码改了改，恶心程度★★★★★
 </script>
 
 <template>
   <header>
     <div class="header-content">
       <div class="header-content-bgImg" :class="headerConfig.pageName">
-        <img class="imgBgBox pcBox" :src="headerConfig.bg" alt="" />
         <div class="header-content-bgImg-imgInfo bigPageCon">
           <img
             :class="['pcBox', headerConfig.pageName]"
@@ -282,26 +279,6 @@ const handleopenwechat = () =>{
           :src="headerConfig.mbImg"
           alt="banner"
         />
-        <div class="header-content-bgImg-textInfo pageCon">
-          <div :class="['header-content-bgImg-in', headerConfig.pageName]">
-            <div :class="['bannerTitle', headerConfig.pageName]">
-              <span>{{
-                windowWidth > 768
-                  ? headerConfig.pcText[0]
-                  : headerConfig.mbText[0]
-              }}</span>
-              <span>{{
-                windowWidth > 768
-                  ? headerConfig.pcText[1]
-                  : headerConfig.mbText[1]
-              }}</span>
-            </div>
-            <div class="text">
-              {{ headerData.bannerText }}
-              <span>{{ headerData.bannerTextSpan }}</span>
-            </div>
-          </div>
-        </div>
       </div>
       <div
         v-if="

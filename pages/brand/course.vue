@@ -24,12 +24,12 @@ useHead({
 })
 
 const headerConfig = {
-  img: 'https://static.cmereye.com/imgs/2024/01/1bc7c8742b23ae97.jpg',
+  img: 'https://static.cmereye.com/imgs/2024/06/26b5fe0384118903.jpg',
   bg: '',
   mbImg: 'https://static.cmereye.com/imgs/2024/01/a59e0a87dfb394f1.jpg',
   pageName: 'course-new',
-  pcText: ['健齒為本 嚴謹治療','專科 · 專業 · 實力保證'],
-  mbText: ['健齒為本 嚴謹治療','專科 · 專業 · 實力保證']
+  pcText: [],
+  mbText: []
 }
 
 const introduceData = {
