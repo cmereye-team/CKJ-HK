@@ -159,6 +159,32 @@ const imgBgHeight = ref({
 })
 
 const isFiexdHeader = ref(false)
+let bannerLists = ref([
+  {
+    name: '灣區長者醫療券banner',
+    link: '/health-care-voucher',
+    pc: 'https://static.cmereye.com/imgs/2024/04/02e0cbb29d86af90.webp',
+    mb: 'https://static.cmereye.com/imgs/2024/02/afdfd3c22104497f.webp'
+  },
+  {
+    name: '愛康健裕亨新店開業優惠banner',
+    link: 'https://bit.ly/愛康健裕亨新店開業優惠',
+    pc: 'https://static.cmereye.com/imgs/2024/04/ea3b6c9d7c7c2cc6.webp',
+    mb: 'https://static.cmereye.com/imgs/2024/02/216458f63817b47e.jpg?v=1.2.0'
+  },
+  {
+    name: '醫生團隊banner',
+    link: '/medical-team',
+    pc: 'https://static.cmereye.com/imgs/2024/04/df1e63bdd93c3504.webp',
+    mb: 'https://static.cmereye.com/imgs/2024/03/f3f241b74364a6b7.jpg?v=1.2.0'
+  },
+  {
+    name: '',
+    link: '',
+    pc: 'https://static.cmereye.com/imgs/2024/04/cf5124d2a6d53efd.webp',
+    mb: 'https://static.cmereye.com/imgs/2024/03/4abbdd7326af4cc3.webp'
+  }
+])
 onMounted(() => {
   getScrollHeight()
   window.addEventListener('scroll', getScrollHeight)
@@ -167,6 +193,9 @@ onMounted(() => {
       changlangsfun('s')
     }
   }, 500)
+  bannerLists.value.sort(function(){
+    return Math.random() - 0.5
+  })
 })
 const isShowLanguageBool = ref(false)
 const getScrollHeight = () => {
@@ -195,22 +224,25 @@ const handleMbMenu = () => {
 }
 let bannerlink = ref('')
 let bannerCurrent = ref(1)
+let bannerCurrentSrc = ref('')
 let bannerSwiperRef ={
   slideToLoop: (a)=>{}
 }
 const changebanner = ( swiper )=>{
   bannerCurrent.value = (swiper.realIndex ? Number(swiper.realIndex) : 0) + 1
-  if(swiper.realIndex){
-    if(Number(swiper.realIndex)===1){
-      bannerlink.value = 'https://bit.ly/愛康健裕亨新店開業優惠'
-    }else if(Number(swiper.realIndex)===2){
-      bannerlink.value = '/medical-team'
-    }else{
-      bannerlink.value = ''
-    }
-  }else if(swiper.realIndex === 0){
-    bannerlink.value = '/health-care-voucher'
-  }
+  bannerlink.value = bannerLists.value[bannerCurrent.value - 1].link
+  // bannerCurrent.value = (swiper.realIndex ? Number(swiper.realIndex) : 0) + 1
+  // if(swiper.realIndex){
+  //   if(Number(swiper.realIndex)===1){
+  //     bannerlink.value = 'https://bit.ly/愛康健裕亨新店開業優惠'
+  //   }else if(Number(swiper.realIndex)===2){
+  //     bannerlink.value = '/medical-team'
+  //   }else{
+  //     bannerlink.value = ''
+  //   }
+  // }else if(swiper.realIndex === 0){
+  //   bannerlink.value = '/health-care-voucher'
+  // }
 }
 const setBannerSwiperRef = (swiper:any) => {
   bannerSwiperRef = swiper;
@@ -273,6 +305,9 @@ const handlecopywechatcode = () =>{
 const handleopenwechat = () =>{
   window.location.href = "weixin://"
 }
+
+
+
 </script>
 
 <template>
@@ -307,23 +342,10 @@ const handleopenwechat = () =>{
             :speed="1000"
             @swiper="setBannerSwiperRef"
             @slideChange="changebanner">
-          <SwiperSlide>
-            <nuxt-link to="/health-care-voucher" title="灣區長者醫療券banner" alt="灣區長者醫療券banner">
-              <img :srcset="`https://static.cmereye.com/imgs/2024/02/afdfd3c22104497f.webp 768w, https://static.cmereye.com/imgs/2024/04/02e0cbb29d86af90.webp`"  src="https://static.cmereye.com/imgs/2024/04/02e0cbb29d86af90.webp" alt="灣區長者醫療券banner" title="灣區長者醫療券banner">
+          <SwiperSlide v-for="(item,index) in bannerLists" :key="index">
+            <nuxt-link :to="item.link === '' ? 'javaScript:void(0)' : item.link" :title="item.name" :alt="item.name">
+              <img :srcset="`${item.mb} 768w, ${item.pc}`"  :src="item.pc" :alt="item.name" :title="item.name">
             </nuxt-link>
-          </SwiperSlide>
-          <SwiperSlide>
-            <nuxt-link to="https://bit.ly/愛康健裕亨新店開業優惠" alt="愛康健裕亨新店開業優惠banner" title="愛康健裕亨新店開業優惠banner">
-              <img :srcset="`https://static.cmereye.com/imgs/2024/02/216458f63817b47e.jpg?v=1.2.0 768w, https://static.cmereye.com/imgs/2024/04/ea3b6c9d7c7c2cc6.webp`"  src="https://static.cmereye.com/imgs/2024/04/ea3b6c9d7c7c2cc6.webp" alt="愛康健裕亨新店開業優惠banner" title="愛康健裕亨新店開業優惠banner">
-            </nuxt-link>
-          </SwiperSlide>
-          <SwiperSlide>
-            <nuxt-link to="/medical-team" alt="醫生團隊banner" title="醫生團隊banner">
-              <img :srcset="`https://static.cmereye.com/imgs/2024/03/f3f241b74364a6b7.jpg?v=1.2.0 768w, https://static.cmereye.com/imgs/2024/04/df1e63bdd93c3504.webp`"  src="https://static.cmereye.com/imgs/2024/04/df1e63bdd93c3504.webp" alt="醫生團隊banner" title="醫生團隊banner">
-            </nuxt-link>
-          </SwiperSlide>
-          <SwiperSlide>
-              <img :srcset="`https://static.cmereye.com/imgs/2024/03/4abbdd7326af4cc3.webp 768w, https://static.cmereye.com/imgs/2024/04/cf5124d2a6d53efd.webp`"  src="https://static.cmereye.com/imgs/2024/04/cf5124d2a6d53efd.webp" alt="深圳愛康健口腔醫院banner" title="深圳愛康健口腔醫院">
           </SwiperSlide>
         </swiper>
       </div>
@@ -332,8 +354,8 @@ const handleopenwechat = () =>{
         class="header-content-bgImgBB pcBox"
         :class="headerConfig.pageName"
       >
-        <nuxt-link :to="bannerlink">
-          <img data-cfsrc="" srcset="https://static.cmereye.com/imgs/2024/02/afdfd3c22104497f.webp 768w, https://static.cmereye.com/imgs/2024/04/02e0cbb29d86af90.webp`"  src="https://static.cmereye.com/imgs/2024/04/02e0cbb29d86af90.webp" alt="">
+        <nuxt-link :to="bannerlink" >
+          <img :src="bannerLists[bannerCurrent - 1].pc" alt="">
         </nuxt-link>
       </div>
       <div class="header-content-btn-implant bannerLine">
@@ -687,9 +709,19 @@ const handleopenwechat = () =>{
     opacity: 0;
     &.course-new {
       max-width: 100%;
-      min-height: calc(580 / 1920 * 100vw);
+      width: 100%;
+      height: auto;
+      // min-height: calc(580 / 1920 * 100vw);
       img {
         width: 100%;
+        height: auto;
+      }
+      &>a{
+        width: 100%;
+        height: auto;
+        display: block;
+        // height: 100%;
+        // overflow: hidden;
       }
     }
   }
