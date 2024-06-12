@@ -1,6 +1,9 @@
  <script lang="ts" setup>
 import { useAppState } from '~/stores/appState'
 import { Scrollbar } from 'swiper';
+import { useElementBounding,useWindowSize } from '@vueuse/core'
+const infobg = ref(null)
+const { top } = useElementBounding(infobg)
 const appState = useAppState()
 appState.setDentistryService('teeth-whitening')
 useHead({
@@ -391,9 +394,9 @@ const handley = (bool = false) => {
           </div>
         </div>
         <div class="step-info">
-          <div class="infobg">
+          <div class="infobg" ref="infobg">
             <img srcset="https://static.cmereye.com/imgs/2024/05/cbb4198d0a4133a5.png 768w,https://static.cmereye.com/imgs/2024/05/c1fd7f501e059f40.webp" src="https://static.cmereye.com/imgs/2024/05/c1fd7f501e059f40.webp" alt="">
-            <div>
+            <div :class="{anim: top < 350}">
               <p>牙齒美白不僅是對的投資，更是對<span>自我信心</span>的提升。</p>
               <p>讓我們幫助您擁有一個<span>閃耀的笑容</span>，展現出最好的自己。</p>
             </div>
@@ -420,7 +423,7 @@ const handley = (bool = false) => {
             <p>藍光美白一般都能讓牙齒提升少則<span>3-5個</span>色階，多則可能<span>10-14個</span>色階</p>
           </div>
           <div class="gif">
-            <img src="https://s3-alpha-sig.figma.com/img/3802/30b7/e86dbf8a0fa2e716e7a6d40b7ffd3d80?Expires=1717977600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=J13ebwhKE5weg-lVjVsWoYWMTssy59xzfFyBqRGz3APDVc8Q9~Cfw2dL8zIsL-BOp63Yk5GalKdlAOVNTozY1lDCwH9X5k6G1FMWiK5wniBpXfHsx5E1XS7rq2HeCikmFJWrQcgahE1Y0d2cbzbEGezd5l9s5GSp1vWerh4pIJo4VT~Nq1IPOdOJMlMdY7-lHd25lWcpoqjlTEeMyZjaJ38PGNHc5Tgr2mT6B0QMveW-Ap4nd2keZrFBxclDsOm7oGBOzlT29iEl4RG~wpwnStHFoUx5goFbIHinJOM67jZKjcnU6bG6s1W-ss-puF8M5HvrTxmUaQxaIWvSw4WUjA__" alt="">
+            <img src="https://static.cmereye.com/imgs/2024/06/9323ca78010f2f82.gif" alt="">
           </div>
           <div class="image">
             <img src="https://static.cmereye.com/imgs/2024/05/4459f188130c0cce.png" alt="藍光美白效果" title="藍光美白效果">
@@ -888,6 +891,12 @@ const handley = (bool = false) => {
         width: 100%;
         max-width: 1280px;
         transform: translate(-50%,-50%);
+        opacity: 0;
+        transition: all .3s;
+        &.anim{
+          animation: infobgAnim 1s forwards;
+          opacity: 1;
+        }
         p{
           font-size: 23px;
           font-weight: 500;
@@ -1165,6 +1174,21 @@ const handley = (bool = false) => {
   100%{
     opacity: 0;
     transform: scale(1);
+  }
+}
+@keyframes infobgAnim {
+  from{
+    transform: rotateY(-40deg) rotateX(-90deg) translate(-50%,-50%);
+    transform-origin: left center;
+  }
+  to{
+    transform: translate(-50%,-50%);
+    transform-origin: left center;
+  }
+}
+@keyframes effectrtr{
+  to{
+
   }
 }
 @media (min-width: 768px) and (max-width: 1920px) {
@@ -1921,24 +1945,34 @@ const handley = (bool = false) => {
     }
   }
   @keyframes effectbia {
-  0%{
-    transform: translate(0,0);
+    0%{
+      transform: translate(0,0);
+    }
+    10%{
+      transform: translate(3px,3px);
+    }
+    20%{
+      transform: translate(0,0);
+    }
+    30%{
+      transform: translate(3px,3px);
+    }
+    40%{
+      transform: translate(0,0);
+    }
+    100%{
+      transform: translate(0,0);
+    }
   }
-  10%{
-    transform: translate(3px,3px);
+  @keyframes infobgAnim {
+    from{
+      transform: rotateY(-40deg) rotateX(-90deg);
+      transform-origin: left center;
+    }
+    to{
+      transform: none;
+      transform-origin: left center;
+    }
   }
-  20%{
-    transform: translate(0,0);
-  }
-  30%{
-    transform: translate(3px,3px);
-  }
-  40%{
-    transform: translate(0,0);
-  }
-  100%{
-    transform: translate(0,0);
-  }
-}
 }
 </style>
