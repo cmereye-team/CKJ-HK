@@ -676,6 +676,7 @@ const handley = (bool = false) => {
         border-radius: 50%;
         left: 17px;
         top: 14px;
+        animation: maintainAnim 14s infinite;
       }
     }
   }
@@ -1124,6 +1125,7 @@ const handley = (bool = false) => {
         width: 268px;
         img{
           width: 100%;
+          animation: effectrtr 4s infinite;
         }
       }
     }
@@ -1187,8 +1189,45 @@ const handley = (bool = false) => {
   }
 }
 @keyframes effectrtr{
-  to{
-
+  0%{
+    transform: scaleX(1) scaleY(1);
+  }
+  30%{
+    transform: scaleX(.8) scaleY(1.2);
+  }
+  40%{
+    transform: scaleX(1.05) scaleY(0.95);
+  }
+  50%{
+    transform: scaleX(.95) scaleY(1.05);
+  }
+  60%{
+    transform: scaleX(1) scaleY(1);
+  }
+  100%{
+    transform: scaleX(1) scaleY(1);
+  }
+}
+@keyframes maintainAnim{
+  0%{
+    border-radius: 45% 55% 45% 55%;
+    transform: scale(1) translate(0);
+  }
+  20%{
+    border-radius: 55% 45% 55% 45%;
+    transform: scale(1.05) translate(2%,-2%);
+  }
+  50%{
+    border-radius: 45% 50% 50% 55%;
+    transform: scale(1) translate(0);
+  }
+  80%{
+    border-radius: 55% 45% 55% 45%;
+    transform: scale(.95) translate(-5%,5%);
+  }
+  100%{
+    border-radius: 45% 55% 45% 55%;
+    transform: scale(1) translate(0);
   }
 }
 @media (min-width: 768px) and (max-width: 1920px) {
