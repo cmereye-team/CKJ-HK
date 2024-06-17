@@ -1,6 +1,9 @@
 <script lang="ts" setup>
 import { useAppState } from '~/stores/appState'
 import { smallPhoneNum,whatsapplink } from '~/assets/js/common'
+import { useWindowScroll,useWindowSize } from '@vueuse/core'
+const { width, height } = useWindowSize()
+const { x, y } = useWindowScroll()
 
 defineProps({
   langType: {
@@ -74,10 +77,36 @@ const handleopenwechat = () =>{
 
 let _bool = ref(false)
 
+let _opacity = ref(0)
+let _visibility:any = ref('hidden')
+let _top = ref('40vh')
+const changeConfig = () =>{
+  if(y.value > width.value * ( 580 / 1920 ) / 2){
+    _opacity.value = 1
+    _visibility.value = 'unset'
+    _top.value = '30vh'
+  }else{
+    _opacity.value = 0
+    _visibility.value = 'hidden'
+    _top.value = '40vh'
+  }
+}
+watch(y,(n,o)=>{
+  if(width.value > 768){
+    changeConfig()
+  }
+})
+
+onMounted(() => {
+  if(width.value > 768){
+    changeConfig()
+  }
+})
+
 </script>
 
 <template>
-  <div class="navbar-content" :style="{'z-index': appState.isShowForm ? 100 : 50}">
+  <div class="navbar-content" :style="{'z-index': appState.isShowForm ? 100 : 50,opacity: width>768?_opacity:1 ,visibility: width>768?_visibility:'initial',top: width>768 ? _top : 'auto'}">
     <nuxt-link class="navbar-content-whatApp" id="navPcWhatsapp" :to="whatsapplink" title="WhatsApp" target="_blank">
       <div class="iconDialogBox" v-if="showDialogBox">
         <span>專業客服為你匹配適合你的醫生！</span>
@@ -292,6 +321,7 @@ let _bool = ref(false)
   right: 4.5vw;
   top: 30vh;
   z-index: 50;
+  transition: all 1s;
   &-in {
     width: 66px;
     height: 66px;
