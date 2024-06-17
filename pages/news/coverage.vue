@@ -296,7 +296,7 @@ const getPagination = (pageitem) => {
         -webkit-box-orient: vertical;  
         overflow: hidden;  
         text-overflow: ellipsis; 
-        text-align: justify;
+        // text-align: justify;
       }
       .desc{
         flex: 1;
@@ -306,7 +306,7 @@ const getPagination = (pageitem) => {
         line-height: 160%; /* 32px */
         letter-spacing: 2px;
         color: var(--textColor);
-        text-align: justify;
+        // text-align: justify;
         span{
           display: -webkit-box;  
           -webkit-line-clamp: 5; 
