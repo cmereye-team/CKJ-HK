@@ -385,6 +385,15 @@ if(process.server){
   margin: 63px auto calc(37 / 1920 * 100%);
   height: auto;
   overflow: hidden;
+  :deep(ul){
+    width: calc(100% - 60px);
+    max-width: 960px;
+    // padding-left: 20px;
+    margin: 0 auto;
+    p{
+      width: 100%;
+    }
+  }
   :deep(span){
     text-wrap: wrap !important;
     word-break: break-all !important;
