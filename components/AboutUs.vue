@@ -179,6 +179,7 @@ const changemouse = (type: String) =>{
 .index-aboutUs{
   margin-top: 40px;
   // padding-bottom: 60px;
+  overflow-x: hidden;
   &-swiper{
     width: 100%;
     margin: 30px auto 0;
