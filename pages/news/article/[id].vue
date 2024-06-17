@@ -29,7 +29,8 @@ let coverageDeatail = ref({
   nextId: '',
   nextTitle: '',
   preId: '',
-  preTitle: ''
+  preTitle: '',
+  subtitle: ''
 })
 useHead({
   title: pageType.value === '1'?'媒體報導': '最新資訊',
@@ -155,7 +156,8 @@ const getDetail = async () => {
         nextId: _data.nextId || '',
         nextTitle: _data.nextTitle || '',
         preId: _data.preId || '',
-        preTitle: _data.preTitle || ''
+        preTitle: _data.preTitle || '',
+        subtitle: _data.subtitle || ''
       }
       changeassociationData(JSON.parse(_data.ext_news_association || "[]"))
     }
@@ -261,6 +263,7 @@ if(process.server){
         </div>
         <div class="content-topimg" v-else>
             <img :src="coverageDeatail.img" :alt="coverageDeatail.name" :title="coverageDeatail.name">
+            <p v-if="coverageDeatail.subtitle !== ''">{{coverageDeatail.subtitle}}</p>
         </div>
         <div class="content-title">
           <h1>{{coverageDeatail.name}}</h1>
@@ -357,6 +360,12 @@ if(process.server){
   }
   &-line{
     margin: 40px auto 50px;
+  }
+  p{
+    color: var(--textColor);
+    font-size: 14px;
+    text-align: center;
+    margin-top: 3px;
   }
 }
 .content-title{
