@@ -183,6 +183,12 @@ let bannerLists = ref([
     link: '',
     pc: 'https://static.cmereye.com/imgs/2024/04/cf5124d2a6d53efd.webp',
     mb: 'https://static.cmereye.com/imgs/2024/03/4abbdd7326af4cc3.webp'
+  },
+  {
+    name: '福田旗艦店18週年慶典優惠-慶典',
+    link: '',
+    pc: 'https://static.cmereye.com/static/ckj/imgs/banner/慶典_Banner_PC.webp',
+    mb: 'https://static.cmereye.com/static/ckj/imgs/banner/慶典_Banner_MB.webp'
   }
 ])
 onMounted(() => {
@@ -360,7 +366,7 @@ const handleopenwechat = () =>{
       </div>
       <div class="header-content-btn-implant bannerLine">
         <div class="bannerLine-in">
-          <PageSwiperPointLine :latestNewsNum="4" :latestNewsCurrent="bannerCurrent" @changeLineCur="handleBannerLineCur"></PageSwiperPointLine>
+          <PageSwiperPointLine :latestNewsNum="bannerLists.length" :latestNewsCurrent="bannerCurrent" @changeLineCur="handleBannerLineCur"></PageSwiperPointLine>
         </div>
       </div>
       <div class="waterBg-implant"></div>
