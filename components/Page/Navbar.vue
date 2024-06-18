@@ -77,9 +77,10 @@ const handleopenwechat = () =>{
 
 let _bool = ref(false)
 
-let _opacity = ref(0)
-let _visibility:any = ref('hidden')
-let _top = ref('40vh')
+let _opacity = ref(1)
+let _visibility:any = ref('unset')
+let _top = ref('auto')
+
 const changeConfig = () =>{
   if(y.value > width.value * ( 580 / 1920 ) / 2){
     _opacity.value = 1
@@ -106,7 +107,12 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="navbar-content" :style="{'z-index': appState.isShowForm ? 100 : 50,opacity: width>768?_opacity:1 ,visibility: width>768?_visibility:'initial',top: width>768 ? _top : 'auto'}">
+  <div class="navbar-content" :style="{
+    'z-index': appState.isShowForm ? 100 : 50,
+    'opacity': width>768 ?_opacity : 1,
+    'visibility': width>768 ? _visibility : 'initial',
+    top: width>768 ? _top : 'auto'
+  }">
     <nuxt-link class="navbar-content-whatApp" id="navPcWhatsapp" :to="whatsapplink" title="WhatsApp" target="_blank">
       <div class="iconDialogBox" v-if="showDialogBox">
         <span>專業客服為你匹配適合你的醫生！</span>
@@ -138,7 +144,7 @@ onMounted(() => {
     <div class="navbar-content-in" id="navPcContactForm" title="預約" @click="toContactUs">
     </div>
     <div class="navbar-content-in pageTop" @click="toPageTop">
-      <img srcset="@/assets/images/icon_50.svg 768w, @/assets/images/navIcon_4.png" src="@/assets/images/navIcon_4.png" alt="toTop" />
+      <img srcset="https://static.cmereye.com/imgs/2024/06/31e5ffd3567a9dd4.png 768w, @/assets/images/navIcon_4.png" src="@/assets/images/navIcon_4.png" alt="toTop" />
     </div>
     <div class="navbar-content-mb">
       <nuxt-link class="navbar-content-mb-in" id="navMbWhatsapp" :to="whatsapplink">
@@ -774,10 +780,10 @@ onMounted(() => {
           // background-clip: text;
           // mix-blend-mode: difference;
           // box-shadow:2px 2px 0 #fff;
-          filter: drop-shadow(1px 1px 0 #fff)
-          drop-shadow(-1px 1px 0 #fff)
-          drop-shadow(1px -1px 0 #fff)
-          drop-shadow(-1px -1px 0 #fff);
+          // filter: drop-shadow(1px 1px 0 #fff)
+          // drop-shadow(-1px 1px 0 #fff)
+          // drop-shadow(1px -1px 0 #fff)
+          // drop-shadow(-1px -1px 0 #fff);
         }
       }
     }
