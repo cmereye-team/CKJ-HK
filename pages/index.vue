@@ -6,6 +6,7 @@ import { useAppState } from '~/stores/appState'
 import doctorLists_cs from '~/assets/js/doctor'
 import { toWhatsApp } from '~/assets/js/common'
 import { useElementBounding,useWindowSize } from '@vueuse/core'
+import { use } from 'chai';
 const appState = useAppState()
 const { t } = useLang()
 useHead({
@@ -352,9 +353,132 @@ const Latest_Movies = ref([
   ]
 ])
 
+let actShowShare = ref('')
+const handleClick = (event,_id) =>{
+  event.preventDefault();
+  if(actShowShare.value === _id){
+    actShowShare.value = ''
+  }else{
+    actShowShare.value = _id
+  }
+}
 
+let saveData = ref({
+  newLists_0: [],
+  newLists_1: [],
+  newLists_2: []
+})
+let indexNewsCur = ref(0)
+let indexNewsLists = ref([
+  [
+
+  ] as any,
+  [
+
+  ] as any,
+  [
+
+  ] as any
+])
+const handleNewsTab = (idx) =>{
+  if(indexNewsCur.value === idx) return
+  indexNewsCur.value = idx
+  getNewsLists(idx)
+}
+const formatDate = (dateString) =>{
+  let _date = new Date(dateString);
+  if(
+    _date.getTime() > Date.now() - 86400000*2
+  ){
+    if(Math.floor((Date.now() - _date.getTime())/1000/60/60)){
+      return Math.floor((Date.now() - _date.getTime())/1000/60/60)+'小時前'
+    }else{
+      return '剛剛'
+    }
+  }else if(
+    _date.getTime() > Date.now() - 86400000*7
+  ){
+    return Math.floor((Date.now() - _date.getTime())/1000/60/60/24)+'天前'
+  }else{
+    var date = new Date(dateString);  
+    var year = date.getFullYear();  
+    var month = ("0" + (date.getMonth() + 1)).slice(-2); 
+    var day = ("0" + date.getDate()).slice(-2);  
+    return year + "年" + month + "月" + day + "日";  
+    }
+}  
+const getNewsLists = async (idx = 0) => {
+  if(indexNewsLists.value[idx].length) return
+  let a = [
+    {
+      idx: 0,
+      id: 14,
+      url: '/news/article/',
+    },
+    {
+      idx: 1,
+      id: 15,
+      url: '/news/news-information/',
+    },
+    {
+      idx: 2,
+      id: 16,
+      url: '/news/news-tooth-wiki/',
+    }
+  ]
+  let b:any = a.find(item=>item.idx === idx)
+  let c = 16
+  if(b){
+    c = b.id
+  }else return
+  const _res:any = await useFetch(`https://admin.ckjhk.com/api.php/list/${c}/page/1/num/3`)
+  let res = JSON.parse(_res.data.value) || null
+  if(res){
+    // console.log(res)
+    indexNewsLists.value[idx] = res.data.map(item=>{
+      return{
+        id: item.id || '',
+        logo: (item.ext_news_logo.indexOf('/static/upload/image') !== -1 ? `https://admin.ckjhk.com${item.ext_news_logo}`:item.ext_news_logo) || '',
+        img: (item.ico.indexOf('/static/upload/image') !== -1 ? `https://admin.ckjhk.com${item.ico}`:item.ico) || '',
+        desc: item.ext_news_desc || '',
+        name: item.title || '',
+        logoText: item.tags || '',
+        time: idx === 2 ? formatDate(item.update_time) : formatDate(item.ext_news_time),
+        link: `${b.url}${item.id}`
+      }
+    })
+  }
+}
+const shareFacebook = (event,id) =>{
+  event.preventDefault();
+  window.open(`https://www.facebook.com/sharer/sharer.php?u=https://www.ckjhk.com/news/news-tooth-wiki/${id}`)  
+}
+function copySpecifiedText(event,text) {  
+  event.preventDefault();
+    if (navigator.clipboard) {  
+        navigator.clipboard.writeText(`https://www.ckjhk.com/news/news-tooth-wiki/${text}`).then(function() {  
+          ElMessage({
+            showClose: true,
+            message: '已複製到剪切板',
+            type: 'success',
+          }) 
+        }, function(err) {
+            ElMessage({
+              showClose: true,
+              message: '操作異常，請刷新頁面試試',
+              type: 'warning',
+            })
+        });  
+    } else {  
+        alert('您的瀏覽器不支持此功能，請更新瀏覽器');  
+    }  
+}
 onMounted(()=>{
   handletab2('101')
+  
+  nextTick(()=>{
+    getNewsLists(0)
+  })
 })
 </script>
 
@@ -506,25 +630,41 @@ onMounted(()=>{
       </div>
       <div class="index-videoBox">
         <div class="index-videoBox-t smallPageCon">
-          <div class="index_title index_title_2">專題報導</div>
+          <div class="index_title index_title_2">睇牙新資訊</div>
         </div>
-        <div class="index-videoBox-c smallPageCon">
-          <div class="index-videoBox-c-l">
-            <div>HK01</div>
-            <div>深圳食買玩，點少得睇牙!口岸位置、性價比高 咪咪姐推薦口腔醫院</div>
-            <div class="index-videoBox-c-l-btn">
-              <PageAnimBtnTypeTwo link="/news/article/31" str="查看原文" />
+        <div class="index-videoBox-tab">
+          <div class="tab-in" :class="{active: indexNewsCur === 0}" @click="handleNewsTab(0)">媒體報導</div>
+          <div class="tab-in" :class="{active: indexNewsCur === 1}" @click="handleNewsTab(1)">最新資訊</div>
+          <div class="tab-in" :class="{active: indexNewsCur === 2}" @click="handleNewsTab(2)">牙齒百科</div>
+        </div>
+        <div class="index-videoBox-in">
+          <nuxtLink :to="item.link" class="list-in" :class="`list-in-${indexNewsCur}`" v-for="(item,index) in indexNewsLists[indexNewsCur]" :key="index">
+            <img class="image" :title="item.name" :src="item.img" alt="">
+            <div class="logo" v-if="indexNewsCur === 0">
+              <div class="logo-image">
+                <img :src="item.logo" :title="item.logoText" alt="">
+              </div>
+              <div class="logo-text">
+                <span>{{item.time}}</span>
+                <span>{{item.logoText}}</span>
+              </div>
             </div>
-          </div>
-          <div class="index-videoBox-c-r">
-            <!-- <a href="https://www.hk01.com/%E5%81%A5%E5%BA%B7Easy/959987/%E6%B7%B1%E5%9C%B3%E9%A3%9F%E8%B2%B7%E7%8E%A9-%E9%BB%9E%E5%B0%91%E5%BE%97%E7%9D%87%E7%89%99-%E5%8F%A3%E5%B2%B8%E4%BD%8D%E7%BD%AE-%E6%80%A7%E5%83%B9%E6%AF%94%E9%AB%98-%E5%92%AA%E5%92%AA%E5%A7%90%E6%8E%A8%E8%96%A6%E5%8F%A3%E8%85%94%E9%86%AB%E9%99%A2" target="black">
-              <img src="https://static.cmereye.com/imgs/2023/12/0ef603cd96873713.webp" alt="專題報導" title="專題報導">
-              <img src="https://static.cmereye.com/imgs/2023/12/e974c03be612528f.png" class="icon" alt="">
-            </a> -->
-            <nuxt-link to="/news/article/31">
-              <img src="https://static.cmereye.com/imgs/2023/12/0ef603cd96873713.webp" alt="專題報導" title="專題報導">
-            </nuxt-link>
-          </div>
+            <h2 :title="item.name">{{item.name}}</h2>
+            <div class="time" v-if="indexNewsCur === 2">
+              <div class="time-l">{{item.time}}</div>
+              <div class="shareIcon" @click.stop="handleClick($event,item.id)" alt="">
+                <div :class="['shareIcon-img',{ act: actShowShare === item.id }]" alt="分享" title="分享"><img src="@/assets/images/icon_47.svg" alt=""></div>
+                <div class="shareIcon-in" v-if="actShowShare === item.id">
+                  <div class="shareIcon-in-item" @click="shareFacebook($event,item.id)" alt="Facebook 分享" title="Facebook 分享"><img src="@/assets/images/icon_49.svg" alt=""><span>Facebook 分享</span></div>
+                  <div class="shareIcon-in-item" @click="copySpecifiedText($event,item.id)" alt="複製連結" title="複製連結"><img src="@/assets/images/icon_48.svg" alt=""><span>複製連結</span></div>
+                </div>
+              </div>
+            </div>
+            <p :title="item.desc">{{item.desc}}</p>
+            <div class="btn">
+              <PageAnimBtnTypeTwo str="查看全文" :link="item.link" />
+            </div>
+          </nuxtLink>
         </div>
       </div> 
       <!-- 關於我們 -->
@@ -1054,56 +1194,216 @@ svg:hover path{
   }
 }
 .index-videoBox{
-  margin-top: 60px;
+  margin-top: 90px;
   margin-bottom: 60px;
-  &-c{
+  &-tab{
     display: flex;
-    align-items: center;
-    margin-top: 50px;
-    &-l{
-      flex: 1;
-      &>div{
-        &:nth-of-type(1){
-          color: #4D4D4D;
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: 160%; 
-        }
-        &:nth-of-type(2){
-          color: #FC1682;
-          font-size: 28px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: 160%; 
-        }
+    justify-content: center;
+    margin-top: 37px;
+    .tab-in{
+      border: 2px solid #FDD3E3;
+      color: var(--Grey-Deep, #4D4D4D);
+      text-align: center;
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 160%;
+      letter-spacing: 2.6px;
+      cursor: pointer;
+      padding: 3px 30px 0;
+      position: relative;
+      transition: all .3s;
+      &:not(:last-child){
+        border-right: none;
       }
-      &-btn{
-        margin-top: 20px;
-        display: flex;
-        justify-content: center;
-        line-height: 1.6;
+      &:first-child{
+        border-radius: 5px 0 0 5px;
+      }
+      &:last-child{
+        border-radius: 0 5px 5px 0;
+      }
+      &::after{
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 24px;
+        height: 12px;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-top: 12px solid #FDD3E3;
+        opacity: 0;
+        transition: all .3s;
+      }
+      &.active{
+        color: #fff;
+        background: var(--indexColor1);
+        &::after{
+          opacity: 1;
+        }
       }
     }
-    &-r{
-      width: calc((966 / 1432) * 100%);
-      padding-left: calc((100 / 1432) * 100%);
-      img{
+  }
+  &-in{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    max-width: 1187px;
+    margin: 50px auto;
+    gap: 31px;
+    .list-in{
+      width: 100%;
+      .image{
         width: 100%;
-      }
-      a{
-        position: relative;
-      }
-      .icon{
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
-        width: 20%;
         height: auto;
-        transition: all .3s;
-        &:hover{
-          width: 23%;
+        margin-bottom: 10px;
+      }
+      h2{
+        color: var(--Theme-Color, #FC1682);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; 
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2; 
+        -webkit-box-orient: vertical;  
+        overflow: hidden;  
+        text-overflow: ellipsis; 
+        padding: 0 20px;
+      }
+      p{
+        color: var(--Grey-Mid, #666);
+        text-overflow: ellipsis;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 200%; /* 32px */
+        letter-spacing: 1.6px;
+        margin-top: 10px;
+        padding: 0 20px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp: 3; 
+        -webkit-box-orient: vertical;  
+        overflow: hidden;  
+        text-overflow: ellipsis; 
+        padding: 0 20px;
+      }
+      .time{
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        &-l{
+          color: var(--Grey-Mid, #666);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 200%; /* 32px */
+          letter-spacing: 1.6px;
+        }
+        .shareIcon{
+          position: relative;
+          &-img{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border: 2px solid #aaa;
+            z-index: 21;
+            &>img{
+              width: 16px;
+              height: auto;
+            }
+            &.act{
+              border: none;
+            }
+          }
+          &-in{
+            position: absolute;
+            z-index: 20;
+            top: 0;
+            right: 0;
+            width: 159px;
+            height: 115px;
+            background: url(https://static.cmereye.com/static/ckj/imgs/default/shareIcon.svg);
+            background-size: 100% 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            filter: drop-shadow(0 2px 3px rgba(0,0,0,.3));
+            padding: 12px 0;
+            &-item{
+              display: flex;
+              align-items: center;
+              padding: 5px 10px;
+              margin: 0 2px;
+              border-radius: 3px;
+              &>img{
+                width: 20px;
+                margin-right: 5px;
+              }
+              &>span{
+                font-size: 14px;
+              }
+              &:hover{
+                background: #F6F6F6;
+              }
+            }
+          }
+        }
+      }
+      .logo{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        &-image{
+          max-width: 100px;
+          max-height: 59px;
+        }
+        &-text{
+          display: flex;
+          flex-direction: column;
+          color: var(--Grey-Deep, #4D4D4D);
+          text-align: right;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 200%; /* 32px */
+          letter-spacing: 1.6px;
+        }
+      }
+      .btn{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      &.list-in-1{
+        h2{
+          -webkit-line-clamp: 1;
+          line-clamp: 1; 
+        }
+        p{
+          -webkit-line-clamp: 2;
+          line-clamp: 2; 
+        }
+      }
+      &.list-in-2{
+        h2{
+          -webkit-line-clamp: 2;
+          line-clamp: 2; 
+        }
+        p{
+          -webkit-line-clamp: 5;
+          line-clamp: 5; 
         }
       }
     }
@@ -1255,19 +1555,64 @@ svg:hover path{
     }
   }
   .index-videoBox{
-    // margin-top: 4.1667vw;
-    &-c{
-      margin-top: 2.6042vw;
-      &-l{
-        &>div{
-          &:nth-of-type(1){
-            font-size: 1.0417vw;
-          }
-          &:nth-of-type(2){
-            font-size: 1.4583vw;
+    margin-top: 4.6875vw;
+    margin-bottom: 3.125vw;
+    &-tab{
+      margin-top: 1.9271vw;
+      .tab-in{
+        font-size: 1.3542vw;
+        letter-spacing: 2.6px;
+        padding: .1563vw 1.5625vw 0;
+        &:first-child{
+          border-radius: .2604vw 0 0 .2604vw;
+        }
+        &:last-child{
+          border-radius: 0 .2604vw .2604vw 0;
+        }
+        &::after{
+          width: 1.25vw;
+          height: .625vw;
+          border-left: .625vw solid transparent;
+          border-right: .625vw solid transparent;
+          border-top: .625vw solid #FDD3E3;
+        }
+      }
+    }
+    &-in{
+      max-width: 61.8229vw;
+      margin: 2.6042vw auto;
+      gap: 1.6146vw;
+      .list-in{
+        .image{
+          margin-bottom: .5208vw;
+        }
+        h2{
+          font-size: 1.0417vw;
+          padding: 0 1.0417vw;
+        }
+        p{
+          font-size: .8333vw;
+          margin-top: .5208vw;
+          padding: 0 1.0417vw;
+        }
+        .time{
+          margin-top: .5208vw;
+          padding: 0 1.0417vw;
+          &-l{
+            font-size: .8333vw;
           }
         }
-        &-btn{
+        .logo{
+          padding: .5208vw 1.0417vw;
+          &-image{
+            max-width: 5.2083vw;
+            max-height: 3.0729vw;
+          }
+          &-text{
+            font-size: .8333vw;
+          }
+        }
+        .btn{
           margin-top: 1.0417vw;
         }
       }
@@ -1815,30 +2160,18 @@ svg:hover path{
     }
   }
   .index-videoBox{
-    margin-top: 20px;
-    &-c{
-      flex-direction: column-reverse;
-      text-align: center;
-      margin-top: 34px;
-      &-l{
-        width: auto;
-        margin: 19px 30px 0;
-        &>div{
-          &:nth-of-type(1){
-            font-size: 16px;
-          }
-          &:nth-of-type(2){
-            font-size: 18px;
-          }
-        }
+    &-tab{
+      margin-top: 30px;
+      .tab-in{
+        border: 1px solid #FDD3E3;
+        letter-spacing: 1.588px;
+        font-size: 16px;
+        padding: 3px 16px 0;
       }
-      &-r{
-        width: 100%;
-        padding-left: 0;
-        a{
-          display: block;
-        }
-      }
+    }
+    &-in{
+      grid-template-columns: repeat(1, 1fr);
+      margin-top: 30px;
     }
   }
   .Latest_Movies{
