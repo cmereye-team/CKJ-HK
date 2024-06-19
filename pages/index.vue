@@ -315,6 +315,44 @@ const doctorTeam = ref(null)
 const { top,bottom } = useElementBounding(doctorTeam)
 const { height } = useWindowSize()
 
+let Latest_Movies_cur = ref(0)
+const Latest_Movies = ref([
+  [
+    {
+      link: 'https://youtu.be/0UslK-Xrm5o',
+      url: 'https://www.youtube.com/embed/0UslK-Xrm5o?si=bpyjiRhIMOLrIM1Q',
+      name: '🛍️ 潮流興北上消費，超值吃喝玩樂睇牙！🎤 咪咪姐推薦實力牙科 🦷 北上睇牙 | 大灣區醫療'
+    },{
+      link: 'https://youtu.be/Hxm0arbKJbc',
+      url: 'https://www.youtube.com/embed/Hxm0arbKJbc?si=1Xat0Ooo-lIWqyaS',
+      name: '愛康健超聲波洗牙 ¥88 🦷 超級抵呀！| 北上睇牙 | 大灣區醫療 | 洗牙'
+    }
+  ],
+  [
+    {
+      link: 'https://youtu.be/izyVofSiVas',
+      url: 'https://www.youtube.com/embed/izyVofSiVas?si=VJ-9jtOD1Nx2Ctpz',
+      name: '【什麼是種植牙「即剝即種」?】愛康健齒科 | 植牙 | 牙科常見問題 | 鞏賢平醫生'
+    },{
+      link: 'https://youtu.be/sVCzNLe7i_s',
+      url: 'https://www.youtube.com/embed/sVCzNLe7i_s?si=JpX5VvPxZz7AexFD',
+      name: '【新種植牙新技術】愛康健齒科 | 植牙 | 牙科常見問題 | 鞏賢平醫生'
+    }
+  ],
+  [
+    {
+      link: 'https://youtu.be/7pDm-bLWrSM',
+      url: 'https://www.youtube.com/embed/7pDm-bLWrSM?si=79EOTWDF5JRtovIu',
+      name: '【愛康健王琦口腔診所】福田口岸最近牙科診所 | 覆診方便 | 過馬路即到 | 港人北上睇牙首選 🦷'
+    },{
+      link: 'https://youtu.be/OEMkvjgnhtw',
+      url: 'https://www.youtube.com/embed/OEMkvjgnhtw?si=7MpoHt3ny6um6KTv',
+      name: '【愛康健李川口腔診所】福田旗艦店 | 4層26個診症間 | 北上睇牙唔使等 🦷'
+    }
+  ]
+])
+
+
 onMounted(()=>{
   handletab2('101')
 })
@@ -434,6 +472,61 @@ onMounted(()=>{
           </Swiper>
         </div>
       </div>
+      <div class="Latest_Movies">
+        <div class="Latest_Movies_t smallPageCon">
+          <div class="Latest_Movies_t_title">
+            <div class="index_title index_title_2">最新影片</div>
+          </div>
+          <nuxt-link to="https://www.youtube.com/@ckjhkofficial">
+            <svg xmlns="http://www.w3.org/2000/svg" width="44" height="36" viewBox="0 0 44 36" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M41.6583 2.69702C42.341 3.48136 42.8312 4.45663 43.08 5.52523C44 9.46938 44 17.6944 44 17.6944C44 17.6944 44 25.9195 43.08 29.8637C42.8312 30.9323 42.341 31.9075 41.6583 32.6919C40.9756 33.4762 40.1245 34.0421 39.19 34.3329C35.75 35.3889 22 35.3889 22 35.3889C22 35.3889 8.25 35.3889 4.81 34.3329C3.87554 34.0421 3.02438 33.4762 2.34169 32.6919C1.65901 31.9075 1.16876 30.9323 0.92 29.8637C0 25.9195 0 17.6944 0 17.6944C0 17.6944 0 9.46938 0.92 5.52523C1.16876 4.45663 1.65901 3.48136 2.34169 2.69702C3.02438 1.91268 3.87554 1.34678 4.81 1.05596C8.25 0 22 0 22 0C22 0 35.75 0 39.19 1.05596C40.1245 1.34678 40.9756 1.91268 41.6583 2.69702ZM29.0048 17.6954L17.5048 10.2266V25.1641L29.0048 17.6954Z" fill="#FC1682"/>
+</svg>
+            <span>@ckjhkofficial</span>
+          </nuxt-link>
+        </div>
+        <div class="Latest_Movies_in smallPageCon">
+          <div class="Latest_Movies_in_l">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Hxm0arbKJbc?si=7xJZxGlpRw9GxkIZ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            <span>愛康健超聲波洗牙 ¥88 🦷 超級抵呀！| 北上睇牙 | 大灣區醫療 | 洗牙</span>
+          </div>
+          <div class="Latest_Movies_in_r">
+            <div class="Latest_Movies_in_r_t">
+              <div class="tab-in" :class="{active: Latest_Movies_cur === 0}" @click="Latest_Movies_cur = 0">優惠推廣</div>
+              <div class="tab-in" :class="{active: Latest_Movies_cur === 1}" @click="Latest_Movies_cur = 1">醫師解難</div>
+              <div class="tab-in" :class="{active: Latest_Movies_cur === 2}" @click="Latest_Movies_cur = 2">到診攻略</div>
+            </div>
+            <div class="Latest_Movies_in_r_b">
+              <nuxtLink class="list-in" v-for="(item,index) in Latest_Movies[Latest_Movies_cur]" :key="index">
+                <iframe width="560" height="315" :src="item.url" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                <span>{{item.name}}</span>
+              </nuxtLink>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="index-videoBox">
+        <div class="index-videoBox-t smallPageCon">
+          <div class="index_title index_title_2">專題報導</div>
+        </div>
+        <div class="index-videoBox-c smallPageCon">
+          <div class="index-videoBox-c-l">
+            <div>HK01</div>
+            <div>深圳食買玩，點少得睇牙!口岸位置、性價比高 咪咪姐推薦口腔醫院</div>
+            <div class="index-videoBox-c-l-btn">
+              <PageAnimBtnTypeTwo link="/news/article/31" str="查看原文" />
+            </div>
+          </div>
+          <div class="index-videoBox-c-r">
+            <!-- <a href="https://www.hk01.com/%E5%81%A5%E5%BA%B7Easy/959987/%E6%B7%B1%E5%9C%B3%E9%A3%9F%E8%B2%B7%E7%8E%A9-%E9%BB%9E%E5%B0%91%E5%BE%97%E7%9D%87%E7%89%99-%E5%8F%A3%E5%B2%B8%E4%BD%8D%E7%BD%AE-%E6%80%A7%E5%83%B9%E6%AF%94%E9%AB%98-%E5%92%AA%E5%92%AA%E5%A7%90%E6%8E%A8%E8%96%A6%E5%8F%A3%E8%85%94%E9%86%AB%E9%99%A2" target="black">
+              <img src="https://static.cmereye.com/imgs/2023/12/0ef603cd96873713.webp" alt="專題報導" title="專題報導">
+              <img src="https://static.cmereye.com/imgs/2023/12/e974c03be612528f.png" class="icon" alt="">
+            </a> -->
+            <nuxt-link to="/news/article/31">
+              <img src="https://static.cmereye.com/imgs/2023/12/0ef603cd96873713.webp" alt="專題報導" title="專題報導">
+            </nuxt-link>
+          </div>
+        </div>
+      </div> 
       <!-- 關於我們 -->
       <AboutUs />
       <!-- 品牌理念 -->
@@ -466,29 +559,7 @@ onMounted(()=>{
           </Swiper>
         </div>
       </div>
-      <div class="index-videoBox">
-        <div class="index-videoBox-t smallPageCon">
-          <div class="index_title index_title_2">專題報導</div>
-        </div>
-        <div class="index-videoBox-c smallPageCon">
-          <div class="index-videoBox-c-l">
-            <div>HK01</div>
-            <div>深圳食買玩，點少得睇牙!口岸位置、性價比高 咪咪姐推薦口腔醫院</div>
-            <div class="index-videoBox-c-l-btn">
-              <PageAnimBtnTypeTwo link="/news/article/31" str="查看原文" />
-            </div>
-          </div>
-          <div class="index-videoBox-c-r">
-            <!-- <a href="https://www.hk01.com/%E5%81%A5%E5%BA%B7Easy/959987/%E6%B7%B1%E5%9C%B3%E9%A3%9F%E8%B2%B7%E7%8E%A9-%E9%BB%9E%E5%B0%91%E5%BE%97%E7%9D%87%E7%89%99-%E5%8F%A3%E5%B2%B8%E4%BD%8D%E7%BD%AE-%E6%80%A7%E5%83%B9%E6%AF%94%E9%AB%98-%E5%92%AA%E5%92%AA%E5%A7%90%E6%8E%A8%E8%96%A6%E5%8F%A3%E8%85%94%E9%86%AB%E9%99%A2" target="black">
-              <img src="https://static.cmereye.com/imgs/2023/12/0ef603cd96873713.webp" alt="專題報導" title="專題報導">
-              <img src="https://static.cmereye.com/imgs/2023/12/e974c03be612528f.png" class="icon" alt="">
-            </a> -->
-            <nuxt-link to="/news/article/31">
-              <img src="https://static.cmereye.com/imgs/2023/12/0ef603cd96873713.webp" alt="專題報導" title="專題報導">
-            </nuxt-link>
-          </div>
-        </div>
-      </div>   
+        
       <!-- 個案分享 -->
       <div class="index-caseSharing">
         <div class="index-caseSharing-title">
@@ -983,7 +1054,8 @@ svg:hover path{
   }
 }
 .index-videoBox{
-  margin-top: 0;
+  margin-top: 60px;
+  margin-bottom: 60px;
   &-c{
     display: flex;
     align-items: center;
@@ -1032,6 +1104,125 @@ svg:hover path{
         transition: all .3s;
         &:hover{
           width: 23%;
+        }
+      }
+    }
+  }
+}
+.Latest_Movies{
+  &_t{
+    display: flex;
+    justify-content: space-between;
+    a{
+      display: flex;
+      align-items: center;
+      svg{
+        width: 44px;
+        height: 35px;
+        margin-right: 10px;
+      }
+      span{
+        color: #4D4D4D;
+        text-align: center;
+        font-size: 22px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; 
+      }
+    }
+  }
+  &_in{
+    margin-top: 38px;
+    display: flex;
+    &_l{
+      margin-right: 33px;
+      width: 540px;
+      display: flex;
+      flex-direction: column;
+      span{
+        padding: 15px 20px 0;
+        color: var(--Grey-Deep, #4D4D4D);
+        text-align: justify;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        display: block;
+      }
+      iframe{
+        width: 540px;
+        height: 303px;
+      }
+    }
+    &_r{
+      &_t{
+        display: flex;
+        .tab-in{
+          border: 2px solid #FDD3E3;
+          color: var(--Grey-Deep, #4D4D4D);
+          text-align: center;
+          font-size: 26px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 160%;
+          letter-spacing: 2.6px;
+          cursor: pointer;
+          padding: 3px 30px 0;
+          position: relative;
+          transition: all .3s;
+          &:not(:last-child){
+            border-right: none;
+          }
+          &:first-child{
+            border-radius: 5px 0 0 5px;
+          }
+          &:last-child{
+            border-radius: 0 5px 5px 0;
+          }
+          &::after{
+            content: '';
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 24px;
+            height: 12px;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;
+            border-top: 12px solid #FDD3E3;
+            opacity: 0;
+            transition: all .3s;
+          }
+          &.active{
+            color: #fff;
+            background: var(--indexColor1);
+            &::after{
+              opacity: 1;
+            }
+          }
+        }
+      }
+      &_b{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 34px;
+        margin-top: 43px;
+        .list-in{
+          iframe{
+            width: 375px;
+            height: 211px;
+            max-width: 100%;
+          }
+          span{
+            padding: 15px 20px 0;
+            color: var(--Grey-Deep, #4D4D4D);
+            text-align: justify;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%;
+            display: block;
+          }
         }
       }
     }
@@ -1255,6 +1446,71 @@ svg:hover path{
     }
     .index-doctorTeam-detail-swiper{
       padding-bottom: 2.0833vw;
+    }
+  }
+  .Latest_Movies{
+    &_t{
+      a{
+        svg{
+          width: 2.2917vw;
+          height: 1.8229vw;
+          margin-right: .5208vw;
+        }
+        span{
+          font-size: 1.1458vw;
+        }
+      }
+    }
+    &_in{
+      margin-top: 1.9792vw;
+      &_l{
+        margin-right: 1.7188vw;
+        width: 28.125vw;
+        span{
+          padding: .7813vw 1.0417vw 0;
+          font-size: 1.0417vw;
+        }
+        iframe{
+          width: 28.125vw;
+          height: 15.7813vw;
+        }
+      }
+      &_r{
+        &_t{
+          .tab-in{
+            font-size: 1.3542vw;
+            letter-spacing: .1354vw;
+            padding: .1563vw 1.5625vw 0;
+            &:first-child{
+              border-radius: .2604vw 0 0 .2604vw;
+            }
+            &:last-child{
+              border-radius: 0 .2604vw .2604vw 0;
+            }
+            &::after{
+              width: 1.25vw;
+              height: .625vw;
+              border-left: .625vw solid transparent;
+              border-right: .625vw solid transparent;
+              border-top: .625vw solid #FDD3E3;
+            }
+          }
+        }
+        &_b{
+          gap: 1.7708vw;
+          margin-top: 2.2396vw;
+          .list-in{
+            iframe{
+              width: 19.5313vw;
+              height: 10.9896vw;
+            }
+            span{
+              padding: .7813vw 1.0417vw 0;
+              font-size: 1.0417vw;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -1581,6 +1837,61 @@ svg:hover path{
         padding-left: 0;
         a{
           display: block;
+        }
+      }
+    }
+  }
+  .Latest_Movies{
+    &_t{
+      a{
+        svg{
+          width: 32px;
+          height: 26px;
+        }
+        span{
+          font-size: 18px;
+          padding-right: 30px;
+        }
+      }
+    }
+    &_in{
+      flex-direction: column;
+      margin-top: 30px;
+      &_l{
+        width: 100%;
+        margin-right: 0;
+        span{
+          color: var(--indexColor1);
+        }
+        iframe{
+          width: 100%;
+          height: calc(303 / 540 * 100vw);
+        }
+      }
+      &_r{
+        &_t{
+          justify-content: center;
+          margin-top: 30px;
+          .tab-in{
+            border: 1px solid #FDD3E3;
+            letter-spacing: 1.588px;
+            font-size: 16px;
+            padding: 3px 16px 0;
+          }
+        }
+        &_b{
+          grid-template-columns: repeat(1,1fr);
+          gap: 25px;
+          margin-top: 30px;
+          .list-in{
+            iframe{
+              width: 100%;
+              height: calc(303 / 540 * 100vw);
+            }
+            span{
+
+            }
+          }
         }
       }
     }

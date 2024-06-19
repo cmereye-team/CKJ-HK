@@ -226,7 +226,7 @@ const handleClick = (event,_id) =>{
                   </div>
                   <div class="time">
                     <span>
-                      {{item.time}} by ckjhk - Leave a comment
+                      {{item.time}}
                     </span>
                     <div class="shareIcon" @click.stop="handleClick($event,item.id)" alt="">
                       <div :class="['shareIcon-img',{ act: actShowShare === item.id }]" alt="分享" title="分享"><img src="@/assets/images/icon_47.svg" alt=""></div>
