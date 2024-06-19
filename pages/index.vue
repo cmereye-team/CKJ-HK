@@ -639,7 +639,7 @@ onMounted(()=>{
         </div>
         <div class="index-videoBox-in">
           <nuxtLink :to="item.link" class="list-in" :class="`list-in-${indexNewsCur}`" v-for="(item,index) in indexNewsLists[indexNewsCur]" :key="index">
-            <img class="image" :title="item.name" :src="item.img" alt="">
+            <div class="image"><img :title="item.name" :src="item.img" alt=""></div>
             <div class="logo" v-if="indexNewsCur === 0">
               <div class="logo-image">
                 <img :src="item.logo" :title="item.logoText" alt="">
@@ -1195,7 +1195,7 @@ svg:hover path{
 }
 .index-videoBox{
   margin-top: 90px;
-  margin-bottom: 60px;
+  margin-bottom: 90px;
   &-tab{
     display: flex;
     justify-content: center;
@@ -1254,10 +1254,29 @@ svg:hover path{
     gap: 31px;
     .list-in{
       width: 100%;
+      display: flex;
+      flex-direction: column;
       .image{
         width: 100%;
-        height: auto;
+        height: 0;
+        padding-bottom: calc(383 / 680 * 100%);
         margin-bottom: 10px;
+        position: relative;
+        overflow: hidden;
+        img{
+          position: absolute;
+          width: 100%;
+          height: auto;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%,-50%);
+          transition: all .3s;
+        }
+        &:hover{
+          img{
+            transform: translate(-50%,-50%) scale(1.1);
+          }
+        }
       }
       h2{
         color: var(--Theme-Color, #FC1682);
@@ -1290,6 +1309,7 @@ svg:hover path{
         overflow: hidden;  
         text-overflow: ellipsis; 
         padding: 0 20px;
+        flex: 1;
       }
       .time{
         width: 100%;
@@ -1387,6 +1407,9 @@ svg:hover path{
         margin-top: 20px;
       }
       &.list-in-1{
+        .image{
+          padding-bottom: 100%;
+        }
         h2{
           -webkit-line-clamp: 1;
           line-clamp: 1; 
@@ -1397,6 +1420,9 @@ svg:hover path{
         }
       }
       &.list-in-2{
+        .image{
+          padding-bottom: calc(562 / 1000 * 100%);
+        }
         h2{
           -webkit-line-clamp: 2;
           line-clamp: 2; 
@@ -1556,7 +1582,7 @@ svg:hover path{
   }
   .index-videoBox{
     margin-top: 4.6875vw;
-    margin-bottom: 3.125vw;
+    margin-bottom: 4.6875vw;
     &-tab{
       margin-top: 1.9271vw;
       .tab-in{

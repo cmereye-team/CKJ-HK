@@ -323,6 +323,26 @@ const changeSwiper = (swiper) =>{
             </div>
           </div>
         </div>
+        <!-- <div class="course-action-in">
+          <div class="course-action-in-l">
+            <img src="https://static.cmereye.com/imgs/2024/01/84dc48aa55e716a2.jpg" alt="">
+          </div>
+          <div class="course-action-in-r">
+            <div class="t">
+              <div class=t-t>
+                <div class="title">香港工聯會參觀交流</div>
+                <div class="time">2023年12月15日</div>
+              </div>
+              <div class="context">接待香港工聯會代表團，交流牙科醫療服務發展及趨勢</div>
+            </div>
+            <div class="b">
+              <div class="btn">
+                <a href="/brand/action-message">查看全文</a>
+              </div>
+              <div class="text">團體交流</div>
+            </div>
+          </div>
+        </div> -->
       </div>
       <div class="course">
         <div class="course-title dentistryServices-title">
