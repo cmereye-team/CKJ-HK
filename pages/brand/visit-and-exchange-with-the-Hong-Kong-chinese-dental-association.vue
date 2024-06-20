@@ -24,7 +24,7 @@ useHead({
 })
 
 const headerConfig = ref({
-  img: 'https://static.cmereye.com/imgs/2024/06/c4aab50fae95a791.jpg',
+  img: 'https://static.cmereye.com/imgs/2024/06/84c49b322fe01c0b.jpg',
   bg: '',
   mbImg: "https://static.cmereye.com/imgs/2024/06/03a150ea7e4e0d24.jpg",
   pageName: 'health-care-voucher',
