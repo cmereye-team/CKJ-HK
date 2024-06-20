@@ -2,7 +2,7 @@
 import { phoneNum } from '~/assets/js/common'
 const locale = useState<string>('locale.setting')
 useHead({
-  title: "工聯會專區",
+  title: "活動消息",
   meta: [
     { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1' },
     {
