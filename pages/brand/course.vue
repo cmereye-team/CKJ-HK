@@ -323,26 +323,26 @@ const changeSwiper = (swiper) =>{
             </div>
           </div>
         </div>
-        <!-- <div class="course-action-in">
+        <div class="course-action-in">
           <div class="course-action-in-l">
-            <img src="https://static.cmereye.com/imgs/2024/01/84dc48aa55e716a2.jpg" alt="">
+            <img src="https://static.cmereye.com/imgs/2024/06/b487c07b1769be56.jpg" alt="">
           </div>
           <div class="course-action-in-r">
             <div class="t">
               <div class=t-t>
-                <div class="title">香港工聯會參觀交流</div>
-                <div class="time">2023年12月15日</div>
+                <div class="title">香港華人牙醫公會參觀交流</div>
+                <div class="time">2024年5月30日</div>
               </div>
-              <div class="context">接待香港工聯會代表團，交流牙科醫療服務發展及趨勢</div>
+              <div class="context">我們接待了香港華人牙醫公會的訪問團隊，此次訪問旨在進一步加强與香港在口腔醫療領域的學習與交流。</div>
             </div>
             <div class="b">
               <div class="btn">
-                <a href="/brand/action-message">查看全文</a>
+                <a href="/brand/visit-and-exchange-with-the-Hong-Kong-chinese-dental-association">查看全文</a>
               </div>
               <div class="text">團體交流</div>
             </div>
           </div>
-        </div> -->
+        </div>
       </div>
       <div class="course">
         <div class="course-title dentistryServices-title">
@@ -603,9 +603,13 @@ const changeSwiper = (swiper) =>{
   &-in{
     display: flex;
     width: 100%;
+    margin-bottom: 30px;
     &-l{
       width: calc((520 / 1410) * 100%);
       margin-right: calc((40 / 1410) * 100%);
+      img{
+        width: 100%;
+      }
     }
     &-r{
       flex: 1;
