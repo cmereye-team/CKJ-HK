@@ -1278,6 +1278,7 @@ const { height } = useWindowSize()
     }
     .implantCase{
       margin-top: 112px;
+      overflow-x: hidden;
       &-content{
         margin-top: 40px;
         padding: 127px 0;

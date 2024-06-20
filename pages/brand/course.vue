@@ -475,6 +475,7 @@ const changeSwiper = (swiper) =>{
   &-in{
     width: 100%;
     margin: 36px auto 0;
+    overflow-x: hidden;
     .courseSwiperT{
       width: 732px;
       overflow: visible;

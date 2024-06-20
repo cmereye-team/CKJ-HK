@@ -69,6 +69,7 @@ const handleDoctor = () => {
   transition-timing-function: linear;
 }
 .Specialized_team{
+  overflow-x: hidden;
   &-content{
     margin-top: 50px;
     &-in{
