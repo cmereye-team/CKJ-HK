@@ -343,6 +343,26 @@ const changeSwiper = (swiper) =>{
             </div>
           </div>
         </div>
+        <div class="course-action-in">
+          <div class="course-action-in-l">
+            <img src="https://static.cmereye.com/imgs/2024/06/7ea5e8d2d7e2be8c.jpg" alt="">
+          </div>
+          <div class="course-action-in-r">
+            <div class="t">
+              <div class=t-t>
+                <div class="title">愛心洗牙啟動禮公益活動</div>
+                <div class="time">2024年5月30日</div>
+              </div>
+              <div class="context">與立法會議員、香港中旅集團及社福團體，為過千位長者及有需要人士提供免費基層牙科醫療及交通接送服務</div>
+            </div>
+            <div class="b">
+              <div class="btn">
+                <a href="/brand/love-teeth-wash-launching-ceremony-public-welfare-activity">查看全文</a>
+              </div>
+              <div class="text">公益活動</div>
+            </div>
+          </div>
+        </div>
       </div>
       <div class="course">
         <div class="course-title dentistryServices-title">
