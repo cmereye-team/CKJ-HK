@@ -693,7 +693,7 @@ onMounted(()=>{
           >
             <Swiper-slide class="index-org-content-swiper-slie" v-for="(orgListItem,orgListIndex) in orgLists" :key="orgListIndex">
               <div class="index-org-content-in" :class="`index-org-content-${orgTabCur}`" v-for="(orgItem,orgIndex) in orgListItem" :key="orgIndex">
-                <img :src="orgItem" alt="">
+                <img loading="lazy" :src="orgItem" alt="">
               </div>
             </Swiper-slide>
           </Swiper>
@@ -724,7 +724,7 @@ onMounted(()=>{
         <div class="treatment-data-in smallPageCon">
           <div class="dataBox" v-for="(treatmentItem,treatmentIndex) in treatmentData" :key="treatmentIndex">
             <div class="num">
-              <img :src="treatmentItem.bg" :style="{left: treatmentItem.left,top: treatmentItem.top}" alt="">
+              <img loading="lazy" :src="treatmentItem.bg" :style="{left: treatmentItem.left,top: treatmentItem.top}" alt="">
               <div class="numIn" v-for="(numItem,numIndex) in treatmentItem.num" :key="numIndex">
                 <span v-if="numItem === ','">{{numItem}}</span>
                 <div v-else class="numInAnim" :class="[{showNumInAnim: showTreatment}]" :style="{'animation-delay': `${(treatmentItem.num.length - numIndex) * 0.2}s`}">

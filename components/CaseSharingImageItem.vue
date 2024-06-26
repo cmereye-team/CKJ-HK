@@ -23,7 +23,7 @@ defineProps({
   <div :class="['caseSaringImageItem', userIndex%2 === 0 ? 'odd': 'even']">
     <div class="caseSaringImageItem-t">
       <div class="caseSaringImageItem-t-img">
-        <img :src="userInfo.imgUrl" alt="">
+        <img loading="lazy" :src="userInfo.imgUrl" alt="">
       </div>
       <div class="caseSaringImageItem-t-context">
         <span class="name">{{$t(userInfo.name)}}</span>

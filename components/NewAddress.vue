@@ -92,12 +92,12 @@ watch(
       </div>
       <div class="address" v-loading="pageLoading">
         <div class="address-l">
-          <img :src="getDetail().imgLists[imgcur]" :alt="$t(getDetail().name)" />
+          <img loading="lazy" :src="getDetail().imgLists[imgcur]" :alt="$t(getDetail().name)" />
         </div>
         <div class="address-r">
           <div class="address-r-img">
             <div :class="{cur: imgcur === imgIndex}" v-for="(imgItem,imgIndex) in getDetail().imgLists" :key="imgIndex" @click="imgcur = imgIndex">
-              <img :src="imgItem" :alt="$t(getDetail().name)">
+              <img loading="lazy" :src="imgItem" :alt="$t(getDetail().name)">
             </div>
           </div>
           <div class="address-r-img mbimg">
@@ -107,7 +107,7 @@ watch(
                   delay: 3000,
                 }"  class="address-r-img-swiper">
               <Swiper-slide class="address-r-img-swiper-slide" v-for="(imgItem,imgIndex) in getDetail().imgLists" :key="imgIndex">
-                <img :src="imgItem" :alt="$t(getDetail().name)">
+                <img loading="lazy" :src="imgItem" :alt="$t(getDetail().name)">
               </Swiper-slide >
             </Swiper>
           </div>

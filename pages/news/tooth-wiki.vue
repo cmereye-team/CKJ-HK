@@ -217,7 +217,7 @@ const handleClick = (event,_id) =>{
           <div v-loading="loadingShow" class="listsbox">
             <nuxt-link :to="`/news/news-tooth-wiki/${item.id}`" :id="`i${item.id}`" :alt="item.name" :title="item.name" class="lists-in" v-for="(item,index) in informationLists" :key="index">
               <div class="lists-in-img">
-                <img :src="item.img" alt="">
+                <img loading="lazy" :src="item.img" alt="">
               </div>
               <div class="lists-in-context">
                 <div class="lists-in-context-top">

@@ -150,7 +150,7 @@ onMounted(() => {
             @swiper="setEnvironmentSwiperRef"
             @slideChange="changeEnvironment">
             <swiper-slide class="environmentSwiperBox-slide" v-for="(imgItem,imgIndex) in environmentLists02" :key="imgIndex">
-                <img :src="imgItem" />
+                <img loading="lazy" :src="imgItem" />
             </swiper-slide>
           </swiper>
           <swiper
@@ -164,7 +164,7 @@ onMounted(() => {
             @slideChange="changeThumbsSwiper"
           >
             <swiper-slide class="mySwiper-slide" v-for="(imgItem,imgIndex) in environmentLists02" :key="imgIndex">
-              <img :src="imgItem" /> 
+              <img loading="lazy" :src="imgItem" /> 
             </swiper-slide>
           </swiper>
         </div>

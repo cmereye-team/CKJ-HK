@@ -261,7 +261,7 @@ const pageDetail:any = {
           </section>
           <section v-else-if="item.type === 'img'">
             <section class="imgItem" v-for="(imgItem,imgIndex) in item.list" :key="imgIndex">
-              <img :src="imgItem" alt="">
+              <img loading="lazy" :src="imgItem" alt="">
             </section>
           </section>
           <section v-else-if="item.type === 'ul'">
@@ -279,7 +279,7 @@ const pageDetail:any = {
                 </div>
               </div>
               <div class="contentbtn-r">
-                <img src="https://static.cmereye.com/imgs/2024/03/82eb8b5a33ce229f.png" alt="">
+                <img loading="lazy" src="https://static.cmereye.com/imgs/2024/03/82eb8b5a33ce229f.png" alt="">
               </div>
             </nuxt-link>
           </section>

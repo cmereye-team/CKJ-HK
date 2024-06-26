@@ -334,7 +334,7 @@ const handleLocale = (l) =>{
       </div>
       <div class="content">
         <div>
-          <img src="https://static.cmereye.com/imgs/2024/02/74d44b6145445bfd.webp" title="灣區長者醫療券" alt="灣區長者醫療券">
+          <img loading="lazy" src="https://static.cmereye.com/imgs/2024/02/74d44b6145445bfd.webp" title="灣區長者醫療券" alt="灣區長者醫療券">
         </div>
         <div class="nob">
           <h1>All rights reserved by CKJ Aikangjian Dental. Shenzhen Aikangjian has officially been included in the participating institutions of the Bay Area Elderly Medical Voucher</h1>
@@ -365,7 +365,7 @@ const handleLocale = (l) =>{
           </section>
           <section v-else-if="item.type === 'img'">
             <section class="imgItem" v-for="(imgItem,imgIndex) in item.list" :key="imgIndex">
-              <img :src="imgItem" alt="">
+              <img loading="lazy" :src="imgItem" alt="">
             </section>
           </section>
           <section v-else-if="item.type === 'ul'">

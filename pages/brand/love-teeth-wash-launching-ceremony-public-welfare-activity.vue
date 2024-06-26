@@ -157,7 +157,7 @@ const handleClick = (event) =>{
         }"
         >
           <div class="introduce-in-t mbBox">
-            <img :src="introduceData.mbImg" />
+            <img loading="lazy" :src="introduceData.mbImg" />
           </div>
           <div class="introduce-in-l pageCon">
             <div class="title">
@@ -194,7 +194,7 @@ const handleClick = (event) =>{
           </section>
           <section v-else-if="item.type === 'img'">
             <section class="imgItem" v-for="(imgItem,imgIndex) in item.list" :key="imgIndex">
-              <img :src="imgItem" alt="">
+              <img loading="lazy" :src="imgItem" alt="">
             </section>
           </section>
           <section v-else></section>

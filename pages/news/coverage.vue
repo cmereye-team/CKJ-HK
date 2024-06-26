@@ -155,7 +155,7 @@ const getPagination = (pageitem) => {
         <div class="lists" v-if="!errorpage">
           <nuxt-link :to="`/news/article/${item.id}`" class="lists-in" v-for="(item,index) in coverageLists" :key="index">
             <div class="lists-in-img">
-              <img :src="item.img" :alt="item.name">
+              <img loading="lazy" :src="item.img" :alt="item.name">
             </div>
             <div class="lists-in-context">
               <div class="lists-in-context-top">

@@ -205,8 +205,8 @@ const { height } = useWindowSize()
             <div class="index-doctorTeam-detail index-doctorTeam-con" :id="`d${doctorItem.id}`">
               <div class="index-doctorTeam-detail-l">
                 <div class="index-doctorTeam-detail-l-in">
-                  <img :srcset="'https://static.cmereye.com/imgs/2024/02/3305056d2ab78db8.webp 768w, https://static.cmereye.com/imgs/2024/02/d9ed594b3c173297.webp'" src="https://static.cmereye.com/imgs/2024/02/d9ed594b3c173297.webp" alt="">
-                  <img :srcset="`${doctorItem.mbImg} 768w, ${doctorItem.imgUrl}`" :src="doctorItem.imgUrl" :alt="doctorItem.name" :title="doctorItem.name">
+                  <img loading="lazy" :srcset="'https://static.cmereye.com/imgs/2024/02/3305056d2ab78db8.webp 768w, https://static.cmereye.com/imgs/2024/02/d9ed594b3c173297.webp'" src="https://static.cmereye.com/imgs/2024/02/d9ed594b3c173297.webp" alt="">
+                  <img loading="lazy" :srcset="`${doctorItem.mbImg} 768w, ${doctorItem.imgUrl}`" :src="doctorItem.imgUrl" :alt="doctorItem.name" :title="doctorItem.name">
                 </div>
               </div>
               <div class="index-doctorTeam-detail-r">

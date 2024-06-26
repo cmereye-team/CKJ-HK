@@ -75,7 +75,7 @@ const handleProcessBtn = (_type: string) => {
           <span :title="$t(introduceData.tabNavName)">{{$t(introduceData.tabNavName)}}</span>
         </div>
         <div class="introduce-in-t mbBox">
-          <img :src="introduceData.mbImg" />
+          <img loading="lazy" :src="introduceData.mbImg" />
         </div>
         <div class="introduce-in-l smallPageCon">
           <div class="title">{{$t(introduceData.title)}}</div>
@@ -99,10 +99,10 @@ const handleProcessBtn = (_type: string) => {
             @swiper="setSwiperRef"
           >
             <swiper-slide class="swiper-slide">
-              <img src="https://static.cmereye.com/imgs/2023/06/154e36113fa5e579.png" alt="">
+              <img loading="lazy" src="https://static.cmereye.com/imgs/2023/06/154e36113fa5e579.png" alt="">
             </swiper-slide>
             <swiper-slide class="swiper-slide">
-              <img src="https://static.cmereye.com/imgs/2023/06/ac0aa9264119857f.png" alt="">
+              <img loading="lazy" src="https://static.cmereye.com/imgs/2023/06/ac0aa9264119857f.png" alt="">
             </swiper-slide>
           </swiper>
           <div class="rightBtn" @click="handleProcessBtn('slideNext')"></div>
@@ -136,13 +136,13 @@ const handleProcessBtn = (_type: string) => {
           class="internationalSwiper"
         >
           <swiper-slide class="swiper-slide">
-            <img src="https://static.cmereye.com/imgs/2023/05/077256e4a998aad2.jpg" alt="">
+            <img loading="lazy" src="https://static.cmereye.com/imgs/2023/05/077256e4a998aad2.jpg" alt="">
           </swiper-slide>
           <swiper-slide class="swiper-slide">
-            <img src="https://static.cmereye.com/imgs/2023/05/d528ef75d3159deb.jpg" alt="">
+            <img loading="lazy" src="https://static.cmereye.com/imgs/2023/05/d528ef75d3159deb.jpg" alt="">
           </swiper-slide>
           <swiper-slide class="swiper-slide">
-            <img src="https://static.cmereye.com/imgs/2023/05/bd7fb4779d941c03.jpg" alt="">
+            <img loading="lazy" src="https://static.cmereye.com/imgs/2023/05/bd7fb4779d941c03.jpg" alt="">
           </swiper-slide>
         </swiper>
       </div>
@@ -159,7 +159,7 @@ const handleProcessBtn = (_type: string) => {
       <div class="brand-in">
         <div>
           <div>
-            <img src="https://static.cmereye.com/imgs/2023/05/d7e785a21ef31545.png" alt="">
+            <img loading="lazy" src="https://static.cmereye.com/imgs/2023/05/d7e785a21ef31545.png" alt="">
           </div>
           <div>
             {{$t('pages.brand.honor.brand_item.in_1')}}
@@ -167,7 +167,7 @@ const handleProcessBtn = (_type: string) => {
         </div>
         <div>
           <div>
-            <img src="https://static.cmereye.com/imgs/2023/05/6b9b5cbf87f8da95.png" alt="">
+            <img loading="lazy" src="https://static.cmereye.com/imgs/2023/05/6b9b5cbf87f8da95.png" alt="">
           </div>
           <div>
             {{$t('pages.brand.honor.brand_item.in_2')}}
@@ -175,7 +175,7 @@ const handleProcessBtn = (_type: string) => {
         </div>
         <div>
           <div>
-            <img src="https://static.cmereye.com/imgs/2023/05/42202884c1b63259.png" alt="">
+            <img loading="lazy" src="https://static.cmereye.com/imgs/2023/05/42202884c1b63259.png" alt="">
           </div>
           <div>
             {{$t('pages.brand.honor.brand_item.in_3.span_1')}}{{$t('pages.brand.honor.brand_item.in_3.span_2')}}
@@ -183,7 +183,7 @@ const handleProcessBtn = (_type: string) => {
         </div>
         <div>
           <div>
-            <img src="https://static.cmereye.com/imgs/2023/05/cb849eb2ad0023d4.png" alt="">
+            <img loading="lazy" src="https://static.cmereye.com/imgs/2023/05/cb849eb2ad0023d4.png" alt="">
           </div>
           <div>
             {{$t('pages.brand.honor.brand_item.in_4')}}
@@ -191,7 +191,7 @@ const handleProcessBtn = (_type: string) => {
         </div>
         <nuxt-link to="https://www.gma-awards.hk01.group/%E5%BE%97%E7%8D%8E%E5%90%8D%E5%96%AE">
           <div>
-            <img src="https://static.cmereye.com/imgs/2024/05/a4cced5ce2d5c606.png" alt="">
+            <img loading="lazy" src="https://static.cmereye.com/imgs/2024/05/a4cced5ce2d5c606.png" alt="">
           </div>
           <div>
             {{'香港01\n傑出大灣區牙科醫療\n服務機構'}}

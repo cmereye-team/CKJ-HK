@@ -21,7 +21,7 @@ const props = defineProps({
 <template>
   <div class="caseSaringVideoItem">
     <div class="caseSaringVideoItem-l">
-      <img src="https://static.cmereye.com/imgs/2023/06/b6685121c74c93e0.png" alt="">
+      <img loading="lazy" src="https://static.cmereye.com/imgs/2023/06/b6685121c74c93e0.png" alt="">
     </div>
     <div class="caseSaringVideoItem-r">
       <div class="type">{{$t(caseSharingData.type)}}</div>

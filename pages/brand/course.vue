@@ -305,7 +305,7 @@ const changeSwiper = (swiper) =>{
       <div class="course-action">
         <div class="course-action-in">
           <div class="course-action-in-l">
-            <img src="https://static.cmereye.com/imgs/2024/01/84dc48aa55e716a2.jpg" alt="">
+            <img loading="lazy" src="https://static.cmereye.com/imgs/2024/01/84dc48aa55e716a2.jpg" alt="">
           </div>
           <div class="course-action-in-r">
             <div class="t">
@@ -325,7 +325,7 @@ const changeSwiper = (swiper) =>{
         </div>
         <div class="course-action-in">
           <div class="course-action-in-l">
-            <img src="https://static.cmereye.com/imgs/2024/06/b487c07b1769be56.jpg" alt="">
+            <img loading="lazy" src="https://static.cmereye.com/imgs/2024/06/b487c07b1769be56.jpg" alt="">
           </div>
           <div class="course-action-in-r">
             <div class="t">
@@ -345,7 +345,7 @@ const changeSwiper = (swiper) =>{
         </div>
         <div class="course-action-in">
           <div class="course-action-in-l">
-            <img src="https://static.cmereye.com/imgs/2024/06/7ea5e8d2d7e2be8c.jpg" alt="">
+            <img loading="lazy" src="https://static.cmereye.com/imgs/2024/06/7ea5e8d2d7e2be8c.jpg" alt="">
           </div>
           <div class="course-action-in-r">
             <div class="t">
