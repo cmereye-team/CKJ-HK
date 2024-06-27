@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { phoneNum } from '~/assets/js/common'
 const locale = useState<string>('locale.setting')
+const router = useRouter()
 useHead({
   title: "長者醫療券",
 })
@@ -323,7 +324,7 @@ const newsmoduleLists = [
     id: '154',
     img: 'https://static.cmereye.com/imgs/2024/06/485e301c75d8d05b.jpg',
     name: '【#長者醫療券使用指南】提早下載醫健通 用醫療券好輕鬆 📱👍',
-    desc: '親愛嘅長者們！使用醫療劵前，可以先下載 📱「醫健通eHealth」App 同進行登記啊！利用呢個App，您可以更方便地管理您嘅醫療劵，包括：<br>✅ 查閱醫療劵戶口餘額 - 隨時了解剩餘金額，合理規劃使用。<br>✅ 查閱過去使用醫療劵紀錄 - 明白每一筆交易，清楚消費。<br>✅ 查閱提供服務嘅醫療機構 - 揾到最適合您嘅醫療服務地點。<br>✅ 獲取最新醫療劵消息 - 不錯過任何重要更新同資訊。',
+    desc: '親愛嘅長者們！使用醫療劵前，可以先下載 📱「醫健通eHealth」App 同進行登記啊！利用呢個App，您可以更方便地管理您嘅醫療劵，包括：✅ 查閱醫療劵戶口餘額 - 隨時了解剩餘金額，合理規劃使用。✅ 查閱過去使用醫療劵紀錄 - 明白每一筆交易，清楚消費。✅ 查閱提供服務嘅醫療機構 - 揾到最適合您嘅醫療服務地點。✅ 獲取最新醫療劵消息 - 不錯過任何重要更新同資訊。',
     link: '/news/news-information/164'
   },
   {
@@ -414,14 +415,14 @@ const newsmoduleLists = [
           </div>
         </div>
         <div class="newsmodule-lists">
-          <NuxtLink :to="item.link" class="list-in" v-for="(item) in newsmoduleLists" :key="item.id">
+          <div @click="router.push(item.link)" class="list-in" v-for="item in newsmoduleLists" :key="item.id">
             <div class="image"><img :title="item.name" :src="item.img" alt=""></div>
             <h2 :title="item.name">{{item.name}}</h2>
             <p :title="item.desc">{{item.desc}}</p>
             <div class="btn">
-              <PageAnimBtnTypeTwo str="查看全文" :link="item.link" />
+              <PageAnimBtnTypeTwo str="查看全文" :link="item.link" :key="item.id" />
             </div>
-          </NuxtLink>
+          </div>
         </div>
       </div>
       <NewAddress />
@@ -714,6 +715,7 @@ const newsmoduleLists = [
       width: 100%;
       display: flex;
       flex-direction: column;
+      display: block;
       .image{
         width: 100%;
         height: 0;
