@@ -473,9 +473,19 @@ function copySpecifiedText(event,text) {
         alert('您的瀏覽器不支持此功能，請更新瀏覽器');  
     }  
 }
+
+const router = useRouter()
+const handlevideBoxBtn = () =>{
+  // router.push('')
+  let _arr = [
+    '/news/coverage',
+    '/news/information',
+    '/news/tooth-wiki'
+  ]
+  router.push(_arr[indexNewsCur.value])
+}
 onMounted(()=>{
   handletab2('101')
-  
   nextTick(()=>{
     getNewsLists(0)
   })
@@ -665,6 +675,9 @@ onMounted(()=>{
               <PageAnimBtnTypeTwo str="查看全文" :link="item.link" />
             </div>
           </nuxtLink>
+        </div>
+        <div class="index-videoBox-btn smallPageCon" @click="handlevideBoxBtn">
+          <span>更多資訊 </span>
         </div>
       </div> 
       <!-- 關於我們 -->
@@ -1196,6 +1209,7 @@ svg:hover path{
 .index-videoBox{
   margin-top: 90px;
   margin-bottom: 90px;
+  position: relative;
   &-tab{
     display: flex;
     justify-content: center;
@@ -1434,6 +1448,38 @@ svg:hover path{
       }
     }
   }
+  &-btn{
+    position: absolute;
+    inset: 0;
+    top: 65px;
+    pointer-events: none;
+    span{
+      float: right;
+      display: inline-block;
+      color: var(--Theme-Color, #FC1682);
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%;
+      letter-spacing: 3px;
+      position: relative;
+      pointer-events: auto;
+      cursor: pointer;
+      &::before{
+        content: '';
+        height: 0;
+        width: 90%;
+        position: absolute;
+        border-bottom: 2px solid var(--indexColor1);
+        bottom: 0;
+        left: 0;
+      }
+      &::after{
+        content: '》';
+        font-size: 28px;
+      }
+    }
+  }
 }
 .Latest_Movies{
   &_t{
@@ -1640,6 +1686,16 @@ svg:hover path{
         }
         .btn{
           margin-top: 1.0417vw;
+        }
+      }
+    }
+    &-btn{
+      top: 4.1667vw;
+      span{
+        font-size: 1.5625vw;
+        letter-spacing: .1563vw;
+        &::after{
+          font-size: 1.4583vw;
         }
       }
     }
@@ -2198,6 +2254,25 @@ svg:hover path{
     &-in{
       grid-template-columns: repeat(1, 1fr);
       margin-top: 30px;
+    }
+    &-btn{
+      position: relative;
+      inset: auto;
+      top: 0;
+      display: flex;
+      justify-content: center;
+      
+      span{
+        float: initial;
+        font-size: 20px;
+        margin-left: 10px;
+        &::before{
+          border-bottom: 1px solid var(--indexColor1);
+        }
+        &::after{
+          font-size: 18px;
+        }
+      }
     }
   }
   .Latest_Movies{
