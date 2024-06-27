@@ -218,7 +218,9 @@ const changetopimg = (swiper:any) =>{
 }
 
 onMounted(()=>{
-  getDetail()
+  setTimeout(()=>{
+    getDetail()
+  })
 })
 
 let imgcur = ref(0)
