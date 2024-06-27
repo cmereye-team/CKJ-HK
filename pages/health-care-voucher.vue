@@ -311,6 +311,29 @@ const handleLocale = (l) =>{
 	document.documentElement.style.setProperty("--indexFontFamily", _text);
 } 
 
+const newsmoduleLists = [
+  {
+    id: '192',
+    img: 'https://static.cmereye.com/imgs/2024/06/247bc49f8a117cf8.jpg',
+    name: '【#長者醫療券使用指南】配偶共用醫療券方法',
+    desc: '為了更好地照顧家庭健康，長者醫療券計劃允許配偶之間共享使用醫療券餘額。這意味著，如果其中一方醫療券戶口內的餘額耗盡後，便可以使用配偶戶口內的醫療券餘額。',
+    link: '/news/news-information/192'
+  },
+  {
+    id: '154',
+    img: 'https://static.cmereye.com/imgs/2024/06/485e301c75d8d05b.jpg',
+    name: '【#長者醫療券使用指南】提早下載醫健通 用醫療券好輕鬆 📱👍',
+    desc: '親愛嘅長者們！使用醫療劵前，可以先下載 📱「醫健通eHealth」App 同進行登記啊！利用呢個App，您可以更方便地管理您嘅醫療劵，包括：<br>✅ 查閱醫療劵戶口餘額 - 隨時了解剩餘金額，合理規劃使用。<br>✅ 查閱過去使用醫療劵紀錄 - 明白每一筆交易，清楚消費。<br>✅ 查閱提供服務嘅醫療機構 - 揾到最適合您嘅醫療服務地點。<br>✅ 獲取最新醫療劵消息 - 不錯過任何重要更新同資訊。',
+    link: '/news/news-information/164'
+  },
+  {
+    id: '152',
+    img: 'https://static.cmereye.com/imgs/2024/05/6aa6a7225eee1279.jpg',
+    name: '【#長者醫療券使用指南】首次使用醫療券要登記',
+    desc: '長者朋友們，首次使用醫療券需要前往已註冊的醫療券服務提供的醫院或診所進行戶口登記。不過唔使擔心，登記過程非常簡單，而且完全免費。如果您覺得有需要，可以帶埋照顧者一齊前往進行登記手續。',
+    link: '/news/news-information/152'
+  }
+]
 
 </script>
 
@@ -381,6 +404,26 @@ const handleLocale = (l) =>{
           </span>
         </div>
       </div>
+      <div class="newsmodule smallPageCon">
+        <div class="newsmodule-title">
+          <div class="index_title">
+            醫療券資訊
+          </div>
+          <div class="mewsmodule-btn">
+            <NuxtLink to="/news/information">更多資訊 </NuxtLink>
+          </div>
+        </div>
+        <div class="newsmodule-lists">
+          <NuxtLink :to="item.link" class="list-in" v-for="(item) in newsmoduleLists" :key="item.id">
+            <div class="image"><img :title="item.name" :src="item.img" alt=""></div>
+            <h2 :title="item.name">{{item.name}}</h2>
+            <p :title="item.desc">{{item.desc}}</p>
+            <div class="btn">
+              <PageAnimBtnTypeTwo str="查看全文" :link="item.link" />
+            </div>
+          </NuxtLink>
+        </div>
+      </div>
       <NewAddress />
       <ContactForm-new />
     </div>
@@ -440,6 +483,50 @@ const handleLocale = (l) =>{
     color: var(--indexColor1);
   }
 }
+@keyframes btnAnim {
+    0%{
+      opacity: 0;
+    } 
+    15%{
+      opacity: 1;
+      width: calc(100% + 35px);
+      height: calc(100% + 35px);
+      border: 10px solid #B9D9FC;
+    }
+    20%{
+      border: 0px solid #B9D9FC;
+      opacity: 0;
+      width: calc(100% + 35px);
+      height: calc(100% + 35px);
+    }
+    100%{
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+    }
+}
+@keyframes btnAnimHover {
+    0%{
+      opacity: 0;
+    } 
+    15%{
+      opacity: 1;
+      width: calc(100% + 35px);
+      height: calc(100% + 35px);
+      border: 10px solid #FCD1B9;
+    }
+    20%{
+      border: 0px solid #FCD1B9;
+      opacity: 0;
+      width: calc(100% + 35px);
+      height: calc(100% + 35px);
+    }
+    100%{
+      opacity: 0;
+      width: 100%;
+      height: 100%;
+    }
+}
 .content{
   width: 100%;
   max-width: 960px;
@@ -475,16 +562,20 @@ const handleLocale = (l) =>{
       a{
         font-size: 35px;
         line-height: 160%;
-        background: var(--indexColor1);
+        background: #00AEFF;
         padding: 10px 35px;
         border-radius: 50px;
         color: #fff;
         transition: all .3s;
         position: relative;
-        box-shadow: 0 5px 10px rgba(252, 22, 130, .5);
+        box-shadow: 3px 3px 12.4px 0px rgba(0, 174, 255, 0.50);
         text-align: center;
         &:hover{
-          background: #FF85AF;
+          background: #FF9900;
+          box-shadow: 3px 3px 12.4px 0px rgba(255, 153, 0,.5);
+          &::before{
+            animation: btnAnimHover 5s linear infinite;
+          }
         }
         &::after{
           content: '';
@@ -495,6 +586,19 @@ const handleLocale = (l) =>{
           background-size: 100% 100%;
           width: 50px;
           height: 60px;
+        }
+        &::before{
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%,-50%);
+          border: 10px solid var(--Blue-Light, #B9D9FC);
+          animation: btnAnim 5s linear infinite;
+          border-radius: 100px;
+          z-index: -1;
         }
       }
     }
@@ -566,7 +670,127 @@ const handleLocale = (l) =>{
     }
   }
 }
-@media (min-width: 768px) and (max-width: 1452px) {}
+.newsmodule{
+  &-title{
+    display: flex;
+    justify-content: space-between;
+    .mewsmodule-btn{
+      &>a{
+        // float: right;
+        display: inline-block;
+        color: var(--Theme-Color, #FC1682);
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        letter-spacing: 3px;
+        position: relative;
+        pointer-events: auto;
+        cursor: pointer;
+        &::before{
+          content: '';
+          height: 0;
+          width: 90%;
+          position: absolute;
+          border-bottom: 2px solid var(--indexColor1);
+          bottom: 0;
+          left: 0;
+        }
+        &::after{
+          content: '》';
+          font-size: 28px;
+        }
+      }
+    }
+  }
+  &-lists{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    max-width: 1187px;
+    margin: 50px auto;
+    gap: 31px;
+    .list-in{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      .image{
+        width: 100%;
+        height: 0;
+        padding-bottom: 100%;
+        margin-bottom: 10px;
+        position: relative;
+        overflow: hidden;
+        img{
+          position: absolute;
+          width: 100%;
+          height: auto;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%,-50%);
+          transition: all .3s;
+        }
+        &:hover{
+          img{
+            transform: translate(-50%,-50%) scale(1.1);
+          }
+        }
+      }
+      h2{
+        color: var(--Theme-Color, #FC1682);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; 
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+          line-clamp: 1; 
+        -webkit-box-orient: vertical;  
+        overflow: hidden;  
+        text-overflow: ellipsis; 
+        padding: 0 20px;
+      }
+      p{
+        color: var(--Grey-Mid, #666);
+        text-overflow: ellipsis;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 200%; /* 32px */
+        letter-spacing: 1.6px;
+        margin-top: 10px;
+        padding: 0 20px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+          line-clamp: 2; 
+        -webkit-box-orient: vertical;  
+        overflow: hidden;  
+        text-overflow: ellipsis; 
+        padding: 0 20px;
+        flex: 1;
+      }
+      .btn{
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1920px) {
+  .newsmodule{
+    &-title{
+      .mewsmodule-btn{
+        &>a{
+          font-size: 1.5625vw;
+          &::after{
+            font-size: 1.4583vw;
+          }
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 768px) {
   .health-care-voucher-top{
     flex-direction: column-reverse;
@@ -628,7 +852,10 @@ const handleLocale = (l) =>{
         }
       }
       &.btn{
+        max-width: 100%;
         margin-top: 30px;
+        padding: 30px 0;
+        overflow: hidden;
         a{
           font-size: 26px;
           padding: 5px 20px;
@@ -693,6 +920,33 @@ const handleLocale = (l) =>{
         display: block;
         letter-spacing: 1px;
       }
+    }
+  }
+  .newsmodule{
+    position: relative;
+    margin-top: 60px;
+    &-title{
+      .mewsmodule-btn{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translate(-50%,200%);
+        &>a{
+          float: initial;
+          font-size: 20px;
+          margin-left: 10px;
+          &::before{
+            border-bottom: 1px solid var(--indexColor1);
+          }
+          &::after{
+            font-size: 18px;
+          }
+        }
+      }
+    }
+    &-lists{
+      grid-template-columns: repeat(1, 1fr);
+      margin-top: 30px;
     }
   }
 }
