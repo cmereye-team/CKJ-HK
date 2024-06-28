@@ -1352,6 +1352,8 @@ const handleopenwechat = () =>{
       z-index: 1;
       &.course-new{
         padding-bottom: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
       }
     }
     &-btn-implant {
