@@ -169,8 +169,8 @@ let bannerLists = ref([
   {
     name: '愛康健裕亨新店開業優惠banner',
     link: 'https://bit.ly/愛康健裕亨新店開業優惠',
-    pc: 'https://static.cmereye.com/imgs/2024/04/ea3b6c9d7c7c2cc6.webp',
-    mb: 'https://static.cmereye.com/imgs/2024/02/216458f63817b47e.jpg?v=1.2.0'
+    pc: 'https://static.cmereye.com/imgs/2024/06/6f26ff5dd22033b4.jpg',
+    mb: 'https://static.cmereye.com/imgs/2024/06/455f973c99656e61.jpg?v=1.2.1'
   },
   {
     name: '醫生團隊banner',
