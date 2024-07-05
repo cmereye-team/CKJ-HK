@@ -305,6 +305,7 @@ const getPagination = (pageitem) => {
         margin-bottom: 23px;
         .title{
           color: var(--indexColor1);
+          font-family:  var(--contextFamily);
           font-size: 30px;
           font-style: normal;
           font-weight: 400;

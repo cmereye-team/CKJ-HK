@@ -387,6 +387,7 @@ if(process.server){
   max-width: 960px;
   margin: 30px auto 0;
   color: var(--indexColor1);
+  font-family: 'Noto Sans HK' !important;
   font-size: 50px;
 }
 .content{
