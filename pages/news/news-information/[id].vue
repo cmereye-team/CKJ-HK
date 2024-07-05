@@ -436,6 +436,7 @@ if (process.server) {
   & > span {
     cursor: pointer;
     color: var(--indexColor1);
+    font-family: var(--contextFamily);
   }
 }
 .articlePage {

@@ -1305,6 +1305,7 @@ svg:hover path{
         overflow: hidden;  
         text-overflow: ellipsis; 
         padding: 0 20px;
+        font-family: var(--contextFamily);
       }
       p{
         color: var(--Grey-Mid, #666);
