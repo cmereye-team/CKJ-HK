@@ -54,6 +54,12 @@ export default [
     isHot: false
   },
   {
+    name: 'service.children_dentistry',
+    imgUrl: 'https://static.cmereye.com/imgs/2024/07/4feb204172b310b6.png',
+    link: '/dental-service/children-dentistry',
+    isHot: false
+  },
+  {
     name: 'service.wisdom_teeth_extraction',
     imgUrl: 'https://static.cmereye.com/imgs/2024/03/2b1b8835b0d80c94.png',
     link: '/dental-service/wisdom-teeth-extraction',
@@ -65,7 +71,6 @@ export default [
     link: '/dental-service/periodontal',
     isHot: false
   },
-  
   {
     name: 'service.teeth_whitening',
     imgUrl: 'https://static.cmereye.com/imgs/2024/03/20ade6f1ba75d122.png',
@@ -76,12 +81,6 @@ export default [
     name: 'service.general_oral_examination',
     imgUrl: 'https://static.cmereye.com/imgs/2024/03/62b3b73436691753.png',
     link: '/dental-service/general-oral-examination',
-    isHot: false
-  },
-  {
-    name: 'service.children_dentistry',
-    imgUrl: 'https://static.cmereye.com/imgs/2024/03/1c8586701fba6af8.png',
-    link: '/dental-service/children-dentistry',
     isHot: false
   },
 ]
