@@ -30,7 +30,10 @@
   // src: url(https://static.cmereye.com/static/font/QingNingYouYuan-2.ttf);
   src: url(https://static.cmereye.com/static/font/ChillRoundGothic_Bold.ttf), url(https://static.cmereye.com/static/font/ChillRoundGothic_Medium.ttf);
 }
-
+@font-face {
+  font-family: 'NotoSansHans';
+  src: url(https://static.cmereye.com/static/font/NotoSansHans-Medium.woff2);
+}
 body,div,span,h1,h2,h3,h4,h5,h6,p,li{
   // font-family: 'Noto Serif HK', Serif;
   // font-family: 'FakePearl-Regular','幼圆', Serif;
