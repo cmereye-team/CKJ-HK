@@ -541,6 +541,14 @@ if (process.server) {
     margin-top: 35px;
   }
 }
+:deep(.content) {
+  p {
+    font-family: 'NotoSansHans', 'Noto Sans HK', Serif;
+    span {
+      font-family: 'NotoSansHans', 'Noto Sans HK', Serif;
+    }
+  }
+}
 .content-bbtn {
   display: flex;
   justify-content: center;
