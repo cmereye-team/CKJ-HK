@@ -308,7 +308,7 @@ const getPagination = (pageitem) => {
           font-family:  var(--contextFamily);
           font-size: 30px;
           font-style: normal;
-          font-weight: 400;
+          font-weight: 500;
           line-height: 130%;
           display: -webkit-box;  
           -webkit-line-clamp: 2; 
