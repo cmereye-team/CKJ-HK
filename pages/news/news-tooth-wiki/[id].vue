@@ -573,7 +573,7 @@ if (process.server) {
       display: flex;
       align-items: center;
       justify-content: center;
-      padding:  24px 8px;
+      padding: 24px 8px;
       letter-spacing: 4px;
     }
 
@@ -1937,30 +1937,41 @@ if (process.server) {
       }
 
       .twenty-three-container-header-one {
-        padding: 8px 15px;
+        padding: 8px 0;
         letter-spacing: 1px;
         font-size: 14px;
-        line-height: 160%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       .twenty-three-container-header-two-three {
         font-size: 20px;
-        line-height: 160%;
+        font-size: 14px;
         letter-spacing: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
       }
 
       .twenty-three-container-content-one {
-        padding: 8px 20px;
+        padding: 8px 4px;
         letter-spacing: 1px;
         font-size: 14px;
         line-height: 160%;
       }
 
       .twenty-three-container-content-two-three {
-        padding: 4px 10px;
+        padding: 10px;
         letter-spacing: 1px;
         font-size: 14px;
-        line-height: 120%;
+        line-height: 140%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        ul {
+          padding-left: 15px;
+        }
       }
     }
   }
