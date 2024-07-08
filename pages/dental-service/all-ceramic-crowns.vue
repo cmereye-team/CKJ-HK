@@ -454,7 +454,7 @@ const problemData = {
         background: #FFCECB;
       }
       .img{
-        height: 280px;
+        // height: 280px;
         img{
           width: 100%;
           height: 100%;
@@ -917,7 +917,7 @@ const problemData = {
           font-size: 15px;
         }
         .img{
-          height: 126px;
+          // height: 126px;
         }
         .merit{
           height: auto;
