@@ -53,8 +53,8 @@ const foiblesData = {
       shortcomingLists: [
         '比金屬牙套的強度較低'
       ],
-      img: 'https://static.cmereye.com/imgs/2024/05/ccd01c67528c408f.png',
-      mbimg: 'https://static.cmereye.com/imgs/2024/05/71a366efc58e349e.png'
+      img: 'https://static.cmereye.com/imgs/2024/07/94cd54041d3efc00.png',
+      mbimg: 'https://static.cmereye.com/imgs/2024/07/94cd54041d3efc00.png'
     },
     {
       title: '烤瓷合金牙冠',
@@ -67,8 +67,8 @@ const foiblesData = {
         '牙套邊緣會顯出金屬黑影，影響外觀',
         '表層陶瓷較金屬容易剝落或斷裂'
       ],
-      img: 'https://static.cmereye.com/imgs/2024/05/18ed9f2d5706ea7f.png',
-      mbimg: 'https://static.cmereye.com/imgs/2024/05/cff7e17f2dfdf392.png'
+      img: 'https://static.cmereye.com/imgs/2024/07/520fa4ad88956a63.png',
+      mbimg: 'https://static.cmereye.com/imgs/2024/07/520fa4ad88956a63.png'
     },
     {
       title: '金屬牙冠',
