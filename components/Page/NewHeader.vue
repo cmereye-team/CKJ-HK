@@ -901,7 +901,7 @@ const handleopenwechat = () =>{
           &-item {
             width: 100%;
             text-align: center;
-            padding: 10px 0 5px;
+            padding: 0;
             font-weight: 500;
             font-size: 18px;
             color: #666666;
@@ -914,6 +914,10 @@ const handleopenwechat = () =>{
             }
             &.menuChildCurrent {
               color: var(--indexColor1);
+            }
+            &>a {
+              padding: 10px 0 5px;
+              display: block;
             }
             // &>a{
             //   &.hot{
