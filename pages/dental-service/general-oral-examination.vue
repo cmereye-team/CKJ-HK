@@ -1,28 +1,30 @@
 <script lang="ts" setup>
 import { useAppState } from '~/stores/appState'
-import { Autoplay } from 'swiper';
+import { Autoplay } from 'swiper'
 const appState = useAppState()
 appState.setDentistryService('general-oral-examination')
 useHead({
   title: '口腔檢查｜牙科服務',
   meta: [
-   {
+    {
       hid: 'description',
       name: 'description',
-      content: '愛康健提供一般口腔檢查服務，定期口腔檢查確保牙齒和牙齦的健康，預防各種口腔疾病。牙科醫生通過口腔檢查評估牙齒、牙齦、面部和口腔組織的健康狀況，確保沒有潛在的蛀牙、牙齦發炎或其他口腔問題。要徹底預防一些口腔問題，必須定期接受牙齒檢查和口腔護理',
-   },
-   {
+      content:
+        '愛康健提供一般口腔檢查服務，定期口腔檢查確保牙齒和牙齦的健康，預防各種口腔疾病。牙科醫生通過口腔檢查評估牙齒、牙齦、面部和口腔組織的健康狀況，確保沒有潛在的蛀牙、牙齦發炎或其他口腔問題。要徹底預防一些口腔問題，必須定期接受牙齒檢查和口腔護理',
+    },
+    {
       hid: 'Keywords',
       name: 'Keywords',
-      content: '口腔檢查 定期口腔檢查 牙齒檢查 檢查牙齒 牙科檢查 基本牙科服務 口腔衛生保健 口腔保健 牙科保健服務 愛康健 深圳愛康健 深圳專業牙科中心 愛康健醫院 愛康健口腔醫院 深圳愛康健口腔醫院愛康健 CKJ愛康健齒科集團 深圳口腔專科醫院 愛康健齒科集團 深圳牙科醫院牙科服務內地牙科 深圳口腔專科',
-   },
-  ]
+      content:
+        '口腔檢查 定期口腔檢查 牙齒檢查 檢查牙齒 牙科檢查 基本牙科服務 口腔衛生保健 口腔保健 牙科保健服務 愛康健 深圳愛康健 深圳專業牙科中心 愛康健醫院 愛康健口腔醫院 深圳愛康健口腔醫院愛康健 CKJ愛康健齒科集團 深圳口腔專科醫院 愛康健齒科集團 深圳牙科醫院牙科服務內地牙科 深圳口腔專科',
+    },
+  ],
 })
 
 const headerConfig = {
-  img: 'https://static.cmereye.com/imgs/2024/05/6e3082c25989960e.webp',
+  img: 'https://static.cmereye.com/imgs/2024/07/c3ddae69152c28aa.webp',
+  mbImg: 'https://static.cmereye.com/imgs/2024/07/ad8f54fd31615a7e.webp',
   bg: '',
-  mbImg: 'https://static.cmereye.com/imgs/2024/05/ebc49dda0d1eb137.webp',
   pageName: 'scaling-and-polishing-test',
   pcText: [],
   mbText: [],
@@ -30,10 +32,12 @@ const headerConfig = {
 
 const orthodonticsIntroduceData = {
   title: 'pages.dental-service.general-oral-examination.introduce.title',
-  content: '許多人常忽略定期進行口腔檢查的重要性。由於口腔是細菌滋生的溫床，缺乏適當的護理可能會引發諸如蛀牙、口腔潰瘍、牙周炎及牙齦炎等問題。定期的口腔檢查有助於確保牙齒和牙齦的健康，並預防這些口腔疾病的發生。',
+  content:
+    '許多人常忽略定期進行口腔檢查的重要性。由於口腔是細菌滋生的溫床，缺乏適當的護理可能會引發諸如蛀牙、口腔潰瘍、牙周炎及牙齦炎等問題。定期的口腔檢查有助於確保牙齒和牙齦的健康，並預防這些口腔疾病的發生。',
   mbImg: 'https://static.cmereye.com/imgs/2024/05/fc2fa3db10c294f7.webp',
   pcImg: 'https://static.cmereye.com/imgs/2024/05/ac6d40ca8a20cdcc.webp',
-  tabNavName: 'pages.dental-service.general-oral-examination.introduce.tabNavName',
+  tabNavName:
+    'pages.dental-service.general-oral-examination.introduce.tabNavName',
 }
 
 const stepData = {
@@ -45,11 +49,11 @@ const stepData = {
     },
     {
       img: 'https://static.cmereye.com/imgs/2024/05/aa4a51e8ca6733ed.png',
-      text: ['檢查面部或頸項','有否出現異常情況'],
+      text: ['檢查面部或頸項', '有否出現異常情況'],
     },
     {
       img: 'https://static.cmereye.com/imgs/2024/05/bddc48d6b23920b8.png',
-      text: ['評估整體口腔健康','狀況及提供建議'],
+      text: ['評估整體口腔健康', '狀況及提供建議'],
     },
     {
       img: 'https://static.cmereye.com/imgs/2024/05/4f75229a1b52a602.png',
@@ -59,7 +63,7 @@ const stepData = {
       img: 'https://static.cmereye.com/imgs/2024/05/58d5900bf105e8bf.png',
       text: ['提供口腔保健資訊'],
     },
-  ]
+  ],
 }
 
 const problemData = {
@@ -84,27 +88,26 @@ const problemData = {
     {
       Q: '鼻竇炎可能是牙齒感染引起？',
       A: '當牙齒感染發生在上顎牙齒的根部附近時。這種情況被稱為「牙源性鼻竇炎」。\n症狀：包括典型的鼻竇炎症狀如鼻塞、分泌物、面部壓痛以及牙齒疼痛，特別是在上顎。\n治療：治療牙源性鼻竇炎通常需要牙科和耳鼻喉科的聯合介入。治療牙齒感染通常是解決問題的關鍵，這可能包括根管治療或牙齒的拔除。\n診斷：確定鼻竇炎是否牙源性可能需要綜合考慮症狀、臨床檢查、X光片和CT掃描。',
-    }
-  ]
+    },
+  ],
 }
- 
+
 let noticeCurrent = ref(1)
 
 const onSlideChange = (swiper: any) => {
   noticeCurrent.value = swiper.realIndex + 1
 }
 
-
 const noteData = {
   title: '口腔檢查的目的',
   lists: [
     {
-      name: '健康評估\n牙科醫生通過檢查可以評估牙齒、牙齦、面頜及其他口腔組織的健康狀況，及早發現潛在的蛀牙、牙齦發炎或其他問題。'
+      name: '健康評估\n牙科醫生通過檢查可以評估牙齒、牙齦、面頜及其他口腔組織的健康狀況，及早發現潛在的蛀牙、牙齦發炎或其他問題。',
     },
     {
       name: '預防措施\n透過定期檢查及早發現問題，可進行及時治療，避免病情惡化。',
-    }
-  ]
+    },
+  ],
 }
 
 const services_include = {
@@ -112,34 +115,34 @@ const services_include = {
   lists: [
     {
       image: 'https://static.cmereye.com/imgs/2024/05/e79c47b6045036ee.webp',
-      name: ['口腔及','牙齒檢查'],
-      text: '檢查口腔整體健康狀況包括檢查牙齦、牙齒、口腔組織和面頜骨，以確定是否需要進行進一步的治療。為了評估牙齒和牙齦的整體健康狀況，牙醫可能會建議進行牙齒X光檢查。'
+      name: ['口腔及', '牙齒檢查'],
+      text: '檢查口腔整體健康狀況包括檢查牙齦、牙齒、口腔組織和面頜骨，以確定是否需要進行進一步的治療。為了評估牙齒和牙齦的整體健康狀況，牙醫可能會建議進行牙齒X光檢查。',
     },
     {
       image: 'https://static.cmereye.com/imgs/2024/05/e26252187319b784.webp',
-      name: ['口腔','X光片'],
-      text: '口腔X光檢查一般分為傳統口內X光和口外全景X光兩種。口內X光可以提供牙齒、骨骼和口腔組織的詳細圖像，能夠幫助牙醫檢測蛀牙、觀察牙根、檢查牙齒四周的骨骼健康、診斷牙周病以及檢查正在生長的牙齒。'
+      name: ['口腔', 'X光片'],
+      text: '口腔X光檢查一般分為傳統口內X光和口外全景X光兩種。口內X光可以提供牙齒、骨骼和口腔組織的詳細圖像，能夠幫助牙醫檢測蛀牙、觀察牙根、檢查牙齒四周的骨骼健康、診斷牙周病以及檢查正在生長的牙齒。',
     },
     {
       image: 'https://static.cmereye.com/imgs/2024/05/1f2d5c000d1caf6e.webp',
-      name: ['病歷','詢問'],
-      text: '牙醫會詢問您的一般健康狀況和任何過去的醫療狀況，因為這些可能影響口腔健康和治療方案。此外，也會問及任何藥物使用情況。'
+      name: ['病歷', '詢問'],
+      text: '牙醫會詢問您的一般健康狀況和任何過去的醫療狀況，因為這些可能影響口腔健康和治療方案。此外，也會問及任何藥物使用情況。',
     },
     {
       image: 'https://static.cmereye.com/imgs/2024/05/1eecac3f9b55ddd1.webp',
-      name: ['口腔','健康建議'],
-      text: '牙醫會提供關於如何改善日常的口腔護理技巧的建議，例如正確的刷牙和使用牙線的方法。此外，牙醫也可能講解日常飲食對牙齒健康的影響，這些都是導致牙齒腐蝕的常見原因。'
-    }
-  ]
+      name: ['口腔', '健康建議'],
+      text: '牙醫會提供關於如何改善日常的口腔護理技巧的建議，例如正確的刷牙和使用牙線的方法。此外，牙醫也可能講解日常飲食對牙齒健康的影響，這些都是導致牙齒腐蝕的常見原因。',
+    },
+  ],
 }
 let services_include_cur = ref(0)
-let swiperRef:any = {
-  slideToLoop: (a)=>{}
+let swiperRef: any = {
+  slideToLoop: (a) => {},
 }
-const setSwiperRef = (swiper:any) => {
+const setSwiperRef = (swiper: any) => {
   swiperRef = swiper
 }
-const changeSwiper = (swiper) =>{
+const changeSwiper = (swiper) => {
   services_include_cur.value = swiper.realIndex
 }
 const handleServicesInclude = (index) => {
@@ -153,12 +156,14 @@ const handleServicesInclude = (index) => {
   <div>
     <PageHeader :headerConfig="headerConfig" btnText="預約免費牙齒檢查" />
     <div class="pageIn whitebgColor">
-      <div class="index_title pageCon">{{$t('pages.dental-service.title')}}</div>
+      <div class="index_title pageCon">
+        {{ $t('pages.dental-service.title') }}
+      </div>
       <ServiceIntroduce :introduceData="orthodonticsIntroduceData" />
       <div class="note">
         <div class="dentistryServices-title">
           <div class="dentistryServices-title-in bb">
-            {{noteData.title}}
+            {{ noteData.title }}
           </div>
         </div>
         <div class="note-content">
@@ -183,26 +188,36 @@ const handleServicesInclude = (index) => {
       <div class="services_include">
         <div class="dentistryServices-title">
           <div class="dentistryServices-title-in bb">
-            {{services_include.title}}
+            {{ services_include.title }}
           </div>
         </div>
         <div class="services_include-in">
           <div class="services_include-in-l">
-            <Swiper class="swiperBox" 
-            :loop="true"
-            :modules="[Autoplay]"
-            :autoplay="{
-              delay: 3000,
-            }"
-            @swiper="setSwiperRef" 
-            @slideChange="changeSwiper">
-              <Swiper-slide class="swiperSlide" v-for="(item,index) in services_include.lists" :key="index">
+            <Swiper
+              class="swiperBox"
+              :loop="true"
+              :modules="[Autoplay]"
+              :autoplay="{
+                delay: 3000,
+              }"
+              @swiper="setSwiperRef"
+              @slideChange="changeSwiper"
+            >
+              <Swiper-slide
+                class="swiperSlide"
+                v-for="(item, index) in services_include.lists"
+                :key="index"
+              >
                 <div class="swiperIn">
                   <div class="image">
-                    <img :src="item.image" :alt="item.name.join()" :title="item.name.join()">
+                    <img
+                      :src="item.image"
+                      :alt="item.name.join()"
+                      :title="item.name.join()"
+                    />
                   </div>
                   <div class="context">
-                    <p>{{item.text}}</p>
+                    <p>{{ item.text }}</p>
                   </div>
                 </div>
               </Swiper-slide>
@@ -210,13 +225,22 @@ const handleServicesInclude = (index) => {
           </div>
           <div class="services_include-in-r">
             <div class="fan">
-            <div class="name">
-              <div class="name-in" :class="{act: services_include_cur === index}" v-for="(item,index) in services_include.lists" :key="index" @click.stop="handleServicesInclude(index)">
-                <span v-for="(nameItem,nameIndex) in item.name" :key="nameIndex">
-                  {{nameItem}}
-                </span>
+              <div class="name">
+                <div
+                  class="name-in"
+                  :class="{ act: services_include_cur === index }"
+                  v-for="(item, index) in services_include.lists"
+                  :key="index"
+                  @click.stop="handleServicesInclude(index)"
+                >
+                  <span
+                    v-for="(nameItem, nameIndex) in item.name"
+                    :key="nameIndex"
+                  >
+                    {{ nameItem }}
+                  </span>
+                </div>
               </div>
-            </div>
             </div>
           </div>
         </div>
@@ -245,29 +269,46 @@ const handleServicesInclude = (index) => {
             </div>
             <div>
               <div>患有嚴重口腔疾病的人士</div>
-              <div>如嚴重蛀牙、牙周病、口腔癌、裂顎等，需要接受較頻繁的口腔檢查以維護口腔健康。</div>
+              <div>
+                如嚴重蛀牙、牙周病、口腔癌、裂顎等，需要接受較頻繁的口腔檢查以維護口腔健康。
+              </div>
             </div>
             <div>
               <div>患有系統性疾病人士</div>
-              <div>對於患有糖尿病、血友病、愛滋病等系統性疾病的人士，由於身體免疫系統受到妨礙，抵抗病原體的能力降低，如果口腔衛生不佳，牙齒表面的菌斑就會容易引致牙周病，甚至發展成嚴重疾病。</div>
+              <div>
+                對於患有糖尿病、血友病、愛滋病等系統性疾病的人士，由於身體免疫系統受到妨礙，抵抗病原體的能力降低，如果口腔衛生不佳，牙齒表面的菌斑就會容易引致牙周病，甚至發展成嚴重疾病。
+              </div>
             </div>
           </div>
-          <div class="frequency-in-bottom">因此，高風險人群需要更加重視口腔健康，並接受更頻繁的口腔檢查</div>
+          <div class="frequency-in-bottom">
+            因此，高風險人群需要更加重視口腔健康，並接受更頻繁的口腔檢查
+          </div>
         </div>
       </div>
       <div class="step">
         <div class="dentistryServices-title">
-          <div class="dentistryServices-title-in bb">{{stepData.title}}</div>
+          <div class="dentistryServices-title-in bb">{{ stepData.title }}</div>
         </div>
         <div class="step-in">
-          <div class="lists-in" v-for="(item,index) in stepData.stepLists" :key="index">
+          <div
+            class="lists-in"
+            v-for="(item, index) in stepData.stepLists"
+            :key="index"
+          >
             <div class="image">
-              <img :src="item.img" :alt="item.text.join()" :title="item.text.join()">
+              <img
+                :src="item.img"
+                :alt="item.text.join()"
+                :title="item.text.join()"
+              />
             </div>
             <div class="text">
               <p>
-                <span v-for="(textItem,textIndex) in item.text" :key="textIndex">
-                  {{textItem}}
+                <span
+                  v-for="(textItem, textIndex) in item.text"
+                  :key="textIndex"
+                >
+                  {{ textItem }}
                 </span>
               </p>
             </div>
@@ -307,7 +348,7 @@ const handleServicesInclude = (index) => {
       flex: 1;
       & > div {
         display: flex;
-        &:not(:last-child){
+        &:not(:last-child) {
           margin-bottom: 30px;
         }
         span {
@@ -463,30 +504,30 @@ const handleServicesInclude = (index) => {
     }
   }
 }
-.services_include{
+.services_include {
   margin-top: 106px;
-  &-in{
+  &-in {
     margin: 60px auto 0;
     display: flex;
     max-width: 880px;
     width: auto;
     gap: 26px;
-    &-l{
+    &-l {
       flex: 1;
       max-width: 50%;
       // max-height: 427px;
-      .swiperBox{
+      .swiperBox {
         width: 100%;
-        .swiperSlide{
+        .swiperSlide {
           width: 100%;
-          .swiperIn{
-            .image{
+          .swiperIn {
+            .image {
               width: 100%;
-              img{
+              img {
                 width: 100%;
               }
             }
-            .context{
+            .context {
               font-size: 19px;
               font-style: normal;
               font-weight: 400;
@@ -499,27 +540,27 @@ const handleServicesInclude = (index) => {
         }
       }
     }
-    &-r{
+    &-r {
       flex: 1;
-      .fan{
+      .fan {
         width: 100%;
         height: 0;
         padding-bottom: 100%;
         position: relative;
       }
-      .name{
+      .name {
         position: absolute;
         width: 100%;
         height: 100%;
         left: 0;
         top: 0;
-        background: #FDEDF4;
+        background: #fdedf4;
         border-radius: 20px;
         overflow: hidden;
         display: grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-template-rows: repeat(2,1fr);
-        &-in{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        &-in {
           display: flex;
           justify-content: center;
           align-items: center;
@@ -527,7 +568,7 @@ const handleServicesInclude = (index) => {
           position: relative;
           z-index: 1;
           cursor: pointer;
-          span{
+          span {
             width: 100%;
             text-align: center;
             display: block;
@@ -538,9 +579,9 @@ const handleServicesInclude = (index) => {
             line-height: 152%;
             position: relative;
             z-index: 1;
-            transition: all .3s;
+            transition: all 0.3s;
           }
-          &::after{
+          &::after {
             content: '';
             width: calc(100% - 44px);
             height: calc(100% - 44px);
@@ -551,26 +592,26 @@ const handleServicesInclude = (index) => {
             z-index: 0;
             background: var(--indexColor1);
             opacity: 0;
-            transition: all .3s;
+            transition: all 0.3s;
           }
-          &:hover{
-            span{
-              color: rgba(255,255,255,.8);
+          &:hover {
+            span {
+              color: rgba(255, 255, 255, 0.8);
             }
-            &::after{
-              opacity: .3;
+            &::after {
+              opacity: 0.3;
             }
           }
-          &.act{
-            span{
+          &.act {
+            span {
               color: #fff;
             }
-            &::after{
+            &::after {
               opacity: 1;
             }
           }
         }
-        &::after{
+        &::after {
           content: '';
           width: 100%;
           height: 100%;
@@ -578,55 +619,58 @@ const handleServicesInclude = (index) => {
           left: 0;
           top: 0;
           z-index: 0;
-          background: url(https://static.cmereye.com/imgs/2024/05/c225182317a1ee09.png) no-repeat;
+          background: url(https://static.cmereye.com/imgs/2024/05/c225182317a1ee09.png)
+            no-repeat;
           background-size: 100% 100%;
         }
       }
     }
   }
 }
-.step{
+.step {
   margin-top: 106px;
   position: relative;
-  &-in{
+  &-in {
     max-width: 1369px;
     margin: 50px auto 0;
     display: grid;
     gap: 70px;
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(5, 1fr);
     position: relative;
-    .lists-in{
-      .image{
-        img{
+    .lists-in {
+      .image {
+        img {
           width: 100%;
         }
       }
-      .text{
+      .text {
         margin-top: 10px;
-        p{
+        p {
           font-size: 23px;
           color: var(--indexColor1);
-          span{
+          span {
             display: block;
             text-align: center;
           }
         }
       }
     }
-    &::before{
+    &::before {
       content: '';
       position: absolute;
-      background: url(https://static.cmereye.com/imgs/2024/05/0245d98d5d39cd83.png) no-repeat;
+      background: url(https://static.cmereye.com/imgs/2024/05/0245d98d5d39cd83.png)
+        no-repeat;
       background-size: 100% 100%;
       width: 14px;
       height: 21px;
       top: 124px;
       left: -50px;
     }
-    &::after{
+    &::after {
       content: '';
       position: absolute;
-      background: url(https://static.cmereye.com/imgs/2024/05/0245d98d5d39cd83.png) no-repeat;
+      background: url(https://static.cmereye.com/imgs/2024/05/0245d98d5d39cd83.png)
+        no-repeat;
       background-size: 100% 100%;
       width: 14px;
       height: 21px;
@@ -634,12 +678,12 @@ const handleServicesInclude = (index) => {
       right: -50px;
     }
   }
-  &::after{
+  &::after {
     content: '';
     width: 100vw;
     height: 10px;
     background: var(--indexColor1);
-    transform: scaleY(.1);
+    transform: scaleY(0.1);
     position: absolute;
     left: 0;
     top: 240px;
@@ -654,12 +698,12 @@ const handleServicesInclude = (index) => {
       margin: 4.1667vw auto 0;
       &-r {
         & > div {
-          &:not(:last-child){
+          &:not(:last-child) {
             margin-bottom: 1.5625vw;
           }
           span {
             font-size: 1.0417vw;
-            letter-spacing: .1667vw;
+            letter-spacing: 0.1667vw;
             &:nth-of-type(1) {
               min-width: 1.0417vw;
               font-size: 1.3542vw;
@@ -677,7 +721,7 @@ const handleServicesInclude = (index) => {
       .box {
         .box-in {
           height: 14.4792vw;
-          margin-top: .7813vw;
+          margin-top: 0.7813vw;
           font-size: 1.0417vw;
           padding: 0 4.1667vw;
           &:first-child {
@@ -690,7 +734,7 @@ const handleServicesInclude = (index) => {
         border-radius: 3.125vw 0 0 3.125vw;
       }
       .box-right {
-        margin-left: .1563vw;
+        margin-left: 0.1563vw;
         border-radius: 0 3.125vw 3.125vw 0;
       }
     }
@@ -703,7 +747,7 @@ const handleServicesInclude = (index) => {
     margin-top: 5.5208vw;
     &-in {
       padding: 3.0729vw 2.6042vw;
-      box-shadow: 0px .2083vw .4167vw var(--indexColor3);
+      box-shadow: 0px 0.2083vw 0.4167vw var(--indexColor3);
       margin: 1.8229vw auto;
       &-top {
         font-size: 1.0417vw;
@@ -743,74 +787,74 @@ const handleServicesInclude = (index) => {
       }
     }
   }
-  .services_include{
+  .services_include {
     margin-top: 5.5208vw;
-    &-in{
+    &-in {
       margin: 3.125vw auto 0;
       max-width: 45.8333vw;
       gap: 1.3542vw;
-      &-l{
-        .swiperBox{
-          .swiperSlide{
-            .swiperIn{
-              .context{
-                font-size: .9896vw;
-                letter-spacing: .1979vw;
+      &-l {
+        .swiperBox {
+          .swiperSlide {
+            .swiperIn {
+              .context {
+                font-size: 0.9896vw;
+                letter-spacing: 0.1979vw;
                 padding: 1.0417vw;
               }
             }
           }
         }
       }
-      &-r{
-        .name{
+      &-r {
+        .name {
           border-radius: 1.0417vw;
-          &-in{
-            span{
+          &-in {
+            span {
               font-size: 1.1979vw;
             }
-            &::after{
+            &::after {
               width: calc(100% - 2.2917vw);
               height: calc(100% - 2.2917vw);
               top: 1.1458vw;
               left: 1.1458vw;
-              border-radius: .5208vw;
+              border-radius: 0.5208vw;
             }
           }
         }
       }
     }
   }
-  .step{
+  .step {
     margin-top: 5.5208vw;
-    &-in{
+    &-in {
       max-width: 71.3021vw;
       margin: 2.6042vw auto 0;
       gap: 3.6458vw;
-      .lists-in{
-        .text{
-          margin-top: .5208vw;
-          p{
+      .lists-in {
+        .text {
+          margin-top: 0.5208vw;
+          p {
             font-size: 1.1979vw;
           }
         }
       }
-      &::before{
-        width: .7292vw;
+      &::before {
+        width: 0.7292vw;
         height: 1.0938vw;
         top: 6.2vw;
         left: -2.6042vw;
       }
-      &::after{
-        width: .7292vw;
+      &::after {
+        width: 0.7292vw;
         height: 1.0938vw;
         top: 6.2vw;
         right: -2.6042vw;
       }
     }
-    &::after{
+    &::after {
       width: 100vw;
-      height: .5208vw;
+      height: 0.5208vw;
       top: 12.5vw;
     }
   }
@@ -894,7 +938,7 @@ const handleServicesInclude = (index) => {
   .note {
     max-width: 390px;
     margin: 60px auto 0;
-    &-content{
+    &-content {
       padding: 0 30px;
       margin: 45px auto 0;
       display: flex;
@@ -902,12 +946,12 @@ const handleServicesInclude = (index) => {
       &-l {
         width: 100%;
       }
-      &-r{
+      &-r {
         width: 100%;
         margin-top: 45px;
         padding-right: 10px;
-        &>div{
-          span{
+        & > div {
+          span {
             font-size: 15px;
             letter-spacing: 4.5px;
             &:nth-of-type(1) {
@@ -920,33 +964,33 @@ const handleServicesInclude = (index) => {
       }
     }
   }
-  .services_include{
+  .services_include {
     padding: 0 30px;
     margin-top: 80px;
-    &-in{
+    &-in {
       flex-direction: column;
       margin: 45px auto 0;
       gap: 0;
-      .swiperBox{
-        .swiperSlide{
-          .swiperIn{
-            .context{
+      .swiperBox {
+        .swiperSlide {
+          .swiperIn {
+            .context {
               padding: 35px 0 10px;
             }
           }
         }
       }
-      &-l{
+      &-l {
         max-width: 100%;
       }
-      &-r{
-        .name{
+      &-r {
+        .name {
           border-radius: 15px;
-          &-in{
-            span{
+          &-in {
+            span {
               font-size: 20px;
             }
-            &::after{
+            &::after {
               width: calc(100% - 30px);
               height: calc(100% - 30px);
               top: 15px;
@@ -957,29 +1001,30 @@ const handleServicesInclude = (index) => {
       }
     }
   }
-  .step{
+  .step {
     margin-top: 80px;
-    &-in{
+    &-in {
       padding: 0 30px;
-      grid-template-columns: repeat(2,1fr);
+      grid-template-columns: repeat(2, 1fr);
       gap: 30px;
       margin-top: 35px;
-      .lists-in{
-        .text{
-          p{
+      .lists-in {
+        .text {
+          p {
             font-size: 16px;
             line-height: 2;
-            span{
+            span {
               font-family: var(--contextFamily);
             }
           }
         }
       }
-      &::before,&::after{
+      &::before,
+      &::after {
         display: none;
       }
     }
-    &::after{
+    &::after {
       display: none;
     }
   }

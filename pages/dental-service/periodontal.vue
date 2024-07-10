@@ -5,76 +5,78 @@ const { t } = useLang()
 const appState = useAppState()
 appState.setDentistryService('periodontal')
 useHead({
-  title: "牙周病治療 | 牙科服務",
+  title: '牙周病治療 | 牙科服務',
   meta: [
-   {
+    {
       hid: 'description',
       name: 'description',
-      content: '愛康健提供牙周病治療服務，牙周病是慢性炎症，分為輕微牙齦炎和嚴重牙周炎。牙周病會導致牙齒鬆動、移位，影響外觀和口腔健康。牙周病治療可分為非手術和手術治療。非手術治療包括牙根刮治（深層洗牙），利用儀器刮除發炎組織，促進健康組織的再生，以達到牙周病治療效果。對於嚴重牙周病或牙齦厚實，則需要進行牙周手術來改善牙周病。',
-   },
-   {
+      content:
+        '愛康健提供牙周病治療服務，牙周病是慢性炎症，分為輕微牙齦炎和嚴重牙周炎。牙周病會導致牙齒鬆動、移位，影響外觀和口腔健康。牙周病治療可分為非手術和手術治療。非手術治療包括牙根刮治（深層洗牙），利用儀器刮除發炎組織，促進健康組織的再生，以達到牙周病治療效果。對於嚴重牙周病或牙齦厚實，則需要進行牙周手術來改善牙周病。',
+    },
+    {
       hid: 'Keywords',
       name: 'Keywords',
-      content: '牙周病 牙周炎 牙齦炎 牙周病治療 牙齦炎治療 牙根刮治 深層洗牙 輕微牙周病 牙菌膜 牙周手術 愛康健 深圳愛康健 深圳專業牙科中心 愛康健醫院 愛康健口腔醫院 深圳愛康健口腔醫院愛康健 CKJ愛康健齒科集團 深圳口腔專科醫院 愛康健齒科集團 深圳牙科醫院牙科服務內地牙科 深圳口腔專科',
-   },
-  ]
+      content:
+        '牙周病 牙周炎 牙齦炎 牙周病治療 牙齦炎治療 牙根刮治 深層洗牙 輕微牙周病 牙菌膜 牙周手術 愛康健 深圳愛康健 深圳專業牙科中心 愛康健醫院 愛康健口腔醫院 深圳愛康健口腔醫院愛康健 CKJ愛康健齒科集團 深圳口腔專科醫院 愛康健齒科集團 深圳牙科醫院牙科服務內地牙科 深圳口腔專科',
+    },
+  ],
 })
 
 const headerConfig = {
-  img: 'https://static.cmereye.com/imgs/2023/11/5e7d301ce4112f57.jpg',
+  img: 'https://static.cmereye.com/imgs/2024/07/3f7664e32f68531c.webp',
+  mbImg: 'https://static.cmereye.com/imgs/2024/07/f7fb0336dfc73077.webp',
   bg: '',
-  mbImg: 'https://static.cmereye.com/imgs/2023/11/6e71e9d443f0ec56.jpg',
   pageName: 'periodontal-test',
-  pcText: ['健康牙齒，從牙周病治療開始','保持清新口氣、牙肉年輕'],
-  mbText: ['健康牙齒','從牙周病治療開始']
+  pcText: ['健康牙齒，從牙周病治療開始', '保持清新口氣、牙肉年輕'],
+  mbText: ['健康牙齒', '從牙周病治療開始'],
 }
 
 const orthodonticsIntroduceData = {
   title: 'pages.dental-service.periodontal.introduce.title',
-  content: '牙周病為常見的口腔疾病，這種慢性疾病會引致牙齒移位及鬆脫，不但影響美觀，還會影響口腔健康。',
+  content:
+    '牙周病為常見的口腔疾病，這種慢性疾病會引致牙齒移位及鬆脫，不但影響美觀，還會影響口腔健康。',
   mbImg: 'https://static.cmereye.com/imgs/2023/11/3f3d338958c5f8d6.jpg',
   pcImg: 'https://static.cmereye.com/imgs/2023/11/38143ec138e85da7.jpg',
   tabNavName: 'pages.dental-service.periodontal.introduce.tabNavName',
-  pageName: 'periodontal-test'
+  pageName: 'periodontal-test',
 }
-
 
 const symptomData = {
   title: '牙周病的症狀',
   lists: [
     {
       imgUrl: 'https://static.cmereye.com/imgs/2023/11/255727cb71ff0818.png',
-      title: '口氣異常'
+      title: '口氣異常',
     },
     {
       imgUrl: 'https://static.cmereye.com/imgs/2023/05/ba588e0ec3a4886b.png',
-      title: '牙齒移位及鬆脫'
+      title: '牙齒移位及鬆脫',
     },
     {
       imgUrl: 'https://static.cmereye.com/imgs/2023/05/7a881e098e009caf.png',
-      title: '牙齒對冷熱敏感'
+      title: '牙齒對冷熱敏感',
     },
     {
       imgUrl: 'https://static.cmereye.com/imgs/2023/11/fa8e1c16a765fd83.png',
-      title: '牙根外露'
+      title: '牙根外露',
     },
     {
       imgUrl: 'https://static.cmereye.com/imgs/2023/11/34ff8a710678a5ce.png',
-      title: '牙齦萎縮'
+      title: '牙齦萎縮',
     },
     {
       imgUrl: 'https://static.cmereye.com/imgs/2023/05/dc65923fd22afa42.png',
-      title: '牙縫變大'
+      title: '牙縫變大',
     },
     {
       imgUrl: 'https://static.cmereye.com/imgs/2023/05/c3f0969e2ce1ca7c.png',
-      title: '牙齦腫脹變色'
+      title: '牙齦腫脹變色',
     },
     {
       imgUrl: 'https://static.cmereye.com/imgs/2023/05/74f3d9aa48972f0b.png',
-      title: '牙齦流血'
-    }
-  ]
+      title: '牙齦流血',
+    },
+  ],
 }
 
 const care2Data = {
@@ -82,43 +84,45 @@ const care2Data = {
   lists: [
     {
       imgUrl: 'https://static.cmereye.com/imgs/2023/11/3a8aebd98eb367cb.png',
-      title: '吸煙人士'
+      title: '吸煙人士',
     },
     {
       imgUrl: 'https://static.cmereye.com/imgs/2023/11/9d13ef2ecc25ed5a.png',
-      title: '糖尿病患者'
+      title: '糖尿病患者',
     },
     {
       imgUrl: 'https://static.cmereye.com/imgs/2023/11/e74f0a6deb9d93ed.png',
-      title: '長期服用藥物'
+      title: '長期服用藥物',
     },
     {
       imgUrl: 'https://static.cmereye.com/imgs/2023/11/9f370e5d5c8691e6.png',
-      title: '孕婦'
+      title: '孕婦',
     },
     {
       imgUrl: 'https://static.cmereye.com/imgs/2023/11/8091ef6de0090f9c.png',
-      title: '衛生意識薄弱'
+      title: '衛生意識薄弱',
     },
     {
       imgUrl: 'https://static.cmereye.com/imgs/2023/11/dd6302ca7772dcf9.png',
-      title: '飲食不均衡'
+      title: '飲食不均衡',
     },
     {
       imgUrl: 'https://static.cmereye.com/imgs/2023/11/666042444d5e8fbf.png',
-      title: '壓力大'
+      title: '壓力大',
     },
     {
       imgUrl: 'https://static.cmereye.com/imgs/2023/11/78e22b1ad88aee0f.png',
-      title: '家族遺傳'
-    }
-  ]
+      title: '家族遺傳',
+    },
+  ],
 }
 
 const processData = {
   title: '牙周病治療過程',
-  tabs: ['牙根刮治\n(深層洗牙)','牙肉翻瓣手術','引導組織再生手術'],
-  context: ['若牙周病屬輕微情況，一般僅需進行初診及微創牙周病治療，再定期覆診即可。若錯過治療牙周病的黃金時機，延誤到牙周炎程度，則需要進行牙周手術。'],
+  tabs: ['牙根刮治\n(深層洗牙)', '牙肉翻瓣手術', '引導組織再生手術'],
+  context: [
+    '若牙周病屬輕微情況，一般僅需進行初診及微創牙周病治療，再定期覆診即可。若錯過治療牙周病的黃金時機，延誤到牙周炎程度，則需要進行牙周手術。',
+  ],
   lists: [
     {
       listItem: [
@@ -126,20 +130,20 @@ const processData = {
           {
             title: 'Step 1',
             text: '口腔檢查',
-            textIn: ''
+            textIn: '',
           },
           {
             title: 'Step 2',
             text: '利用牙科儀器深入牙齦發炎的底部',
-            textIn: ''
+            textIn: '',
           },
           {
             title: 'Step 3',
             text: '刮除乾淨牙結石及發炎的牙肉組織',
-            textIn: ''
-          }
-        ]
-      ]
+            textIn: '',
+          },
+        ],
+      ],
     },
     {
       listItem: [
@@ -147,32 +151,32 @@ const processData = {
           {
             title: 'Step 1',
             text: '局部麻醉',
-            textIn: ''
+            textIn: '',
           },
           {
             title: 'Step 2',
             text: '切開牙齦組織，分開牙齦組織與牙齒',
-            textIn: ''
+            textIn: '',
           },
           {
             title: 'Step 3',
             text: '用超聲波徹底清潔牙根表面及牙周囊袋下的牙垢、牙菌斑和生物膜',
-            textIn: ''
-          }
+            textIn: '',
+          },
         ],
         [
           {
             title: 'Step 4',
             text: '修整牙周骨缺損',
-            textIn: ''
+            textIn: '',
           },
           {
             title: 'Step 5',
             text: '縫合傷口',
-            textIn: ''
+            textIn: '',
           },
-        ]
-      ]
+        ],
+      ],
     },
     {
       listItem: [
@@ -180,35 +184,35 @@ const processData = {
           {
             title: 'Step 1',
             text: '評估是否適合進行牙周組織擴增、增生手術',
-            textIn: ''
+            textIn: '',
           },
           {
             title: 'Step 2',
             text: '根據牙肉狀態及骨頭的再生狀況，設計牙周再生計劃',
-            textIn: ''
+            textIn: '',
           },
           {
             title: 'Step 3',
             text: '在骨缺損處以骨粉填充',
-            textIn: ''
-          }
+            textIn: '',
+          },
         ],
         [
           {
             title: 'Step 4',
             text: '覆蓋再生膜，提供牙周組織的生長空間',
-            textIn: ''
+            textIn: '',
           },
           {
             title: 'Step 5',
             text: '牙周組織增加，使牙周更鞏固，牙齒存活時間更長',
-            textIn: ''
+            textIn: '',
           },
-        ]
-      ]
-    }
+        ],
+      ],
+    },
   ],
-  pageName: 'periodontal-test'
+  pageName: 'periodontal-test',
 }
 
 const noteData = {
@@ -225,8 +229,8 @@ const noteData = {
     },
     {
       name: '牙周病手術主要分成兩類，牙肉翻瓣手術及牙周再生手術，更深入地把發炎組織處理乾淨，防止發炎繼續惡化。',
-    }
-  ]
+    },
+  ],
 }
 
 const problemData = {
@@ -234,21 +238,21 @@ const problemData = {
   lists: [
     {
       Q: '什麼是牙周袋？',
-      A: '牙周病會使齒槽骨遭受破壞，導致牙齦萎縮。牙菌斑和牙結石引發的發炎腫脹會使牙肉與牙齒分離，形成「牙周袋」。牙周袋愈深，便愈難清潔，內藏細菌逐漸積聚，令病情惡化。'
+      A: '牙周病會使齒槽骨遭受破壞，導致牙齦萎縮。牙菌斑和牙結石引發的發炎腫脹會使牙肉與牙齒分離，形成「牙周袋」。牙周袋愈深，便愈難清潔，內藏細菌逐漸積聚，令病情惡化。',
     },
     {
       Q: '牙周病可自行痊癒嗎？',
-      A: '牙周病無法自行痊癒，需透過牙醫的深層清潔牙周袋，並配合調整生活習慣與加強口腔清潔，持續細心觀察，才能緩解病情。'
+      A: '牙周病無法自行痊癒，需透過牙醫的深層清潔牙周袋，並配合調整生活習慣與加強口腔清潔，持續細心觀察，才能緩解病情。',
     },
     {
       Q: '接受牙周病治療後，會出現哪些副作用？',
-      A: '牙周病令牙齦萎縮，牙根外露。接受牙周病治療後，會出現暫時性牙齒敏感，這種情況一般會在三至四天後自行消退。若副作用持續，建議及時與牙醫聯繫。'
+      A: '牙周病令牙齦萎縮，牙根外露。接受牙周病治療後，會出現暫時性牙齒敏感，這種情況一般會在三至四天後自行消退。若副作用持續，建議及時與牙醫聯繫。',
     },
     {
       Q: '牙周病會遺傳嗎？',
-      A: '國際牙周病研討會研究指出，牙周病中的侵襲性牙周炎是有遺傳傾向的。若家族中有牙周病史，或年輕人罹患牙周病，建議其家人也定期檢查牙周狀況，以及採取預防措施，減低牙周病的發病率。'
-    }
-  ]
+      A: '國際牙周病研討會研究指出，牙周病中的侵襲性牙周炎是有遺傳傾向的。若家族中有牙周病史，或年輕人罹患牙周病，建議其家人也定期檢查牙周狀況，以及採取預防措施，減低牙周病的發病率。',
+    },
+  ],
 }
 
 const reasonData = {
@@ -256,7 +260,8 @@ const reasonData = {
   reasonLists: [
     {
       img: 'https://static.cmereye.com/imgs/2023/11/c4238b3a85294efc.jpg',
-      context: '牙齦及牙齒邊緣長期積聚牙菌膜，細菌分泌毒素刺激牙齦，引發牙齦炎。',
+      context:
+        '牙齦及牙齒邊緣長期積聚牙菌膜，細菌分泌毒素刺激牙齦，引發牙齦炎。',
     },
     {
       img: 'https://static.cmereye.com/imgs/2023/11/809923ea93fc6e3d.jpg',
@@ -264,7 +269,8 @@ const reasonData = {
     },
     {
       img: 'https://static.cmereye.com/imgs/2023/11/034a5f0ca1755f9c.jpg',
-      context: '牙齦炎情況持續，形成「牙周袋」，食物殘渣、牙菌膜和牙石等更易堆積在內，牙周組織遭受破壞，令情況進一步惡化，進而形成牙周炎。',
+      context:
+        '牙齦炎情況持續，形成「牙周袋」，食物殘渣、牙菌膜和牙石等更易堆積在內，牙周組織遭受破壞，令情況進一步惡化，進而形成牙周炎。',
     },
   ],
 }
@@ -287,146 +293,148 @@ const reason2Data = {
     {
       img: 'https://static.cmereye.com/imgs/2023/11/c90e097b4197e5ba.png',
       context: '重度牙周病',
-    }
-  ]
+    },
+  ],
 }
 </script>
 
 
 <template>
-<div>
-  <PageHeader :headerConfig="headerConfig" />
-  <div class="pageIn whitebgColor">
-    <div class="index_title pageCon">{{$t('pages.dental-service.title')}}</div>
-    <ServiceIntroduce :introduceData="orthodonticsIntroduceData" />
-    <div class="reason">
-      <div class="dentistryServices-title reason-title">
-        <div class="dentistryServices-title-in bb reason-title-in">
-          {{ reasonData.title }}
-        </div>
+  <div>
+    <PageHeader :headerConfig="headerConfig" />
+    <div class="pageIn whitebgColor">
+      <div class="index_title pageCon">
+        {{ $t('pages.dental-service.title') }}
       </div>
-      <div class="reason-lists">
-        <div
-          v-for="(item, index) in reasonData.reasonLists"
-          :key="index"
-          class="reason-lists-item"
-        >
-          <div class="image">
-            <img :src="item.img" alt="" />
-          </div>
-          <div class="text">
-            {{ item.context }}
+      <ServiceIntroduce :introduceData="orthodonticsIntroduceData" />
+      <div class="reason">
+        <div class="dentistryServices-title reason-title">
+          <div class="dentistryServices-title-in bb reason-title-in">
+            {{ reasonData.title }}
           </div>
         </div>
-      </div>
-    </div>
-    <div class="reason2">
-      <div class="dentistryServices-title">
-        <div class="dentistryServices-title-in bb">
-          {{ reason2Data.title }}
-        </div>
-      </div>
-      <div class="reason2-lists">
-        <div
-          v-for="(item, index) in reason2Data.reasonLists"
-          :key="index"
-          class="reason2-lists-item"
-        >
-          <div class="image">
-            <span>{{index+1}}</span>
-            <img :src="item.img" alt="" />
-          </div>
-          <div class="text">
-            {{ item.context }}
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="care">
-      <div class="dentistryServices-title care-title">
-        <div class="dentistryServices-title-in bb care-title-in">
-          {{ symptomData.title }}
-        </div>
-      </div>
-      <div class="care-lists">
-        <div
-          v-for="(careItem, careIndex) in symptomData.lists"
-          :key="careIndex"
-          class="care-lists-item"
-        >
-          <div>
-            <div class="image">
-              <div class="image-in">
-                <img :src="careItem.imgUrl" :alt="careItem.title" />
-              </div>
-            </div>
-            <div class="text">{{ careItem.title }}</div>
-          </div>
-        </div>
-      </div>
-      <div class="care-btn">
-        <PageAnimBtnTypeTwo :str="'與我們了解更多'" />
-      </div>
-    </div>
-    <div class="note">
-      <div class="dentistryServices-title note-title">
-        <div class="dentistryServices-title-in bb note-title-in">
-          {{noteData.title}}
-        </div>
-      </div>
-      <div class="note-content">
-        <div class="note-content-l">
-          <img
-            src="https://static.cmereye.com/imgs/2023/11/5ef6ba18cee4782a.jpg"
-            alt=""
-          />
-        </div>
-        <div class="note-content-r">
+        <div class="reason-lists">
           <div
-            v-for="(noteItem, noteIndex) in noteData.lists"
-            :key="noteIndex"
+            v-for="(item, index) in reasonData.reasonLists"
+            :key="index"
+            class="reason-lists-item"
           >
-            <span>·</span>
-            <span>{{ $t(noteItem.name) }}</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <ServiceProcess :processData="processData" />
-    <div class="care2">
-      <div class="care2-btn">
-        <PageAnimBtnTypeTwo :str="'立即線上諮詢'" />
-      </div>
-      <div class="dentistryServices-title care2-title">
-        <div class="dentistryServices-title-in bb care2-title-in">
-          {{ care2Data.title }}
-        </div>
-      </div>
-      <div class="care2-lists">
-        <div
-          v-for="(careItem, careIndex) in care2Data.lists"
-          :key="careIndex"
-          class="care2-lists-item"
-        >
-          <div>
             <div class="image">
-              <div class="image-in">
-                <img :src="careItem.imgUrl" :alt="careItem.title" />
-              </div>
+              <img :src="item.img" alt="" />
             </div>
-            <div class="text">{{ careItem.title }}</div>
+            <div class="text">
+              {{ item.context }}
+            </div>
           </div>
         </div>
       </div>
+      <div class="reason2">
+        <div class="dentistryServices-title">
+          <div class="dentistryServices-title-in bb">
+            {{ reason2Data.title }}
+          </div>
+        </div>
+        <div class="reason2-lists">
+          <div
+            v-for="(item, index) in reason2Data.reasonLists"
+            :key="index"
+            class="reason2-lists-item"
+          >
+            <div class="image">
+              <span>{{ index + 1 }}</span>
+              <img :src="item.img" alt="" />
+            </div>
+            <div class="text">
+              {{ item.context }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="care">
+        <div class="dentistryServices-title care-title">
+          <div class="dentistryServices-title-in bb care-title-in">
+            {{ symptomData.title }}
+          </div>
+        </div>
+        <div class="care-lists">
+          <div
+            v-for="(careItem, careIndex) in symptomData.lists"
+            :key="careIndex"
+            class="care-lists-item"
+          >
+            <div>
+              <div class="image">
+                <div class="image-in">
+                  <img :src="careItem.imgUrl" :alt="careItem.title" />
+                </div>
+              </div>
+              <div class="text">{{ careItem.title }}</div>
+            </div>
+          </div>
+        </div>
+        <div class="care-btn">
+          <PageAnimBtnTypeTwo :str="'與我們了解更多'" />
+        </div>
+      </div>
+      <div class="note">
+        <div class="dentistryServices-title note-title">
+          <div class="dentistryServices-title-in bb note-title-in">
+            {{ noteData.title }}
+          </div>
+        </div>
+        <div class="note-content">
+          <div class="note-content-l">
+            <img
+              src="https://static.cmereye.com/imgs/2023/11/5ef6ba18cee4782a.jpg"
+              alt=""
+            />
+          </div>
+          <div class="note-content-r">
+            <div
+              v-for="(noteItem, noteIndex) in noteData.lists"
+              :key="noteIndex"
+            >
+              <span>·</span>
+              <span>{{ $t(noteItem.name) }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ServiceProcess :processData="processData" />
+      <div class="care2">
+        <div class="care2-btn">
+          <PageAnimBtnTypeTwo :str="'立即線上諮詢'" />
+        </div>
+        <div class="dentistryServices-title care2-title">
+          <div class="dentistryServices-title-in bb care2-title-in">
+            {{ care2Data.title }}
+          </div>
+        </div>
+        <div class="care2-lists">
+          <div
+            v-for="(careItem, careIndex) in care2Data.lists"
+            :key="careIndex"
+            class="care2-lists-item"
+          >
+            <div>
+              <div class="image">
+                <div class="image-in">
+                  <img :src="careItem.imgUrl" :alt="careItem.title" />
+                </div>
+              </div>
+              <div class="text">{{ careItem.title }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <ServiceProblem :problemData="problemData" />
+      <serviceCard />
+      <NewAddress />
+      <ContactForm-new />
     </div>
-    <ServiceProblem :problemData="problemData" />
-    <serviceCard />
-    <NewAddress />
-    <ContactForm-new />
+    <PageFooter />
+    <PageNavbar />
   </div>
-  <PageFooter />
-  <PageNavbar />
-</div>
 </template>
 
 
@@ -476,7 +484,7 @@ const reason2Data = {
         img {
           width: 100%;
         }
-        span{
+        span {
           font-size: 50px;
           font-weight: 700;
           color: #4d4d4d;
@@ -499,36 +507,36 @@ const reason2Data = {
     }
   }
 }
-.symptom{
+.symptom {
   margin-top: 126px;
   width: 100%;
   max-width: 1200px;
   margin: 126px auto 0;
-  &-lists{
+  &-lists {
     display: flex;
     flex-wrap: wrap;
     margin-top: 54px;
     padding: 0 45px;
-    &-in{
+    &-in {
       width: 25%;
       display: flex;
       flex-direction: column;
       align-items: center;
-      &-img{
+      &-img {
         width: 184px;
         height: 184px;
         margin: 0 auto;
-        background: #FFF1F0;
+        background: #fff1f0;
         border-radius: 10px;
         display: flex;
         justify-content: center;
         align-items: center;
-        img{
+        img {
           max-width: 90%;
           max-height: 90%;
         }
       }
-      &-title{
+      &-title {
         width: 100%;
         max-width: 184px;
         padding: 12px 0;
@@ -539,8 +547,11 @@ const reason2Data = {
         line-height: 160%;
         color: #666666;
       }
-      &:nth-of-type(2),&:nth-of-type(4),&:nth-of-type(5),&:nth-of-type(7){
-        .symptom-lists-in-img{
+      &:nth-of-type(2),
+      &:nth-of-type(4),
+      &:nth-of-type(5),
+      &:nth-of-type(7) {
+        .symptom-lists-in-img {
           background: var(--indexColor2);
         }
       }
@@ -630,7 +641,10 @@ const reason2Data = {
       &:nth-of-type(n + 5) {
         margin-top: 90px;
       }
-      &:nth-of-type(2),&:nth-of-type(4),&:nth-of-type(5),&:nth-of-type(7) {
+      &:nth-of-type(2),
+      &:nth-of-type(4),
+      &:nth-of-type(5),
+      &:nth-of-type(7) {
         & > div {
           .image {
             &-in {
@@ -699,7 +713,7 @@ const reason2Data = {
       }
     }
   }
-  &-btn{
+  &-btn {
     display: flex;
     justify-content: center;
   }
@@ -727,7 +741,7 @@ const reason2Data = {
       &-item {
         padding: 0 2.3438vw;
         .image {
-          span{
+          span {
             font-size: 2.6042vw;
           }
         }
@@ -747,8 +761,8 @@ const reason2Data = {
         & > div {
           .image {
             &-in {
-              margin-bottom: .6771vw;
-              border-radius: .5208vw;
+              margin-bottom: 0.6771vw;
+              border-radius: 0.5208vw;
             }
           }
           .text {
@@ -802,8 +816,8 @@ const reason2Data = {
         & > div {
           .image {
             &-in {
-              margin-bottom: .6771vw;
-              border-radius: .5208vw;
+              margin-bottom: 0.6771vw;
+              border-radius: 0.5208vw;
             }
           }
           .text {
@@ -811,7 +825,7 @@ const reason2Data = {
           }
         }
         &:nth-of-type(n + 5) {
-          margin-top: .7813vw;
+          margin-top: 0.7813vw;
         }
       }
     }
@@ -864,34 +878,36 @@ const reason2Data = {
       }
     }
   }
-  .symptom{
+  .symptom {
     margin-top: 70px;
-    &-lists{
+    &-lists {
       padding: 0 15px;
       margin-top: 28px;
-      &-in{
+      &-in {
         width: calc(100% / 3);
-        &-img{
+        &-img {
           width: 149px;
           height: 149px;
-          img{
+          img {
             max-width: 85%;
             max-height: 85%;
           }
         }
-        &-title{
+        &-title {
           max-width: 149px;
           padding: 10px 0;
           font-size: 15px;
         }
-        &:nth-of-type(4),&:nth-of-type(8){
-          .symptom-lists-in-img{
+        &:nth-of-type(4),
+        &:nth-of-type(8) {
+          .symptom-lists-in-img {
             background: var(--indexColor2);
           }
         }
-        &:nth-of-type(3),&:nth-of-type(7){
-          .symptom-lists-in-img{
-            background: #FFF1F0;
+        &:nth-of-type(3),
+        &:nth-of-type(7) {
+          .symptom-lists-in-img {
+            background: #fff1f0;
           }
         }
       }
@@ -955,7 +971,10 @@ const reason2Data = {
         &:nth-of-type(n + 4) {
           margin-top: 30px;
         }
-        &:nth-of-type(2),&:nth-of-type(4),&:nth-of-type(5),&:nth-of-type(7) {
+        &:nth-of-type(2),
+        &:nth-of-type(4),
+        &:nth-of-type(5),
+        &:nth-of-type(7) {
           & > div {
             .image {
               &-in {
@@ -996,8 +1015,8 @@ const reason2Data = {
         & > div {
           .image {
             padding: 0 5px;
-            &-in{
-              img{
+            &-in {
+              img {
                 max-width: 70%;
                 max-height: 70%;
               }

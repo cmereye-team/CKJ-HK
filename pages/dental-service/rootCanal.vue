@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import { useAppState } from '~/stores/appState'
 import { toWhatsApp } from '~/assets/js/common'
-import { useElementBounding,useWindowSize } from '@vueuse/core'
+import { useElementBounding, useWindowSize } from '@vueuse/core'
 const appState = useAppState()
 appState.setDentistryService('rootCanal-test')
 useHead({
@@ -23,9 +23,9 @@ useHead({
 })
 
 const headerConfig = {
-  img: 'https://static.cmereye.com/imgs/2023/10/34a9dd6dea8b90ae.jpg',
+  img: 'https://static.cmereye.com/imgs/2024/07/cc50d28281a5b904.webp',
+  mbImg: 'https://static.cmereye.com/imgs/2024/07/fef8a5df6d6d516a.webp',
   bg: '',
-  mbImg: 'https://static.cmereye.com/imgs/2023/10/586d8a109e9fe20d.jpg',
   pageName: 'rootCanal-test',
   pcText: [
     '根管治療助您解決牙痛，恢復健康的口腔狀態',
@@ -232,65 +232,65 @@ const handleProcessBtn = (_type: string) => {
 const doctorData = {
   title: '根管治療醫療團隊',
   lists: [
-  {
-    id: '101',
-    name: '楊福強',
-    job: '總監醫生',
-    addressType: '101',
-    addressname: '羅湖區',
-    text: '口腔美觀設計、瓷牙修復、牙體牙髓病的診治、牙體缺損的修復以及瓷冠、義齒的修復等方面的診治，在水激光無痛治牙方面有著豐富的臨床經驗。 操作手法靈巧精確， 解決疑難病例無數。',
-    img: 'https://static.cmereye.com/imgs/2024/02/e7f0a15e92483e5f.png'
-  },
-  {
-    id: '102',
-    name: '鞏賢平',
-    job: '院長',
-    addressType: '101',
-    addressname: '羅湖區',
-    text: '牙齒美容修復、烤瓷及全瓷修復、 各類復雜義齒修復、種植修復 等。',
-    img: 'https://static.cmereye.com/imgs/2024/02/48ce5ddebca789de.png'
-  },
-  {
-    id: '103',
-    name: '韋柱山',
-    job: '主任醫生',
-    addressType: '101',
-    addressname: '羅湖區',
-    text: '前牙美學修復、根管治療、口腔修復、美容修復等。',
-    img: 'https://static.cmereye.com/imgs/2024/02/03f45d5c4bf3922d.png'
-  },
-  {
-    id: '104',
-    name: '劉鑫',
-    job: '院長',
-    addressType: '102',
-    addressname: '福田區',
-    text: '各種疑難植牙、穿顴穿翼、全口無牙顎、上顎竇增高、複雜的軟硬組織移植、即時植牙即刻修復、前牙美觀、數位化和植牙導航等諸多領域。',
-    img: 'https://static.cmereye.com/imgs/2024/02/0762d56bee690392.png'
-  },
-  {
-    id: '105',
-    name: '劉章智',
-    job: '院長',
-    addressType: '102',
-    addressname: '福田區',
-    text: '將無痛治療技術與美學設計理念相結合，運用於根管治療、固定及活動義齒的診療當中。對各類疑難牙體牙髓病積累了大量成功治療案例和豐富的經驗。',
-    img: 'https://static.cmereye.com/imgs/2024/02/6683a60841dc732e.png'
-  },
-  {
-    id: '106',
-    name: '馮曉瑛',
-    job: '院長',
-    addressType: '103',
-    addressname: '南山區',
-    text: '複雜病例整體診療方案的設計、根管治療、數字化種植修復技術。',
-    img: 'https://static.cmereye.com/imgs/2024/02/211667de3a4ffa59.png'
-  }
-]
+    {
+      id: '101',
+      name: '楊福強',
+      job: '總監醫生',
+      addressType: '101',
+      addressname: '羅湖區',
+      text: '口腔美觀設計、瓷牙修復、牙體牙髓病的診治、牙體缺損的修復以及瓷冠、義齒的修復等方面的診治，在水激光無痛治牙方面有著豐富的臨床經驗。 操作手法靈巧精確， 解決疑難病例無數。',
+      img: 'https://static.cmereye.com/imgs/2024/02/e7f0a15e92483e5f.png',
+    },
+    {
+      id: '102',
+      name: '鞏賢平',
+      job: '院長',
+      addressType: '101',
+      addressname: '羅湖區',
+      text: '牙齒美容修復、烤瓷及全瓷修復、 各類復雜義齒修復、種植修復 等。',
+      img: 'https://static.cmereye.com/imgs/2024/02/48ce5ddebca789de.png',
+    },
+    {
+      id: '103',
+      name: '韋柱山',
+      job: '主任醫生',
+      addressType: '101',
+      addressname: '羅湖區',
+      text: '前牙美學修復、根管治療、口腔修復、美容修復等。',
+      img: 'https://static.cmereye.com/imgs/2024/02/03f45d5c4bf3922d.png',
+    },
+    {
+      id: '104',
+      name: '劉鑫',
+      job: '院長',
+      addressType: '102',
+      addressname: '福田區',
+      text: '各種疑難植牙、穿顴穿翼、全口無牙顎、上顎竇增高、複雜的軟硬組織移植、即時植牙即刻修復、前牙美觀、數位化和植牙導航等諸多領域。',
+      img: 'https://static.cmereye.com/imgs/2024/02/0762d56bee690392.png',
+    },
+    {
+      id: '105',
+      name: '劉章智',
+      job: '院長',
+      addressType: '102',
+      addressname: '福田區',
+      text: '將無痛治療技術與美學設計理念相結合，運用於根管治療、固定及活動義齒的診療當中。對各類疑難牙體牙髓病積累了大量成功治療案例和豐富的經驗。',
+      img: 'https://static.cmereye.com/imgs/2024/02/6683a60841dc732e.png',
+    },
+    {
+      id: '106',
+      name: '馮曉瑛',
+      job: '院長',
+      addressType: '103',
+      addressname: '南山區',
+      text: '複雜病例整體診療方案的設計、根管治療、數字化種植修復技術。',
+      img: 'https://static.cmereye.com/imgs/2024/02/211667de3a4ffa59.png',
+    },
+  ],
 }
 
 const doctorTeam = ref(null)
-const { top,bottom } = useElementBounding(doctorTeam)
+const { top, bottom } = useElementBounding(doctorTeam)
 const { height } = useWindowSize()
 </script>
 
@@ -378,17 +378,23 @@ const { height } = useWindowSize()
       </div>
       <div class="Root_canal_treatment_equipment">
         <div class="dentistryServices-title">
-          <div class="dentistryServices-title-in bb">
-            根管治療設備
-          </div>
+          <div class="dentistryServices-title-in bb">根管治療設備</div>
         </div>
         <div class="Root_canal_treatment_equipment-in">
           <div class="Root_canal_treatment_equipment-in-l">
-            <img src="https://static.cmereye.com/imgs/2024/02/33f5319ca2369e70.webp" alt="">
+            <img
+              src="https://static.cmereye.com/imgs/2024/02/33f5319ca2369e70.webp"
+              alt=""
+            />
           </div>
           <div class="Root_canal_treatment_equipment-in-r">
-            <img src="https://static.cmereye.com/imgs/2024/02/760462b941be8e2c.webp" alt="">
-            <span>我們使用德國蔡司顯微鏡根管治療儀，一款結合顯微鏡與醫學技術的設備，大幅提升牙醫治療根管的精準度。讓醫生能夠清楚觀察牙齒結構和根管形態，無論進行常規治療或顯微外科手術，都能更好地保留客人健康牙齒組織。</span>
+            <img
+              src="https://static.cmereye.com/imgs/2024/02/760462b941be8e2c.webp"
+              alt=""
+            />
+            <span
+              >我們使用德國蔡司顯微鏡根管治療儀，一款結合顯微鏡與醫學技術的設備，大幅提升牙醫治療根管的精準度。讓醫生能夠清楚觀察牙齒結構和根管形態，無論進行常規治療或顯微外科手術，都能更好地保留客人健康牙齒組織。</span
+            >
           </div>
         </div>
       </div>
@@ -466,7 +472,9 @@ const { height } = useWindowSize()
       <ContactForm-new />
     </div>
     <PageFooter />
-    <PageNavbar :showDialogBox="(top<(height / 3 * 2)) && (bottom > (height / 3))" />
+    <PageNavbar
+      :showDialogBox="top < (height / 3) * 2 && bottom > height / 3"
+    />
   </div>
 </template>
 
@@ -575,7 +583,7 @@ const { height } = useWindowSize()
       }
     }
   }
-  &-btn{
+  &-btn {
     margin-top: 106px;
     display: flex;
     justify-content: center;
@@ -779,26 +787,26 @@ const { height } = useWindowSize()
     }
   }
 }
-.Root_canal_treatment_equipment{
+.Root_canal_treatment_equipment {
   width: 100%;
   max-width: calc(1284px + 60px);
   margin: 140px auto 0;
-  &-in{
+  &-in {
     display: flex;
     margin-top: 53px;
-    &-l{
+    &-l {
       width: calc(595 / 1284 * 100%);
       margin-right: calc(53 / 1284 * 100%);
-      img{
+      img {
         width: 100%;
       }
     }
-    &-r{
+    &-r {
       flex: 1;
-      img{
+      img {
         width: 100%;
       }
-      span{
+      span {
         width: 100%;
         text-align: justify;
         font-size: 28px;
@@ -810,54 +818,54 @@ const { height } = useWindowSize()
     }
   }
 }
-.doctorTeam{
+.doctorTeam {
   margin-top: 140px;
 }
 @keyframes btnAnim {
-  0%{
-    clip-path: polygon(-10% 0,0 0,-10% 100%,-20% 100%);
+  0% {
+    clip-path: polygon(-10% 0, 0 0, -10% 100%, -20% 100%);
   }
-  50%{
-    clip-path: polygon(50% 0, 60% 0, 50% 100%,40% 100%);
+  50% {
+    clip-path: polygon(50% 0, 60% 0, 50% 100%, 40% 100%);
   }
-  100%{
-    clip-path: polygon(110% 0, 120% 0,110% 100%,100% 100%);
+  100% {
+    clip-path: polygon(110% 0, 120% 0, 110% 100%, 100% 100%);
   }
 }
 @keyframes btnAnim2 {
-  0%{
+  0% {
     width: 100%;
     height: 100%;
     opacity: 0;
   }
-  50%{
+  50% {
     width: 100%;
     height: 100%;
     opacity: 1;
   }
-  90%{
+  90% {
     width: 130%;
     height: 160%;
     opacity: 0;
   }
-  100%{
+  100% {
     width: 130%;
     height: 160%;
     opacity: 0;
   }
 }
 @keyframes btnAnim3 {
-  0%{
+  0% {
     width: 100%;
     height: 100%;
     opacity: 0;
   }
-  60%{
+  60% {
     width: 100%;
     height: 100%;
     opacity: 1;
   }
-  100%{
+  100% {
     width: 130%;
     height: 160%;
     opacity: 0;
@@ -899,8 +907,7 @@ const { height } = useWindowSize()
               border-radius: 1.5625vw;
               padding: 0 2.0833vw;
               filter: drop-shadow(
-                0px .1929vw .3859vw
-                  rgba(252, 22, 130, 0.38)
+                0px 0.1929vw 0.3859vw rgba(252, 22, 130, 0.38)
               );
             }
             &:nth-of-type(2) {
@@ -920,8 +927,8 @@ const { height } = useWindowSize()
         & > div {
           .image {
             &-in {
-              margin-bottom: .6771vw;
-              border-radius: .5208vw;
+              margin-bottom: 0.6771vw;
+              border-radius: 0.5208vw;
             }
           }
           .text {
@@ -933,7 +940,7 @@ const { height } = useWindowSize()
         }
       }
     }
-    &-btn{
+    &-btn {
       margin-top: 5.5208vw;
     }
   }
@@ -959,13 +966,13 @@ const { height } = useWindowSize()
       }
     }
   }
-  .Root_canal_treatment_equipment{
+  .Root_canal_treatment_equipment {
     max-width: calc(66.875vw + 3.125vw);
     margin: 7.2917vw auto 0;
-    &-in{
+    &-in {
       margin-top: 2.7604vw;
-      &-r{
-        span{
+      &-r {
+        span {
           font-size: 1.4583vw;
           margin-top: 2.0833vw;
         }
@@ -986,9 +993,9 @@ const { height } = useWindowSize()
           max-width: 20.8333vw;
           .title {
             font-size: 1.8229vw;
-            margin-bottom: .7813vw;
+            margin-bottom: 0.7813vw;
             img {
-              margin-right: .7813vw;
+              margin-right: 0.7813vw;
             }
           }
           .image {
@@ -999,18 +1006,18 @@ const { height } = useWindowSize()
           .name {
             font-size: 1.0417vw;
             margin-top: 1.25vw;
-            margin-bottom: .7813vw;
-            padding: .4167vw .7813vw;
+            margin-bottom: 0.7813vw;
+            padding: 0.4167vw 0.7813vw;
           }
           .context {
             font-size: 1.0417vw;
-            padding: 0 .7813vw;
+            padding: 0 0.7813vw;
           }
         }
         &-r {
           margin-left: 2.6042vw;
           img {
-            width: .7813vw;
+            width: 0.7813vw;
           }
         }
         &:nth-of-type(8) {
@@ -1028,7 +1035,7 @@ const { height } = useWindowSize()
             }
           }
           .lastBox-b {
-            margin-top: .7813vw;
+            margin-top: 0.7813vw;
           }
         }
       }
@@ -1131,7 +1138,7 @@ const { height } = useWindowSize()
         }
       }
     }
-    &-btn{
+    &-btn {
       margin-top: 30px;
     }
   }
@@ -1284,18 +1291,18 @@ const { height } = useWindowSize()
       }
     }
   }
-  .Root_canal_treatment_equipment{
+  .Root_canal_treatment_equipment {
     margin-top: 60px;
-    &-in{
+    &-in {
       margin-top: 30px;
       padding: 0 20px;
       flex-direction: column;
-      &-l{
+      &-l {
         width: 100%;
       }
-      &-r{
+      &-r {
         margin-top: 20px;
-        span{
+        span {
           font-size: 16px;
           line-height: 200%;
           margin-top: 20px;
@@ -1304,7 +1311,7 @@ const { height } = useWindowSize()
       }
     }
   }
-  .doctorTeam{
+  .doctorTeam {
     margin-top: 30px;
   }
 }
