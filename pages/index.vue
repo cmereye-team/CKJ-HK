@@ -559,6 +559,18 @@ const problemData = {
     },
   ],
 }
+
+
+let windowWidth = ref(390)
+
+const getWindowWidth = () => {
+  windowWidth.value = window.innerWidth
+}
+
+onMounted(() => {
+  getWindowWidth()
+  window.addEventListener('resize', getWindowWidth)
+})
 </script>
 
 <template>
@@ -679,9 +691,10 @@ const problemData = {
               delay: 2000,
             }"
             v-if="actDoctorListd.length"
-            class="index-doctorTeam-detail-swiper swiper-no-swiping"
+            class="index-doctorTeam-detail-swiper "
             @swiper="setDoctorItemSwiper"
             @slideChange="doctorItemSlideChange"
+            :class="[ windowWidth > 768 ? 'swiper-no-swiping':'']"
           >
             <Swiper-slide
               v-for="doctorItem in actDoctorListd"
