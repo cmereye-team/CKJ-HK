@@ -679,7 +679,7 @@ const problemData = {
               delay: 2000,
             }"
             v-if="actDoctorListd.length"
-            class="index-doctorTeam-detail-swiper"
+            class="index-doctorTeam-detail-swiper swiper-no-swiping"
             @swiper="setDoctorItemSwiper"
             @slideChange="doctorItemSlideChange"
           >
