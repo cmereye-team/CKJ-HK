@@ -1492,6 +1492,15 @@ if (process.server) {
   }
 }
 @media screen and (max-width: 768px) {
+  :deep(iframe) {
+    max-width: 100%;
+    height: auto;
+    min-height: 200px;
+  }
+  :deep(p img) {
+    max-width: 100%;
+    height: auto !important;
+  }
   .articlePage {
     padding: 0 0 90px;
     &-title {
