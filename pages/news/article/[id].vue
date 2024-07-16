@@ -90,29 +90,31 @@ const headerConfig = {
 let errorpage = ref(false)
 let pageLoading = ref(false)
 
-// function copySpecifiedText(text) {
-//   if (navigator.clipboard) {
-//     navigator.clipboard.writeText(text).then(
-//       function () {
-//         ElMessage({
-//           showClose: true,
-//           message: '已複製到剪切板',
-//           type: 'success',
-//         })
-//       },
-//       function (err) {
-//         ElMessage({
-//           showClose: true,
-//           message: '操作異常，請刷新頁面試試',
-//           type: 'warning',
-//         })
-//       }
-//     )
-//   } else {
-//     alert('Clipboard API is not supported by your browser.')
-//   }
-// }
-
+function copySpecifiedTextArticle(text) {
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(
+      function () {
+        ElMessage({
+          showClose: true,
+          message: '已複製到剪切板',
+          type: 'success',
+        })
+      },
+      function (err) {
+        ElMessage({
+          showClose: true,
+          message: '操作異常，請刷新頁面試試',
+          type: 'warning',
+        })
+      }
+    )
+  } else {
+    alert('Clipboard API is not supported by your browser.')
+  }
+}
+const copyText = () => {
+  copySpecifiedTextArticle(window.location.href)
+}
 function copySpecifiedText(event, text) {
   event.preventDefault()
   if (navigator.clipboard) {
@@ -459,7 +461,7 @@ onMounted(() => {
                 <span
                   class="copy"
                   title="複製鏈接"
-                  @click="copySpecifiedText($event, item.id)"
+                  @click="copyText"
                 ></span>
                 <a
                   :href="`https://www.facebook.com/sharer/sharer.php?u=https://www.ckjhk.com/news/article/${_nid}`"
