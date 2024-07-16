@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { ar } from 'element-plus/es/locale'
 import { renderingDome } from '~/assets/js/commonFun'
 const { t } = useLang()
 const route = useRoute()
@@ -128,7 +129,7 @@ const formatDate = (dateString) => {
   var day = ('0' + date.getDate()).slice(-2)
   return year + '-' + month + '-' + day
 }
-const getDetail = async () => {
+const getDetail = async (_nid) => {
   pageStatus.value = 'loading'
   try {
     const _res: any = await useFetch(
@@ -243,18 +244,34 @@ const changetopimg = (swiper: any) => {
 
 onMounted(() => {
   setTimeout(() => {
-    getDetail()
+    getDetail(_nid)
   })
 })
+
+// const articlePage = ref()
+// const articlePageIn = ref()
+// onUpdated(() => {
+//   articlePageIn.value = document.querySelector('.articlePage-in')
+//   articlePage.value = document.querySelector('.articlePage')
+
+//   window.addEventListener('scroll', function () {
+//     let scrollTop =
+//       document.documentElement.scrollTop || document.body.scrollTop
+//     let documentHeight = articlePageIn.value.offsetHeight - scrollTop - 440
+//     if (documentHeight < 200) {
+//       getDetail(coverageDeatail.value.preId)
+//     }
+//   })
+// })
 
 let imgcur = ref(0)
 
 const handlegetData = async () => {
-  await getDetail()
+  await getDetail(_nid)
 }
 
 if (process.server) {
-  getDetail()
+  getDetail(_nid)
 }
 </script>
 
@@ -1145,7 +1162,7 @@ if (process.server) {
     font-size: 20px;
     line-height: 100%;
     color: var(--textColor);
-    border-bottom: 1px solid var(--textColor);
+    // border-bottom: 1px solid var(--textColor);
     margin-bottom: 20px;
     margin-right: 20px;
   }

@@ -90,31 +90,58 @@ const headerConfig = {
 let errorpage = ref(false)
 let pageLoading = ref(false)
 
-function copySpecifiedText(text) {
+// function copySpecifiedText(text) {
+//   if (navigator.clipboard) {
+//     navigator.clipboard.writeText(text).then(
+//       function () {
+//         ElMessage({
+//           showClose: true,
+//           message: '已複製到剪切板',
+//           type: 'success',
+//         })
+//       },
+//       function (err) {
+//         ElMessage({
+//           showClose: true,
+//           message: '操作異常，請刷新頁面試試',
+//           type: 'warning',
+//         })
+//       }
+//     )
+//   } else {
+//     alert('Clipboard API is not supported by your browser.')
+//   }
+// }
+
+function copySpecifiedText(event, text) {
+  event.preventDefault()
   if (navigator.clipboard) {
-    navigator.clipboard.writeText(text).then(
-      function () {
-        ElMessage({
-          showClose: true,
-          message: '已複製到剪切板',
-          type: 'success',
-        })
-      },
-      function (err) {
-        ElMessage({
-          showClose: true,
-          message: '操作異常，請刷新頁面試試',
-          type: 'warning',
-        })
-      }
-    )
+    navigator.clipboard
+      .writeText(`https://www.ckjhk.com/news/news-tooth-wiki/${text}`)
+      .then(
+        function () {
+          ElMessage({
+            showClose: true,
+            message: '已複製到剪切板',
+            type: 'success',
+          })
+        },
+        function (err) {
+          ElMessage({
+            showClose: true,
+            message: '操作異常，請刷新頁面試試',
+            type: 'warning',
+          })
+        }
+      )
   } else {
-    alert('Clipboard API is not supported by your browser.')
+    alert('您的瀏覽器不支持此功能，請更新瀏覽器')
   }
 }
-const copyText = () => {
-  copySpecifiedText(window.location.href)
-}
+
+// const copyText = () => {
+//   copySpecifiedText(window.location.href)
+// }
 const formatDate = (dateString) => {
   var date = new Date(dateString)
   var year = date.getFullYear()
@@ -247,6 +274,94 @@ if (process.server) {
   // console.log('client');
   getDetail()
 }
+
+let actShowShare = ref('')
+const handleClick = (event, _id) => {
+  event.preventDefault()
+  if (actShowShare.value === _id) {
+    actShowShare.value = ''
+  } else {
+    actShowShare.value = _id
+  }
+}
+
+let indexNewsCur = ref(0)
+let indexNewsLists = ref([[] as any, [] as any, [] as any])
+const handleNewsTab = (idx) => {
+  if (indexNewsCur.value === idx) return
+  indexNewsCur.value = idx
+  getNewsLists(idx)
+}
+const getNewsLists = async (idx = 0) => {
+  if (indexNewsLists.value[idx].length) return
+  let a = [
+    {
+      idx: 0,
+      id: 14,
+      url: '/news/article/',
+    },
+    {
+      idx: 1,
+      id: 15,
+      url: '/news/news-information/',
+    },
+    {
+      idx: 2,
+      id: 16,
+      url: '/news/news-tooth-wiki/',
+    },
+  ]
+  let b: any = a.find((item) => item.idx === idx)
+  let c = 16
+  if (b) {
+    c = b.id
+  } else return
+  const _res: any = await useFetch(
+    `https://admin.ckjhk.com/api.php/list/${c}/page/1/num/3`
+  )
+  let res = JSON.parse(_res.data.value) || null
+  if (res) {
+    // console.log(res)
+    indexNewsLists.value[idx] = res.data.map((item) => {
+      return {
+        id: item.id || '',
+        logo:
+          (item.ext_news_logo.indexOf('/static/upload/image') !== -1
+            ? `https://admin.ckjhk.com${item.ext_news_logo}`
+            : item.ext_news_logo) || '',
+        img:
+          (item.ico.indexOf('/static/upload/image') !== -1
+            ? `https://admin.ckjhk.com${item.ico}`
+            : item.ico) || '',
+        desc: item.ext_news_desc || '',
+        name: item.title || '',
+        logoText: item.tags || '',
+        time:
+          idx === 2
+            ? formatDate(item.update_time)
+            : formatDate(item.ext_news_time),
+        link: `${b.url}${item.id}`,
+      }
+    })
+  }
+}
+
+const shareFacebook = (event, id) => {
+  event.preventDefault()
+  window.open(
+    `https://www.facebook.com/sharer/sharer.php?u=https://www.ckjhk.com/news/news-tooth-wiki/${id}`
+  )
+}
+const handlevideBoxBtn = () => {
+  // router.push('')
+  let _arr = ['/news/coverage', '/news/information', '/news/tooth-wiki']
+  router.push(_arr[indexNewsCur.value])
+}
+onMounted(() => {
+  nextTick(() => {
+    getNewsLists(0)
+  })
+})
 </script>
 
 <template>
@@ -341,7 +456,11 @@ if (process.server) {
               <div>瀏覽次數︰{{ coverageDeatail.visits }}</div>
               <div>更新時間︰{{ coverageDeatail.time }}</div>
               <div class="righeBox">
-                <span class="copy" title="複製鏈接" @click="copyText"></span>
+                <span
+                  class="copy"
+                  title="複製鏈接"
+                  @click="copySpecifiedText($event, item.id)"
+                ></span>
                 <a
                   :href="`https://www.facebook.com/sharer/sharer.php?u=https://www.ckjhk.com/news/article/${_nid}`"
                   target="_block"
@@ -350,7 +469,7 @@ if (process.server) {
                 ></a>
               </div>
             </div>
-            <div class="news" v-if="pageType === '1'">
+            <div class="news" style="display: none" v-if="pageType === '1'">
               <h4>閱讀更多媒體報導︰</h4>
               <nuxtLink
                 :to="`/news/article/${associationItem.id}`"
@@ -364,7 +483,7 @@ if (process.server) {
             <div class="tags" v-if="pageType === '1'">
               <span>{{ coverageDeatail.news_tag }}</span>
             </div>
-            <div class="btn">
+            <div class="btn" style="display: none">
               <el-button
                 :title="associationData.prev_title"
                 :style="{
@@ -392,6 +511,85 @@ if (process.server) {
                 >下一篇</el-button
               >
               <!-- <a href="#" v-disabled="true">下一篇</a> -->
+            </div>
+          </div>
+          <div class="index-videoBox">
+            <div class="index-videoBox-t smallPageCon">
+              <div class="index_title index_title_2">睇牙新資訊</div>
+            </div>
+            <div class="index-videoBox-in">
+              <nuxtLink
+                :to="item.link"
+                class="list-in"
+                :class="`list-in-${indexNewsCur}`"
+                v-for="(item, index) in indexNewsLists[indexNewsCur]"
+                :key="index"
+              >
+                <div class="image">
+                  <img :title="item.name" :src="item.img" alt="" />
+                </div>
+                <div class="logo" v-if="indexNewsCur === 0">
+                  <div class="logo-image">
+                    <img :src="item.logo" :title="item.logoText" alt="" />
+                  </div>
+                  <div class="logo-text">
+                    <span>{{ item.time }}</span>
+                    <span>{{ item.logoText }}</span>
+                  </div>
+                </div>
+                <h2 :title="item.name">{{ item.name }}</h2>
+                <div class="time" v-if="indexNewsCur === 2">
+                  <div class="time-l">{{ item.time }}</div>
+                  <div
+                    class="shareIcon"
+                    @click.stop="handleClick($event, item.id)"
+                    alt=""
+                  >
+                    <div
+                      :class="[
+                        'shareIcon-img',
+                        { act: actShowShare === item.id },
+                      ]"
+                      alt="分享"
+                      title="分享"
+                    >
+                      <img src="@/assets/images/icon_47.svg" alt="" />
+                    </div>
+                    <div class="shareIcon-in" v-if="actShowShare === item.id">
+                      <div
+                        class="shareIcon-in-item"
+                        @click="shareFacebook($event, item.id)"
+                        alt="Facebook 分享"
+                        title="Facebook 分享"
+                      >
+                        <img src="@/assets/images/icon_49.svg" alt="" /><span
+                          >Facebook 分享</span
+                        >
+                      </div>
+                      <div
+                        class="shareIcon-in-item"
+                        @click="copySpecifiedText($event, item.id)"
+                        alt="複製連結"
+                        title="複製連結"
+                      >
+                        <img src="@/assets/images/icon_48.svg" alt="" /><span
+                          >複製連結</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p :title="item.desc">{{ item.desc }}</p>
+                <div class="btn">
+                  <PageAnimBtnTypeTwo str="查看全文" :link="item.link" />
+                </div>
+              </nuxtLink>
+            </div>
+            <div
+              class="index-videoBox-btn smallPageCon"
+              @click="handlevideBoxBtn"
+            >
+              <span>更多資訊 </span>
             </div>
           </div>
         </div>
@@ -680,12 +878,366 @@ if (process.server) {
     }
   }
 }
+
+.index-videoBox {
+  margin-top: 90px;
+  margin-bottom: 90px;
+  position: relative;
+  &-tab {
+    display: flex;
+    justify-content: center;
+    margin-top: 37px;
+    .tab-in {
+      border: 2px solid #fdd3e3;
+      color: var(--Grey-Deep, #4d4d4d);
+      text-align: center;
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 160%;
+      letter-spacing: 2.6px;
+      cursor: pointer;
+      padding: 3px 30px 0;
+      position: relative;
+      transition: all 0.3s;
+      &:not(:last-child) {
+        border-right: none;
+      }
+      &:first-child {
+        border-radius: 5px 0 0 5px;
+      }
+      &:last-child {
+        border-radius: 0 5px 5px 0;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 24px;
+        height: 12px;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-top: 12px solid #fdd3e3;
+        opacity: 0;
+        transition: all 0.3s;
+      }
+      &.active {
+        color: #fff;
+        background: var(--indexColor1);
+        &::after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &-in {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    max-width: 1187px;
+    margin: 50px auto;
+    gap: 31px;
+    .list-in {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      .image {
+        width: 100%;
+        height: 0;
+        padding-bottom: calc(383 / 680 * 100%);
+        margin-bottom: 10px;
+        position: relative;
+        overflow: hidden;
+        img {
+          position: absolute;
+          width: 100%;
+          height: auto;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          transition: all 0.3s;
+        }
+        &:hover {
+          img {
+            transform: translate(-50%, -50%) scale(1.1);
+          }
+        }
+      }
+      h2 {
+        color: var(--Theme-Color, #fc1682);
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 0 20px;
+        font-family: 'FakePearl-Regular', 'NotoSansHans', 'Noto Sans HK', Serif;
+      }
+      p {
+        color: var(--Grey-Mid, #666);
+        text-overflow: ellipsis;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 200%; /* 32px */
+        letter-spacing: 1.6px;
+        margin-top: 10px;
+        padding: 0 20px;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding: 0 20px;
+        flex: 1;
+      }
+      .time {
+        width: 100%;
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+        &-l {
+          color: var(--Grey-Mid, #666);
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 200%; /* 32px */
+          letter-spacing: 1.6px;
+        }
+        .shareIcon {
+          position: relative;
+          &-img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            border: 2px solid #aaa;
+            z-index: 21;
+            & > img {
+              width: 16px;
+              height: auto;
+            }
+            &.act {
+              border: none;
+            }
+          }
+          &-in {
+            position: absolute;
+            z-index: 20;
+            top: 0;
+            right: 0;
+            width: 159px;
+            height: 115px;
+            background: url(https://static.cmereye.com/static/ckj/imgs/default/shareIcon.svg);
+            background-size: 100% 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
+            padding: 12px 0;
+            &-item {
+              display: flex;
+              align-items: center;
+              padding: 5px 10px;
+              margin: 0 2px;
+              border-radius: 3px;
+              & > img {
+                width: 20px;
+                margin-right: 5px;
+              }
+              & > span {
+                font-size: 14px;
+              }
+              &:hover {
+                background: #f6f6f6;
+              }
+            }
+          }
+        }
+      }
+      .logo {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px;
+        &-image {
+          max-width: 100px;
+          max-height: 59px;
+        }
+        &-text {
+          display: flex;
+          flex-direction: column;
+          color: var(--Grey-Deep, #4d4d4d);
+          text-align: right;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 200%; /* 32px */
+          letter-spacing: 1.6px;
+        }
+      }
+      .btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+      }
+      &.list-in-1 {
+        .image {
+          padding-bottom: 100%;
+        }
+        h2 {
+          -webkit-line-clamp: 1;
+          line-clamp: 1;
+        }
+        p {
+          -webkit-line-clamp: 2;
+          line-clamp: 2;
+        }
+      }
+      &.list-in-2 {
+        .image {
+          padding-bottom: calc(562 / 1000 * 100%);
+        }
+        h2 {
+          -webkit-line-clamp: 2;
+          line-clamp: 2;
+        }
+        p {
+          -webkit-line-clamp: 5;
+          line-clamp: 5;
+        }
+      }
+    }
+  }
+  &-btn {
+    position: absolute;
+    inset: 0;
+    top: 65px;
+    pointer-events: none;
+    span {
+      // float: right;
+      display: inline-block;
+      color: var(--Theme-Color, #fc1682);
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%;
+      letter-spacing: 3px;
+      position: relative;
+      pointer-events: auto;
+      cursor: pointer;
+      position: absolute;
+      top: -70px;
+      right: 0;
+      &::before {
+        content: '';
+        height: 0;
+        width: 90%;
+        position: absolute;
+        border-bottom: 2px solid var(--indexColor1);
+        bottom: 0;
+        left: 0;
+      }
+      &::after {
+        content: '》';
+        font-size: 28px;
+      }
+    }
+  }
+}
 @media (min-width: 768px) and (max-width: 850px) {
   .content-bdetail {
     .btn {
       button,
       a {
         font-size: 24px;
+      }
+    }
+  }
+  .index-videoBox {
+    margin-top: 4.6875vw;
+    margin-bottom: 4.6875vw;
+    &-tab {
+      margin-top: 1.9271vw;
+      .tab-in {
+        font-size: 1.3542vw;
+        letter-spacing: 2.6px;
+        padding: 0.1563vw 1.5625vw 0;
+        &:first-child {
+          border-radius: 0.2604vw 0 0 0.2604vw;
+        }
+        &:last-child {
+          border-radius: 0 0.2604vw 0.2604vw 0;
+        }
+        &::after {
+          width: 1.25vw;
+          height: 0.625vw;
+          border-left: 0.625vw solid transparent;
+          border-right: 0.625vw solid transparent;
+          border-top: 0.625vw solid #fdd3e3;
+        }
+      }
+    }
+    &-in {
+      max-width: 61.8229vw;
+      margin: 2.6042vw auto;
+      gap: 1.6146vw;
+      .list-in {
+        .image {
+          margin-bottom: 0.5208vw;
+        }
+        h2 {
+          font-size: 1.0417vw;
+          padding: 0 1.0417vw;
+        }
+        p {
+          font-size: 0.8333vw;
+          margin-top: 0.5208vw;
+          padding: 0 1.0417vw;
+        }
+        .time {
+          margin-top: 0.5208vw;
+          padding: 0 1.0417vw;
+          &-l {
+            font-size: 0.8333vw;
+          }
+        }
+        .logo {
+          padding: 0.5208vw 1.0417vw;
+          &-image {
+            max-width: 5.2083vw;
+            max-height: 3.0729vw;
+          }
+          &-text {
+            font-size: 0.8333vw;
+          }
+        }
+        .btn {
+          margin-top: 1.0417vw;
+        }
+      }
+    }
+    &-btn {
+      top: 4.1667vw;
+      span {
+        font-size: 1.5625vw;
+        letter-spacing: 0.1563vw;
+        &::after {
+          font-size: 1.4583vw;
+        }
       }
     }
   }
@@ -700,7 +1252,45 @@ if (process.server) {
     max-width: 100%;
     height: auto !important;
   }
+  .index-videoBox {
+    &-tab {
+      margin-top: 30px;
+      .tab-in {
+        border: 1px solid #fdd3e3;
+        letter-spacing: 1.588px;
+        font-size: 16px;
+        padding: 3px 16px 0;
+      }
+    }
+    &-in {
+      grid-template-columns: repeat(1, 1fr);
+      margin-top: 30px;
+    }
+    &-btn {
+      position: relative;
+      inset: auto;
+      top: 0;
+      display: flex;
+      justify-content: center;
 
+      span {
+        float: initial;
+        font-size: 20px;
+        margin-left: 10px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateX(-100%);
+        left: auto;
+        &::before {
+          border-bottom: 1px solid var(--indexColor1);
+        }
+        &::after {
+          font-size: 18px;
+        }
+      }
+    }
+  }
   .articlePage {
     padding: 0 0 90px;
     &-title {
