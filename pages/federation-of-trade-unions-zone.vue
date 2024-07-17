@@ -295,7 +295,7 @@ const pageDetail:any = {
         </div> -->
       </div>
       <NewAddress />
-     <contact-form-new-form />
+     <ContactForm-new />
     </div>
     <PageFooter />
     <PageNavbar />

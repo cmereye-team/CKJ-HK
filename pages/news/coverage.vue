@@ -209,7 +209,7 @@ const getPagination = (pageitem) => {
       </div>
       <!-- <div @click="getData">获取数据</div> -->
       <NewAddress />
-     <contact-form-new-form />
+     <ContactForm-new />
     </div>
     <PageFooter />
     <PageNavbar />

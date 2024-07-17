@@ -432,7 +432,7 @@ const changeSwiper = (swiper) =>{
         </div>
       </div>
       <NewAddress />
-     <contact-form-new-form />
+     <ContactForm-new />
     </div>
     <PageFooter />
     <PageNavbar />

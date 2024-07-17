@@ -560,7 +560,6 @@ const problemData = {
   ],
 }
 
-
 let windowWidth = ref(390)
 
 const getWindowWidth = () => {
@@ -691,10 +690,10 @@ onMounted(() => {
               delay: 2000,
             }"
             v-if="actDoctorListd.length"
-            class="index-doctorTeam-detail-swiper "
+            class="index-doctorTeam-detail-swiper"
             @swiper="setDoctorItemSwiper"
             @slideChange="doctorItemSlideChange"
-            :class="[ windowWidth > 768 ? 'swiper-no-swiping':'']"
+            :class="[windowWidth > 768 ? 'swiper-no-swiping' : '']"
           >
             <Swiper-slide
               v-for="doctorItem in actDoctorListd"
@@ -1067,7 +1066,7 @@ onMounted(() => {
       <ServiceProblem :problem-data="problemData" />
       <!-- 聯絡我們 -->
       <NewAddress />
-      <contact-form-new-form />
+      <ContactForm-new />
     </div>
     <!-- <div style="position: fixed; top: 50%; left: 0;z-index: 9999;">{{top}} --- {{bottom}} --- {{(top<(height / 3 * 2)) && (bottom > 0)}}</div> -->
     <!-- <PageAdbox /> -->

@@ -63,7 +63,7 @@ const goBack = () =>{
       <div class="privacyPolicy-btn" @click="goBack">
         <span>{{'<'}}返回</span>
       </div>
-     <contact-form-new-form />
+     <ContactForm-new />
     </div>
     <PageFooter />
     <PageNavbar />

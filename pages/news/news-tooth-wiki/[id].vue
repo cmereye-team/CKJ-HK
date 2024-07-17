@@ -412,7 +412,7 @@ if (process.server) {
       </div>
       <!-- <div @click="handlegetData">獲取數據</div> -->
       <NewAddress />
-     <contact-form-new-form />
+     <ContactForm-new />
     </div>
     <PageFooter />
     <PageNavbar />
