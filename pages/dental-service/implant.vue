@@ -1063,11 +1063,11 @@ const { height } = useWindowSize()
       <ServiceCase />
       <ServiceProblem :problemData="problemData" />
       <!-- <div class="contactForm">
-        <ContactForm-new />
+       <contact-form-new-form />
       </div> -->
       <serviceCard />
       <NewAddress />
-      <ContactForm-new />
+     <contact-form-new-form />
     </div>
     <PageFooter />
     <PageNavbar

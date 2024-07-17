@@ -228,7 +228,7 @@ const handleClick = (event) =>{
         </div>
       </div>
       <NewAddress />
-      <ContactForm-new />
+     <contact-form-new-form />
     </div>
     <PageFooter />
     <PageNavbar />

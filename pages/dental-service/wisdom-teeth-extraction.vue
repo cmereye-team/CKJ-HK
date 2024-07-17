@@ -629,7 +629,7 @@ const caseLists = [
       </div>
       <serviceCard />
       <NewAddress />
-      <ContactForm-new />
+     <contact-form-new-form />
     </div>
     <PageFooter />
     <PageNavbar />

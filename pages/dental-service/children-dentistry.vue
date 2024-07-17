@@ -407,7 +407,7 @@ watch(
       <ServiceProblem :problemData="problemData" />
       <serviceCard />
       <NewAddress />
-      <ContactForm-new />
+     <contact-form-new-form />
     </div>
     <div class="YaNavBox shownav" v-if="shownav_2">
       <img

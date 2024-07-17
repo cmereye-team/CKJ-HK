@@ -33,7 +33,7 @@ onMounted(()=>{
       <div class="messagePage-in-btn">
         <nuxt-link :to="'/'" title="深圳愛康健口腔醫院" alt="深圳愛康健口腔醫院">返回首頁</nuxt-link>
       </div>
-      <ContactForm-new />
+      <contact-form-new-form />
     </div>
     <PageFooter />
     <PageNavbar />

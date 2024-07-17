@@ -318,7 +318,7 @@ const handleServicesInclude = (index) => {
       <ServiceProblem :problemData="problemData" />
       <serviceCard />
       <NewAddress />
-      <ContactForm-new />
+     <contact-form-new-form />
     </div>
     <PageFooter />
     <PageNavbar />

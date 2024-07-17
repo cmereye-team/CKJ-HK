@@ -190,7 +190,7 @@ const problemData = {
         <serviceCard :isIndexShow="true" />
       </div>
       <ServiceProblem :problem-data="problemData" />
-      <ContactForm-new />
+     <contact-form-new-form />
       <div class="environment">
         <div class="environment-title">
           <div class="index_title">

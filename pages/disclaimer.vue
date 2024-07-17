@@ -51,7 +51,7 @@ const goBack = () =>{
       <div class="disclaimer-btn" @click="goBack">
         <span>{{'<'}}返回</span>
       </div>
-      <ContactForm-new />
+     <contact-form-new-form />
     </div>
     <PageFooter />
     <PageNavbar />

@@ -1067,7 +1067,7 @@ onMounted(() => {
       <ServiceProblem :problem-data="problemData" />
       <!-- 聯絡我們 -->
       <NewAddress />
-      <ContactForm-new />
+      <contact-form-new-form />
     </div>
     <!-- <div style="position: fixed; top: 50%; left: 0;z-index: 9999;">{{top}} --- {{bottom}} --- {{(top<(height / 3 * 2)) && (bottom > 0)}}</div> -->
     <!-- <PageAdbox /> -->

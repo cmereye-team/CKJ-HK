@@ -469,7 +469,7 @@ const { height } = useWindowSize()
       <!-- <ServiceProblem :problem-data="problemData" /> -->
       <serviceCard />
       <NewAddress />
-      <ContactForm-new />
+     <contact-form-new-form />
     </div>
     <PageFooter />
     <PageNavbar

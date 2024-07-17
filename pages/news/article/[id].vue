@@ -601,7 +601,7 @@ onMounted(() => {
       </div>
       <!-- <div @click="handlegetData">獲取數據</div> -->
       <NewAddress />
-      <ContactForm-new />
+     <contact-form-new-form />
     </div>
     <PageFooter />
     <PageNavbar />
