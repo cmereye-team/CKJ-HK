@@ -405,7 +405,7 @@ const newsmoduleLists = [
           </span>
         </div>
       </div>
-      <div class="newsmodule smallPageCon">
+      <!-- <div class="newsmodule smallPageCon">
         <div class="newsmodule-title">
           <div class="index_title">
             醫療券資訊
@@ -424,7 +424,7 @@ const newsmoduleLists = [
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <NewAddress />
      <ContactForm-new />
     </div>

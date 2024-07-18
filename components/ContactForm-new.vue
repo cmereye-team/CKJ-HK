@@ -380,7 +380,7 @@ let privacyPolicy = ref(true)
               </el-form-item>
             </el-col> -->
           <!-- </div> -->
-   
+
           <!-- <el-form-item :label="`${$t('contactUs.contact_form.formItem.email_address')}：`" prop="email">
             <el-input v-model="form.email" />
           </el-form-item> -->
