@@ -350,7 +350,6 @@ let privacyPolicy = ref(true)
           >
             <el-input
               v-model="form.name"
-              placeholder="姓名"
               name="name"
               maxlength="30"
             />
@@ -360,7 +359,7 @@ let privacyPolicy = ref(true)
               v-model="form.dayOne"
               type="date"
               popper-class="date-picker-class"
-              placeholder="預約日期"
+              placeholder="請選擇"
               :disabled-date="disabledDate"
               :shortcuts="shortcuts"
               format="YYYY/MM/DD"

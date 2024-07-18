@@ -933,7 +933,7 @@ onMounted(() => {
         background: var(--indexColor1);
         color: #fff;
         // margin-top: 10px;
-        font-size: 12px;
+        font-size: 14px;
         line-height: 130%;
         padding: 8px 0 8px;
         &-top {
@@ -944,14 +944,14 @@ onMounted(() => {
           color: var(--indexColor1);
           line-height: 130%;
           & > span {
-            margin-left: 8px;
+            margin-left: 0px;
           }
           & > span:nth-child(2) {
             color: var(--Grey-Deep, #4d4d4d);
             font-family: FakePearl;
             font-size: 15px;
             font-style: normal;
-            font-weight: 400;
+            font-weight: 600;
             line-height: 130%; /* 24px */
           }
         }
