@@ -799,6 +799,37 @@ li {
   position: absolute;
   top: -15vh;
 }
+.contactForm-title > span:nth-child(1) {
+  position: relative;
+}
+.contactForm-title > span:nth-child(1)::after {
+  content: '';
+  background: url('https://static.cmereye.com/imgs/2024/07/d4f4313d9bdb6405.png')
+    no-repeat;
+  width: 98px;
+  height: 40px;
+  display: inline-block;
+  position: absolute;
+  top: -30px;
+  right: -40px;
+}
+.contactForm-title > span:nth-child(1)::before {
+  content: '真人客服回覆';
+  display: inline-block;
+  position: absolute;
+  top: -28px;
+  right: -28px;
+  color: var(--White, #fff);
+  text-align: center;
+  z-index: 1;
+  font-family: FakePearl;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 19.2px */
+  letter-spacing: 1.2px;
+}
+
 @media (min-width: 768px) and (max-width: 1920px) {
   li {
     &.el-select-dropdown__item {
