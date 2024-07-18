@@ -935,7 +935,7 @@ onMounted(() => {
         // margin-top: 10px;
         font-size: 12px;
         line-height: 130%;
-        padding: 3px 0 2px;
+        padding: 8px 0 8px;
         &-top {
           display: flex;
           flex-direction: column;
@@ -971,18 +971,30 @@ onMounted(() => {
           // margin-top: 5px;
         }
       }
-      & > a:nth-child(1) {
+      & > a:nth-child(1),
+      & > div:nth-child(3)  {
         position: relative;
       }
       & > a:nth-child(1)::after {
         content: '';
         background: #FEE6F1;
         width: 1px;
-        height: 22px;
+        height: 42px;
         position: absolute;
         top: 50%;
         right: 0;
         transform: translateY(-50%);
+      }
+      & > div:nth-child(3)::after {
+        content: '';
+        background: #FEE6F1;
+        width: 1px;
+        height: 42px;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        z-index: 1;
       }
       & > a:nth-child(2){
         position: relative;
@@ -993,11 +1005,12 @@ onMounted(() => {
         filter: drop-shadow(0 -3px 5px rgba(252, 22, 130, 0.3));
         position: absolute;
         bottom: 0;
-        right: -8px;
+        right: -10px;
         width: 64px;
         height: 59px;
         background-position: bottom center;
         background-size: cover;
+        z-index: 4;
       }
     }
     .navForm {

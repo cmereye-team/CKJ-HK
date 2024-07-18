@@ -39,7 +39,7 @@ let form: any = reactive({
   // gender: '',
   dayOne: '',
   phone: '',
-  area: '',
+  area: '羅湖區',
   // email: '',
   service: '',
 })
@@ -332,7 +332,7 @@ let privacyPolicy = ref(true)
     <div class="contactForm-bg">
       <div class="contactForm-title">
         <span>立即預約牙科診症</span>
-        <span>（星期一至日 9:00am – 5:30pm）</span>
+        <span>（星期一至日 9:00am – 6:30pm）</span>
       </div>
       <div class="contactForm-in">
         <el-form
@@ -348,7 +348,12 @@ let privacyPolicy = ref(true)
             :label="`${$t('contactUs.contact_form.formItem.name')}`"
             prop="name"
           >
-            <el-input v-model="form.name" name="name" maxlength="30" />
+            <el-input
+              v-model="form.name"
+              placeholder="姓名"
+              name="name"
+              maxlength="30"
+            />
           </el-form-item>
           <el-form-item label="預約日期" prop="dayOne">
             <el-date-picker
@@ -668,7 +673,11 @@ li {
       line-height: 50px;
       height: 50px;
       text-indent: 10px;
-      color: var(--indexColor1);
+      // color: var(--indexColor1);
+      color: #4d4d4d;
+      &::placeholder {
+        color: #4d4d4d;
+      }
     }
     :deep(.el-form-item__content) {
       display: flex;
