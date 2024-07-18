@@ -195,7 +195,7 @@ onMounted(() => {
         id="navMbWhatsapp"
         :to="whatsapplink"
       >
-        <img src="@/assets/images/icon_62.svg" alt="" />
+        <img src="@/assets/images/icon_65.svg" alt="" />
         <span>WhatsApp</span>
       </nuxt-link>
       <nuxt-link
@@ -216,7 +216,7 @@ onMounted(() => {
       >
         <img
           class="navMbContactFormBtn"
-          src="@/assets/images/icon_63.svg"
+          src="@/assets/images/icon_66.svg"
           alt=""
         />
         <span class="navMbContactFormBtn">預約表格</span>
@@ -930,8 +930,8 @@ onMounted(() => {
         gap: 0 5px;
         justify-content: center;
         align-items: center;
-        // background: var(--indexColor1);
-        color: var(--indexColor1);
+        background: var(--indexColor1);
+        color: #fff;
         // margin-top: 10px;
         font-size: 12px;
         line-height: 130%;
@@ -960,9 +960,9 @@ onMounted(() => {
         }
         &:nth-of-type(2) {
           flex: 1.5;
-          // background: #fff;
+          background: #fff;
           // margin-top: -10px;
-          border-radius: 10px 10px 0 0;
+          // border-radius: 10px 10px 0 0;
           justify-content: flex-start;
           // padding: 15px 0 10px;
           padding-left: 10px;
@@ -970,31 +970,6 @@ onMounted(() => {
         & > span {
           // margin-top: 5px;
         }
-      }
-      & > a:nth-child(1),
-      & > div:nth-child(3)  {
-        position: relative;
-      }
-      & > a:nth-child(1)::after {
-        content: '';
-        background: #FEE6F1;
-        width: 1px;
-        height: 42px;
-        position: absolute;
-        top: 50%;
-        right: 0;
-        transform: translateY(-50%);
-      }
-      & > div:nth-child(3)::after {
-        content: '';
-        background: #FEE6F1;
-        width: 1px;
-        height: 42px;
-        position: absolute;
-        top: 50%;
-        left: 0;
-        transform: translateY(-50%);
-        z-index: 1;
       }
       & > a:nth-child(2){
         position: relative;
