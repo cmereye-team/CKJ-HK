@@ -533,16 +533,24 @@ ul {
   max-width: 388.5px;
   min-width: 386px !important;
 }
-.el-picker-panel{
+.el-picker-panel {
   .el-date-picker__header {
-    &>span:nth-child(1){
-      display: none;
-    }
-    &>span:last-child{
-      &>button:last-child {
+    & > span:nth-child(1) {
+      & > button:first-child {
         display: none;
       }
     }
+    & > span:last-child {
+      & > button:last-child {
+        display: none;
+      }
+    }
+  }
+}
+#el-id-1024-8 {
+  width: 155px;
+  .el-select-dropdown {
+    min-width: 145px !important;
   }
 }
 @media screen and (max-width: 768px) {
@@ -551,6 +559,16 @@ ul {
     min-width: 155.5px !important;
     .el-select-dropdown__item {
       padding-left: 11px;
+    }
+  }
+  #el-id-1024-8 {
+    width: 83px;
+    .el-select-dropdown {
+      min-width: 82px !important;
+    }
+    .el-select-dropdown__item {
+      padding-left: 11px;
+      padding-right: 20px;
     }
   }
 }
