@@ -154,9 +154,12 @@ pages:
         in_1: 深圳老字號
         in_2: 廣東省著名商標品牌
         in_3: 
-          span_1: 中山大學光華口腔醫學院
-          span_2: 研究生課程深圳教學基地
-        in_4: 最具口碑影響力企業
+          span_1: 中山大學光華口腔
+          span_2: 醫學院研究生課程
+          span_3: 深圳教學基地
+        in_4: 
+          span_1: 最具口碑影響力
+          span_2: 企業
   index:
     title: 主頁
     common_problem:

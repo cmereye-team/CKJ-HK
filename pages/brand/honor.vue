@@ -189,79 +189,87 @@ const handleProcessBtn = (_type: string) => {
             <div>
               <img
                 loading="lazy"
-                src="https://static.cmereye.com/imgs/2023/05/d7e785a21ef31545.png"
+                src="https://static.cmereye.com/imgs/2024/07/9c91a9fd48c2180b.png"
                 alt=""
               />
             </div>
             <div>
-              {{ $t('pages.brand.honor.brand_item.in_1') }}
+              <span>{{ $t('pages.brand.honor.brand_item.in_1') }}</span>
             </div>
           </div>
           <div>
             <div>
               <img
                 loading="lazy"
-                src="https://static.cmereye.com/imgs/2023/05/6b9b5cbf87f8da95.png"
+                src="https://static.cmereye.com/imgs/2024/07/922c7507efcd0304.png"
                 alt=""
               />
             </div>
             <div>
-              {{ $t('pages.brand.honor.brand_item.in_2') }}
+              <span>{{ $t('pages.brand.honor.brand_item.in_2') }}</span>
             </div>
           </div>
           <div>
             <div>
               <img
                 loading="lazy"
-                src="https://static.cmereye.com/imgs/2023/05/42202884c1b63259.png"
+                src="https://static.cmereye.com/imgs/2024/07/5b76646f4c37c695.png"
                 alt=""
               />
             </div>
             <div>
-              {{ $t('pages.brand.honor.brand_item.in_3.span_1')
-              }}{{ $t('pages.brand.honor.brand_item.in_3.span_2') }}
+              <span>{{ $t('pages.brand.honor.brand_item.in_3.span_1') }}</span>
+              <span>{{ $t('pages.brand.honor.brand_item.in_3.span_2') }}</span>
+              <span>{{ $t('pages.brand.honor.brand_item.in_3.span_3') }}</span>
             </div>
           </div>
           <div>
             <div>
               <img
                 loading="lazy"
-                src="https://static.cmereye.com/imgs/2023/05/cb849eb2ad0023d4.png"
+                src="https://static.cmereye.com/imgs/2024/07/c68bc087e539b6d1.png"
                 alt=""
               />
             </div>
             <div>
-              {{ $t('pages.brand.honor.brand_item.in_4') }}
+              <span>{{ $t('pages.brand.honor.brand_item.in_4.span_1') }}</span>
+              <span>{{ $t('pages.brand.honor.brand_item.in_4.span_2') }}</span>
             </div>
           </div>
-          <nuxt-link
-            to="https://www.gma-awards.hk01.group/%E5%BE%97%E7%8D%8E%E5%90%8D%E5%96%AE"
+          <a
+            href="https://www.gma-awards.hk01.group/%E5%BE%97%E7%8D%8E%E5%90%8D%E5%96%AE"
+            target="_blank"
           >
             <div>
               <img
                 loading="lazy"
-                src="https://static.cmereye.com/imgs/2024/05/a4cced5ce2d5c606.png"
+                src="https://static.cmereye.com/imgs/2024/07/017d06980d9fe3b3.png"
                 alt=""
               />
             </div>
             <div>
-              {{ '香港01\n傑出大灣區牙科醫療\n服務機構' }}
+              <span>香港01</span>
+              <span>傑出大灣區牙科醫療</span>
+              <span>服務機構</span>
             </div>
-          </nuxt-link>
-          <nuxt-link
-            to="https://www.gma-awards.hk01.group/%E5%BE%97%E7%8D%8E%E5%90%8D%E5%96%AE"
+          </a>
+          <a
+            href="https://iet2.hket.com/event/hket_excellence_awards/zh/2024-winner-list.html"
+            target="_blank"
           >
             <div>
               <img
                 loading="lazy"
-                src="https://static.cmereye.com/imgs/2024/05/a4cced5ce2d5c606.png"
+                src="https://static.cmereye.com/imgs/2024/07/44b305dac44d3274.png"
                 alt=""
               />
             </div>
             <div>
-              {{ '香港01\n傑出大灣區牙科醫療\n服務機構' }}
+              <span>香港01</span>
+              <span>傑出大灣區牙科醫療</span>
+              <span>服務機構</span>
             </div>
-          </nuxt-link>
+          </a>
         </div>
       </div>
       <NewAddress />
@@ -494,14 +502,27 @@ const handleProcessBtn = (_type: string) => {
   }
   &-in {
     width: 100%;
-    max-width: 1380px;
+    max-width: 1480px;
+    opacity: 0.8;
+    background: linear-gradient(
+      270deg,
+      rgba(255, 241, 240, 0) 2.6%,
+      rgba(255, 241, 240, 0.7) 23.89%,
+      rgba(255, 241, 240, 0.7) 75.33%,
+      rgba(255, 241, 240, 0) 97.4%
+    );
+    padding: 51px 0;
     margin: 61px auto 0;
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 70px 0px;
     justify-content: space-between;
     & > div,
     & > a {
-      flex: 1;
+      // flex: 1;
       padding: 0 15px;
+      display: flex;
+      align-items: center;
       & > div {
         font-style: normal;
         font-weight: 700;
@@ -514,9 +535,21 @@ const handleProcessBtn = (_type: string) => {
           padding: 0 5px;
         }
         img {
-          margin: 0 auto;
-          max-width: 120px;
+          // margin: 0 auto;
+          // max-width: 120px;
         }
+      }
+      & > div:nth-child(2) {
+        color: var(--Grey-Deep, #4d4d4d);
+        font-family: FakePearl;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 160%; /* 41.6px */
+        letter-spacing: 2.6px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
   }

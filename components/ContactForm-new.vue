@@ -348,11 +348,7 @@ let privacyPolicy = ref(true)
             :label="`${$t('contactUs.contact_form.formItem.name')}`"
             prop="name"
           >
-            <el-input
-              v-model="form.name"
-              name="name"
-              maxlength="30"
-            />
+            <el-input v-model="form.name" name="name" maxlength="30" />
           </el-form-item>
           <el-form-item label="預約日期" prop="dayOne">
             <el-date-picker
@@ -533,6 +529,22 @@ ul {
     color: #fc1682;
   }
 }
+.el-select-dropdown {
+  max-width: 388.5px;
+  min-width: 386px !important;
+}
+.el-picker-panel{
+  .el-date-picker__header {
+    &>span:nth-child(1){
+      display: none;
+    }
+    &>span:last-child{
+      &>button:last-child {
+        display: none;
+      }
+    }
+  }
+}
 @media screen and (max-width: 768px) {
   .el-select-dropdown {
     max-width: 155.5px;
@@ -541,7 +553,6 @@ ul {
       padding-left: 11px;
     }
   }
-  
 }
 </style>
 <style lang="scss" scoped>
@@ -1000,7 +1011,11 @@ li {
         font-size: 16px;
         letter-spacing: 3px;
       }
-      :deep(.el-form--default.el-form--label-top .el-form-item .el-form-item__label) {
+      :deep(
+          .el-form--default.el-form--label-top
+            .el-form-item
+            .el-form-item__label
+        ) {
         margin-bottom: 3px;
       }
       :deep(.el-radio__label) {
