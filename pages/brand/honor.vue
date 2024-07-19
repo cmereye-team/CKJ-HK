@@ -716,29 +716,44 @@ const handleProcessBtn = (_type: string) => {
     &-in {
       margin: 24.68px auto 0;
       padding: 0 21.5px;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      display: grid;
+      // flex-wrap: wrap;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px 0px;
+      // justify-content: center;
+      padding: 35px 0;
+      box-sizing: border-box;
+      justify-items: center;
       & > div,
       & > a {
-        flex: initial;
-        width: calc(100% / 3);
-        padding: 0 8.5px 10px;
-        & > div {
+        // flex: initial;
+        // width: calc(100% / 3);
+        // padding: 0 8.5px 10px;
+        gap: 0 5px;
+        padding: 0;
+        & > div:nth-child(1) {
           font-size: 8px;
-          &:first-child {
-            img {
-              width: 80%;
-            }
-          }
-          &:last-child {
-            // width: 200%;
-            // white-space: nowrap;
-            // transform: scale(.5) translate(-50%,-50%);
-            margin-top: 6px;
-          }
-          img {
+          width: 17.94vw;
+          height: 17.94vw;
+          & > img {
             width: 100%;
+          }
+        }
+        & > div:nth-child(2) {
+          min-width: 19.23vw;
+          display: flex;
+          text-align: left;
+          font-weight: 600;
+          line-height: 130%; /* 12.12px */
+          font-size: 2.3vw;
+          padding: 0;
+          flex-direction: column;
+          letter-spacing: 0;
+          & > span {
+            display: inline;
+            color: var(--Grey-Deep, #4d4d4d);
+            font-family: FakePearl;
+            font-style: normal;
           }
         }
       }
