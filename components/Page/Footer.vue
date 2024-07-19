@@ -16,10 +16,10 @@ const navLists = [
     name: 'components.footer.nav_dental_service',
     link: `/dental-service/implant`,
   },
-  {
-    name: 'components.header.menuLists.health-care-voucher.name',
-    link: `/health-care-voucher`,
-  },
+  // {
+  //   name: 'components.header.menuLists.health-care-voucher.name',
+  //   link: `/health-care-voucher`,
+  // },
   {
     name: 'components.header.menuLists.federation-of-trade-unions-zone.name',
     link: `/federation-of-trade-unions-zone`,

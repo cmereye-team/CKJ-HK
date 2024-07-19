@@ -1,8 +1,8 @@
 <script lang="ts" setup>
-import { zh_tran,zh_getLang,getCookie } from '~/assets/js/uselang'
-import { Autoplay } from 'swiper';
+import { zh_tran, zh_getLang, getCookie } from '~/assets/js/uselang'
+import { Autoplay } from 'swiper'
 import { useAppState } from '~/stores/appState'
-import { toWhatsApp,smallPhoneNum } from '~/assets/js/common'
+import { toWhatsApp, smallPhoneNum } from '~/assets/js/common'
 import serviceLists from '~/assets/js/service'
 const route = useRoute()
 const appState = useAppState()
@@ -22,7 +22,7 @@ defineProps({
   },
 })
 
-const menuLists:any = [
+const menuLists: any = [
   {
     name: 'components.header.menuLists.menu_index.name',
     link: '/',
@@ -45,19 +45,17 @@ const menuLists:any = [
   {
     name: 'components.header.menuLists.menu_dental_service.name',
     link: `/dental-service`,
-    child: [
-      ...serviceLists
-    ],
+    child: [...serviceLists],
   },
   {
     name: 'components.header.menuLists.health-care-voucher.name',
     link: `/health-care-voucher`,
-    child: []
+    child: [],
   },
   {
     name: 'components.header.menuLists.federation-of-trade-unions-zone.name',
     link: `/federation-of-trade-unions-zone`,
-    child: []
+    child: [],
   },
   {
     name: 'components.header.menuLists.menu_news.name',
@@ -75,7 +73,7 @@ const menuLists:any = [
         name: 'components.header.menuLists.menu_news.tooth-wiki',
         link: '/news/tooth-wiki',
       },
-    ]
+    ],
   },
   {
     name: 'components.header.menuLists.menu_medical_team.name',
@@ -163,49 +161,49 @@ let bannerLists = ref([
   {
     name: '灣區長者醫療券banner',
     link: '/health-care-voucher',
-    pc: 'https://static.cmereye.com/imgs/2024/04/02e0cbb29d86af90.webp',
-    mb: 'https://static.cmereye.com/imgs/2024/02/afdfd3c22104497f.webp'
+    pc: 'https://static.cmereye.com/imgs/2024/07/1ea1941fc1372858.webp',
+    mb: 'https://static.cmereye.com/imgs/2024/07/cd882e950625e695.webp',
   },
   {
     name: '愛康健裕亨新店開業優惠banner',
     link: 'https://bit.ly/愛康健裕亨新店開業優惠',
     pc: 'https://static.cmereye.com/imgs/2024/06/6f26ff5dd22033b4.jpg',
-    mb: 'https://static.cmereye.com/imgs/2024/06/455f973c99656e61.jpg?v=1.2.1'
+    mb: 'https://static.cmereye.com/imgs/2024/06/455f973c99656e61.jpg?v=1.2.1',
   },
   {
     name: '醫生團隊banner',
     link: '/medical-team',
     pc: 'https://static.cmereye.com/imgs/2024/04/df1e63bdd93c3504.webp',
-    mb: 'https://static.cmereye.com/imgs/2024/03/f3f241b74364a6b7.jpg?v=1.2.0'
+    mb: 'https://static.cmereye.com/imgs/2024/03/f3f241b74364a6b7.jpg?v=1.2.0',
   },
   {
     name: '',
     link: '',
     pc: 'https://static.cmereye.com/imgs/2024/04/cf5124d2a6d53efd.webp',
-    mb: 'https://static.cmereye.com/imgs/2024/03/4abbdd7326af4cc3.webp'
+    mb: 'https://static.cmereye.com/imgs/2024/03/4abbdd7326af4cc3.webp',
   },
   {
     name: '福田旗艦店18週年慶典優惠-慶典',
     link: '',
     pc: 'https://static.cmereye.com/static/ckj/imgs/banner/慶典_Banner_PC.webp',
-    mb: 'https://static.cmereye.com/static/ckj/imgs/banner/慶典_Banner_MB.webp'
-  }
+    mb: 'https://static.cmereye.com/static/ckj/imgs/banner/慶典_Banner_MB.webp',
+  },
 ])
 onMounted(() => {
   getScrollHeight()
   window.addEventListener('scroll', getScrollHeight)
   setTimeout(() => {
-    if(route.path.includes('/cn')){
+    if (route.path.includes('/cn')) {
       changlangsfun('s')
     }
   }, 500)
-  bannerLists.value.sort(function(){
+  bannerLists.value.sort(function () {
     return Math.random() - 0.5
   })
 })
 const isShowLanguageBool = ref(false)
 const getScrollHeight = () => {
-  if(imgBgHeight.value && imgBgHeight.value.offsetHeight){
+  if (imgBgHeight.value && imgBgHeight.value.offsetHeight) {
     if (imgBgHeight.value.offsetHeight < window.scrollY) {
       isFiexdHeader.value = true
     } else {
@@ -231,10 +229,10 @@ const handleMbMenu = () => {
 let bannerlink = ref('')
 let bannerCurrent = ref(1)
 let bannerCurrentSrc = ref('')
-let bannerSwiperRef ={
-  slideToLoop: (a)=>{}
+let bannerSwiperRef = {
+  slideToLoop: (a) => {},
 }
-const changebanner = ( swiper )=>{
+const changebanner = (swiper) => {
   bannerCurrent.value = (swiper.realIndex ? Number(swiper.realIndex) : 0) + 1
   bannerlink.value = bannerLists.value[bannerCurrent.value - 1].link
   // bannerCurrent.value = (swiper.realIndex ? Number(swiper.realIndex) : 0) + 1
@@ -250,70 +248,76 @@ const changebanner = ( swiper )=>{
   //   bannerlink.value = '/health-care-voucher'
   // }
 }
-const setBannerSwiperRef = (swiper:any) => {
-  bannerSwiperRef = swiper;
+const setBannerSwiperRef = (swiper: any) => {
+  bannerSwiperRef = swiper
 }
-const handleBannerLineCur = (_value:number) =>{
-  bannerSwiperRef.slideToLoop(_value-1)
+const handleBannerLineCur = (_value: number) => {
+  bannerSwiperRef.slideToLoop(_value - 1)
 }
 
 const router = useRouter()
-const glangs = (_type) =>{
+const glangs = (_type) => {
   let _a = [
     {
       lable: 'hk',
-      value: 't'
+      value: 't',
     },
     {
       lable: 'cn',
-      value: 's'
-    }
+      value: 's',
+    },
   ]
-  let _b = _a.find(item=>item.value === _type)
-  let _str = route.path.slice(0,3)
-  let _arr = ['404','test','/news-tooth-wiki','/news-information','/article']
-  if(_arr.some(str => route.path?.indexOf(str) !== -1)) {
+  let _b = _a.find((item) => item.value === _type)
+  let _str = route.path.slice(0, 3)
+  let _arr = [
+    '404',
+    'test',
+    '/news-tooth-wiki',
+    '/news-information',
+    '/article',
+  ]
+  if (_arr.some((str) => route.path?.indexOf(str) !== -1)) {
     changlangsfun(_type)
-  }else{
-    if(_str === '/cn' || _str === '/hk'){
+  } else {
+    if (_str === '/cn' || _str === '/hk') {
       let _url = route.path
-      let _url_new = _url.replace(_url.slice(0,3),_b ? '/'+_b.lable : '')
+      let _url_new = _url.replace(_url.slice(0, 3), _b ? '/' + _b.lable : '')
       router.push(_url_new)
-    }else{
-      router.push(`${_b ? '/'+_b.lable : ''}${route.path}`)
+    } else {
+      router.push(`${_b ? '/' + _b.lable : ''}${route.path}`)
     }
   }
 }
-const changlangsfun = (_type) =>{
+const changlangsfun = (_type) => {
   zh_tran(_type)
-  if(getCookie('zh_choose')) {
-		var zh_choose:any = getCookie('zh_choose');
-    appState.setLangs(zh_choose);
-	}
+  if (getCookie('zh_choose')) {
+    var zh_choose: any = getCookie('zh_choose')
+    appState.setLangs(zh_choose)
+  }
 }
 
 let _bool = ref(false)
-const handlecopywechatcode = () =>{
-  if (navigator.clipboard) {  
-      navigator.clipboard.writeText('ckjhongkong').then(function() {
+const handlecopywechatcode = () => {
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText('ckjhongkong').then(
+      function () {
         _bool.value = true
-      }, function(err) {
-          ElMessage({
-            showClose: true,
-            message: '操作異常，請刷新頁面試試',
-            type: 'warning',
-          })
-      });  
-  } else {  
-      alert('Clipboard API is not supported by your browser.');  
-  }  
+      },
+      function (err) {
+        ElMessage({
+          showClose: true,
+          message: '操作異常，請刷新頁面試試',
+          type: 'warning',
+        })
+      }
+    )
+  } else {
+    alert('Clipboard API is not supported by your browser.')
+  }
 }
-const handleopenwechat = () =>{
-  window.location.href = "weixin://"
+const handleopenwechat = () => {
+  window.location.href = 'weixin://'
 }
-
-
-
 </script>
 
 <template>
@@ -338,19 +342,27 @@ const handleopenwechat = () =>{
           alt="banner"
         />
       </div>
-      <div
-        class="header-content-bgImg-implant"
-        :class="headerConfig.pageName"
-      >
-        <swiper :modules="[Autoplay]"
-            :loop="true"
-            :autoplay="{ delay: 3000 }"
-            :speed="1000"
-            @swiper="setBannerSwiperRef"
-            @slideChange="changebanner">
-          <SwiperSlide v-for="(item,index) in bannerLists" :key="index">
-            <nuxt-link :to="item.link === '' ? 'javaScript:void(0)' : item.link" :title="item.name" :alt="item.name">
-              <img :srcset="`${item.mb} 768w, ${item.pc}`"  :src="item.pc" :alt="item.name" :title="item.name">
+      <div class="header-content-bgImg-implant" :class="headerConfig.pageName">
+        <swiper
+          :modules="[Autoplay]"
+          :loop="true"
+          :autoplay="{ delay: 3000 }"
+          :speed="1000"
+          @swiper="setBannerSwiperRef"
+          @slideChange="changebanner"
+        >
+          <SwiperSlide v-for="(item, index) in bannerLists" :key="index">
+            <nuxt-link
+              :to="item.link === '' ? 'javaScript:void(0)' : item.link"
+              :title="item.name"
+              :alt="item.name"
+            >
+              <img
+                :srcset="`${item.mb} 768w, ${item.pc}`"
+                :src="item.pc"
+                :alt="item.name"
+                :title="item.name"
+              />
             </nuxt-link>
           </SwiperSlide>
         </swiper>
@@ -360,20 +372,21 @@ const handleopenwechat = () =>{
         class="header-content-bgImgBB pcBox"
         :class="headerConfig.pageName"
       >
-        <nuxt-link :to="bannerlink" >
-          <img :src="bannerLists[bannerCurrent - 1].pc" alt="">
+        <nuxt-link :to="bannerlink">
+          <img :src="bannerLists[bannerCurrent - 1].pc" alt="" />
         </nuxt-link>
       </div>
       <div class="header-content-btn-implant bannerLine">
         <div class="bannerLine-in">
-          <PageSwiperPointLine :latestNewsNum="bannerLists.length" :latestNewsCurrent="bannerCurrent" @changeLineCur="handleBannerLineCur"></PageSwiperPointLine>
+          <PageSwiperPointLine
+            :latestNewsNum="bannerLists.length"
+            :latestNewsCurrent="bannerCurrent"
+            @changeLineCur="handleBannerLineCur"
+          ></PageSwiperPointLine>
         </div>
       </div>
       <div class="waterBg-implant"></div>
-      <div
-        class="header-content-text-implant"
-        :class="headerConfig.pageName"
-      >
+      <div class="header-content-text-implant" :class="headerConfig.pageName">
         <div>全程式預約一體化診療服務，</div>
         <div>讓每一位顧客享受 <span>健康微笑之旅。</span></div>
       </div>
@@ -387,7 +400,10 @@ const handleopenwechat = () =>{
       >
         <div ref="headerMenu" class="pageCon header-content-in">
           <div class="logo">
-            <nuxt-link :to="'/'" title="深圳愛康健口腔醫院" alt="深圳愛康健口腔醫院"
+            <nuxt-link
+              :to="'/'"
+              title="深圳愛康健口腔醫院"
+              alt="深圳愛康健口腔醫院"
               ><img src="@/assets/images/logo_11.svg" alt=""
             /></nuxt-link>
           </div>
@@ -398,13 +414,33 @@ const handleopenwechat = () =>{
               class="menuItem"
             >
               <nuxt-link
-                :class="[menuItem.child.length ? 'triangleIcon' : '',{ 'health-care-voucher': menuItem.link === '/health-care-voucher'},{ 'federation-of-trade-unions-zone': menuItem.link === '/federation-of-trade-unions-zone'}]"
-                :to="['/news','/dental-service'].includes(menuItem.link) ? 'javaScript:void(0)': menuItem.link"
+                :class="[
+                  menuItem.child.length ? 'triangleIcon' : '',
+                  // {
+                  //   'health-care-voucher':
+                  //     menuItem.link === '/health-care-voucher',
+                  // },
+                  {
+                    'federation-of-trade-unions-zone':
+                      menuItem.link === '/federation-of-trade-unions-zone',
+                  },
+                ]"
+                :to="
+                  ['/news', '/dental-service'].includes(menuItem.link)
+                    ? 'javaScript:void(0)'
+                    : menuItem.link
+                "
                 :title="$t(menuItem.name)"
               >
                 <span>{{ $t(menuItem.name) }}</span>
               </nuxt-link>
-              <div v-if="menuItem.child.length" class="menuChild" :class="{'serviceCard': menuItem.link.includes('/dental-service')}">
+              <div
+                v-if="menuItem.child.length"
+                class="menuChild"
+                :class="{
+                  serviceCard: menuItem.link.includes('/dental-service'),
+                }"
+              >
                 <div
                   v-for="(menuChildItem, menuChildIndex) in menuItem.child"
                   :key="menuChildIndex"
@@ -414,20 +450,38 @@ const handleopenwechat = () =>{
                   ]"
                   @click.stop="handleMenuChild(menuItem, menuChildIndex)"
                 >
-                  <nuxt-link :to="menuChildItem.link" :class="{hot: menuChildItem.isHot}">
-                    {{ menuChildItem.link === '/dental-service/wisdom-teeth-extraction' ? '拔牙\n' : '' }}
+                  <nuxt-link
+                    :to="menuChildItem.link"
+                    :class="{ hot: menuChildItem.isHot }"
+                  >
+                    {{
+                      menuChildItem.link ===
+                      '/dental-service/wisdom-teeth-extraction'
+                        ? '拔牙\n'
+                        : ''
+                    }}
                     {{ $t(menuChildItem.name) }}
                   </nuxt-link>
                 </div>
               </div>
             </div>
             <div class="menuItem langItem">
-              <img src="@/assets/images/icon_26.svg" alt="">
+              <img src="@/assets/images/icon_26.svg" alt="" />
               <div class="menuChild">
-                <div :class="['menuChild-item',{'langItem-act': appState.langs === 't'}]">
+                <div
+                  :class="[
+                    'menuChild-item',
+                    { 'langItem-act': appState.langs === 't' },
+                  ]"
+                >
                   <span class="zh_click" @click="glangs('t')">繁體</span>
                 </div>
-                <div :class="['menuChild-item',{'langItem-act': appState.langs === 's'}]">
+                <div
+                  :class="[
+                    'menuChild-item',
+                    { 'langItem-act': appState.langs === 's' },
+                  ]"
+                >
                   <span class="zh_click" @click="glangs('s')">简体</span>
                 </div>
               </div>
@@ -435,17 +489,26 @@ const handleopenwechat = () =>{
           </div>
           <div class="icon">
             <div class="icon-lists">
-              <nuxt-link class="icon-lists-in" to="https://www.facebook.com/ckjdental.hk/">
-                <img src="@/assets/images/icon_33.svg" alt="facebook">
+              <nuxt-link
+                class="icon-lists-in"
+                to="https://www.facebook.com/ckjdental.hk/"
+              >
+                <img src="@/assets/images/icon_33.svg" alt="facebook" />
               </nuxt-link>
-              <nuxt-link class="icon-lists-in" to="https://www.instagram.com/ckj_hk/">
-                <img src="@/assets/images/icon_31.svg" alt="instagram">
+              <nuxt-link
+                class="icon-lists-in"
+                to="https://www.instagram.com/ckj_hk/"
+              >
+                <img src="@/assets/images/icon_31.svg" alt="instagram" />
               </nuxt-link>
               <div class="icon-lists-in" to="" @click="handlecopywechatcode">
-                <img src="@/assets/images/icon_34.svg" alt="weChat">
+                <img src="@/assets/images/icon_34.svg" alt="weChat" />
               </div>
-              <nuxt-link class="icon-lists-in" to="https://www.youtube.com/channel/UC4AQD5eeOiHIGd3QYFGK4aA">
-                <img src="@/assets/images/icon_32.svg" alt="youtobe">
+              <nuxt-link
+                class="icon-lists-in"
+                to="https://www.youtube.com/channel/UC4AQD5eeOiHIGd3QYFGK4aA"
+              >
+                <img src="@/assets/images/icon_32.svg" alt="youtobe" />
               </nuxt-link>
             </div>
             <div class="icon-menuopen" @click="menuBoxBool = !menuBoxBool">
@@ -461,9 +524,20 @@ const handleopenwechat = () =>{
           <div
             v-for="(item, index) in menuLists"
             :key="index"
-            :class="['menuLists-item', item.child.length ? 'childIcon' : '',{ 'health-care-voucher': item.link === '/health-care-voucher'},{ 'federation-of-trade-unions-zone': item.link === '/federation-of-trade-unions-zone'}]"
+            :class="[
+              'menuLists-item',
+              item.child.length ? 'childIcon' : '',
+              { 'health-care-voucher': item.link === '/health-care-voucher' },
+              {
+                'federation-of-trade-unions-zone':
+                  item.link === '/federation-of-trade-unions-zone',
+              },
+            ]"
           >
-            <nuxt-link :to="!item.child.length ? item.link : 'javaScript:void(0)'" :title="$t(item.name)">
+            <nuxt-link
+              :to="!item.child.length ? item.link : 'javaScript:void(0)'"
+              :title="$t(item.name)"
+            >
               <div @click="handleMenu(index)">
                 {{ $t(item.name) }}
               </div>
@@ -487,12 +561,22 @@ const handleopenwechat = () =>{
           </div>
         </div>
         <div class="langItem">
-          <img src="@/assets/images/icon_27.svg" alt="语言">
-          <span class="zh_click" :style="{color: (appState.langs === 't'?'#FC1682':'#FF85AF')}" @click="glangs('t')">繁體中文</span>
-          <span class="zh_click" :style="{
-            color: (appState.langs === 's'?'#FC1682':'#FF85AF'),
-            'font-family': '微软雅黑'
-          }" @click="glangs('s')">简体中文</span>
+          <img src="@/assets/images/icon_27.svg" alt="语言" />
+          <span
+            class="zh_click"
+            :style="{ color: appState.langs === 't' ? '#FC1682' : '#FF85AF' }"
+            @click="glangs('t')"
+            >繁體中文</span
+          >
+          <span
+            class="zh_click"
+            :style="{
+              color: appState.langs === 's' ? '#FC1682' : '#FF85AF',
+              'font-family': '微软雅黑',
+            }"
+            @click="glangs('s')"
+            >简体中文</span
+          >
         </div>
         <!-- 立即預約 -->
         <nuxt-link :to="`tel: +852 ${smallPhoneNum}`">
@@ -501,7 +585,9 @@ const handleopenwechat = () =>{
           </div>
         </nuxt-link>
         <div class="menuBox-phone">
-          <img src="@/assets/images/icon_11.svg" />（852）{{ headerData.menuBoxPhone }}
+          <img src="@/assets/images/icon_11.svg" />（852）{{
+            headerData.menuBoxPhone
+          }}
         </div>
         <div class="menuBox-icon">
           <!-- <div class="menuBox-icon-in">
@@ -530,11 +616,9 @@ const handleopenwechat = () =>{
       <!-- 水波纹盒子 -->
       <div class="waterBg" :class="headerConfig.pageName"></div>
     </div>
-    <div :class="['dialogBox',{show:_bool}]" @click="_bool=false">
-      <div :class="['dialogBox-in',{'show-in':_bool}]" @click.stop="">
-        <div class="title">
-          WeChat ID已複製
-        </div>
+    <div :class="['dialogBox', { show: _bool }]" @click="_bool = false">
+      <div :class="['dialogBox-in', { 'show-in': _bool }]" @click.stop="">
+        <div class="title">WeChat ID已複製</div>
         <div class="content">
           點擊「打開微信」進入微信，點右上⊕，粘貼ID，添加客服開始免費咨詢！
         </div>
@@ -551,41 +635,41 @@ const handleopenwechat = () =>{
 
 <style lang="scss" scoped>
 @keyframes contentIn {
-  to{
+  to {
     opacity: 1;
   }
 }
 @keyframes topIn {
-  50%{
+  50% {
     top: 52%;
   }
-  75%{
+  75% {
     top: 49%;
   }
-  100%{
+  100% {
     top: 50%;
     opacity: 1;
   }
 }
-.dialogBox{
+.dialogBox {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   z-index: 999;
-  background: rgba(0,0,0,.3);
+  background: rgba(0, 0, 0, 0.3);
   opacity: 0;
   display: none;
-  &.show{
+  &.show {
     display: block;
     animation: contentIn 1s forwards;
   }
-  &-in{
+  &-in {
     position: absolute;
     left: 50%;
     top: 0;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     width: calc(100% - 60px);
     height: auto;
     max-width: 768px;
@@ -597,19 +681,19 @@ const handleopenwechat = () =>{
     background: #fff;
     padding: 10px 30px 15px;
     border-radius: 10px;
-    &.show-in{
-      animation: topIn .7s ease-out forwards;
+    &.show-in {
+      animation: topIn 0.7s ease-out forwards;
     }
-    .title{
+    .title {
       font-size: 20px;
       font-weight: 600;
       text-align: center;
     }
-    .content{
+    .content {
       font-size: 16px;
       margin: 10px 0 20px;
     }
-    .btn{
+    .btn {
       display: flex;
       justify-content: center;
     }
@@ -627,11 +711,11 @@ const handleopenwechat = () =>{
   }
 }
 @keyframes animBottomIn {
-  from{
+  from {
   }
-  to{
+  to {
     opacity: 1;
-    transform: translate(-50%,0);
+    transform: translate(-50%, 0);
   }
 }
 .header-content {
@@ -646,7 +730,7 @@ const handleopenwechat = () =>{
     left: 50%;
     transform: translateX(-50%);
     z-index: -1;
-    &.course-new{
+    &.course-new {
       display: none;
     }
     .imgBgBox {
@@ -678,10 +762,10 @@ const handleopenwechat = () =>{
     left: 0;
     z-index: 40;
     width: 100%;
-    &.bannerLine{
+    &.bannerLine {
       bottom: 130px;
       z-index: 41;
-      .bannerLine-in{
+      .bannerLine-in {
         width: 250px;
       }
     }
@@ -706,7 +790,7 @@ const handleopenwechat = () =>{
         color: var(--indexColor1);
       }
     }
-    &.course-new{
+    &.course-new {
       display: none;
     }
   }
@@ -722,7 +806,7 @@ const handleopenwechat = () =>{
         width: 100%;
         height: auto;
       }
-      &>a{
+      & > a {
         width: 100%;
         height: auto;
         display: block;
@@ -764,16 +848,15 @@ const handleopenwechat = () =>{
           display: inline-block;
           text-align: center;
         }
-        &.langItem{
+        &.langItem {
           padding: 0 20px 25px;
-          .menuChild{
-            .menuChild-item{
-              
-              &>span{
+          .menuChild {
+            .menuChild-item {
+              & > span {
                 color: var(--textColor);
               }
-              &.langItem-act{
-                &>span{
+              &.langItem-act {
+                & > span {
                   color: var(--indexColor1);
                 }
               }
@@ -796,10 +879,10 @@ const handleopenwechat = () =>{
             border-color: var(--indexColor1) transparent transparent transparent;
           }
         }
-        span{
+        span {
           position: relative;
           display: inline-block;
-          &::before{
+          &::before {
             content: '';
             width: 0;
             position: absolute;
@@ -808,7 +891,7 @@ const handleopenwechat = () =>{
             transform: translateX(-50%);
             height: 2px;
             background: var(--textColor);
-            transition: all .3s;
+            transition: all 0.3s;
             border-radius: 2px;
           }
         }
@@ -817,24 +900,24 @@ const handleopenwechat = () =>{
           &.triangleIcon:after {
             border-color: var(--indexColor1) transparent transparent transparent;
           }
-          span{
-            &::before{
+          span {
+            &::before {
               width: 100%;
               bottom: 2px;
               background: var(--indexColor1);
             }
           }
-          &.health-care-voucher{
-            span{
-              &::before{
-                background: #00A752;
+          &.health-care-voucher {
+            span {
+              &::before {
+                background: #00a752;
               }
             }
           }
-          &.federation-of-trade-unions-zone{
-            span{
-              &::before{
-                background: #E60013;
+          &.federation-of-trade-unions-zone {
+            span {
+              &::before {
+                background: #e60013;
               }
             }
           }
@@ -844,42 +927,42 @@ const handleopenwechat = () =>{
           .triangleIcon:after {
             border-color: var(--indexColor1) transparent transparent transparent;
           }
-          span{
-            &::before{
+          span {
+            &::before {
               width: 100%;
               bottom: 2px;
               background: var(--indexColor1);
             }
           }
-          .health-care-voucher{
-            span{
-              &::before{
-                background: #00A752;
+          .health-care-voucher {
+            span {
+              &::before {
+                background: #00a752;
               }
             }
           }
-          .federation-of-trade-unions-zone{
-            span{
-              &::before{
-                background: #E60013;
+          .federation-of-trade-unions-zone {
+            span {
+              &::before {
+                background: #e60013;
               }
             }
           }
         }
         &:hover .menuChild {
           display: flex;
-          animation: animBottomIn .5s forwards;
+          animation: animBottomIn 0.5s forwards;
         }
-        .health-care-voucher{
-          color: #00A752;
-          .router-link-exact-active{
-            color: #00A752;
+        .health-care-voucher {
+          color: #00a752;
+          .router-link-exact-active {
+            color: #00a752;
           }
         }
-        .federation-of-trade-unions-zone{
-          color: #E60013;
-          .router-link-exact-active{
-            color: #E60013;
+        .federation-of-trade-unions-zone {
+          color: #e60013;
+          .router-link-exact-active {
+            color: #e60013;
           }
         }
         .menuChild {
@@ -915,7 +998,7 @@ const handleopenwechat = () =>{
             &.menuChildCurrent {
               color: var(--indexColor1);
             }
-            &>a {
+            & > a {
               padding: 10px 0 5px;
               display: block;
             }
@@ -953,22 +1036,22 @@ const handleopenwechat = () =>{
           flex-wrap: wrap;
           padding: 20px 10px;
           border-radius: 16px;
-          .menuChild-item{
+          .menuChild-item {
             width: calc(100% / 3);
             border: none;
             padding: 0;
             position: relative;
             white-space: pre-wrap;
             line-height: 1.2;
-            &>a{
+            & > a {
               height: 56px;
               display: flex;
               justify-content: center;
               align-items: center;
-              &.hot{
+              &.hot {
                 position: relative;
                 color: var(--indexColor1);
-                &::after{
+                &::after {
                   content: '·';
                   position: absolute;
                   left: 50%;
@@ -980,33 +1063,34 @@ const handleopenwechat = () =>{
               }
             }
             &:not(:nth-of-type(3n)) {
-              &::before{
+              &::before {
                 content: '';
                 width: 0;
                 height: 60%;
-                border-right: 1px solid #F7C3C3;
+                border-right: 1px solid #f7c3c3;
                 top: 20%;
                 right: 0;
                 position: absolute;
               }
             }
-            &:not(:nth-of-type(n+13)){
-              &::after{
+            &:not(:nth-of-type(n + 13)) {
+              &::after {
                 content: '';
                 width: 80%;
                 height: 0;
-                border-bottom: 1px solid #F7C3C3;
+                border-bottom: 1px solid #f7c3c3;
                 left: 10%;
                 bottom: 0;
                 position: absolute;
               }
             }
           }
-          &::after{
+          &::after {
             content: '';
             width: 100px;
             height: calc(90 / 130 * 100px);
-            background: url(https://static.cmereye.com/imgs/2024/04/4f39b444ca1b0a1d.png) no-repeat;
+            background: url(https://static.cmereye.com/imgs/2024/04/4f39b444ca1b0a1d.png)
+              no-repeat;
             background-size: 100% auto;
             display: block;
             position: absolute;
@@ -1014,7 +1098,7 @@ const handleopenwechat = () =>{
             right: 30px;
             overflow: hidden;
             background-position-y: calc(90 / 130 * 100px);
-            animation: menuIconAnim 1.5s .5s forwards;
+            animation: menuIconAnim 1.5s 0.5s forwards;
           }
         }
       }
@@ -1026,12 +1110,12 @@ const handleopenwechat = () =>{
   .waterBg {
     position: relative;
     z-index: 35;
-    &.course-new{
+    &.course-new {
       bottom: 60px;
     }
   }
   .pcMenuBox {
-    &.course-new{
+    &.course-new {
       margin-top: 60px;
     }
   }
@@ -1050,9 +1134,9 @@ const handleopenwechat = () =>{
     margin-top: 0 !important;
     .header-content-in {
       align-items: center;
-      .logo{
-        &>a{
-          img{
+      .logo {
+        & > a {
+          img {
             height: 30px;
           }
         }
@@ -1082,19 +1166,19 @@ const handleopenwechat = () =>{
   filter: drop-shadow(0px -8px 4px rgba(77, 77, 77, 0.15));
 }
 @keyframes menuIconAnim {
-  30%{
+  30% {
     background-position-y: 3px;
   }
-  55%{
+  55% {
     background-position-y: 15px;
   }
-  75%{
+  75% {
     background-position-y: 8px;
   }
-  90%{
+  90% {
     background-position-y: 11px;
   }
-  100%{
+  100% {
     background-position-y: 10px;
   }
 }
@@ -1157,22 +1241,22 @@ const handleopenwechat = () =>{
 @media (min-width: 768px) and (max-width: 1000px) {
   .header-content {
     &-text-implant {
-      div{
+      div {
         width: calc(80%);
         margin: 0 auto;
       }
     }
-    &-btn-implant{
+    &-btn-implant {
       bottom: auto;
-      span{
+      span {
         font-size: 2vw;
         padding: 5px 4vw;
       }
     }
-    &-in{
+    &-in {
       width: calc(80% + 60px);
     }
-    &-bgImgBB{
+    &-bgImgBB {
       width: 100%;
     }
   }
@@ -1183,25 +1267,25 @@ const handleopenwechat = () =>{
 }
 @media (min-width: 1001px) and (max-width: 1452px) {
   .header-content {
-    &-in{
+    &-in {
       width: calc(80% + 60px);
       padding: 10px 10px 0 30px;
-      .logo{
+      .logo {
         width: 200px;
         margin-bottom: 15px;
       }
     }
     &-text-implant {
       bottom: 80px;
-      div{
+      div {
         width: calc(80%);
         margin: 0 auto;
       }
     }
-    &-bgImgBB{
+    &-bgImgBB {
       width: 100%;
     }
-    &-btn-implant{
+    &-btn-implant {
       bottom: 18vw;
     }
   }
@@ -1223,9 +1307,9 @@ const handleopenwechat = () =>{
             padding: 0 1vw;
             box-sizing: border-box;
           }
-          &.langItem{
+          &.langItem {
             padding: 0 1vw 10px;
-            &>img{
+            & > img {
               width: 20px;
             }
           }
@@ -1254,7 +1338,7 @@ const handleopenwechat = () =>{
       }
     }
     &-text-implant {
-      div{
+      div {
         font-size: 100%;
       }
     }
@@ -1278,9 +1362,9 @@ const handleopenwechat = () =>{
             padding: 0 1vw;
             box-sizing: border-box;
           }
-          &.langItem{
+          &.langItem {
             padding: 0 1vw 1vw;
-            &>img{
+            & > img {
               width: 1vw;
             }
           }
@@ -1319,22 +1403,22 @@ const handleopenwechat = () =>{
       &.scaling-and-polishing-test {
         bottom: 4vw;
       }
-      &.course-new{
+      &.course-new {
         bottom: 30px;
       }
     }
     &-btn-implant {
       bottom: calc(100px + 6vw);
-      span{
+      span {
         font-size: 1.9vw;
-        padding: .3vw 3.5vw;
+        padding: 0.3vw 3.5vw;
       }
     }
     &-text-implant {
       width: calc(80% + 60px);
       padding: 0 30px;
       bottom: 5vw;
-      div{
+      div {
         font-size: 100%;
       }
     }
@@ -1346,7 +1430,7 @@ const handleopenwechat = () =>{
     // margin-top: 0;
     &-bgImg {
       position: relative;
-      &.course-new{
+      &.course-new {
         margin-top: 70px;
       }
     }
@@ -1354,18 +1438,18 @@ const handleopenwechat = () =>{
       position: relative;
       top: 60px;
       z-index: 1;
-      &.course-new{
+      &.course-new {
         padding-bottom: 5px;
         margin-top: 10px;
         margin-bottom: 10px;
       }
     }
     &-btn-implant {
-      &.bannerLine{
+      &.bannerLine {
         position: relative;
         bottom: -80px;
         z-index: 2;
-        .bannerLine-in{
+        .bannerLine-in {
           width: 150px;
         }
       }
@@ -1380,7 +1464,7 @@ const handleopenwechat = () =>{
       & > div {
         font-size: 20px;
       }
-      &.course-new{
+      &.course-new {
         display: block;
         margin-top: 150px;
       }
@@ -1447,18 +1531,18 @@ const handleopenwechat = () =>{
       .icon {
         display: flex;
         align-items: center;
-        &-menuopen{
+        &-menuopen {
           display: block;
           width: 20px;
           margin-right: 25px;
         }
-        &-lists{
+        &-lists {
           display: flex;
           align-items: center;
-          &-in{
+          &-in {
             display: block;
             margin-right: 15px;
-            img{
+            img {
               width: 20px;
             }
           }
@@ -1477,7 +1561,7 @@ const handleopenwechat = () =>{
       top: 0;
       left: 0;
       width: 100%;
-      &.course-new{
+      &.course-new {
         bottom: auto;
       }
     }
@@ -1552,11 +1636,11 @@ const handleopenwechat = () =>{
           border-color: var(--indexColor1) transparent transparent transparent;
           vertical-align: middle;
         }
-        &.health-care-voucher{
-          color: #00A752;
+        &.health-care-voucher {
+          color: #00a752;
         }
-        &.federation-of-trade-unions-zone{
-          color: #E60013;
+        &.federation-of-trade-unions-zone {
+          color: #e60013;
         }
       }
       &-childLists {
@@ -1583,7 +1667,7 @@ const handleopenwechat = () =>{
         }
       }
     }
-    .langItem{
+    .langItem {
       width: calc(100% - 60px);
       padding: 20px 0;
       margin: 0 30px;
@@ -1591,7 +1675,7 @@ const handleopenwechat = () =>{
       border-top: 2px solid var(--indexColor2);
       justify-content: center;
       align-items: center;
-      &>span{
+      & > span {
         margin-left: 10px;
       }
     }

@@ -243,21 +243,21 @@ const pageDetail:any = {
       ],
       className: 'nob'
     },
-    {
-      type: 'p',
-      list: [
-        {
-          type: 'defule',
-          text: 'Ai Kang Jian Hong Kong Official Website:'
-        },
-        {
-          type: 'indexColor a',
-          text: 'https://ckjhk.com/health-care-voucher',
-          link: 'https://ckjhk.com/health-care-voucher'
-        }
-      ],
-      className: 'nob'
-    },
+    // {
+    //   type: 'p',
+    //   list: [
+    //     {
+    //       type: 'defule',
+    //       text: 'Ai Kang Jian Hong Kong Official Website:'
+    //     },
+    //     {
+    //       type: 'indexColor a',
+    //       text: 'https://ckjhk.com/health-care-voucher',
+    //       link: 'https://ckjhk.com/health-care-voucher'
+    //     }
+    //   ],
+    //   className: 'nob'
+    // },
     {
       type: 'p',
       list: [

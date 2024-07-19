@@ -533,12 +533,22 @@ ul {
     color: #fc1682;
   }
 }
+@media screen and (max-width: 768px) {
+  .el-select-dropdown {
+    max-width: 155.5px;
+    min-width: 155.5px !important;
+    .el-select-dropdown__item {
+      padding-left: 11px;
+    }
+  }
+  
+}
 </style>
 <style lang="scss" scoped>
 :deep(.el-form) {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 10px 15px;
+  gap: 0px 15px;
   & > div:nth-child(2) {
     & > div:nth-child(2) {
       & > div:nth-child(1) {
@@ -959,7 +969,7 @@ li {
       }
     }
     &-in {
-      margin: 41px auto 0;
+      margin: 21px auto 0;
       :deep(.el-form-item__error) {
         font-size: 12px;
       }
@@ -984,11 +994,14 @@ li {
         font-size: 15px;
       }
       :deep(.el-form-item) {
-        margin-bottom: 20px;
+        margin-bottom: 10px;
       }
       :deep(.el-form-item__label) {
         font-size: 16px;
         letter-spacing: 3px;
+      }
+      :deep(.el-form--default.el-form--label-top .el-form-item .el-form-item__label) {
+        margin-bottom: 3px;
       }
       :deep(.el-radio__label) {
         font-size: 16px;
@@ -997,7 +1010,7 @@ li {
         // width: 137px;
         // height: 40px;
         // font-size: 16px;
-        margin: 30px auto 0;
+        margin: 12px auto 0;
       }
       .privacyPolicy {
         margin-top: 0px;
@@ -1008,7 +1021,7 @@ li {
           font-size: 12px;
           line-height: 1.2;
           letter-spacing: 2.4px;
-          margin-top: 20px;
+          margin-top: 10px;
           i {
             font-size: 16px;
           }
