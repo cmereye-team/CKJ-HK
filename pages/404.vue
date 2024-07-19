@@ -11,22 +11,6 @@ definePageMeta({
 useHead(() => ({
   title: capitalize(t('pages.404.title')),
 }))
-const router = useRouter()
-let _s = ref(5)
-const change_s = () => {
-  clearInterval(_timer)
-  var _timer: any = setInterval(() => {
-    if (_s.value > 0) {
-      _s.value--
-    } else {
-      clearInterval(_timer)
-      router.push({ path: '/' })
-    }
-  }, 1000)
-}
-onMounted(() => {
-  change_s()
-})
 </script>
 
 <template>
@@ -38,13 +22,17 @@ onMounted(() => {
         alt=""
       />
     </div>
-    <nuxt-link to="/" class="black">{{ _s }}返回首页</nuxt-link>
+    <nuxt-link to="/" class="black">返回首頁</nuxt-link>
     <div class="menus">
       <serviceCard :isIndexShow="true" />
     </div>
   </PageWrapper>
 </template>
-
+<style>
+.menuBar {
+  z-index: 99;
+}
+</style>
 <style scoped lang="scss">
 :deep(.cursor-pointer) {
   display: none;
@@ -52,19 +40,21 @@ onMounted(() => {
 :deep(.text-center) {
   display: none;
 }
+
 .img_err {
   margin: 0 auto;
-  z-index: -1;
+  z-index: 1;
 }
 .black {
   font-size: 40px;
   font-family: var(--contextFamily);
-  z-index: -1;
 }
-
+.black:hover {
+  color: var(--indexColor1);
+}
 .menus {
   width: 100%;
-  z-index: -1;
+  z-index: 1;
 }
 .s {
   margin-top: 30px;
@@ -74,9 +64,7 @@ onMounted(() => {
     color: var(--indexColor1);
   }
 }
-.black:hover {
-  color: var(--indexColor1);
-}
+
 @media screen and (max-width: 768px) {
   .black {
     font-size: 20px;
