@@ -20,7 +20,6 @@ const handleAreaTab = (_idx: number) => {
   // router.push(`/medical-team/${appState.areaTabs_url[_idx]}`)
 }
 
-
 </script>
 
 <template>

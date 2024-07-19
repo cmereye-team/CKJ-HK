@@ -265,9 +265,9 @@ const handleProcessBtn = (_type: string) => {
               />
             </div>
             <div>
-              <span>香港01</span>
-              <span>傑出大灣區牙科醫療</span>
-              <span>服務機構</span>
+              <span>香港經濟日報</span>
+              <span>傑出跨境牙科</span>
+              <span>醫療服務</span>
             </div>
           </a>
         </div>
