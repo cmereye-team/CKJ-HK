@@ -32,7 +32,7 @@ const servicesCardPageData = {
       </div>
       <div class="context" v-if="!isMenu">
         <div class="context-in" v-if="!isIndexShow">{{$t(servicesCardPageData.contextIn)}}</div>
-        <div class="context-in isIndex" v-else>愛康健集團是大灣區專業牙科連鎖機構，其愛康健口腔醫院為香港政府納入長者醫療券大灣區試點。14間門診有超過20種牙科治療項目，專注為港服務超過29年。</div>
+        <div class="context-in isIndex" v-else>愛康健集團是大灣區專業牙科連鎖機構。14間門診有超過20種牙科治療項目，專注為港服務超過29年。</div>
       </div>
       <div :class="{'servicesCard':true,'isMenu': isMenu}">
         <div class="servicesCard-in" :class="{hot:item.isHot}" v-for="(item,index) in servicesCardLists" :key="index">
