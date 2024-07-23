@@ -333,7 +333,7 @@ const changeSwiper = (swiper) =>{
                 <div class="title">香港華人牙醫公會參觀交流</div>
                 <div class="time">2024年5月30日</div>
               </div>
-              <div class="context">我們接待了香港華人牙醫公會的訪問團隊，此次訪問旨在進一步加强與香港在口腔醫療領域的學習與交流。</div>
+              <div class="context">我們接待了香港華人牙醫公會的訪問團隊，此次訪問旨在進一步加強與香港在口腔醫療領域的學習與交流。</div>
             </div>
             <div class="b">
               <div class="btn">
