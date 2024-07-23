@@ -529,10 +529,10 @@ const problemData = {
       Q: '植牙需要多少時間才能完成？',
       A: '植牙是一個多步驟的過程，通常需要2至3次就診才能完成。從植入牙根到完成冠修復，整個過程約需3至6個月。我們會為您詳細解釋每個步驟，檢查後再設計方案。',
     },
-    {
-      Q: '牙周治療大約需要多長時間？',
-      A: '這要視乎牙周的程度。一般來說，牙周基本治療大約需要2至3次就診，每次就診時間約1至2小時。具體時間需由牙醫根據您的情況評估。',
-    },
+    // {
+    //   Q: '牙周治療大約需要多長時間？',
+    //   A: '這要視乎牙周的程度。一般來說，牙周基本治療大約需要2至3次就診，每次就診時間約1至2小時。具體時間需由牙醫根據您的情況評估。',
+    // },
     {
       Q: '我可以同時進行牙齒美白和洗牙嗎？',
       A: '我們建議您先來諮詢牙醫，根據您的具體情況制定最佳的治療方案。',
@@ -545,18 +545,18 @@ const problemData = {
       Q: '為什麼你們的價錢比其他診所貴？',
       A: '我們建議您考慮牙科服務的整體價值。雖然價格是一個重要的考慮因素，但請記住，牙科治療的品質和效果對您的口腔健康和生活品質有著長遠的影響。',
     },
-    {
-      Q: '預約需要提前多少天？',
-      A: '平日最好提前3天預約，週末建議提前1至2星期預約。',
-    },
+    // {
+    //   Q: '預約需要提前多少天？',
+    //   A: '平日最好提前3天預約，週末建議提前1至2星期預約。',
+    // },
     {
       Q: '不預約可以直接到診所嗎？',
       A: '我們診所需要提前預約，這樣能提高就診效率，避免客人等待時間過長。',
     },
-    {
-      Q: '請問診所有提供Wi-Fi嗎？',
-      A: '有的，我們提供Wi-Fi服務。',
-    },
+    // {
+    //   Q: '請問診所有提供Wi-Fi嗎？',
+    //   A: '有的，我們提供Wi-Fi服務。',
+    // },
   ],
 }
 
@@ -571,10 +571,8 @@ onMounted(() => {
   window.addEventListener('resize', getWindowWidth)
 })
 
-
-
 // 临时隐藏  contentDom
-const  contentDom = ref(false)
+const contentDom = ref(false)
 </script>
 
 <template>
@@ -734,20 +732,33 @@ const  contentDom = ref(false)
                   <div class="detail-2" v-if="doctorItem.newOrg">
                     <span>{{ doctorItem.newOrg }}</span>
                   </div>
-                  <div class="detail-3">
+                  <div
+                    class="detail-3"
+                    v-if="!contentDom && windowWidth < 767 == false"
+                  >
                     <span
                       v-for="(jobItem, jobIndex) in doctorItem.newJobs"
                       :key="jobIndex"
                       >{{ jobItem }}</span
                     >
                   </div>
-                  <div class="detail-4">
+                  <div
+                    class="detail-4"
+                    v-if="!contentDom && windowWidth < 767 == false"
+                  >
                     <span>擅長項目：</span>
                     <span>
                       {{ doctorItem.newSkilled }}
                     </span>
                   </div>
-                  <div class="detail-5">
+                  <!-- doctorItem.tags 为空判断    windowWidth < 767 == false  判断移动端增加margin -->
+                  <div
+                    class="detail-5"
+                    v-if="doctorItem.tags.length > 0"
+                    :style="{
+                      marginTop: windowWidth < 767 == false ? '' : '30px',
+                    }"
+                  >
                     <span
                       v-for="(tagItem, tagIndex) in doctorItem.tags"
                       :key="tagIndex"
@@ -2505,7 +2516,7 @@ svg:hover path {
   .index-caseSharing {
     padding: 0;
     background: none;
-    margin-top: 90px;
+    margin-top: 40px;
     &-in {
       width: 100%;
       margin: 35px auto 0;

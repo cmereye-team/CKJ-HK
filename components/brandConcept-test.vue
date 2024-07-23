@@ -80,9 +80,9 @@ onMounted(() => {
             :src="'https://static.cmereye.com/imgs/2024/01/83f687493170cb87.jpg'"
           />
           <div class="index-brandConcept-in-box smallPageCon">
-            <div class="brandConcept-title act">
+            <!-- <div class="brandConcept-title act">
               <span>接待香港工聯會代表團</span>
-            </div>
+            </div> -->
             <div class="content brandConceptContent act">
               香港工聯會代表團參觀了我們的羅湖口岸愛康健口腔醫院、富康口腔門診部和康輝口腔門診部，詳細了解我們的醫療設施、技術和服務。他們與我們的醫療團隊進行了深入的交流和討論，探討口腔醫療的發展趨勢和技術創新。
             </div>
@@ -93,10 +93,60 @@ onMounted(() => {
           </div>
         </div>
       </swiper-slide>
+      <swiper-slide class="swiper-slide" v-if="windowWidth < 768">
+        <div class="index-brandConcept-in bigPageCon">
+          <img
+            loading="lazy"
+            class="bgImg"
+            alt="愛心洗牙啟動禮公益活動"
+            title="愛心洗牙啟動禮公益活動"
+            :data-cfsrc="'https://static.cmereye.com/imgs/2024/01/83f687493170cb87.jpg'"
+            :srcset="`https://static.cmereye.com/imgs/2024/07/4c0894c9c245e16b.jpg 768w, https://static.cmereye.com/imgs/2024/01/83f687493170cb87.jpg`"
+            :src="'https://static.cmereye.com/imgs/2024/01/83f687493170cb87.jpg'"
+          />
+          <div class="index-brandConcept-in-box smallPageCon">
+            <!-- <div class="brandConcept-title act">
+              <span>接待香港工聯會代表團</span>
+            </div> -->
+            <div class="content brandConceptContent act">
+              愛康健齒科集團在立法會議員梁文廣的倡議下，聯同香港中旅集團、油深起動、深水埗居民聯會及油尖旺社團聯會，成功舉辦了「健康社區由『齒』起」愛心洗牙啟動禮」。本次公益活動為逾千名長者及其他有需求的市民提供無償援助，提供免費牙科檢查、洗牙及交通接送服務，目的是為了減輕香港基層市民的牙科醫療負擔。
+            </div>
+            <div class="btn">
+              <!-- <a href="/brand/action-message">查看全文</a> -->
+              <PageAnimBtnTypeTwo link="/brand/love-teeth-wash-launching-ceremony-public-welfare-activity" str="查看全文" />
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
+      <swiper-slide class="swiper-slide" v-if="windowWidth < 768">
+        <div class="index-brandConcept-in bigPageCon">
+          <img
+            loading="lazy"
+            class="bgImg"
+            alt="香港華人牙醫公會參觀交流"
+            title="香港華人牙醫公會參觀交流"
+            :data-cfsrc="'https://static.cmereye.com/imgs/2024/01/83f687493170cb87.jpg'"
+            :srcset="`https://static.cmereye.com/imgs/2024/07/bcc4b87c64e25523.jpg 768w, https://static.cmereye.com/imgs/2024/01/83f687493170cb87.jpg`"
+            :src="'https://static.cmereye.com/imgs/2024/01/83f687493170cb87.jpg'"
+          />
+          <div class="index-brandConcept-in-box smallPageCon">
+            <!-- <div class="brandConcept-title act">
+              <span>接待香港工聯會代表團</span>
+            </div> -->
+            <div class="content brandConceptContent act">
+              我們接待了香港華人牙醫公會的訪問團隊，此次訪問旨在進一步加强與香港在口腔醫療領域的學習與交流。作為大灣區的領先口腔醫療機構，愛康健口腔集團致力於提升醫療服務質量，此次交流將有助於推動地區醫療服務的共同發展。
+            </div>
+            <div class="btn">
+              <!-- <a href="/brand/action-message">查看全文</a> -->
+              <PageAnimBtnTypeTwo link="/brand/visit-and-exchange-with-the-Hong-Kong-chinese-dental-association" str="查看全文" />
+            </div>
+          </div>
+        </div>
+      </swiper-slide>
     </swiper>
     <div class="index-latestNews-line brandConcept-line">
       <PageSwiperPointLine
-        :latestNewsNum="2"
+        :latestNewsNum="windowWidth < 767 ? 4 : 2"
         :latestNewsCurrent="currtNew"
         @changeLineCur="handleLineCur"
       ></PageSwiperPointLine>
@@ -245,7 +295,7 @@ onMounted(() => {
     }
   }
   .brandConcept-line {
-    width: 83px;
+    width: 210px;
     margin: 10px auto 0;
   }
 }
