@@ -358,9 +358,9 @@ const servicesCardPageData = {
             .servicesCard-in-image {
               &::before {
                 padding: 30px 0 0;
-                left: -20px;
+                left: -18px;
                 top: -25px;
-                width: 90px;
+                width: 75px;
                 text-align: center;
               }
             }
