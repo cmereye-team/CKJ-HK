@@ -570,6 +570,11 @@ onMounted(() => {
   getWindowWidth()
   window.addEventListener('resize', getWindowWidth)
 })
+
+
+
+// 临时隐藏  contentDom
+const  contentDom = ref(false)
 </script>
 
 <template>
@@ -1014,7 +1019,7 @@ onMounted(() => {
           </div>
         </div>
       </div>
-      <div class="treatment-data">
+      <div class="treatment-data" v-if="contentDom">
         <div class="treatment-data-title">
           <span>早期深圳二級口腔醫院</span>
           <span>香港品牌 實力信心</span>

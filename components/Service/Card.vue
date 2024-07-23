@@ -83,7 +83,7 @@ const servicesCardPageData = {
         width: 100%;
         max-width: 700px;
         font-style: normal;
-        font-weight: 600;
+        font-weight: 500;
         font-size: 20px;
         line-height: 160%;
         color: #666666;
@@ -273,7 +273,7 @@ const servicesCardPageData = {
     justify-content: flex-start;
   }
   .services_title {
-    width: calc(100% - 30px);
+    width: calc(100% - 20px);
     font-size: 18px;
     background-size: auto 85%;
     text-indent: 35px;
@@ -293,8 +293,8 @@ const servicesCardPageData = {
         align-items: center;
       }
       .context{
-        margin-top: 30px;
-        padding: 0 30px;
+        margin-top: 20px;
+        padding: 0 20px;
         box-sizing: border-box;
         &-in{
           font-weight: 500;
@@ -303,12 +303,19 @@ const servicesCardPageData = {
         }
       }
       .servicesCard{
-        padding: 0 15px;
-        margin: 30px auto 0;
+        padding: 0;
+        margin: 20px auto 0;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 4.6153vw 2.564vw;
         box-sizing: border-box;
+        padding: 0 5.128vw;
         &-in{
-          width: calc(100% / 3);
-          padding: 0 5px;
+          width: 100%;
+          padding: 0;
+          &>a {
+            padding: 0;
+          }
           &-image{
             img{
               max-width: 70%;
@@ -328,7 +335,7 @@ const servicesCardPageData = {
           }
           &-name{
             font-size: 16px;
-            padding: 10px 0 30px;
+            padding: 7px 0 0;
           }
         }
       }
