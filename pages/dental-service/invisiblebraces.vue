@@ -264,6 +264,21 @@ const differData = {
         {{ $t('pages.dental-service.title') }}
       </div>
       <ServiceIntroduce :introduceData="orthodonticsIntroduceData" />
+      <div class="dental_implant_technology-video">
+          <div class="youtobe-video">
+            <div class="youtobe-video-in">
+              <iframe
+                width="560"
+                src="https://www.youtube.com/embed/j2zJsOOq_TM"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+		
       <div class="bp">
         <div class="dentistryServices-title">
           <div class="dentistryServices-title-in bb">
@@ -433,6 +448,26 @@ const differData = {
 </template>
 
 <style scoped lang="scss">
+  .youtobe-video {
+    margin: 80px auto 0;
+    max-width: 960px;
+    width: 80%
+}
+
+ .youtobe-video-in {
+    height: 0;
+    padding-bottom: 56.4285714286%;
+    position: relative;
+    width: 100%
+}
+
+ .youtobe-video-in>iframe{
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
 @keyframes btnAnim {
   0% {
     clip-path: polygon(-10% 0, 0 0, -10% 100%, -20% 100%);
