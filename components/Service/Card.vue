@@ -339,6 +339,7 @@ const servicesCardPageData = {
         &-in {
           width: 100%;
           padding: 0;
+          position: relative;
           & > a {
             padding: 0;
             display: flex;
@@ -366,8 +367,19 @@ const servicesCardPageData = {
             }
           }
           &-name {
-            font-size: 12px;
+            font-size: 15px;
             padding: 7px 0 0;
+          position: absolute;
+        bottom: -7vw;
+        left: 0;
+        right: 0;
+        margin: auto;
+        white-space: nowrap;
+        word-wrap: break-word;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
           }
         }
       }
