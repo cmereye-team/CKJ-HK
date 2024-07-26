@@ -1510,6 +1510,12 @@ const { height } = useWindowSize()
 }
 
 @media screen and (max-width: 768px) {
+  .reason-lists{
+      flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+  }
   .tabNav {
         padding: 30px;
         font-size: 1rem;
@@ -1526,10 +1532,10 @@ const { height } = useWindowSize()
       }
     }
     &-lists {
-      flex-direction: column;
+      
       margin: 72px auto 0;
       &-item {
-        padding: 0 52px;
+        padding:0;width:40%;
         .image {
           div {
             top: -18px;
