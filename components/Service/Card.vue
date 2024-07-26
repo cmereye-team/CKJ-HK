@@ -333,7 +333,7 @@ const servicesCardPageData = {
         margin: 20px auto 0;
         display: grid;
         grid-template-columns: repeat(4, 1fr);
-        grid-gap: 8.205vw 4.6153vw;
+        grid-gap: 13.205vw 4.6153vw;
         box-sizing: border-box;
         padding: 0 5.128vw;
         &-in {
