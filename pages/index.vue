@@ -565,6 +565,35 @@ let windowWidth = ref(390)
 const getWindowWidth = () => {
   windowWidth.value = window.innerWidth
 }
+let currtNew = ref(1)
+const handleLineCur = (_value: number) => {
+  newsSwiperRef.slideToLoop(_value - 1)
+}
+
+let newsSwiperRef = {
+  slideToLoop: (a) => {},
+}
+const setNewsSwiperRef = (swiper: any) => {
+  newsSwiperRef = swiper
+}
+const onSlideChange = (swiper: any) => {
+  currtNew.value = (swiper.realIndex ? Number(swiper.realIndex) : 0) + 1
+}
+
+let messageCurrtNew = ref(1)
+const handleMessageLineCur = (_value: number) => {
+  newsMessageSwiperRef.slideToLoop(_value - 1)
+}
+
+let newsMessageSwiperRef = {
+  slideToLoop: (a) => {},
+}
+const setMessageNewsSwiperRef = (swiper: any) => {
+  newsMessageSwiperRef = swiper
+}
+const onMessageNewSlideChange = (swiper: any) => {
+  messageCurrtNew.value = (swiper.realIndex ? Number(swiper.realIndex) : 0) + 1
+}
 
 onMounted(() => {
   getWindowWidth()
@@ -839,7 +868,7 @@ const contentDom = ref(false)
                 到診攻略
               </div>
             </div>
-            <div class="Latest_Movies_in_r_b">
+            <div class="Latest_Movies_in_r_b" v-if="windowWidth > 767">
               <nuxtLink
                 class="list-in"
                 v-for="(item, index) in Latest_Movies[Latest_Movies_cur]"
@@ -857,6 +886,45 @@ const contentDom = ref(false)
                 ></iframe>
                 <span>{{ item.name }}</span>
               </nuxtLink>
+            </div>
+            <div class="Latest_Movies_in_r_b" v-else>
+              <Swiper
+                class="index-org-content-swiper mobile-style"
+                :loop="true"
+                :modules="[Autoplay]"
+                :autoplay="{
+                  delay: 3000,
+                }"
+                @swiper="setNewsSwiperRef"
+                @slideChange="onSlideChange"
+              >
+                <Swiper-slide
+                  class="index-org-content-swiper-slie"
+                  v-for="(item, index) in Latest_Movies[Latest_Movies_cur]"
+                  :key="index"
+                >
+                  <nuxtLink class="list-in">
+                    <iframe
+                      width="560"
+                      height="315"
+                      :src="item.url"
+                      title="YouTube video player"
+                      frameborder="0"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      referrerpolicy="strict-origin-when-cross-origin"
+                      allowfullscreen
+                    ></iframe>
+                    <span>{{ item.name }}</span>
+                  </nuxtLink>
+                </Swiper-slide>
+              </Swiper>
+            </div>
+            <div class="index-latestNews-line brandConcept-line">
+              <PageSwiperPointLine
+                :latestNewsNum="Latest_Movies[Latest_Movies_cur].length"
+                :latestNewsCurrent="currtNew"
+                @changeLineCur="handleLineCur"
+              ></PageSwiperPointLine>
             </div>
           </div>
         </div>
@@ -888,7 +956,7 @@ const contentDom = ref(false)
             牙齒百科
           </div>
         </div>
-        <div class="index-videoBox-in">
+        <div class="index-videoBox-in" v-if="windowWidth > 767">
           <nuxtLink
             :to="item.link"
             class="list-in"
@@ -953,8 +1021,98 @@ const contentDom = ref(false)
             </div>
           </nuxtLink>
         </div>
+        <div class="index-videoBox-in" v-else>
+          <Swiper
+            class="index-org-content-swiper mobile-style"
+            :loop="true"
+            :modules="[Autoplay]"
+            :autoplay="{
+              delay: 3000,
+            }"
+            @swiper="setMessageNewsSwiperRef"
+            @slideChange="onMessageNewSlideChange"
+          >
+            <Swiper-slide
+              class="index-org-content-swiper-slie"
+              v-for="(item, index) in indexNewsLists[indexNewsCur]"
+              :key="index"
+            >
+              <nuxtLink
+                :to="item.link"
+                class="list-in"
+                :class="`list-in-${indexNewsCur}`"
+              >
+                <div class="image">
+                  <img :title="item.name" :src="item.img" alt="" />
+                </div>
+                <div class="logo" v-if="indexNewsCur === 0">
+                  <div class="logo-image">
+                    <img :src="item.logo" :title="item.logoText" alt="" />
+                  </div>
+                  <div class="logo-text">
+                    <span>{{ item.time }}</span>
+                    <span>{{ item.logoText }}</span>
+                  </div>
+                </div>
+                <h2 :title="item.name">{{ item.name }}</h2>
+                <div class="time" v-if="indexNewsCur === 2">
+                  <div class="time-l">{{ item.time }}</div>
+                  <div
+                    class="shareIcon"
+                    @click.stop="handleClick($event, item.id)"
+                    alt=""
+                  >
+                    <div
+                      :class="[
+                        'shareIcon-img',
+                        { act: actShowShare === item.id },
+                      ]"
+                      alt="分享"
+                      title="分享"
+                    >
+                      <img src="@/assets/images/icon_47.svg" alt="" />
+                    </div>
+                    <div class="shareIcon-in" v-if="actShowShare === item.id">
+                      <div
+                        class="shareIcon-in-item"
+                        @click="shareFacebook($event, item.id)"
+                        alt="Facebook 分享"
+                        title="Facebook 分享"
+                      >
+                        <img src="@/assets/images/icon_49.svg" alt="" /><span
+                          >Facebook 分享</span
+                        >
+                      </div>
+                      <div
+                        class="shareIcon-in-item"
+                        @click="copySpecifiedText($event, item.id)"
+                        alt="複製連結"
+                        title="複製連結"
+                      >
+                        <img src="@/assets/images/icon_48.svg" alt="" /><span
+                          >複製連結</span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <p :title="item.desc">{{ item.desc }}</p>
+                <div class="btn">
+                  <PageAnimBtnTypeTwo str="查看全文" :link="item.link" />
+                </div>
+              </nuxtLink>
+            </Swiper-slide>
+          </Swiper>
+        </div>
         <div class="index-videoBox-btn smallPageCon" @click="handlevideBoxBtn">
           <span>更多資訊 </span>
+        </div>
+        <div class="index-latestNews-line brandConcept-line" v-if="windowWidth < 768">
+          <PageSwiperPointLine
+            :latestNewsNum="indexNewsLists[indexNewsCur].length"
+            :latestNewsCurrent="messageCurrtNew"
+            @changeLineCur="handleMessageLineCur"
+          ></PageSwiperPointLine>
         </div>
       </div>
       <!-- 關於我們 -->
@@ -1013,10 +1171,61 @@ const contentDom = ref(false)
           </div>
         </div>
         <div class="index-caseSharing-in">
-          <div class="in-top">
+          <div class="in-top" v-if="windowWidth > 767">
             <CaseSharingVideoItem :caseSharingData="caseSharingTopData" />
           </div>
-          <div class="in-cen">
+          <div class="share-item" v-else>
+            <div>
+              <div>
+                <div>
+                  <img
+                    src="https://static.cmereye.com/imgs/2024/07/3a0cf1b5a28d2d34.png"
+                    alt="星級客戶"
+                  />
+                </div>
+                <div>
+                  <div class="item-date">17/4/24</div>
+                  <div>
+                    <span>朱咪咪 Mimi</span>
+                    <span>星級客戶</span>
+                    <span>種植牙療程</span>
+                  </div>
+                </div>
+              </div>
+              <div class="item-content">
+                <span
+                  >做得呢行講嘢一定要清楚，點可以畀牙齒問題影響到！植完牙同真牙一樣，咬得到自然胃口好。</span
+                >
+                <span></span>
+                <span>代言已經廿三年，睇我棚牙就知掂！</span>
+              </div>
+            </div>
+            <div>
+              <div>
+                <div>
+                  <span class="item-title">Tommy Chan</span>
+                  <span class="item-tag">根管治療(杜牙根)療程客戶</span>
+                </div>
+                <div class="item-date">13/6/24</div>
+              </div>
+              <div class="item-content">
+                蛀牙痛到死，差啲以為要剝牙😱好在牙醫建議杜牙根就得，手術快脆又留到隻牙！😁
+              </div>
+            </div>
+            <div>
+              <div>
+                <div>
+                  <span class="item-title">余小姐</span>
+                  <span class="item-tag">矯齒(箍牙)療程客戶</span>
+                </div>
+                <div class="item-date">22/4/24</div>
+              </div>
+              <div class="item-content">
+                中學開始就包包面，兩年前的起心肝去左箍牙。杜醫生手勢好又跟得足，而家啲牙齊得尼又瘦到面，好滿意呀。
+              </div>
+            </div>
+          </div>
+          <div class="in-cen" style="display: none">
             <div
               class="in-cen-box"
               v-for="(caseSharingItem, caseSharingIndex) in caseSharingLists"
@@ -1471,7 +1680,7 @@ svg:hover path {
   &-in {
     width: 80%;
     max-width: 1046px;
-    margin: 45px auto 0;
+    margin: 45px auto;
     .in-top {
       display: flex;
     }
@@ -1755,6 +1964,7 @@ svg:hover path {
         display: flex;
         justify-content: center;
         margin-top: 20px;
+        margin-bottom: 20px;
       }
       &.list-in-1 {
         .image {
@@ -2042,7 +2252,7 @@ svg:hover path {
     &-in {
       width: 70%;
       max-width: 54.4792vw;
-      margin: 2.3438vw auto 0;
+      margin: 2.3438vw auto;
       .in-cen {
         margin-top: 6.25vw;
         &-box {
@@ -2514,12 +2724,14 @@ svg:hover path {
   }
   //個案分享
   .index-caseSharing {
-    padding: 0;
     background: none;
+    background: linear-gradient(0, #fee6f1 0%, rgba(255, 241, 240, 0) 100%);
+    padding: 0;
     margin-top: 40px;
     &-in {
       width: 100%;
-      margin: 35px auto 0;
+      margin: 15px auto 0;
+      padding: 20px 30px;
       .in-cen {
         margin-top: 34px;
         flex-direction: column;
@@ -2595,7 +2807,7 @@ svg:hover path {
     }
     &-in {
       grid-template-columns: repeat(1, 1fr);
-      margin-top: 30px;
+      margin: 30px 30px 0 30px;
     }
     &-btn {
       position: relative;
@@ -2603,6 +2815,7 @@ svg:hover path {
       top: 0;
       display: flex;
       justify-content: center;
+      margin: 10px auto 30px;
 
       span {
         float: initial;
@@ -2616,9 +2829,25 @@ svg:hover path {
         }
       }
     }
+    .index-latestNews-line {
+      width: 45%;
+      margin: 0 auto;
+    }
   }
   .Latest_Movies {
+    max-width: 100vw;
+    overflow: hidden;
+    opacity: 0.8;
+    background: linear-gradient(
+      270deg,
+      rgba(255, 241, 240, 0) 0%,
+      rgba(255, 241, 240, 1) 100%
+    );
+    padding: 20px 0;
+    box-sizing: border-box;
     &_t {
+      // width: 100vw;
+      // margin-left: -30px;
       a {
         svg {
           width: 32px;
@@ -2631,23 +2860,26 @@ svg:hover path {
       }
     }
     &_in {
+      margin: 30px 30px 0;
       flex-direction: column;
-      margin-top: 30px;
+      // margin-top: ;
       &_l {
-        width: 100%;
-        margin-right: 0;
+        width: 84%;
+        margin: 0;
         span {
           color: var(--indexColor1);
+          padding-left: 0;
         }
         iframe {
           width: 100%;
-          height: calc(303 / 540 * 100vw);
+          height: calc(153 / 320 * 100vw);
         }
       }
       &_r {
         &_t {
           justify-content: center;
           margin-top: 30px;
+          margin-left: -50px;
           .tab-in {
             border: 1px solid #fdd3e3;
             letter-spacing: 1.588px;
@@ -2659,16 +2891,141 @@ svg:hover path {
           grid-template-columns: repeat(1, 1fr);
           gap: 25px;
           margin-top: 30px;
+          width: 84%;
           .list-in {
             iframe {
               width: 100%;
-              height: calc(303 / 540 * 100vw);
+              height: calc(153 / 320 * 100vw);
             }
             span {
             }
           }
         }
       }
+      .index-latestNews-line {
+        margin: 20px 0;
+        margin-left: -60px;
+        .point {
+          width: calc(100% - 365px) !important;
+          margin: 0px auto;
+        }
+      }
+    }
+  }
+  .share-item {
+    display: flex;
+    flex-direction: column;
+    gap: 15px 0;
+    & > div:nth-child(1) {
+      max-width: 74.35vw;
+      margin-left: 0;
+      padding: 10px 15px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      gap: 10px 0;
+      background: var(--White, #fff);
+      & > div:nth-child(1) {
+        display: flex;
+        justify-content: space-between;
+        & > div:nth-child(1) {
+          width: 29.48vw;
+          & > img {
+            width: 100%;
+          }
+        }
+        & > div:nth-child(2) {
+          & > div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            & > span:nth-child(1) {
+              color: var(--Theme-Color, #fc1682);
+              font-family: FakePearl;
+              font-size: 5.12vw;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 160%; /* 32px */
+            }
+            & > span {
+              color: var(--Grey-Mid, #666);
+              font-family: 'Noto Sans HK';
+              font-size: 3.07vw;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 160%; /* 19.2px */
+              letter-spacing: 1.2px;
+            }
+          }
+        }
+      }
+    }
+    & > div:nth-child(2),
+    & > div:nth-child(3) {
+      background: var(--White, #fff);
+      padding: 10px 15px;
+      box-sizing: border-box;
+      max-width: 74.35vw;
+      display: flex;
+      flex-direction: column;
+      gap: 6px 0;
+      & > div:nth-child(1) {
+        display: flex;
+        justify-content: space-between;
+        & > div:nth-child(1) {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+    & > div:nth-child(2) {
+      margin-left: auto;
+      margin-right: 0;
+      .item-title {
+        color: var(--Theme-Color, #FC1682);
+      }
+    }
+  }
+  .item-title {
+    color: var(--Blue-Deep, #00aeff);
+    font-family: FakePearl;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%; /* 32px */
+  }
+  .item-tag {
+    color: var(--Grey-Pale, #aaa);
+    font-family: 'Noto Sans HK';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 19.2px */
+    letter-spacing: 1.2px;
+  }
+  .item-date {
+    color: var(--Grey-Mid, #666);
+    font-family: 'Noto Sans HK';
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 19.2px */
+    letter-spacing: 1.2px;
+    text-align: right;
+  }
+  .item-content {
+    color: var(--Grey-Deep, #4d4d4d);
+    text-align: justify;
+    font-family: 'Noto Sans HK';
+    font-size: 3.07vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 19.2px */
+    letter-spacing: 1.2px;
+    display: flex;
+    flex-direction: column;
+    & > span {
+      line-height: 160%;
+      min-height: 19.19px;
     }
   }
 }
