@@ -1,7 +1,8 @@
 <script lang="ts" setup>
 import { useAppState } from '~/stores/appState'
+import { Autoplay } from 'swiper'
 import { toWhatsApp } from '~/assets/js/common'
-import { useElementBounding,useWindowSize } from '@vueuse/core'
+import { useElementBounding, useWindowSize } from '@vueuse/core'
 const appState = useAppState()
 appState.setDentistryService('scaling-and-polishing-test')
 useHead({
@@ -46,7 +47,8 @@ const orthodonticsIntroduceData = {
 
 const introduceJY = {
   title: '洗牙服務',
-  content: '提供洗牙和深層洗牙服務，定期洗牙有效去除\n牙齒上的牙垢、牙菌膜和牙結石，更能預防牙\n周病或其他口腔問題。\n\n建議每半年至一年進行一次洗牙，為您的口腔\n健康護航。',
+  content:
+    '提供洗牙和深層洗牙服務，定期洗牙有效去除\n牙齒上的牙垢、牙菌膜和牙結石，更能預防牙\n周病或其他口腔問題。\n\n建議每半年至一年進行一次洗牙，為您的口腔\n健康護航。',
   mbImg: 'https://static.cmereye.com/imgs/2023/10/6caab98f1d6e048f.jpg',
   pcImg: 'https://static.cmereye.com/imgs/2024/02/dbe0ada69cd40f64.png',
 }
@@ -187,7 +189,7 @@ const chargeData = {
       a: '超聲波洗牙',
       b: '¥88',
       // c: '原價 ¥180',
-      c: ''
+      c: '',
     },
     {
       a: '菌斑導向專業洗牙（含鹽）',
@@ -235,114 +237,131 @@ const stepData = {
   lists: [
     {
       title: '第1步',
+      imgNum: 'https://static.cmereye.com/imgs/2024/07/e0feaceff214278b.png',
       img: 'https://static.cmereye.com/imgs/2024/02/6731dba434edd53f.jpg',
       name: '口腔檢查',
       context: '洗牙前，醫師會對全口的口腔狀況進行檢查',
     },
     {
       title: '第2步',
+      imgNum: 'https://static.cmereye.com/imgs/2024/07/120738fb56a5d759.png',
       img: 'https://static.cmereye.com/imgs/2024/02/c8aa8929874fd251.jpg',
       name: '消毒',
-      context: '使用漱口水漱口，此過程能夠降低唾液中細菌的含量，從而減少細菌感染',
+      context:
+        '使用漱口水漱口，此過程能夠降低唾液中細菌的含量，從而減少細菌感染',
     },
     {
       title: '第3步',
+      imgNum: 'https://static.cmereye.com/imgs/2024/07/59c210a9e06a8624.png',
       img: 'https://static.cmereye.com/imgs/2024/02/ea678899b066c7cb.jpg',
       name: '牙石去除',
       context: '以手工或超音波的方式進行去除牙結石',
     },
     {
       title: '第4步',
+      imgNum: 'https://static.cmereye.com/imgs/2024/07/dabb11b53d7c5e07.png',
       img: 'https://static.cmereye.com/imgs/2024/02/e134fd577d7f9467.jpg',
       name: '噴砂',
       context: '透過特製的鹽加上高壓水為牙齒做進一步的清洗',
     },
     {
       title: '第5步',
+      imgNum: 'https://static.cmereye.com/imgs/2024/07/9b5323760b492f54.png',
       img: 'https://static.cmereye.com/imgs/2024/02/58ba4fa2a7ff9ffa.jpg',
       name: '拋光',
-      context: '透過拋光可以使牙齒光亮，牙面更光滑，從而減輕牙菌斑及色素的附著和牙石的生成',
+      context:
+        '透過拋光可以使牙齒光亮，牙面更光滑，從而減輕牙菌斑及色素的附著和牙石的生成',
     },
     {
       title: '第6步',
+      imgNum: 'https://static.cmereye.com/imgs/2024/07/90802da91d96398f.png',
       img: 'https://static.cmereye.com/imgs/2024/02/c881f0c09986279f.jpg',
       name: '牙周保護',
       context: '洗牙完成後，我們為牙齒周邊塗抹藥物進行牙肉保護',
-    }
+    },
   ],
 }
 const doctorData = {
   title: '專業醫療團隊',
   lists: [
-  {
-    id: '101',
-    name: '曾紅艷',
-    job: '主任醫生',
-    addressType: '101',
-    addressname: '羅湖區',
-    text: '牙潔治技術、各種牙周疾病的專業治療及手術治療（翻瓣術及牙周引導骨組織再造術、齦切除術）以及種植體周圍感染疾病的治療。',
-    img: 'https://static.cmereye.com/imgs/2024/02/50b761413772724d.png'
-  },
-  {
-    id: '102',
-    name: '李洪偉',
-    job: '醫生',
-    addressType: '101',
-    addressname: '羅湖區',
-    text: '牙齒美容修復，各類牙列缺損的固定及活動義齒的修復、鑄造支架式可摘局部義齒、 數字化修復、種植上部義齒修復等。在口腔數字化修復、口腔色度學、口腔仿生材料等領域進行過深入研究，成績顯著。',
-    img: 'https://static.cmereye.com/imgs/2024/02/2f77790cc4d81a82.png'
-  },
-  {
-    id: '103',
-    name: '周小明',
-    job: '院長',
-    addressType: '102',
-    addressname: '福田區',
-    text: '各類口腔疾病診斷與治療、熟練開展微創種植、即拔即種即刻修復等前沿技術，在各類口腔複雜案例多學科聯合診療方面有獨到的診療思路及技術經驗，積累案例數千例。',
-    img: 'https://static.cmereye.com/imgs/2024/02/e88238abad82c427.png'
-  },
-  {
-    id: '104',
-    name: '曹小蘭',
-    job: '醫生',
-    addressType: '102',
-    addressname: '福田區',
-    text: '牙周病系統性治療、輕中重度四環素牙、牙體牙髓病治療、牙體缺損修復、根管治療及其他各種疑難著色牙的美白治療。',
-    img: 'https://static.cmereye.com/imgs/2024/02/fdb9c21dfd4b91d4.png'
-  },
-  {
-    id: '105',
-    name: '趙董博',
-    job: '醫生',
-    addressType: '103',
-    addressname: '南山區',
-    text: '牙周病的診斷及序列治療，前後牙的美學樹脂充填，牙體牙髓疾病及根尖週疾病的診治，前牙貼面及後牙嵌體、全冠的修復，口腔常見多發疾病的預防及保健。',
-    img: 'https://static.cmereye.com/imgs/2024/02/45665cefc05c177a.png'
-  },
-  {
-    id: '106',
-    name: '朱艷秀',
-    job: '醫生',
-    addressType: '104',
-    addressname: '寶安區',
-    text: '各類牙周、牙髓疾病的診斷治療，牙體缺損的修復、各類牙齒的外科拔除。',
-    img: 'https://static.cmereye.com/imgs/2024/02/1551fb960998a5a8.png'
-  },
-  {
-    id: '107',
-    name: '韋秋紅',
-    job: '院長',
-    addressType: '105',
-    addressname: '龍華區',
-    text: '複雜修復設計及齲病、牙體牙髓和牙周病的治療，尤其在美學修復有較深的造詣，熟練運用MICD微創牙科及DSD數字微笑設計理念。',
-    img: 'https://static.cmereye.com/imgs/2024/02/07f09b9fd1ccf36f.png'
-  }
-]
+    {
+      id: '101',
+      name: '曾紅艷',
+      job: '主任醫生',
+      addressType: '101',
+      addressname: '羅湖區',
+      text: '牙潔治技術、各種牙周疾病的專業治療及手術治療（翻瓣術及牙周引導骨組織再造術、齦切除術）以及種植體周圍感染疾病的治療。',
+      img: 'https://static.cmereye.com/imgs/2024/02/50b761413772724d.png',
+    },
+    {
+      id: '102',
+      name: '李洪偉',
+      job: '醫生',
+      addressType: '101',
+      addressname: '羅湖區',
+      text: '牙齒美容修復，各類牙列缺損的固定及活動義齒的修復、鑄造支架式可摘局部義齒、 數字化修復、種植上部義齒修復等。在口腔數字化修復、口腔色度學、口腔仿生材料等領域進行過深入研究，成績顯著。',
+      img: 'https://static.cmereye.com/imgs/2024/02/2f77790cc4d81a82.png',
+    },
+    {
+      id: '103',
+      name: '周小明',
+      job: '院長',
+      addressType: '102',
+      addressname: '福田區',
+      text: '各類口腔疾病診斷與治療、熟練開展微創種植、即拔即種即刻修復等前沿技術，在各類口腔複雜案例多學科聯合診療方面有獨到的診療思路及技術經驗，積累案例數千例。',
+      img: 'https://static.cmereye.com/imgs/2024/02/e88238abad82c427.png',
+    },
+    {
+      id: '104',
+      name: '曹小蘭',
+      job: '醫生',
+      addressType: '102',
+      addressname: '福田區',
+      text: '牙周病系統性治療、輕中重度四環素牙、牙體牙髓病治療、牙體缺損修復、根管治療及其他各種疑難著色牙的美白治療。',
+      img: 'https://static.cmereye.com/imgs/2024/02/fdb9c21dfd4b91d4.png',
+    },
+    {
+      id: '105',
+      name: '趙董博',
+      job: '醫生',
+      addressType: '103',
+      addressname: '南山區',
+      text: '牙周病的診斷及序列治療，前後牙的美學樹脂充填，牙體牙髓疾病及根尖週疾病的診治，前牙貼面及後牙嵌體、全冠的修復，口腔常見多發疾病的預防及保健。',
+      img: 'https://static.cmereye.com/imgs/2024/02/45665cefc05c177a.png',
+    },
+    {
+      id: '106',
+      name: '朱艷秀',
+      job: '醫生',
+      addressType: '104',
+      addressname: '寶安區',
+      text: '各類牙周、牙髓疾病的診斷治療，牙體缺損的修復、各類牙齒的外科拔除。',
+      img: 'https://static.cmereye.com/imgs/2024/02/1551fb960998a5a8.png',
+    },
+    {
+      id: '107',
+      name: '韋秋紅',
+      job: '院長',
+      addressType: '105',
+      addressname: '龍華區',
+      text: '複雜修復設計及齲病、牙體牙髓和牙周病的治療，尤其在美學修復有較深的造詣，熟練運用MICD微創牙科及DSD數字微笑設計理念。',
+      img: 'https://static.cmereye.com/imgs/2024/02/07f09b9fd1ccf36f.png',
+    },
+  ],
 }
 
 const doctorTeam = ref(null)
-const { top,bottom } = useElementBounding(doctorTeam)
+const { top, bottom } = useElementBounding(doctorTeam)
 const { height } = useWindowSize()
+
+let windowWidth = ref(390)
+const getWindowWidth = () => {
+  windowWidth.value = window.innerWidth
+}
+onMounted(() => {
+  getWindowWidth()
+  window.addEventListener('resize', getWindowWidth)
+})
 </script>
 
 <template>
@@ -356,10 +375,15 @@ const { height } = useWindowSize()
         <nuxt-link :to="'/'" title="深圳愛康健口腔醫院" alt="深圳愛康健口腔醫院"
           ><span>{{ $t('pages.index.title') }}</span></nuxt-link
         >
-        <nuxt-link :to="'/dental-service'" :title="$t('pages.dental-service.title')" :alt="('pages.dental-service.title')"
+        <nuxt-link
+          :to="'/dental-service'"
+          :title="$t('pages.dental-service.title')"
+          :alt="'pages.dental-service.title'"
           ><span>{{ $t('pages.dental-service.title') }}</span></nuxt-link
         >
-        <span :title="$t(orthodonticsIntroduceData.tabNavName)">{{ $t(orthodonticsIntroduceData.tabNavName) }}</span>
+        <span :title="$t(orthodonticsIntroduceData.tabNavName)">{{
+          $t(orthodonticsIntroduceData.tabNavName)
+        }}</span>
       </div>
       <!-- <ServiceIntroduce :introduce-data="orthodonticsIntroduceData" /> -->
       <div class="reason">
@@ -389,7 +413,7 @@ const { height } = useWindowSize()
       <div class="introduceJY">
         <ServiceIntroduceJY :introduceData="introduceJY" />
       </div>
-      <div class="difference">
+      <div class="difference" v-if="windowWidth > 767">
         <div class="dentistryServices-title difference-title">
           <div class="dentistryServices-title-in bb difference-title-in">
             {{ differenceData.title }}
@@ -567,35 +591,240 @@ const { height } = useWindowSize()
           </div>
         </div>
       </div>
-      <div class="step">
-      <div class="step-in">
-        <div class="dentistryServices-title step-title">
-          <div class="dentistryServices-title-in bb step-title-in">
-            {{ stepData.title }}
+      <div class="difference" v-else>
+        <div class="dentistryServices-title difference-title">
+          <div class="dentistryServices-title-in bb difference-title-in">
+            <!-- {{ differenceData.title }} -->
+            洗牙技術及類別
           </div>
-        </div>
-        <div class="step-lists">
-          <div
-            v-for="(stepItem, stepIndex) in stepData.lists"
-            :key="stepIndex"
-            class="step-lists-in"
-          >
-            <div class="step-lists-in-l">
-              <div class="title">
-                <img src="@/assets/images/icon_13.png" alt="" />
-                {{ stepItem.title }}
+          <div class="difference-content-list">
+            <div class="difference-content-list-in">
+              <div>
+                <div>
+                  <div>基礎專業洗牙</div>
+                  <div>
+                    <span>原價 ¥180</span>
+                    <span>¥88</span>
+                  </div>
+                </div>
+                <p>
+                  <span>潔淨度</span>
+                  <span
+                    ><img
+                      src="https://static.cmereye.com/imgs/2024/07/60f2ec9f5450a394.png"
+                      alt="潔淨度"
+                  /></span>
+                </p>
+                <p>
+                  <span>美白度</span>
+                  <span
+                    ><img
+                      src="https://static.cmereye.com/imgs/2024/07/ebc3f719fd69e7df.png"
+                      alt="美白度"
+                  /></span>
+                </p>
+                <p>
+                  <span>舒適度</span>
+                  <span
+                    ><img
+                      src="https://static.cmereye.com/imgs/2024/07/60f2ec9f5450a394.png"
+                      alt="舒適度"
+                  /></span>
+                </p>
+                <p>
+                  <span>性價比</span>
+                  <span
+                    ><img
+                      src="https://static.cmereye.com/imgs/2024/07/b2d166c7b5758388.png"
+                      alt="性價比"
+                  /></span>
+                </p>
+                <p>超聲波清除牙結石</p>
+                <p>有效預防牙周炎、細菌引起的牙齒疾病</p>
+                <p>有拋光處理</p>
               </div>
-              <div class="image"><img :src="stepItem.img" alt="" /></div>
-              <div class="name">{{ stepItem.name }}</div>
-              <div class="context">{{ stepItem.context }}</div>
+              <div class="list-in-img">
+                <img
+                  src="https://static.cmereye.com/imgs/2024/07/0bb3823f371217d0.png"
+                  alt="基礎專業洗牙"
+                />
+              </div>
             </div>
-            <div class="step-lists-in-r">
-              <img src="@/assets/images/icon_12.png" alt="" />
+            <div class="difference-content-list-in">
+              <div>
+                <div>
+                  <div>菌斑導向專業洗牙</div>
+                  <div>
+                    <span>原價 ¥350</span>
+                    <span>¥168</span>
+                  </div>
+                </div>
+                <p>
+                  <span>潔淨度</span>
+                  <span
+                    ><img
+                      src="https://static.cmereye.com/imgs/2024/07/682fdb87c616bbbe.png"
+                      alt="潔淨度"
+                  /></span>
+                </p>
+                <p>
+                  <span>美白度</span>
+                  <span
+                    ><img
+                      src="https://static.cmereye.com/imgs/2024/07/682fdb87c616bbbe.png"
+                      alt="美白度"
+                  /></span>
+                </p>
+                <p>
+                  <span>舒適度</span>
+                  <span
+                    ><img
+                      src="https://static.cmereye.com/imgs/2024/07/682fdb87c616bbbe.png"
+                      alt="舒適度"
+                  /></span>
+                </p>
+                <p>
+                  <span>性價比</span>
+                  <span
+                    ><img
+                      src="https://static.cmereye.com/imgs/2024/07/b2d166c7b5758388.png"
+                      alt="性價比"
+                  /></span>
+                </p>
+                <p>噴砂能深入清潔細小牙縫</p>
+                <p>菌斑導向能及早找出潛在隱患</p>
+                <p>減少一般超聲波洗牙引致的痛楚不適</p>
+                <p>有效清除牙齒上煙、茶、咖啡漬</p>
+              </div>
+              <div class="list-in-img">
+                <img
+                  src="https://static.cmereye.com/imgs/2024/07/02f4a9bb5e2d46a4.png"
+                  alt="菌斑導向專業洗牙 "
+                />
+              </div>
             </div>
+            <div class="difference-content-list-in">
+              <div>
+                <div>
+                  <div>菌斑導向專業洗牙</div>
+                  <div>
+                    <span></span>
+                    <span>¥550</span>
+                  </div>
+                </div>
+                <p>
+                  <span>潔淨度</span>
+                  <span
+                    ><img
+                      src="https://static.cmereye.com/imgs/2024/07/b2d166c7b5758388.png"
+                      alt="潔淨度"
+                  /></span>
+                </p>
+                <p>
+                  <span>美白度</span>
+                  <span
+                    ><img
+                      src="https://static.cmereye.com/imgs/2024/07/b2d166c7b5758388.png"
+                      alt="美白度"
+                  /></span>
+                </p>
+                <p>
+                  <span>舒適度</span>
+                  <span
+                    ><img
+                      src="https://static.cmereye.com/imgs/2024/07/b2d166c7b5758388.png"
+                      alt="舒適度"
+                  /></span>
+                </p>
+                <p>
+                  <span>性價比</span>
+                  <span
+                    ><img
+                      src="https://static.cmereye.com/imgs/2024/07/682fdb87c616bbbe.png"
+                      alt="性價比"
+                  /></span>
+                </p>
+                <p>能減緩牙石積聚速度</p>
+                <p>略帶薄荷清香，無鹽不帶咸味</p>
+              </div>
+              <div class="list-in-img">
+                <img
+                  src="https://static.cmereye.com/imgs/2024/07/66502bcf0c7e2de2.png"
+                  alt="菌斑導向專業洗牙 "
+                />
+              </div>
+            </div>
+          </div>
+          <div class="difference-title-three-in">
+            <span>把握限時優惠</span>
+            <span>現在就來預約我們的洗牙服務吧</span>
+          </div>
+          <div class="charge-btn">
+            <PageAnimBtnTypeTwo :str="'預約檢查及諮詢'" />
           </div>
         </div>
       </div>
-    </div>
+      <div class="step">
+        <div class="step-in">
+          <div class="dentistryServices-title step-title">
+            <div class="dentistryServices-title-in bb step-title-in">
+              {{ stepData.title }}
+            </div>
+          </div>
+          <div class="step-lists" v-if="windowWidth > 767">
+            <div
+              v-for="(stepItem, stepIndex) in stepData.lists"
+              :key="stepIndex"
+              class="step-lists-in"
+            >
+              <div class="step-lists-in-l">
+                <div class="title">
+                  <img src="@/assets/images/icon_13.png" alt="" />
+                  {{ stepItem.title }}
+                </div>
+                <div class="image"><img :src="stepItem.img" alt="" /></div>
+                <div class="name">{{ stepItem.name }}</div>
+                <div class="context">{{ stepItem.context }}</div>
+              </div>
+              <div class="step-lists-in-r">
+                <img src="@/assets/images/icon_12.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="mobile-new-step" v-else>
+            <div
+              v-for="(stepItem, stepIndex) in stepData.lists"
+              :key="stepIndex"
+            >
+              <div>
+                <img :src="stepItem.img" alt="" />
+                <span>{{ stepItem.name }}</span
+                ><br />
+                <span>{{ stepItem.context }}</span>
+              </div>
+              <div><img :src="stepItem.imgNum" alt="" /></div>
+            </div>
+          </div>
+          <div class="step-bg step-mobile-bg-one" v-if="windowWidth < 767">
+            <img
+              src="https://static.cmereye.com/imgs/2024/07/7623f608f7d35f04.png"
+              alt=""
+            />
+          </div>
+          <div class="step-bg step-mobile-bg-two" v-if="windowWidth < 767">
+            <img
+              src="https://static.cmereye.com/imgs/2024/07/6d29b5a6949eb591.png"
+              alt=""
+            />
+          </div>
+          <div class="step-bg step-mobile-bg-three" v-if="windowWidth < 767">
+            <img
+              src="https://static.cmereye.com/imgs/2024/07/7ada424c7d972d7e.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
       <div class="charge">
         <div class="dentistryServices-title charge-title">
           <div class="dentistryServices-title-in bb charge-title-in">
@@ -634,21 +863,93 @@ const { height } = useWindowSize()
       </div>
       <div class="Medical_sterilization_equipment">
         <div class="dentistryServices-title plague-title">
-          <div class="dentistryServices-title-in bb plague-title-in">醫療滅菌設備</div>
+          <div class="dentistryServices-title-in bb plague-title-in">
+            醫療滅菌設備
+          </div>
         </div>
-        <div class="Medical_sterilization_equipment-in pageCon">
+        <div
+          class="Medical_sterilization_equipment-in pageCon"
+          v-if="windowWidth > 767"
+        >
           <div class="Medical_sterilization_equipment-in-box">
-            <img src="https://static.cmereye.com/imgs/2024/02/30f4f16be7ec0112.jpg" alt="">
+            <img
+              src="https://static.cmereye.com/imgs/2024/02/30f4f16be7ec0112.jpg"
+              alt=""
+            />
             <div>
-              <span>瑞士EMS超音波科技採用光學數位掃描，高頻聲納定位，作用於清潔牙結石，預防牙周病和蛀牙。</span>
+              <span
+                >瑞士EMS超音波科技採用光學數位掃描，高頻聲納定位，作用於清潔牙結石，預防牙周病和蛀牙。</span
+              >
             </div>
           </div>
           <div class="Medical_sterilization_equipment-in-box">
             <div>
-              <span>以「一醫一診室」、「一機一用一消毒」的無菌治療模式，避免交叉感染機會。</span>
+              <span
+                >以「一醫一診室」、「一機一用一消毒」的無菌治療模式，避免交叉感染機會。</span
+              >
             </div>
-            <img src="https://static.cmereye.com/imgs/2024/02/166a2c06cc4acf88.jpg" alt="">
+            <img
+              src="https://static.cmereye.com/imgs/2024/02/166a2c06cc4acf88.jpg"
+              alt=""
+            />
           </div>
+        </div>
+        <div v-else style="margin: 20px 30px">
+          <Swiper
+            :loop="true"
+            :modules="[Autoplay]"
+            :autoplay="{
+              delay: 0,
+            }"
+            :spaceBetween="20"
+            :speed="6000"
+            :slidesPerView="1"
+          >
+            <SwiperSlide class="equipment-item">
+              <div class="equipment-img">
+                <img
+                  src="https://static.cmereye.com/imgs/2024/07/975a459555d529a8.png"
+                  alt="瑞士EMS超音波科技採用光學數位掃描"
+                />
+              </div>
+              <div class="equipment-bg equipment-one">
+                瑞士EMS超音波科技採用光學數位掃描，高頻聲納定位，作用於清潔牙結石，預防牙周病和蛀牙。
+              </div>
+            </SwiperSlide>
+            <SwiperSlide class="equipment-item">
+              <div class="equipment-img">
+                <img
+                  src="https://static.cmereye.com/imgs/2024/07/83c4a9219458e923.png"
+                  alt="無菌治療模式"
+                />
+              </div>
+              <div class="equipment-bg equipment-two">
+                以「一醫一診室」、「一機一用一消毒」的無菌治療模式，避免交叉感染機會。
+              </div>
+            </SwiperSlide>
+            <SwiperSlide class="equipment-item">
+              <div class="equipment-img">
+                <img
+                  src="https://static.cmereye.com/imgs/2024/07/975a459555d529a8.png"
+                  alt="瑞士EMS超音波科技採用光學數位掃描"
+                />
+              </div>
+              <div class="equipment-bg equipment-one">
+                瑞士EMS超音波科技採用光學數位掃描，高頻聲納定位，作用於清潔牙結石，預防牙周病和蛀牙。
+              </div>
+            </SwiperSlide>
+            <SwiperSlide class="equipment-item">
+              <div class="equipment-img">
+                <img
+                  src="https://static.cmereye.com/imgs/2024/07/83c4a9219458e923.png"
+                  alt="無菌治療模式"
+                />
+              </div>
+              <div class="equipment-bg equipment-two">
+                以「一醫一診室」、「一機一用一消毒」的無菌治療模式，避免交叉感染機會。
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </div>
       <div class="doctorTeam" ref="doctorTeam">
@@ -680,10 +981,12 @@ const { height } = useWindowSize()
       <ServiceProblem :problem-data="problemData" />
       <serviceCard />
       <NewAddress />
-     <ContactForm-new />
+      <ContactForm-new />
     </div>
     <PageFooter />
-    <PageNavbar :showDialogBox="(top<(height / 3 * 2)) && (bottom > (height / 3))" />
+    <PageNavbar
+      :showDialogBox="top < (height / 3) * 2 && bottom > height / 3"
+    />
   </div>
 </template>
 
@@ -711,7 +1014,7 @@ const { height } = useWindowSize()
     color: var(--indexColor1);
   }
 }
-.introduceJY{
+.introduceJY {
   margin-top: 140px;
 }
 .reason {
@@ -925,9 +1228,8 @@ const { height } = useWindowSize()
     display: flex;
     justify-content: center;
   }
- 
 }
-.doctorTeam{
+.doctorTeam {
   margin-top: 140px;
 }
 .step {
@@ -956,16 +1258,16 @@ const { height } = useWindowSize()
       display: flex;
       align-items: center;
       margin-bottom: 92px;
-      padding: 0 calc((61 / ( 1444 + 122 )) * 100%);
+      padding: 0 calc((61 / (1444 + 122)) * 100%);
       width: calc(100% / 3);
       &:nth-of-type(4),
       &:nth-of-type(5) {
         margin-bottom: 0;
       }
       &:nth-of-type(6) {
-        .step-lists-in-l{
+        .step-lists-in-l {
           .image {
-            &::after{
+            &::after {
               display: none;
             }
           }
@@ -996,17 +1298,17 @@ const { height } = useWindowSize()
             border-radius: 30px;
           }
           position: relative;
-            &::after{
-              content: '';
-              position: absolute;
-              right: -17%;
-              top: 50%;
-              transform: translateY(-50%);
-              background: url(@/assets/images/icon_12.png);
-              background-size: 100% 100%;
-              width: 16px;
-              height: 30px;
-            }
+          &::after {
+            content: '';
+            position: absolute;
+            right: -17%;
+            top: 50%;
+            transform: translateY(-50%);
+            background: url(@/assets/images/icon_12.png);
+            background-size: 100% 100%;
+            width: 16px;
+            height: 30px;
+          }
         }
         .name {
           color: #fff;
@@ -1062,7 +1364,7 @@ const { height } = useWindowSize()
         }
         .lastBox-b {
           margin-top: 20px;
-          .bigBan{
+          .bigBan {
             font-size: 44px;
             line-height: 1.2;
           }
@@ -1127,7 +1429,7 @@ const { height } = useWindowSize()
     }
   }
 }
-.Medical_sterilization_equipment{
+.Medical_sterilization_equipment {
   // background: ;
   background: linear-gradient(
     90deg,
@@ -1138,22 +1440,22 @@ const { height } = useWindowSize()
   );
   margin-top: 140px;
   padding: 50px 0 10px;
-  &-in{
+  &-in {
     margin-top: 60px;
     display: flex;
     // justify-content: center;
     align-items: center;
     flex-direction: column;
-    &-box{
+    &-box {
       width: 100%;
       max-width: 1205px;
       display: flex;
       margin-bottom: 40px;
-      img{
+      img {
         width: calc(696 / 1205 * 100%);
         border-radius: 20px;
       }
-      &>div{
+      & > div {
         font-size: 28px;
         line-height: 160%;
         color: #fff;
@@ -1163,11 +1465,11 @@ const { height } = useWindowSize()
         text-align: justify;
         border-radius: 20px;
         position: relative;
-        span{
+        span {
           position: relative;
           z-index: 1;
         }
-        &::after{
+        &::after {
           content: '';
           position: absolute;
           display: block;
@@ -1178,20 +1480,20 @@ const { height } = useWindowSize()
           border-radius: 20px;
         }
       }
-      &:nth-of-type(1){
-        &>div{
+      &:nth-of-type(1) {
+        & > div {
           padding: 30px 30px 30px 0;
-          &::after{
+          &::after {
             background: var(--indexColor1);
             left: -30px;
           }
         }
       }
-      &:nth-of-type(2){
-        &>div{
+      &:nth-of-type(2) {
+        & > div {
           padding: 30px 0 30px 30px;
-          &::after{
-            background: #00AEFF;
+          &::after {
+            background: #00aeff;
             right: -30px;
           }
         }
@@ -1267,7 +1569,7 @@ const { height } = useWindowSize()
 //   }
 // }
 @media (min-width: 768px) and (max-width: 1920px) {
-  .introduceJY{
+  .introduceJY {
     margin-top: 7.2917vw;
   }
   .reason {
@@ -1292,7 +1594,7 @@ const { height } = useWindowSize()
         }
       }
     }
-  } 
+  }
   .difference {
     margin-top: 9.7917vw;
     &-tables {
@@ -1301,14 +1603,14 @@ const { height } = useWindowSize()
       border-radius: 3.125vw;
       &-item {
         height: 4.7917vw;
-        margin-bottom: .4167vw;
+        margin-bottom: 0.4167vw;
         .item-in {
           font-size: 1.0417vw;
           &:nth-of-type(3) {
             font-size: 1.4583vw;
           }
           &:not(:last-child) {
-            margin-right: .4167vw;
+            margin-right: 0.4167vw;
           }
         }
         &:nth-of-type(1) {
@@ -1322,7 +1624,7 @@ const { height } = useWindowSize()
         }
       }
     }
-  }  
+  }
   .step {
     padding: 3.1771vw 0 5.1563vw;
     margin-top: 7.2917vw;
@@ -1338,34 +1640,34 @@ const { height } = useWindowSize()
           max-width: 20.8333vw;
           .title {
             font-size: 1.8229vw;
-            margin-bottom: .7813vw;
+            margin-bottom: 0.7813vw;
             img {
-              margin-right: .7813vw;
+              margin-right: 0.7813vw;
             }
           }
           .image {
             img {
               border-radius: 1.5625vw;
             }
-              &::after{
-                width: .8333vw;
-                height: 1.5625vw;
-              }
+            &::after {
+              width: 0.8333vw;
+              height: 1.5625vw;
+            }
           }
           .name {
             font-size: 1.0417vw;
             margin-top: 1.25vw;
-            margin-bottom: .7813vw;
-            padding: .4167vw .7813vw;
+            margin-bottom: 0.7813vw;
+            padding: 0.4167vw 0.7813vw;
           }
           .context {
             font-size: 1.0417vw;
-            padding: 0 .7813vw;
+            padding: 0 0.7813vw;
           }
         }
         &-r {
           img {
-            width: .7813vw;
+            width: 0.7813vw;
           }
         }
         &:nth-of-type(6) {
@@ -1376,13 +1678,13 @@ const { height } = useWindowSize()
                 font-size: 4.4271vw;
               }
               &:nth-of-type(1) {
-                margin-bottom: .7813vw;
+                margin-bottom: 0.7813vw;
               }
             }
           }
           .lastBox-b {
             margin-top: 1.0417vw;
-            .bigBan{
+            .bigBan {
               font-size: 2.2917vw;
             }
           }
@@ -1402,17 +1704,17 @@ const { height } = useWindowSize()
       }
       &-item {
         height: 6.7708vw;
-        margin-bottom: .4167vw;
+        margin-bottom: 0.4167vw;
         .item-in {
           font-size: 1.25vw;
           span {
             font-size: 1.4583vw;
             &:nth-of-type(2) {
-              font-size: .8333vw;
+              font-size: 0.8333vw;
             }
           }
           &:not(:last-child) {
-            margin-right: .4167vw;
+            margin-right: 0.4167vw;
           }
         }
         &:nth-of-type(1) {
@@ -1427,7 +1729,7 @@ const { height } = useWindowSize()
             span {
               font-size: 1.9271vw;
               &:nth-of-type(2) {
-                font-size: .8333vw;
+                font-size: 0.8333vw;
               }
             }
           }
@@ -1442,37 +1744,37 @@ const { height } = useWindowSize()
       margin-top: 1.8229vw;
     }
   }
-  .Medical_sterilization_equipment{
+  .Medical_sterilization_equipment {
     margin-top: 7.2917vw;
-    padding: 2.6042vw 0 .5208vw;
-    &-in{
+    padding: 2.6042vw 0 0.5208vw;
+    &-in {
       margin-top: 3.125vw;
-      &-box{
+      &-box {
         max-width: 62.7604vw;
         margin-bottom: 2.0833vw;
-        img{
+        img {
           border-radius: 1.0417vw;
         }
-        &>div{
+        & > div {
           font-size: 1.4583vw;
           border-radius: 1.0417vw;
-          &::after{
+          &::after {
             width: calc(100% + 1.5625vw);
             border-radius: 1.0417vw;
           }
         }
-        &:nth-of-type(1){
-          &>div{
+        &:nth-of-type(1) {
+          & > div {
             padding: 1.5625vw 1.5625vw 1.5625vw 0;
-            &::after{
+            &::after {
               left: -1.5625vw;
             }
           }
         }
-        &:nth-of-type(2){
-          &>div{
+        &:nth-of-type(2) {
+          & > div {
             padding: 1.5625vw 0 1.5625vw 1.5625vw;
-            &::after{
+            &::after {
               right: -1.5625vw;
             }
           }
@@ -1480,7 +1782,7 @@ const { height } = useWindowSize()
       }
     }
   }
-  .doctorTeam{
+  .doctorTeam {
     margin-top: 7.2917vw;
   }
   .care {
@@ -1493,8 +1795,8 @@ const { height } = useWindowSize()
         & > div {
           .image {
             &-in {
-              margin-bottom: .6771vw;
-              border-radius: .5208vw;
+              margin-bottom: 0.6771vw;
+              border-radius: 0.5208vw;
             }
           }
           .text {
@@ -1510,20 +1812,20 @@ const { height } = useWindowSize()
 }
 
 @media screen and (max-width: 768px) {
-  .reason-lists{
-      flex-wrap: wrap;
+  .reason-lists {
+    flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
   }
   .tabNav {
-        padding: 30px;
-        font-size: 1rem;
-        margin-top: 0;
-      }
-      .introduceJY{
-        margin-top: 60px;
-      }
+    padding: 30px;
+    font-size: 1rem;
+    margin-top: 0;
+  }
+  .introduceJY {
+    margin-top: 60px;
+  }
   .reason {
     margin-top: 0;
     &-title {
@@ -1532,10 +1834,10 @@ const { height } = useWindowSize()
       }
     }
     &-lists {
-      
       margin: 72px auto 0;
       &-item {
-        padding:0;width:40%;
+        padding: 0;
+        width: 40%;
         .image {
           div {
             top: -18px;
@@ -1595,7 +1897,7 @@ const { height } = useWindowSize()
           }
           .image {
             padding: 0 6px;
-            &::after{
+            &::after {
               display: none;
             }
           }
@@ -1624,7 +1926,7 @@ const { height } = useWindowSize()
               span {
                 font-size: 24px;
                 display: inline-block;
-                &::before{
+                &::before {
                   content: '，';
                   font-size: 16px;
                   font-family: var(--contextFamily);
@@ -1639,7 +1941,8 @@ const { height } = useWindowSize()
               }
               &:nth-of-type(2) {
                 // display: none;
-                &::before,&::after{
+                &::before,
+                &::after {
                   content: '';
                   display: inline-block;
                   width: 20px;
@@ -1657,7 +1960,7 @@ const { height } = useWindowSize()
           }
           .lastBox-b {
             margin-top: 30px;
-            .bigBan{
+            .bigBan {
               font-size: 28px;
             }
           }
@@ -1734,6 +2037,181 @@ const { height } = useWindowSize()
         }
       }
     }
+    :deep(.charge-btn) {
+      span {
+        letter-spacing: 5.6px;
+      }
+    }
+  }
+  .difference-content-list {
+    margin: 25px 0 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 24px 0;
+    & > div {
+      position: relative;
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 10.5px;
+          & > div:nth-child(1) {
+            position: relative;
+            border-radius: var(--Count, 0px) 20px 20px var(--Count, 0px);
+            background: var(--Theme-Color, #fc1682);
+            box-sizing: border-box;
+            padding: 5px 20px 5px 29px;
+            color: var(--White, #fff);
+            text-align: center;
+            font-family: FakePearl;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 130%; /* 20.8px */
+          }
+          & > div:nth-child(1)::after {
+            content: '';
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -40px;
+          }
+          & > div:nth-child(2) {
+            padding-right: 28px;
+            & > span:nth-child(1) {
+              color: var(--Grey-Deep, #4d4d4d);
+              text-align: center;
+              font-family: FakePearl;
+              font-size: 9px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 160%; /* 14.4px */
+              position: relative;
+            }
+            & > span:nth-child(1)::before {
+              content: '';
+              display: inline-block;
+              width: 100%;
+              height: 1px;
+              background: #4d4d4d;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%) rotate(-8deg);
+            }
+            & > span:nth-child(2) {
+              color: var(--Theme-Color, #fc1682);
+              font-family: FakePearl;
+              font-size: 26px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 160%;
+              margin-left: 4px;
+              position: relative;
+              z-index: 3;
+            }
+          }
+          & > div:nth-child(2)::before {
+            content: '';
+            display: inline-block;
+            width: 77px;
+            height: 10px;
+            border-radius: 4px var(--Count, 0px) var(--Count, 0px) 4px;
+            background: var(--Skin, #fff1f0);
+            position: absolute;
+            right: 0;
+            top: 25px;
+            z-index: 1;
+          }
+        }
+        & > p:nth-child(2),
+        & > p:nth-child(3),
+        & > p:nth-child(4),
+        & > p:nth-child(5) {
+          display: flex;
+          align-items: center;
+          gap: 0 7px;
+          padding-left: 30px;
+        }
+        & > p:nth-child(6) {
+          margin-top: 10px;
+        }
+        & > p:nth-child(6),
+        & > p:nth-child(7),
+        & > p:nth-child(8),
+        & > p:nth-child(9) {
+          color: var(--Grey-Deep, #4d4d4d);
+          font-family: FakePearl;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 160%; /* 24px */
+          letter-spacing: 1.5px;
+          position: relative;
+          padding-left: 30px;
+        }
+        & > p:nth-child(6)::before,
+        & > p:nth-child(7)::before,
+        & > p:nth-child(8)::before,
+        & > p:nth-child(9)::before {
+          content: '';
+          display: inline-block;
+          position: absolute;
+          width: 6px;
+          height: 6px;
+          background: #4c4c4c;
+          border-radius: 50%;
+          top: 50%;
+          left: 20px;
+          transform: translate(0px, -3px);
+        }
+      }
+      & > div:last-child {
+        position: absolute;
+        top: 40px;
+        right: 30px;
+      }
+    }
+    & > div:nth-child(2) {
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          & > div:nth-child(1)::after {
+            content: '';
+            background: url('https://static.cmereye.com/imgs/2024/07/875194eb351af3a5.png')
+              no-repeat;
+            background-size: 100%;
+          }
+        }
+      }
+    }
+    & > div:nth-child(3) {
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          & > div:nth-child(1)::after {
+            background: url('https://static.cmereye.com/imgs/2024/07/6ed3b06a8cf824c8.png')
+              no-repeat;
+            background-size: 100%;
+          }
+        }
+      }
+    }
+  }
+  .difference-title-three-in {
+    margin: 25px 0 15px;
+    display: flex;
+    flex-direction: column;
+    color: var(--Theme-Color, #fc1682);
+    text-align: center;
+    font-family: FakePearl;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%; /* 32px */
   }
   .charge {
     margin-top: 40px;
@@ -1829,7 +2307,7 @@ const { height } = useWindowSize()
     //   }
     // }
   }
-  .doctorTeam{
+  .doctorTeam {
     margin-top: 60px;
   }
   .care {
@@ -1874,54 +2352,152 @@ const { height } = useWindowSize()
       }
     }
   }
-  .Medical_sterilization_equipment{
-    padding: 30px 0 10px;
-    background: linear-gradient(
-      0deg,
-      rgba(255, 241, 240, 0) 0%,
-      rgba(255, 241, 240, 0.7) 12.5%,
-      rgba(255, 241, 240, 0.7) 81.99%,
-      rgba(255, 241, 240, 0) 100%
-    );
-    &-in{
+  .Medical_sterilization_equipment {
+    // padding: 30px 0 10px;
+    background: transparent;
+    &-in {
       margin-top: 40px;
-      &-box{
+      &-box {
         flex-direction: column;
-        img{
+        img {
           width: 100%;
           border-radius: 0;
         }
-        &>div{
+        & > div {
           width: calc(100% - 60px);
           font-size: 16px;
           margin: -20px auto 0;
-          &::after{
+          &::after {
             width: 100%;
             border-radius: 8px;
           }
         }
-        &:nth-of-type(1){
-          &>div{
+        &:nth-of-type(1) {
+          & > div {
             padding: 20px;
-            &::after{
+            &::after {
               left: 0;
             }
           }
         }
-        &:nth-of-type(2){
-          img{
+        &:nth-of-type(2) {
+          img {
             order: 1;
           }
-          &>div{
+          & > div {
             order: 2;
             padding: 20px;
-            &::after{
+            &::after {
               right: 0;
             }
           }
         }
       }
     }
+  }
+  .step-in {
+    position: relative;
+  }
+  .step-bg {
+    position: absolute;
+    z-index: 2;
+  }
+  .step-mobile-bg-one {
+    top: 100px;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+    & > img {
+      transform: translateX(10px);
+    }
+  }
+  .step-mobile-bg-two {
+    top: 330px;
+    right: 0;
+    left: 0;
+    & > img {
+      width: 100%;
+    }
+  }
+  .step-mobile-bg-three {
+    bottom: 25.46vw;
+    left: 0px;
+    width: 85%;
+  }
+  .mobile-new-step {
+    margin: 25px 27px 47px 30px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px 28px;
+    position: relative;
+    z-index: 5;
+    & > div {
+      position: relative;
+      & > div:nth-child(1) {
+        & > img {
+          border-radius: 12px;
+          border: 1px solid var(--Theme-Color, #fc1682);
+          margin-bottom: 6px;
+        }
+        & > span:nth-child(2) {
+          color: var(--Theme-Color, #fc1682);
+          font-family: FakePearl;
+          font-size: 4.1vw;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 130%; /* 20.8px */
+        }
+        & > span:nth-child(4) {
+          color: var(--Grey-Deep, #4d4d4d);
+          text-align: justify;
+          font-family: FakePearl;
+          font-size: 3.07vw;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 160%; /* 19.2px */
+          letter-spacing: 1.2px;
+        }
+      }
+      & > div:last-child {
+        position: absolute;
+        top: -6px;
+        left: -6px;
+      }
+    }
+    & > div:nth-child(even) {
+      margin-top: 25px;
+    }
+  }
+  .equipment-img {
+    margin: auto;
+    & > img {
+      width: 100%;
+    }
+  }
+  .equipment-bg {
+    border-radius: 5px;
+    max-width: 243px;
+    margin: 0 auto;
+    padding: 11px 15px;
+    color: var(--White, #fff);
+    text-align: justify;
+    font-family: FakePearl;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 19.2px */
+    letter-spacing: 1.2px;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 5;
+    top: -10px;
+  }
+  .equipment-one {
+    background: var(--Theme-Color, #fc1682);
+  }
+  .equipment-two {
+    background: var(--Blue-Deep, #00aeff);
   }
 }
 </style>
