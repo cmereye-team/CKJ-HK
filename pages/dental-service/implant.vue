@@ -25,7 +25,7 @@ useHead({
 
 const headerConfig = {
   img: 'https://static.cmereye.com/imgs/2024/07/5c45af4101fdf9a2.webp',
-  mbImg: 'https://static.cmereye.com/imgs/2024/07/8ec3ecc507e41b96.webp',
+  mbImg: 'https://static.cmereye.com/imgs/2024/07/ee6a1e4ae4ea7fa5.png',
   bg: '',
   pageName: 'implant',
   pcText: ['享受失而復得的喜悅', '重拾完整人生之旅'],
