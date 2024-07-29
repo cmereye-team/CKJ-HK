@@ -186,7 +186,7 @@ let bannerLists = ref([
     name: '福田旗艦店18週年慶典優惠-慶典',
     link: '',
     pc: 'https://static.cmereye.com/static/ckj/imgs/banner/慶典_Banner_PC.webp',
-    mb: 'https://static.cmereye.com/static/ckj/imgs/banner/慶典_Banner_MB.webp',
+    mb: 'https://static.cmereye.com/imgs/2024/07/8a23929f9adb1ba9.png',
   },
 ])
 onMounted(() => {
