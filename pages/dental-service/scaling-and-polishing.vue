@@ -807,7 +807,7 @@ onMounted(() => {
           </div>
           <div class="step-bg step-mobile-bg-one" v-if="windowWidth < 767">
             <img
-              src="https://static.cmereye.com/imgs/2024/07/7623f608f7d35f04.png"
+              src="https://static.cmereye.com/imgs/2024/07/0f9506f5f2e7252f.png"
               alt=""
             />
           </div>
@@ -819,7 +819,7 @@ onMounted(() => {
           </div>
           <div class="step-bg step-mobile-bg-three" v-if="windowWidth < 767">
             <img
-              src="https://static.cmereye.com/imgs/2024/07/7ada424c7d972d7e.png"
+              src="https://static.cmereye.com/imgs/2024/07/2c52c0d9059dac7d.png"
               alt=""
             />
           </div>
@@ -2413,14 +2413,9 @@ onMounted(() => {
     z-index: 2;
   }
   .step-mobile-bg-one {
-    top: 100px;
-    width: 100vw;
-    display: flex;
-    justify-content: flex-end;
-    overflow: hidden;
-    & > img {
-      transform: translateX(10px);
-    }
+    top: 88px;
+    left: 0;
+    right: 0;
   }
   .step-mobile-bg-two {
     top: 330px;
@@ -2431,9 +2426,13 @@ onMounted(() => {
     }
   }
   .step-mobile-bg-three {
-    bottom: 25.46vw;
-    left: 0px;
-    width: 85%;
+    bottom: 31.46vw;
+    left: 0;
+    right: 0;
+    // width: 85%;
+    & > img {
+      width: 100%;
+    }
   }
   .mobile-new-step {
     margin: 25px 27px 47px 30px;

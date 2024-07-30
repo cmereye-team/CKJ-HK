@@ -555,6 +555,7 @@ const newsmoduleLists = [
       margin: 5px 0;
       section {
         display: flex;
+        flex: 1;
         img {
           width: 100%;
         }
