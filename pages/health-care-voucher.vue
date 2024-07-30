@@ -80,10 +80,10 @@ const pageDetail: any = {
     {
       type: 'img',
       list: [
-        'https://static.cmereye.com/imgs/2024/07/0cc0ec0e2bd33c16.png',
+        'https://static.cmereye.com/imgs/2024/07/40092437294c9e2b.webp',
         'https://static.cmereye.com/imgs/2024/02/8b093aa825acf2bf.webp',
       ],
-      className: 'imgLists nob',
+      className: 'imgLists nob twoImg',
     },
     {
       type: 'p',
