@@ -2137,6 +2137,14 @@ onMounted(() => {
           align-items: center;
           gap: 0 7px;
           padding-left: 30px;
+          & > span:nth-child(1) {
+            color: var(--Theme-Color, #fc1682);
+            font-family: FakePearl;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 130%; /* 20.8px */
+          }
         }
         & > p:nth-child(6) {
           margin-top: 10px;
