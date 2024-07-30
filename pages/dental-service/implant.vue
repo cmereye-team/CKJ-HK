@@ -1142,7 +1142,7 @@ const { height } = useWindowSize()
                     <span>手術速度</span>
                     <span
                       ><img
-                        src="	https://static.cmereye.com/imgs/2024/07/60f2ec9f5450a394.png"
+                        src="https://static.cmereye.com/imgs/2024/07/60f2ec9f5450a394.png"
                         alt=""
                     /></span>
                   </p>
@@ -1150,7 +1150,7 @@ const { height } = useWindowSize()
                     <span>恢原速度</span>
                     <span
                       ><img
-                        src="	https://static.cmereye.com/imgs/2024/07/ebc3f719fd69e7df.png"
+                        src="https://static.cmereye.com/imgs/2024/07/ebc3f719fd69e7df.png"
                         alt=""
                     /></span>
                   </p>
