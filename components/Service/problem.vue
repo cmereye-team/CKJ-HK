@@ -208,7 +208,7 @@ const activeNames = ref(0)
         }
         & > span:last-child {
           padding: 20px 17px 1px 14px;
-          font-size: 14px;
+          font-size: 16px;
         }
       }
     }

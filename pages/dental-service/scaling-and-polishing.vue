@@ -979,7 +979,7 @@ onMounted(() => {
         </div>
       </div>
       <serviceCard />
-      <ServiceProblem :problem-data="problemData" v-if="windowWidth > 767" />
+      <ServiceProblem :problem-data="problemData" />
       <NewAddress />
       <ContactForm-new />
     </div>

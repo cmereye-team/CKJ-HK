@@ -1520,7 +1520,7 @@ const { height } = useWindowSize()
           </div>
         </div>
       </div>
-      <ServiceProblem :problemData="problemData" v-if="windowWidth > 768" />
+      <ServiceProblem :problemData="problemData" />
       <!-- <div class="contactForm">
         <ContactForm-new />
       </div> -->

@@ -281,21 +281,38 @@ const reason2Data = {
     {
       img: 'https://static.cmereye.com/imgs/2023/11/4e55161480814853.png',
       context: '牙齦炎',
+      numTag: 'https://static.cmereye.com/imgs/2024/07/e0feaceff214278b.png',
+      mbImg: 'https://static.cmereye.com/imgs/2024/07/767d249375923cf2.png',
     },
     {
       img: 'https://static.cmereye.com/imgs/2023/11/f7510b958ec91963.png',
       context: '輕度牙周病',
+      numTag: 'https://static.cmereye.com/imgs/2024/07/120738fb56a5d759.png',
+      mbImg: 'https://static.cmereye.com/imgs/2024/07/dc8254d7c4b6833a.png',
     },
     {
       img: 'https://static.cmereye.com/imgs/2023/11/1c6c60d91d583f84.png',
       context: '中度牙周病',
+      numTag: 'https://static.cmereye.com/imgs/2024/07/59c210a9e06a8624.png',
+      mbImg: 'https://static.cmereye.com/imgs/2024/07/c28cded0a6ef76a7.png',
     },
     {
       img: 'https://static.cmereye.com/imgs/2023/11/c90e097b4197e5ba.png',
       context: '重度牙周病',
+      numTag: 'https://static.cmereye.com/imgs/2024/07/dabb11b53d7c5e07.png',
+      mbImg: 'https://static.cmereye.com/imgs/2024/07/d9718482c09cb712.png',
     },
   ],
 }
+
+let windowWidth = ref(390)
+const getWindowWidth = () => {
+  windowWidth.value = window.innerWidth
+}
+onMounted(() => {
+  getWindowWidth()
+  window.addEventListener('resize', getWindowWidth)
+})
 </script>
 
 
@@ -341,12 +358,27 @@ const reason2Data = {
             class="reason2-lists-item"
           >
             <div class="image">
-              <span>{{ index + 1 }}</span>
-              <img :src="item.img" alt="" />
+              <!-- <span>{{ index + 1 }}</span> -->
+              <img :src="item.mbImg" alt="" />
             </div>
             <div class="text">
               {{ item.context }}
             </div>
+            <div><img :src="item.numTag" alt="" /></div>
+          </div>
+        </div>
+        <div class="reason2-lists-bg" v-if="windowWidth < 767">
+          <div>
+            <img
+              src="https://static.cmereye.com/imgs/2024/07/78899ac5edd7bdf7.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://static.cmereye.com/imgs/2024/07/7f76acbb92a54700.png"
+              alt=""
+            />
           </div>
         </div>
       </div>
@@ -382,7 +414,7 @@ const reason2Data = {
             {{ noteData.title }}
           </div>
         </div>
-        <div class="note-content">
+        <div class="note-content" v-if="windowWidth > 767">
           <div class="note-content-l">
             <img
               src="https://static.cmereye.com/imgs/2023/11/5ef6ba18cee4782a.jpg"
@@ -396,6 +428,70 @@ const reason2Data = {
             >
               <span>·</span>
               <span>{{ $t(noteItem.name) }}</span>
+            </div>
+          </div>
+        </div>
+        <div class="note-content-mobile" v-else>
+          <div>
+            一般牙周病治療可分為<span>非手術性</span>和<span>手術性</span>，醫生會檢查及評估病人情況，擬定最適切的治療方案。
+          </div>
+          <div>
+            <div>
+              <div>非手術治療</div>
+              <div>
+                <div>
+                  <div>
+                    <img
+                      src="https://static.cmereye.com/imgs/2024/07/8fee088c8053dc1b.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    清除黏附在牙齦邊緣的牙菌膜、牙石和牙漬，使牙齒回復乾淨和平滑。有助預防牙周病、牙齦炎、牙周炎。
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <img
+                      src="https://static.cmereye.com/imgs/2024/07/aa9796618b0bc026.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    利用牙科儀器，深入牙齦發炎的底部，清除牙菌斑、牙結石及毒素。
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div>手術治療</div>
+              <div>
+                <div>
+                  有嚴重牙周病或是牙齦太厚實患者，進行牙周手術會較理想。
+                </div>
+                <div>
+                  <div>
+                    <img
+                      src="https://static.cmereye.com/imgs/2024/07/512770b5e4a2fedd.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    局部麻醉後切開牙齦組織，徹底清除牙根表面及牙周袋下的牙垢。若牙周骨缺損會修整或填補。
+                  </div>
+                </div>
+                <div>
+                  <div>
+                    <img
+                      src="https://static.cmereye.com/imgs/2024/07/1b34e23d621baaf6.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    填補骨頭缺損部分，讓齒槽骨、牙周韌帶、牙骨質結構再生。
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -430,7 +526,7 @@ const reason2Data = {
       <ServiceProblem :problemData="problemData" />
       <serviceCard />
       <NewAddress />
-     <ContactForm-new />
+      <ContactForm-new />
     </div>
     <PageFooter />
     <PageNavbar />
@@ -842,6 +938,8 @@ const reason2Data = {
     &-lists {
       flex-direction: column;
       margin: 72px auto 0;
+      box-sizing: border-box;
+      padding: 0px 15px 0px 35px;
       &-item {
         padding: 0 52px;
         width: 100%;
@@ -849,14 +947,81 @@ const reason2Data = {
           font-size: 20px;
           margin-top: 20px;
         }
-        &:not(:last-child) {
-          margin-bottom: 53px;
+        border-radius: var(--Count, 0px) 10px 10px var(--Count, 0px);
+        border: 2px solid var(--Theme-Color, #fc1682);
+        background: var(--White, #fff);
+        box-sizing: border-box;
+        padding: 14px 16px;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 0 16px;
+        & > div:nth-child(1) {
+          width: 94px;
+          & > img {
+            width: 100%;
+          }
         }
+        & > div:nth-child(2) {
+          margin-top: 0;
+          color: var(--Grey-Deep, #4d4d4d);
+          text-align: justify;
+          font-family: 'Noto Sans HK';
+          font-size: 3.2vw;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 160%; /* 19.2px */
+          letter-spacing: 1.2px;
+        }
+        &:not(:last-child) {
+          margin-bottom: 6px;
+        }
+        position: relative;
+      }
+      &-item:nth-child(2) {
+        border-radius: var(--Count, 0px) 10px 10px var(--Count, 0px);
+        border: 2px solid var(--Blue-Deep, #00aeff);
+        background: var(--White, #fff);
+      }
+      &-item::before {
+        content: '1';
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        left: -5.33vw;
+        top: -0.533vw;
+        height: 104%;
+        width: 5.33vw;
+        border-radius: 10px var(--Count, 0px) var(--Count, 0px) 10px;
+        background: var(--Theme-Color, #fc1682);
+        color: var(--White, #fff);
+        text-align: center;
+        font-family: FakePearl;
+        font-size: 5.33vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 32px */
+      }
+      &-item:nth-child(2)::before {
+        content: '2';
+        border-radius: 10px var(--Count, 0px) var(--Count, 0px) 10px;
+        background: var(--Blue-Deep, #00aeff);
+      }
+      &-item:nth-child(3)::before {
+        content: '3';
       }
     }
   }
   .reason2 {
+    background: linear-gradient(
+      0deg,
+      rgba(255, 241, 240, 0) 0%,
+      rgba(255, 241, 240, 0.7) 12.5%,
+      rgba(255, 241, 240, 0.7) 81.99%,
+      rgba(255, 241, 240, 0) 100%
+    );
     margin-top: 80px;
+    position: relative;
     &-title {
       &-in {
         font-size: 26px;
@@ -864,17 +1029,64 @@ const reason2Data = {
     }
     &-lists {
       flex-direction: column;
-      margin: 41px auto 0;
+      margin: 11.2vw 7.2vw 0 8vw;
+      display: grid;
+      gap: 13.333vw 7.4667vw;
+      width: fit-content;
+      grid-template-columns: repeat(2, 1fr);
+      position: relative;
+      z-index: 5;
       &-item {
-        padding: 0 40px;
-        width: 100%;
+        position: relative;
+        padding: 0;
+        width: fit-content;
+        .image {
+          width: 38.667vw;
+        }
         .text {
-          font-size: 20px;
-          margin-top: 16px;
+          // font-size: 20px;
+          text-align: left;
+          margin: 0;
+          margin-top: 6px;
+          color: var(--Theme-Color, #fc1682);
+          font-family: FakePearl;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 130%; /* 20.8px */
+          width: fit-content;
         }
-        &:not(:last-child) {
-          margin-bottom: 53px;
+        // &:not(:last-child) {
+        //   margin-bottom: 53px;
+        // }
+        & > div:nth-child(3) {
+          position: absolute;
+          top: -6px;
+          left: -6px;
         }
+      }
+      &-item:nth-child(even) {
+        margin-top: 28px;
+      }
+    }
+    .reason2-lists-bg {
+      position: relative;
+      z-index: 2;
+      & > div {
+        width: 100vw;
+        & > img {
+          width: 100%;
+        }
+      }
+      & > div:nth-child(1) {
+        position: absolute;
+        left: 0;
+        top: -90vw;
+      }
+      & > div:nth-child(2) {
+        position: absolute;
+        right: 0;
+        bottom: 10vw;
       }
     }
   }
@@ -940,6 +1152,131 @@ const reason2Data = {
             font-weight: 500;
             &:nth-of-type(1) {
               min-width: 15px;
+            }
+          }
+        }
+      }
+    }
+    .note-content-mobile {
+      & > div:nth-child(1) {
+        margin: 20px 30px 0;
+        color: var(--Grey-Deep, #4d4d4d);
+        font-family: FakePearl;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 150%; /* 24px */
+        & > span:nth-child(1) {
+          color: var(--Theme-Color, #fc1682);
+        }
+        & > span:nth-child(2) {
+          color: var(--Blue-Deep, #00aeff);
+        }
+      }
+      & > div:not(:first-child) {
+        & > div {
+          margin-top: 20px;
+          & > div:nth-child(1) {
+            border-radius: var(--Count, 0px) 20px 20px var(--Count, 0px);
+            background: var(--Theme-Color, #fc1682);
+            color: var(--White, #fff);
+            text-align: right;
+            font-family: FakePearl;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 130%; /* 20.8px */
+            box-sizing: border-box;
+            padding: 5px 30px;
+            width: fit-content;
+            margin-bottom: 12px;
+          }
+          & > div:nth-child(2) {
+            padding: 0 30px;
+            & > :not(:last-child) {
+              margin-bottom: 20px;
+            }
+            & > div {
+              display: flex;
+              gap: 0 20px;
+              & > div:nth-child(1) {
+                width: 20.266vw;
+                min-width: 20.266vw;
+                & > img {
+                  width: 100%;
+                }
+                position: relative;
+                z-index: 5;
+              }
+              & > div:nth-child(1)::before {
+                content: '';
+                display: inline-block;
+                width: 95.787px;
+                height: 24.832px;
+                background: var(--Theme-Color, #fc1682);
+                border-radius: 12px;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                top: -5px;
+                color: #fff;
+                text-align: center;
+                font-family: FakePearl;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 150%; /* 20.8px */
+              }
+              & > div:nth-child(2) {
+                color: var(--Grey-Deep, #4d4d4d);
+                text-align: justify;
+                font-family: 'Noto Sans HK';
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 160%; /* 19.2px */
+                letter-spacing: 1.2px;
+              }
+            }
+            & > div:nth-child(2) {
+              & > div:nth-child(1) {
+                color: var(--Grey-Deep, #4d4d4d);
+                font-family: FakePearl;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 150%; /* 24px */
+              }
+            }
+          }
+        }
+        & > div:nth-child(1) {
+          & > div:nth-child(2) {
+            & > div:nth-child(1) {
+              & > div:nth-child(1)::before {
+                content: '定期洗牙';
+              }
+            }
+            & > div:nth-child(2) {
+              & > div:nth-child(1)::before {
+                content: '齦下刮治術';
+              }
+            }
+          }
+        }
+        & > div:nth-child(2) {
+          & > div:nth-child(2) {
+            & > div:nth-child(2) {
+              & > div:nth-child(1)::before {
+                background: var(--Blue-Deep, #00aeff);
+                content: '牙周翻瓣術';
+              }
+            }
+            & > div:nth-child(3) {
+              & > div:nth-child(1)::before {
+                background: var(--Blue-Deep, #00aeff);
+                content: '牙周植骨術';
+              }
             }
           }
         }
