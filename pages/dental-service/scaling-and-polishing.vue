@@ -2416,6 +2416,9 @@ onMounted(() => {
     top: 88px;
     left: 0;
     right: 0;
+    & > img {
+      width: 100%;
+    }
   }
   .step-mobile-bg-two {
     top: 330px;
