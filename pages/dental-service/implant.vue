@@ -706,7 +706,7 @@ const { height } = useWindowSize()
                     <span>性價比</span>
                     <span
                       ><img
-                        src="https://static.cmereye.com/imgs/2024/07/b2d166c7b5758388.png"
+                        src="../../assets/images/5star.svg"
                         alt=""
                     /></span>
                   </p>
@@ -714,7 +714,7 @@ const { height } = useWindowSize()
                     <span>耐用度</span>
                     <span
                       ><img
-                        src="https://static.cmereye.com/imgs/2024/07/60f2ec9f5450a394.png"
+                        src="../../assets/images/3star.svg"
                         alt=""
                     /></span>
                   </p>
@@ -722,7 +722,7 @@ const { height } = useWindowSize()
                     <span>客製化</span>
                     <span
                       ><img
-                        src="https://static.cmereye.com/imgs/2024/07/60f2ec9f5450a394.png"
+                        src="../../assets/images/3star.svg"
                         alt=""
                     /></span>
                   </p>
@@ -756,7 +756,7 @@ const { height } = useWindowSize()
                     <span>性價比</span>
                     <span
                       ><img
-                        src="https://static.cmereye.com/imgs/2024/07/60f2ec9f5450a394.png"
+                        src="../../assets/images/3star.svg"
                         alt=""
                     /></span>
                   </p>
@@ -764,7 +764,7 @@ const { height } = useWindowSize()
                     <span>耐用度</span>
                     <span
                       ><img
-                        src="https://static.cmereye.com/imgs/2024/07/60f2ec9f5450a394.png"
+                        src="../../assets/images/3star.svg"
                         alt=""
                     /></span>
                   </p>
@@ -772,7 +772,7 @@ const { height } = useWindowSize()
                     <span>客製化</span>
                     <span
                       ><img
-                        src="https://static.cmereye.com/imgs/2024/07/60f2ec9f5450a394.png"
+                        src="../../assets/images/3star.svg"
                         alt=""
                     /></span>
                   </p>
@@ -806,7 +806,7 @@ const { height } = useWindowSize()
                     <span>性價比</span>
                     <span
                       ><img
-                        src="https://static.cmereye.com/imgs/2024/07/682fdb87c616bbbe.png"
+                        src="../../assets/images/4star.svg"
                         alt=""
                     /></span>
                   </p>
@@ -814,7 +814,7 @@ const { height } = useWindowSize()
                     <span>耐用度</span>
                     <span
                       ><img
-                        src="https://static.cmereye.com/imgs/2024/07/b2d166c7b5758388.png"
+                        src="../../assets/images/5star.svg"
                         alt=""
                     /></span>
                   </p>
@@ -822,7 +822,7 @@ const { height } = useWindowSize()
                     <span>客製化</span>
                     <span
                       ><img
-                        src="https://static.cmereye.com/imgs/2024/07/682fdb87c616bbbe.png"
+                        src="../../assets/images/4star.svg"
                         alt=""
                     /></span>
                   </p>
@@ -856,7 +856,7 @@ const { height } = useWindowSize()
                     <span>性價比</span>
                     <span
                       ><img
-                        src="https://static.cmereye.com/imgs/2024/07/682fdb87c616bbbe.png"
+                        src="../../assets/images/4star.svg"
                         alt=""
                     /></span>
                   </p>
@@ -864,7 +864,7 @@ const { height } = useWindowSize()
                     <span>耐用度</span>
                     <span
                       ><img
-                        src="https://static.cmereye.com/imgs/2024/07/682fdb87c616bbbe.png"
+                        src="../../assets/images/4star.svg"
                         alt=""
                     /></span>
                   </p>
@@ -872,7 +872,7 @@ const { height } = useWindowSize()
                     <span>客製化</span>
                     <span
                       ><img
-                        src="https://static.cmereye.com/imgs/2024/07/b2d166c7b5758388.png"
+                        src="../../assets/images/5star.svg"
                         alt=""
                     /></span>
                   </p>
@@ -906,7 +906,7 @@ const { height } = useWindowSize()
                     <span>性價比</span>
                     <span
                       ><img
-                        src="https://static.cmereye.com/imgs/2024/07/682fdb87c616bbbe.png"
+                        src="../../assets/images/4star.svg"
                         alt=""
                     /></span>
                   </p>
@@ -914,7 +914,7 @@ const { height } = useWindowSize()
                     <span>耐用度</span>
                     <span
                       ><img
-                        src="https://static.cmereye.com/imgs/2024/07/b2d166c7b5758388.png"
+                        src="../../assets/images/5star.svg"
                         alt=""
                     /></span>
                   </p>
@@ -922,7 +922,7 @@ const { height } = useWindowSize()
                     <span>客製化</span>
                     <span
                       ><img
-                        src="https://static.cmereye.com/imgs/2024/07/682fdb87c616bbbe.png"
+                        src="../../assets/images/4star.svg"
                         alt=""
                     /></span>
                   </p>
@@ -1090,7 +1090,7 @@ const { height } = useWindowSize()
                     <span>手術速度</span>
                     <span
                       ><img
-                        src="https://static.cmereye.com/imgs/2024/07/b2d166c7b5758388.png"
+                        src="../../assets/images/5star.svg"
                         alt=""
                     /></span>
                   </p>
@@ -1098,7 +1098,7 @@ const { height } = useWindowSize()
                     <span>恢原速度</span>
                     <span
                       ><img
-                        src="https://static.cmereye.com/imgs/2024/07/b2d166c7b5758388.png"
+                        src="../../assets/images/5star.svg"
                         alt=""
                     /></span>
                   </p>
@@ -1142,7 +1142,7 @@ const { height } = useWindowSize()
                     <span>手術速度</span>
                     <span
                       ><img
-                        src="https://static.cmereye.com/imgs/2024/07/60f2ec9f5450a394.png"
+                        src="../../assets/images/3star.svg"
                         alt=""
                     /></span>
                   </p>

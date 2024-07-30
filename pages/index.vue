@@ -1183,7 +1183,7 @@ const contentDom = ref(false)
               <div>
                 <div>
                   <img
-                    src="https://static.cmereye.com/imgs/2024/07/3a0cf1b5a28d2d34.png"
+                    src="../assets/images/zmm.svg"
                     alt="星級客戶"
                   />
                 </div>

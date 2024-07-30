@@ -611,7 +611,7 @@ onMounted(() => {
                   <span>潔淨度</span>
                   <span
                     ><img
-                      src="https://static.cmereye.com/imgs/2024/07/60f2ec9f5450a394.png"
+                      src="../../assets/images/3star.svg"
                       alt="潔淨度"
                   /></span>
                 </p>
@@ -619,7 +619,7 @@ onMounted(() => {
                   <span>美白度</span>
                   <span
                     ><img
-                      src="https://static.cmereye.com/imgs/2024/07/ebc3f719fd69e7df.png"
+                      src="../../assets/images/2star.svg"
                       alt="美白度"
                   /></span>
                 </p>
@@ -627,7 +627,7 @@ onMounted(() => {
                   <span>舒適度</span>
                   <span
                     ><img
-                      src="https://static.cmereye.com/imgs/2024/07/60f2ec9f5450a394.png"
+                      src="../../assets/images/3star.svg"
                       alt="舒適度"
                   /></span>
                 </p>
@@ -635,7 +635,7 @@ onMounted(() => {
                   <span>性價比</span>
                   <span
                     ><img
-                      src="https://static.cmereye.com/imgs/2024/07/b2d166c7b5758388.png"
+                      src="../../assets/images/5star.svg"
                       alt="性價比"
                   /></span>
                 </p>
@@ -663,7 +663,7 @@ onMounted(() => {
                   <span>潔淨度</span>
                   <span
                     ><img
-                      src="https://static.cmereye.com/imgs/2024/07/682fdb87c616bbbe.png"
+                      src="../../assets/images/4star.svg"
                       alt="潔淨度"
                   /></span>
                 </p>
@@ -671,7 +671,7 @@ onMounted(() => {
                   <span>美白度</span>
                   <span
                     ><img
-                      src="https://static.cmereye.com/imgs/2024/07/682fdb87c616bbbe.png"
+                      src="../../assets/images/4star.svg"
                       alt="美白度"
                   /></span>
                 </p>
@@ -679,7 +679,7 @@ onMounted(() => {
                   <span>舒適度</span>
                   <span
                     ><img
-                      src="https://static.cmereye.com/imgs/2024/07/682fdb87c616bbbe.png"
+                      src="../../assets/images/4star.svg"
                       alt="舒適度"
                   /></span>
                 </p>
@@ -687,7 +687,7 @@ onMounted(() => {
                   <span>性價比</span>
                   <span
                     ><img
-                      src="https://static.cmereye.com/imgs/2024/07/b2d166c7b5758388.png"
+                      src="../../assets/images/5star.svg"
                       alt="性價比"
                   /></span>
                 </p>
@@ -716,7 +716,7 @@ onMounted(() => {
                   <span>潔淨度</span>
                   <span
                     ><img
-                      src="https://static.cmereye.com/imgs/2024/07/b2d166c7b5758388.png"
+                      src="../../assets/images/5star.svg"
                       alt="潔淨度"
                   /></span>
                 </p>
@@ -724,7 +724,7 @@ onMounted(() => {
                   <span>美白度</span>
                   <span
                     ><img
-                      src="https://static.cmereye.com/imgs/2024/07/b2d166c7b5758388.png"
+                      src="../../assets/images/5star.svg"
                       alt="美白度"
                   /></span>
                 </p>
@@ -732,7 +732,7 @@ onMounted(() => {
                   <span>舒適度</span>
                   <span
                     ><img
-                      src="https://static.cmereye.com/imgs/2024/07/b2d166c7b5758388.png"
+                      src="../../assets/images/5star.svg"
                       alt="舒適度"
                   /></span>
                 </p>
@@ -740,7 +740,7 @@ onMounted(() => {
                   <span>性價比</span>
                   <span
                     ><img
-                      src="https://static.cmereye.com/imgs/2024/07/682fdb87c616bbbe.png"
+                      src="../../assets/images/4star.svg"
                       alt="性價比"
                   /></span>
                 </p>
@@ -979,7 +979,7 @@ onMounted(() => {
         </div>
       </div>
       <serviceCard />
-      <ServiceProblem :problem-data="problemData" />
+      <ServiceProblem :problem-data="problemData" v-if="windowWidth > 767" />
       <NewAddress />
       <ContactForm-new />
     </div>
@@ -2190,7 +2190,7 @@ onMounted(() => {
         & > div:nth-child(1) {
           & > div:nth-child(1)::after {
             content: '';
-            background: url('https://static.cmereye.com/imgs/2024/07/875194eb351af3a5.png')
+            background: url('../../assets/images/blueTag.svg')
               no-repeat;
             background-size: 100%;
           }
@@ -2201,7 +2201,7 @@ onMounted(() => {
       & > div:nth-child(1) {
         & > div:nth-child(1) {
           & > div:nth-child(1)::after {
-            background: url('https://static.cmereye.com/imgs/2024/07/6ed3b06a8cf824c8.png')
+            background: url('../../assets/images/orangeTag.svg')
               no-repeat;
             background-size: 100%;
           }
