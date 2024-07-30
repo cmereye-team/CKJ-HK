@@ -1171,6 +1171,10 @@ const { height } = useWindowSize()
               <li>如顎骨密度不足或有缺陷，或需進行額外的補骨手術</li>
             </ul>
           </div>
+          <div>
+            <span>*每個人的實際情況存在差異，</span>
+            <span>建議諮詢您的牙醫了解最適合方案。</span>
+          </div>
         </div>
       </div>
       <div class="Plant_brand_series" v-if="windowWidth > 768">
@@ -3162,6 +3166,19 @@ const { height } = useWindowSize()
           background: var(--Blue-Deep, #00aeff);
         }
       }
+    }
+    & > div:last-child {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: var(--Theme-Color, #fc1682);
+      text-align: center;
+      font-family: FakePearl;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 160%; /* 24px */
+      letter-spacing: 1.5px;
     }
   }
   .note-mobile {
