@@ -129,6 +129,7 @@ const stepData = {
   lists: [
     {
       title: '第1步',
+      imgNum: 'https://static.cmereye.com/imgs/2024/07/e0feaceff214278b.png',
       img: 'https://static.cmereye.com/imgs/2023/09/b881d3776b27ccff.jpg',
       name: '全面口腔檢查及建立個人化方案',
       context:
@@ -136,12 +137,14 @@ const stepData = {
     },
     {
       title: '第2步',
+      imgNum: 'https://static.cmereye.com/imgs/2024/07/120738fb56a5d759.png',
       img: 'https://static.cmereye.com/imgs/2023/09/0b7ef1a0f39e9ca9.jpg',
       name: '注射麻醉藥',
       context: '',
     },
     {
       title: '第3步',
+      imgNum: 'https://static.cmereye.com/imgs/2024/07/59c210a9e06a8624.png',
       img: 'https://static.cmereye.com/imgs/2023/09/599e940cf6a46009.jpg',
       name: '把植體植入顎骨',
       context:
@@ -149,12 +152,14 @@ const stepData = {
     },
     {
       title: '第4步',
+      imgNum: 'https://static.cmereye.com/imgs/2024/07/dabb11b53d7c5e07.png',
       img: 'https://static.cmereye.com/imgs/2023/09/915fb53ec41c5511.jpg',
       name: '安裝臨時假牙',
       context: '確保植體與牙骨處於良好狀況後，根據客人實際情況，安裝臨時假牙。',
     },
     {
       title: '第5步',
+      imgNum: 'https://static.cmereye.com/imgs/2024/07/9b5323760b492f54.png',
       img: 'https://static.cmereye.com/imgs/2023/09/7096607a2bb3d79e.jpg',
       name: '套上牙冠及微調',
       context:
@@ -162,6 +167,7 @@ const stepData = {
     },
     {
       title: '第6步',
+      imgNum: 'https://static.cmereye.com/imgs/2024/07/90802da91d96398f.png',
       img: 'https://static.cmereye.com/imgs/2023/09/9e044f535b6a7b46.jpg',
       name: '定期覆診',
       context: '根據客人情況，定期覆診跟進情況。',
@@ -327,7 +333,7 @@ const plagueData = {
     },
     {
       type: 'img',
-      context: 'https://static.cmereye.com/imgs/2023/09/6beac28d34c4d438.jpg',
+      context: 'https://static.cmereye.com/imgs/2024/07/adb081574894addb.png',
     },
     {
       type: 'text',
@@ -674,7 +680,288 @@ const { height } = useWindowSize()
           />
         </div>
       </div>
-      <div class="notice">
+      <div class="brand_mobile" v-if="windowWidth < 768">
+        <div class="dentistryServices-title">
+          <div class="dentistryServices-title-in bb">植體品牌系列</div>
+        </div>
+        <div class="brand_mobile_items">
+          <div>
+            <div>
+              <div>
+                <img
+                  src="https://static.cmereye.com/imgs/2024/07/37d4aef16e4d00a0.png"
+                  alt=""
+                />
+              </div>
+              <div>
+                <div>
+                  <img
+                    src="https://static.cmereye.com/imgs/2024/07/ca3b3ebc455b892f.png"
+                    alt=""
+                  />
+                </div>
+                <div>美國皓聖</div>
+                <div>
+                  <p>
+                    <span>性價比</span>
+                    <span
+                      ><img
+                        src="https://static.cmereye.com/imgs/2024/07/b2d166c7b5758388.png"
+                        alt=""
+                    /></span>
+                  </p>
+                  <p>
+                    <span>耐用度</span>
+                    <span
+                      ><img
+                        src="https://static.cmereye.com/imgs/2024/07/60f2ec9f5450a394.png"
+                        alt=""
+                    /></span>
+                  </p>
+                  <p>
+                    <span>客製化</span>
+                    <span
+                      ><img
+                        src="https://static.cmereye.com/imgs/2024/07/60f2ec9f5450a394.png"
+                        alt=""
+                    /></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <ul>
+              <li>經濟實惠，全球暢銷</li>
+              <li>純鈦材料，親和力強</li>
+              <li>特殊螺紋設計，適合即剝即種</li>
+            </ul>
+          </div>
+          <div>
+            <div>
+              <div>
+                <img
+                  src="https://static.cmereye.com/imgs/2024/07/91498e3f9a4adb19.png"
+                  alt=""
+                />
+              </div>
+              <div>
+                <div>
+                  <img
+                    src="https://static.cmereye.com/imgs/2024/07/64f940c14ac835cf.png"
+                    alt=""
+                  />
+                </div>
+                <div>韓國奧齒泰</div>
+                <div>
+                  <p>
+                    <span>性價比</span>
+                    <span
+                      ><img
+                        src="https://static.cmereye.com/imgs/2024/07/60f2ec9f5450a394.png"
+                        alt=""
+                    /></span>
+                  </p>
+                  <p>
+                    <span>耐用度</span>
+                    <span
+                      ><img
+                        src="https://static.cmereye.com/imgs/2024/07/60f2ec9f5450a394.png"
+                        alt=""
+                    /></span>
+                  </p>
+                  <p>
+                    <span>客製化</span>
+                    <span
+                      ><img
+                        src="https://static.cmereye.com/imgs/2024/07/60f2ec9f5450a394.png"
+                        alt=""
+                    /></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <ul>
+              <li>亞洲人種植首選</li>
+              <li>獲FDA、CE、SFDA三認證</li>
+              <li>體積小，譽為適合亞洲人的植體</li>
+            </ul>
+          </div>
+          <div>
+            <div>
+              <div>
+                <img
+                  src="https://static.cmereye.com/imgs/2024/07/fb7f79997f9b9881.png"
+                  alt=""
+                />
+              </div>
+              <div>
+                <div>
+                  <img
+                    src="https://static.cmereye.com/imgs/2024/07/672e62ecbd5f52ff.png"
+                    alt=""
+                  />
+                </div>
+                <div>瑞典尼奧斯</div>
+                <div>
+                  <p>
+                    <span>性價比</span>
+                    <span
+                      ><img
+                        src="https://static.cmereye.com/imgs/2024/07/682fdb87c616bbbe.png"
+                        alt=""
+                    /></span>
+                  </p>
+                  <p>
+                    <span>耐用度</span>
+                    <span
+                      ><img
+                        src="https://static.cmereye.com/imgs/2024/07/b2d166c7b5758388.png"
+                        alt=""
+                    /></span>
+                  </p>
+                  <p>
+                    <span>客製化</span>
+                    <span
+                      ><img
+                        src="https://static.cmereye.com/imgs/2024/07/682fdb87c616bbbe.png"
+                        alt=""
+                    /></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <ul>
+              <li>穩固耐用</li>
+              <li>超親水表面處理，長期穩定</li>
+              <li>調節性能高，適用不同情況</li>
+            </ul>
+          </div>
+          <div>
+            <div>
+              <div>
+                <img
+                  src="https://static.cmereye.com/imgs/2024/07/682df234b160dbb7.png"
+                  alt=""
+                />
+              </div>
+              <div>
+                <div>
+                  <img
+                    src="https://static.cmereye.com/imgs/2024/07/99469581372832b7.png"
+                    alt=""
+                  />
+                </div>
+                <div>德國Ankylos</div>
+                <div>
+                  <p>
+                    <span>性價比</span>
+                    <span
+                      ><img
+                        src="https://static.cmereye.com/imgs/2024/07/682fdb87c616bbbe.png"
+                        alt=""
+                    /></span>
+                  </p>
+                  <p>
+                    <span>耐用度</span>
+                    <span
+                      ><img
+                        src="https://static.cmereye.com/imgs/2024/07/682fdb87c616bbbe.png"
+                        alt=""
+                    /></span>
+                  </p>
+                  <p>
+                    <span>客製化</span>
+                    <span
+                      ><img
+                        src="https://static.cmereye.com/imgs/2024/07/b2d166c7b5758388.png"
+                        alt=""
+                    /></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <ul>
+              <li>專利精密設計，穩定出眾，終身保養</li>
+              <li>個人化美學設計，滿意度高</li>
+              <li>完美保存牙骨及組織</li>
+            </ul>
+          </div>
+          <div>
+            <div>
+              <div>
+                <img
+                  src="https://static.cmereye.com/imgs/2024/07/273c0a26b796a509.png"
+                  alt=""
+                />
+              </div>
+              <div>
+                <div>
+                  <img
+                    src="https://static.cmereye.com/imgs/2024/07/fb380b1160ac9312.png"
+                    alt=""
+                  />
+                </div>
+                <div>瑞士士卓曼</div>
+                <div>
+                  <p>
+                    <span>性價比</span>
+                    <span
+                      ><img
+                        src="https://static.cmereye.com/imgs/2024/07/682fdb87c616bbbe.png"
+                        alt=""
+                    /></span>
+                  </p>
+                  <p>
+                    <span>耐用度</span>
+                    <span
+                      ><img
+                        src="https://static.cmereye.com/imgs/2024/07/b2d166c7b5758388.png"
+                        alt=""
+                    /></span>
+                  </p>
+                  <p>
+                    <span>客製化</span>
+                    <span
+                      ><img
+                        src="https://static.cmereye.com/imgs/2024/07/682fdb87c616bbbe.png"
+                        alt=""
+                    /></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <ul>
+              <li>國際頂級植體，價格平香港1/3</li>
+              <li>國際口腔植牙協會推薦</li>
+              <li>癒合時間最短，最快4週完成</li>
+              <li>煙酒及糖尿病人士適用</li>
+              <li>全球終身保養</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="technology">
+        <div class="dentistryServices-title">
+          <div class="dentistryServices-title-in bb">「即剝即種」技術</div>
+        </div>
+        <div class="technology-in">
+          <div class="technology-in-t">
+            植牙流程需要經歷一段中長期的骨整合與復原，患者可能因為工作狀況或條件不允許，所以無法執行完整的植牙流程，我們會建議患者可以執行即剝即種植牙。
+          </div>
+          <div class="technology-in-img">
+            <img
+              src="https://static.cmereye.com/imgs/2024/04/bd2194046affe383.gif"
+              alt=""
+            />
+          </div>
+          <div class="technology-in-b">
+            此效果會根據個人健康狀況有所差異，需經過專業的療程評估
+          </div>
+        </div>
+        <div class="technology-btn">
+          <PageAnimBtnTypeTwo str="取得免費口腔CT檢查" />
+        </div>
+      </div>
+      <div class="notice" v-if="windowWidth > 767">
         <div class="dentistryServices-title notice-title">
           <div class="dentistryServices-title-in bb notice-title-in">
             <span>傳統植牙和</span>
@@ -717,7 +1004,7 @@ const { height } = useWindowSize()
               植牙6步曲
             </div>
           </div>
-          <div class="step-lists">
+          <div class="step-lists" v-if="windowWidth > 768">
             <div
               class="step-lists-in"
               v-for="(stepItem, stepIndex) in stepData.lists"
@@ -737,31 +1024,156 @@ const { height } = useWindowSize()
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="technology">
-        <div class="dentistryServices-title">
-          <div class="dentistryServices-title-in bb">「即剝即種」技術</div>
-        </div>
-        <div class="technology-in">
-          <div class="technology-in-t">
-            植牙流程需要經歷一段中長期的骨整合與復原，患者可能因為工作狀況或條件不允許，所以無法執行完整的植牙流程，我們會建議患者可以執行即剝即種植牙。
+          <div class="mobile-new-step" v-else>
+            <div
+              v-for="(stepItem, stepIndex) in stepData.lists"
+              :key="stepIndex"
+            >
+              <div>
+                <img :src="stepItem.img" alt="" />
+                <span>{{ stepItem.name }}</span
+                ><br />
+                <span>{{ stepItem.context }}</span>
+              </div>
+              <div><img :src="stepItem.imgNum" alt="" /></div>
+            </div>
           </div>
-          <div class="technology-in-img">
+          <div class="step-bg step-mobile-bg-one" v-if="windowWidth < 767">
             <img
-              src="https://static.cmereye.com/imgs/2024/04/bd2194046affe383.gif"
+              src="https://static.cmereye.com/imgs/2024/07/7623f608f7d35f04.png"
               alt=""
             />
           </div>
-          <div class="technology-in-b">
-            此效果會根據個人健康狀況有所差異，需經過專業的療程評估
+          <div class="step-bg step-mobile-bg-two" v-if="windowWidth < 767">
+            <img
+              src="https://static.cmereye.com/imgs/2024/07/6d29b5a6949eb591.png"
+              alt=""
+            />
+          </div>
+          <div class="step-bg step-mobile-bg-three" v-if="windowWidth < 767">
+            <img
+              src="https://static.cmereye.com/imgs/2024/07/7ada424c7d972d7e.png"
+              alt=""
+            />
           </div>
         </div>
-        <div class="technology-btn">
-          <PageAnimBtnTypeTwo str="取得免費口腔CT檢查" />
+      </div>
+      <div v-if="windowWidth < 768" class="classify">
+        <div
+          class="dentistryServices-title-in bb notice-title-in classify-title"
+        >
+          <span>植牙技術及類別</span>
+        </div>
+        <div class="classify-item">
+          <div>
+            <div>
+              <div>微創植牙</div>
+              <div>
+                <div>
+                  <p>
+                    <span>傷口大小</span>
+                    <span
+                      ><img
+                        src="https://static.cmereye.com/imgs/2024/07/263767dce218e4ea.png"
+                        alt=""
+                    /></span>
+                  </p>
+                  <p>
+                    <span>腫脹不適</span>
+                    <span
+                      ><img
+                        src="https://static.cmereye.com/imgs/2024/07/263767dce218e4ea.png"
+                        alt=""
+                    /></span>
+                  </p>
+                  <p>
+                    <span>手術速度</span>
+                    <span
+                      ><img
+                        src="https://static.cmereye.com/imgs/2024/07/b2d166c7b5758388.png"
+                        alt=""
+                    /></span>
+                  </p>
+                  <p>
+                    <span>恢原速度</span>
+                    <span
+                      ><img
+                        src="https://static.cmereye.com/imgs/2024/07/b2d166c7b5758388.png"
+                        alt=""
+                    /></span>
+                  </p>
+                </div>
+                <div>
+                  <img
+                    src="https://static.cmereye.com/imgs/2024/07/fecbf4cf52a26629.png"
+                    alt="微創植牙"
+                  />
+                </div>
+              </div>
+            </div>
+            <ul>
+              <li>電腦導航，直接透過手術導板穿透軟組織將植牙放到牙骨裡面</li>
+              <li>可以不用開刀縫針，減低感染風險</li>
+              <li>直接種植於現有顎骨結構，補骨需求小</li>
+            </ul>
+          </div>
+          <div>
+            <div>
+              <div>微創植牙</div>
+              <div>
+                <div>
+                  <p>
+                    <span>傷口大小</span>
+                    <span
+                      ><img
+                        src="https://static.cmereye.com/imgs/2024/07/fb6d5c0bd9a07d62.png"
+                        alt=""
+                    /></span>
+                  </p>
+                  <p>
+                    <span>腫脹不適</span>
+                    <span
+                      ><img
+                        src="https://static.cmereye.com/imgs/2024/07/9412f6f07be33fce.png"
+                        alt=""
+                    /></span>
+                  </p>
+                  <p>
+                    <span>手術速度</span>
+                    <span
+                      ><img
+                        src="	https://static.cmereye.com/imgs/2024/07/60f2ec9f5450a394.png"
+                        alt=""
+                    /></span>
+                  </p>
+                  <p>
+                    <span>恢原速度</span>
+                    <span
+                      ><img
+                        src="	https://static.cmereye.com/imgs/2024/07/ebc3f719fd69e7df.png"
+                        alt=""
+                    /></span>
+                  </p>
+                </div>
+                <div>
+                  <img
+                    src="https://static.cmereye.com/imgs/2024/07/9baee4806f0f6a90.png"
+                    alt="微創植牙"
+                  />
+                </div>
+              </div>
+            </div>
+            <ul>
+              <li>
+                以傳統手術刀切口，手術後需等待數個月讓植牙組織與人體結合為一個穩固的基礎，方可安裝人造牙齒
+              </li>
+              <li>傷口較大需縫合、療合時間較長</li>
+              <li>如顎骨密度不足或有缺陷，或需進行額外的補骨手術</li>
+            </ul>
+          </div>
         </div>
       </div>
-      <div class="Plant_brand_series">
+      <div class="Plant_brand_series" v-if="windowWidth > 768">
         <div class="dentistryServices-title">
           <div class="dentistryServices-title-in bb">植體品牌系列</div>
         </div>
@@ -1060,14 +1472,57 @@ const { height } = useWindowSize()
           </div>
         </div>
       </div>
-      <ServiceCase />
-      <ServiceProblem :problemData="problemData" />
+      <ServiceCase v-if="windowWidth > 768" />
+      <div v-else class="note-mobile">
+        <div class="index_title">客戶分享</div>
+        <div class="note-bg-mobile">
+          <div>
+            <span>締造自信燦爛笑顏</span>
+            <span>我只揀愛康健！</span>
+          </div>
+          <div>
+            <div>
+              <div>
+                <span>王先生</span>
+                <span>種植牙療程客戶</span>
+              </div>
+              <div>18/12/23</div>
+            </div>
+            <div>
+              十年前開始上邊的牙不停掉，每次食東西都好麻煩。經朋友介紹去了愛康健做種牙，現在的牙好實好齊，終於食到肉。
+            </div>
+          </div>
+          <div>
+            <div>
+              <div>
+                <span>古女士</span>
+                <span>種植牙療程客戶</span>
+              </div>
+              <div>5/6/24</div>
+            </div>
+            <div>甩左一隻門牙好快就安排到做手術😄客服答得好詳細👍</div>
+          </div>
+          <div>
+            <div>
+              <div>
+                <span>陳先生</span>
+                <span>種植牙療程客戶</span>
+              </div>
+              <div>14/3/24</div>
+            </div>
+            <div>
+              之前對植牙非常抗拒，但愛康健的醫生非常專業，醫植牙效果很好！特別感謝李美京醫生和顧主任，他們十分用心幫助我，讓我感覺很放心。整體來說，這次植牙體驗非常好，推薦給需要植牙的朋友們！😀
+            </div>
+          </div>
+        </div>
+      </div>
+      <ServiceProblem :problemData="problemData" v-if="windowWidth > 768" />
       <!-- <div class="contactForm">
-       <ContactForm-new />
+        <ContactForm-new />
       </div> -->
       <serviceCard />
       <NewAddress />
-     <ContactForm-new />
+      <ContactForm-new />
     </div>
     <PageFooter />
     <PageNavbar
@@ -1107,10 +1562,15 @@ const { height } = useWindowSize()
   }
   .plague {
     width: 100%;
+    // background: linear-gradient(
+    //   135deg,
+    //   rgba(255, 241, 240, 0.25) 0%,
+    //   rgba(255, 221, 218, 0.25) 100%
+    // );
     background: linear-gradient(
-      135deg,
-      rgba(255, 241, 240, 0.25) 0%,
-      rgba(255, 221, 218, 0.25) 100%
+      110deg,
+      rgba(252, 22, 130, 0.1) -0.92%,
+      rgba(255, 168, 198, 0) 100%
     );
     padding: 98px 0;
     margin-top: 30px;
@@ -1167,7 +1627,9 @@ const { height } = useWindowSize()
           align-items: center;
           color: #fff;
           border-radius: 50%;
-          background: var(--indexColor3);
+          // background: var(--indexColor3);
+          // border-radius: var(--Count, 260px);
+          background: var(--Pink-Dark, #ffa8c6);
         }
         img {
           width: 260px;
@@ -2051,40 +2513,74 @@ const { height } = useWindowSize()
       }
       &-lists {
         margin-top: 34px;
+        position: relative;
         & > div {
           &:nth-of-type(1) {
+            width: fit-content;
             span {
-              margin-bottom: -15px;
+              margin-bottom: 0;
             }
+            position: absolute;
+            z-index: 4;
+            top: 70px;
+            left: 30px;
           }
           &:nth-of-type(2) {
             justify-content: flex-end;
+            align-items: center;
+            position: absolute;
+            z-index: 4;
+            bottom: -8px;
+            left: 30px;
           }
           &:nth-of-type(3) {
-            img {
-              margin-bottom: -30px;
-              margin-top: 30px;
+            width: 180px;
+            margin: 0 auto 0;
+            & > img {
+              margin: 0;
             }
           }
           &:nth-of-type(4) {
             justify-content: flex-start;
+            align-items: center;
+            position: absolute;
+            z-index: 4;
+            left: 30%;
+            top: -15px;
           }
           &:nth-of-type(5) {
-            margin-top: 24px;
-            padding-right: 15px;
+            margin-top: 0;
+            padding-right: 0;
+            position: absolute;
+            z-index: 4;
+            right: 40px;
+            bottom: 10px;
           }
           &:nth-of-type(6) {
-            margin-top: 24px;
-            padding-left: 15px;
+            margin-top: 0;
+            padding-left: 0;
+            justify-content: center;
+            position: absolute;
+            z-index: 4;
+            left: 50%;
+            top: 30px;
           }
           span {
             width: 110px;
-            height: 110px;
+            height: 25px;
             font-size: 16px;
+            border-radius: 32px;
+            width: fit-content;
+            border-radius: 32.963px;
+            background: var(--Theme-Color, #fc1682);
+            box-shadow: 1.075px 1.075px 4.443px 0px rgba(252, 22, 130, 0.5);
+            box-sizing: border-box;
+            padding: 2.5px 14px;
           }
           img {
-            width: 110px;
-            height: 110px;
+            width: 180px;
+            height: 180px;
+            position: relative;
           }
         }
       }
@@ -2466,9 +2962,487 @@ const { height } = useWindowSize()
         margin-top: 30px;
       }
     }
+    :deep(.reason-in-l) {
+      position: relative;
+      padding-left: 30px;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.3) 2%,
+        #fee6f1 75%
+      );
+      width: 100vw;
+      .text_one {
+        margin-top: 0;
+      }
+      .text_two {
+        margin-top: 0;
+      }
+      .image {
+        max-width: 152px;
+        width: 30%;
+        height: auto;
+        margin: 20px 0 0 20.8333333333%;
+        position: absolute;
+        border-radius: 50% 0 0 0;
+        overflow: hidden;
+        bottom: 0;
+        right: 0;
+      }
+    }
+    :deep(.reason-in-r) {
+      margin-left: 35px;
+      & > div {
+        position: relative;
+        margin-bottom: 20px !important;
+        & > .title {
+          & > span {
+            position: absolute;
+            left: -35px;
+            margin-left: -10px;
+            top: 10px;
+          }
+          & > span::before {
+            right: auto;
+            top: 50%;
+            bottom: auto;
+            transform: translateY(-10px);
+          }
+        }
+        & > .context {
+          font-size: 14px;
+        }
+      }
+    }
+    :deep(.introduce) {
+      margin-top: 0;
+    }
+    .mobile-new-step {
+      margin: 25px 27px 47px 30px;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px 28px;
+      position: relative;
+      z-index: 5;
+      & > div {
+        position: relative;
+        & > div:nth-child(1) {
+          & > img {
+            border-radius: 12px;
+            border: 1px solid var(--Theme-Color, #fc1682);
+            margin-bottom: 6px;
+          }
+          & > span:nth-child(2) {
+            color: var(--Theme-Color, #fc1682);
+            font-family: FakePearl;
+            font-size: 4.1vw;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 130%; /* 20.8px */
+          }
+          & > span:nth-child(4) {
+            color: var(--Grey-Deep, #4d4d4d);
+            text-align: justify;
+            font-family: FakePearl;
+            font-size: 3.07vw;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 160%; /* 19.2px */
+            letter-spacing: 1.2px;
+          }
+        }
+        & > div:last-child {
+          position: absolute;
+          top: -6px;
+          left: -6px;
+        }
+      }
+      & > div:nth-child(even) {
+        margin-top: 25px;
+      }
+    }
+  }
+  .step-in {
+    position: relative;
+  }
+  .step-bg {
+    position: absolute;
+    z-index: 2;
+  }
+  .step-mobile-bg-one {
+    top: 100px;
+    width: 100vw;
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+    & > img {
+      transform: translateX(10px);
+    }
+  }
+  .step-mobile-bg-two {
+    top: 330px;
+    right: 0;
+    left: 0;
+    & > img {
+      width: 100%;
+    }
+  }
+  .step-mobile-bg-three {
+    bottom: 40.46vw;
+    left: 0px;
+    width: 85%;
   }
   .contactForm {
     margin-top: 50px;
+  }
+  .classify-title {
+    width: fit-content;
+    margin: 0 auto;
+  }
+  .classify-item {
+    margin: 30px 0 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px 0;
+    & > div {
+      position: relative;
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          border-radius: var(--Count, 0px) 20px 20px var(--Count, 0px);
+          background: var(--Theme-Color, #fc1682);
+          color: var(--White, #fff);
+          text-align: center;
+          font-family: FakePearl;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 130%; /* 20.8px */
+          box-sizing: border-box;
+          padding: 5px 20px 5px 29px;
+          width: fit-content;
+          margin-left: 0;
+        }
+        & > div:nth-child(2) {
+          display: flex;
+          gap: 0 30px;
+          margin: 10px 30px;
+          & > div:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+            gap: 5px 0;
+            & > p {
+              display: flex;
+              align-items: center;
+              & > span:nth-child(1) {
+                color: #fc1682;
+                font-family: FakePearl;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 130%; /* 20.8px */
+                margin-right: 10px;
+              }
+            }
+          }
+          & > div:nth-child(2) {
+            position: absolute;
+            top: 0;
+            right: 30px;
+          }
+        }
+      }
+      & > ul {
+        padding-left: 30px;
+        padding-right: 30px;
+        list-style: disc;
+      }
+    }
+    & > div:nth-child(2) {
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          background: var(--Blue-Deep, #00aeff);
+        }
+      }
+    }
+  }
+  .note-mobile {
+    margin-top: 40px;
+    padding: 0 0 20px 0;
+    box-sizing: border-box;
+    & > .index_title {
+      margin-left: 0;
+      margin: 0 30px;
+      width: fit-content;
+      position: relative;
+      color: var(--Grey-Deep, #4d4d4d);
+      font-family: FakePearl;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 5.12vw;
+      line-height: 160%; /* 32px */
+      font-weight: 600;
+      &::before {
+        content: '';
+        height: 3px;
+        border-radius: 1.5px;
+        width: 100%;
+        display: inline-block;
+        background: url('../../assets/images/indexTitle_bg_3.png') no-repeat;
+        background-position: 0px 3px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+    }
+    & > .note-bg-mobile {
+      box-sizing: border-box;
+      padding: 0 30px 20px;
+      width: 100vw;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 241, 240, 0) 0%,
+        #fee6f1 100%
+      );
+      & > div:nth-child(1) {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        color: var(--Theme-Color, #fc1682);
+        text-align: center;
+        font-family: FakePearl;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 160%; /* 32px */
+      }
+
+      & > div:not(:first-child) {
+        margin-top: 16px;
+        max-width: 74.35vw;
+        box-sizing: border-box;
+        padding: 2.56vw 3.84vw;
+        background: #fff;
+        & > div:nth-child(1) {
+          display: flex;
+          justify-content: space-between;
+          & > div:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+            & > span:nth-child(1) {
+              color: var(--Blue-Deep, #00aeff);
+              font-family: FakePearl;
+              font-size: 5.128vw;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 160%; /* 32px */
+            }
+            & > span:nth-child(2) {
+              color: var(--Grey-Pale, #aaa);
+              font-family: 'Noto Sans HK';
+              font-size: 3.07vw;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 160%; /* 19.2px */
+              letter-spacing: 1.2px;
+            }
+          }
+          & > div:nth-child(2) {
+            color: var(--Grey-Mid, #666);
+            text-align: right;
+            font-family: 'Noto Sans HK';
+            font-size: 3.07vw;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 160%; /* 19.2px */
+            letter-spacing: 1.2px;
+          }
+        }
+        & > div:nth-child(2) {
+          margin-top: 8px;
+          color: var(--Grey-Deep, #4d4d4d);
+          text-align: justify;
+          font-family: 'Noto Sans HK';
+          font-size: 3.07vw;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 160%; /* 19.2px */
+          letter-spacing: 1.2px;
+        }
+      }
+      & > div:not(:first-child):nth-child(odd) {
+        margin: 16px 0 0 auto;
+        & > div:nth-child(1) {
+          & > div:nth-child(1) {
+            & > span:nth-child(1) {
+              color: var(--Theme-Color, #fc1682);
+            }
+          }
+        }
+      }
+    }
+  }
+  .brand_mobile {
+    margin: 45px auto 55px;
+  }
+  .brand_mobile_items {
+    margin-top: 25px;
+    & > div {
+      & > div:nth-child(1) {
+        display: flex;
+        justify-content: space-between;
+        padding-left: 25px;
+        & > div:nth-child(2) {
+          & > div:nth-child(1) {
+            display: flex;
+            justify-content: center;
+          }
+          & > div:nth-child(2) {
+            position: relative;
+            margin-top: 10px;
+            margin-bottom: 5px;
+            border-radius: 20px var(--Count, 0px) var(--Count, 0px) 20px;
+            background: var(--Theme-Color, #fc1682);
+            color: var(--White, #fff);
+            text-align: right;
+            font-family: FakePearl;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 130%; /* 20.8px */
+            padding: 5px 30px;
+            box-sizing: border-box;
+          }
+          & > div:nth-child(3) {
+            padding-right: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 5px 0;
+            & > p {
+              display: flex;
+              align-items: center;
+              gap: 0 8px;
+              & > span:nth-child(1) {
+                color: var(--Theme-Color, #fc1682);
+                font-family: FakePearl;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 130%; /* 20.8px */
+              }
+            }
+          }
+        }
+      }
+      & > ul {
+        margin-top: 4px;
+        padding-left: 40px;
+        list-style: disc;
+        color: var(--Grey-Deep, #4d4d4d);
+        font-family: FakePearl;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 24px */
+        letter-spacing: 1.5px;
+      }
+    }
+    & > div:nth-child(even) {
+      background: linear-gradient(
+        0deg,
+        rgba(255, 241, 240, 0) 0%,
+        rgba(255, 241, 240, 0.7) 12.5%,
+        rgba(255, 241, 240, 0.7) 81.99%,
+        rgba(255, 241, 240, 0) 100%
+      );
+      box-sizing: border-box;
+      padding: 20px 0;
+      & > div:nth-child(1) {
+        & > div:nth-child(2) {
+          & > div:nth-child(2) {
+            background: var(--Blue-Deep, #00aeff);
+          }
+        }
+      }
+    }
+    & > div:nth-child(1) {
+      & > div:nth-child(1) {
+        & > div:nth-child(2) {
+          & > div:nth-child(2)::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 0;
+            background: url('https://static.cmereye.com/imgs/2024/07/198339eee2be5cc6.png')
+              no-repeat;
+            width: 42px;
+            height: 30px;
+          }
+        }
+      }
+    }
+    & > div:nth-child(2) {
+      & > div:nth-child(1) {
+        & > div:nth-child(2) {
+          & > div:nth-child(2)::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 0;
+            background: url('https://static.cmereye.com/imgs/2024/07/058357b4acafa6dc.png')
+              no-repeat;
+            width: 42px;
+            height: 30px;
+          }
+        }
+      }
+    }
+    & > div:nth-child(3) {
+      & > div:nth-child(1) {
+        & > div:nth-child(2) {
+          & > div:nth-child(2)::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 0;
+            background: url('https://static.cmereye.com/imgs/2024/07/54e87029351758e6.png')
+              no-repeat;
+            width: 42px;
+            height: 30px;
+          }
+        }
+      }
+    }
+    & > div:nth-child(4) {
+      & > div:nth-child(1) {
+        & > div:nth-child(2) {
+          & > div:nth-child(2)::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 0;
+            background: url('https://static.cmereye.com/imgs/2024/07/932c4c1cd464100b.png')
+              no-repeat;
+            width: 42px;
+            height: 30px;
+          }
+        }
+      }
+    }
+    & > div:nth-child(5) {
+      & > div:nth-child(1) {
+        & > div:nth-child(2) {
+          & > div:nth-child(2)::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 0;
+            background: url('https://static.cmereye.com/imgs/2024/07/0f4222f2b8594d57.png')
+              no-repeat;
+            width: 42px;
+            height: 30px;
+          }
+        }
+      }
+    }
   }
 }
 @media screen and (max-width: 360px) {

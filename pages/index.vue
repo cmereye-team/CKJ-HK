@@ -804,6 +804,10 @@ const contentDom = ref(false)
           </Swiper>
         </div>
       </div>
+      <!-- 關於我們 -->
+      <AboutUs />
+      <!-- 品牌理念 -->
+      <brandConcept-test />
       <div class="Latest_Movies">
         <div class="Latest_Movies_t smallPageCon">
           <div class="Latest_Movies_t_title">
@@ -1107,7 +1111,10 @@ const contentDom = ref(false)
         <div class="index-videoBox-btn smallPageCon" @click="handlevideBoxBtn">
           <span>更多資訊 </span>
         </div>
-        <div class="index-latestNews-line brandConcept-line" v-if="windowWidth < 768">
+        <div
+          class="index-latestNews-line brandConcept-line"
+          v-if="windowWidth < 768"
+        >
           <PageSwiperPointLine
             :latestNewsNum="indexNewsLists[indexNewsCur].length"
             :latestNewsCurrent="messageCurrtNew"
@@ -1115,10 +1122,7 @@ const contentDom = ref(false)
           ></PageSwiperPointLine>
         </div>
       </div>
-      <!-- 關於我們 -->
-      <AboutUs />
-      <!-- 品牌理念 -->
-      <brandConcept-test />
+
       <div class="index-org">
         <div class="index-org-t smallPageCon">
           <div class="index_title index_title_2">相關機構</div>
@@ -2835,6 +2839,7 @@ svg:hover path {
     }
   }
   .Latest_Movies {
+    margin-top: 70px;
     max-width: 100vw;
     overflow: hidden;
     opacity: 0.8;
@@ -2981,7 +2986,7 @@ svg:hover path {
       margin-left: auto;
       margin-right: 0;
       .item-title {
-        color: var(--Theme-Color, #FC1682);
+        color: var(--Theme-Color, #fc1682);
       }
     }
   }

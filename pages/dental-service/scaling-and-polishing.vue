@@ -825,7 +825,7 @@ onMounted(() => {
           </div>
         </div>
       </div>
-      <div class="charge">
+      <div class="charge" v-if="windowWidth > 767">
         <div class="dentistryServices-title charge-title">
           <div class="dentistryServices-title-in bb charge-title-in">
             {{ chargeData.title }}
@@ -978,8 +978,8 @@ onMounted(() => {
           </div>
         </div>
       </div>
-      <ServiceProblem :problem-data="problemData" />
       <serviceCard />
+      <ServiceProblem :problem-data="problemData" />
       <NewAddress />
       <ContactForm-new />
     </div>
@@ -2354,6 +2354,8 @@ onMounted(() => {
   }
   .Medical_sterilization_equipment {
     // padding: 30px 0 10px;
+    margin-top: 0px;
+    padding-top: 0;
     background: transparent;
     &-in {
       margin-top: 40px;
