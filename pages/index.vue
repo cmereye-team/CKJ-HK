@@ -836,7 +836,7 @@ const contentDom = ref(false)
             <iframe
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/Hxm0arbKJbc?si=7xJZxGlpRw9GxkIZ"
+              src="https://www.youtube.com/embed/WMuJkqbXcEU?si=2i42MH2PR91Jfw0Y"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -2877,7 +2877,7 @@ svg:hover path {
         }
         iframe {
           width: 100%;
-          height: calc(153 / 320 * 100vw);
+          height: calc(153 / 315 * 100vw);
         }
       }
       &_r {
@@ -2900,7 +2900,7 @@ svg:hover path {
           .list-in {
             iframe {
               width: 100%;
-              height: calc(153 / 320 * 100vw);
+              height: calc(153 / 315 * 100vw);
             }
             span {
             }
