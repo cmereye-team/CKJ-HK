@@ -2032,6 +2032,7 @@ svg:hover path {
   }
 }
 .Latest_Movies {
+  margin-top: 60px;
   &_t {
     display: flex;
     justify-content: space-between;
@@ -2426,6 +2427,7 @@ svg:hover path {
     }
   }
   .Latest_Movies {
+    margin-top: 50px;
     &_t {
       a {
         svg {
