@@ -923,7 +923,7 @@ const contentDom = ref(false)
                 </Swiper-slide>
               </Swiper>
             </div>
-            <div class="index-latestNews-line brandConcept-line">
+            <div class="index-latestNews-line brandConcept-line"  v-if="windowWidth < 767">
               <PageSwiperPointLine
                 :latestNewsNum="Latest_Movies[Latest_Movies_cur].length"
                 :latestNewsCurrent="currtNew"
