@@ -705,25 +705,19 @@ const { height } = useWindowSize()
                   <p>
                     <span>性價比</span>
                     <span
-                      ><img
-                        src="../../assets/images/5star.svg"
-                        alt=""
+                      ><img src="../../assets/images/5star.svg" alt=""
                     /></span>
                   </p>
                   <p>
                     <span>耐用度</span>
                     <span
-                      ><img
-                        src="../../assets/images/3star.svg"
-                        alt=""
+                      ><img src="../../assets/images/3star.svg" alt=""
                     /></span>
                   </p>
                   <p>
                     <span>客製化</span>
                     <span
-                      ><img
-                        src="../../assets/images/3star.svg"
-                        alt=""
+                      ><img src="../../assets/images/3star.svg" alt=""
                     /></span>
                   </p>
                 </div>
@@ -755,25 +749,19 @@ const { height } = useWindowSize()
                   <p>
                     <span>性價比</span>
                     <span
-                      ><img
-                        src="../../assets/images/3star.svg"
-                        alt=""
+                      ><img src="../../assets/images/3star.svg" alt=""
                     /></span>
                   </p>
                   <p>
                     <span>耐用度</span>
                     <span
-                      ><img
-                        src="../../assets/images/3star.svg"
-                        alt=""
+                      ><img src="../../assets/images/3star.svg" alt=""
                     /></span>
                   </p>
                   <p>
                     <span>客製化</span>
                     <span
-                      ><img
-                        src="../../assets/images/3star.svg"
-                        alt=""
+                      ><img src="../../assets/images/3star.svg" alt=""
                     /></span>
                   </p>
                 </div>
@@ -805,25 +793,19 @@ const { height } = useWindowSize()
                   <p>
                     <span>性價比</span>
                     <span
-                      ><img
-                        src="../../assets/images/4star.svg"
-                        alt=""
+                      ><img src="../../assets/images/4star.svg" alt=""
                     /></span>
                   </p>
                   <p>
                     <span>耐用度</span>
                     <span
-                      ><img
-                        src="../../assets/images/5star.svg"
-                        alt=""
+                      ><img src="../../assets/images/5star.svg" alt=""
                     /></span>
                   </p>
                   <p>
                     <span>客製化</span>
                     <span
-                      ><img
-                        src="../../assets/images/4star.svg"
-                        alt=""
+                      ><img src="../../assets/images/4star.svg" alt=""
                     /></span>
                   </p>
                 </div>
@@ -855,25 +837,19 @@ const { height } = useWindowSize()
                   <p>
                     <span>性價比</span>
                     <span
-                      ><img
-                        src="../../assets/images/4star.svg"
-                        alt=""
+                      ><img src="../../assets/images/4star.svg" alt=""
                     /></span>
                   </p>
                   <p>
                     <span>耐用度</span>
                     <span
-                      ><img
-                        src="../../assets/images/4star.svg"
-                        alt=""
+                      ><img src="../../assets/images/4star.svg" alt=""
                     /></span>
                   </p>
                   <p>
                     <span>客製化</span>
                     <span
-                      ><img
-                        src="../../assets/images/5star.svg"
-                        alt=""
+                      ><img src="../../assets/images/5star.svg" alt=""
                     /></span>
                   </p>
                 </div>
@@ -905,25 +881,19 @@ const { height } = useWindowSize()
                   <p>
                     <span>性價比</span>
                     <span
-                      ><img
-                        src="../../assets/images/4star.svg"
-                        alt=""
+                      ><img src="../../assets/images/4star.svg" alt=""
                     /></span>
                   </p>
                   <p>
                     <span>耐用度</span>
                     <span
-                      ><img
-                        src="../../assets/images/5star.svg"
-                        alt=""
+                      ><img src="../../assets/images/5star.svg" alt=""
                     /></span>
                   </p>
                   <p>
                     <span>客製化</span>
                     <span
-                      ><img
-                        src="../../assets/images/4star.svg"
-                        alt=""
+                      ><img src="../../assets/images/4star.svg" alt=""
                     /></span>
                   </p>
                 </div>
@@ -1040,7 +1010,7 @@ const { height } = useWindowSize()
           </div>
           <div class="step-bg step-mobile-bg-one" v-if="windowWidth < 767">
             <img
-              src="https://static.cmereye.com/imgs/2024/07/7623f608f7d35f04.png"
+              src="https://static.cmereye.com/imgs/2024/07/0f9506f5f2e7252f.png"
               alt=""
             />
           </div>
@@ -1052,7 +1022,7 @@ const { height } = useWindowSize()
           </div>
           <div class="step-bg step-mobile-bg-three" v-if="windowWidth < 767">
             <img
-              src="https://static.cmereye.com/imgs/2024/07/7ada424c7d972d7e.png"
+              src="https://static.cmereye.com/imgs/2024/07/2c52c0d9059dac7d.png"
               alt=""
             />
           </div>
@@ -1074,7 +1044,8 @@ const { height } = useWindowSize()
                     <span>傷口大小</span>
                     <span
                       ><img
-                        src="https://static.cmereye.com/imgs/2024/07/263767dce218e4ea.png"
+                        style="padding-left: 3px"
+                        src="../../assets/images/2blood.svg"
                         alt=""
                     /></span>
                   </p>
@@ -1082,24 +1053,21 @@ const { height } = useWindowSize()
                     <span>腫脹不適</span>
                     <span
                       ><img
-                        src="https://static.cmereye.com/imgs/2024/07/263767dce218e4ea.png"
+                        style="padding-left: 3px"
+                        src="../../assets/images/2blood.svg"
                         alt=""
                     /></span>
                   </p>
                   <p>
                     <span>手術速度</span>
                     <span
-                      ><img
-                        src="../../assets/images/5star.svg"
-                        alt=""
+                      ><img src="../../assets/images/5star.svg" alt=""
                     /></span>
                   </p>
                   <p>
-                    <span>恢原速度</span>
+                    <span>復原速度</span>
                     <span
-                      ><img
-                        src="../../assets/images/5star.svg"
-                        alt=""
+                      ><img src="../../assets/images/5star.svg" alt=""
                     /></span>
                   </p>
                 </div>
@@ -1126,7 +1094,8 @@ const { height } = useWindowSize()
                     <span>傷口大小</span>
                     <span
                       ><img
-                        src="https://static.cmereye.com/imgs/2024/07/fb6d5c0bd9a07d62.png"
+                        style="padding-left: 3px"
+                        src="../../assets/images/5blood.svg"
                         alt=""
                     /></span>
                   </p>
@@ -1134,24 +1103,21 @@ const { height } = useWindowSize()
                     <span>腫脹不適</span>
                     <span
                       ><img
-                        src="https://static.cmereye.com/imgs/2024/07/9412f6f07be33fce.png"
+                        style="padding-left: 3px"
+                        src="../../assets/images/4blood.svg"
                         alt=""
                     /></span>
                   </p>
                   <p>
                     <span>手術速度</span>
                     <span
-                      ><img
-                        src="../../assets/images/3star.svg"
-                        alt=""
+                      ><img src="../../assets/images/3star.svg" alt=""
                     /></span>
                   </p>
                   <p>
-                    <span>恢原速度</span>
+                    <span>復原速度</span>
                     <span
-                      ><img
-                        src="https://static.cmereye.com/imgs/2024/07/ebc3f719fd69e7df.png"
-                        alt=""
+                      ><img src="../../assets/images/2star.svg" alt=""
                     /></span>
                   </p>
                 </div>
@@ -1270,7 +1236,7 @@ const { height } = useWindowSize()
                     { act: yaImgCurrtNum === implantCaseIndex },
                   ]"
                 >
-                  {{ yaImgCurrtNum === implantCaseIndex ? 'before' : 'after' }}
+                  {{ yaImgCurrtNum === implantCaseIndex ? '手術前' : '手術後' }}
                 </div>
                 <div class="implantCaseBox-t">
                   <div
@@ -3031,7 +2997,7 @@ const { height } = useWindowSize()
         position: relative;
         & > div:nth-child(1) {
           & > img {
-            border-radius: 12px;
+            border-radius: 14px;
             border: 1px solid var(--Theme-Color, #fc1682);
             margin-bottom: 6px;
           }
@@ -3073,13 +3039,11 @@ const { height } = useWindowSize()
     z-index: 2;
   }
   .step-mobile-bg-one {
-    top: 100px;
-    width: 100vw;
-    display: flex;
-    justify-content: flex-end;
-    overflow: hidden;
+    top: 88px;
+    left: 0;
+    right: 0;
     & > img {
-      transform: translateX(10px);
+      width: 100%;
     }
   }
   .step-mobile-bg-two {
@@ -3091,9 +3055,13 @@ const { height } = useWindowSize()
     }
   }
   .step-mobile-bg-three {
-    bottom: 40.46vw;
-    left: 0px;
-    width: 85%;
+    bottom: 31.46vw;
+    left: 0;
+    right: 0;
+    // width: 85%;
+    & > img {
+      width: 100%;
+    }
   }
   .contactForm {
     margin-top: 50px;
