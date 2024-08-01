@@ -1335,6 +1335,10 @@ let newsMessageSwiperRef = {
         & > div:nth-child(2) {
           margin: 0 0 0 auto;
         }
+        &>div:nth-child(2),
+        &>div:nth-child(3) {
+          margin-top: -110px;
+        }
       }
     }
   }
