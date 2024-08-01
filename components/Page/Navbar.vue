@@ -229,6 +229,7 @@ onMounted(() => {
     <div
         class="is_new_tooth_wiki"
         v-if="pathLink == '/news/tooth-wiki' && !closeAd"
+        @click="toContactUs"
       >
         <div>
           <img

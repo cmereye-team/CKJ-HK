@@ -2,6 +2,9 @@
 import { useAppState } from '~/stores/appState'
 import { toWhatsApp } from '~/assets/js/common'
 import { useElementBounding, useWindowSize } from '@vueuse/core'
+
+import { Pagination } from 'swiper'
+const modules = [Pagination]
 const appState = useAppState()
 appState.setDentistryService('rootCanal-test')
 useHead({
@@ -99,12 +102,15 @@ const infoCardData = {
   lists: [
     {
       text: '顯微根管治療，即在顯微鏡下輔助放大局部來進行根管治療的操作。',
+      img: 'https://static.cmereye.com/imgs/2024/08/d6bd484a95024be1.png',
     },
     {
-      text: '牙科顯微鏡可以在手術中提供放大畫面，這樣擁有良好照明環境，保證視野穩定的前提下，將根管治療推進到可視化階段。',
+      text: '牙科顯微鏡可以在手術中提供放大畫面，這樣擁有良好照明環境， 保證視野穩定的前提下，將根管治療推進到可視化階段。',
+      img: 'https://static.cmereye.com/imgs/2024/08/5cb1e585e20a031c.png',
     },
     {
       text: '愛康健引進德國蔡司顯微鏡根管治療儀，結合顯微鏡技術和醫學技術。能清楚觀察牙齒的解剖結構和根管形態。',
+      img: 'https://static.cmereye.com/imgs/2024/08/54a2a0c8b7fca6d7.png',
     },
   ],
 }
@@ -114,42 +120,49 @@ const stepData = {
   lists: [
     {
       title: '第1步',
+      titleNum: '1',
       img: 'https://static.cmereye.com/imgs/2023/11/8c25f9c3f1d8c834.jpg',
       name: '診斷',
       context: '進行X光檢查，以確定牙齒損壞程度，制定治療方案',
     },
     {
       title: '第2步',
+      titleNum: '2',
       img: 'https://static.cmereye.com/imgs/2023/10/0b7ef1a0f39e9ca9.jpg',
       name: '麻醉',
       context: '治療前會先為客人口腔局部麻醉',
     },
     {
       title: '第3步',
+      titleNum: '3',
       img: 'https://static.cmereye.com/imgs/2023/11/b7337bbff6017483.jpg',
       name: '牙齒分隔',
       context: '使用橡皮障將需治療的牙齒分隔出來，減低細菌感染其他牙齒的機會',
     },
     {
       title: '第4步',
+      titleNum: '4',
       img: 'https://static.cmereye.com/imgs/2023/11/bfd54a465dbc28b8.jpg',
       name: '計算根管長度',
       context: '以牙根探針放入根管，以X光或電子儀器量度牙根深度',
     },
     {
       title: '第5步',
+      titleNum: '5',
       img: 'https://static.cmereye.com/imgs/2023/11/8e3ca8afdfa82d6c.jpg',
       name: '清理牙根管',
       context: '使用藥水清理，消毒牙根管',
     },
     {
       title: '第6步',
+      titleNum: '6',
       img: 'https://static.cmereye.com/imgs/2023/11/8f9ed7b27c9c0fdc.jpg',
       name: '根管充填',
       context: '將牙膠等物質充填牙根',
     },
     {
       title: '第7步',
+      titleNum: '7',
       img: 'https://static.cmereye.com/imgs/2023/11/d542e53ca685f034.jpg',
       name: '修復',
       context: '用牙套保護已杜牙根的牙齒，減低其損壞機會',
@@ -180,6 +193,26 @@ const noteData = {
     },
     {
       name: '定期到口腔醫院進行檢查和清潔，以確保治療後的牙齒保持健康。',
+    },
+  ],
+  listsMobile: [
+    {
+      name: '避免咀嚼食物或咬硬物，以免損壞治療後的牙齒。',
+    },
+    {
+      name: '如果需要刷牙，可以使用軟毛刷，輕柔地刷牙，避免刷太用力或刷到治療區域。',
+    },
+    {
+      name: '避免用治療後的牙齒咬開堅硬的食物，例如堅果、糖果等。',
+    },
+    {
+      name: '如果感覺到疼痛或不適，可以使用過濾口的冰水或冰袋敷在治療區域附近，以減輕疼痛和腫脹。',
+    },
+    {
+      name: '在治療後的前幾天內，嘗試避免刷牙或使用牙線，以免影響治療區域的恢復。',
+    },
+    {
+      name: '定期到牙醫診所進行檢查和清潔，以確保治療後的牙齒保持健康。',
     },
   ],
 }
@@ -292,6 +325,30 @@ const doctorData = {
 const doctorTeam = ref(null)
 const { top, bottom } = useElementBounding(doctorTeam)
 const { height } = useWindowSize()
+
+let windowWidth = ref(390)
+const getWindowWidth = () => {
+  windowWidth.value = window.innerWidth
+}
+onMounted(() => {
+  getWindowWidth()
+  window.addEventListener('resize', getWindowWidth)
+})
+
+let messageCurrtNew = ref(1)
+const handleMessageLineCur = (_value: number) => {
+  newsMessageSwiperRef.slideToLoop(_value - 1)
+}
+const setMessageNewsSwiperRef = (swiper: any) => {
+  newsMessageSwiperRef = swiper
+}
+const onMessageNewSlideChange = (swiper: any) => {
+  messageCurrtNew.value = (swiper.realIndex ? Number(swiper.realIndex) : 0) + 1
+}
+
+let newsMessageSwiperRef = {
+  slideToLoop: (a) => {},
+}
 </script>
 
 <template>
@@ -359,7 +416,7 @@ const { height } = useWindowSize()
           </div>
         </div>
         <div class="infoCard-content">
-          <div class="infoCard-content-l">
+          <div class="infoCard-content-l" v-if="windowWidth > 768">
             <img
               src="https://static.cmereye.com/imgs/2023/10/493b437603fc5e0d.jpg"
               alt=""
@@ -370,8 +427,13 @@ const { height } = useWindowSize()
               v-for="(infoCardItem, infoCardIndex) in infoCardData.lists"
               :key="infoCardIndex"
             >
-              <span>·</span>
-              <span>{{ infoCardItem.text }}</span>
+              <div v-if="windowWidth < 768">
+                <img :src="infoCardItem.img" :alt="infoCardItem.text" />
+              </div>
+              <div>
+                <span v-if="windowWidth > 768">·</span>
+                <span>{{ infoCardItem.text }}</span>
+              </div>
             </div>
           </div>
         </div>
@@ -381,13 +443,19 @@ const { height } = useWindowSize()
           <div class="dentistryServices-title-in bb">根管治療設備</div>
         </div>
         <div class="Root_canal_treatment_equipment-in">
-          <div class="Root_canal_treatment_equipment-in-l">
+          <div
+            class="Root_canal_treatment_equipment-in-l"
+            v-if="windowWidth > 768"
+          >
             <img
               src="https://static.cmereye.com/imgs/2024/02/33f5319ca2369e70.webp"
               alt=""
             />
           </div>
-          <div class="Root_canal_treatment_equipment-in-r">
+          <div
+            class="Root_canal_treatment_equipment-in-r"
+            v-if="windowWidth > 768"
+          >
             <img
               src="https://static.cmereye.com/imgs/2024/02/760462b941be8e2c.webp"
               alt=""
@@ -396,6 +464,44 @@ const { height } = useWindowSize()
               >我們使用德國蔡司顯微鏡根管治療儀，一款結合顯微鏡與醫學技術的設備，大幅提升牙醫治療根管的精準度。讓醫生能夠清楚觀察牙齒結構和根管形態，無論進行常規治療或顯微外科手術，都能更好地保留客人健康牙齒組織。</span
             >
           </div>
+          <swiper
+            v-if="windowWidth < 768"
+            :slidesPerView="'auto'"
+            :centeredSlides="true"
+            :spaceBetween="0"
+            class="mySwiper"
+            @swiper="setMessageNewsSwiperRef"
+            @slideChange="onMessageNewSlideChange"
+          >
+            <swiper-slide>
+              <div>
+                <img
+                  src="https://static.cmereye.com/imgs/2024/08/94d23af3eaa954a4.png"
+                  alt=""
+                />
+              </div>
+              <div>
+                我們使用德國蔡司顯微鏡根管治療儀，一款結合顯微鏡與醫學技術的設備，大幅提升牙醫治療根管的精準度。
+              </div>
+            </swiper-slide>
+            <swiper-slide>
+              <div>
+                <img
+                  src="https://static.cmereye.com/imgs/2024/08/db12cbbf79a68bab.png"
+                  alt=""
+                />
+              </div>
+              <div>
+                讓醫生能夠清楚觀察牙齒結構和根管形態，無論進行常規治療或顯微外科手術，都能更好地保留客人健康牙齒組織。
+              </div>
+            </swiper-slide>
+          </swiper>
+          <PageSwiperPointLine
+            v-if="windowWidth < 767"
+            :latestNewsNum="2"
+            :latestNewsCurrent="messageCurrtNew"
+            @changeLineCur="handleMessageLineCur"
+          ></PageSwiperPointLine>
         </div>
       </div>
       <div class="step">
@@ -414,7 +520,7 @@ const { height } = useWindowSize()
               <div class="step-lists-in-l">
                 <div class="title">
                   <img src="@/assets/images/icon_13.png" alt="" />
-                  {{ stepItem.title }}
+                  {{ windowWidth > 768 ? stepItem.title : stepItem.titleNum }}
                 </div>
                 <div class="image"><img :src="stepItem.img" alt="" /></div>
                 <div class="name">{{ stepItem.name }}</div>
@@ -424,7 +530,7 @@ const { height } = useWindowSize()
                 <img src="@/assets/images/icon_12.png" alt="" />
               </div>
             </div>
-            <div class="step-lists-in">
+            <div class="step-lists-in" v-if="windowWidth > 767">
               <div class="lastBox-t">
                 <div><img src="@/assets/images/icon_13.png" alt="" /></div>
                 <div>療程最快<span>即日完成 !</span></div>
@@ -437,12 +543,27 @@ const { height } = useWindowSize()
               </div>
             </div>
           </div>
+          <div
+            class="step-lists-in step-lists-outside"
+            v-if="windowWidth < 767"
+          >
+            <div class="lastBox-t">
+              <div><img src="@/assets/images/icon_13.png" alt="" /></div>
+              <div>療程最快<span>即日完成 !</span></div>
+              <div><img src="@/assets/images/icon_13.png" alt="" /></div>
+            </div>
+            <div class="lastBox-b">
+              <!-- <span @click="toWhatsApp">立即預約牙齒檢查</span> -->
+              <!-- <PageAnimBtnTypeTwo :str="'立即預約牙齒檢查'" /> -->
+              <PageAnimBtnTypeTwo str="立即預約牙齒檢查" />
+            </div>
+          </div>
         </div>
       </div>
       <div class="doctorTeam" ref="doctorTeam">
         <ServiceSpecializedTeam :doctorData="doctorData" />
       </div>
-      <div class="note">
+      <div class="note" v-if="windowWidth > 767">
         <div class="dentistryServices-title note-title">
           <div class="dentistryServices-title-in bb note-title-in">
             療程後注意事項
@@ -466,10 +587,30 @@ const { height } = useWindowSize()
           </div>
         </div>
       </div>
+      <div class="mobile-note-new" v-else>
+        <div>
+          <div>
+            <img
+              src="https://static.cmereye.com/imgs/2024/08/d0dc549e9aa1aacb.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <span>根管治療後</span>
+            <span>注意事項</span>
+          </div>
+        </div>
+        <div class="mobile-note-content">
+          <div v-for="(noteItem, noteIndex) in noteData.listsMobile" :key="noteIndex">
+            <span>·</span>
+            <span>{{ $t(noteItem.name) }}</span>
+          </div>
+        </div>
+      </div>
       <!-- <ServiceProblem :problem-data="problemData" /> -->
       <serviceCard />
       <NewAddress />
-     <ContactForm-new />
+      <ContactForm-new />
     </div>
     <PageFooter />
     <PageNavbar
@@ -1074,14 +1215,16 @@ const { height } = useWindowSize()
     }
     &-lists {
       flex-direction: column;
+      gap: 0;
       margin: 72px auto 0;
+      padding: 0 4vw;
       &-item {
-        width: 100%;
-        padding: 0 53px;
+        width: 42.6vw;
+        padding: 0 0;
         .text {
           margin-top: -34px;
           span {
-            font-size: 20px;
+            font-size: 4.226vw;
             &:nth-of-type(1) {
               padding: 8px 40px;
             }
@@ -1091,9 +1234,16 @@ const { height } = useWindowSize()
             }
           }
         }
-        &:not(:last-child) {
-          margin-bottom: 35px;
-        }
+        // &:not(:last-child) {
+        //   margin-bottom: 35px;
+        // }
+      }
+      & > div:nth-child(2) {
+        margin: 0 0 0 auto;
+      }
+      & > div:nth-child(2),
+      & > div:nth-child(3) {
+        margin-top: -45px;
       }
     }
   }
@@ -1161,21 +1311,43 @@ const { height } = useWindowSize()
         padding: 0 53px;
       }
       &-r {
+        width: 100vw;
         margin-left: 0;
-        padding: 35px 30px 0;
+        padding: 8.8vw 6.665vw 0;
         & > div {
-          span {
-            font-size: 16px;
-            font-weight: 500;
-            &:nth-of-type(1) {
-              min-width: 15px;
+          display: flex;
+          flex-direction: column;
+          width: 41.825vw;
+          & > div:nth-child(2) {
+            margin-top: 1.6vw;
+            span {
+              color: var(--Grey-Deep, #4d4d4d);
+              text-align: justify;
+              font-family: FakePearl;
+              font-size: 3.2vw;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 160%; /* 19.2px */
+              letter-spacing: 1.2px;
             }
           }
+        }
+        & > div:nth-child(2) {
+          margin: 0 0 0 auto;
         }
       }
     }
   }
-  .step {
+  .step::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    width: 30%;
+    height: 330vw;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
     background: linear-gradient(
       0deg,
       rgba(255, 241, 240, 0) 0%,
@@ -1183,6 +1355,17 @@ const { height } = useWindowSize()
       rgba(255, 241, 240, 0.7) 81.99%,
       rgba(255, 241, 240, 0) 100%
     );
+  }
+  .step {
+    // background: linear-gradient(
+    //   0deg,
+    //   rgba(255, 241, 240, 0) 0%,
+    //   rgba(255, 241, 240, 0.7) 12.5%,
+    //   rgba(255, 241, 240, 0.7) 81.99%,
+    //   rgba(255, 241, 240, 0) 100%
+    // );
+    position: relative;
+    background: transparent;
     margin-top: 40px;
     padding: 46px 0;
     &-title {
@@ -1192,37 +1375,88 @@ const { height } = useWindowSize()
     }
     &-lists {
       width: auto;
-      margin: 57px 40px 0;
+      margin: 57px 8vw 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      justify-items: center;
+      gap: 0 20px;
       &-in {
-        flex-direction: column;
-        margin-bottom: 30px;
-        &:nth-of-type(n + 4) {
-          margin-bottom: 30px;
-        }
-        &:nth-of-type(3),
-        &:nth-of-type(6) {
-          .step-lists-in-r {
-            display: block;
-          }
-        }
+        width: calc(140 / 375 * 100vw);
+        margin-bottom: 0;
+        // &:nth-of-type(n + 4) {
+        //   margin-bottom: 30px;
+        // }
+        // &:nth-of-type(3),
+        // &:nth-of-type(6) {
+        //   .step-lists-in-r {
+        //     display: block;
+        //   }
+        // }
         &-l {
+          position: relative;
           .title {
+            position: absolute;
             padding: 0 6px;
-            font-size: 26px;
+            top: -45px;
+            left: -15px;
+            width: 70px;
+            margin: 0 auto;
+            color: var(--Theme-Color, #fc1682);
+            text-align: center;
+            font-family: 'Noto Serif HK';
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%; /* 84px */
+            letter-spacing: -3px;
+            display: flex;
+            justify-content: center;
+            background: url('https://static.cmereye.com/imgs/2024/08/a53173454afef713.png')
+              no-repeat;
+            background-size: 100% 100%;
+            display: inline-block;
+            background-position-x: 5px;
+            & > img {
+              display: none;
+            }
           }
           .image {
             padding: 0 6px;
+            img {
+              border-radius: 12px;
+              border: 2px solid var(--Theme-Color, #fc1682);
+            }
           }
           .name {
-            margin-top: -25px;
+            margin: 0;
+            margin-top: 6px;
             font-size: 16px;
-            clip-path: polygon(0 0, 80% 0, 85% 100%, 0 100%);
+            clip-path: none;
+            background: transparent;
+            padding: 0;
+            padding-left: 5px;
+            color: var(--Theme-Color, #fc1682);
+            font-family: FakePearl;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 130%; /* 20.8px */
           }
           .context {
-            font-size: 16px;
+            // font-size: 16px;
+            padding-left: 5px;
+            color: var(--Grey-Deep, #4d4d4d);
+            text-align: justify;
+            font-family: FakePearl;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 160%; /* 19.2px */
+            letter-spacing: 1.2px;
           }
         }
         &-r {
+          display: none;
           margin-top: 30px;
           margin-left: 0;
           img {
@@ -1254,6 +1488,33 @@ const { height } = useWindowSize()
           .lastBox-b {
             margin-top: 20px;
           }
+        }
+      }
+      & > div:nth-child(odd) {
+        margin-top: 60px;
+      }
+      & > div:nth-child(7) {
+        margin-top: 20px;
+      }
+      & > div:nth-child(even) {
+        margin-top: 120px;
+      }
+    }
+  }
+  .step-lists-outside {
+    margin-top: 40px;
+    width: 100%;
+    & > div:nth-child(1) {
+      display: none;
+    }
+    :deep(.lastBox-b) {
+      margin: 0 auto;
+      .animbtntypetwo {
+        justify-content: center;
+      }
+      .animbtntypetwo-in {
+        & > span {
+          font-size: 7.4665vw;
         }
       }
     }
@@ -1291,12 +1552,116 @@ const { height } = useWindowSize()
       }
     }
   }
+  .mobile-note-new {
+    margin-top: 60px;
+    margin-left: 30px;
+    & > div:nth-child(1) {
+      display: flex;
+      align-items: flex-end;
+      & > div:nth-child(1) {
+        position: relative;
+        z-index: 6;
+      }
+      & > div:nth-child(2) {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 20px;
+        flex: 1;
+        width: 100%;
+        & > span:nth-child(1) {
+          color: var(--Grey-Deep, #4d4d4d);
+          font-family: FakePearl;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 126%; /* 25.2px */
+        }
+        & > span:nth-child(2) {
+          color: var(--Theme-Color, #fc1682);
+          font-family: FakePearl;
+          font-size: 26px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 126%;
+          letter-spacing: 2.6px;
+        }
+      }
+      & > div:nth-child(2)::after {
+        display: inline-block;
+        width: 120%;
+        height: 1px;
+        background: #fc1682;
+        content: '';
+        position: absolute;
+        bottom: 15px;
+        right: 0;
+      }
+    }
+  }
+  .mobile-note-content {
+    margin-top: 25px;
+    margin-right: 30px;
+    display: grid;
+    gap: 10px 36px;
+    grid-template-columns: repeat(2, 1fr);
+    & > div {
+      padding-left: 12px;
+      color: var(--Grey-Deep, #4d4d4d);
+      text-align: justify;
+      font-family: 'Noto Sans HK';
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 200%; /* 24px */
+      letter-spacing: 1.2px;
+      & > span:nth-child(1) {
+        display: none;
+      }
+      position: relative;
+    }
+    &>div::before{
+      content: '';
+      background: url('https://static.cmereye.com/imgs/2024/08/017c1f8115058e60.png') no-repeat;
+      background-size: 100% 100%;
+      display: inline-block;
+      width: 9px;
+      height: 11px;
+      position: absolute;
+      top: 7px;
+      left: -2px;
+    }
+  }
   .Root_canal_treatment_equipment {
     margin-top: 60px;
     &-in {
       margin-top: 30px;
       padding: 0 20px;
       flex-direction: column;
+      position: relative;
+      :deep(.swiper-slide) {
+        width: 269px;
+        border-top: 1px solid #fc1682;
+        border-left: 1px solid #fc1682;
+        border-bottom: 1px solid #fc1682;
+        box-sizing: border-box;
+        padding: 20px;
+        & > div:nth-child(2) {
+          margin-top: 16px;
+          min-height: 124px;
+          color: #4d4d4d;
+          text-align: justify;
+          font-family: FakePearl;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 160%; /* 19.2px */
+          letter-spacing: 1.2px;
+        }
+      }
+      :deep(.swiper-slide:last-child) {
+        border-right: 1px solid #fc1682;
+      }
       &-l {
         width: 100%;
       }
@@ -1307,6 +1672,48 @@ const { height } = useWindowSize()
           line-height: 200%;
           margin-top: 20px;
           padding: 0 10px;
+        }
+      }
+    }
+  }
+  :deep(.swiper) {
+    margin: 0;
+  }
+  :deep(.point) {
+    margin-top: 20px;
+    width: 74px;
+    .boxLine {
+      display: none;
+    }
+    .boxLine-current {
+      display: none;
+    }
+    .boxRound {
+      width: 74px;
+      justify-content: flex-start !important;
+      border: 1px solid #fc1682;
+      left: 33px;
+      & > div {
+        flex: 1;
+        border-radius: 0;
+        height: 35px;
+        box-sizing: border-box;
+        padding: 9px;
+        background: transparent;
+        .current {
+          background: url('https://static.cmereye.com/imgs/2024/08/c8d1cf8b91b0d38d.png')
+            no-repeat;
+          background-size: contain;
+        }
+      }
+      & > div:nth-child(2) {
+        border-left: 1px solid #fc1682;
+        .current {
+          display: block !important;
+          transform: rotate(180deg);
+          background: url('https://static.cmereye.com/imgs/2024/08/c8d1cf8b91b0d38d.png')
+            no-repeat;
+          background-size: contain;
         }
       }
     }
