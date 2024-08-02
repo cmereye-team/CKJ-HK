@@ -1087,7 +1087,7 @@ const { height } = useWindowSize()
           </div>
           <div>
             <div>
-              <div>微創植牙</div>
+              <div>傳統植牙</div>
               <div>
                 <div>
                   <p>
@@ -1124,7 +1124,7 @@ const { height } = useWindowSize()
                 <div>
                   <img
                     src="https://static.cmereye.com/imgs/2024/07/9baee4806f0f6a90.png"
-                    alt="微創植牙"
+                    alt="傳統植牙"
                   />
                 </div>
               </div>

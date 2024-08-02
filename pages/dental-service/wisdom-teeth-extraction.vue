@@ -111,9 +111,8 @@ const processData = {
   title: '拔牙及智慧齒脫除過程',
   tabs: ['智慧齒脫除', '手術性脫牙', '非手術性脫牙'],
   context: [
-    '* 拔牙一般不需要進行手術，',
-    '但若牙齒歪生或非常接近神經，則有機會需',
-    '要進行手術式脫牙。',
+    '拔牙一般無需進行手術，但當牙齒歪生或非常',
+    '接近神經，便有可能要進行手術式脫牙',
   ],
   lists: [
     {
@@ -122,16 +121,21 @@ const processData = {
           {
             title: 'Step 1',
             text: '透過口腔檢查及口腔全景X光片，了解智慧齒生長的狀況及準確位置',
+            textMb:
+              '透過口腔檢查及口腔全景X光片，了解智慧齒生長的狀況及準確位置',
             textIn: '',
           },
           {
             title: 'Step 2',
             text: '注射局部麻醉藥',
+            textMb: '注射局部麻醉藥',
             textIn: '',
           },
           {
             title: 'Step 3',
             text: '如智慧齒出現阻生，需把牙齦割開、翻起，將智慧齒切成數個部分再逐一移除',
+            textMb:
+              '如智慧齒出現阻生，需把牙齦割開、翻起，將智慧齒切成數個部分再逐一移除',
             textIn: '',
           },
         ],
@@ -139,11 +143,13 @@ const processData = {
           {
             title: 'Step 4',
             text: '清潔及縫合傷口',
+            textMb: '清潔及縫合傷口',
             textIn: '',
           },
           {
             title: 'Step 5',
             text: '手術後腫痛的情況會維持兩至三日，醫生會處方止痛藥和抗生素（需要時服用）舒緩情況，一般約一星期後便完全康復。',
+            textMb: '按時服用醫生處方止痛藥和抗生素（如有需要）',
             textIn: '',
           },
         ],
@@ -286,30 +292,42 @@ const wisdom_teeth = {
     {
       name: ['阻生牙齒'],
       text: '智慧齒可能無法完全長出或只部分長出牙齦。這稱為阻生牙。阻生的智慧齒可能長斜或水平長出，對鄰近牙齒造成壓力，導致疼痛或損壞其他牙齒。',
+      mbtext:
+        '智慧齒可能不完整地長出牙齦，稱為阻生牙。打斜或水平長出的智慧齒可對鄰近牙齒造成壓力，導致疼痛或損壞其他牙齒。',
       img: 'https://static.cmereye.com/static/ckj/imgs/wisdom-teeth-extraction/Vector1.jpg',
     },
     {
       name: ['牙齦炎和感染'],
       text: '部分長出的智慧齒可能在牙齒和牙齦之間形成一個小空隙，這類空隙容易積聚食物殘渣和細菌，導致感染或牙齦炎，稱為周圍冠周炎。',
+      mbtext:
+        '智慧齒可能在牙齒和牙齦之間形成一個小空隙，這類空隙容易積聚食物殘渣和細菌，導致感染或牙齦炎，稱為周圍冠周炎。',
       img: 'https://static.cmereye.com/static/ckj/imgs/wisdom-teeth-extraction/Vector2.jpg',
     },
     {
       name: ['牙齒擁擠'],
+      mbtext:
+        '智慧齒可能會對其他牙齒造成壓力，導致原本正常排列的牙齒移動或擁擠，可能妨礙牙齒矯正。',
       text: '智慧齒的長出可能會對牙弓中的其他牙齒施加壓力，導致原本正常排列的牙齒發生移動或擁擠，這可能使得牙齒矯正的效果受到影響。',
       img: 'https://static.cmereye.com/static/ckj/imgs/wisdom-teeth-extraction/Vector3.jpg',
     },
     {
       name: ['囊腫或腫瘤', '的形成'],
+      mbtext:
+        '在極少數情況下，未能正常長出的智慧齒可能導致囊腫或腫瘤的形成，這會影響到牙齦組織和周圍的骨結構。',
       text: '在極少數情況下，未能正常長出的智慧齒可能導致囊腫或腫瘤的形成，這會影響到牙齦組織和周圍的骨結構。',
       img: 'https://static.cmereye.com/static/ckj/imgs/wisdom-teeth-extraction/Vector4.jpg',
     },
     {
       name: ['難以清潔'],
+      mbtext:
+        '由於智慧齒位於口腔後部，清潔起來較困難，這可能增加蛀牙和牙周病的風險。',
       text: '由於智慧齒位於口腔後部，清潔起來較困難，這可能增加蛀牙和牙周病的風險。',
       img: 'https://static.cmereye.com/static/ckj/imgs/wisdom-teeth-extraction/Vector5.jpg',
     },
     {
       name: ['慢性疼痛和不適'],
+      mbtext:
+        '智慧齒可能導致反覆疼痛，或是由於其位置不當造成的咬合問題，進而引起頜骨、頭部或頸部的疼痛。',
       text: '智慧齒可能導致反覆的疼痛，或是由於其位置不當造成的咬合問題，進而引起頜骨、頭部或頸部的疼痛。',
       img: 'https://static.cmereye.com/static/ckj/imgs/wisdom-teeth-extraction/Vector6.jpg',
     },
@@ -397,30 +415,37 @@ const precautions = {
     {
       img: 'https://static.cmereye.com/static/ckj/imgs/wisdom-teeth-extraction/Group1.svg',
       text: '一般需咬緊棉花或紗布約三十分鐘至一小時止血，其間可如常吞口水',
+      textMb: '咬緊棉花或紗布約0.5-1小時止血',
     },
     {
       img: 'https://static.cmereye.com/static/ckj/imgs/wisdom-teeth-extraction/Group2.svg',
       text: '避免飲用含酒精飲品',
+      textMb: '避免飲用酒精飲品',
     },
     {
       img: 'https://static.cmereye.com/static/ckj/imgs/wisdom-teeth-extraction/Group3.svg',
       text: '進食後以溫水或鹽水輕輕漱口，保持傷口清潔',
+      textMb: '以溫水或鹽水漱口清潔傷口',
     },
     {
       img: 'https://static.cmereye.com/static/ckj/imgs/wisdom-teeth-extraction/Group4.svg',
       text: '避免吃過冷或過熱的食物',
+      textMb: '避免食用過冷或過熱食物',
     },
     {
       img: 'https://static.cmereye.com/static/ckj/imgs/wisdom-teeth-extraction/Group5.svg',
       text: '避免觸碰傷口上的凝固血塊，引致出血',
+      textMb: '避免觸碰傷口上的凝固血塊',
     },
     {
       img: 'https://static.cmereye.com/static/ckj/imgs/wisdom-teeth-extraction/Group6.svg',
       text: '避免大力漱口或吐痰',
+      textMb: '避免大力漱口或吐痰',
     },
     {
       img: 'https://static.cmereye.com/static/ckj/imgs/wisdom-teeth-extraction/Group7.svg',
       text: '避免食用堅硬和粗糙的食物',
+      textMb: '避免食用堅硬和粗糙的食物',
     },
   ],
   bottomText:
@@ -450,6 +475,15 @@ const caseLists = [
       '隻牙已經好鬆就甩，擔心到幾晚訓唔著。呀女帶我睇上深圳睇愛康健，醫生幫我拔牙仲種咗牙，依家安心晒！',
   },
 ]
+
+let windowWidth = ref(390)
+const getWindowWidth = () => {
+  windowWidth.value = window.innerWidth
+}
+onMounted(() => {
+  getWindowWidth()
+  window.addEventListener('resize', getWindowWidth)
+})
 </script>
 
 <template>
@@ -494,8 +528,15 @@ const caseLists = [
             </div>
           </div>
         </div>
-        <div class="point_solution_requires_tooth_extraction-bottomText">
+        <div
+          class="point_solution_requires_tooth_extraction-bottomText"
+          v-if="windowWidth > 768"
+        >
           {{ point_solution_requires_tooth_extraction.bottomText }}
+        </div>
+        <div v-else class="mobile-new-bottomText">
+          <span>牙醫通常會盡一切可能保存自然牙齒，</span>
+          <span>只有在無法保存牙齒時才建議拔牙。</span>
         </div>
       </div>
       <div class="wisdom_teeth">
@@ -531,15 +572,39 @@ const caseLists = [
                   >{{ nameItem }}</span
                 >
               </h3>
-              <p>{{ item.text }}</p>
+              <p>{{ windowWidth > 768 ? item.text : item.mbtext }}</p>
             </div>
           </div>
         </div>
-        <div class="wisdom_teeth-bottomText">
+        <div class="wisdom_teeth-bottomText" v-if="windowWidth > 768">
           {{ wisdom_teeth.bottomText }}
         </div>
+        <div v-else class="new-mobile-wisdom_teeth">
+          <span>為避免智慧齒隱患加劇、情況愈趨複雜，</span>
+          <span>牙醫可能會建議及早將它們拔除。</span><br />
+          <span>考慮拔除智慧齒時通常基於X光片的評估，</span>
+          <span>以及患者目前和未來的口腔健康情況。</span>
+        </div>
+        <ServiceProcess
+          class="mobile-new-process"
+          v-if="windowWidth < 768"
+          :processData="processData"
+        />
+        <div class="mobile-new-process-tag" v-if="windowWidth < 768">
+          <div>
+            <span>手術後腫痛的情況會維持兩</span>
+            <span>至三日，一般約一星期後便</span>
+            <span>完全康復</span>
+          </div>
+          <div>
+            <img
+              src="https://static.cmereye.com/imgs/2024/08/99f9c51e30da4106.png"
+              alt=""
+            />
+          </div>
+        </div>
       </div>
-      <div class="process">
+      <div v-if="windowWidth > 768" class="process">
         <div class="process-title dentistryServices-title">
           <div class="process-title-in dentistryServices-title-in bb">
             {{ process.title }}
@@ -591,16 +656,22 @@ const caseLists = [
               <img :src="item.img" :alt="item.text" :title="item.text" />
             </div>
             <div class="lists-in-text">
-              <span>{{ item.text }}</span>
+              <span>{{ windowWidth > 768 ? item.text : item.textMb }}</span>
             </div>
           </div>
         </div>
-        <div class="precautions-bottomText">
+        <div class="precautions-bottomText" v-if="windowWidth > 768">
           {{ precautions.bottomText }}
+        </div>
+        <div class="precautions-new-mobile-bottomText" v-else>
+          <span
+            >拔牙後傷口有機會出現腫脹，一般數天後消退，亦可按醫生處方服藥或以冷敷消腫及紓緩不適。</span
+          ><br /><br />
+          <span>如傷口持續或大量出血，需盡快聯絡醫生或往急症室求診。</span>
         </div>
       </div>
       <ServiceProblem :problemData="problemData" />
-      <div class="case">
+      <div class="case" v-if="windowWidth > 768">
         <div class="case-title">
           <div class="case-title-in">個案分享</div>
         </div>
@@ -627,9 +698,52 @@ const caseLists = [
           </div>
         </div>
       </div>
+      <div v-else class="note-mobile">
+        <div class="index_title">客戶分享</div>
+        <div class="note-bg-mobile">
+          <div>
+            <span>29年專科專業為港人服務</span>
+            <span>北上睇牙首選愛康健</span>
+          </div>
+          <div>
+            <div>
+              <div>
+                <span>金先生</span>
+                <span>智慧齒脫除療程客戶</span>
+              </div>
+              <div>3/4/24</div>
+            </div>
+            <div>
+              左邊下排生咗隻智慧齒喺牙肉入面，一直冇理直到痛到瞓唔到😞好在客服即日安排到診所剝牙👍仲要平過香港好多
+            </div>
+          </div>
+          <div>
+            <div>
+              <div>
+                <span>張小姐</span>
+                <span>智慧齒脫除療程客戶</span>
+              </div>
+              <div>20/2/24</div>
+            </div>
+            <div>原本以為剝智慧齒會痛好耐，感謝張名妃醫生醫術好所以冇咩痛，過咗一個星期已經可以正常進食</div>
+          </div>
+          <div>
+            <div>
+              <div>
+                <span>尹先生</span>
+                <span>拔牙療程客戶</span>
+              </div>
+              <div>5/11/23</div>
+            </div>
+            <div>
+              做了檢查發現有嚴重牙周病，照醫生建議拔了有問題救不了的牙。現在牙肉不痛刷牙很少有血，之後會考慮做植牙。
+            </div>
+          </div>
+        </div>
+      </div>
       <serviceCard />
       <NewAddress />
-     <ContactForm-new />
+      <ContactForm-new />
     </div>
     <PageFooter />
     <PageNavbar />
@@ -1196,15 +1310,21 @@ const caseLists = [
   .point_solution_requires_tooth_extraction {
     margin: 40px auto 0;
     &-in {
-      grid-template-rows: repeat(3, 1fr);
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px 47px;
-      padding: 35px 30px;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      gap: 5.33vw 5.33vw;
+      padding: 8vw 5.33vw 4vw 5.33vw;
       .list-in {
         p {
-          font-size: 20px;
-          margin-top: 20px;
-          height: 45px;
+          color: var(--Grey-Deep, #4d4d4d);
+          text-align: center;
+          font-family: FakePearl;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 130%; /* 20.8px */
+          margin-top: 5px;
+          min-height: 42px;
           span {
             display: block;
           }
@@ -1219,31 +1339,89 @@ const caseLists = [
       text-align: justify;
     }
   }
+  .mobile-new-bottomText {
+    display: flex;
+    flex-direction: column;
+    & > span {
+      color: var(--Theme-Color, #fc1682);
+      text-align: center;
+      font-family: FakePearl;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%; /* 24px */
+    }
+  }
   .wisdom_teeth {
     margin: 80px auto 0;
+    position: relative;
     &-in {
-      display: grid;
-      justify-content: center;
-      grid-template-rows: repeat(3, 1fr);
-      grid-template-columns: repeat(2, 1fr);
-      gap: 30px 30px;
-      padding: 35px 30px 0;
+      display: flex;
+      // justify-content: center;
+      // grid-template-rows: repeat(3, 1fr);
+      // grid-template-columns: repeat(2, 1fr);
+      flex-direction: column;
+      gap: 8vw 0;
+      padding: 9.33vw 4vw 0;
       .list-in {
-        h3 {
-          font-size: 20px;
-          line-height: 130%;
-          margin-top: 20px;
-          span {
-            display: block;
+        border-radius: 10px 10px;
+        border: 2px solid var(--Theme-Color, #fc1682);
+        border-left: 5.065vw solid var(--Theme-Color, #fc1682);
+        background: var(--White, #fff);
+        & > div {
+          display: flex;
+          flex-direction: row-reverse;
+          gap: 0 4.2665vw;
+          box-sizing: border-box;
+          padding: 3.733vw 4.2665vw;
+          position: relative;
+          img {
+            width: 25.06vw;
+            height: 25.06vw;
+          }
+          h3 {
+            color: var(--Theme-Color, #fc1682);
+            text-align: justify;
+            font-family: FakePearl;
+            font-size: 4.265vw;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 150%; /* 24px */
+            position: absolute;
+            left: 4.265vw;
+            top: -3.2vw;
+            span {
+              display: inline;
+            }
+          }
+          p {
+            color: var(--Grey-Deep, #4d4d4d);
+            font-family: 'Noto Sans HK';
+            font-size: 3.2vw;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 160%;
+            letter-spacing: 1.2px;
+            margin-top: 0;
+            padding-top: 6.66vw;
           }
         }
-        p {
-          font-size: 15px;
-          line-height: 160%;
-          letter-spacing: 3px;
-          text-align: justify;
-          margin-top: 5px;
+      }
+      .list-in:nth-child(even) {
+        border-radius: 10px 10px;
+        border: 2px solid var(--Blue-Deep, #00aeff);
+        border-left: 5.065vw solid var(--Theme-Color, #00aeff);
+        background: var(--White, #fff);
+        & > div {
+          h3 {
+            color: var(--Blue-Deep, #00aeff);
+          }
         }
+      }
+    }
+    :deep(.wisdom_teeth) {
+      .dentistryServices-title-in {
+        font-size: 5.333vw;
       }
     }
     &-topText,
@@ -1255,11 +1433,30 @@ const caseLists = [
       white-space: initial;
     }
     &-topText {
-      margin-top: 35px;
+      margin-top: 15px;
+      color: var(--Grey-Deep, #4d4d4d);
+      text-align: center;
+      font-family: FakePearl;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%; /* 24px */
       span {
         display: block;
       }
     }
+  }
+  .new-mobile-wisdom_teeth {
+    margin-top: 18px;
+    display: flex;
+    flex-direction: column;
+    color: var(--Theme-Color, #fc1682);
+    text-align: center;
+    font-family: FakePearl;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 24px */
   }
   .process {
     margin: 60px auto 0;
@@ -1343,21 +1540,75 @@ const caseLists = [
       }
     }
   }
+  .mobile-new-process {
+    :deep(.swiper-slide) {
+      .step-in {
+        box-sizing: border-box;
+        padding: 4.8vw 3.465vw 6.4vw;
+      }
+      .step-itemLists-in {
+        padding-bottom: 20px;
+        .title {
+          color: var(--Theme-Color, #fc1682) !important;
+          font-family: FakePearl;
+          font-size: 16px !important;
+          font-style: normal;
+          font-weight: 600 !important;
+          line-height: 150%; /* 24px */
+          margin-right: 2.4vw !important;
+        }
+        .text {
+          color: var(--Grey-Deep, #4d4d4d) !important;
+          text-align: justify;
+          font-family: FakePearl;
+          font-size: 4.226vw !important;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 150%; /* 24px */
+        }
+      }
+    }
+  }
+  .mobile-new-process-tag {
+    & > div:nth-child(1) {
+      max-width: 54.933vw;
+      margin-left: 50px;
+      color: var(--Grey-Deep, #4d4d4d);
+      text-align: justify;
+      font-family: FakePearl;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%; /* 24px */
+    }
+    & > div:nth-child(2) {
+      position: absolute;
+      bottom: 20px;
+      z-index: 5;
+      right: 3.2vw;
+    }
+  }
   .precautions {
-    padding: 0 30px;
+    padding: 0 5.33vw;
+    box-sizing: border-box;
+    position: relative;
     &-in {
-      grid-template-rows: repeat(7, 1fr);
-      grid-template-columns: repeat(1, 1fr);
-      gap: 20px;
-      padding: 35px 0 30px;
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-columns: repeat(3, 1fr);
+      gap: 9.065vw 2.665vw;
+      padding: 35px 0 0;
+      box-sizing: border-box;
       .lists-in {
+        display: flex;
+        flex-direction: column;
         &-img {
-          width: 105px;
-          height: 105px;
+          width: 28vw;
+          height: 28vw;
           border-radius: 7px;
         }
         &-text {
-          padding-left: 20px;
+          padding-left: 0;
+          text-align: center;
           font-size: 16px;
         }
         &:nth-of-type(even) {
@@ -1377,14 +1628,22 @@ const caseLists = [
       letter-spacing: 3px;
     }
   }
+  .precautions-new-mobile-bottomText {
+    position: absolute;
+    right: 6.665vw;
+    bottom: 4.33vw;
+    max-width: 56.265vw;
+    color: var(--Theme-Color, #fc1682);
+    text-align: justify;
+    font-family: FakePearl;
+    font-size: 4.265vw;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 6.4vw; /* 24px */
+  }
   .case {
     margin-top: 60px;
-    background: linear-gradient(
-      279deg,
-      rgba(252, 22, 130, 0.4) -0.55%,
-      rgba(252, 22, 130, 0.28) -0.54%,
-      rgba(255, 168, 198, 0) 99.3%
-    );
+    background: linear-gradient(0deg, #fee6f1 0%, rgba(255, 241, 240, 0) 100%);
     padding: 44px 30px;
     &-title {
       &-in {
@@ -1434,6 +1693,122 @@ const caseLists = [
         &-r {
           margin-top: 10px;
           font-size: 16px;
+        }
+      }
+    }
+  }
+  .note-mobile {
+    margin-top: 40px;
+    padding: 0;
+    box-sizing: border-box;
+    & > .index_title {
+      margin-left: 0;
+      margin: 0 30px;
+      width: fit-content;
+      position: relative;
+      color: var(--Grey-Deep, #4d4d4d);
+      font-family: FakePearl;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 5.12vw;
+      line-height: 160%; /* 32px */
+      font-weight: 600;
+      &::before {
+        content: '';
+        height: 3px;
+        border-radius: 1.5px;
+        width: 100%;
+        display: inline-block;
+        background: url('../../assets/images/indexTitle_bg_3.png') no-repeat;
+        background-position: 0px 3px;
+        position: absolute;
+        left: 0;
+        bottom: 0;
+      }
+    }
+    & > .note-bg-mobile {
+      box-sizing: border-box;
+      padding: 0 8vw 9.33vw;
+      width: 100vw;
+      background: linear-gradient(
+        180deg,
+        rgba(255, 241, 240, 0) 0%,
+        #fee6f1 100%
+      );
+      & > div:nth-child(1) {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        color: var(--Theme-Color, #fc1682);
+        text-align: center;
+        font-family: FakePearl;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 160%; /* 32px */
+      }
+
+      & > div:not(:first-child) {
+        margin-top: 16px;
+        max-width: 74.35vw;
+        box-sizing: border-box;
+        padding: 2.56vw 3.84vw;
+        background: #fff;
+        & > div:nth-child(1) {
+          display: flex;
+          justify-content: space-between;
+          & > div:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+            & > span:nth-child(1) {
+              color: var(--Blue-Deep, #00aeff);
+              font-family: FakePearl;
+              font-size: 5.128vw;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 160%; /* 32px */
+            }
+            & > span:nth-child(2) {
+              color: var(--Grey-Pale, #aaa);
+              font-family: 'Noto Sans HK';
+              font-size: 3.07vw;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 160%; /* 19.2px */
+              letter-spacing: 1.2px;
+            }
+          }
+          & > div:nth-child(2) {
+            color: var(--Grey-Mid, #666);
+            text-align: right;
+            font-family: 'Noto Sans HK';
+            font-size: 3.07vw;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 160%; /* 19.2px */
+            letter-spacing: 1.2px;
+          }
+        }
+        & > div:nth-child(2) {
+          margin-top: 8px;
+          color: var(--Grey-Deep, #4d4d4d);
+          text-align: justify;
+          font-family: 'Noto Sans HK';
+          font-size: 3.07vw;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 160%; /* 19.2px */
+          letter-spacing: 1.2px;
+        }
+      }
+      & > div:not(:first-child):nth-child(odd) {
+        margin: 16px 0 0 auto;
+        & > div:nth-child(1) {
+          & > div:nth-child(1) {
+            & > span:nth-child(1) {
+              color: var(--Theme-Color, #fc1682);
+            }
+          }
         }
       }
     }

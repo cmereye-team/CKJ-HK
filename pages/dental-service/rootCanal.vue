@@ -334,7 +334,8 @@ onMounted(() => {
   getWindowWidth()
   window.addEventListener('resize', getWindowWidth)
 })
-
+const triangleColor = ref(false)
+const triangleDefault = ref(true)
 let messageCurrtNew = ref(1)
 const handleMessageLineCur = (_value: number) => {
   newsMessageSwiperRef.slideToLoop(_value - 1)
@@ -344,6 +345,13 @@ const setMessageNewsSwiperRef = (swiper: any) => {
 }
 const onMessageNewSlideChange = (swiper: any) => {
   messageCurrtNew.value = (swiper.realIndex ? Number(swiper.realIndex) : 0) + 1
+  if (swiper.activeIndex == 0) {
+    triangleColor.value = true
+    triangleDefault.value = true
+  } else {
+    triangleDefault.value = false
+    triangleColor.value = false
+  }
 }
 
 let newsMessageSwiperRef = {
@@ -496,12 +504,50 @@ let newsMessageSwiperRef = {
               </div>
             </swiper-slide>
           </swiper>
-          <PageSwiperPointLine
+          <!-- <PageSwiperPointLine
             v-if="windowWidth < 767"
             :latestNewsNum="2"
             :latestNewsCurrent="messageCurrtNew"
             @changeLineCur="handleMessageLineCur"
-          ></PageSwiperPointLine>
+          ></PageSwiperPointLine> -->
+          <div class="boxRound-rootCanal" v-if="windowWidth < 767">
+            <div
+              class="message"
+              :style="{ color: triangleColor ? '' : '#FC1682' }"
+              @click="handleMessageLineCur(1)"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="16"
+                viewBox="0 0 14 16"
+                fill="none"
+              >
+                <path
+                  d="M0.500001 7.13397C-0.166666 7.51887 -0.166666 8.48112 0.5 8.86602L12.5 15.7942C13.1667 16.1791 14 15.698 14 14.9282L14 1.0718C14 0.301996 13.1667 -0.17913 12.5 0.20577L0.500001 7.13397Z"
+                  :fill="triangleColor ? '' : '#FC1682'"
+                />
+              </svg>
+            </div>
+            <div
+              class="message"
+              @click="handleMessageLineCur(2)"
+              :style="{ color: triangleDefault ? '#FC1682' : '#F7C3C3' }"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="16"
+                viewBox="0 0 14 16"
+                fill="none"
+              >
+                <path
+                  d="M13.5 7.13397C14.1667 7.51887 14.1667 8.48112 13.5 8.86602L1.5 15.7942C0.833333 16.1791 -7.73604e-07 15.698 -7.39955e-07 14.9282L-1.34273e-07 1.0718C-1.00623e-07 0.301996 0.833333 -0.17913 1.5 0.20577L13.5 7.13397Z"
+                  :fill="triangleDefault ? '#FC1682' : '#F7C3C3'"
+                />
+              </svg>
+            </div>
+          </div>
         </div>
       </div>
       <div class="step">
@@ -590,10 +636,7 @@ let newsMessageSwiperRef = {
       <div class="mobile-note-new" v-else>
         <div>
           <div>
-            <img
-              src="https://static.cmereye.com/imgs/2024/08/d0dc549e9aa1aacb.png"
-              alt=""
-            />
+            <img src="../../assets/images/announcements.svg" alt="" />
           </div>
           <div>
             <span>根管治療後</span>
@@ -601,7 +644,10 @@ let newsMessageSwiperRef = {
           </div>
         </div>
         <div class="mobile-note-content">
-          <div v-for="(noteItem, noteIndex) in noteData.listsMobile" :key="noteIndex">
+          <div
+            v-for="(noteItem, noteIndex) in noteData.listsMobile"
+            :key="noteIndex"
+          >
             <span>·</span>
             <span>{{ $t(noteItem.name) }}</span>
           </div>
@@ -1243,7 +1289,7 @@ let newsMessageSwiperRef = {
       }
       & > div:nth-child(2),
       & > div:nth-child(3) {
-        margin-top: -45px;
+        margin-top: -65px;
       }
     }
   }
@@ -1267,12 +1313,13 @@ let newsMessageSwiperRef = {
           .text {
             white-space: pre-wrap;
             font-size: 14px;
+            font-size: 4.2665vw;
           }
         }
         &:nth-of-type(1) {
           & > div {
             .text {
-              padding: 0 30px;
+              padding: 0 0;
             }
           }
         }
@@ -1305,7 +1352,7 @@ let newsMessageSwiperRef = {
     &-content {
       flex-direction: column;
       align-items: flex-start;
-      margin: 54px auto 0;
+      margin: 0 auto 0;
       &-l {
         width: 100%;
         padding: 0 53px;
@@ -1313,7 +1360,7 @@ let newsMessageSwiperRef = {
       &-r {
         width: 100vw;
         margin-left: 0;
-        padding: 8.8vw 6.665vw 0;
+        padding: 9.065vw 6.665vw 0;
         & > div {
           display: flex;
           flex-direction: column;
@@ -1326,7 +1373,7 @@ let newsMessageSwiperRef = {
               font-family: FakePearl;
               font-size: 3.2vw;
               font-style: normal;
-              font-weight: 600;
+              font-weight: 500;
               line-height: 160%; /* 19.2px */
               letter-spacing: 1.2px;
             }
@@ -1335,8 +1382,8 @@ let newsMessageSwiperRef = {
         & > div:nth-child(2) {
           margin: 0 0 0 auto;
         }
-        &>div:nth-child(2),
-        &>div:nth-child(3) {
+        & > div:nth-child(2),
+        & > div:nth-child(3) {
           margin-top: -110px;
         }
       }
@@ -1454,7 +1501,7 @@ let newsMessageSwiperRef = {
             font-family: FakePearl;
             font-size: 12px;
             font-style: normal;
-            font-weight: 600;
+            font-weight: 500;
             line-height: 160%; /* 19.2px */
             letter-spacing: 1.2px;
           }
@@ -1518,7 +1565,7 @@ let newsMessageSwiperRef = {
       }
       .animbtntypetwo-in {
         & > span {
-          font-size: 7.4665vw;
+          font-size: 5.33vw;
         }
       }
     }
@@ -1624,9 +1671,9 @@ let newsMessageSwiperRef = {
       }
       position: relative;
     }
-    &>div::before{
+    & > div::before {
       content: '';
-      background: url('https://static.cmereye.com/imgs/2024/08/017c1f8115058e60.png') no-repeat;
+      background: url('../../assets/images/triangle.svg') no-repeat;
       background-size: 100% 100%;
       display: inline-block;
       width: 9px;
@@ -1640,23 +1687,23 @@ let newsMessageSwiperRef = {
     margin-top: 60px;
     &-in {
       margin-top: 30px;
-      padding: 0 20px;
+      padding: 0 5.33vw;
       flex-direction: column;
       position: relative;
       :deep(.swiper-slide) {
-        width: 269px;
+        width: 71.733vw;
         border-top: 1px solid #fc1682;
         border-left: 1px solid #fc1682;
         border-bottom: 1px solid #fc1682;
         box-sizing: border-box;
-        padding: 20px;
+        padding: 5.33vw;
         & > div:nth-child(2) {
           margin-top: 16px;
-          min-height: 124px;
+          min-height: 33.0665vw;
           color: #4d4d4d;
           text-align: justify;
           font-family: FakePearl;
-          font-size: 12px;
+          font-size: 3.2vw;
           font-style: normal;
           font-weight: 400;
           line-height: 160%; /* 19.2px */
@@ -1685,41 +1732,35 @@ let newsMessageSwiperRef = {
   }
   :deep(.point) {
     margin-top: 20px;
-    width: 74px;
+    width: 19.733vw;
     .boxLine {
       display: none;
     }
     .boxLine-current {
       display: none;
     }
-    .boxRound {
-      width: 74px;
-      justify-content: flex-start !important;
-      border: 1px solid #fc1682;
-      left: 33px;
-      & > div {
-        flex: 1;
-        border-radius: 0;
-        height: 35px;
-        box-sizing: border-box;
-        padding: 9px;
-        background: transparent;
-        .current {
-          background: url('https://static.cmereye.com/imgs/2024/08/c8d1cf8b91b0d38d.png')
-            no-repeat;
-          background-size: contain;
-        }
+  }
+  .boxRound-rootCanal {
+    position: absolute;
+    bottom: -14vw;
+    left: 14vw;
+    display: flex;
+    width: 19.733vw;
+    height: 9.33vw;
+    border: 1px solid #fc1682;
+    & > div {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2.4vw;
+      box-sizing: border-box;
+      & > svg {
+        fill: #f7c3c3;
       }
-      & > div:nth-child(2) {
-        border-left: 1px solid #fc1682;
-        .current {
-          display: block !important;
-          transform: rotate(180deg);
-          background: url('https://static.cmereye.com/imgs/2024/08/c8d1cf8b91b0d38d.png')
-            no-repeat;
-          background-size: contain;
-        }
-      }
+    }
+    &>div:nth-child(1) {
+      border-right: 1px solid #fc1682;
     }
   }
   .doctorTeam {

@@ -442,8 +442,8 @@ onMounted(() => {
                 <div>
                   <div>
                     <img
-                      src="https://static.cmereye.com/imgs/2024/07/8fee088c8053dc1b.png"
-                      alt=""
+                      src="../../assets/images/periodontal1.svg"
+                      alt="清除"
                     />
                   </div>
                   <div>
@@ -453,8 +453,8 @@ onMounted(() => {
                 <div>
                   <div>
                     <img
-                      src="https://static.cmereye.com/imgs/2024/07/aa9796618b0bc026.png"
-                      alt=""
+                      src="../../assets/images/periodontal2.svg"
+                      alt="清除牙菌斑、牙結石及毒素"
                     />
                   </div>
                   <div>
@@ -472,8 +472,8 @@ onMounted(() => {
                 <div>
                   <div>
                     <img
-                      src="https://static.cmereye.com/imgs/2024/07/512770b5e4a2fedd.png"
-                      alt=""
+                      src="../../assets/images/periodontal3.svg"
+                      alt="局部麻醉後修整或填補"
                     />
                   </div>
                   <div>
@@ -483,8 +483,8 @@ onMounted(() => {
                 <div>
                   <div>
                     <img
-                      src="https://static.cmereye.com/imgs/2024/07/1b34e23d621baaf6.png"
-                      alt=""
+                      src="../../assets/images/periodontal4.svg"
+                      alt="填補骨頭缺損部分"
                     />
                   </div>
                   <div>
@@ -1195,6 +1195,7 @@ onMounted(() => {
             padding: 0 30px;
             & > :not(:last-child) {
               margin-bottom: 20px;
+              font-size: 18px;
             }
             & > div {
               display: flex;
@@ -1231,7 +1232,7 @@ onMounted(() => {
                 color: var(--Grey-Deep, #4d4d4d);
                 text-align: justify;
                 font-family: 'Noto Sans HK';
-                font-size: 12px;
+                font-size: 15px;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 160%; /* 19.2px */
@@ -1302,11 +1303,11 @@ onMounted(() => {
           }
           .text {
             white-space: pre-wrap;
-            font-size: 14px;
+            font-size: 20px;
           }
         }
         &:nth-of-type(n + 4) {
-          margin-top: 30px;
+          margin-top: 20px;
         }
         &:nth-of-type(2),
         &:nth-of-type(4),
@@ -1335,6 +1336,36 @@ onMounted(() => {
       margin-top: 35px;
     }
   }
+  :deep(.process) {
+    .process-step {
+      padding: 0 8vw 12.665vw;
+      .step-in {
+        padding: 6.133vw 0 6.133vw 6.4vw;
+        .round {
+          width: 4.265vw;
+          height: 4.265vw;
+        }
+        .title {
+          margin-right: 3.2vw;
+        }
+      }
+    }
+    & > .periodontal-test {
+      & > div {
+        height: auto;
+        flex: 1;
+        box-sizing: border-box;
+        max-width: 28vw;
+        padding: 1.33vw 1.865vw;
+        line-height: 1.5;
+        font-size: 4vw;
+      }
+      & > div:nth-child(2),
+      & > div:nth-child(3) {
+        padding: 1.33vw 5.33vw;
+      }
+    }
+  }
   .care2 {
     margin-top: 0px;
     padding-bottom: 0px;
@@ -1361,11 +1392,11 @@ onMounted(() => {
           }
           .text {
             white-space: pre-wrap;
-            font-size: 14px;
+            font-size: 20px;
           }
         }
         &:nth-of-type(n + 4) {
-          margin-top: 30px;
+          margin-top: 20px;
         }
       }
     }

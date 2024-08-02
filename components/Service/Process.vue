@@ -30,6 +30,16 @@ const handleProcessTabs = (_idx: number) =>{
 const onSlideProcessSwiperChange = (swiper:any) => {
   processTabsActive.value = swiper.realIndex
 }
+
+
+let windowWidth = ref(390)
+const getWindowWidth = () => {
+  windowWidth.value = window.innerWidth
+}
+onMounted(() => {
+  getWindowWidth()
+  window.addEventListener('resize', getWindowWidth)
+})
 </script>
 
 <template>
@@ -62,7 +72,7 @@ const onSlideProcessSwiperChange = (swiper:any) => {
                     <span class="round"></span>
                     <span class="title">{{stepChild.title}}</span>
                     <span class="text">
-                      <div>{{stepChild.text}}</div>
+                      <div>{{ stepChild.textMb ? stepChild.textMb : stepChild.text}}</div>
                       <div class="text-in" v-if="stepChild.textIn">{{stepChild.textIn}}</div>
                     </span>
                   </div>
