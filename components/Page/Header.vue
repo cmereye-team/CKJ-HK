@@ -50,11 +50,11 @@ const menuLists: any = [
     link: `/dental-service`,
     child: [...serviceLists],
   },
-  // {
-  //   name: 'components.header.menuLists.health-care-voucher.name',
-  //   link: `/health-care-voucher`,
-  //   child: [],
-  // },
+  {
+    name: 'components.header.menuLists.health-care-voucher.name',
+    link: `/health-care-voucher`,
+    child: [],
+  },
   {
     name: 'components.header.menuLists.federation-of-trade-unions-zone.name',
     link: `/federation-of-trade-unions-zone`,
@@ -433,10 +433,10 @@ const handleopenwechat = () => {
               <nuxt-link
                 :class="[
                   menuItem.child.length ? 'triangleIcon' : '',
-                  // {
-                  //   'health-care-voucher':
-                  //     menuItem.link === '/health-care-voucher',
-                  // },
+                  {
+                    'health-care-voucher':
+                      menuItem.link === '/health-care-voucher',
+                  },
                   {
                     'federation-of-trade-unions-zone':
                       menuItem.link === '/federation-of-trade-unions-zone',
@@ -550,7 +550,7 @@ const handleopenwechat = () => {
             :class="[
               'menuLists-item',
               item.child.length ? 'childIcon' : '',
-              // { 'health-care-voucher': item.link === '/health-care-voucher' },
+              { 'health-care-voucher': item.link === '/health-care-voucher' },
               {
                 'federation-of-trade-unions-zone':
                   item.link === '/federation-of-trade-unions-zone',

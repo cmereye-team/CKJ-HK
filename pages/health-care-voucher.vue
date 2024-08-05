@@ -259,21 +259,21 @@ const pageDetail: any = {
       ],
       className: 'nob',
     },
-    // {
-    //   type: 'p',
-    //   list: [
-    //     {
-    //       type: 'defule',
-    //       text: 'health-care-voucher.pageDetail.content_1.list_20.text'
-    //     },
-    //     {
-    //       type: 'indexColor a',
-    //       text: 'https://ckjhk.com/health-care-voucher',
-    //       link: 'https://ckjhk.com/health-care-voucher'
-    //     }
-    //   ],
-    //   className: 'nob'
-    // },
+    {
+      type: 'p',
+      list: [
+        {
+          type: 'defule',
+          text: 'health-care-voucher.pageDetail.content_1.list_20.text'
+        },
+        {
+          type: 'indexColor a',
+          text: 'https://ckjhk.com/health-care-voucher',
+          link: 'https://ckjhk.com/health-care-voucher'
+        }
+      ],
+      className: 'nob'
+    },
     {
       type: 'p',
       list: [
