@@ -333,6 +333,8 @@ const getWindowWidth = () => {
 onMounted(() => {
   getWindowWidth()
   window.addEventListener('resize', getWindowWidth)
+  handleMessageLineCur(1)
+  onMessageNewSlideChange(newsMessageSwiperRef)
 })
 const triangleColor = ref(false)
 const triangleDefault = ref(true)
@@ -1262,7 +1264,7 @@ let newsMessageSwiperRef = {
     &-lists {
       flex-direction: column;
       gap: 0;
-      margin: 72px auto 0;
+      margin: 50px auto 0;
       padding: 0 4vw;
       &-item {
         width: 42.6vw;
@@ -1314,6 +1316,7 @@ let newsMessageSwiperRef = {
             white-space: pre-wrap;
             font-size: 14px;
             font-size: 4.2665vw;
+            color: #4d4d4d;
           }
         }
         &:nth-of-type(1) {
