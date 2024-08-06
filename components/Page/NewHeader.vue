@@ -161,8 +161,8 @@ let bannerLists = ref([
   {
     name: '灣區長者醫療券banner',
     link: '/health-care-voucher',
-    pc: 'https://static.cmereye.com/imgs/2024/07/1ea1941fc1372858.webp',
-    mb: 'https://static.cmereye.com/imgs/2024/07/cd882e950625e695.webp',
+    pc: 'https://static.cmereye.com/imgs/2024/08/a51c17cf3ccc911e.jpg',
+    mb: 'https://static.cmereye.com/imgs/2024/08/1e7880b6c278f1d5.jpg',
   },
   {
     name: '愛康健裕亨新店開業優惠banner',
