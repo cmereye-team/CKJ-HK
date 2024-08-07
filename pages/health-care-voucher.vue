@@ -336,15 +336,15 @@ const newsmoduleLists = [
     link: '/news/news-information/192',
   },
   {
-    id: '154',
-    img: 'https://static.cmereye.com/imgs/2024/06/485e301c75d8d05b.jpg',
+    id: '164',
+    img: 'https://static.cmereye.com/imgs/2024/08/32c328667af0ce46.png',
     name: '【#長者醫療券使用指南】提早下載醫健通 用醫療券好輕鬆 📱👍',
     desc: '親愛嘅長者們！使用醫療劵前，可以先下載 📱「醫健通eHealth」App 同進行登記啊！利用呢個App，您可以更方便地管理您嘅醫療劵，包括：✅ 查閱醫療劵戶口餘額 - 隨時了解剩餘金額，合理規劃使用。✅ 查閱過去使用醫療劵紀錄 - 明白每一筆交易，清楚消費。✅ 查閱提供服務嘅醫療機構 - 揾到最適合您嘅醫療服務地點。✅ 獲取最新醫療劵消息 - 不錯過任何重要更新同資訊。',
     link: '/news/news-information/164',
   },
   {
     id: '152',
-    img: 'https://static.cmereye.com/imgs/2024/05/6aa6a7225eee1279.jpg',
+    img: 'https://static.cmereye.com/imgs/2024/08/cab2e7dea18bbfe2.png',
     name: '【#長者醫療券使用指南】首次使用醫療券要登記',
     desc: '長者朋友們，首次使用醫療券需要前往已註冊的醫療券服務提供的醫院或診所進行戶口登記。不過唔使擔心，登記過程非常簡單，而且完全免費。如果您覺得有需要，可以帶埋照顧者一齊前往進行登記手續。',
     link: '/news/news-information/152',
