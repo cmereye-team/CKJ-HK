@@ -160,7 +160,7 @@ onMounted(() => {
   // background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
   .healthCareVoucherPop {
-    width: 20%;
+    width: 18%;
     height: 30%;
     display: flex;
     align-items: center;
@@ -201,7 +201,7 @@ onMounted(() => {
     top: auto;
     left: auto;
     right: 40px;
-    bottom: 360px;
+    bottom: 310px;
     z-index: 100000;
   }
 
@@ -209,7 +209,7 @@ onMounted(() => {
     width: 100%;
     right: 20px;
     position: absolute;
-    bottom: 60px;
+    bottom: 50px;
   }
 }
 
@@ -230,13 +230,14 @@ onMounted(() => {
     top: auto;
     position: absolute;
     cursor: pointer;
-    right: 20px;
-    bottom: 140px;
+    right: 18px;
+    bottom: 110px;
     font-size: 2rem;
   }
   #popup-alert .healthCareVoucherPop {
     width: 12%;
     bottom: 170px;
+    right: 4px;
   }
   // #closedAAAA {
   //   position: relative;
@@ -259,7 +260,7 @@ onMounted(() => {
   #popup-alert .healthCareVoucherPop > a {
     padding-left: 0;
     width: 100%;
-    right: 0;
+    right: 4px;
     position: absolute;
     bottom: 0;
   }
