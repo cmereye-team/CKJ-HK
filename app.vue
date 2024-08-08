@@ -231,7 +231,7 @@ onMounted(() => {
     position: absolute;
     cursor: pointer;
     right: 18px;
-    bottom: 110px;
+    bottom: 145px;
     font-size: 2rem;
   }
   #popup-alert .healthCareVoucherPop {
