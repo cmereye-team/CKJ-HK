@@ -3,12 +3,12 @@
 export default defineNuxtPlugin((nuxtApp) => {
   const router = useRouter()
   router.beforeEach((to, from, next) => {
-    let _arr = ['404','test','/news-tooth-wiki','/news-information','/article']
-    if(!_arr.some(str => to.path?.indexOf(str) !== -1)) {
-      let _tostr = to.path.slice(0,3)
-      if(!['/hk','/cn'].includes(_tostr)){
-        let _fromstr = from.path.slice(0,3)
-        if(['/hk','/cn'].includes(_fromstr)){
+    let _arr = ['404', 'test', '/news-tooth-wiki', '/news-information', '/article']
+    if (!_arr.some(str => to.path?.indexOf(str) !== -1)) {
+      let _tostr = to.path.slice(0, 3)
+      if (!['/hk', '/cn'].includes(_tostr)) {
+        let _fromstr = from.path.slice(0, 3)
+        if (['/hk', '/cn'].includes(_fromstr)) {
           let _url = to.path
           let _url_new = _fromstr + _url
           next(_url_new)
@@ -28,7 +28,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         var container = document.getElementById('popup-alert')
         // var  创建一个id healthCareVoucherPopTop
         var healthCareVoucherPopTop = document.createElement('div')
-      
+
         const domWidth = window.innerWidth
         healthCareVoucherPopTop.innerHTML = ``
         if (domWidth < 768) {
@@ -36,18 +36,18 @@ export default defineNuxtPlugin((nuxtApp) => {
           healthCareVoucherPopTop.innerHTML = `
                 <div class="healthCareVoucherPop">
                   <div class="close">×</div>
-                  <nuxt-link to="/health-care-voucher">
+                  <a href="/health-care-voucher">
                     <img src="https://static.cmereye.com/imgs/2024/08/665992e97473e732.png"  alt="">
-                  </nuxt-link>
+                  </a>
               </div>
               `
         } else {
           healthCareVoucherPopTop.innerHTML = `
                 <div class="healthCareVoucherPop">
                   <div class="close">×</div>
-                  <nuxt-link to="/health-care-voucher">
+                  <a href="/health-care-voucher">
                     <img src="https://static.cmereye.com/imgs/2024/08/e05bf86f046c6430.png"  alt="">
-                  </nuxt-link>
+                  </a>
               </div>
               `
         }
@@ -57,17 +57,20 @@ export default defineNuxtPlugin((nuxtApp) => {
           container.appendChild(healthCareVoucherPopTop)
         }
         // 绑定事件healthCareVoucherPop
-        healthCareVoucherPopTop.addEventListener('click', function (e) {
-          if (container) {
-            container.style.display = 'none'
-          }
-        })
+        const close = document.querySelector('.close')
+        if (close) {
+          close.addEventListener('click', function (e) {
+            if (container) {
+              container.style.display = 'none'
+            }
+          })
+        }
       }
       setTimeout(() => {
         popupAlertCreated()
-      }, 2000);
+      }, 500);
     }
-    if(typeof to.name === 'string' && ['slug'].includes(to.name)){
+    if (typeof to.name === 'string' && ['slug'].includes(to.name)) {
       next('/404')
     }
     next()

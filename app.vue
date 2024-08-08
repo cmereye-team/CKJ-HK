@@ -111,7 +111,7 @@ onMounted(() => {
   locale.value = 'hk'
   getWindowWidth()
   window.addEventListener('resize', getWindowWidth)
-  
+
   // setTimeout(() => {
   //   if (route.path !== '/health-care-voucher') {
   //     popupAlertCreated()
@@ -149,26 +149,28 @@ onMounted(() => {
 
 <style lang="scss">
 #popup-alert {
-  width: 100%;
-  height: 100%;
+  width: fit-content;
+  height: fit-content;
   display: flex;
   align-items: center;
   justify-content: center;
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  // background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
   .healthCareVoucherPop {
-    width: 100%;
-    height: 100%;
+    width: 20%;
+    height: 30%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     position: fixed;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.5);
+    top: auto;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    // background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
   }
   // #closedAAAA {
@@ -194,11 +196,20 @@ onMounted(() => {
     color: #000;
     opacity: 0.7;
     font-size: 4rem;
-    left: 50%;
-    transform: translate(-50%, -350%);
-    top: 50%;
     position: absolute;
     cursor: pointer;
+    top: auto;
+    left: auto;
+    right: 40px;
+    bottom: 360px;
+    z-index: 100000;
+  }
+
+  .healthCareVoucherPop > a {
+    width: 100%;
+    right: 20px;
+    position: absolute;
+    bottom: 60px;
   }
 }
 
@@ -214,11 +225,18 @@ onMounted(() => {
     color: #000;
     opacity: 0.7;
     font-size: 4rem;
-    left: 50%;
-    transform: translate(-50%, 20%);
-    top: 0;
+    left: auto;
+    transform: translate(0, 0);
+    top: auto;
     position: absolute;
     cursor: pointer;
+    right: 20px;
+    bottom: 140px;
+    font-size: 2rem;
+  }
+  #popup-alert .healthCareVoucherPop {
+    width: 12%;
+    bottom: 170px;
   }
   // #closedAAAA {
   //   position: relative;
@@ -238,8 +256,12 @@ onMounted(() => {
   //   height: 3rem;
   //   opacity: 0;
   // }
-  .healthCareVoucherPop > nuxt-link {
-    padding-left: 30px;
+  #popup-alert .healthCareVoucherPop > a {
+    padding-left: 0;
+    width: 100%;
+    right: 0;
+    position: absolute;
+    bottom: 0;
   }
 }
 </style>
