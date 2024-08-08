@@ -1,3 +1,5 @@
+
+
 export default defineNuxtPlugin((nuxtApp) => {
   const router = useRouter()
   router.beforeEach((to, from, next) => {
@@ -12,6 +14,58 @@ export default defineNuxtPlugin((nuxtApp) => {
           next(_url_new)
         }
       }
+    }
+    if (from.path !== '/health-care-voucher') {
+      setTimeout(() => {
+        var container = document.getElementById('popup-alert')
+        if (container) {
+          container.style.display = 'flex'
+        }
+      }, 2000);
+    }
+    if (to.path !== '/health-care-voucher') {
+      function popupAlertCreated() {
+        var container = document.getElementById('popup-alert')
+        // var  创建一个id healthCareVoucherPopTop
+        var healthCareVoucherPopTop = document.createElement('div')
+      
+        const domWidth = window.innerWidth
+        healthCareVoucherPopTop.innerHTML = ``
+        if (domWidth < 768) {
+          // 插入节点
+          healthCareVoucherPopTop.innerHTML = `
+                <div class="healthCareVoucherPop">
+                  <div class="close">×</div>
+                  <nuxt-link to="/health-care-voucher">
+                    <img src="https://static.cmereye.com/imgs/2024/08/665992e97473e732.png"  alt="">
+                  </nuxt-link>
+              </div>
+              `
+        } else {
+          healthCareVoucherPopTop.innerHTML = `
+                <div class="healthCareVoucherPop">
+                  <div class="close">×</div>
+                  <nuxt-link to="/health-care-voucher">
+                    <img src="https://static.cmereye.com/imgs/2024/08/e05bf86f046c6430.png"  alt="">
+                  </nuxt-link>
+              </div>
+              `
+        }
+        if (container) {
+          // container 设置为空 
+          container.innerHTML = ''
+          container.appendChild(healthCareVoucherPopTop)
+        }
+        // 绑定事件healthCareVoucherPop
+        healthCareVoucherPopTop.addEventListener('click', function (e) {
+          if (container) {
+            container.style.display = 'none'
+          }
+        })
+      }
+      setTimeout(() => {
+        popupAlertCreated()
+      }, 2000);
     }
     if(typeof to.name === 'string' && ['slug'].includes(to.name)){
       next('/404')
