@@ -175,11 +175,14 @@ const servicePreferential = [
 const onSubmit = async () => {
   let _formData = new FormData()
   let _form = form
+  console.log(form, 'P;;;;')
+
   _formData.append('contact_name', _form.name)
   // _formData.append('gender', _form.gender)
   _formData.append('phone', `${areaCode.value} ${_form.phone}`)
   _formData.append('dayOne', _form.dayOne)
   _formData.append('area', _form.area)
+  _formData.append('careVoucher', _form.careVoucher ? '是' : '否')
   // _formData.append('email',_form.email)
   _formData.append('service', _form.service)
   _formData.append('formUrl', `${location.href}`)
@@ -238,6 +241,7 @@ const postData = async (_form, _preferential) => {
 优惠信息：${_preferential ? _preferential.text : '無'}
 預約日期：${_form.dayOne}
 診症區域：${_form.area}
+使用長者醫療券：${(_form.careVoucher = _form.careVoucher ? '是' : '否')}
 提交时间：${new Date().toLocaleString()}
 备注信息：服务器离线由备用服务推送`,
     },
@@ -292,6 +296,9 @@ const errorserver = async (_form, _preferential) => {
         <p>来源：${location.href}</p>
         <p>預約日期：${_form.dayOne}</p>
         <p>診症區域：${_form.area}</p>
+        <p>使用長者醫療券：${(_form.careVoucher = _form.careVoucher
+          ? '是'
+          : '否')}</p>
         <p>优惠信息：${_preferential ? _preferential.text : '無'}</p><br/>
         <p>提交時間：${new Date().toLocaleString()}</p>
         <p>备注信息：服务器离线由备用服务推送</p>`,
@@ -423,12 +430,17 @@ let privacyPolicy = ref(true)
             </el-select>
             <el-input v-model="form.phone" maxlength="12" />
           </el-form-item>
-          <!-- <el-form-item>
-            <div style="display: flex;gap: 0 5px; align-items: center">
-              <label for="">使用長者醫療券</label>
-              <input type="checkbox" value="true"  v-model="form.careVoucher">
+          <el-form-item>
+            <div class="care_voucher">
+              <label for="care_title">使用長者醫療券</label>
+              <input
+                type="checkbox"
+                value="true"
+                id="care_title"
+                v-model="form.careVoucher"
+              />
             </div>
-          </el-form-item> -->
+          </el-form-item>
           <el-form-item>
             <div class="privacyPolicy">
               <div class="privacyPolicy-label">*為必填</div>
@@ -598,7 +610,8 @@ ul {
   }
   & > div:nth-child(5),
   & > div:nth-child(6),
-  & > div:nth-child(7) {
+  & > div:nth-child(7),
+  & > div:nth-child(8) {
     // 独占一行
     grid-column: 1 / 3;
   }
@@ -846,6 +859,47 @@ li {
           border-width: 2px;
           border-color: var(--indexColor1);
         }
+      }
+    }
+    .care_voucher {
+      display: flex;
+      align-items: center;
+      gap: 0 5px;
+      & > label {
+        color: #00a752;
+        font-family: FakePearl;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 24px */
+        letter-spacing: 1.5px;
+      }
+      & > input:checked {
+        content: '';
+        color: #fff;
+        // background-color: #007bff;
+        background: url('../assets/images/careVoucher.svg') no-repeat;
+        background-position: 1px -2px;
+        border: 1px solid transparent;
+        border-radius: 0;
+        display: inline-block;
+        text-align: center;
+        background-size: contain;
+        width: 20px;
+        height: 20px;
+        transition: all 0.1s ease-in;
+      }
+
+      & > input {
+        position: relative;
+        background-color: #fff;
+        -webkit-appearance: none;
+        border: 2px solid #fc1682;
+        border-radius: 0;
+        outline: none;
+        width: 17px;
+        height: 17px;
+        transition: all 0.1s ease-in;
       }
     }
   }
