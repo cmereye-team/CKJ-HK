@@ -157,7 +157,6 @@ onMounted(() => {
   position: fixed;
   top: 0;
   left: 0;
-  // background-color: rgba(0, 0, 0, 0.5);
   z-index: 999;
   .healthCareVoucherPop {
     width: 18%;
@@ -170,27 +169,8 @@ onMounted(() => {
     left: auto;
     right: 0;
     bottom: 0;
-    // background-color: rgba(0, 0, 0, 0.5);
     z-index: 999;
   }
-  // #closedAAAA {
-  //   position: relative;
-  //   z-index: 1000000;
-  //   display: block;
-  //   /* background: pink; */
-  //   color: #000;
-  //   opacity: 0.7;
-  //   font-size: 4rem;
-  //   left: 50%;
-  //   transform: translate(-50%, 800%);
-  //   top: 0;
-  //   position: absolute;
-  //   cursor: pointer;
-  //   background: transparent;
-  //   width: 3rem;
-  //   height: 3rem;
-  //   opacity: 0;
-  // }
 
   .close {
     color: #000;
@@ -213,13 +193,6 @@ onMounted(() => {
   }
 }
 
-// #closedAAAA:checked ~ #healthCareVoucherPop {
-//   display: none;
-// }
-
-// #closedAAAA:checked {
-//   display: none;
-// }
 @media screen and (max-width: 767px) {
   #popup-alert .close {
     color: #000;
@@ -239,24 +212,219 @@ onMounted(() => {
     bottom: 170px;
     right: 4px;
   }
-  // #closedAAAA {
-  //   position: relative;
-  //   z-index: 1000000;
-  //   display: block;
-  //   /* background: pink; */
-  //   color: #000;
-  //   opacity: 0.7;
-  //   font-size: 4rem;
-  //   left: 50%;
-  //   transform: translate(-50%, 70%);
-  //   top: 0;
-  //   position: absolute;
-  //   cursor: pointer;
-  //   background: transparent;
-  //   width: 3rem;
-  //   height: 3rem;
-  //   opacity: 0;
-  // }
+  #popup-alert .healthCareVoucherPop > a {
+    padding-left: 0;
+    width: 100%;
+    right: 4px;
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  #popup-alert {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    .healthCareVoucherPop {
+      width: 15%;
+      height: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      position: fixed;
+      top: auto;
+      left: auto;
+      right: 5px;
+      bottom: 0;
+      z-index: 999;
+    }
+
+    .close {
+      color: #000;
+      opacity: 0.7;
+      font-size: 4rem;
+      position: relative;
+      cursor: pointer;
+      top: auto;
+      left: auto;
+      right: 40px;
+      bottom: 40%;
+      z-index: 100000;
+    }
+
+    .healthCareVoucherPop > a {
+      width: 100%;
+      right: 20px;
+      position: absolute;
+      bottom: 50px;
+    }
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 1919px) {
+  #popup-alert {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    .healthCareVoucherPop {
+      width: 15%;
+      height: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      position: fixed;
+      top: auto;
+      left: auto;
+      right: 5px;
+      bottom: 0;
+      z-index: 999;
+    }
+
+    .close {
+      color: #000;
+      opacity: 0.7;
+      font-size: 4rem;
+      position: relative;
+      cursor: pointer;
+      top: auto;
+      left: auto;
+      right: 40px;
+      bottom: 90px;
+      z-index: 100000;
+    }
+
+    .healthCareVoucherPop > a {
+      width: 100%;
+      right: 20px;
+      position: absolute;
+      bottom: 50px;
+    }
+  }
+}
+@media screen and (min-width: 1024px) and (max-width: 1439px) {
+  #popup-alert {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    .healthCareVoucherPop {
+      width: 12%;
+      height: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      position: fixed;
+      top: auto;
+      left: auto;
+      right: 5px;
+      bottom: -28px;
+      z-index: 999;
+    }
+
+    .close {
+      color: #000;
+      opacity: 0.7;
+      font-size: 2rem;
+      position: relative;
+      cursor: pointer;
+      top: auto;
+      left: auto;
+      right: 35px;
+      bottom: 70px;
+      z-index: 100000;
+    }
+
+    .healthCareVoucherPop > a {
+      width: 100%;
+      right: 20px;
+      position: absolute;
+      bottom: 50px;
+    }
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  #popup-alert {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    .healthCareVoucherPop {
+      width: 12%;
+      height: 30%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      position: fixed;
+      top: auto;
+      left: auto;
+      right: 5px;
+      bottom: -28px;
+      z-index: 999;
+    }
+
+    .close {
+      color: #000;
+      opacity: 0.7;
+      font-size: 2rem;
+      position: relative;
+      cursor: pointer;
+      top: auto;
+      left: auto;
+      right: 35px;
+      bottom: 70px;
+      z-index: 100000;
+    }
+
+    .healthCareVoucherPop > a {
+      width: 100%;
+      right: 20px;
+      position: absolute;
+      bottom: 50px;
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  #popup-alert .close {
+    color: #000;
+    opacity: 0.7;
+    font-size: 4rem;
+    left: auto;
+    transform: translate(0, 0);
+    top: auto;
+    position: relative;
+    right: 22px;
+    bottom: auto;
+    font-size: 1.4rem;
+    top: -70px;
+  }
+  #popup-alert .healthCareVoucherPop {
+    width: 40px;
+    height: 120px;
+    bottom: 170px;
+    right: 4px;
+  }
   #popup-alert .healthCareVoucherPop > a {
     padding-left: 0;
     width: 100%;

@@ -23,12 +23,12 @@ export default defineNuxtPlugin((nuxtApp) => {
         }
       }, 2000);
     }
-    if (to.path !== '/health-care-voucher') {
+    const excludedPaths = ['/health-care-voucher', '/dental-service/children-dentistry'];
+    if (!excludedPaths.includes(to.path)) {
       function popupAlertCreated() {
         var container = document.getElementById('popup-alert')
         // var  创建一个id healthCareVoucherPopTop
         var healthCareVoucherPopTop = document.createElement('div')
-
         const domWidth = window.innerWidth
         healthCareVoucherPopTop.innerHTML = ``
         if (domWidth < 768) {
