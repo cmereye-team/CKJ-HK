@@ -1562,6 +1562,7 @@ if (process.server) {
     left: 50%;
     transform: translateX(-50%);
     width: 100vw;
+    z-index: 29;
     // background: #fff;
     filter: drop-shadow(0 -3px 5px rgba(252, 22, 130, 0.3));
     & > div:nth-child(1) {
