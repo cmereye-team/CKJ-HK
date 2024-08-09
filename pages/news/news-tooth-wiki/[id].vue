@@ -242,10 +242,20 @@ const changetopimg = (swiper: any) => {
   topimgCur.value = (swiper.realIndex ? Number(swiper.realIndex) : 0) + 1
 }
 
+const closeAd = ref(false)
+let windowWidth = ref(390)
+
+const getWindowWidth = () => {
+  windowWidth.value = window.innerWidth
+}
+
 onMounted(() => {
   setTimeout(() => {
     getDetail(_nid)
   })
+
+  getWindowWidth()
+  window.addEventListener('resize', getWindowWidth)
   setTimeout(() => {
     if (route.path == '/news/news-tooth-wiki/219') {
       const img_id_219 = document.getElementById('img_id_219')
@@ -257,9 +267,9 @@ onMounted(() => {
           `
         )
       }
-    } }, 3000)
-}) 
-
+    }
+  }, 3000)
+})
 
 // const articlePage = ref()
 // const articlePageIn = ref()
@@ -308,6 +318,30 @@ if (process.server) {
           <span :title="'牙齒百科'">牙齒百科</span>
         </nuxt-link>
         <span>{{ coverageDeatail.name }}</span>
+      </div>
+      <div class="is_new_tooth_wiki" v-if="windowWidth < 768 && !closeAd">
+        <div>
+          <img
+            src="https://static.cmereye.com/imgs/2024/08/e76f7c7e81a0f86e.png"
+            alt=""
+          />
+        </div>
+        <div @click="closeAd = true">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            viewBox="0 0 20 20"
+            fill="none"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M4.29289 4.29289C4.68342 3.90237 5.31658 3.90237 5.70711 4.29289L10 8.58579L14.2929 4.29289C14.6834 3.90237 15.3166 3.90237 15.7071 4.29289C16.0976 4.68342 16.0976 5.31658 15.7071 5.70711L11.4142 10L15.7071 14.2929C16.0976 14.6834 16.0976 15.3166 15.7071 15.7071C15.3166 16.0976 14.6834 16.0976 14.2929 15.7071L10 11.4142L5.70711 15.7071C5.31658 16.0976 4.68342 16.0976 4.29289 15.7071C3.90237 15.3166 3.90237 14.6834 4.29289 14.2929L8.58579 10L4.29289 5.70711C3.90237 5.31658 3.90237 4.68342 4.29289 4.29289Z"
+              fill="#AAAAAA"
+            />
+          </svg>
+        </div>
       </div>
       <div
         class="articlePage-in"
@@ -1522,6 +1556,24 @@ if (process.server) {
   }
 }
 @media screen and (max-width: 768px) {
+  .is_new_tooth_wiki {
+    position: fixed;
+    bottom: 70px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    // background: #fff;
+    filter: drop-shadow(0 -3px 5px rgba(252, 22, 130, 0.3));
+    & > div:nth-child(1) {
+      display: flex;
+      justify-content: center;
+    }
+    & > div:nth-child(2) {
+      position: absolute;
+      top: 15px;
+      right: 15%;
+    }
+  }
   :deep(iframe) {
     max-width: 100%;
     height: auto;
