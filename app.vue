@@ -193,34 +193,6 @@ onMounted(() => {
   }
 }
 
-@media screen and (max-width: 767px) {
-  #popup-alert .close {
-    color: #000;
-    opacity: 0.7;
-    font-size: 4rem;
-    left: auto;
-    transform: translate(0, 0);
-    top: auto;
-    position: absolute;
-    cursor: pointer;
-    right: 18px;
-    bottom: 145px;
-    font-size: 2rem;
-  }
-  #popup-alert .healthCareVoucherPop {
-    width: 12%;
-    bottom: 170px;
-    right: 4px;
-  }
-  #popup-alert .healthCareVoucherPop > a {
-    padding-left: 0;
-    width: 100%;
-    right: 4px;
-    position: absolute;
-    bottom: 0;
-  }
-}
-
 @media screen and (min-width: 1920px) {
   #popup-alert {
     width: fit-content;
@@ -241,7 +213,7 @@ onMounted(() => {
       position: fixed;
       top: auto;
       left: auto;
-      right: 5px;
+      right: 110px;
       bottom: 0;
       z-index: 999;
     }
@@ -254,8 +226,8 @@ onMounted(() => {
       cursor: pointer;
       top: auto;
       left: auto;
-      right: 40px;
-      bottom: 40%;
+      right: 45px;
+      bottom: 33%;
       z-index: 100000;
     }
 
@@ -287,7 +259,7 @@ onMounted(() => {
       position: fixed;
       top: auto;
       left: auto;
-      right: 5px;
+      right: 110px;
       bottom: 0;
       z-index: 999;
     }
@@ -333,7 +305,7 @@ onMounted(() => {
       position: fixed;
       top: auto;
       left: auto;
-      right: 5px;
+      right: 100px;
       bottom: -28px;
       z-index: 999;
     }
