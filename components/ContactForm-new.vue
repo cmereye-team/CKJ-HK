@@ -423,12 +423,12 @@ let privacyPolicy = ref(true)
             </el-select>
             <el-input v-model="form.phone" maxlength="12" />
           </el-form-item>
-          <el-form-item>
+          <!-- <el-form-item>
             <div style="display: flex;gap: 0 5px; align-items: center">
               <label for="">使用長者醫療券</label>
               <input type="checkbox" value="true"  v-model="form.careVoucher">
             </div>
-          </el-form-item>
+          </el-form-item> -->
           <el-form-item>
             <div class="privacyPolicy">
               <div class="privacyPolicy-label">*為必填</div>
