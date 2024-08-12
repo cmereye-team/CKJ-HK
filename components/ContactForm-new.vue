@@ -2,7 +2,8 @@
 import service from '~/assets/js/service'
 import type { FormInstance, FormRules } from 'element-plus'
 import { useAppState } from '~/stores/appState'
-import { smallPhoneNum } from '~/assets/js/common'
+const route = useRoute()
+// import { smallPhoneNum } from '~/assets/js/common'
 const appState = useAppState()
 
 const props = defineProps({
@@ -42,7 +43,7 @@ let form: any = reactive({
   area: '羅湖區',
   // email: '',
   service: '',
-  careVoucher: true,
+  careVoucher: route.path == '/health-care-voucher' ? true : false,
 })
 
 const reForm = () => {
@@ -53,7 +54,7 @@ const reForm = () => {
     area: '',
     phone: '',
     service: '',
-    careVoucher: true,
+    careVoucher: route.path == '/health-care-voucher' ? true : false,
   }
 }
 
@@ -175,8 +176,6 @@ const servicePreferential = [
 const onSubmit = async () => {
   let _formData = new FormData()
   let _form = form
-  console.log(form, 'P;;;;')
-
   _formData.append('contact_name', _form.name)
   // _formData.append('gender', _form.gender)
   _formData.append('phone', `${areaCode.value} ${_form.phone}`)
@@ -228,6 +227,14 @@ const onSubmit = async () => {
   }
   formLoading.value = false
   appState.setIsShowForm(false)
+}
+
+const isCareVoucher = () => {
+  if (route.path == '/health-care-voucher') {
+    return true
+  } else {
+    return false
+  }
 }
 
 const postData = async (_form, _preferential) => {
