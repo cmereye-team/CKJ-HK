@@ -304,6 +304,8 @@ const orgLists = [
     'https://static.cmereye.com/static/ckjnewsite/org/org-4011.png',
     'https://static.cmereye.com/static/ckjnewsite/org/org-4012.png',
     'https://static.cmereye.com/static/ckjnewsite/org/org-4013.png',
+    'https://static.cmereye.com/imgs/2024/08/0f5e6c9b18b98255.png',
+    'https://static.cmereye.com/imgs/2024/08/d231dc9dec259527.png'
   ],
 ]
 const handleorgtabfun = (orgTabIndex) => {
@@ -1746,7 +1748,7 @@ svg:hover path {
       width: calc((100% - 300px) / 5);
       margin: 0 30px 40px;
       display: flex;
-      align-items: flex-end;
+      align-items: center;
       justify-content: center;
     }
     &-0 {
