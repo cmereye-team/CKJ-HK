@@ -226,7 +226,7 @@ onMounted(() => {
       cursor: pointer;
       top: auto;
       left: auto;
-      right: 45px;
+      right: 75px;
       bottom: 33%;
       z-index: 100000;
     }
@@ -273,7 +273,7 @@ onMounted(() => {
       top: auto;
       left: auto;
       right: 40px;
-      bottom: 90px;
+      bottom: 65px;
       z-index: 100000;
     }
 
@@ -298,7 +298,7 @@ onMounted(() => {
     z-index: 999;
     .healthCareVoucherPop {
       width: 12%;
-      height: 30%;
+      height: 22%;
       display: flex;
       align-items: center;
       justify-content: flex-end;
@@ -306,7 +306,7 @@ onMounted(() => {
       top: auto;
       left: auto;
       right: 100px;
-      bottom: -28px;
+      bottom: 36px;
       z-index: 999;
     }
 

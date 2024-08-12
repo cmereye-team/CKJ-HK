@@ -407,7 +407,7 @@ watch(
       <ServiceProblem :problemData="problemData" />
       <serviceCard />
       <NewAddress />
-     <ContactForm-new />
+      <ContactForm-new />
     </div>
     <div class="YaNavBox shownav" v-if="shownav_2">
       <img
@@ -504,12 +504,13 @@ watch(
   position: fixed;
   z-index: 101;
   right: 200px;
-  bottom: 100px;
+  bottom: 353px;
   transition: all 0.3s;
   .close {
     position: absolute;
     bottom: 360%;
-    left: -5px;
+    right: -10px;
+    left: auto;
     width: 30px;
     height: 30px;
     z-index: 102;
@@ -1126,12 +1127,13 @@ watch(
 }
 @media (min-width: 768px) and (max-width: 1920px) {
   .YaNavBox {
-    right: 10.4167vw;
-    bottom: 5.2083vw;
+    right: 8.4167vw;
+    bottom: 22.85vh;
     .close {
-      left: -0.2604vw;
+      left: auto;
       width: 1.5625vw;
       height: 1.5625vw;
+      right: 0.22vw;
     }
   }
   .YaNav {
@@ -1422,11 +1424,11 @@ watch(
     margin-top: 0;
   }
   .YaNavBox {
-    right: 20px;
-    bottom: 30%;
+    right: 10px;
+    bottom: 40%;
     // right: -20px;
     .close {
-      bottom: 160%;
+      bottom: 150%;
       //left: auto;
       left: calc(50% - 10px);
       //right: 0;
@@ -1468,17 +1470,17 @@ watch(
           15% 50%
         );
         padding: 20px 0px;
-        width: 60px;
+        width: 42px;
         writing-mode: vertical-lr;
         -webkit-writing-mode: vertical-lr;
         font-family: var(--contextFamily);
         font-weight: 700;
         text-align: center;
-        font-size: 18px;
+        font-size: 16px;
         span {
           writing-mode: initial;
           line-height: 1.2;
-          font-size: 24px;
+          font-size: 16px;
           i {
             font-size: 14px;
             font-weight: 600;
