@@ -504,7 +504,7 @@ watch(
   position: fixed;
   z-index: 101;
   right: 200px;
-  bottom: 353px;
+  bottom: 375px;
   transition: all 0.3s;
   .close {
     position: absolute;
