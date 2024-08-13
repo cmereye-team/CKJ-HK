@@ -445,10 +445,16 @@ const newsmoduleLists = [
         <div class="nob" style="margin: 0 0 20px 0">
           <h1>深圳愛康健口腔醫院簡介</h1>
         </div>
-        <div>
+        <div class="new_two_img">
           <img
             loading="lazy"
-            src="https://static.cmereye.com/imgs/2024/08/647df5e8d4744f56.png"
+            src="https://static.cmereye.com/imgs/2024/08/22290f84b6d30b72.jpg"
+            title="灣區長者醫療券"
+            alt="灣區長者醫療券"
+          />
+          <img
+            loading="lazy"
+            src="https://static.cmereye.com/imgs/2024/08/e664507ec2ca2726.jpg"
             title="灣區長者醫療券"
             alt="灣區長者醫療券"
           />
@@ -488,12 +494,17 @@ const newsmoduleLists = [
             target="_blank"
             class="new_address_pink"
           >
-            網上查詢(https://bit.ly/%E6%84%9B%E5%BA%B7%E5%81%A5%E9%95%B7%E8%80%85%E9%86%AB%E7%99%82%E5%88%B8%E9%A0%90%E7%B4%84)
+            網上查詢
           </a>
         </div>
         <div class="new_defule">
           <span class="new_address_gray">或致電</span
-          ><span class="new_address_pink"> 69338128 </span
+          ><a
+            class="new_address_pink"
+            href="tel://852 69338128"
+            target="_blank"
+          >
+            69338128 </a
           ><span class="new_address_gray">進行登記預約。</span>
         </div>
         <div class="new_defule">
@@ -899,6 +910,15 @@ const newsmoduleLists = [
     letter-spacing: 4px;
   }
 }
+.new_two_img {
+  width: 100%;
+  display: flex;
+  gap: 0 10px;
+  & > img {
+    flex: 1;
+    width: 50%;
+  }
+}
 .new_table {
   margin: 98px auto 100px;
   max-width: 1100px;
@@ -918,8 +938,9 @@ const newsmoduleLists = [
 .new_table_tbody {
   display: flex;
   flex-direction: column;
-  background: var(--Pink-Mid, #fdd3e3);
+  background: var(--Pink-Mid, #fee6f1);
   border-radius: 20px;
+  overflow: hidden;
   width: 1100px;
   margin-left: -70px;
   & > div {
@@ -938,6 +959,7 @@ const newsmoduleLists = [
       font-style: normal;
       font-weight: 500;
       line-height: 160%; /* 38.4px */
+      background: var(--Pink-Mid, #fdd3e3);
       & > span {
         color: #fc1682;
         text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff,
@@ -1404,6 +1426,7 @@ const newsmoduleLists = [
       z-index: 99;
     }
     .step_shade_mb {
+      display: none !important;
       position: absolute;
       width: 76.5vw;
       height: 148.53vw;
@@ -1687,8 +1710,8 @@ const newsmoduleLists = [
         line-height: 160%; /* 24px */
         & > span {
           color: #fc1682;
-          text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff,
-            2px 2px 0 #fff;
+          text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+            1px 1px 0 #fff;
         }
       }
       & > div:nth-child(2) {
@@ -1711,6 +1734,7 @@ const newsmoduleLists = [
             margin-right: 2px;
             width: 18px;
             height: 18px;
+            min-width: 18px;
             border-radius: 50%;
             background: var(--Theme-Color, #fc1682);
             color: #fff;

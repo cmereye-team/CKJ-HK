@@ -401,7 +401,7 @@ let privacyPolicy = ref(true)
             <el-input v-model="form.email" />
           </el-form-item> -->
           <el-form-item label="診症區域" prop="area">
-            <el-select v-model="form.area">
+            <el-select v-model="form.area" placeholder="請選擇">
               <el-option
                 v-for="item in options"
                 :key="item.value"
@@ -423,6 +423,7 @@ let privacyPolicy = ref(true)
                 v-for="serviceItem in serviceLists"
                 :key="$t(serviceItem)"
                 :value="$t(serviceItem)"
+                placeholder="請選擇"
               />
             </el-select>
           </el-form-item>
@@ -430,7 +431,7 @@ let privacyPolicy = ref(true)
             :label="`${$t('contactUs.contact_form.formItem.telephone_number')}`"
             prop="phone"
           >
-            <el-select class="areaCode" v-model="areaCode">
+            <el-select class="areaCode" v-model="areaCode"  placeholder="請選擇">
               <el-option label="+852" value="852" />
               <el-option label="+853" value="853" />
               <el-option label="+86" value="86" />

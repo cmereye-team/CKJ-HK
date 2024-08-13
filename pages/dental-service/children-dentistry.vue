@@ -1424,7 +1424,7 @@ watch(
     margin-top: 0;
   }
   .YaNavBox {
-    right: 10px;
+    right: 18px;
     bottom: 40%;
     // right: -20px;
     .close {
@@ -1470,19 +1470,19 @@ watch(
           15% 50%
         );
         padding: 20px 0px;
-        width: 42px;
+        width: 32px;
         writing-mode: vertical-lr;
         -webkit-writing-mode: vertical-lr;
         font-family: var(--contextFamily);
         font-weight: 700;
         text-align: center;
-        font-size: 16px;
+        font-size: 14px;
         span {
           writing-mode: initial;
           line-height: 1.2;
-          font-size: 16px;
+          font-size: 12px;
           i {
-            font-size: 14px;
+            font-size: 10px;
             font-weight: 600;
           }
         }
