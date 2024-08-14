@@ -1139,7 +1139,7 @@ const newsmoduleLists = [
                       <span><i>￥</i>58</span><span>(原價¥180/次)</span>
                     </div>
                   </div>
-                  <div class="abs_box"><span>優惠</span><span>1</span></div>
+                  <div class="abs_box"><span>優惠</span><span>3</span></div>
                 </div>
                 <div>
                   <div>
@@ -1148,7 +1148,7 @@ const newsmoduleLists = [
                       <span><i>￥</i>168</span><span>(原價¥550/次)</span>
                     </div>
                   </div>
-                  <div class="abs_box"><span>優惠</span><span>1</span></div>
+                  <div class="abs_box"><span>優惠</span><span>4</span></div>
                 </div>
                 <div>
                   <div>
@@ -1158,7 +1158,7 @@ const newsmoduleLists = [
                       ><span>（或使用網上優惠）</span>
                     </div>
                   </div>
-                  <div class="abs_box"><span>優惠</span><span>1</span></div>
+                  <div class="abs_box"><span>優惠</span><span>5</span></div>
                 </div>
                 <div>
                   <div>
@@ -1180,30 +1180,58 @@ const newsmoduleLists = [
                       </div>
                     </div>
                   </div>
-                  <div class="abs_box"><span>優惠</span><span>1</span></div>
+                  <div class="abs_box"><span>優惠</span><span>6</span></div>
                 </div>
                 <div>
                   <div>
-                    <div>首次到診長者</div>
+                    <div>政府補助植體<span>（集采種植牙）</span></div>
                     <div>
                       <span>可延長<i>1</i></span
                       ><span><i style="color: #fc1682">年</i>保修期</span>
                     </div>
                   </div>
-                  <div class="abs_box"><span>優惠</span><span>1</span></div>
+                  <div class="abs_box"><span>優惠</span><span>7</span></div>
                 </div>
                 <div>
                   <div>
-                    <div>首次到診長者</div>
+                    <div>非政府補助的<span>歐美植體</span></div>
                     <div>
                       <span>享有網上優惠再<i>9</i><i>折</i></span
                       ><span>（特價種植牙產品除外）</span>
                     </div>
                   </div>
-                  <div class="abs_box"><span>優惠</span><span>1</span></div>
+                  <div class="abs_box"><span>優惠</span><span>8</span></div>
                 </div>
               </div>
               <div v-else class="new_info_content_items">
+                <!-- <div>
+                  <div>
+                    <div>首次到診長者</div>
+                    <div>
+                      <span>免掛號費</span><span><i>及</i>CT拍片檢查費</span>
+                    </div>
+                  </div>
+                  <div class="abs_box"><span>優惠</span><span>1</span></div>
+                </div>
+                <div>
+                  <div>
+                    <div>義齒修復</div>
+                    <div>
+                      <span>免費拔牙<i>1顆</i></span
+                      ><span>（智慧齒除外）</span>
+                    </div>
+                  </div>
+                  <div class="abs_box"><span>優惠</span><span>2</span></div>
+                </div>
+                <div>
+                  <div>
+                    <div>超聲波洗牙</div>
+                    <div>
+                      <span><i>￥</i>58</span><span>(原價¥180/次)</span>
+                    </div>
+                  </div>
+                  <div class="abs_box"><span>優惠</span><span>1</span></div>
+                </div> -->
                 <div>
                   <img
                     src="https://static.cmereye.com/imgs/2024/08/8279b13d1912c282.png"
@@ -1406,7 +1434,6 @@ const newsmoduleLists = [
         background: var(--Pink-Pale, #fee6f1);
       }
     }
-
     & > div:nth-child(1) {
       & > div:nth-child(2) {
         display: flex;
@@ -1775,6 +1802,10 @@ const newsmoduleLists = [
   }
   & > div:nth-child(7) {
     & > div:nth-child(1) {
+      &>div:nth-child(1){
+        display: flex;
+        flex-direction: column;
+      }
       & > div:nth-child(2) {
         display: flex;
         flex-direction: row;
@@ -1823,6 +1854,10 @@ const newsmoduleLists = [
   }
   & > div:nth-child(8) {
     & > div:nth-child(1) {
+      &>div:nth-child(1){
+        display: flex;
+        flex-direction: column;
+      }
       & > div:nth-child(2) {
         display: flex;
         flex-direction: column;
@@ -2587,7 +2622,7 @@ const newsmoduleLists = [
   }
   .new_info_content_bg {
     border-radius: 20px 20px var(--Count, 0px) var(--Count, 0px);
-    background: linear-gradient(180deg, #FEE6F1 -23.02%, #FFF 58.97%);
+    background: linear-gradient(180deg, #fee6f1 -23.02%, #fff 58.97%);
     position: relative;
     z-index: 5;
   }
@@ -2597,9 +2632,511 @@ const newsmoduleLists = [
     gap: 30px 0;
     & > div {
       margin: 0;
-      & > div:nth-child(2) {
-        margin: 0;
+      width: 315px;
+      position: relative;
+      z-index: 5;
+      & > div:nth-child(1) {
+        border-radius: 30px;
+        border: 2px solid #fc1682;
+        background: #fff;
+        box-shadow: 6px 6px 0px 0px rgba(252, 22, 130, 0.3);
+        & > div:nth-child(1) {
+          padding: 20px 0 10px;
+          color: #14a033;
+          text-align: center;
+          font-family: FakePearl;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 160%; /* 32px */
+        }
+        & > div:nth-child(2) {
+          box-sizing: border-box;
+          padding: 20px 30px;
+          border-radius: var(--Count, 0px) var(--Count, 0px) 30px 30px;
+          background: var(--Pink-Pale, #fee6f1);
+        }
       }
+      & > div:nth-child(1) {
+        & > div:nth-child(2) {
+          display: flex;
+          flex-direction: column;
+          color: var(--Theme-Color, #fc1682);
+          text-align: center;
+          text-shadow: 0px 2px 0px var(--White, #fff);
+          -webkit-text-stroke-width: 2;
+          -webkit-text-stroke-color: #fff;
+          font-family: 'Noto Sans HK';
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 160%; /* 38.4px */
+          letter-spacing: 3.84px;
+          i {
+            color: var(--Grey-Deep, #4d4d4d);
+            font-family: 'Noto Sans HK';
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 160%;
+            letter-spacing: 3.2px;
+          }
+        }
+      }
+    }
+    & > div:nth-child(2) {
+      & > div:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        color: var(--Theme-Color, #fc1682);
+        text-align: center;
+        text-shadow: 0px 2px 0px var(--White, #fff);
+        -webkit-text-stroke-width: 2;
+        -webkit-text-stroke-color: #fff;
+        font-family: 'Noto Sans HK';
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 160%; /* 56px */
+        letter-spacing: 5.6px;
+        & > div:nth-child(2) {
+          & > span:nth-child(2) {
+            color: var(--Grey-Deep, #4d4d4d);
+            font-family: 'Noto Sans HK';
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 160%;
+            letter-spacing: 3.2px;
+          }
+        }
+      }
+    }
+    & > div:nth-child(3) {
+      & > div:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        color: var(--Theme-Color, #fc1682);
+        text-align: center;
+        text-shadow: 0px 2px 0px var(--White, #fff);
+        -webkit-text-stroke-width: 2;
+        -webkit-text-stroke-color: #fff;
+        font-family: 'Noto Sans HK';
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 160%; /* 56px */
+        letter-spacing: 5.6px;
+        & > div:nth-child(2) {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-end;
+          justify-content: center;
+          & > span:nth-child(1) {
+            color: var(--Theme-Color, #fc1682);
+            font-family: 'Noto Sans HK';
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 100%;
+            letter-spacing: 9.6px;
+            & > i {
+              color: var(--Theme-Color, #fc1682);
+              text-align: center;
+              text-shadow: 0px 2px 0px var(--White, #fff);
+              -webkit-text-stroke-width: 2;
+              -webkit-text-stroke-color: #fff;
+              font-family: 'Noto Sans HK';
+              font-size: 30px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 160%; /* 48px */
+              letter-spacing: 4.8px;
+            }
+          }
+          & > span:nth-child(2) {
+            color: var(--Grey-Deep, #4d4d4d);
+            font-family: 'Noto Sans HK';
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 200%;
+            letter-spacing: 3.2px;
+            position: relative;
+          }
+          & > span:nth-child(2)::after {
+            content: '';
+            width: 100%;
+            height: 2px;
+            background: #4d4d4d;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: rotate(-5deg);
+          }
+        }
+      }
+    }
+    & > div:nth-child(4) {
+      & > div:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        color: var(--Theme-Color, #fc1682);
+        text-align: center;
+        text-shadow: 0px 2px 0px var(--White, #fff);
+        -webkit-text-stroke-width: 2;
+        -webkit-text-stroke-color: #fff;
+        font-family: 'Noto Sans HK';
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 160%; /* 56px */
+        letter-spacing: 5.6px;
+        & > div:nth-child(2) {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-end;
+          justify-content: center;
+          & > span:nth-child(1) {
+            color: var(--Theme-Color, #fc1682);
+            font-family: 'Noto Sans HK';
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 100%;
+            letter-spacing: 9.6px;
+            & > i {
+              color: var(--Theme-Color, #fc1682);
+              text-align: center;
+              text-shadow: 0px 2px 0px var(--White, #fff);
+              -webkit-text-stroke-width: 2;
+              -webkit-text-stroke-color: #fff;
+              font-family: 'Noto Sans HK';
+              font-size: 30px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 160%; /* 48px */
+              letter-spacing: 4.8px;
+            }
+          }
+          & > span:nth-child(2) {
+            color: var(--Grey-Deep, #4d4d4d);
+            font-family: 'Noto Sans HK';
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 200%;
+            letter-spacing: 3.2px;
+            position: relative;
+          }
+          & > span:nth-child(2)::after {
+            content: '';
+            width: 100%;
+            height: 2px;
+            background: #4d4d4d;
+            display: inline-block;
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: rotate(-5deg);
+          }
+        }
+      }
+    }
+    & > div:nth-child(5) {
+      & > div:nth-child(1) {
+        & > div:nth-child(2) {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-end;
+          white-space: nowrap;
+          & > span:nth-child(1) {
+            text-align: center;
+            text-shadow: 0px 2px 0px var(--White, #fff);
+            -webkit-text-stroke-width: 2;
+            -webkit-text-stroke-color: #fff;
+            font-family: 'Noto Sans HK';
+            font-size: 45px;
+            i {
+              font-size: 30px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 160%; /* 48px */
+              letter-spacing: 4.8px;
+            }
+          }
+          & > span:nth-child(2) {
+            color: var(--Grey-Deep, #4d4d4d);
+            font-family: 'Noto Sans HK';
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 160%;
+            letter-spacing: 3.2px;
+          }
+        }
+      }
+    }
+    & > div:nth-child(6) {
+      & > div:nth-child(1) {
+        & > div:nth-child(2) {
+          padding-top: 48px;
+          padding-bottom: 68px;
+          & > div:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+            & > span:nth-child(1) {
+              text-align: center;
+              text-shadow: 0px 2px 0px var(--White, #fff);
+              -webkit-text-stroke-width: 2;
+              -webkit-text-stroke-color: #fff;
+              font-size: 60px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 160%;
+              letter-spacing: 9.6px;
+              font-family: 'Noto Sans HK';
+              & > i {
+                color: var(--Grey-Deep, #4d4d4d);
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 160%; /* 48px */
+                letter-spacing: 4.8px;
+              }
+            }
+            & > span:nth-child(2) {
+              color: var(--Grey-Deep, #4d4d4d);
+              text-align: center;
+              text-shadow: 0px 2px 0px var(--White, #fff);
+              -webkit-text-stroke-width: 2;
+              -webkit-text-stroke-color: #fff;
+              font-family: 'Noto Sans HK';
+              font-size: 30px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 160%; /* 48px */
+              letter-spacing: 4.8px;
+            }
+          }
+          & > div:nth-child(2) {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: center;
+            margin-top: 10px;
+            & > span:nth-child(1) {
+              color: var(--Theme-Color, #fc1682);
+              font-family: 'Noto Sans HK';
+              font-size: 60px;
+              font-style: normal;
+              font-weight: 900;
+              line-height: 100%;
+              letter-spacing: 9.6px;
+              & > i {
+                color: var(--Theme-Color, #fc1682);
+                text-align: center;
+                text-shadow: 0px 2px 0px var(--White, #fff);
+                -webkit-text-stroke-width: 2;
+                -webkit-text-stroke-color: #fff;
+                font-family: 'Noto Sans HK';
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 160%; /* 48px */
+                letter-spacing: 4.8px;
+              }
+            }
+            & > span:nth-child(2) {
+              color: var(--Grey-Deep, #4d4d4d);
+              font-family: 'Noto Sans HK';
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 200%;
+              letter-spacing: 3.2px;
+              position: relative;
+            }
+            & > span:nth-child(2)::after {
+              content: '';
+              width: 100%;
+              height: 2px;
+              background: #4d4d4d;
+              display: inline-block;
+              position: absolute;
+              left: 0;
+              top: 50%;
+              transform: rotate(-5deg);
+            }
+          }
+          & > div:nth-child(3) {
+            & > span:nth-child(1) {
+              color: var(--Grey-Deep, #4d4d4d);
+              text-align: center;
+              text-shadow: 0px 2px 0px var(--White, #fff);
+              -webkit-text-stroke-width: 2;
+              -webkit-text-stroke-color: #fff;
+              font-family: 'Noto Sans HK';
+              font-size: 30px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 160%; /* 48px */
+              letter-spacing: 4.8px;
+              & > i {
+                color: var(--Theme-Color, #fc1682);
+                font-family: 'Noto Sans HK';
+                font-size: 60px;
+                font-style: normal;
+                font-weight: 900;
+                line-height: 160%;
+                letter-spacing: 9.6px;
+                & > i {
+                  font-size: 30px;
+                  letter-spacing: 4.8px;
+                }
+              }
+            }
+            & > span:nth-child(2) {
+              color: var(--Grey-Deep, #4d4d4d);
+              text-align: center;
+              text-shadow: 0px 2px 0px var(--White, #fff);
+              -webkit-text-stroke-width: 2;
+              -webkit-text-stroke-color: #fff;
+              font-family: 'Noto Sans HK';
+              font-size: 30px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 160%; /* 48px */
+              letter-spacing: 4.8px;
+              & > i {
+                color: var(--Grey-Deep, #4d4d4d);
+                font-family: 'Noto Sans HK';
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 160%;
+                letter-spacing: 3.2px;
+              }
+            }
+          }
+        }
+      }
+    }
+    & > div:nth-child(7) {
+      & > div:nth-child(1) {
+        & > div:nth-child(2) {
+          display: flex;
+          flex-direction: row;
+          align-items: flex-end;
+          justify-content: center;
+          & > span:nth-child(1) {
+            color: var(--Grey-Deep, #4d4d4d);
+            text-align: center;
+            text-shadow: 0px 2px 0px var(--White, #fff);
+            -webkit-text-stroke-width: 2;
+            -webkit-text-stroke-color: #fff;
+            font-family: 'Noto Sans HK';
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 160%; /* 48px */
+            letter-spacing: 4.8px;
+            & > i {
+              color: var(--Theme-Color, #fc1682);
+              font-family: 'Noto Sans HK';
+              font-size: 45px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 130%;
+              letter-spacing: 7.2px;
+            }
+          }
+          & > span:nth-child(2) {
+            color: var(--Grey-Deep, #4d4d4d);
+            text-align: center;
+            text-shadow: 0px 2px 0px var(--White, #fff);
+            -webkit-text-stroke-width: 2;
+            -webkit-text-stroke-color: #fff;
+            font-family: 'Noto Sans HK';
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 160%; /* 48px */
+            letter-spacing: 4.8px;
+            & > i {
+              color: var(--Theme-Color, #fc1682);
+            }
+          }
+        }
+      }
+    }
+    & > div:nth-child(8) {
+      & > div:nth-child(1) {
+        & > div:nth-child(2) {
+          display: flex;
+          flex-direction: column;
+          // align-items: flex-end;
+          // justify-content: center;
+          & > span:nth-child(1) {
+            color: var(--Grey-Deep, #4d4d4d);
+            text-align: center;
+            text-shadow: 0px 2px 0px var(--White, #fff);
+            -webkit-text-stroke-width: 2;
+            -webkit-text-stroke-color: #fff;
+            font-family: 'Noto Sans HK';
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 160%; /* 48px */
+            letter-spacing: 4.8px;
+            & > i {
+              color: var(--Theme-Color, #fc1682);
+              font-family: 'Noto Sans HK';
+              font-size: 45px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 130%;
+              letter-spacing: 7.2px;
+            }
+            & > i:nth-child(2) {
+              font-size: 30px;
+              letter-spacing: 4.8px;
+            }
+          }
+          & > span:nth-child(2) {
+            color: var(--Grey-Deep, #4d4d4d);
+            font-family: 'Noto Sans HK';
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 160%;
+            letter-spacing: 3.2px;
+          }
+        }
+      }
+    }
+    .abs_box {
+      position: absolute;
+      top: -10px;
+      left: -10px;
+      z-index: 2;
+      background: url('https://static.cmereye.com/imgs/2024/08/804246100e3ed97f.png')
+        no-repeat;
+      background-size: 100% 100%;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      text-align: center;
+      font-family: FakePearl;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 160%; /* 22.4px */
     }
   }
   .new_info_content_items > div:nth-child(6) {
