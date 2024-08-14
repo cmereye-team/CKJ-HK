@@ -2635,7 +2635,7 @@ const newsmoduleLists = [
       font-family: 'Noto Sans HK';
       font-size: 16px;
       font-style: normal;
-      font-weight: 500;
+      font-weight: 400;
       line-height: 200%; /* 32px */
       letter-spacing: 1.6px;
     }
@@ -2676,6 +2676,7 @@ const newsmoduleLists = [
     flex-direction: column;
     gap: 30px 0;
     margin-left: 10px;
+    align-items: center;
     & > div {
       margin: 0;
       width: 315px;
@@ -2693,7 +2694,7 @@ const newsmoduleLists = [
           font-family: FakePearl;
           font-size: 20px;
           font-style: normal;
-          font-weight: 400;
+          font-weight: 600;
           line-height: 160%; /* 32px */
         }
         & > div:nth-child(2) {
