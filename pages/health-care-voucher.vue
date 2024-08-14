@@ -2118,10 +2118,10 @@ const newsmoduleLists = [
 .new_two_img {
   width: 100%;
   display: flex;
-  gap: 0 10px;
+  gap: 0 2%;
   & > img {
     flex: 1;
-    width: 50%;
+    width: 49%;
   }
 }
 .new_table {
