@@ -1960,9 +1960,9 @@ const newsmoduleLists = [
   grid-row: 2 / span 3;
   grid-column: 3 / span 1;
 }
-.navbar-content {
-  display: none;
-}
+// .navbar-content {
+//   display: none;
+// }
 .health-care-voucher-top {
   display: flex;
   justify-content: space-between;
