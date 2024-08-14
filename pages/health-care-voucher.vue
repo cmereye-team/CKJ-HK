@@ -1448,7 +1448,7 @@ const newsmoduleLists = [
         font-family: FakePearl;
         font-size: 30px;
         font-style: normal;
-        font-weight: 400;
+        font-weight: 600;
         line-height: 160%; /* 48px */
         letter-spacing: 3px;
       }
@@ -1831,6 +1831,9 @@ const newsmoduleLists = [
       & > div:nth-child(1) {
         display: flex;
         flex-direction: column;
+        span {
+          font-family: FakePearl;
+        }
       }
       & > div:nth-child(2) {
         display: flex;
@@ -1884,6 +1887,9 @@ const newsmoduleLists = [
       & > div:nth-child(1) {
         display: flex;
         flex-direction: column;
+        span {
+          font-family: FakePearl;
+        }
       }
       & > div:nth-child(2) {
         display: flex;
@@ -1918,12 +1924,12 @@ const newsmoduleLists = [
         }
         & > span:nth-child(2) {
           color: var(--Grey-Deep, #4d4d4d);
-          font-family: 'Noto Sans HK';
           font-size: 20px;
           font-style: normal;
           font-weight: 500;
           line-height: 160%;
           letter-spacing: 3.2px;
+          font-family: FakePearl;
         }
       }
     }
