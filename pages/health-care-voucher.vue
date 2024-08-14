@@ -575,13 +575,13 @@ const newsmoduleLists = [
             <div>
               <img src="../assets/images/step.svg" alt="step" />
             </div>
-            <div
+            <!-- <div
               :class="[
                 docHeight == 'pc'
                   ? 'step_shade step_active'
                   : 'step_shade_mb step_active_mb',
               ]"
-            ></div>
+            ></div> -->
           </div>
         </div>
         <div class="step_pink">
