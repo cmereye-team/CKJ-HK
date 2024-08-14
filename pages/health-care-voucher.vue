@@ -1112,7 +1112,7 @@ const newsmoduleLists = [
             </div>
             <div>
               <div>凡65歲及以上香港長者：</div>
-              <div v-if="windowWidth > 768" class="new_info_content_items">
+              <div class="new_info_content_items">
                 <div>
                   <div>
                     <div>首次到診長者</div>
@@ -1203,7 +1203,7 @@ const newsmoduleLists = [
                   <div class="abs_box"><span>優惠</span><span>8</span></div>
                 </div>
               </div>
-              <div v-else class="new_info_content_items">
+              <!-- <div v-else class="new_info_content_items">
                 <div>
                   <div>
                     <div>首次到診長者</div>
@@ -1293,7 +1293,7 @@ const newsmoduleLists = [
                   </div>
                   <div class="abs_box"><span>優惠</span><span>8</span></div>
                 </div>
-              </div>
+              </div> -->
             </div>
             <div>
               以上優惠政策，只針對65歲及以上長者，以及深圳愛康健口腔醫院內使用，于<span
