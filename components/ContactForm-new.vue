@@ -986,6 +986,7 @@ li {
         height: 2.8646vw;
         font-size: 1.4583vw;
         overflow: hidden;
+        background: #fff;
       }
       :deep(.el-input__inner) {
         font-size: 1.4583vw;
