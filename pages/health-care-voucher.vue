@@ -1448,7 +1448,7 @@ const newsmoduleLists = [
         font-family: FakePearl;
         font-size: 30px;
         font-style: normal;
-        font-weight: 600;
+        font-weight: 500;
         line-height: 160%; /* 48px */
         letter-spacing: 3px;
       }
@@ -2172,12 +2172,12 @@ const newsmoduleLists = [
       line-height: 160%; /* 38.4px */
       background: var(--Pink-Mid, #fdd3e3);
       & > span {
+        font-family: 'Noto Sans HK';
         color: var(--Theme-Color, #fc1682);
         text-align: center;
         text-shadow: 0px 2px 0px var(--White, #fff);
         -webkit-text-stroke-width: 2;
         -webkit-text-stroke-color: #fff;
-        font-family: 'Noto Sans HK';
       }
     }
     & > div:nth-child(2) {
@@ -2703,7 +2703,7 @@ const newsmoduleLists = [
           font-family: FakePearl;
           font-size: 20px;
           font-style: normal;
-          font-weight: 600;
+          font-weight: 500;
           line-height: 160%; /* 32px */
         }
         & > div:nth-child(2) {
