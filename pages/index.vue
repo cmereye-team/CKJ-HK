@@ -304,8 +304,8 @@ const orgLists = [
     'https://static.cmereye.com/static/ckjnewsite/org/org-4011.png',
     'https://static.cmereye.com/static/ckjnewsite/org/org-4012.png',
     'https://static.cmereye.com/static/ckjnewsite/org/org-4013.png',
-    'https://static.cmereye.com/imgs/2024/08/0f5e6c9b18b98255.png',
-    'https://static.cmereye.com/imgs/2024/08/d231dc9dec259527.png'
+    'https://static.cmereye.com/imgs/2024/08/649a4dcca06fa45a.png',
+    'https://static.cmereye.com/imgs/2024/08/fb3b34ba5e3335e3.png'
   ],
 ]
 const handleorgtabfun = (orgTabIndex) => {
