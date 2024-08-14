@@ -1204,7 +1204,7 @@ const newsmoduleLists = [
                 </div>
               </div>
               <div v-else class="new_info_content_items">
-                <!-- <div>
+                <div>
                   <div>
                     <div>首次到診長者</div>
                     <div>
@@ -1230,58 +1230,69 @@ const newsmoduleLists = [
                       <span><i>￥</i>58</span><span>(原價¥180/次)</span>
                     </div>
                   </div>
-                  <div class="abs_box"><span>優惠</span><span>1</span></div>
-                </div> -->
-                <div>
-                  <img
-                    src="https://static.cmereye.com/imgs/2024/08/8279b13d1912c282.png"
-                    alt=""
-                  />
+                  <div class="abs_box"><span>優惠</span><span>3</span></div>
                 </div>
                 <div>
-                  <img
-                    src="https://static.cmereye.com/imgs/2024/08/dd417005f534468c.png"
-                    alt=""
-                  />
+                  <div>
+                    <div>無鹽噴砂洗牙</div>
+                    <div>
+                      <span><i>￥</i>168</span><span>(原價¥550/次)</span>
+                    </div>
+                  </div>
+                  <div class="abs_box"><span>優惠</span><span>4</span></div>
                 </div>
                 <div>
-                  <img
-                    src="https://static.cmereye.com/imgs/2024/08/df4c6a96fbb13ef9.png"
-                    alt=""
-                  />
+                  <div>
+                    <div>全科治療</div>
+                    <div>
+                      <span><i>原價</i>9<i style="color: #fc1682">折</i></span
+                      ><span>（或使用網上優惠）</span>
+                    </div>
+                  </div>
+                  <div class="abs_box"><span>優惠</span><span>5</span></div>
                 </div>
                 <div>
-                  <img
-                    src="https://static.cmereye.com/imgs/2024/08/9c26e58109a6de6d.png"
-                    alt=""
-                  />
+                  <div>
+                    <div>牙周治療套餐</div>
+                    <div>
+                      <div>
+                        <span><i>原價</i>9<i style="color: #fc1682">折</i></span
+                        ><span>牙周專科檢查記錄</span>
+                      </div>
+                      <div>
+                        <span><i>￥</i>240</span><span>(原價¥300/次)</span>
+                      </div>
+                      <div>
+                        <span
+                          >贈送<i>2<i style="color: #fc1682">次</i></i
+                          >牙周治療後</span
+                        >
+                        <span>維護<i>（價值¥800/次）</i></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="abs_box"><span>優惠</span><span>6</span></div>
                 </div>
                 <div>
-                  <img
-                    src="https://static.cmereye.com/imgs/2024/08/5a5088a37e34f365.png"
-                    alt=""
-                  />
+                  <div>
+                    <div>政府補助植體<span>（集采種植牙）</span></div>
+                    <div>
+                      <span>可延長<i>1</i></span
+                      ><span><i style="color: #fc1682">年</i>保修期</span>
+                    </div>
+                  </div>
+                  <div class="abs_box"><span>優惠</span><span>7</span></div>
                 </div>
                 <div>
-                  <img
-                    src="https://static.cmereye.com/imgs/2024/08/e5c4975daa297f62.png"
-                    alt=""
-                  />
+                  <div>
+                    <div>非政府補助的<span>歐美植體</span></div>
+                    <div>
+                      <span>享有網上優惠再<i>9</i><i>折</i></span
+                      ><span>（特價種植牙產品除外）</span>
+                    </div>
+                  </div>
+                  <div class="abs_box"><span>優惠</span><span>8</span></div>
                 </div>
-                <div>
-                  <img
-                    src="https://static.cmereye.com/imgs/2024/08/cb0fcf90019e71a0.png"
-                    alt=""
-                  />
-                </div>
-                <div>
-                  <img
-                    src="https://static.cmereye.com/imgs/2024/08/bfbcf123f2684b67.png"
-                    alt=""
-                  />
-                </div>
-
-                <div><img src="" alt="" /></div>
               </div>
             </div>
             <div>
@@ -1658,8 +1669,8 @@ const newsmoduleLists = [
   & > div:nth-child(6) {
     & > div:nth-child(1) {
       & > div:nth-child(2) {
-        padding-top: 48px;
-        padding-bottom: 68px;
+        padding-bottom: 48px;
+        padding-top: 38px;
         & > div:nth-child(1) {
           display: flex;
           flex-direction: column;
@@ -1801,8 +1812,9 @@ const newsmoduleLists = [
     }
   }
   & > div:nth-child(7) {
+    margin-top: 10px;
     & > div:nth-child(1) {
-      &>div:nth-child(1){
+      & > div:nth-child(1) {
         display: flex;
         flex-direction: column;
       }
@@ -1853,8 +1865,9 @@ const newsmoduleLists = [
     }
   }
   & > div:nth-child(8) {
+    margin-top: 10px;
     & > div:nth-child(1) {
-      &>div:nth-child(1){
+      & > div:nth-child(1) {
         display: flex;
         flex-direction: column;
       }
@@ -2591,7 +2604,7 @@ const newsmoduleLists = [
       font-family: 'Noto Sans HK';
       font-size: 16px;
       font-style: normal;
-      font-weight: 400;
+      font-weight: 500;
       line-height: 200%; /* 32px */
       letter-spacing: 1.6px;
     }
@@ -2610,7 +2623,7 @@ const newsmoduleLists = [
       }
     }
     & > div:nth-child(3) {
-      margin-top: 0;
+      margin-top: 30px;
       color: var(--Grey-Deep, #4d4d4d);
       font-family: 'Noto Sans HK';
       font-size: 16px;
@@ -2618,6 +2631,7 @@ const newsmoduleLists = [
       font-weight: 400;
       line-height: 200%; /* 32px */
       letter-spacing: 1.6px;
+      text-align: left;
     }
   }
   .new_info_content_bg {
@@ -2630,6 +2644,7 @@ const newsmoduleLists = [
     display: flex;
     flex-direction: column;
     gap: 30px 0;
+    margin-left: 10px;
     & > div {
       margin: 0;
       width: 315px;
@@ -2735,11 +2750,11 @@ const newsmoduleLists = [
           & > span:nth-child(1) {
             color: var(--Theme-Color, #fc1682);
             font-family: 'Noto Sans HK';
-            font-size: 60px;
+            font-size: 35px;
             font-style: normal;
-            font-weight: 900;
-            line-height: 100%;
-            letter-spacing: 9.6px;
+            font-weight: 700;
+            line-height: 130%;
+            letter-spacing: 5.6px;
             & > i {
               color: var(--Theme-Color, #fc1682);
               text-align: center;
@@ -2747,21 +2762,21 @@ const newsmoduleLists = [
               -webkit-text-stroke-width: 2;
               -webkit-text-stroke-color: #fff;
               font-family: 'Noto Sans HK';
-              font-size: 30px;
+              font-size: 24px;
               font-style: normal;
               font-weight: 700;
-              line-height: 160%; /* 48px */
-              letter-spacing: 4.8px;
+              line-height: 100%; /* 38.4px */
+              letter-spacing: 3.84px;
             }
           }
           & > span:nth-child(2) {
             color: var(--Grey-Deep, #4d4d4d);
             font-family: 'Noto Sans HK';
-            font-size: 20px;
+            font-size: 15px;
             font-style: normal;
             font-weight: 500;
-            line-height: 200%;
-            letter-spacing: 3.2px;
+            line-height: 160%;
+            letter-spacing: 2.4px;
             position: relative;
           }
           & > span:nth-child(2)::after {
@@ -2801,11 +2816,11 @@ const newsmoduleLists = [
           & > span:nth-child(1) {
             color: var(--Theme-Color, #fc1682);
             font-family: 'Noto Sans HK';
-            font-size: 60px;
+            font-size: 35px;
             font-style: normal;
-            font-weight: 900;
-            line-height: 100%;
-            letter-spacing: 9.6px;
+            font-weight: 700;
+            line-height: 130%;
+            letter-spacing: 5.6px;
             & > i {
               color: var(--Theme-Color, #fc1682);
               text-align: center;
@@ -2813,21 +2828,21 @@ const newsmoduleLists = [
               -webkit-text-stroke-width: 2;
               -webkit-text-stroke-color: #fff;
               font-family: 'Noto Sans HK';
-              font-size: 30px;
+              font-size: 24px;
               font-style: normal;
               font-weight: 700;
-              line-height: 160%; /* 48px */
-              letter-spacing: 4.8px;
+              line-height: 100%; /* 38.4px */
+              letter-spacing: 3.84px;
             }
           }
           & > span:nth-child(2) {
             color: var(--Grey-Deep, #4d4d4d);
             font-family: 'Noto Sans HK';
-            font-size: 20px;
+            font-size: 15px;
             font-style: normal;
             font-weight: 500;
-            line-height: 200%;
-            letter-spacing: 3.2px;
+            line-height: 160%;
+            letter-spacing: 2.4px;
             position: relative;
           }
           & > span:nth-child(2)::after {
@@ -2857,23 +2872,27 @@ const newsmoduleLists = [
             -webkit-text-stroke-width: 2;
             -webkit-text-stroke-color: #fff;
             font-family: 'Noto Sans HK';
-            font-size: 45px;
+            font-size: 35px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 130%;
+            letter-spacing: 5.6px;
             i {
-              font-size: 30px;
+              font-size: 20px;
               font-style: normal;
-              font-weight: 500;
-              line-height: 160%; /* 48px */
-              letter-spacing: 4.8px;
+              font-weight: 700;
+              line-height: 100%;
+              letter-spacing: 3.2px;
             }
           }
           & > span:nth-child(2) {
             color: var(--Grey-Deep, #4d4d4d);
             font-family: 'Noto Sans HK';
-            font-size: 20px;
+            font-size: 15px;
             font-style: normal;
             font-weight: 500;
             line-height: 160%;
-            letter-spacing: 3.2px;
+            letter-spacing: 2.4px;
           }
         }
       }
@@ -2891,33 +2910,33 @@ const newsmoduleLists = [
               text-shadow: 0px 2px 0px var(--White, #fff);
               -webkit-text-stroke-width: 2;
               -webkit-text-stroke-color: #fff;
-              font-size: 60px;
+              font-size: 35px;
               font-style: normal;
               font-weight: 700;
               line-height: 160%;
-              letter-spacing: 9.6px;
-              font-family: 'Noto Sans HK';
+              letter-spacing: 5.6px;
               & > i {
                 color: var(--Grey-Deep, #4d4d4d);
-                font-size: 30px;
+                font-family: 'Noto Sans HK';
+                font-size: 20px;
                 font-style: normal;
-                font-weight: 500;
-                line-height: 160%; /* 48px */
-                letter-spacing: 4.8px;
+                font-weight: 700;
+                line-height: 160%;
+                letter-spacing: 3.2px;
               }
             }
             & > span:nth-child(2) {
               color: var(--Grey-Deep, #4d4d4d);
               text-align: center;
-              text-shadow: 0px 2px 0px var(--White, #fff);
-              -webkit-text-stroke-width: 2;
+              text-shadow: 0px 1.414px 0px var(--White, #fff);
+              -webkit-text-stroke-width: 1.4140625;
               -webkit-text-stroke-color: #fff;
               font-family: 'Noto Sans HK';
-              font-size: 30px;
+              font-size: 20px;
               font-style: normal;
               font-weight: 500;
-              line-height: 160%; /* 48px */
-              letter-spacing: 4.8px;
+              line-height: 160%; /* 32px */
+              letter-spacing: 3.2px;
             }
           }
           & > div:nth-child(2) {
@@ -2929,11 +2948,11 @@ const newsmoduleLists = [
             & > span:nth-child(1) {
               color: var(--Theme-Color, #fc1682);
               font-family: 'Noto Sans HK';
-              font-size: 60px;
+              font-size: 35px;
               font-style: normal;
-              font-weight: 900;
+              font-weight: 700;
               line-height: 100%;
-              letter-spacing: 9.6px;
+              letter-spacing: 5.6px;
               & > i {
                 color: var(--Theme-Color, #fc1682);
                 text-align: center;
@@ -2941,21 +2960,21 @@ const newsmoduleLists = [
                 -webkit-text-stroke-width: 2;
                 -webkit-text-stroke-color: #fff;
                 font-family: 'Noto Sans HK';
-                font-size: 30px;
+                font-size: 20px;
                 font-style: normal;
                 font-weight: 700;
-                line-height: 160%; /* 48px */
-                letter-spacing: 4.8px;
+                line-height: 130%; /* 32px */
+                letter-spacing: 3.2px;
               }
             }
             & > span:nth-child(2) {
               color: var(--Grey-Deep, #4d4d4d);
               font-family: 'Noto Sans HK';
-              font-size: 20px;
+              font-size: 15px;
               font-style: normal;
               font-weight: 500;
-              line-height: 200%;
-              letter-spacing: 3.2px;
+              line-height: 160%;
+              letter-spacing: 2.4px;
               position: relative;
             }
             & > span:nth-child(2)::after {
@@ -2978,22 +2997,22 @@ const newsmoduleLists = [
               -webkit-text-stroke-width: 2;
               -webkit-text-stroke-color: #fff;
               font-family: 'Noto Sans HK';
-              font-size: 30px;
+              font-size: 20px;
               font-style: normal;
               font-weight: 500;
-              line-height: 160%; /* 48px */
-              letter-spacing: 4.8px;
+              line-height: 160%; /* 32px */
+              letter-spacing: 3.2px;
               & > i {
                 color: var(--Theme-Color, #fc1682);
                 font-family: 'Noto Sans HK';
-                font-size: 60px;
+                font-size: 35px;
                 font-style: normal;
-                font-weight: 900;
+                font-weight: 700;
                 line-height: 160%;
-                letter-spacing: 9.6px;
+                letter-spacing: 5.6px;
                 & > i {
-                  font-size: 30px;
-                  letter-spacing: 4.8px;
+                  font-size: 20px;
+                  letter-spacing: 3.2px;
                 }
               }
             }
@@ -3004,19 +3023,19 @@ const newsmoduleLists = [
               -webkit-text-stroke-width: 2;
               -webkit-text-stroke-color: #fff;
               font-family: 'Noto Sans HK';
-              font-size: 30px;
+              font-size: 20px;
               font-style: normal;
               font-weight: 500;
-              line-height: 160%; /* 48px */
-              letter-spacing: 4.8px;
+              line-height: 160%; /* 32px */
+              letter-spacing: 3.2px;
               & > i {
                 color: var(--Grey-Deep, #4d4d4d);
                 font-family: 'Noto Sans HK';
-                font-size: 20px;
+                font-size: 15px;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 160%;
-                letter-spacing: 3.2px;
+                letter-spacing: 2.4px;
               }
             }
           }
@@ -3037,19 +3056,19 @@ const newsmoduleLists = [
             -webkit-text-stroke-width: 2;
             -webkit-text-stroke-color: #fff;
             font-family: 'Noto Sans HK';
-            font-size: 30px;
+            font-size: 14.141px;
             font-style: normal;
             font-weight: 500;
-            line-height: 160%; /* 48px */
-            letter-spacing: 4.8px;
+            line-height: 160%; /* 22.625px */
+            letter-spacing: 2.263px;
             & > i {
               color: var(--Theme-Color, #fc1682);
               font-family: 'Noto Sans HK';
-              font-size: 45px;
+              font-size: 35px;
               font-style: normal;
               font-weight: 700;
-              line-height: 130%;
-              letter-spacing: 7.2px;
+              line-height: 100%;
+              letter-spacing: 5.6px;
             }
           }
           & > span:nth-child(2) {
@@ -3059,11 +3078,11 @@ const newsmoduleLists = [
             -webkit-text-stroke-width: 2;
             -webkit-text-stroke-color: #fff;
             font-family: 'Noto Sans HK';
-            font-size: 30px;
+            font-size: 14.141px;
             font-style: normal;
             font-weight: 500;
-            line-height: 160%; /* 48px */
-            letter-spacing: 4.8px;
+            line-height: 160%; /* 22.625px */
+            letter-spacing: 2.263px;
             & > i {
               color: var(--Theme-Color, #fc1682);
             }
@@ -3085,33 +3104,33 @@ const newsmoduleLists = [
             -webkit-text-stroke-width: 2;
             -webkit-text-stroke-color: #fff;
             font-family: 'Noto Sans HK';
-            font-size: 30px;
+            font-size: 14.141px;
             font-style: normal;
             font-weight: 500;
-            line-height: 160%; /* 48px */
-            letter-spacing: 4.8px;
+            line-height: 160%; /* 22.625px */
+            letter-spacing: 2.263px;
             & > i {
               color: var(--Theme-Color, #fc1682);
               font-family: 'Noto Sans HK';
-              font-size: 45px;
+              font-size: 35px;
               font-style: normal;
               font-weight: 700;
-              line-height: 130%;
-              letter-spacing: 7.2px;
+              line-height: 160%;
+              letter-spacing: 5.6px;
             }
             & > i:nth-child(2) {
-              font-size: 30px;
-              letter-spacing: 4.8px;
+              font-size: 20px;
+              letter-spacing: 3.2px;
             }
           }
           & > span:nth-child(2) {
             color: var(--Grey-Deep, #4d4d4d);
             font-family: 'Noto Sans HK';
-            font-size: 20px;
+            font-size: 14.141px;
             font-style: normal;
             font-weight: 500;
-            line-height: 160%;
-            letter-spacing: 3.2px;
+            line-height: 160%; /* 22.625px */
+            letter-spacing: 2.263px;
           }
         }
       }
@@ -3136,7 +3155,7 @@ const newsmoduleLists = [
       font-size: 14px;
       font-style: normal;
       font-weight: 500;
-      line-height: 160%; /* 22.4px */
+      line-height: 130%; /* 22.4px */
     }
   }
   .new_info_content_items > div:nth-child(6) {
