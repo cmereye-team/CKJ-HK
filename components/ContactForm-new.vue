@@ -612,6 +612,7 @@ ul {
         width: 100%;
         & > div:nth-child(1) {
           height: 51px;
+          width: 100%;
         }
       }
     }
