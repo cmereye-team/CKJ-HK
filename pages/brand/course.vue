@@ -1,11 +1,10 @@
 <script lang="ts" setup>
 import { useAppState } from '~/stores/appState'
-import { ref } from 'vue';
-import { Controller } from 'swiper';
-import { Swiper, SwiperSlide } from 'swiper/vue';
+import { ref } from 'vue'
+import { Controller } from 'swiper'
+import { Swiper, SwiperSlide } from 'swiper/vue'
 const appState = useAppState()
 appState.setBrand('course')
-
 
 useHead({
   title: '品牌介紹 | 口腔專科醫院',
@@ -13,12 +12,14 @@ useHead({
     {
       hid: 'description',
       name: 'description',
-      content: '愛康健作為深圳愛康健口腔醫院是一家專業口腔醫院，秉承著「專科·專業」的服務理念，科學、合理地整合醫療資源。我們的醫師團隊均畢業於國內知名口腔學院，包括種植醫師、美學修復醫師、牙周病醫師等專業人員。他們帶領著醫護人員共同構成我們的服務團隊，為患者提供專業、優質的口腔醫療服務。',
+      content:
+        '愛康健作為深圳愛康健口腔醫院是一家專業口腔醫院，秉承著「專科·專業」的服務理念，科學、合理地整合醫療資源。我們的醫師團隊均畢業於國內知名口腔學院，包括種植醫師、美學修復醫師、牙周病醫師等專業人員。他們帶領著醫護人員共同構成我們的服務團隊，為患者提供專業、優質的口腔醫療服務。',
     },
     {
       hid: 'Keywords',
       name: 'Keywords',
-      content: '愛康健 深圳愛康健 深圳專業牙科中心 愛康健醫院 愛康健口腔醫院 深圳愛康健口腔醫院愛康健 CKJ愛康健齒科集團 深圳口腔專科醫院 愛康健齒科集團 深圳牙科醫院牙科服務內地牙科 深圳口腔專科 基本牙科 美容牙科 高階牙科 愛康健',
+      content:
+        '愛康健 深圳愛康健 深圳專業牙科中心 愛康健醫院 愛康健口腔醫院 深圳愛康健口腔醫院愛康健 CKJ愛康健齒科集團 深圳口腔專科醫院 愛康健齒科集團 深圳牙科醫院牙科服務內地牙科 深圳口腔專科 基本牙科 美容牙科 高階牙科 愛康健',
     },
   ],
 })
@@ -29,13 +30,12 @@ const headerConfig = {
   mbImg: 'https://static.cmereye.com/imgs/2024/01/a59e0a87dfb394f1.jpg',
   pageName: 'course-new',
   pcText: [],
-  mbText: []
+  mbText: [],
 }
 
 const introduceData = {
   title: 'pages.brand.course.introduce.title',
-  content:
-    'pages.brand.course.introduce.content',
+  content: 'pages.brand.course.introduce.content',
   mbImg: 'https://static.cmereye.com/imgs/2024/01/64f1f4312e2a0f2c.jpg',
   pcImg: 'https://static.cmereye.com/imgs/2024/01/f4ba25aef63c2a5b.jpg',
   tabNavName: 'pages.brand.course.introduce.tabNavName',
@@ -76,8 +76,7 @@ const courseData = {
       events: [
         {
           month: '5月',
-          context:
-            'pages.brand.course.history.time_2008.context_5',
+          context: 'pages.brand.course.history.time_2008.context_5',
         },
         {
           month: '7月',
@@ -89,8 +88,7 @@ const courseData = {
         },
         {
           month: '11月',
-          context:
-            'pages.brand.course.history.time_2008.context_11',
+          context: 'pages.brand.course.history.time_2008.context_11',
         },
       ],
     },
@@ -125,8 +123,7 @@ const courseData = {
       events: [
         {
           month: '',
-          context:
-            'pages.brand.course.history.time_2011.context',
+          context: 'pages.brand.course.history.time_2011.context',
         },
       ],
     },
@@ -135,8 +132,7 @@ const courseData = {
       events: [
         {
           month: '',
-          context:
-            'pages.brand.course.history.time_2012.context',
+          context: 'pages.brand.course.history.time_2012.context',
         },
       ],
     },
@@ -145,8 +141,7 @@ const courseData = {
       events: [
         {
           month: '',
-          context:
-            'pages.brand.course.history.time_2014.context',
+          context: 'pages.brand.course.history.time_2014.context',
         },
       ],
     },
@@ -164,13 +159,11 @@ const courseData = {
       events: [
         {
           month: '1月',
-          context:
-            'pages.brand.course.history.time_2016.context_1',
+          context: 'pages.brand.course.history.time_2016.context_1',
         },
         {
           month: '12月',
-          context:
-            'pages.brand.course.history.time_2016.context_12',
+          context: 'pages.brand.course.history.time_2016.context_12',
         },
       ],
     },
@@ -179,13 +172,11 @@ const courseData = {
       events: [
         {
           month: '5月',
-          context:
-            'pages.brand.course.history.time_2017.context_5',
+          context: 'pages.brand.course.history.time_2017.context_5',
         },
         {
           month: '8月',
-          context:
-            'pages.brand.course.history.time_2017.context_8',
+          context: 'pages.brand.course.history.time_2017.context_8',
         },
       ],
     },
@@ -194,8 +185,7 @@ const courseData = {
       events: [
         {
           month: '',
-          context:
-            'pages.brand.course.history.time_2018.context',
+          context: 'pages.brand.course.history.time_2018.context',
         },
       ],
     },
@@ -204,8 +194,7 @@ const courseData = {
       events: [
         {
           month: '',
-          context:
-            'pages.brand.course.history.time_2019.context',
+          context: 'pages.brand.course.history.time_2019.context',
         },
       ],
     },
@@ -214,13 +203,11 @@ const courseData = {
       events: [
         {
           month: '11月',
-          context:
-            'pages.brand.course.history.time_2020.context_11',
+          context: 'pages.brand.course.history.time_2020.context_11',
         },
         {
           month: '12月',
-          context:
-            'pages.brand.course.history.time_2020.context_12',
+          context: 'pages.brand.course.history.time_2020.context_12',
         },
       ],
     },
@@ -233,12 +220,58 @@ const courseData = {
         },
         {
           month: '9月',
-          context:
-            'pages.brand.course.history.time_2021.context_9'
+          context: 'pages.brand.course.history.time_2021.context_9',
         },
         {
           month: '12月',
           context: 'pages.brand.course.history.time_2021.context_12',
+        },
+      ],
+    },
+    {
+      timeNode: '2022',
+      events: [
+        {
+          month: '12月',
+          context: '榮獲「2022值得網民信賴品牌」稱號',
+        },
+      ],
+    },
+    {
+      timeNode: '2023',
+      events: [
+        {
+          month: '2月',
+          context: `集團恒潔門診部榮獲醫療質量A級單位<br />深圳愛康健口腔醫院榮獲市醫療服務質量A級單位`,
+        },
+        {
+          month: '11月',
+          context: `榮獲深圳職業技術大學授牌「勞動教育示範基地」<br />集團雅健門診獲評2023年度醫療質量A級單位<br />深圳愛康健口腔醫院入選「全國商業健康保險合作試點基地」`,
+        },
+        {
+          month: '12月',
+          context: '榮獲「2023年度深圳值得網民信賴品牌」稱號',
+        },
+      ],
+    },
+    {
+      timeNode: '2024',
+      events: [
+        {
+          month: '2月',
+          context: `愛康健口腔裕亨診所於福田口岸旁開業<br />深圳愛康健口腔醫院納入「香港長者醫療券大灣區試點計劃」牙科醫療機構`,
+        },
+        {
+          month: '3月',
+          context: `深圳愛康健口腔醫院榮獲「傑出大灣區牙科醫療服務機構」`,
+        },
+        {
+          month: '7月',
+          context: '深圳愛康健口腔醫院榮獲「傑出跨境牙科醫療服務」',
+        },
+        {
+          month: '8月',
+          context: '香港長者醫療券在深圳愛康健口腔醫院正式使用',
         },
       ],
     },
@@ -250,46 +283,65 @@ let newCourseLists = _lists.reverse()
 
 let currtNum = ref(0)
 
-const firstSwiper:any = ref(null);
-const secondSwiper = ref(null);
-const handleFirstSwiper = (swiper) =>{
+const firstSwiper: any = ref(null)
+const secondSwiper = ref(null)
+const handleFirstSwiper = (swiper) => {
   let _index = swiper.clickedIndex
-  firstSwiper.value.slideToLoop(_index);
+  firstSwiper.value.slideToLoop(_index)
 }
 
 const setFirstSwiper = (swiper) => {
-  firstSwiper.value = swiper;
-};
+  firstSwiper.value = swiper
+}
 const setSecondSwiper = (swiper) => {
-  secondSwiper.value = swiper;
-};
+  secondSwiper.value = swiper
+}
 
-const changeSwiper = (swiper) =>{
+const changeSwiper = (swiper) => {
   currtNum.value = swiper.activeIndex
 }
 
+const is_shade = ref(false)
+const shadeOpen = () => {
+  is_shade.value = !is_shade.value
+}
+
+let windowWidth = ref(390)
+
+const getWindowWidth = () => {
+  windowWidth.value = window.innerWidth
+}
+
+onMounted(() => {
+  getWindowWidth()
+  window.addEventListener('resize', getWindowWidth)
+})
 </script>
 
 <template>
   <div>
     <PageHeader :headerConfig="headerConfig" />
     <div class="pageIn whitebgColor">
-      <div class="index_title smallPageCon">{{$t('pages.brand.title')}}</div>
+      <div class="index_title smallPageCon">{{ $t('pages.brand.title') }}</div>
       <div class="introduce bigPageCon">
         <div
           class="introduce-in"
           :style="{
-        background: `url(${introduceData.pcImg}) no-repeat`,
-        backgroundPosition: 'right top',
-        backgroundSize: 'auto 100%'
-        }"
+            background: `url(${introduceData.pcImg}) no-repeat`,
+            backgroundPosition: 'right top',
+            backgroundSize: 'auto 100%',
+          }"
         >
           <div class="tabNav noTitle smallPageCon">
-            <nuxt-link :to="'/'" title="深圳愛康健口腔醫院" alt="深圳愛康健口腔醫院">
-              <span>{{$t('pages.index.title')}}</span>
+            <nuxt-link
+              :to="'/'"
+              title="深圳愛康健口腔醫院"
+              alt="深圳愛康健口腔醫院"
+            >
+              <span>{{ $t('pages.index.title') }}</span>
             </nuxt-link>
             <nuxt-link :to="''">
-              <span>{{$t('pages.brand.title')}}</span>
+              <span>{{ $t('pages.brand.title') }}</span>
             </nuxt-link>
             <span :title="'品牌介紹'">品牌介紹</span>
           </div>
@@ -298,10 +350,11 @@ const changeSwiper = (swiper) =>{
           </div>
           <div class="introduce-in-l smallPageCon">
             <div class="title">品牌介紹</div>
-            <div class="content">{{$t(introduceData.content)}}</div>
+            <div class="content">{{ $t(introduceData.content) }}</div>
           </div>
         </div>
       </div>
+      <!--       
       <div class="course-action">
         <div class="course-action-in">
           <div class="course-action-in-l">
@@ -363,8 +416,8 @@ const changeSwiper = (swiper) =>{
             </div>
           </div>
         </div>
-      </div>
-      <div class="course">
+      </div> -->
+      <!-- <div class="course">
         <div class="course-title dentistryServices-title">
           <div class="course-title-in dentistryServices-title-in bb">
             {{$t(courseData.title)}}
@@ -430,9 +483,58 @@ const changeSwiper = (swiper) =>{
             </div>
           </div>
         </div>
+      </div> -->
+      <div class="new_course_bg">
+        <div class="new_course">
+          <div class="new_course_name">{{ $t(courseData.title) }}</div>
+          <div>
+            <div v-for="(item, index) in newCourseLists" :key="index">
+              <div
+                class="new_node_time"
+                :id="`${item.timeNode == 2019 ? 'is_2019' : ''}`"
+              >
+                {{ item.timeNode }}
+              </div>
+              <div
+                v-for="(el, indexI) in item.events"
+                :key="indexI"
+                class="detail"
+              >
+                <div>{{ el.month }}</div>
+                <div v-html="$t(el.context)" class="new_context"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="mobile_shade"
+          v-if="windowWidth < 768 && !is_shade"
+          @click="shadeOpen"
+        >
+          <div>1995-2019</div>
+          <div><img src="../../assets/images/roteaDow.svg" alt="" /></div>
+        </div>
+        <div v-if="windowWidth > 768" class="sidebar_1">
+          <img
+            src="https://static.cmereye.com/imgs/2024/08/fb4142fe516f3d53.png"
+            alt=""
+          />
+        </div>
+        <div v-if="windowWidth > 768" class="sidebar_2">
+          <img
+            src="https://static.cmereye.com/imgs/2024/08/abb28f29a6f4050f.png"
+            alt=""
+          />
+        </div>
+        <div v-if="windowWidth > 768" class="sidebar_3">
+          <img
+            src="https://static.cmereye.com/imgs/2024/08/110c782184754389.png"
+            alt=""
+          />
+        </div>
       </div>
       <NewAddress />
-     <ContactForm-new />
+      <ContactForm-new />
     </div>
     <PageFooter />
     <PageNavbar />
@@ -490,37 +592,37 @@ const changeSwiper = (swiper) =>{
     color: var(--indexColor1);
   }
 }
-.course{
+.course {
   margin-top: 100px;
-  &-in{
+  &-in {
     width: 100%;
     margin: 36px auto 0;
     overflow-x: hidden;
-    .courseSwiperT{
+    .courseSwiperT {
       width: 732px;
       overflow: visible;
-      .swiper-slide{
+      .swiper-slide {
         width: auto;
-        transition: all .5s;
+        transition: all 0.5s;
         display: flex;
         align-items: flex-end;
         height: 96px;
         width: 145px;
         box-sizing: content-box;
-        .timeNode{
+        .timeNode {
           color: var(--textColor);
           text-align: center;
           font-size: 34px;
           font-style: normal;
           font-weight: 700;
           line-height: 160%;
-          transition: all .5s;
-          opacity: .6;
+          transition: all 0.5s;
+          opacity: 0.6;
           width: 100%;
         }
-        &.swiper-slide-active{
+        &.swiper-slide-active {
           padding: 0 62px 0 40px;
-          .timeNode{
+          .timeNode {
             font-size: 60px;
             opacity: 1;
             color: var(--indexColor1);
@@ -528,38 +630,38 @@ const changeSwiper = (swiper) =>{
         }
       }
     }
-    .courseSwiperB{
+    .courseSwiperB {
       width: 100%;
       max-width: calc(284px + 82px);
       margin: 0 auto 0 calc((100% - 732px) / 2);
       overflow: visible;
-      .swiper-slide{
+      .swiper-slide {
         max-width: max-content;
         padding: 31px 41px;
         position: relative;
         height: auto;
-        .courseBox{
+        .courseBox {
           width: 284px;
-          &-line{
-            .round{
+          &-line {
+            .round {
               width: 16px;
               height: 16px;
               border-radius: 50%;
-              background: #FDD3E3;
+              background: #fdd3e3;
               position: absolute;
               top: -9px;
               left: 41px;
-              transition: all .3s;
-              &.currtNumRound{
+              transition: all 0.3s;
+              &.currtNumRound {
                 background: var(--indexColor1);
               }
             }
           }
-          &-in{
-            opacity: .6;
-            transition: all .5s;
-            &-listItem{
-              .month{
+          &-in {
+            opacity: 0.6;
+            transition: all 0.5s;
+            &-listItem {
+              .month {
                 color: var(--indexColor1);
                 text-align: justify;
                 font-size: 20px;
@@ -568,7 +670,7 @@ const changeSwiper = (swiper) =>{
                 line-height: 160%; /* 32px */
                 letter-spacing: 2px;
               }
-              .context{
+              .context {
                 color: var(--textColor);
                 text-align: justify;
                 font-size: 20px;
@@ -580,29 +682,33 @@ const changeSwiper = (swiper) =>{
             }
           }
         }
-        &.swiper-slide-active{
-          .courseBox{
-            &-in{
+        &.swiper-slide-active {
+          .courseBox {
+            &-in {
               opacity: 1;
             }
           }
         }
       }
     }
-    .historyNode-pc-t{
+    .historyNode-pc-t {
       width: 100%;
       max-width: max-content;
       margin: 0 auto 33px;
     }
-    .historyNode-pc-b{
-      background: linear-gradient(rgba(252, 22, 130, 0.40) -68.47%, rgba(252, 22, 130, 0.28) -68.46%, rgba(255, 168, 198, 0.00) 63.88%);
+    .historyNode-pc-b {
+      background: linear-gradient(
+        rgba(252, 22, 130, 0.4) -68.47%,
+        rgba(252, 22, 130, 0.28) -68.46%,
+        rgba(255, 168, 198, 0) 63.88%
+      );
     }
-    .historyNode-pc-line{
+    .historyNode-pc-line {
       width: 100%;
       height: 2px;
-      background: #FDD3E3;
+      background: #fdd3e3;
       position: relative;
-      &-in{
+      &-in {
         position: absolute;
         top: 0;
         left: 0;
@@ -611,45 +717,126 @@ const changeSwiper = (swiper) =>{
         background: var(--indexColor1);
       }
     }
-    .historyNode-mb{
+    .historyNode-mb {
       display: none;
     }
   }
 }
-.course-action{
+.sidebar_1 {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.sidebar_3 {
+  position: absolute;
+  right: 0;
+  bottom: 9.7%;
+}
+.sidebar_2 {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.new_course_bg {
+  width: 100%;
+  position: relative;
+  .new_course_name {
+    margin-top: 70px;
+    margin-bottom: 45px;
+    color: #fc1682;
+    text-align: center;
+    font-family: FakePearl;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 65px */
+  }
+  .new_node_time {
+    color: #fc1682;
+    font-family: 'Noto Sans HK';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 160%; /* 32px */
+    letter-spacing: 4px;
+    margin-bottom: 10px;
+  }
+}
+.detail {
+  display: flex;
+  gap: 0 20px;
+  & > div:nth-child(1) {
+    color: #fc1682;
+    text-align: justify;
+    font-family: 'Noto Sans HK';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 32px */
+    letter-spacing: 4px;
+    width: 55px;
+    min-width: 55px;
+  }
+  .new_context {
+    color: #4d4d4d;
+    text-align: justify;
+    font-family: 'Noto Sans HK';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 32px */
+    letter-spacing: 4px;
+    padding-bottom: 8px;
+  }
+}
+.new_course {
+  max-width: 925px;
+  margin: 0 auto;
+  & > div:nth-child(2) {
+    & > div:not(:last-child) {
+      padding-bottom: 16px;
+      border-bottom: 1px solid #fc1682;
+    }
+    & > div {
+      padding-top: 16px;
+    }
+  }
+}
+.course-action {
   width: 100%;
   padding: 0 30px;
   margin: 80px auto 0;
   max-width: 1280px;
-  &-in{
+  &-in {
     display: flex;
     width: 100%;
     margin-bottom: 30px;
-    &-l{
+    &-l {
       width: calc((520 / 1410) * 100%);
       margin-right: calc((40 / 1410) * 100%);
-      img{
+      img {
         width: 100%;
       }
     }
-    &-r{
+    &-r {
       flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      .t{
-        .t-t{
+      .t {
+        .t-t {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          .title{
+          .title {
             color: var(--indexColor1);
             font-size: 28px;
             font-style: normal;
             font-weight: 700;
-            line-height: 160%; 
+            line-height: 160%;
           }
-          .time{
+          .time {
             color: var(--textColor);
             text-align: right;
             font-family: var(--contextFamily);
@@ -659,7 +846,7 @@ const changeSwiper = (swiper) =>{
             line-height: 160%;
           }
         }
-        .context{
+        .context {
           color: var(--textColor);
           font-size: 20px;
           font-style: normal;
@@ -668,8 +855,8 @@ const changeSwiper = (swiper) =>{
           margin-top: 14px;
         }
       }
-      .b{
-        .btn{
+      .b {
+        .btn {
           background: var(--indexColor1);
           box-shadow: 0px 3.704px 7.409px 0px rgba(252, 22, 130, 0.38);
           // width: 157px;
@@ -678,20 +865,20 @@ const changeSwiper = (swiper) =>{
           height: 60px;
           line-height: 60px;
           color: #fff;
-          transition: all .3s;
+          transition: all 0.3s;
           border-radius: 30px;
           text-align: center;
           font-size: 35px;
-          &:hover{
+          &:hover {
             background: var(--indexColor3);
           }
-          a{
+          a {
             width: 100%;
             height: 100%;
             display: block;
           }
         }
-        .text{
+        .text {
           color: var(--textColor);
           font-size: 20px;
           font-style: normal;
@@ -704,6 +891,36 @@ const changeSwiper = (swiper) =>{
           border-bottom: 1px solid var(--textColor);
         }
       }
+    }
+  }
+}
+@media (min-width: 1451px) and (max-width: 1920px) {
+  .sidebar_1 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 23.4375vw;
+    & > img {
+      width: 100%;
+    }
+  }
+  .sidebar_3 {
+    position: absolute;
+    right: 0;
+    bottom: 12.7%;
+    width: 29.795vw;
+    & > img {
+      width: 100%;
+    }
+  }
+  .sidebar_2 {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 13.95vw;
+    & > img {
+      width: 100%;
     }
   }
 }
@@ -729,13 +946,127 @@ const changeSwiper = (swiper) =>{
     font-size: 1.5vw;
     margin-top: 6vw;
   }
-  .course{
+  .course {
     margin-top: 120px;
+  }
+  .sidebar_1 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 23.4375vw;
+    & > img {
+      width: 100%;
+    }
+  }
+  .sidebar_3 {
+    position: absolute;
+    right: 0;
+    bottom: 15.625vw;
+    width: 29.795vw;
+    & > img {
+      width: 100%;
+    }
+  }
+  .sidebar_2 {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 13.95vw;
+    & > img {
+      width: 100%;
+    }
   }
 }
 
 //md
 @media only screen and (max-width: 768px) {
+  .new_course_bg {
+    width: 100%;
+    position: relative;
+    .new_course_name {
+      margin-top: 60px;
+      margin-bottom: 15px;
+      color: var(--Theme-Color, #fc1682);
+      font-family: FakePearl;
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 180%; /* 41.6px */
+    }
+    .new_node_time {
+      color: #fc1682;
+      font-family: FakePearl;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 180%; /* 32px */
+    }
+  }
+  .detail {
+    display: flex;
+    gap: 0;
+    & > div:nth-child(1) {
+      color: #fc1682;
+      text-align: justify;
+      font-family: 'Noto Sans HK';
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 180%; /* 19.2px */
+      letter-spacing: 1.2px;
+      width: 35px;
+      min-width: 35px;
+    }
+    .new_context {
+      color: #4d4d4d;
+      text-align: justify;
+      font-family: 'Noto Sans HK';
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 180%; /* 19.2px */
+      letter-spacing: 1.2px;
+      padding-bottom: 10px;
+    }
+  }
+  .mobile_shade {
+    width: 100%;
+    background: linear-gradient(0deg, #fff 57%, rgba(255, 255, 255, 0) 100%);
+    // background: #fff;
+    // background: orange;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 145px 0 40px;
+    position: absolute;
+    top: 35%;
+    & > div:nth-child(1) {
+      color: var(--Theme-Color, #fc1682);
+      text-align: justify;
+      font-family: FakePearl;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 32px */
+    }
+  }
+  .new_course {
+    max-width: 925px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 30px;
+    margin: 0 auto;
+    & > div:nth-child(2) {
+      & > div:not(:last-child) {
+        padding-bottom: 16px;
+        border-bottom: 1px solid #fc1682;
+      }
+      & > div {
+        padding-top: 16px;
+      }
+    }
+  }
   .introduce {
     &-in {
       height: auto;
@@ -770,17 +1101,17 @@ const changeSwiper = (swiper) =>{
     font-size: 1rem;
     margin-top: 20px;
   }
-  .course{
+  .course {
     margin-top: 90px;
-    &-in{
+    &-in {
       margin-top: 0;
       padding: 42px 53px 0;
-      .historyNode-pc{
+      .historyNode-pc {
         display: none;
       }
-      .historyNode-mb{
+      .historyNode-mb {
         display: block;
-        .year{
+        .year {
           color: var(--indexColor1);
           // text-align: center;
           font-size: 30px;
@@ -793,44 +1124,44 @@ const changeSwiper = (swiper) =>{
           padding: 0 10px;
           animation: modulFontAnim 2s infinite;
         }
-        .month{
+        .month {
           color: var(--indexColor1);
           text-align: justify;
           font-size: 16px;
           font-weight: 500;
           line-height: 160%;
         }
-        .context{
+        .context {
           color: var(--textColor);
           font-size: 16px;
           font-weight: 500;
           line-height: 160%;
         }
-        .eventsItem{
+        .eventsItem {
           opacity: 0;
-          transition: all .5s;
-          transition-delay: .5s;
+          transition: all 0.5s;
+          transition-delay: 0.5s;
           height: 0;
           overflow: hidden;
           margin-bottom: 0;
-          -webkit-clip-path: polygon(0 0,100% 0,100% 0,0 0);
-          clip-path: polygon(0 0,100% 0,100% 0,0 0);
-          &.act-eventsItem{
+          -webkit-clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+          &.act-eventsItem {
             height: initial;
             opacity: 1;
-            &:not(:last-child){
+            &:not(:last-child) {
               margin-bottom: 25px;
             }
-            -webkit-clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
-            clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+            -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
           }
         }
-        .historyNode-in{
+        .historyNode-in {
           padding-bottom: 47px;
           padding-left: 33px;
           position: relative;
-          .historyNode-box{
-            &::before{
+          .historyNode-box {
+            &::before {
               content: '';
               width: 90px;
               height: 2px;
@@ -838,10 +1169,10 @@ const changeSwiper = (swiper) =>{
               position: absolute;
               top: 25.5px;
               left: 0;
-              transition: all .5s;
+              transition: all 0.5s;
               // animation: modulAnim 3s infinite;
             }
-            &::after{
+            &::after {
               content: '';
               background: url(@/assets/images/icon_15.svg);
               width: 15px;
@@ -850,20 +1181,19 @@ const changeSwiper = (swiper) =>{
               position: absolute;
               top: 19px;
               left: 130px;
-              transition: all .5s;
+              transition: all 0.5s;
             }
-            &.act-historyNode-box{
-              &::before{
+            &.act-historyNode-box {
+              &::before {
                 width: calc(100% - 20px);
               }
-              &::after{
+              &::after {
                 left: calc(100% - 16px);
                 transform: rotate(90deg);
               }
             }
-            
           }
-          &::before{
+          &::before {
             content: '';
             width: 2px;
             height: 100%;
@@ -872,7 +1202,7 @@ const changeSwiper = (swiper) =>{
             top: 30px;
             left: 0;
           }
-          &::after{
+          &::after {
             content: '';
             width: 16px;
             height: 16px;
@@ -882,48 +1212,48 @@ const changeSwiper = (swiper) =>{
             top: 18px;
             left: -7.5px;
           }
-          &:last-child::before{
+          &:last-child::before {
             display: none;
           }
         }
       }
     }
   }
-  .course-action{
+  .course-action {
     margin: 65px auto 0;
     padding: 0;
-    &-in{
+    &-in {
       flex-direction: column;
-      &-l{
+      &-l {
         width: 100%;
-        img{
+        img {
           width: 100%;
         }
       }
-      &-r{
+      &-r {
         padding: 0 30px;
-        .t{
-          .t-t{
+        .t {
+          .t-t {
             justify-content: flex-start;
             flex-direction: column;
             align-items: flex-start;
-            .title{
+            .title {
               margin-top: 17px;
               font-size: 18px;
             }
-            .time{
+            .time {
               font-size: 16px;
               text-align: left;
             }
           }
-          .context{
+          .context {
             font-size: 16px;
           }
         }
-        .b{
+        .b {
           display: flex;
           flex-direction: column;
-          .btn{
+          .btn {
             order: 2;
             margin: 13px auto 0;
             width: 137px;
@@ -931,7 +1261,7 @@ const changeSwiper = (swiper) =>{
             line-height: 40px;
             font-size: 18px;
           }
-          .text{
+          .text {
             order: 1;
             font-size: 16px;
             width: max-content;
