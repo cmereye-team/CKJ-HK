@@ -773,7 +773,7 @@ onMounted(() => {
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
-    line-height: 160%; /* 32px */
+    line-height: 180%; /* 32px */
     letter-spacing: 4px;
     width: 55px;
     min-width: 55px;
@@ -785,9 +785,9 @@ onMounted(() => {
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
-    line-height: 160%; /* 32px */
+    line-height: 190%; /* 32px */
     letter-spacing: 4px;
-    padding-bottom: 8px;
+    padding-bottom: 0px;
   }
 }
 .new_course {
@@ -800,6 +800,7 @@ onMounted(() => {
     }
     & > div {
       padding-top: 16px;
+      padding-right: 40px;
     }
   }
 }
