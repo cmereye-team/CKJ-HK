@@ -186,11 +186,36 @@ const problemData = {
     <div class="contactUs">
       <!-- <NewAddress /> -->
       <NewAddress />
+      <div class="complain">
+        <div>長者醫療券使用者及一般客人申訴途徑</div>
+        <div>
+          我們致力於提供優質的服務，並重視每位客人的意見。如果您本人或親屬在使用長者醫療券或醫療服務時遇到問題，歡迎通過以下途徑向我們反映：
+        </div>
+        <div>
+          <a href="tel://+86 075561360093"
+            ><span>申訴熱線電話：</span><span>0755-61360093</span></a
+          >
+          <a href="mailto://Info@ckjhk.com"
+            ><span>電子郵箱：</span><span>Info@ckjhk.com</span></a
+          >
+          <a
+            ><span>書面申訴：</span
+            ><span>深圳愛康健口腔醫院一樓大堂意見箱</span></a
+          >
+        </div>
+        <div style="display: none">
+          <div>醫療糾紛處理流程</div>
+          <div>
+            （圖）
+            <img src="" alt="" />
+          </div>
+        </div>
+      </div>
       <div class="serviceCard">
         <serviceCard :isIndexShow="true" />
       </div>
       <ServiceProblem :problem-data="problemData" />
-     <ContactForm-new />
+      <ContactForm-new />
       <div class="environment">
         <div class="environment-title">
           <div class="index_title">
@@ -298,7 +323,75 @@ const problemData = {
     }
   }
 }
+.complain {
+  max-width: 1280px;
+  margin: 150px auto 50px;
+  & > div:nth-child(1) {
+    font-size: 36px;
+    text-align: center;
+  }
+  color: var(--Grey-Deep, #4d4d4d);
+  text-align: justify;
+  font-family: 'Noto Sans HK';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 32px */
+  letter-spacing: 4px;
+  & > div:nth-child(2) {
+    margin: 50px 0 30px;
+  }
+  & > div:nth-child(3) {
+    margin: 30px 0;
+    display: flex;
+    flex-direction: column;
+    & > a {
+      display: flex;
+      & > span:nth-child(1) {
+        width: 168px;
+      }
+      & > span:nth-child(2) {
+        color: var(--indexColor1);
+      }
+    }
+  }
+}
 @media screen and (max-width: 768px) {
+  .complain {
+    box-sizing: border-box;
+    padding: 0 25px;
+    margin: 50px auto 20px;
+
+    & > div:nth-child(1) {
+      font-size: 18px;
+      letter-spacing: 2px;
+    }
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 1.2px;
+    & > div:nth-child(2) {
+      margin: 30px 0 20px;
+      font-size: 14px;
+    }
+    & > div:nth-child(3) {
+      margin: 20px 0;
+      display: flex;
+      flex-direction: column;
+      & > a {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 12px;
+        & > span:nth-child(1) {
+          width: fit-content;
+          font-size: 18px;
+        }
+        & > span:nth-child(2) {
+          margin-top: 10px;
+          color: var(--indexColor1);
+        }
+      }
+    }
+  }
   .contactUs {
     padding-bottom: 90px;
   }
