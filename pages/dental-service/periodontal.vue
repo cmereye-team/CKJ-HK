@@ -387,8 +387,30 @@ onMounted(() => {
             </div>
           </div>
         </div>
-        <div class="care-btn"  style="display: none;">
+        <div class="care-btn" style="display: none">
           <PageAnimBtnTypeTwo :str="'與我們了解更多'" />
+        </div>
+      </div>
+      <div class="mobile_youtube" v-if="windowWidth < 768">
+        <a href="https://www.youtube.com/watch?v=Lb5GAx2ivrA" target="_blank">
+          <img
+            src="https://static.cmereye.com/imgs/2024/08/d14596dd773dd95b.png"
+            alt=""
+          />
+        </a>
+      </div>
+      <div class="mobile_introduce_one" v-if="windowWidth < 768">
+        <div>
+          <div><img src="https://static.cmereye.com/imgs/2024/08/fbbfeeb7b74cc160.png" alt=""></div>
+          <div><span>牙周病又稱為</span><span>牙齒頭號殺手</span></div>
+        </div>
+        <div>
+          <div>
+            牙周慢性炎症可造成牙周支持組織受破壞，是導致成年人缺牙的最主要原因。
+          </div>
+          <div>
+            大量研究證明，牙周病能透過齦下菌斑生物膜中的微生物及其產物引起全身性發炎及免疫反應，可能成為一些全身性疾病的危險因子。
+          </div>
         </div>
       </div>
       <div class="reason">
@@ -1524,6 +1546,20 @@ onMounted(() => {
         }
       }
     }
+  }
+
+  .mobile_youtube {
+    margin: 22px auto 50px;
+    & > a {
+      border-radius: 12px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .mobile_introduce_one {
+    
   }
 }
 </style>
