@@ -193,7 +193,7 @@ const problemData = {
         </div>
         <div>
           <a href="tel:+86 075561360093"
-            ><span>申訴熱線電話：</span><span>0755-61360093</span></a
+            ><span>申訴熱線電話：</span><span>(+86)0755-61360093</span></a
           >
           <a href="mailto:Info@ckjhk.com"
             ><span>電子郵箱：</span><span>Info@ckjhk.com</span></a
