@@ -23,7 +23,7 @@ useHead({
 const introduceJY = {
   title: 'pages.dental-service.fillings.introduce.title',
   content: 'pages.dental-service.fillings.introduce.content',
-  mbImg: 'https://static.cmereye.com/imgs/2024/04/908db92c90966e34.webp',
+  mbImg: 'https://static.cmereye.com/imgs/2024/08/7239d7032e2d634b.jpg',
   pcImg: 'https://static.cmereye.com/imgs/2024/04/b1104af283741909.webp',
 }
 
@@ -217,6 +217,7 @@ const reasonData = {
   reasonLists: [
     {
       img: 'https://static.cmereye.com/imgs/2024/04/3888d359e0b7d48d.png',
+      mb_img: 'https://static.cmereye.com/imgs/2024/08/34f163eeb9d67118.png',
       title: '脫鈣（初期蛀牙）',
       context: '出現白色斑點，牙齒表面粗糙。',
       lists: [
@@ -229,6 +230,7 @@ const reasonData = {
     },
     {
       img: 'https://static.cmereye.com/imgs/2024/04/9f38b6263937f9b6.png',
+      mb_img: 'https://static.cmereye.com/imgs/2024/08/34f163eeb9d67118.png',
       title: '外層琺瑯質受損',
       context: '牙齒出現黑色斑點或小洞。',
       lists: [
@@ -241,6 +243,7 @@ const reasonData = {
     },
     {
       img: 'https://static.cmereye.com/imgs/2024/04/936c3035a1b735c4.png',
+      mb_img: 'https://static.cmereye.com/imgs/2024/08/3cd7fefa6b3cffa2.png',
       title: '內層象牙質受損',
       context: '牙齒對冷熱或甜食敏感。',
       lists: [
@@ -253,6 +256,7 @@ const reasonData = {
     },
     {
       img: 'https://static.cmereye.com/imgs/2024/04/b632a48711f84dc2.png',
+      mb_img: 'https://static.cmereye.com/imgs/2024/08/3de774a3dea410e7.png',
       title: '牙髓及神經受損',
       context: '持續性的疼痛，牙肉紅腫。',
       lists: [
@@ -270,6 +274,7 @@ const reasonData = {
     },
     {
       img: 'https://static.cmereye.com/imgs/2024/04/7cad4228b8f92fa0.png',
+      mb_img: 'https://static.cmereye.com/imgs/2024/08/5df8f5c82fa1d657.png',
       title: '殘根',
       context: '牙冠部分極度損壞，僅剩牙根。',
       lists: [
@@ -353,9 +358,9 @@ const differData: any = {
     {
       name: '',
       contentType: '2',
-      firstText: 'https://static.cmereye.com/imgs/2024/02/cc9429201855225d.jpg',
+      firstText: 'https://static.cmereye.com/imgs/2024/08/c2ee3b604ae82543.png',
       secondText:
-        'https://static.cmereye.com/imgs/2024/02/51cdfd0bf4ee583b.png',
+        'https://static.cmereye.com/imgs/2024/08/a7651e91206712fd.png',
     },
     {
       name: '特性',
@@ -453,7 +458,7 @@ const differData: any = {
               :key="stepIndex"
               class="step-lists-in"
             >
-              <div class="step-lists-in-l">
+              <div class="step-lists-in-l" v-if="windowWidth > 767">
                 <div class="title">
                   <img src="@/assets/images/icon_13.png" alt="" />
                   {{ stepItem.title }}
@@ -461,13 +466,20 @@ const differData: any = {
                 <div class="image"><img :src="stepItem.img" alt="" /></div>
                 <div class="name">{{ stepItem.name }}</div>
               </div>
-              <div class="step-lists-in-r">
+              <div class="step-lists-in-l" v-else>
+                <div class="title">
+                  {{ stepItem.title.charAt(1) }}
+                </div>
+                <div class="image"><img :src="stepItem.img" alt="" /></div>
+                <div class="name">{{ stepItem.name }}</div>
+              </div>
+              <div class="step-lists-in-r" v-if="windowWidth > 767">
                 <img src="@/assets/images/icon_12.png" alt="" />
               </div>
             </div>
             <div class="step-lists-in">
               <div>
-                <div class="lastBox-t">
+                <div class="lastBox-t" v-if="windowWidth > 767">
                   <div>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -491,6 +503,10 @@ const differData: any = {
                     </svg>
                   </div>
                   <div>最快即日<span>修補牙齒</span></div>
+                </div>
+                <div v-else class="lastBox-t_new_mobile">
+                  <span>最快即日</span>
+                  <span>修補牙齒</span>
                 </div>
                 <div class="lastBox-b">
                   <!-- <PageAnimBtnTypeTwo :str="'免費網上預約'" /> -->
@@ -584,7 +600,10 @@ const differData: any = {
         </div>
       </div>
       <div class="note2">
-        <div class="dentistryServices-title note2-title">
+        <div
+          class="dentistryServices-title note2-title"
+          v-if="windowWidth > 768"
+        >
           <div class="dentistryServices-title-in bb note2-title-in">
             {{ noteData2.title }}
           </div>
@@ -594,7 +613,12 @@ const differData: any = {
             <img
               src="https://static.cmereye.com/imgs/2024/02/e593066f247bebff.webp"
               alt=""
+              v-if="windowWidth > 768"
             />
+            <div v-else>
+              <span>補牙的<i>作用</i></span>
+            </div>
+            <!-- <img v-else src="https://static.cmereye.com/imgs/2024/08/226ad56f456f2008.png" alt=""> -->
           </div>
           <div class="note2-content-r">
             <div
@@ -622,7 +646,8 @@ const differData: any = {
             class="reason-lists-item"
           >
             <div class="image">
-              <img :src="item.img" alt="" />
+              <img v-if="windowWidth > 768" :src="item.img" alt="" />
+              <img v-else :src="item.mb_img" alt="" />
             </div>
             <div class="reason-lists-item-r">
               <div class="title">
@@ -633,7 +658,7 @@ const differData: any = {
                 <span>特徵：{{ item.context }}</span>
                 <span></span>
               </div>
-              <div class="name">
+              <div class="name" v-if="windowWidth > 768">
                 <img src="@/assets/images/icon_40.svg" alt="" />
                 <span>治療方法：</span>
               </div>
@@ -647,7 +672,16 @@ const differData: any = {
                     <img :src="itemIn.img" alt="" />
                   </div>
                   <div class="list-in-text">
-                    <h2>{{ itemIn.name }}</h2>
+                    <h2
+                      style="
+                        font-size: 15px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 20px;
+                      "
+                    >
+                      治療方法：<strong>{{ itemIn.name }}</strong>
+                    </h2>
                     <p>{{ itemIn.text }}</p>
                   </div>
                 </div>
@@ -714,24 +748,40 @@ const differData: any = {
         </div>
       </div>
       <div class="advantage">
-        <div class="advantage-title dentistryServices-title">
+        <div
+          class="advantage-title dentistryServices-title"
+          v-if="windowWidth > 768"
+        >
           <div class="advantage-title-in dentistryServices-title-in bb">
             {{ advantageData.title }}
           </div>
         </div>
+
         <div class="advantage-in">
-          <div class="advantage-in-l">
+          <div class="advantage-in-l" v-if="windowWidth > 768">
             <img
               src="https://static.cmereye.com/imgs/2024/02/023004e30a0f06d2.webp"
               :alt="advantageData.title"
             />
+          </div>
+          <div v-else class="mobile_title_ad">
+            <div>
+              <img
+                src="https://static.cmereye.com/imgs/2024/08/66bc66a66ae9f037.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <span>預防蛀牙</span>
+              <span>方法</span>
+            </div>
           </div>
           <div class="advantage-in-r">
             <div
               v-for="(advantageItem, advantageIndex) in advantageData.lists"
               :key="advantageIndex"
             >
-              <div class="name">{{ advantageItem.name }}</div>
+              <div class="name">{{ advantageItem.name.split('.')[1] }}</div>
               <div class="text">{{ advantageItem.text }}</div>
             </div>
           </div>
@@ -740,7 +790,7 @@ const differData: any = {
       <ServiceProblem :problemData="problemData" />
       <serviceCard />
       <NewAddress />
-     <ContactForm-new />
+      <ContactForm-new />
     </div>
     <PageFooter />
     <PageNavbar />
@@ -1862,15 +1912,24 @@ const differData: any = {
     }
     &-lists {
       padding: 0 30px;
+
       &-item {
         width: 100%;
-        flex-direction: column;
-        padding: 40px 20px;
+        flex-direction: row;
+        padding: 40px 12px;
         border-radius: 38px;
+        position: relative;
+        gap: 0 5px;
+        margin-bottom: 24px;
         .image {
           width: 100%;
           height: auto;
           margin-right: 0;
+          width: 126px;
+          height: 126px;
+          & > img {
+            width: 100%;
+          }
         }
         &-r {
           width: 100%;
@@ -1878,15 +1937,21 @@ const differData: any = {
             margin-top: 30px;
             display: flex;
             justify-content: center;
+            position: absolute;
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: 0;
             span {
               font-size: 20px;
               letter-spacing: 4px;
-              min-width: 217px;
+              min-width: auto;
+              width: fit-content;
               margin: 0 auto;
             }
           }
           .context {
-            margin-top: 30px;
+            margin-top: 40px;
             margin-bottom: 10px;
             font-size: 15px;
             letter-spacing: 1.5px;
@@ -1898,6 +1963,7 @@ const differData: any = {
           .name {
             font-size: 15px;
             letter-spacing: 1.5px;
+
             & > img {
               width: 20px;
             }
@@ -1905,11 +1971,15 @@ const differData: any = {
           .list {
             padding: 0;
             margin-top: 20px;
+            padding-left: 30px;
             &-in {
               &:not(:last-child) {
                 margin-bottom: 20px;
               }
               &-img {
+                position: absolute;
+                left: 75px;
+                top: 195px;
                 width: 80px;
                 height: 80px;
                 margin-right: 14px;
@@ -1923,6 +1993,58 @@ const differData: any = {
                 }
               }
             }
+          }
+        }
+      }
+      &-item:nth-of-type(even) {
+        background: #fff1f0;
+      }
+      &-item:nth-of-type(2) {
+        .context {
+          margin-top: 80px;
+        }
+        .list-in-img {
+          top: 175px;
+        }
+      }
+      &-item:nth-of-type(4) {
+        .image {
+          position: relative;
+          top: -30px;
+        }
+        .list {
+          padding-left: 25px;
+        }
+        .list-in:nth-child(1) {
+          .list-in-img {
+            top: 175px;
+          }
+        }
+        .list-in:nth-child(2) {
+          .list-in-img {
+            top: 285px;
+          }
+        }
+      }
+      &-item:nth-of-type(5) {
+        .context {
+          margin-top: 50px;
+        }
+        .image {
+          position: relative;
+          top: -50px;
+        }
+        .list {
+          padding-left: 25px;
+        }
+        .list-in:nth-child(1) {
+          .list-in-img {
+            top: 205px;
+          }
+        }
+        .list-in:nth-child(2) {
+          .list-in-img {
+            top: 320px;
           }
         }
       }
@@ -2024,7 +2146,8 @@ const differData: any = {
     }
   }
   .note2 {
-    margin-top: 55px;
+    margin-top: 75px;
+    position: relative;
     &-title {
       &-in {
         font-size: 26px;
@@ -2037,13 +2160,41 @@ const differData: any = {
       flex-direction: column;
       align-items: flex-start;
       margin: 54px auto 0;
+      background: url('https://static.cmereye.com/imgs/2024/08/226ad56f456f2008.png')
+        no-repeat;
+      background-size: 100% 100%;
+
       &-l {
         width: 100%;
         padding: 0 53px;
+        position: absolute;
+        position: absolute;
+        top: 90px;
+        display: flex;
+        justify-content: flex-end;
+        & > div {
+          & > span {
+            color: var(--Grey-Deep, #4d4d4d);
+            font-family: FakePearl;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 160%; /* 41.6px */
+            i {
+              color: var(--Theme-Color, #fc1682);
+              font-family: FakePearl;
+              font-size: 26px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 160%;
+            }
+          }
+        }
       }
       &-r {
         margin-left: 0;
-        padding: 35px 30px 0;
+        padding: 75px 30px 0;
+        margin-top: 90px;
         & > div {
           margin-bottom: 20px;
           span {
@@ -2092,13 +2243,23 @@ const differData: any = {
   }
   .fillings-content-1 {
     &-in {
-      flex-direction: column;
-      align-items: center;
+      box-sizing: border-box;
+      padding: 0 30px;
+      // flex-direction: column;
+      // align-items: center;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px 25px;
       margin-top: 30px;
       & > div {
-        width: calc(100% - 100px);
+        // width: calc(100% - 100px);
+        width: 100%;
         span {
-          font-size: 20px;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 130%; /* 20.8px */
+          letter-spacing: 1.6px;
           margin-top: 10px;
         }
         &:not(:last-child) {
@@ -2116,20 +2277,56 @@ const differData: any = {
       &-r {
         margin-left: 0;
         margin-top: 8px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0 36px;
+        padding-left: 20px;
         & > div {
-          margin-top: 44px;
+          position: relative;
+          margin-top: 24px;
           .name {
             width: 100%;
             font-size: 16px;
-            clip-path: polygon(0 0, 90% 0, 95% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            background: transparent;
+            padding: 0;
+            color: var(--Theme-Color, #fc1682);
+            text-align: justify;
+            font-family: 'Noto Sans HK';
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 200%; /* 24px */
+            letter-spacing: 1.2px;
             margin-top: 0;
             // margin-bottom: 15px;
           }
           .text {
-            font-size: 16px;
+            // font-size: 16px;
             text-indent: 0;
-            padding-left: 10px;
+            padding-left: 0;
+            color: var(--Grey-Deep, #4d4d4d);
+            font-family: 'Noto Sans HK';
+            font-size: 12px;
+            font-style: normal;
+            text-align: justify;
+            font-weight: 400;
+            line-height: 200%;
+            letter-spacing: 1.2px;
           }
+        }
+
+        & > div::before {
+          content: '';
+          background: url('https://static.cmereye.com/imgs/2024/08/017c1f8115058e60.png')
+            no-repeat;
+          position: absolute;
+          left: -14px;
+          top: 7px;
+          width: 9px;
+          height: 11px;
+          background-size: 100% 100%;
+          display: inline-block;
         }
       }
       &-l {
@@ -2137,6 +2334,43 @@ const differData: any = {
         justify-content: center;
       }
     }
+  }
+  .mobile_title_ad {
+    // overflow: hidden;
+    display: flex;
+    align-items: flex-end;
+    padding-left: 20px;
+    position: relative;
+    & > div:nth-child(1) {
+      & > img {
+        position: relative;
+        z-index: 5;
+      }
+    }
+    & > div:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      color: var(--Grey-Deep, #4d4d4d);
+      font-family: FakePearl;
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%; /* 31.2px */
+      padding-bottom: 10px;
+      & > span:nth-child(2) {
+        color: var(--Theme-Color, #fc1682);
+      }
+    }
+  }
+  .mobile_title_ad::after {
+    position: absolute;
+    bottom: 5px;
+    right: -28px;
+    width: 65%;
+    height: 1px;
+    background: var(--Theme-Color, #fc1682);
+    content: '';
+    z-index: 2;
   }
   .The_benefits_of_resin_filling_teeth {
     margin-top: 30px;
@@ -2146,9 +2380,11 @@ const differData: any = {
     &-lists {
       &-in {
         padding: 0 30px;
+        align-items: flex-start;
         &-l {
           width: 60px;
           height: 60px;
+          padding-top: 5px;
           & > div {
             font-size: 16px;
             line-height: 1.4;
@@ -2167,13 +2403,11 @@ const differData: any = {
     }
   }
   .step {
-    background: linear-gradient(
-      0deg,
-      rgba(255, 241, 240, 0) 0%,
-      rgba(255, 241, 240, 0.7) 12.5%,
-      rgba(255, 241, 240, 0.7) 81.99%,
-      rgba(255, 241, 240, 0) 100%
-    );
+    // background: #fff;
+    // 背景渐变3色
+    background: url('https://static.cmereye.com/imgs/2024/08/6b7abb73df76f85e.png')
+      no-repeat;
+    background-position: center 0;
     margin-top: 0;
     padding: 46px 0;
     &-title {
@@ -2183,8 +2417,11 @@ const differData: any = {
     }
     &-lists {
       width: auto;
-      margin: 57px 40px 0;
+      margin: 57px 30px 0;
       padding: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px 25px;
       &-in {
         flex-direction: column;
         margin-bottom: 30px;
@@ -2199,21 +2436,62 @@ const differData: any = {
           }
         }
         &-l {
+          width: 145px;
+          position: relative;
           .title {
             padding: 0 6px;
             font-size: 26px;
+            width: 70px;
+            height: 61.286px;
+            background: url('https://static.cmereye.com/imgs/2024/08/a53173454afef713.png')
+              no-repeat;
+            background-position: center center;
+            background-size: 100% 100%;
+            color: var(--Theme-Color, #fc1682);
+            text-align: center;
+            font-family: 'Noto Serif HK';
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%; /* 84px */
+            letter-spacing: -3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 5;
+            top: -30px;
+            left: -20px;
           }
           .image {
-            padding: 0 6px;
+            padding: 0;
+            border-radius: 12px;
+            border: 1px solid var(--Theme-Color, #fc1682);
+            height: 98px;
+            overflow: hidden;
             &::after {
               display: none;
             }
+            & > img {
+              border-radius: 0;
+              width: 100%;
+              height: 100%;
+            }
           }
           .name {
-            margin-top: -25px;
+            margin-top: 0;
+            padding: 0;
+            width: 100%;
             font-size: 16px;
-            clip-path: polygon(0 0, 80% 0, 85% 100%, 0 100%);
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            background: transparent;
             white-space: initial;
+            color: var(--Theme-Color, #fc1682);
+            font-family: FakePearl;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 130%; /* 20.8px */
           }
         }
         &-r {
@@ -2227,6 +2505,7 @@ const differData: any = {
         &:nth-of-type(6) {
           margin-top: 15px;
           align-items: initial;
+          grid-column: span 2;
           .lastBox-t {
             & > div {
               font-size: 26px;
@@ -2249,16 +2528,48 @@ const differData: any = {
             }
           }
         }
+
         &:nth-of-type(2),
         &:nth-of-type(5) {
           .step-lists-in-l {
             .name {
-              width: 90%;
-              clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
+              width: 100%;
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
             }
           }
         }
+        &:nth-of-type(2),
+        &:nth-of-type(4) {
+          position: relative;
+          top: 120px;
+        }
       }
+    }
+  }
+  .lastBox-t_new_mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 10px;
+    & > span:nth-child(1) {
+      background: url('https://static.cmereye.com/imgs/2024/08/aa858a12d3e1e4fa.png')
+        no-repeat;
+      background-size: 100% 100%;
+      width: 156px;
+      height: 55px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-right: 12px;
+    }
+    & > span {
+      color: var(--Theme-Color, #fc1682);
+      text-align: center;
+      font-family: FakePearl;
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 160%; /* 41.6px */
     }
   }
   .differ {
@@ -2313,17 +2624,33 @@ const differData: any = {
           }
         }
         &:nth-of-type(1) {
-          & > div {
-            font-size: 16px;
+          & > div:not(:first-child) {
             padding: 0;
+            border-radius: 19px;
+            background: var(--Theme-Color, #fc1682);
+            color: var(--White, #fff);
+            text-align: center;
+            font-family: FakePearl;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%; /* 24px */
+            letter-spacing: 1.5px;
           }
         }
         &:nth-of-type(2) {
           & > div {
-            padding: 0 20px 5px 20px;
+            padding: 0;
           }
         }
       }
+    }
+  }
+  .introduceJY {
+    :deep(.introduce-in-content) {
+      position: absolute;
+      left: 0;
+      padding: 120px 0 30px 0;
     }
   }
 }
