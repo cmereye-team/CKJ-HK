@@ -192,10 +192,10 @@ const problemData = {
           我們致力於提供優質的服務，並重視每位客人的意見。如果您本人或親屬在使用長者醫療券或醫療服務時遇到問題，歡迎通過以下途徑向我們反映：
         </div>
         <div>
-          <a href="tel://+86 075561360093"
+          <a href="tel:+86 075561360093"
             ><span>申訴熱線電話：</span><span>0755-61360093</span></a
           >
-          <a href="mailto://Info@ckjhk.com"
+          <a href="mailto:Info@ckjhk.com"
             ><span>電子郵箱：</span><span>Info@ckjhk.com</span></a
           >
           <a
