@@ -32,9 +32,11 @@ const headerConfig = {
 }
 
 const orthodonticsIntroduceData = {
-  title: 'pages.dental-service.periodontal.introduce.title',
+  // title: 'pages.dental-service.periodontal.introduce.title',
+  // title:['牙周治療',' (深層洗牙/洗牙腳）'],
+  title: '牙周治療',
   content:
-    '牙周病為常見的口腔疾病，這種慢性疾病會引致牙齒移位及鬆脫，不但影響美觀，還會影響口腔健康。',
+    '牙周病為常見的口腔疾病，是牙齒周圍組織的一種慢性、感染性、破壞性的疾病。主要由牙菌斑和牙結石等長期累積所引起。這種慢性疾病隨著病情進展階段會破壞牙周組織，導致牙齦萎縮和牙骨吸收，重度牙周病患者可導致牙齒脫落。所以有牙周病應該盡快接受系統性治療，防止進一步惡化。',
   mbImg: 'https://static.cmereye.com/imgs/2023/11/3f3d338958c5f8d6.jpg',
   pcImg: 'https://static.cmereye.com/imgs/2023/11/38143ec138e85da7.jpg',
   tabNavName: 'pages.dental-service.periodontal.introduce.tabNavName',
@@ -323,7 +325,72 @@ onMounted(() => {
       <div class="index_title pageCon">
         {{ $t('pages.dental-service.title') }}
       </div>
-      <ServiceIntroduce :introduceData="orthodonticsIntroduceData" />
+      <div class="mobile-orthodontics">
+        <ServiceIntroduce :introduceData="orthodonticsIntroduceData" />
+      </div>
+      <div class="mobile_faq" v-if="windowWidth < 768">
+        <div class="dentistryServices-title reason-title">
+          <div class="dentistryServices-title-in bb reason-title-in">
+            常見牙周問題
+          </div>
+        </div>
+        <div>
+          <div>
+            <div>
+              <img
+                src="https://static.cmereye.com/imgs/2024/08/f70a8c03df580ef7.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <div>牙齦炎</div>
+              <div>
+                牙齦發炎，常由於牙菌斑堆積引起，若不及時治療，可能發展為更嚴重的問題
+              </div>
+            </div>
+          </div>
+          <div>
+            <div>
+              <img
+                src="https://static.cmereye.com/imgs/2024/08/449d691464bd572e.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <div>牙周炎</div>
+              <div>
+                進一步的感染，可能導致牙齦退縮和牙齒鬆動，嚴重時可導致牙齒脫落
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="care" v-if="windowWidth < 768">
+        <div class="dentistryServices-title care-title">
+          <div class="dentistryServices-title-in bb care-title-in">
+            {{ symptomData.title }}
+          </div>
+        </div>
+        <div class="care-lists">
+          <div
+            v-for="(careItem, careIndex) in symptomData.lists"
+            :key="careIndex"
+            class="care-lists-item"
+          >
+            <div>
+              <div class="image">
+                <div class="image-in">
+                  <img :src="careItem.imgUrl" :alt="careItem.title" />
+                </div>
+              </div>
+              <div class="text">{{ careItem.title }}</div>
+            </div>
+          </div>
+        </div>
+        <div class="care-btn"  style="display: none;">
+          <PageAnimBtnTypeTwo :str="'與我們了解更多'" />
+        </div>
+      </div>
       <div class="reason">
         <div class="dentistryServices-title reason-title">
           <div class="dentistryServices-title-in bb reason-title-in">
@@ -382,7 +449,7 @@ onMounted(() => {
           </div>
         </div>
       </div>
-      <div class="care">
+      <div class="care" v-if="windowWidth > 768">
         <div class="dentistryServices-title care-title">
           <div class="dentistryServices-title-in bb care-title-in">
             {{ symptomData.title }}
@@ -1402,6 +1469,60 @@ onMounted(() => {
     }
     &-btn {
       margin-top: 35px;
+    }
+  }
+  .mobile-orthodontics {
+    :deep(.introduce) {
+      position: relative;
+      .introduce-in-l {
+        margin-bottom: 75px;
+        position: absolute;
+        top: 0;
+        padding: 300px 0 30px 0;
+      }
+    }
+  }
+  .mobile_faq {
+    margin-top: 200px;
+    background: linear-gradient(
+      0deg,
+      rgba(255, 241, 240, 0) 0%,
+      rgba(255, 241, 240, 0.7) 12.5%,
+      rgba(255, 241, 240, 0.7) 81.99%,
+      rgba(255, 241, 240, 0) 100%
+    );
+
+    & > div:nth-child(2) {
+      margin-top: 25px;
+      box-sizing: border-box;
+      padding: 0 62px;
+      display: flex;
+      gap: 0 28px;
+      & > div {
+        & > div:nth-child(2) {
+          max-width: 111px;
+          & > div:nth-child(1) {
+            color: var(--Theme-Color, #fc1682);
+            text-align: center;
+            font-family: FakePearl;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 130%; /* 20.8px */
+            margin-top: 5px;
+          }
+          & > div:nth-child(2) {
+            color: var(--Grey-Deep, #4d4d4d);
+            text-align: justify;
+            font-family: FakePearl;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 160%; /* 19.2px */
+            letter-spacing: 1.2px;
+          }
+        }
+      }
     }
   }
 }
