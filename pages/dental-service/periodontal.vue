@@ -306,7 +306,83 @@ const reason2Data = {
     },
   ],
 }
-
+const stepData = {
+  title: '牙周治療過程',
+  lists: [
+    {
+      title: '第1步',
+      img: 'https://static.cmereye.com/imgs/2024/08/c6abd76aae7bf1ad.png',
+      name: '檢查與診斷',
+      text: [
+        {
+          l: '詳細檢查',
+          r: '牙齦狀況、牙周袋深度測量',
+        },
+        {
+          l: 'X光檢查',
+          r: '：觀察牙齒與支持骨骼的健康狀況',
+        },
+        {
+          l: '診斷分析',
+          r: '：確定牙周疾病的類型和嚴重程度',
+        },
+      ],
+    },
+    {
+      title: '第2步',
+      img: 'https://static.cmereye.com/imgs/2024/08/39a6b316050e40dc.png',
+      name: '治療方案制定',
+      text: [
+        {
+          l: '個性化治療計劃',
+          r: '：根據檢查結果和患者需求制定專屬方案',
+        },
+      ],
+    },
+    {
+      title: '第3步',
+      img: 'https://static.cmereye.com/imgs/2024/08/04e9730b1897960b.png',
+      name: '治療步驟',
+      text: [
+        {
+          l: '洗牙',
+          r: '：去除牙菌斑和牙結石',
+        },
+        {
+          l: '深層清潔（刮治和根面平整）',
+          r: '：清除牙齦下的菌斑和結石，平整牙根表面',
+        },
+        {
+          l: '抗生素治療',
+          r: '：如有需要，使用藥物控制感染',
+        },
+        {
+          l: '牙齒固定',
+          r: '：對於鬆動的牙齒，可能需要進行加固處理，以恢復穩定性並防止進一步損傷。',
+        },
+      ],
+    },
+    {
+      title: '第4步',
+      img: 'https://static.cmereye.com/imgs/2024/08/37aa400a1cb8957b.png',
+      name: '後續護理',
+      text: [
+        {
+          l: '日常護理',
+          r: '：正確刷牙和使用牙線、牙縫刷',
+        },
+        {
+          l: '定期覆診',
+          r: '：監控治療效果及防止復發',
+        },
+        {
+          l: '生活習慣調整',
+          r: '：戒煙酒',
+        },
+      ],
+    },
+  ],
+}
 let windowWidth = ref(390)
 const getWindowWidth = () => {
   windowWidth.value = window.innerWidth
@@ -401,7 +477,12 @@ onMounted(() => {
       </div>
       <div class="mobile_introduce_one" v-if="windowWidth < 768">
         <div>
-          <div><img src="https://static.cmereye.com/imgs/2024/08/fbbfeeb7b74cc160.png" alt=""></div>
+          <div>
+            <img
+              src="https://static.cmereye.com/imgs/2024/08/fbbfeeb7b74cc160.png"
+              alt=""
+            />
+          </div>
           <div><span>牙周病又稱為</span><span>牙齒頭號殺手</span></div>
         </div>
         <div>
@@ -410,6 +491,86 @@ onMounted(() => {
           </div>
           <div>
             大量研究證明，牙周病能透過齦下菌斑生物膜中的微生物及其產物引起全身性發炎及免疫反應，可能成為一些全身性疾病的危險因子。
+          </div>
+        </div>
+      </div>
+      <div
+        class="mobile_introduce_one mobile_introduce_two"
+        v-if="windowWidth < 768"
+      >
+        <div>
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="93"
+              height="83"
+              viewBox="0 0 93 83"
+              fill="none"
+            >
+              <g clip-path="url(#clip0_8429_38936)">
+                <path
+                  d="M46.51 82.9946C33.6063 82.9946 20.7079 83.005 7.80419 82.9841C4.14642 82.9841 1.04538 80.5709 0.218091 77.0503C-0.30742 74.8095 0.134842 72.6992 1.30554 70.6778C7.39315 60.1683 13.4339 49.6274 19.4903 39.1023C26.1295 27.5585 32.7842 16.02 39.3921 4.4606C40.8854 1.85411 43.0031 0.203515 45.9845 0.0206959C49.2416 -0.183017 51.7547 1.27954 53.3989 4.13152C56.656 9.76236 59.8871 15.4089 63.1286 21.0501C72.6451 37.5927 82.1615 54.1352 91.6676 70.683C93.8164 74.4177 93.3274 78.3457 90.4136 80.9992C88.8683 82.4043 87.0264 83.005 84.9504 83.005C72.1352 82.9946 59.32 83.005 46.5048 82.9998L46.51 82.9946ZM41.3173 39.891C41.3173 40.7581 41.3069 41.6252 41.3173 42.4923C41.3589 45.4853 41.2965 48.4835 41.4994 51.4608C41.6347 53.5032 43.2008 54.9187 45.1832 55.2687C49.1844 55.9687 51.6714 53.9106 51.687 49.852C51.7078 43.2131 51.6974 36.5741 51.687 29.9352C51.687 29.3293 51.6402 28.7129 51.5101 28.1279C51.1147 26.3101 49.9752 25.1035 48.2114 24.6439C44.1842 23.594 41.3485 25.8243 41.3225 29.9979C41.3017 33.2938 41.3225 36.595 41.3225 39.891H41.3173ZM46.4527 72.4694C49.3196 72.4799 51.583 70.286 51.6402 67.4288C51.6974 64.5977 49.304 62.1532 46.4839 62.1636C43.7159 62.1741 41.3797 64.5298 41.3589 67.3296C41.3381 70.1554 43.6171 72.459 46.4527 72.4694Z"
+                  fill="#FC1682"
+                />
+                <path
+                  d="M41.3174 39.8907C41.3174 36.5947 41.3018 33.2935 41.3174 29.9975C41.3383 25.824 44.1791 23.5936 48.2063 24.6435C49.9702 25.1032 51.1097 26.3098 51.5051 28.1276C51.6352 28.7178 51.6768 29.3342 51.682 29.9349C51.6924 36.5738 51.7028 43.2128 51.682 49.8517C51.6716 53.9103 49.1793 55.9683 45.1781 55.2684C43.1958 54.9237 41.6296 53.5029 41.4943 51.4605C41.2966 48.478 41.3591 45.4797 41.3122 42.4919C41.3018 41.6248 41.3122 40.7578 41.3122 39.8907H41.3174Z"
+                  fill="white"
+                />
+                <path
+                  d="M46.4524 72.4699C43.6219 72.4594 41.3377 70.1559 41.3585 67.33C41.3794 64.5303 43.7155 62.1745 46.4836 62.1641C49.3037 62.1536 51.6971 64.5982 51.6398 67.4293C51.5826 70.2865 49.3193 72.4856 46.4524 72.4699Z"
+                  fill="white"
+                />
+              </g>
+              <defs>
+                <clipPath id="clip0_8429_38936">
+                  <rect width="93" height="83" fill="white" />
+                </clipPath>
+              </defs>
+            </svg>
+          </div>
+          <div><span>「老掉牙」</span><span>並非正常現象</span></div>
+        </div>
+        <div>
+          <div>
+            人們常說「老掉牙」了，認為人老掉牙是必然現象，其實這是一種錯誤的觀念。如果做好口腔保健，健康的牙齒是應該是伴隨人一生的。
+          </div>
+        </div>
+      </div>
+      <div class="step" v-if="windowWidth < 768">
+        <div class="step-in">
+          <div class="dentistryServices-title step-title">
+            <div class="dentistryServices-title-in bb step-title-in">
+              {{ stepData.title }}
+            </div>
+          </div>
+          <div class="step-lists">
+            <div
+              v-for="(stepItem, stepIndex) in stepData.lists"
+              :key="stepIndex"
+              class="step-lists-in"
+            >
+              <div class="step-lists-in-l" v-if="windowWidth > 767">
+                <div class="title">
+                  <img src="@/assets/images/icon_13.png" alt="" />
+                  {{ stepItem.title }}
+                </div>
+                <div class="image"><img :src="stepItem.img" alt="" /></div>
+                <div class="name">{{ stepItem.name }}</div>
+              </div>
+              <div class="step-lists-in-l" v-else>
+                <div class="title">
+                  {{ stepItem.title.charAt(1) }}
+                </div>
+                <div class="image"><img :src="stepItem.img" alt="" /></div>
+                <div class="name">{{ stepItem.name }}</div>
+                <div class="mobile_text">
+                  <p v-for="(el, i) in stepItem.text" :key="i">
+                    <span>{{ el.l }}</span
+                    ><span>{{ el.r }}</span>
+                  </p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -901,6 +1062,150 @@ onMounted(() => {
   &-btn {
     display: flex;
     justify-content: center;
+  }
+}
+.step {
+  width: 100%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 241, 240, 0) 0%,
+    rgba(255, 241, 240, 0.7) 12.5%,
+    rgba(255, 241, 240, 0.7) 81.99%,
+    rgba(255, 241, 240, 0) 100%
+  );
+  padding: 61px 0 99px;
+  margin-top: 70px;
+  &-in {
+    width: 100%;
+    max-width: calc(1444px + 122px);
+    margin: 0 auto;
+  }
+  &-lists {
+    margin-top: 98px;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    &-in {
+      display: flex;
+      align-items: center;
+      margin-bottom: 92px;
+      padding: 0 calc((61 / (1444 + 122)) * 100%);
+      width: calc(100% / 3);
+      &:nth-of-type(4),
+      &:nth-of-type(5) {
+        margin-bottom: 0;
+      }
+      &:nth-of-type(5) {
+        .step-lists-in-l {
+          .image {
+            &::after {
+              display: none;
+            }
+          }
+        }
+      }
+      &-l {
+        width: 100%;
+        max-width: 400px;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        .title {
+          display: flex;
+          align-items: center;
+          font-size: 35px;
+          font-weight: 700;
+          margin-bottom: 15px;
+          color: #4d4d4d;
+          img {
+            height: auto;
+            margin-right: 15px;
+          }
+        }
+        .image {
+          width: 100%;
+          img {
+            width: 100%;
+            border-radius: 30px;
+          }
+          position: relative;
+          &::after {
+            content: '';
+            position: absolute;
+            right: -17%;
+            top: 50%;
+            transform: translateY(-50%);
+            background: url(@/assets/images/icon_12.png);
+            background-size: 100% 100%;
+            width: 16px;
+            height: 30px;
+          }
+        }
+        .name {
+          width: 100%;
+          color: #fff;
+          font-size: 20px;
+          font-weight: 700;
+          background: var(--indexColor1);
+          margin-top: 24px;
+          margin-bottom: 15px;
+          padding: 8px 15px;
+          clip-path: polygon(0 0, 93% 0, 100% 100%, 0 100%);
+          white-space: pre-wrap;
+        }
+      }
+      &-r {
+        display: none;
+        img {
+          width: 15px;
+          height: auto;
+        }
+      }
+      &:nth-of-type(6) {
+        margin-bottom: 0;
+        align-items: flex-end;
+        justify-content: center;
+        & > div {
+          margin-bottom: 20px;
+        }
+        .lastBox-t {
+          & > div {
+            color: var(--indexColor1);
+            font-size: 50px;
+            font-weight: 700;
+            text-align: center;
+            span {
+              font-size: 50px;
+              line-height: 120%;
+              display: block;
+            }
+            &:nth-of-type(1) {
+              display: flex;
+              justify-content: center;
+              width: 100%;
+              margin-bottom: 15px;
+            }
+          }
+        }
+        .lastBox-b {
+          margin-top: 20px;
+          .bigBan {
+            font-size: 44px;
+            line-height: 1.2;
+          }
+        }
+      }
+      &:nth-of-type(2),
+      &:nth-of-type(5) {
+        .step-lists-in-l {
+          .name {
+            width: 110%;
+            clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
+          }
+        }
+      }
+    }
   }
 }
 @media (min-width: 768px) and (max-width: 1920px) {
@@ -1547,7 +1852,6 @@ onMounted(() => {
       }
     }
   }
-
   .mobile_youtube {
     margin: 22px auto 50px;
     & > a {
@@ -1559,7 +1863,227 @@ onMounted(() => {
     }
   }
   .mobile_introduce_one {
-    
+    box-sizing: border-box;
+    & > div:nth-child(1) {
+      padding: 0 15px;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      & > div:nth-child(1) {
+        & > img {
+          position: relative;
+          z-index: 10;
+        }
+      }
+      & > div:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        color: var(--Grey-Deep, #4d4d4d);
+        font-family: FakePearl;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%; /* 31.2px */
+        padding-bottom: 10px;
+        & > span:nth-child(2) {
+          color: var(--Theme-Color, #fc1682);
+        }
+      }
+    }
+    & > div:nth-child(1)::after {
+      content: '';
+      width: 100%;
+      height: 1px;
+      background: var(--indexColor1);
+      width: 68%;
+      bottom: 5px;
+      right: 0;
+      position: absolute;
+    }
+
+    & > div:nth-child(2) {
+      margin-top: 20px;
+      box-sizing: border-box;
+      padding: 0 30px;
+      color: var(--Grey-Deep, #4d4d4d);
+      text-align: justify;
+      font-family: 'Noto Sans HK';
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 200%; /* 32px */
+      letter-spacing: 1.6px;
+    }
+  }
+  .mobile_introduce_two {
+    margin-top: 50px;
+    & > div:nth-child(1) {
+      justify-content: center;
+      gap: 0 20px;
+    }
+    & > div:nth-child(1)::after {
+      width: 55%;
+    }
+  }
+  .step {
+    // background: #fff;
+    // 背景渐变3色
+    background: url('https://static.cmereye.com/imgs/2024/08/6b7abb73df76f85e.png')
+      no-repeat;
+    background-position: center 0;
+    margin-top: 0;
+    padding: 46px 0;
+    &-title {
+      &-in {
+        font-size: 26px;
+      }
+    }
+    &-lists {
+      width: auto;
+      margin: 57px 30px 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px 25px;
+      &-in {
+        flex-direction: column;
+        margin-bottom: 30px;
+        width: 100%;
+        padding: 0;
+        min-height: 250px;
+        &:nth-of-type(n + 4) {
+          margin-bottom: 30px;
+        }
+        &:nth-of-type(5) {
+          .step-lists-in-r {
+            display: none;
+          }
+        }
+        &-l {
+          width: 145px;
+          position: relative;
+          .title {
+            padding: 0 6px;
+            font-size: 26px;
+            width: 70px;
+            height: 61.286px;
+            background: url('https://static.cmereye.com/imgs/2024/08/a53173454afef713.png')
+              no-repeat;
+            background-position: center center;
+            background-size: 100% 100%;
+            color: var(--Theme-Color, #fc1682);
+            text-align: center;
+            font-family: 'Noto Serif HK';
+            font-size: 60px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 140%; /* 84px */
+            letter-spacing: -3px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            z-index: 5;
+            top: -30px;
+            left: -20px;
+          }
+          .image {
+            padding: 0;
+            border-radius: 12px;
+            border: 1px solid var(--Theme-Color, #fc1682);
+            height: 98px;
+            overflow: hidden;
+            &::after {
+              display: none;
+            }
+            & > img {
+              border-radius: 0;
+              width: 100%;
+              height: 100%;
+            }
+          }
+          .name {
+            margin-top: 5px;
+            padding: 0;
+            width: 100%;
+            font-size: 16px;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            background: transparent;
+            white-space: initial;
+            color: var(--Theme-Color, #fc1682);
+            font-family: FakePearl;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 130%; /* 20.8px */
+            margin-bottom: 5px;
+          }
+          .mobile_text {
+            P {
+              color: var(--Grey-Deep, #4d4d4d);
+              font-family: FakePearl;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 160%;
+              letter-spacing: 1.2px;
+              & > span:nth-child(1) {
+                color: var(--Theme-Color, #fc1682);
+              }
+            }
+          }
+        }
+        &-r {
+          display: block;
+          margin-top: 30px;
+          margin-left: 0;
+          img {
+            transform: rotate(90deg);
+          }
+        }
+        &:nth-of-type(6) {
+          margin-top: 15px;
+          align-items: initial;
+          grid-column: span 2;
+          .lastBox-t {
+            & > div {
+              font-size: 26px;
+              span {
+                font-size: 26px;
+                display: inline-block;
+              }
+              img {
+                width: 20px;
+                height: 22px;
+              }
+            }
+          }
+          .lastBox-b {
+            margin-top: 30px;
+            display: flex;
+            justify-content: center;
+            .bigBan {
+              font-size: 28px;
+            }
+          }
+        }
+
+        &:nth-of-type(2),
+        &:nth-of-type(5) {
+          .step-lists-in-l {
+            .name {
+              width: 100%;
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+            }
+          }
+        }
+        &:nth-of-type(2),
+        &:nth-of-type(4) {
+          position: relative;
+          top: 220px;
+        }
+      }
+    }
   }
 }
 </style>
