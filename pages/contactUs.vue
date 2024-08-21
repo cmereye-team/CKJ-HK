@@ -187,7 +187,11 @@ const problemData = {
       <!-- <NewAddress /> -->
       <NewAddress />
       <div class="complain">
-        <div>長者醫療券使用者及一般客人申訴途徑</div>
+        <div class="dentistryServices-title note-title">
+          <div class="dentistryServices-title-in bb note-title-in">
+            長者醫療券使用者及一般客人申訴途徑
+          </div>
+        </div>
         <div>
           我們致力於提供優質的服務，並重視每位客人的意見。如果您本人或親屬在使用長者醫療券或醫療服務時遇到問題，歡迎通過以下途徑向我們反映：
         </div>
@@ -203,12 +207,146 @@ const problemData = {
             ><span>深圳愛康健口腔醫院一樓大堂意見箱</span></a
           >
         </div>
-        <div style="display: none">
-          <div>醫療糾紛處理流程</div>
-          <div>
-            （圖）
-            <img src="" alt="" />
+      </div>
+      <div class="img_complain">
+        <div class="dentistryServices-title note-title">
+          <div class="dentistryServices-title-in bb note-title-in">
+            醫療糾紛處理流程
           </div>
+        </div>
+        <div class="step_complain">
+          <div>患者或家屬提出異議</div>
+          <div>
+            <div>
+              <img
+                src="https://static.cmereye.com/imgs/2024/08/083b8132c94f1001.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div>接待處負責接待 (前台組長) / 客服</div>
+          <div>
+            <div>
+              <img
+                src="https://static.cmereye.com/imgs/2024/08/083b8132c94f1001.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div>科室主任 / 經營主任</div>
+          <div>
+            <div>
+              <img
+                src="https://static.cmereye.com/imgs/2024/08/083b8132c94f1001.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div>科室、院領導討論溝通、解決方案</div>
+          <div>
+            <div>
+              <img
+                src="https://static.cmereye.com/imgs/2024/08/083b8132c94f1001.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="https://static.cmereye.com/imgs/2024/08/083b8132c94f1001.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div>
+            <div>同意</div>
+            <div>不同意</div>
+          </div>
+          <div>
+            <div>
+              <img
+                src="https://static.cmereye.com/imgs/2024/08/083b8132c94f1001.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="https://static.cmereye.com/imgs/2024/08/083b8132c94f1001.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div>
+            <div><span>醫、患雙方協商</span> <span>簽訂協議書</span></div>
+            <div><span>告知患方醫療糾紛的</span><span>解決途徑</span></div>
+          </div>
+          <div>
+            <div>
+              <img
+                src="https://static.cmereye.com/imgs/2024/08/083b8132c94f1001.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="https://static.cmereye.com/imgs/2024/08/083b8132c94f1001.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="https://static.cmereye.com/imgs/2024/08/f612ecacf24572d7.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="https://static.cmereye.com/imgs/2024/08/083b8132c94f1001.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <img
+                src="https://static.cmereye.com/imgs/2024/08/f612ecacf24572d7.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div>
+            <div>結案</div>
+            <div>人民調解</div>
+            <div>法院訴訟</div>
+          </div>
+          <div>
+            <div>衛生行政調解</div>
+            <div>法律法規</div>
+          </div>
+        </div>
+        <div class="img_complain_last">
+          <div>
+            <div>申訴熱線電話</div>
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="56"
+                height="56"
+                viewBox="0 0 56 56"
+                fill="none"
+              >
+                <g clip-path="url(#clip0_8517_39464)">
+                  <path
+                    d="M43.3101 56.0004C41.2819 55.9588 39.2361 55.5031 37.243 54.8283C32.9363 53.3671 29.0423 51.115 25.3612 48.4883C19.2568 44.1331 13.9097 38.9804 9.30008 33.0764C5.89557 28.7168 2.98274 24.0592 1.1872 18.7883C0.40576 16.5033 -0.114466 14.1592 0.0216273 11.7165C0.137965 9.59588 0.844769 7.75784 2.42301 6.25937C3.98368 4.77623 5.50705 3.25146 6.99968 1.70041C9.32203 -0.711608 12.9043 -0.415857 15.0511 1.69603C17.5491 4.15405 20.0251 6.63398 22.4945 9.12049C24.7488 11.3879 24.7949 14.7595 22.5691 16.8122C22.0884 17.2569 21.465 17.5965 20.8504 17.8419C18.9363 18.6043 17.6303 19.8683 17.2022 21.9298C16.9476 23.1501 17.3318 24.2805 17.7554 25.3868C18.8924 28.3575 20.8153 30.8024 23.0542 33.0063C25.2537 35.1707 27.6902 37.011 30.5942 38.1611C32.9122 39.0812 35.0546 38.8468 36.8545 37.0526C37.3879 36.5202 37.8071 35.7907 38.0618 35.0743C39.269 31.6962 43.7184 30.5395 46.4578 33.0807C48.3302 34.818 50.0994 36.6648 51.9081 38.4678C52.852 39.4076 53.8134 40.3343 54.709 41.3158C56.6055 43.3948 56.3399 46.7467 54.3753 48.7731C52.6983 50.5016 50.9708 52.1841 49.2653 53.8819C47.6409 55.4987 45.6017 55.9697 43.3101 56.0004Z"
+                    fill="#4D4D4D"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_8517_39464">
+                    <rect width="56" height="56" fill="white" />
+                  </clipPath>
+                </defs>
+              </svg>
+            </div>
+          </div>
+          <div>（+86）0755-61311688</div>
         </div>
       </div>
       <div class="serviceCard">
@@ -340,15 +478,18 @@ const problemData = {
   letter-spacing: 4px;
   & > div:nth-child(2) {
     margin: 50px 0 30px;
+    padding: 0 130px;
+    text-align: center;
   }
   & > div:nth-child(3) {
+    padding: 0 130px;
     margin: 30px 0;
     display: flex;
     flex-direction: column;
     & > a {
       display: flex;
       & > span:nth-child(1) {
-        width: 168px;
+        // width: 168px;
       }
       & > span:nth-child(2) {
         color: var(--indexColor1);
@@ -356,7 +497,477 @@ const problemData = {
     }
   }
 }
+.img_complain_last {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & > div:nth-child(1) {
+    color: var(--Grey-Deep, #4d4d4d);
+    font-family: FakePearl;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 65px */
+    & > div:nth-child(1) {
+      margin-right: 15px;
+    }
+    display: flex;
+    align-items: center;
+  }
+  & > div:last-child {
+    margin-left: 15px;
+    border-radius: 5px;
+    background: #fc1682;
+    color: #fff;
+    font-family: 'Noto Sans JP';
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 900;
+    line-height: 120%; /* 0px */
+  }
+}
+.step_complain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 58px;
+  max-width: 870px;
+  & > div:nth-child(8),
+  & > div:nth-child(9),
+  & > div:nth-child(10),
+  & > div:nth-child(11),
+  & > div:nth-child(12),
+  & > div:nth-child(13) {
+    display: flex;
+    justify-content: center;
+  }
+  & > div:nth-child(1),
+  & > div:nth-child(3),
+  & > div:nth-child(5),
+  & > div:nth-child(7) {
+    width: fit-content;
+    color: var(--Grey-Deep, #4d4d4d);
+    font-family: FakePearl;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 48px */
+    letter-spacing: 3px;
+    border-radius: 20px;
+    background: var(--Pink-Pale, #fee6f1);
+    box-shadow: 5.59px 5.59px 0px 0px rgba(252, 22, 130, 0.3);
+    box-sizing: border-box;
+    padding: 12px 60px;
+  }
+  & > div:nth-child(5),
+  & > div:nth-child(7) {
+    width: 870px;
+    display: flex;
+    justify-content: center;
+  }
+  & > div:nth-child(8) {
+    gap: 0 400px;
+    padding-right: 160px;
+    & > div:nth-child(2) {
+      padding-left: 10px;
+    }
+    & > div:nth-child(2) {
+      padding-right: 10px;
+    }
+  }
+  & > div:nth-child(9) {
+    gap: 0 225px;
+    padding-right: 160px;
+    & > div {
+      padding: 12px 60px;
+      box-sizing: border-box;
+      color: var(--Grey-Deep, #4d4d4d);
+      font-family: FakePearl;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 48px */
+      letter-spacing: 3px;
+      border-radius: 20px;
+      background: var(--Pink-Pale, #fee6f1);
+      box-shadow: 5.59px 5.59px 0px 0px rgba(252, 22, 130, 0.3);
+    }
+  }
+  & > div:nth-child(10) {
+    gap: 0 400px;
+    padding-right: 160px;
+    & > div:nth-child(2) {
+      padding-left: 10px;
+    }
+    & > div:nth-child(2) {
+      padding-right: 10px;
+    }
+  }
+  & > div:nth-child(11) {
+    gap: 0 20px;
+    width: 870px;
+    & > div {
+      border-radius: 20px;
+      background: var(--Pink-Pale, #fee6f1);
+      box-shadow: 5.59px 5.59px 0px 0px rgba(252, 22, 130, 0.3);
+      display: flex;
+      flex-direction: column;
+      padding: 12px 50px;
+      color: var(--Grey-Deep, #4d4d4d);
+      text-align: center;
+      font-family: FakePearl;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 48px */
+      letter-spacing: 3px;
+    }
+    & > div:nth-child(2) {
+      padding: 12px 110px;
+    }
+  }
+  & > div:nth-child(12) {
+    & > div:nth-child(1) {
+      padding-left: 160px;
+      padding-right: calc(270px - 24px);
+    }
+    & > div:nth-child(2) {
+      padding-right: calc(112px - 24px);
+    }
+    & > div:nth-child(3) {
+      padding-right: calc(105px - 24px);
+    }
+    & > div:nth-child(4) {
+      padding-right: calc(130px - 24px);
+    }
+    padding-right: 45px;
+  }
+  & > div:nth-child(13),
+  & > div:nth-child(14) {
+    // width: 870px;
+    & > div {
+      border-radius: 20px;
+      background: var(--Pink-Pale, #fee6f1);
+      box-shadow: 5.59px 5.59px 0px 0px rgba(252, 22, 130, 0.3);
+    }
+  }
+  & > div:nth-child(13) {
+    justify-content: flex-start;
+    position: relative;
+    top: -115px;
+    width: 100%;
+    & > div:nth-child(1) {
+      margin-left: 80px;
+      margin-right: 85px;
+      box-sizing: border-box;
+      padding: 12px 60px;
+    }
+    & > div:nth-child(2) {
+      margin-right: 30px;
+    }
+    & > div {
+      border-radius: 20px;
+      background: var(--Pink-Pale, #fee6f1);
+      box-shadow: 5.59px 5.59px 0px 0px rgba(252, 22, 130, 0.3);
+      box-sizing: border-box;
+      padding: 12px 30px;
+      color: var(--Grey-Deep, #4d4d4d);
+      font-family: FakePearl;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 48px */
+      letter-spacing: 3px;
+    }
+  }
+  & > div:nth-child(14) {
+    width: 100%;
+    justify-content: flex-end;
+    display: flex;
+    gap: 0 20px;
+    position: relative;
+    top: -70px;
+    & > div {
+      border-radius: 20px;
+      background: var(--Pink-Pale, #fee6f1);
+      box-shadow: 5.59px 5.59px 0px 0px rgba(252, 22, 130, 0.3);
+      box-sizing: border-box;
+      padding: 12px 30px;
+      color: var(--Grey-Deep, #4d4d4d);
+      font-family: FakePearl;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 48px */
+      letter-spacing: 3px;
+    }
+  }
+}
 @media screen and (max-width: 768px) {
+  .img_complain {
+    overflow: hidden;
+    width: 100%;
+  }
+  .step_complain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 10px;
+    margin-top: 28px;
+    max-width: 100%;
+    & > div:nth-child(8),
+    & > div:nth-child(9),
+    & > div:nth-child(10),
+    & > div:nth-child(11),
+    & > div:nth-child(12),
+    & > div:nth-child(13) {
+      display: flex;
+      justify-content: center;
+    }
+    & > div:nth-child(2),
+    & > div:nth-child(4),
+    & > div:nth-child(6) {
+      & > div {
+        img {
+          width: 10px;
+          height: 24px;
+        }
+      }
+    }
+    & > div:nth-child(1),
+    & > div:nth-child(3),
+    & > div:nth-child(5),
+    & > div:nth-child(7) {
+      width: fit-content;
+      color: var(--Grey-Deep, #4d4d4d);
+      font-family: FakePearl;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 24px */
+      letter-spacing: 1.5px;
+      border-radius: 8.081px;
+      background: var(--Pink-Pale, #fee6f1);
+      box-shadow: 2.258px 2.258px 0px 0px rgba(252, 22, 130, 0.3);
+      box-sizing: border-box;
+      padding: 5px 24.5px;
+    }
+    & > div:nth-child(5),
+    & > div:nth-child(7) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    & > div:nth-child(8) {
+      gap: 0 170px;
+      padding: 0 0;
+      & > div {
+        img {
+          width: 10px;
+          height: 24px;
+        }
+      }
+      & > div:nth-child(1) {
+        padding-left: 0;
+      }
+      & > div:nth-child(2) {
+        padding-right: 10px;
+      }
+    }
+    & > div:nth-child(9) {
+      gap: 0 100px;
+      padding-right: 0;
+      & > div {
+        color: var(--Grey-Deep, #4d4d4d);
+        font-family: FakePearl;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 24px */
+        letter-spacing: 1.5px;
+        padding: 5px 24px;
+        box-sizing: border-box;
+        background: var(--Pink-Pale, #fee6f1);
+        box-shadow: 5.59px 5.59px 0px 0px rgba(252, 22, 130, 0.3);
+        border-radius: 8.081px;
+      }
+    }
+    & > div:nth-child(10) {
+      gap: 0 180px;
+      padding-right: 0;
+      & > div {
+        img {
+          width: 10px;
+          height: 24px;
+        }
+      }
+      & > div:nth-child(2) {
+        padding-left: 0;
+      }
+      & > div:nth-child(2) {
+        padding-right: 0;
+      }
+    }
+    & > div:nth-child(11) {
+      gap: 0 10px;
+      width: 100%;
+      & > div {
+        border-radius: 8px;
+        background: var(--Pink-Pale, #fee6f1);
+        box-shadow: 5.59px 5.59px 0px 0px rgba(252, 22, 130, 0.3);
+        display: flex;
+        flex-direction: column;
+        padding: 5px 8.5px;
+        color: var(--Grey-Deep, #4d4d4d);
+        text-align: center;
+        font-family: FakePearl;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 24px */
+        letter-spacing: 1.5px;
+      }
+      & > div:nth-child(2) {
+        padding: 5px 31px;
+      }
+    }
+    & > div:nth-child(12) {
+      width: 100%;
+      margin-left: 76px;
+      & > div:nth-child(1) {
+        padding-left: 0;
+        padding-right: 0;
+        margin-right: 114px;
+      }
+      & > div:nth-child(2) {
+        padding-right: 0;
+        margin-right: 45px;
+      }
+      & > div:nth-child(3) {
+        padding-right: 0;
+        margin-right: 45px;
+      }
+      & > div:nth-child(4) {
+        padding-right: 0;
+        margin-right: 45px;
+      }
+
+      & > div:nth-child(1),
+      & > div:nth-child(2),
+      & > div:nth-child(4) {
+        img {
+          width: 10px;
+          height: 24px;
+        }
+      }
+      & > div:nth-child(3),
+      & > div:nth-child(5) {
+        img {
+          width: 10px;
+          height: 75px;
+        }
+      }
+      padding-right: 0;
+      justify-content: flex-start;
+    }
+    & > div:nth-child(13),
+    & > div:nth-child(14) {
+      // width: 870px;
+      & > div {
+        border-radius: 8px;
+        background: var(--Pink-Pale, #fee6f1);
+        box-shadow: 5.59px 5.59px 0px 0px rgba(252, 22, 130, 0.3);
+      }
+    }
+    & > div:nth-child(13) {
+      justify-content: flex-start;
+      position: relative;
+      top: -50px;
+      width: 100%;
+      & > div:nth-child(1) {
+        margin-left: 15px;
+        margin-right: 38px;
+        box-sizing: border-box;
+        padding: 5px 25px;
+      }
+      & > div:nth-child(2) {
+        margin-right: 25px;
+      }
+      & > div {
+        border-radius: 8px;
+        background: var(--Pink-Pale, #fee6f1);
+        box-shadow: 5.59px 5.59px 0px 0px rgba(252, 22, 130, 0.3);
+        box-sizing: border-box;
+        padding: 5px 8.5px;
+        color: var(--Grey-Deep, #4d4d4d);
+        font-family: FakePearl;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 48px */
+        letter-spacing: 1.5px;
+      }
+    }
+    & > div:nth-child(14) {
+      width: 100%;
+      justify-content: flex-end;
+      display: flex;
+      gap: 0 20px;
+      position: relative;
+      top: -30px;
+      & > div {
+        border-radius: 8px;
+        background: var(--Pink-Pale, #fee6f1);
+        box-shadow: 5.59px 5.59px 0px 0px rgba(252, 22, 130, 0.3);
+        box-sizing: border-box;
+        padding: 5px 8px;
+        color: var(--Grey-Deep, #4d4d4d);
+        font-family: FakePearl;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 24px */
+        letter-spacing: 1.5px;
+      }
+    }
+  }
+  .img_complain_last {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding: 0 10px;
+    & > div:nth-child(1) {
+      color: var(--Grey-Deep, #4d4d4d);
+      font-family: FakePearl;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 32px */
+      & > div:nth-child(1) {
+        margin-right: 5px;
+      }
+      & > div:nth-child(2) {
+        & > svg {
+          width: 20px;
+          height: 20px;
+        }
+      }
+    }
+    & > div:nth-child(2) {
+      border-radius: 3.008px;
+      color: #fff;
+      font-family: 'Noto Sans JP';
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 100%; /* 0px */
+      margin-left: 0;
+    }
+  }
   .complain {
     box-sizing: border-box;
     padding: 0 25px;
@@ -365,29 +976,37 @@ const problemData = {
     & > div:nth-child(1) {
       font-size: 18px;
       letter-spacing: 2px;
+      padding: 0 35px;
     }
     font-size: 16px;
     line-height: 120%;
     letter-spacing: 1.2px;
     & > div:nth-child(2) {
       margin: 30px 0 20px;
+      padding: 0;
       font-size: 14px;
+      text-align: left;
     }
     & > div:nth-child(3) {
       margin: 20px 0;
+      padding: 0;
       display: flex;
       flex-direction: column;
       & > a {
-        display: flex;
+        display: inline;
         flex-direction: column;
-        margin-bottom: 12px;
+        margin-bottom: 7px;
+        white-space: nowrap;
         & > span:nth-child(1) {
           width: fit-content;
-          font-size: 18px;
+          font-size: 14px;
+          text-align: center;
+          letter-spacing: 1px;
         }
         & > span:nth-child(2) {
           margin-top: 10px;
           color: var(--indexColor1);
+          letter-spacing: 1px;
         }
       }
     }
@@ -403,7 +1022,7 @@ const problemData = {
     }
   }
   .serviceCard {
-    margin-top: 30px;
+    margin-top: 50px;
   }
   .environment {
     margin-top: 0px;

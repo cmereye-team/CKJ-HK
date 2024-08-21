@@ -838,7 +838,7 @@ const contentDom = ref(false)
             <iframe
               width="560"
               height="315"
-              src="https://www.youtube.com/embed/WMuJkqbXcEU?si=2i42MH2PR91Jfw0Y"
+              src="https://www.youtube.com/embed/Ti7Mms_BJoI?si=t-STRbG6jNVpU3m3"
               title="YouTube video player"
               frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
