@@ -189,7 +189,7 @@ const problemData = {
       <div class="complain">
         <div class="dentistryServices-title note-title">
           <div class="dentistryServices-title-in bb note-title-in">
-            長者醫療券使用者及一般客人申訴途徑
+            長者醫療券使用者及<br class="mbShow" />一般客人申訴途徑
           </div>
         </div>
         <div>
@@ -346,7 +346,7 @@ const problemData = {
               </svg>
             </div>
           </div>
-          <a href="tel: +860755-61311688" target="_blank">（+86）0755-61311688</a>
+          <a href="tel: +860755-61311688" target="_blank">(+86)0755-61311688</a>
         </div>
       </div>
       <div class="serviceCard">
@@ -461,6 +461,9 @@ const problemData = {
     }
   }
 }
+.mbShow {
+  display: none;
+}
 .complain {
   max-width: 1280px;
   margin: 150px auto 50px;
@@ -525,6 +528,7 @@ const problemData = {
     font-style: normal;
     font-weight: 900;
     line-height: 120%; /* 0px */
+    padding: 0 3px 3px 3px;
   }
 }
 .step_complain {
@@ -716,8 +720,8 @@ const problemData = {
     align-items: center;
     margin: 0 auto;
     box-sizing: border-box;
-    padding: 0 10px;
-    margin-top: 28px;
+    padding: 0 2.665vw;
+    margin-top: 7.465vw;
     max-width: 100%;
     & > div:nth-child(8),
     & > div:nth-child(9),
@@ -733,8 +737,8 @@ const problemData = {
     & > div:nth-child(6) {
       & > div {
         img {
-          width: 10px;
-          height: 24px;
+          width: 2.665vw;
+          height: 6.4vw;
         }
       }
     }
@@ -745,16 +749,16 @@ const problemData = {
       width: fit-content;
       color: var(--Grey-Deep, #4d4d4d);
       font-family: FakePearl;
-      font-size: 15px;
+      font-size: 4vw;
       font-style: normal;
       font-weight: 400;
       line-height: 160%; /* 24px */
-      letter-spacing: 1.5px;
+      letter-spacing: 0.4vw;
       border-radius: 8.081px;
       background: var(--Pink-Pale, #fee6f1);
       box-shadow: 2.258px 2.258px 0px 0px rgba(252, 22, 130, 0.3);
       box-sizing: border-box;
-      padding: 5px 24.5px;
+      padding: 1.33vw 6.4vw;
     }
     & > div:nth-child(5),
     & > div:nth-child(7) {
@@ -763,33 +767,33 @@ const problemData = {
       justify-content: center;
     }
     & > div:nth-child(8) {
-      gap: 0 170px;
+      gap: 0 45.533vw;
       padding: 0 0;
       & > div {
         img {
-          width: 10px;
-          height: 24px;
+          width: 2.665vw;
+          height: 6.4vw;
         }
       }
       & > div:nth-child(1) {
         padding-left: 0;
       }
       & > div:nth-child(2) {
-        padding-right: 10px;
+        padding-right: 2.66vw;
       }
     }
     & > div:nth-child(9) {
-      gap: 0 100px;
+      gap: 0 26.66vw;
       padding-right: 0;
       & > div {
         color: var(--Grey-Deep, #4d4d4d);
         font-family: FakePearl;
-        font-size: 15px;
+        font-size: 4vw;
         font-style: normal;
         font-weight: 400;
         line-height: 160%; /* 24px */
-        letter-spacing: 1.5px;
-        padding: 5px 24px;
+        letter-spacing: 0.4vw;
+        padding: 1.33vw 6.4vw;
         box-sizing: border-box;
         background: var(--Pink-Pale, #fee6f1);
         box-shadow: 5.59px 5.59px 0px 0px rgba(252, 22, 130, 0.3);
@@ -797,12 +801,12 @@ const problemData = {
       }
     }
     & > div:nth-child(10) {
-      gap: 0 180px;
+      gap: 0 48vw;
       padding-right: 0;
       & > div {
         img {
-          width: 10px;
-          height: 24px;
+          width: 2.665vw;
+          height: 6.4vw;
         }
       }
       & > div:nth-child(2) {
@@ -813,7 +817,7 @@ const problemData = {
       }
     }
     & > div:nth-child(11) {
-      gap: 0 10px;
+      gap: 0 2.665vw;
       width: 100%;
       & > div {
         border-radius: 8px;
@@ -821,54 +825,54 @@ const problemData = {
         box-shadow: 5.59px 5.59px 0px 0px rgba(252, 22, 130, 0.3);
         display: flex;
         flex-direction: column;
-        padding: 5px 8.5px;
+        padding: 1.33vw 2.2665vw;
         color: var(--Grey-Deep, #4d4d4d);
         text-align: center;
         font-family: FakePearl;
-        font-size: 14px;
+        font-size: 3.733vw;
         font-style: normal;
         font-weight: 400;
         line-height: 160%; /* 24px */
-        letter-spacing: 1.5px;
+        letter-spacing: 0.4vw;
       }
       & > div:nth-child(2) {
-        padding: 5px 31px;
+        padding: 1.33vw 8.2665vw;
       }
     }
     & > div:nth-child(12) {
       width: 100%;
-      margin-left: 76px;
+      margin-left: 28vw;
       & > div:nth-child(1) {
         padding-left: 0;
         padding-right: 0;
-        margin-right: 114px;
+        margin-right: 27.4vw;
       }
       & > div:nth-child(2) {
         padding-right: 0;
-        margin-right: 45px;
+        margin-right: 12vw;
       }
       & > div:nth-child(3) {
         padding-right: 0;
-        margin-right: 45px;
+        margin-right: 12vw;
       }
       & > div:nth-child(4) {
         padding-right: 0;
-        margin-right: 45px;
+        margin-right: 12vw;
       }
 
       & > div:nth-child(1),
       & > div:nth-child(2),
       & > div:nth-child(4) {
         img {
-          width: 10px;
-          height: 24px;
+          width: 2.665vw;
+          height: 6.4vw;
         }
       }
       & > div:nth-child(3),
       & > div:nth-child(5) {
         img {
-          width: 10px;
-          height: 75px;
+          width: 2.665vw;
+          height: 20vw;
         }
       }
       padding-right: 0;
@@ -886,52 +890,52 @@ const problemData = {
     & > div:nth-child(13) {
       justify-content: flex-start;
       position: relative;
-      top: -50px;
+      top: -13.33vw;
       width: 100%;
       & > div:nth-child(1) {
-        margin-left: 15px;
-        margin-right: 38px;
+        margin-left: 4vw;
+        margin-right: 10.133vw;
         box-sizing: border-box;
-        padding: 5px 25px;
+        padding: 1.33vw 6.665vw;
       }
       & > div:nth-child(2) {
-        margin-right: 25px;
+        margin-right: 6.665vw;
       }
       & > div {
         border-radius: 8px;
         background: var(--Pink-Pale, #fee6f1);
         box-shadow: 5.59px 5.59px 0px 0px rgba(252, 22, 130, 0.3);
         box-sizing: border-box;
-        padding: 5px 8.5px;
+        padding: 1.33vw 2.2265vw;
         color: var(--Grey-Deep, #4d4d4d);
         font-family: FakePearl;
-        font-size: 14px;
+        font-size: 3.75vw;
         font-style: normal;
         font-weight: 400;
         line-height: 160%; /* 48px */
-        letter-spacing: 1.5px;
+        letter-spacing: 0.4vw;
       }
     }
     & > div:nth-child(14) {
       width: 100%;
       justify-content: flex-end;
       display: flex;
-      gap: 0 20px;
+      gap: 0 5.33vw;
       position: relative;
-      top: -30px;
+      top: -8vw;
       & > div {
         border-radius: 8px;
         background: var(--Pink-Pale, #fee6f1);
         box-shadow: 5.59px 5.59px 0px 0px rgba(252, 22, 130, 0.3);
         box-sizing: border-box;
-        padding: 5px 8px;
+        padding: 1.33vw 2.133vw;
         color: var(--Grey-Deep, #4d4d4d);
         font-family: FakePearl;
-        font-size: 14px;
+        font-size: 3.733vw;
         font-style: normal;
         font-weight: 400;
         line-height: 160%; /* 24px */
-        letter-spacing: 1.5px;
+        letter-spacing: 0.4vw;
       }
     }
   }
@@ -939,21 +943,21 @@ const problemData = {
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
-    padding: 0 10px;
+    padding: 0 2.665vw;
     & > div:nth-child(1) {
       color: var(--Grey-Deep, #4d4d4d);
       font-family: FakePearl;
-      font-size: 20px;
+      font-size: 5.33vw;
       font-style: normal;
       font-weight: 400;
       line-height: 160%; /* 32px */
       & > div:nth-child(1) {
-        margin-right: 5px;
+        margin-right: 1.33vw;
       }
       & > div:nth-child(2) {
         & > svg {
-          width: 20px;
-          height: 20px;
+          width: 5.33vw;
+          height: 5.33vw;
         }
       }
     }
@@ -961,7 +965,7 @@ const problemData = {
       border-radius: 3.008px;
       color: #fff;
       font-family: 'Noto Sans JP';
-      font-size: 30px;
+      font-size: 8vw;
       font-style: normal;
       font-weight: 900;
       line-height: 100%; /* 0px */
@@ -970,41 +974,41 @@ const problemData = {
   }
   .complain {
     box-sizing: border-box;
-    padding: 0 25px;
-    margin: 50px auto 20px;
+    padding: 0 6.665vw;
+    margin: 13.33vw auto 5.33vw;
 
     & > div:nth-child(1) {
-      font-size: 18px;
-      letter-spacing: 2px;
-      padding: 0 35px;
+      font-size: 4.8vw;
+      letter-spacing: 0.53vw;
+      padding: 0 9.33vw;
     }
-    font-size: 16px;
+    font-size: 4.2665vw;
     line-height: 120%;
-    letter-spacing: 1.2px;
+    letter-spacing: 0.32vw;
     & > div:nth-child(2) {
-      margin: 30px 0 20px;
+      margin: 8vw 0 5.33vw;
       padding: 0;
-      font-size: 14px;
+      font-size: 3.733vw;
       text-align: left;
     }
     & > div:nth-child(3) {
-      margin: 20px 0;
+      margin: 5.33vw 0;
       padding: 0;
       display: flex;
       flex-direction: column;
       & > a {
         display: inline;
         flex-direction: column;
-        margin-bottom: 7px;
+        margin-bottom: 1.865vw;
         white-space: nowrap;
         & > span:nth-child(1) {
           width: fit-content;
-          font-size: 14px;
+          font-size: 3.733vw;
           text-align: center;
           letter-spacing: 1px;
         }
         & > span:nth-child(2) {
-          margin-top: 10px;
+          margin-top: 2.665vw;
           color: var(--indexColor1);
           letter-spacing: 1px;
         }

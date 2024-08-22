@@ -256,23 +256,27 @@ const problemData = {
     },
     {
       Q: '為什麼牙周治療需要經驗豐富的牙周專科醫生？',
-      A: '牙周病無法自行痊癒，需透過牙醫的深層清潔牙周袋，並配合調整生活習慣與加強口腔清潔，持續細心觀察，才能緩解病情。',
+      A: '<strong>1.牙周專業技術需求</strong><br />牙周病專科醫生的專業知識和技能是治療效果的關鍵。<br /><br /><strong>2.牙周治療過程複雜</strong><br />牙周病的治療的每一步都需要高度精確和專業的操作。<br /><br /><strong>3.牙周治療通常需要3-6個月</strong><br />牙周病治療不是一次性的過程，它需要多次訪問診所進行治療和後續的維護。<br />',
     },
     {
       Q: '牙齦炎係「熱氣」？',
-      A: '牙周病無法自行痊癒，需透過牙醫的深層清潔牙周袋，並配合調整生活習慣與加強口腔清潔，持續細心觀察，才能緩解病情。',
+      A: '香港人常將牙肉腫痛歸因於「熱氣」，這通常與進食辛辣、刺激或煎炸食物有關。若牙肉腫痛持續，建議儘早尋求專業牙醫的意見，以避免潛在的牙周問題惡化。專業治療能有效緩解症狀，維持口腔健康。',
     },
     {
       Q: '20歲就有牙周病？ 牙周病有年輕化趨勢？',
-      A: '牙周病無法自行痊癒，需透過牙醫的深層清潔牙周袋，並配合調整生活習慣與加強口腔清潔，持續細心觀察，才能緩解病情。',
+      A: '根據亞洲大學附屬醫院的發現，近年年紀約20歲左右青少年族群，也出現「青年型牙周病」症狀，有「口臭」、「刷牙流血」以及「對冷熱敏感」等，甚至有人已經出現牙齦萎縮等前兆，深度大於5毫米。＊由牙周病帶嚟嘅日常尷尬事件，嚴重阻礙到佢哋嘅社交和生活。<br /><br />*資料來源：亞洲大學附屬醫院，2022年，<br />https://www.auh.org.tw/NewsInfo/NewsArticle?no=1861',
     },
     {
       Q: '牙周病可以斷尾嗎？',
-      A: '牙周病無法自行痊癒，需透過牙醫的深層清潔牙周袋，並配合調整生活習慣與加強口腔清潔，持續細心觀察，才能緩解病情。',
+      A: '患上牙周病如得到適當的治療是可以「斷尾」的，但仍需定期覆診監控病程。但牙周病一旦發展到一定階段，對牙骨的損害是無法逆轉的。然而，透過及時的專業治療和良好的口腔護理，可以有效控制病情的進一步惡化，維持牙齒和牙齦的健康。定期檢查和清潔是關鍵。',
+    },
+    {
+      Q: '網上流傳「自己治好了我的牙周病」偏方，可行的嗎?',
+      A: '網上流傳的偏方通常缺乏科學驗證，對牙周病的治療效果不確定，甚至可能延誤專業治療，導致病情惡化。牙周病應由專業牙醫診斷和治療，建議儘早尋求專業意見，以確保口腔健康。',
     },
     {
       Q: '誰是牙周病高危一族？',
-      A: '牙周病無法自行痊癒，需透過牙醫的深層清潔牙周袋，並配合調整生活習慣與加強口腔清潔，持續細心觀察，才能緩解病情。',
+      A: '',
     },
   ],
 }
@@ -403,8 +407,8 @@ const stepData = {
     },
   ],
 }
-import doctorLists_hk from '~/assets/js/doctor';
-const doctorList = doctorLists_hk;
+import doctorLists_hk from '~/assets/js/doctor'
+const doctorList = doctorLists_hk
 
 let windowWidth = ref(390)
 const getWindowWidth = () => {
@@ -453,8 +457,16 @@ const egImg = (i: number) => {
 }
 
 const checkboxNum = ref(0)
-const checkbox = (i: number) => {
-  checkboxNum.value++
+
+const levenZero = ref(false)
+const levenOne = ref(false)
+const levenTwo = ref(false)
+const levenThree = ref(false)
+
+
+const levenList = ref([])
+const checkbox = (i: number,type:any) => {
+  levenList.value.push(type)
   // 获取所有 class checkItem
   const checkItems = document.querySelectorAll('.checkItem')
   checkItems.forEach((item, index) => {
@@ -476,46 +488,48 @@ const result = () => {
   const question = document.querySelector('.questions')
   const checkItems = document.querySelectorAll('.checkItem')
 
-  if (checkboxNum.value == 0) {
+  // 对象转 数组
+  const arr = Object.values(levenList.value)
+  if (arr.length === 0) {
     leven_one?.classList.add('leven_active')
     leven_two?.classList.remove('leven_active')
     leven_three?.classList.remove('leven_active')
     leven_four?.classList.remove('leven_active')
     question?.classList.add('question_active')
-    checkboxNum.value = 0
+    levenList.value = []
     checkItems.forEach((item, index) => {
       item.classList.remove('check_active')
     })
   }
-  if (checkboxNum.value >= 1 && checkboxNum.value < 3) {
+  if (arr.includes(1)) {
     leven_one?.classList.remove('leven_active')
     leven_two?.classList.add('leven_active')
     leven_three?.classList.remove('leven_active')
     leven_four?.classList.remove('leven_active')
     question?.classList.add('question_active')
-    checkboxNum.value = 0
+    levenList.value = []
     checkItems.forEach((item, index) => {
       item.classList.remove('check_active')
     })
   }
-  if (checkboxNum.value >= 3 && checkboxNum.value < 5) {
+  if (arr.includes(2)) {
     leven_one?.classList.remove('leven_active')
     leven_two?.classList.remove('leven_active')
     leven_three?.classList.add('leven_active')
     leven_four?.classList.remove('leven_active')
     question?.classList.add('question_active')
-    checkboxNum.value = 0
+    levenList.value = []
     checkItems.forEach((item, index) => {
       item.classList.remove('check_active')
     })
   }
-  if (checkboxNum.value >= 5) {
+  if (arr.includes(3)) {
     leven_one?.classList.remove('leven_active')
     leven_two?.classList.remove('leven_active')
     leven_three?.classList.remove('leven_active')
     leven_four?.classList.add('leven_active')
     question?.classList.add('question_active')
-    checkboxNum.value = 0
+    levenList.value = []
     checkItems.forEach((item, index) => {
       item.classList.remove('check_active')
     })
@@ -1070,25 +1084,25 @@ const close = () => {
             <div>請選取你有的症狀（可以多選）</div>
           </div>
           <div>
-            <div class="checkItem" @click="checkbox(0)">
+            <div class="checkItem" @click="checkbox(0,1)">
               即使刷牙後，口腔仍然持續有異味
             </div>
-            <div class="checkItem" @click="checkbox(1)">
+            <div class="checkItem" @click="checkbox(1,1)">
               刷牙或使用牙線時牙齦經常會出血
             </div>
-            <div class="checkItem" @click="checkbox(2)">
+            <div class="checkItem" @click="checkbox(2,2)">
               牙齦比往時更加紅腫或容易疼痛
             </div>
-            <div class="checkItem" @click="checkbox(3)">
+            <div class="checkItem" @click="checkbox(3,2)">
               牙齦有膿瘡或牙齦間有膿液滲出
             </div>
-            <div class="checkItem" @click="checkbox(4)">
+            <div class="checkItem" @click="checkbox(4,3)">
               牙齦出現退縮，多隻牙齒看起來比往時更長
             </div>
-            <div class="checkItem" @click="checkbox(5)">
+            <div class="checkItem" @click="checkbox(5,3)">
               牙齒有鬆動的感覺或者咬合時感覺不對勁
             </div>
-            <div class="checkItem" @click="checkbox(6)">
+            <div class="checkItem" @click="checkbox(6,3)">
               牙齒之間出現新的縫隙或者牙齦分隔
             </div>
           </div>
@@ -3224,7 +3238,7 @@ const close = () => {
     display: inline-block;
     width: 178px;
     height: 38px;
-    top: -25px;
+    top: -20px;
   }
   .test_tooth {
     margin-top: 40px;

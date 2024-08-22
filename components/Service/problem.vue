@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-
 defineProps({
   problemData: {
     type: Object,
@@ -38,8 +37,93 @@ const activeNames = ref(0)
             </div>
           </template>
           <div class="problem-in-context">
-            <span>A</span>
-            <span>{{ $t(problemItem.A) }}</span>
+            <span
+              :style="{
+                display:
+                  $t(problemItem.Q) == '誰是牙周病高危一族？'
+                    ? 'none'
+                    : 'block',
+              }"
+              >A</span
+            >
+            <div
+              class="risk_group"
+              v-if="$t(problemItem.Q) == '誰是牙周病高危一族？'"
+            >
+              <div>
+                <div>
+                  <img
+                    src="https://static.cmereye.com/imgs/2024/08/c20f4291a01bf182.png"
+                    alt=""
+                  />
+                </div>
+                <div>吸煙人士</div>
+              </div>
+              <div>
+                <div>
+                  <img
+                    src="https://static.cmereye.com/imgs/2024/08/91da30ee459c7da2.png"
+                    alt=""
+                  />
+                </div>
+                <div>糖尿病患者</div>
+              </div>
+              <div>
+                <div>
+                  <img
+                    src="https://static.cmereye.com/imgs/2024/08/22955683c43e5fc4.png"
+                    alt=""
+                  />
+                </div>
+                <div>長期服用藥物</div>
+              </div>
+              <div>
+                <div>
+                  <img
+                    src="https://static.cmereye.com/imgs/2024/08/dfad092fa9f361ac.png"
+                    alt=""
+                  />
+                </div>
+                <div>孕婦</div>
+              </div>
+              <div>
+                <div>
+                  <img
+                    src="https://static.cmereye.com/imgs/2024/08/ce34098a684dbe57.png"
+                    alt=""
+                  />
+                </div>
+                <div>衛生意識薄弱</div>
+              </div>
+              <div>
+                <div>
+                  <img
+                    src="https://static.cmereye.com/imgs/2024/08/e967ca1dc0f8d246.png"
+                    alt=""
+                  />
+                </div>
+                <div>飲食不均衡</div>
+              </div>
+              <div>
+                <div>
+                  <img
+                    src="https://static.cmereye.com/imgs/2024/08/8b3627e4bcb94feb.png"
+                    alt=""
+                  />
+                </div>
+                <div>壓力大</div>
+              </div>
+              <div>
+                <div>
+                  <img
+                    src="https://static.cmereye.com/imgs/2024/08/288da0628be67289.png"
+                    alt=""
+                  />
+                </div>
+                <div>家族遺傳</div>
+              </div>
+            </div>
+            <span v-else v-html="$t(problemItem.A)"></span>
           </div>
         </el-collapse-item>
       </el-collapse>
@@ -48,6 +132,28 @@ const activeNames = ref(0)
 </template>
 
 <style lang="scss" scoped>
+.risk_group {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px 10px;
+  width: 80%;
+  margin: 24px auto;
+  & > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & > div:nth-child(2) {
+      margin-top: 7px;
+      color: var(--Grey-Deep, #4d4d4d);
+      text-align: center;
+      font-family: FakePearl;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 130%; /* 20.8px */
+    }
+  }
+}
 .problem {
   margin-top: 98px;
   &-in {
@@ -165,17 +271,32 @@ const activeNames = ref(0)
         }
         & > span:last-child {
           font-size: 1.0417vw;
-          padding: 2.3438vw 4.2708vw 1.3542vw .9896vw;
+          padding: 2.3438vw 4.2708vw 1.3542vw 0.9896vw;
         }
       }
     }
   }
   :deep(.el-collapse-item__header) {
-    padding: .625vw 0;
+    padding: 0.625vw 0;
     min-height: 2.3438vw;
   }
 }
 @media screen and (max-width: 768px) {
+  .risk_group {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px 10px;
+    box-sizing: border-box;
+    padding: 10px 0;
+    & > div {
+      & > div:nth-child(2) {
+        margin-top: 3px;
+        font-size: 11px;
+        text-align: center;
+        letter-spacing: 0;
+      }
+    }
+  }
   .problem {
     margin-top: 90px;
     &-title {
