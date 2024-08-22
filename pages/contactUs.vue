@@ -346,7 +346,7 @@ const problemData = {
               </svg>
             </div>
           </div>
-          <div>（+86）0755-61311688</div>
+          <a href="tel: +860755-61311688" target="_blank">（+86）0755-61311688</a>
         </div>
       </div>
       <div class="serviceCard">
@@ -515,7 +515,7 @@ const problemData = {
     display: flex;
     align-items: center;
   }
-  & > div:last-child {
+  & > a {
     margin-left: 15px;
     border-radius: 5px;
     background: #fc1682;
@@ -957,7 +957,7 @@ const problemData = {
         }
       }
     }
-    & > div:nth-child(2) {
+    & > a {
       border-radius: 3.008px;
       color: #fff;
       font-family: 'Noto Sans JP';
