@@ -443,12 +443,19 @@ const newsmoduleLists = [
           2024年8月14日起，合資格申領醫療券的香港長者將可在深圳愛康健口腔醫院使用醫療券支付門診醫療護理費用，為居住在大灣區內地城市的合資格香港長者提供更大的便利和靈活性。
         </div>
         <div style="margin: 0 0 80px 0">
-          <img
+          <!-- <img
             loading="lazy"
             src="https://static.cmereye.com/imgs/2024/08/dc30c123de004e45.png"
             title="灣區長者醫療券"
             alt="灣區長者醫療券"
-          />
+          /> -->
+          <iframe
+            class="iframe"
+            src="https://www.youtube.com/embed/XzxwTy9Iheg?si=3BXyyQXpUmhlSRkb"
+            width="100%"
+            height="100%"
+            frameborder="0"
+          ></iframe>
         </div>
         <div class="nob" style="margin: 0 0 20px 0">
           <h1>深圳愛康健口腔醫院簡介</h1>
@@ -2565,6 +2572,10 @@ const newsmoduleLists = [
     }
   }
 }
+.iframe {
+  width: 100%;
+  height: 540px;
+}
 @media (min-width: 768px) and (max-width: 1920px) {
   .newsmodule {
     &-title {
@@ -2585,6 +2596,10 @@ const newsmoduleLists = [
   }
 }
 @media screen and (max-width: 768px) {
+  .iframe {
+    width: 100%;
+    height: 56vw;
+  }
   .new_info_health {
     position: relative;
     margin-top: 80px;
