@@ -286,16 +286,19 @@ const reasonData = {
   title: '牙周病的成因及過程',
   reasonLists: [
     {
-      img: 'https://static.cmereye.com/imgs/2024/08/1febe76f3bf3a2c7.png',
+      mbImg: 'https://static.cmereye.com/imgs/2024/08/1febe76f3bf3a2c7.png',
+      img: 'https://static.cmereye.com/imgs/2023/11/c4238b3a85294efc.jpg',
       context:
         '牙齦及牙齒邊緣長期積聚牙菌膜，細菌分泌毒素刺激牙齦，引發牙齦炎。',
     },
     {
-      img: 'https://static.cmereye.com/imgs/2024/08/14f5a8eaf87394f2.png',
+      mbImg: 'https://static.cmereye.com/imgs/2024/08/14f5a8eaf87394f2.png',
+      img: 'https://static.cmereye.com/imgs/2023/11/809923ea93fc6e3d.jpg',
       context: '牙齦發炎時，牙肉紅腫，刷牙時易出血，牙齒表面積聚牙結石。',
     },
     {
-      img: 'https://static.cmereye.com/imgs/2024/08/a67de0db8328d902.png',
+      mbImg: 'https://static.cmereye.com/imgs/2024/08/a67de0db8328d902.png',
+      img: 'https://static.cmereye.com/imgs/2023/11/034a5f0ca1755f9c.jpg',
       context:
         '牙齦炎情況持續，形成「牙周袋」，食物殘渣、牙菌膜和牙石等更易堆積在內，牙周組織遭受破壞，令情況進一步惡化，進而形成牙周炎。',
     },
@@ -846,7 +849,8 @@ const close = () => {
             class="reason-lists-item"
           >
             <div class="image">
-              <img :src="item.img" alt="" />
+              <img :src="item.img" alt="" v-if="windowWidth > 768" />
+              <img :src="item.mbImg" alt="" v-else />
             </div>
             <div class="text">
               {{ item.context }}
