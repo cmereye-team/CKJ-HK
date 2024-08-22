@@ -285,13 +285,15 @@ const activeNames = ref(0)
   .risk_group {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 10px 10px;
+    gap: 2.665vw 2.665vw;
     box-sizing: border-box;
-    padding: 10px 0;
+    padding: 2.665vw 0;
+    width: 100%;
+    margin: 3.5vw auto 0;
     & > div {
       & > div:nth-child(2) {
         margin-top: 3px;
-        font-size: 11px;
+        font-size: 3.2vw;
         text-align: center;
         letter-spacing: 0;
       }

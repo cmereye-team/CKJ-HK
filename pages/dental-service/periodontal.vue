@@ -286,16 +286,16 @@ const reasonData = {
   title: '牙周病的成因及過程',
   reasonLists: [
     {
-      img: 'https://static.cmereye.com/imgs/2023/11/c4238b3a85294efc.jpg',
+      img: 'https://static.cmereye.com/imgs/2024/08/1febe76f3bf3a2c7.png',
       context:
         '牙齦及牙齒邊緣長期積聚牙菌膜，細菌分泌毒素刺激牙齦，引發牙齦炎。',
     },
     {
-      img: 'https://static.cmereye.com/imgs/2023/11/809923ea93fc6e3d.jpg',
+      img: 'https://static.cmereye.com/imgs/2024/08/14f5a8eaf87394f2.png',
       context: '牙齦發炎時，牙肉紅腫，刷牙時易出血，牙齒表面積聚牙結石。',
     },
     {
-      img: 'https://static.cmereye.com/imgs/2023/11/034a5f0ca1755f9c.jpg',
+      img: 'https://static.cmereye.com/imgs/2024/08/a67de0db8328d902.png',
       context:
         '牙齦炎情況持續，形成「牙周袋」，食物殘渣、牙菌膜和牙石等更易堆積在內，牙周組織遭受破壞，令情況進一步惡化，進而形成牙周炎。',
     },
@@ -2041,6 +2041,7 @@ const close = () => {
       &-item {
         padding: 0 52px;
         width: 100%;
+        align-items: center;
         .text {
           font-size: 20px;
           margin-top: 20px;
@@ -2528,6 +2529,7 @@ const close = () => {
       box-sizing: border-box;
       padding: 0 62px;
       display: flex;
+      justify-content: center;
       gap: 0 28px;
       & > div {
         & > div:nth-child(2) {
@@ -2998,11 +3000,11 @@ const close = () => {
     }
   }
   .table_new_mobile {
-    margin-top: 50px;
+    margin-top: 13.33vw;
     box-sizing: border-box;
-    padding: 0 30px;
+    padding: 0 8vw;
     display: grid;
-    gap: 2px 2px;
+    gap: 0.53vw 0.53vw;
     // grid-template-columns: repeat(3, 1fr);
     border-radius: 20px;
     overflow: hidden;
@@ -3010,67 +3012,67 @@ const close = () => {
     & > div {
       color: var(--Grey-Deep, #4d4d4d);
       font-family: FakePearl;
-      font-size: 12px;
+      font-size: 3.2vw;
       width: max-content;
       font-style: normal;
       font-weight: 400;
       line-height: 160%; /* 19.2px */
-      letter-spacing: 1.2px;
+      letter-spacing: 0.32vw;
       background: var(--Pink-Pale, #fee6f1);
       display: flex;
       justify-content: center;
       align-items: center;
-      height: 97px;
-      padding-left: 10px;
-      padding-right: 10px;
-      max-width: 158px;
+      height: 25.8665vw;
+      padding-left: 2.665vw;
+      padding-right: 2.665vw;
+      max-width: 42.133vw;
       width: 100%;
     }
     & > div:nth-child(1) {
-      max-width: 316px;
+      max-width: 84.2665vw;
       grid-column: span 3;
       background: var(--Theme-Color, #fc1682);
       height: fit-content;
-      padding: 10px 25px 10px 27px;
+      padding: 2.665vw 6.665vw 2.665vw 7.2vw;
       color: var(--White, #fff);
       text-align: center;
       font-family: FakePearl;
-      font-size: 15px;
+      font-size: 4vw;
       font-style: normal;
       font-weight: 400;
       line-height: 160%; /* 24px */
-      letter-spacing: 1.5px;
-      border-radius: 20px 20px 0 0;
+      letter-spacing: 0.4vw;
+      border-radius: 5.33vw 5.33vw 0 0;
       white-space: nowrap;
     }
     & > div:nth-child(2) {
-      max-width: 83px;
+      max-width: 22.133vw;
       background: #ccecbc;
       text-align: center;
       font-family: FakePearl;
-      font-size: 12px;
+      font-size: 3.2vw;
       font-style: normal;
       font-weight: 400;
       line-height: 160%; /* 19.2px */
-      letter-spacing: 1.2px;
+      letter-spacing: 0.32vw;
       text-align: center;
     }
     & > div:nth-child(5) {
-      max-width: 83px;
+      max-width: 22.133vw;
       text-align: center;
       grid-row: span 3;
       background: #ffdbb1;
       text-align: center;
       font-family: FakePearl;
-      font-size: 12px;
+      font-size: 3.2vw;
       font-style: normal;
       font-weight: 400;
       line-height: 160%; /* 19.2px */
-      letter-spacing: 1.2px;
+      letter-spacing: 0.32vw;
       min-height: 100%;
     }
     & > div:nth-child(12) {
-      max-width: 83px;
+      max-width: 22.133vw;
       text-align: center;
       grid-row: span 4;
       height: 100%;
@@ -3078,11 +3080,11 @@ const close = () => {
       background: #fca3a3;
       text-align: center;
       font-family: FakePearl;
-      font-size: 12px;
+      font-size: 3.2vw;
       font-style: normal;
       font-weight: 400;
       line-height: 160%; /* 19.2px */
-      letter-spacing: 1.2px;
+      letter-spacing: 0.32vw;
     }
     & > div:last-child {
       border-radius: var(--Count, 0px) var(--Count, 0px) 20px var(--Count, 0px);
@@ -3098,12 +3100,12 @@ const close = () => {
       text-align: center;
       color: var(--Theme-Color, #fc1682);
       font-family: FakePearl;
-      font-size: 12px;
+      font-size: 3.2vw;
       font-style: normal;
       font-weight: 400;
       line-height: 160%; /* 19.2px */
-      letter-spacing: 1.2px;
-      width: 85px;
+      letter-spacing: 0.32vw;
+      width: 22.665vw;
     }
   }
   .eg_new_mobile {
