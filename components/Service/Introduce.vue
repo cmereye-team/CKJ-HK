@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-
 defineProps({
   introduceData: {
     type: Object,
@@ -41,21 +40,35 @@ onMounted(() => {
         <nuxt-link :to="'/'" title="深圳愛康健口腔醫院" alt="深圳愛康健口腔醫院"
           ><span>{{ $t('pages.index.title') }}</span></nuxt-link
         >
-        <nuxt-link :to="'/dental-service'" :title="$t('pages.dental-service.title')" :alt="('pages.dental-service.title')"
+        <nuxt-link
+          :to="'/dental-service'"
+          :title="$t('pages.dental-service.title')"
+          :alt="'pages.dental-service.title'"
           ><span>{{ $t('pages.dental-service.title') }}</span></nuxt-link
         >
-        <span :title="$t(introduceData.tabNavName)">{{ $t(introduceData.tabNavName) }}</span>
+        <span :title="$t(introduceData.tabNavName)">{{
+          $t(introduceData.tabNavName)
+        }}</span>
       </div>
-      <div class="introduce-in-t mbBox">
-        <img :src="introduceData.mbImg" alt="" />
-      </div>
-      <div class="introduce-in-l pageCon">
-        <div :class="['title', introduceData.pageName]">
-          {{ $t(introduceData.title) }}
-          <br  v-if="route.path == '/dental-service/periodontal'" /><span v-if="route.path == '/dental-service/periodontal' && windowWidth < 768"> (深層洗牙/洗牙腳)</span>
+      <div class="introduce_content">
+        <div class="introduce-in-t mbBox">
+          <img :src="introduceData.mbImg" alt="" />
         </div>
-        <div :class="['content', introduceData.pageName]">
-          {{ $t(introduceData.content) }}
+        <div class="introduce-in-l pageCon">
+          <div :class="['title', introduceData.pageName]">
+            <!-- {{ $t(introduceData.title) }} -->
+            <span v-html="$t(introduceData.title)"></span>
+            <br v-if="route.path == '/dental-service/periodontal'" /><span
+              v-if="
+                route.path == '/dental-service/periodontal' && windowWidth < 768
+              "
+            >
+              (深層洗牙/洗牙腳)</span
+            >
+          </div>
+          <div :class="['content', introduceData.pageName]">
+            {{ $t(introduceData.content) }}
+          </div>
         </div>
       </div>
     </div>
@@ -63,6 +76,9 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
+.introduce_content {
+  position: relative;
+}
 .introduce {
   &-in {
     margin-top: 45px;
@@ -82,11 +98,13 @@ onMounted(() => {
           margin-top: 96px;
           font-size: 50px;
         }
-        &.periodontal-test{
+        &.periodontal-test {
           margin-top: 96px;
           font-size: 50px;
         }
-        &.scaling-and-polishing-test ,&.orthodontics-test,&.veneers-test{
+        &.scaling-and-polishing-test,
+        &.orthodontics-test,
+        &.veneers-test {
           margin-top: 96px;
           font-size: 50px;
         }
@@ -100,10 +118,12 @@ onMounted(() => {
         &.orthodontics {
           width: 409px;
         }
-        &.periodontal-test{
+        &.periodontal-test {
           font-size: 28px;
         }
-        &.rootCanal-test ,&.orthodontics-test,&.veneers-test{
+        &.rootCanal-test,
+        &.orthodontics-test,
+        &.veneers-test {
           font-size: 28px;
         }
         &.teeth-whitening {
@@ -157,11 +177,13 @@ onMounted(() => {
             margin-top: 5vw;
             font-size: 2.6042vw;
           }
-          &.periodontal-test{
+          &.periodontal-test {
             margin-top: 5vw;
             font-size: 2.6042vw;
           }
-          &.scaling-and-polishing-test ,&.orthodontics-test,&.veneers-test{
+          &.scaling-and-polishing-test,
+          &.orthodontics-test,
+          &.veneers-test {
             margin-top: 5vw;
             font-size: 2.6042vw;
           }
@@ -174,10 +196,12 @@ onMounted(() => {
           &.orthodontics {
             width: 21.3021vw;
           }
-          &.periodontal-test{
+          &.periodontal-test {
             font-size: 1.4583vw;
           }
-          &.rootCanal-test ,&.orthodontics-test,&.veneers-test{
+          &.rootCanal-test,
+          &.orthodontics-test,
+          &.veneers-test {
             font-size: 1.4583vw;
           }
         }
@@ -190,8 +214,8 @@ onMounted(() => {
     a {
       &:not(:last-child)::after {
         width: 1.0417vw;
-        height: .1042vw;
-        margin: 0 .5208vw;
+        height: 0.1042vw;
+        margin: 0 0.5208vw;
         margin-top: -0.2083vw;
       }
     }
@@ -223,11 +247,14 @@ onMounted(() => {
           &.teeth-whitening {
             margin-top: 0;
           }
-          &.rootCanal-test,&.periodontal-test {
+          &.rootCanal-test,
+          &.periodontal-test {
             margin-top: 0;
             font-size: 26px;
           }
-          &.scaling-and-polishing-test, &.orthodontics-test,&.veneers-test{
+          &.scaling-and-polishing-test,
+          &.orthodontics-test,
+          &.veneers-test {
             margin-top: 0;
             font-size: 26px;
           }
@@ -240,7 +267,10 @@ onMounted(() => {
           &.orthodontics {
             width: 95%;
           }
-          &.rootCanal-test,&.periodontal-test,&.orthodontics-test,&.veneers-test {
+          &.rootCanal-test,
+          &.periodontal-test,
+          &.orthodontics-test,
+          &.veneers-test {
             width: 100%;
             font-size: 16px;
           }
