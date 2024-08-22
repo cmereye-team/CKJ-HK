@@ -1306,7 +1306,7 @@ const careData = {
   .mobile-orthodontics {
     :deep(.introduce-in-l) {
       position: absolute;
-      top: 55px;
+      top: 14.665vw;
       br {
         display: block;
       }
@@ -1314,7 +1314,7 @@ const careData = {
         color: var(--Grey-Deep, #4d4d4d);
         /* Headline-MB */
         font-family: FakePearl;
-        font-size: 26px;
+        font-size: 6.933vw;
         font-style: normal;
         font-weight: 400;
         line-height: 120%;
@@ -1323,7 +1323,7 @@ const careData = {
         color: var(--Grey-Deep, #4d4d4d);
         text-align: justify;
         font-family: FakePearl;
-        font-size: 16px;
+        font-size: 4.2665vw;
         font-style: normal;
         font-weight: 500;
         line-height: 150%; /* 24px */
@@ -1332,7 +1332,7 @@ const careData = {
   }
   .youtobe-video {
     width: 100%;
-    padding: 10px 6px;
+    padding: 2.665vw 1.6vw;
     border-top: 1px solid #fc1682;
     border-bottom: 1px solid #fc1682;
     & > div {
@@ -1347,7 +1347,7 @@ const careData = {
     color: #fff;
     text-align: center;
     font-family: FakePearl;
-    font-size: 20px;
+    font-size: 5.33vw;
     font-style: normal;
     font-weight: 400;
     line-height: 160%; /* 32px */
@@ -1358,8 +1358,8 @@ const careData = {
     background: url('https://static.cmereye.com/imgs/2024/08/70f1f6dc03eb021b.png')
       no-repeat;
     display: flex;
-    width: 73px;
-    height: 73px;
+    width: 19.4665vw;
+    height: 19.4665vw;
     justify-content: center;
     align-items: center;
     transition: all 0.3s;
@@ -1370,7 +1370,7 @@ const careData = {
     color: #fff;
     text-align: center;
     font-family: FakePearl;
-    font-size: 20px;
+    font-size: 5.33vw;
     font-style: normal;
     font-weight: 400;
     line-height: 160%; /* 32px */
@@ -1389,7 +1389,7 @@ const careData = {
     }
   }
   .orthodonticsPage {
-    padding: 90px 0;
+    padding: 24vw 0;
   }
   .bp {
     margin-top: 52px;
@@ -1428,9 +1428,9 @@ const careData = {
       padding-bottom: 0;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 12.48px 12.48px;
+      gap: 3.328vw 3.328vw;
       box-sizing: border-box;
-      padding: 0 20px;
+      padding: 0 5.33vw;
       .swiper-slide {
         width: 100%;
         &:not(:first-child) {
@@ -1438,26 +1438,26 @@ const careData = {
         }
         padding: 0;
         &-in {
-          min-height: 277px;
+          min-height: 73.865vw;
           &-title {
-            margin-top: 20px;
+            margin-top: 5.33vw;
             color: var(--Theme-Color, #fc1682);
             text-align: center;
             font-family: FakePearl;
-            font-size: 15px;
+            font-size: 4vw;
             font-style: normal;
             font-weight: 400;
             line-height: 160%; /* 24px */
             letter-spacing: 1.5px;
           }
           &-text {
-            margin-top: 10px;
-            padding: 0 18px;
+            margin-top: 2.665vw;
+            padding: 0 4.8vw;
             box-sizing: border-box;
             color: var(--Grey-Deep, #4d4d4d);
             text-align: justify;
             font-family: FakePearl;
-            font-size: 12px;
+            font-size: 3.2vw;
             font-style: normal;
             font-weight: 400;
             line-height: 160%; /* 19.2px */
@@ -1754,7 +1754,7 @@ const careData = {
     padding: 0;
     box-sizing: border-box;
     &-topCon {
-      font-size: 16px;
+      font-size: 4.2665vw;
       font-weight: 500;
     }
     &-in {
@@ -1762,17 +1762,17 @@ const careData = {
       &-box {
         &:nth-of-type(2) {
           margin-left: 0;
-          margin-top: 44px;
+          margin-top: 11.73vw;
         }
         div {
           &:nth-of-type(1) {
-            font-size: 20px;
-            padding: 3px 50px;
+            font-size: 5.33vw;
+            padding: 0.8vw 13.33vw;
           }
           &:nth-of-type(2) {
-            font-size: 20px;
-            margin-top: 43px;
-            padding: 0 30px;
+            font-size: 5.33vw;
+            margin-top: 11.465vw;
+            padding: 0 8vw;
           }
         }
       }
@@ -1780,17 +1780,17 @@ const careData = {
     &-bottomCon {
       margin-top: 60px;
       img {
-        width: 20px;
-        height: 22px;
+        width: 5.33vw;
+        height: 5.8665vw;
       }
       div {
-        font-size: 16px;
-        margin-right: 18px;
-        margin-left: 17px;
+        font-size: 4.2665vw;
+        margin-right: 4.8vw;
+        margin-left: 4.53vw;
       }
     }
     &-btn {
-      margin-top: 44px;
+      margin-top: 11.73vw;
       // a{
       //   font-size: 20px;
       //   padding: 5px 45px;
@@ -1802,31 +1802,31 @@ const careData = {
     & > div:nth-child(1),
     & > div:nth-child(3) {
       box-sizing: border-box;
-      padding: 0 25px;
+      padding: 0 6.665vw;
       color: var(--Grey-Deep, #4d4d4d);
       text-align: center;
       font-family: 'Noto Sans HK';
-      font-size: 16px;
+      font-size: 4.265vw;
       font-style: normal;
       font-weight: 400;
       line-height: 200%; /* 32px */
       letter-spacing: 1.6px;
     }
     & > div:nth-child(2) {
-      margin: 10px 0;
+      margin: 2.665vw 0;
       position: relative;
-      padding: 50px 0;
+      padding: 13.33vw 0;
 
       & > div:nth-child(1),
       & > div:nth-child(3) {
         box-sizing: border-box;
-        padding: 0 30px;
-        width: 240px;
+        padding: 0 8vw;
+        width: 64vw;
         position: absolute;
         color: var(--Grey-Deep, #4d4d4d);
         text-align: justify;
         font-family: FakePearl;
-        font-size: 12px;
+        font-size: 3.2vw;
         font-style: normal;
         font-weight: 400;
         line-height: 160%; /* 19.2px */
@@ -1834,15 +1834,16 @@ const careData = {
       }
       & > div:nth-child(1) {
         left: 0;
-        top: 30px;
+        top: 8vw;
       }
       & > div:nth-child(3) {
         right: 0;
-        bottom: 30px;
+        bottom: 8vw;
       }
     }
   }
   .differ {
+    margin-top: 52px;
     &-context {
       font-size: 16px;
       white-space: pre-wrap;
