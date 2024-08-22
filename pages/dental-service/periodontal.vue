@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { useAppState } from '~/stores/appState'
+import doctorLists_hk from '~/assets/js/doctor'
 import { toWhatsApp } from '~/assets/js/common'
 const { t } = useLang()
 const appState = useAppState()
@@ -407,8 +408,12 @@ const stepData = {
     },
   ],
 }
-import doctorLists_hk from '~/assets/js/doctor'
-const doctorList = doctorLists_hk
+
+const locale = useState<string>('locale.setting')
+let doctorObjs = {
+  doctorLists_hk,
+}
+let doctorLists = ref(doctorLists_hk)
 
 let windowWidth = ref(390)
 const getWindowWidth = () => {
@@ -430,14 +435,20 @@ interface doctorList_type {
   org: string
   skilled: string
 }
+
+const list = ref([] as any[])
 const periodontalList = ref<doctorList_type[]>([])
 const doctorList_periodontal = () => {
-  doctorList.forEach((item) => {
-    item.forEach((el, i) => {
-      if (el.tags.includes('口腔牙周病科')) {
-        periodontalList.value.push(el)
-      }
-    })
+  list.value = [
+    ...doctorLists.value[0],
+    ...doctorLists.value[1],
+    ...doctorLists.value[2],
+    ...doctorLists.value[3],
+  ]
+  list.value.map((items) => {
+    if (items.tags.includes('口腔牙周病科')) {
+      periodontalList.value.push(items)
+    }
   })
 }
 
@@ -456,16 +467,8 @@ const egImg = (i: number) => {
   }
 }
 
-const checkboxNum = ref(0)
-
-const levenZero = ref(false)
-const levenOne = ref(false)
-const levenTwo = ref(false)
-const levenThree = ref(false)
-
-
-const levenList = ref([])
-const checkbox = (i: number,type:any) => {
+const levenList = ref([] as any[])
+const checkbox = (i: number, type: any) => {
   levenList.value.push(type)
   // 获取所有 class checkItem
   const checkItems = document.querySelectorAll('.checkItem')
@@ -548,7 +551,7 @@ const close = () => {
   leven_three?.classList.remove('leven_active')
   leven_four?.classList.remove('leven_active')
   question?.classList.remove('question_active')
-  checkboxNum.value = 0
+  levenList.value = []
 
   const checkItems = document.querySelectorAll('.checkItem')
   checkItems.forEach((item, index) => {
@@ -1084,25 +1087,25 @@ const close = () => {
             <div>請選取你有的症狀（可以多選）</div>
           </div>
           <div>
-            <div class="checkItem" @click="checkbox(0,1)">
+            <div class="checkItem" @click="checkbox(0, 1)">
               即使刷牙後，口腔仍然持續有異味
             </div>
-            <div class="checkItem" @click="checkbox(1,1)">
+            <div class="checkItem" @click="checkbox(1, 1)">
               刷牙或使用牙線時牙齦經常會出血
             </div>
-            <div class="checkItem" @click="checkbox(2,2)">
+            <div class="checkItem" @click="checkbox(2, 2)">
               牙齦比往時更加紅腫或容易疼痛
             </div>
-            <div class="checkItem" @click="checkbox(3,2)">
+            <div class="checkItem" @click="checkbox(3, 2)">
               牙齦有膿瘡或牙齦間有膿液滲出
             </div>
-            <div class="checkItem" @click="checkbox(4,3)">
+            <div class="checkItem" @click="checkbox(4, 3)">
               牙齦出現退縮，多隻牙齒看起來比往時更長
             </div>
-            <div class="checkItem" @click="checkbox(5,3)">
+            <div class="checkItem" @click="checkbox(5, 3)">
               牙齒有鬆動的感覺或者咬合時感覺不對勁
             </div>
-            <div class="checkItem" @click="checkbox(6,3)">
+            <div class="checkItem" @click="checkbox(6, 3)">
               牙齒之間出現新的縫隙或者牙齦分隔
             </div>
           </div>
