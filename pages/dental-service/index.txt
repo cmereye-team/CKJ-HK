@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 useHead({
-  title: "牙科服務"
+  title: '牙科服務',
 })
 </script>
 
@@ -10,7 +10,7 @@ useHead({
     <div class="service">
       <serviceCard :isIndexShow="true" />
       <NewAddress />
-     <ContactForm-new />
+      <ContactForm-new />
     </div>
     <PageFooter />
     <PageNavbar />
@@ -18,13 +18,13 @@ useHead({
 </template>
 
 <style lang="scss" scoped>
-  .service{
-    background: #fff;
-    padding-bottom: 143px;
+.service {
+  background: #fff;
+  padding-bottom: 143px;
+}
+@media screen and (max-width: 768px) {
+  .service {
+    padding-bottom: 90px;
   }
-  @media screen and (max-width: 768px) {
-    .service{
-      padding-bottom: 90px;
-    }
-  }
+}
 </style>
