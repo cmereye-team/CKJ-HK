@@ -15,6 +15,16 @@ defineProps({
     },
   },
 })
+
+const route = useRoute()
+let windowWidth = ref(390)
+const getWindowWidth = () => {
+  windowWidth.value = window.innerWidth
+}
+onMounted(() => {
+  getWindowWidth()
+  window.addEventListener('resize', getWindowWidth)
+})
 </script>
 
 <template>
@@ -42,6 +52,7 @@ defineProps({
       <div class="introduce-in-l pageCon">
         <div :class="['title', introduceData.pageName]">
           {{ $t(introduceData.title) }}
+          <br  v-if="route.path == '/dental-service/periodontal'" /><span v-if="route.path == '/dental-service/periodontal' && windowWidth < 768"> (深層洗牙/洗牙腳)</span>
         </div>
         <div :class="['content', introduceData.pageName]">
           {{ $t(introduceData.content) }}
