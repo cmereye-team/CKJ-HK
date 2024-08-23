@@ -193,8 +193,7 @@ const onSubmit = async () => {
   }
 
   // return
-  const { data }: any = await useFetch(
-    'https://admin.ckjhk.com/api.php/cms/addform/fcode/3',
+  const { data }: any = await useFetch('https://admin.ckjhk.com/api.php/cms//fcode/3',
     {
       method: 'post',
       body: _formData,

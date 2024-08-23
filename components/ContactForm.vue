@@ -171,8 +171,7 @@ const onSubmit = async () => {
   postData(_form,_preferential)
   errorserver(_form,_preferential)
   // return
-  // const { data }: any = await useFetch(
-  //   'https://admin.ckjhk.com/api.php/cms/addform/fcode/3',
+  // const { data }: any = await useFetch('https://admin.ckjhk.com/api.php/cms/addform/fcode/3',
   //   {
   //     method: 'post',
   //     body: _formData,

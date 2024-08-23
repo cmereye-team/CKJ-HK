@@ -48,35 +48,35 @@ const symptomData = {
   title: '牙周病的症狀',
   lists: [
     {
-      imgUrl: 'https://static.cmereye.com/imgs/2023/11/255727cb71ff0818.png',
-      title: '口氣異常',
+      imgUrl: 'https://static.cmereye.com/imgs/2024/08/407809ba68d40bca.png',
+      title: '牙齦萎縮牙根外露',
     },
     {
-      imgUrl: 'https://static.cmereye.com/imgs/2023/05/ba588e0ec3a4886b.png',
-      title: '牙齒移位及鬆脫',
-    },
-    {
-      imgUrl: 'https://static.cmereye.com/imgs/2023/05/7a881e098e009caf.png',
+      imgUrl: 'https://static.cmereye.com/imgs/2024/08/1b662490098b35ee.png',
       title: '牙齒對冷熱敏感',
     },
     {
-      imgUrl: 'https://static.cmereye.com/imgs/2023/11/fa8e1c16a765fd83.png',
-      title: '牙根外露',
-    },
-    {
-      imgUrl: 'https://static.cmereye.com/imgs/2023/11/34ff8a710678a5ce.png',
-      title: '牙齦萎縮',
-    },
-    {
-      imgUrl: 'https://static.cmereye.com/imgs/2023/05/dc65923fd22afa42.png',
+      imgUrl: 'https://static.cmereye.com/imgs/2024/08/f7870df82236cf65.png',
       title: '牙縫變大',
     },
     {
-      imgUrl: 'https://static.cmereye.com/imgs/2023/05/c3f0969e2ce1ca7c.png',
-      title: '牙齦腫脹變色',
+      imgUrl: 'https://static.cmereye.com/imgs/2024/08/16f8714f61804929.png',
+      title: '牙齒移位及鬆脫',
     },
     {
-      imgUrl: 'https://static.cmereye.com/imgs/2023/05/74f3d9aa48972f0b.png',
+      imgUrl: 'https://static.cmereye.com/imgs/2024/08/f2aa30ef18d93722.png',
+      title: '口氣異常',
+    },
+    {
+      imgUrl: 'https://static.cmereye.com/imgs/2024/08/62cc5d45cc330a55.png',
+      title: '牙齦疼痛',
+    },
+    {
+      imgUrl: 'https://static.cmereye.com/imgs/2024/08/4d837df8e0a06d5c.png',
+      title: '牙齦腫脹變色及化膿',
+    },
+    {
+      imgUrl: 'https://static.cmereye.com/imgs/2024/08/e07094dd166ce5cc.png',
       title: '牙齦流血',
     },
   ],
@@ -287,18 +287,18 @@ const reasonData = {
   reasonLists: [
     {
       mbImg: 'https://static.cmereye.com/imgs/2024/08/1febe76f3bf3a2c7.png',
-      img: 'https://static.cmereye.com/imgs/2023/11/c4238b3a85294efc.jpg',
+      img: 'https://static.cmereye.com/imgs/2024/08/c0ae0e2872ccdb66.png',
       context:
         '牙齦及牙齒邊緣長期積聚牙菌膜，細菌分泌毒素刺激牙齦，引發牙齦炎。',
     },
     {
       mbImg: 'https://static.cmereye.com/imgs/2024/08/14f5a8eaf87394f2.png',
-      img: 'https://static.cmereye.com/imgs/2023/11/809923ea93fc6e3d.jpg',
+      img: 'https://static.cmereye.com/imgs/2024/08/1c4e9101522b2eaa.png',
       context: '牙齦發炎時，牙肉紅腫，刷牙時易出血，牙齒表面積聚牙結石。',
     },
     {
       mbImg: 'https://static.cmereye.com/imgs/2024/08/a67de0db8328d902.png',
-      img: 'https://static.cmereye.com/imgs/2023/11/034a5f0ca1755f9c.jpg',
+      img: 'https://static.cmereye.com/imgs/2024/08/ebf17b409ca7617d.png',
       context:
         '牙齦炎情況持續，形成「牙周袋」，食物殘渣、牙菌膜和牙石等更易堆積在內，牙周組織遭受破壞，令情況進一步惡化，進而形成牙周炎。',
     },
@@ -340,6 +340,7 @@ const stepData = {
     {
       title: '第1步',
       img: 'https://static.cmereye.com/imgs/2024/08/c6abd76aae7bf1ad.png',
+      pcImg: 'https://static.cmereye.com/imgs/2024/08/322b56c67f917afe.jpg',
       name: '檢查與診斷',
       text: [
         {
@@ -359,6 +360,7 @@ const stepData = {
     {
       title: '第2步',
       img: 'https://static.cmereye.com/imgs/2024/08/39a6b316050e40dc.png',
+      pcImg: 'https://static.cmereye.com/imgs/2024/08/055c2a585f4a7411.jpg',
       name: '治療方案制定',
       text: [
         {
@@ -370,6 +372,7 @@ const stepData = {
     {
       title: '第3步',
       img: 'https://static.cmereye.com/imgs/2024/08/04e9730b1897960b.png',
+      pcImg: 'https://static.cmereye.com/imgs/2024/08/6b13facaf4e76d0d.jpg',
       name: '治療步驟',
       text: [
         {
@@ -393,6 +396,7 @@ const stepData = {
     {
       title: '第4步',
       img: 'https://static.cmereye.com/imgs/2024/08/37aa400a1cb8957b.png',
+      pcImg: 'https://static.cmereye.com/imgs/2024/08/8d9372e49fd474fd.jpg',
       name: '後續護理',
       text: [
         {
@@ -561,6 +565,12 @@ const close = () => {
     item.classList.remove('check_active')
   })
 }
+
+const isShow = ref(false)
+const showDetail = () => {
+  isShow.value = !isShow.value
+}
+const isShowOldNode = ref(false)
 </script>
 
 
@@ -574,7 +584,7 @@ const close = () => {
       <div class="mobile-orthodontics">
         <ServiceIntroduce :introduceData="orthodonticsIntroduceData" />
       </div>
-      <div class="mobile_faq" v-if="windowWidth < 768">
+      <div class="mobile_faq">
         <div class="dentistryServices-title reason-title">
           <div class="dentistryServices-title-in bb reason-title-in">
             常見牙周問題
@@ -584,7 +594,11 @@ const close = () => {
           <div>
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/08/f70a8c03df580ef7.png"
+                srcset="
+                  https://static.cmereye.com/imgs/2024/08/f70a8c03df580ef7.png 400w,
+                  https://static.cmereye.com/imgs/2024/08/5a8a206bcf96fc52.png
+                "
+                src="https://static.cmereye.com/imgs/2024/08/5a8a206bcf96fc52.png"
                 alt=""
               />
             </div>
@@ -598,7 +612,11 @@ const close = () => {
           <div>
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/08/449d691464bd572e.png"
+                srcset="
+                  https://static.cmereye.com/imgs/2024/08/449d691464bd572e.png 400w,
+                  https://static.cmereye.com/imgs/2024/08/329c15a4b7b8bc46.png
+                "
+                src="https://static.cmereye.com/imgs/2024/08/329c15a4b7b8bc46.png"
                 alt=""
               />
             </div>
@@ -611,7 +629,7 @@ const close = () => {
           </div>
         </div>
       </div>
-      <div class="care" v-if="windowWidth < 768">
+      <div class="care">
         <div class="dentistryServices-title care-title">
           <div class="dentistryServices-title-in bb care-title-in">
             {{ symptomData.title }}
@@ -637,19 +655,27 @@ const close = () => {
           <PageAnimBtnTypeTwo :str="'與我們了解更多'" />
         </div>
       </div>
-      <div class="mobile_youtube" v-if="windowWidth < 768">
+      <div class="mobile_youtube">
         <a href="https://www.youtube.com/watch?v=Lb5GAx2ivrA" target="_blank">
           <img
-            src="https://static.cmereye.com/imgs/2024/08/d14596dd773dd95b.png"
+            src="https://static.cmereye.com/imgs/2024/08/109d93d287fc37a0.png"
+            srcset="
+              https://static.cmereye.com/imgs/2024/08/d14596dd773dd95b.png 400w,
+              https://static.cmereye.com/imgs/2024/08/109d93d287fc37a0.png
+            "
             alt=""
           />
         </a>
       </div>
-      <div class="mobile_introduce_one" v-if="windowWidth < 768">
+      <div class="mobile_introduce_one">
         <div>
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/08/fbbfeeb7b74cc160.png"
+              srcset="
+                https://static.cmereye.com/imgs/2024/08/fbbfeeb7b74cc160.png 400w,
+                https://static.cmereye.com/imgs/2024/08/93cb783ce4a8daab.png
+              "
+              src="https://static.cmereye.com/imgs/2024/08/93cb783ce4a8daab.png"
               alt=""
             />
           </div>
@@ -661,6 +687,13 @@ const close = () => {
           </div>
           <div>
             大量研究證明，牙周病能透過齦下菌斑生物膜中的微生物及其產物引起全身性發炎及免疫反應，可能成為一些全身性疾病的危險因子。
+          </div>
+        </div>
+        <div class="mobile_introduce_one_waring">
+          <div>「老掉牙」</div>
+          <div>並非正常現象</div>
+          <div>
+            人們常說「老掉牙」了，認為人老掉牙是必然現象，其實這是一種錯誤的觀念。如果做好口腔保健，健康的牙齒是應該是伴隨人一生的。
           </div>
         </div>
       </div>
@@ -706,7 +739,7 @@ const close = () => {
           </div>
         </div>
       </div>
-      <div class="step" v-if="windowWidth < 768">
+      <div class="step">
         <div class="step-in">
           <div class="dentistryServices-title step-title">
             <div class="dentistryServices-title-in bb step-title-in">
@@ -724,8 +757,14 @@ const close = () => {
                   <img src="@/assets/images/icon_13.png" alt="" />
                   {{ stepItem.title }}
                 </div>
-                <div class="image"><img :src="stepItem.img" alt="" /></div>
+                <div class="image"><img :src="stepItem.pcImg" alt="" /></div>
                 <div class="name">{{ stepItem.name }}</div>
+                <div class="mobile_text">
+                  <p v-for="(el, i) in stepItem.text" :key="i">
+                    <span>{{ el.l }}</span
+                    ><span>{{ el.r }}</span>
+                  </p>
+                </div>
               </div>
               <div class="step-lists-in-l" v-else>
                 <div class="title">
@@ -836,10 +875,155 @@ const close = () => {
           <PageAnimBtnTypeTwo :str="'立即線上諮詢'" />
         </div>
       </div>
+      <div class="pc_hospital" v-else>
+        <div>
+          <span>羅湖區</span>
+          <span>深圳愛康健口腔醫院</span>
+        </div>
+        <div>
+          <div>
+            <img
+              src="https://static.cmereye.com/imgs/2024/08/baf68581008158d5.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <div>
+              <div>
+                <img
+                  src="https://static.cmereye.com/imgs/2024/08/8f0a70c1e09405e6.png"
+                  alt=""
+                />
+              </div>
+              <div>
+                <img
+                  src="https://static.cmereye.com/imgs/2024/08/bdfac71abee9d68d.png"
+                  alt=""
+                />
+              </div>
+            </div>
+            <div>
+              <div>
+                <div>
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="14"
+                      height="17"
+                      viewBox="0 0 14 17"
+                      fill="none"
+                    >
+                      <path
+                        d="M7 0C8.85652 0 10.637 0.737125 11.9497 2.04922C13.2625 3.36131 14 5.14088 14 6.99646C14 9.95291 11.9215 13.1749 7.81846 16.6968C7.59031 16.8927 7.29943 17.0003 6.99866 17C6.69789 16.9997 6.40719 16.8916 6.17939 16.6954L5.908 16.46C1.98656 13.0299 0 9.8869 0 6.99646C0 5.14088 0.737498 3.36131 2.05025 2.04922C3.36301 0.737125 5.14348 0 7 0ZM7 4.30551C6.28596 4.30551 5.60116 4.58902 5.09625 5.09367C4.59135 5.59832 4.30769 6.28278 4.30769 6.99646C4.30769 7.71014 4.59135 8.3946 5.09625 8.89925C5.60116 9.4039 6.28596 9.68741 7 9.68741C7.71404 9.68741 8.39884 9.4039 8.90375 8.89925C9.40866 8.3946 9.69231 7.71014 9.69231 6.99646C9.69231 6.28278 9.40866 5.59832 8.90375 5.09367C8.39884 4.58902 7.71404 4.30551 7 4.30551Z"
+                        fill="#FC1682"
+                      />
+                    </svg>
+                  </div>
+                  <div>地址</div>
+                </div>
+                <div>
+                  <div>深圳市羅湖區火車站大廈</div>
+                  <div>C區1-8樓</div>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="18"
+                      height="18"
+                      viewBox="0 0 18 18"
+                      fill="none"
+                    >
+                      <path
+                        d="M9.09375 17.1875C13.5639 17.1875 17.1875 13.5639 17.1875 9.09375C17.1875 4.62357 13.5639 1 9.09375 1C4.62357 1 1 4.62357 1 9.09375C1 13.5639 4.62357 17.1875 9.09375 17.1875Z"
+                        stroke="#FC1682"
+                        stroke-width="1.61875"
+                        stroke-linejoin="round"
+                      />
+                      <path
+                        d="M9.09375 4.23828V9.09858L12.5251 12.5303"
+                        stroke="#FC1682"
+                        stroke-width="1.61875"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                  </div>
+                  <div>營業時間</div>
+                </div>
+                <div>
+                  <div>9:00-18:00</div>
+                  <div>（假日照常應診）</div>
+                </div>
+              </div>
+              <div>
+                <div>
+                  <div>
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="17"
+                      height="17"
+                      viewBox="0 0 17 17"
+                      fill="none"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M12.5057 16.9976C11.2796 16.9525 7.80492 16.4724 4.16587 12.8349C0.527673 9.19659 0.0483124 5.72343 0.00233464 4.49676C-0.0657805 2.62738 1.36634 0.811633 3.02069 0.10253C3.2199 0.0165239 3.43806 -0.0162212 3.65376 0.00750781C3.86945 0.0312368 4.07527 0.110625 4.25102 0.237881C5.61332 1.23046 6.55331 2.73209 7.36047 3.91279C7.53807 4.1722 7.614 4.48786 7.57381 4.79964C7.53361 5.11141 7.38009 5.3975 7.1425 5.6034L5.48135 6.83689C5.40109 6.89483 5.3446 6.97992 5.32236 7.07637C5.30013 7.17281 5.31366 7.27404 5.36044 7.36126C5.73678 8.04483 6.40601 9.06294 7.1723 9.82908C7.93945 10.5952 9.00545 11.3086 9.73684 11.7274C9.82854 11.7789 9.93648 11.7933 10.0385 11.7676C10.1405 11.742 10.2287 11.6782 10.2852 11.5895L11.3665 9.944C11.5653 9.67998 11.8586 9.50311 12.1849 9.45042C12.5112 9.39774 12.8452 9.47334 13.1171 9.66138C14.315 10.4905 15.7131 11.4141 16.7365 12.7242C16.8741 12.9012 16.9617 13.1119 16.99 13.3343C17.0183 13.5567 16.9863 13.7826 16.8974 13.9884C16.1848 15.6509 14.3814 17.0665 12.5057 16.9976Z"
+                        fill="#FC1682"
+                      />
+                    </svg>
+                  </div>
+                  <div>查詢電話</div>
+                </div>
+                <div>
+                  <div>+852 3892 5049</div>
+                </div>
+              </div>
+            </div>
+            <div>
+              <a @click="showDetail()">
+                <span>交通路線</span>
+                <span
+                  ><img
+                    src="https://static.cmereye.com/imgs/2024/08/b62f3468ff037777.png"
+                    alt=""
+                /></span>
+                <div
+                  class="pc_hospital_address"
+                  :class="[isShow ? 'pc_hospital_address_active' : '']"
+                >
+                  <div>
+                    <span data-v-91bb1c0f="">巴士路線</span
+                    ><span data-v-91bb1c0f=""
+                      >羅湖火車站：1路、7路、12路、17路、38路、82路、83路、97路、101路、102路、205路、215路、306路、387路、E13路、M112路、M152路、M401路、M508路、N14路、N16路、N18路、N2路、N4路、N7路、高峰專線73號</span
+                    >
+                  </div>
+                  <div>
+                    <span data-v-91bb1c0f="">地鐵路線</span
+                    ><span data-v-91bb1c0f=""
+                      >地鐵1號線「羅湖站」C出口； 地鐵9號線「人民南站」
+                      A1出口</span
+                    >
+                  </div>
+                </div>
+              </a>
+              <a href="https://j.map.baidu.com/b3/j3Yu" target="_blank"
+                >百度地圖</a
+              >
+            </div>
+          </div>
+        </div>
+        <div class="care2-btn">
+          <PageAnimBtnTypeTwo :str="'立即預約牙齒檢查'" />
+        </div>
+      </div>
       <div class="reason">
         <div class="dentistryServices-title reason-title">
           <div class="dentistryServices-title-in bb reason-title-in">
-            {{ reasonData.title }}
+            牙周病的成因
           </div>
         </div>
         <div class="reason-lists">
@@ -858,7 +1042,7 @@ const close = () => {
           </div>
         </div>
       </div>
-      <div class="step_new_mobile" v-if="windowWidth < 768">
+      <div class="step_new_mobile">
         <div class="dentistryServices-title reason-title">
           <div class="dentistryServices-title-in bb reason-title-in">
             牙周病病變過程
@@ -869,7 +1053,11 @@ const close = () => {
             <div>1</div>
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/08/d9576e4ef6c8bbfa.png"
+                src="https://static.cmereye.com/imgs/2024/08/cb4f7d50c4e973a6.png"
+                srcset="
+                  https://static.cmereye.com/imgs/2024/08/d9576e4ef6c8bbfa.png 400w,
+                  https://static.cmereye.com/imgs/2024/08/cb4f7d50c4e973a6.png
+                "
                 alt=""
               />
             </div>
@@ -883,7 +1071,11 @@ const close = () => {
             <div>2</div>
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/08/2adbffbe54b348b4.png"
+                src="https://static.cmereye.com/imgs/2024/08/34b59fb25e487f68.png"
+                srcset="
+                  https://static.cmereye.com/imgs/2024/08/2adbffbe54b348b4.png 400w,
+                  https://static.cmereye.com/imgs/2024/08/34b59fb25e487f68.png
+                "
                 alt=""
               />
             </div>
@@ -897,7 +1089,11 @@ const close = () => {
             <div>3</div>
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/08/1c4237335dc21b2d.png"
+                src="https://static.cmereye.com/imgs/2024/08/8945b67ff72e1e10.png"
+                srcset="
+                  https://static.cmereye.com/imgs/2024/08/1c4237335dc21b2d.png 400w,
+                  https://static.cmereye.com/imgs/2024/08/8945b67ff72e1e10.png
+                "
                 alt=""
               />
             </div>
@@ -935,7 +1131,34 @@ const close = () => {
           </div>
         </div>
       </div>
-      <div class="method_new_mobile" v-if="windowWidth < 768">
+      <div class="mobile_introduce_one_pc" v-else>
+        <div class="dentistryServices-title reason-title">
+          <div class="dentistryServices-title-in bb reason-title-in">
+            牙周病治療簡介
+          </div>
+        </div>
+        <div>
+          <div>
+            <img
+              src="https://static.cmereye.com/imgs/2024/08/641b9dd999c48e22.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <div>
+              牙結石一旦形成只能透過牙醫專業清理，普通刷牙無法去除牙結石。
+            </div>
+            <div>
+              牙結石包括齦上結石和齦下結石，齦上結石可以透過超音波洗牙或噴砂洗牙等簡單方法清除。齦下結石必須進行專業的牙周刮治，也就是牙周治療，又稱深層洗牙或洗牙腳。
+            </div>
+            <div>
+              <span>重度牙周患者</span
+              >有機會需要做手術性治療，切開牙齦組織，徹底清除牙根表面的牙垢。每個人的情況都是不同的，醫生會透過檢查及評估，再按照病人的病情，擬定適切的治療方案。
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="method_new_mobile">
         <div class="dentistryServices-title reason-title">
           <div class="dentistryServices-title-in bb reason-title-in">
             一般牙周病治療方法
@@ -944,7 +1167,11 @@ const close = () => {
         <div>
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/08/3a724f5c62c66bca.png"
+              src="https://static.cmereye.com/imgs/2024/08/26f0d41f99bd6e5b.png"
+              srcset="
+                https://static.cmereye.com/imgs/2024/08/3a724f5c62c66bca.png 400w,
+                https://static.cmereye.com/imgs/2024/08/26f0d41f99bd6e5b.png
+              "
               alt=""
             />
           </div>
@@ -962,7 +1189,7 @@ const close = () => {
           </div>
         </div>
       </div>
-      <div class="table_new_mobile" v-if="windowWidth < 768">
+      <div class="table_new_mobile">
         <div>愛康健提供的非手術性牙周治療服務</div>
         <div>早期發現<br />牙周問題<br />患者</div>
         <div>預防<br />與維護</div>
@@ -970,7 +1197,11 @@ const close = () => {
         <div>輕度及<br />中度牙周<br />患者</div>
         <div>齦上<br />潔治術</div>
         <div>清除牙齒表面的牙菌斑和牙結石</div>
-        <div>牙結石<br />刮除術<br />(深層洗牙/<br />洗牙腳)</div>
+        <div>
+          牙結石<br class="table_new_mobile_br" />刮除術<br />(深層洗牙/<br
+            class="table_new_mobile_br"
+          />洗牙腳)
+        </div>
         <div>深入牙齦，清除牙周袋內的牙菌斑和牙結石</div>
         <div>鬆牙<br />固定術</div>
         <div>固定因牙周病而鬆動的牙齒</div>
@@ -1019,7 +1250,30 @@ const close = () => {
           </div>
         </div>
       </div>
-      <div class="evaluate" v-if="windowWidth < 768">
+      <div class="eg_new_pc" v-else>
+        <div class="dentistryServices-title reason-title">
+          <div class="dentistryServices-title-in bb reason-title-in">
+            牙周治療案例
+          </div>
+        </div>
+        <div class="eg_img_pc">
+          <div class="eeg_img_pc_one">
+            <div>案列1</div>
+            <img
+              src="https://static.cmereye.com/imgs/2024/08/dffbc9f5aee12fc7.png"
+              alt=""
+            />
+          </div>
+          <div class="eg_img_pc_two">
+            <div>案列2</div>
+            <img
+              src="https://static.cmereye.com/imgs/2024/08/322e356aeddc49a1.png"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="evaluate">
         <div class="dentistryServices-title reason-title">
           <div class="dentistryServices-title-in bb reason-title-in">
             真實用戶評價
@@ -1029,22 +1283,34 @@ const close = () => {
           <div class="evaluate_item_one">
             <div>
               <div>
-                <img
-                  src="https://static.cmereye.com/imgs/2024/08/ede79e70a7975b34.png"
-                  alt="網紅Ryan"
-                />
+                <div>
+                  <img
+                    src="https://static.cmereye.com/imgs/2024/08/ede79e70a7975b34.png"
+                    alt="網紅Ryan"
+                  />
+                </div>
+                <div>網紅Ryan <span>@RM Channel</span></div>
               </div>
-              <div>網紅Ryan <span>@RM Channel</span></div>
+              <a
+                href="https://www.youtube.com/watch?v=EVErMNv6P8A&list=PLP24ZB2HTnRicsyIlRD7e70kZjbRmqBoO&index=9"
+                target="_blank"
+              >
+                <img
+                  src="https://static.cmereye.com/imgs/2024/08/b55bd699396049d1.png"
+                  srcset="
+                    https://static.cmereye.com/imgs/2024/08/ce865f7b5fa26303.png 400w,
+                    https://static.cmereye.com/imgs/2024/08/b55bd699396049d1.png
+                  "
+                  alt=""
+                />
+              </a>
             </div>
-            <a
-              href="https://www.youtube.com/watch?v=EVErMNv6P8A&list=PLP24ZB2HTnRicsyIlRD7e70kZjbRmqBoO&index=9"
-              target="_blank"
-            >
+            <div v-if="windowWidth > 768">
               <img
-                src="https://static.cmereye.com/imgs/2024/08/ce865f7b5fa26303.png"
+                src="https://static.cmereye.com/imgs/2024/08/1ea128fa7a2f4ba4.png"
                 alt=""
               />
-            </a>
+            </div>
           </div>
           <div class="evaluate_item_two">
             <div>
@@ -1084,7 +1350,7 @@ const close = () => {
           </div>
         </div>
       </div>
-      <div class="test_tooth" v-if="windowWidth < 768">
+      <div class="test_tooth">
         <div class="questions">
           <div>
             <div>牙周病自我檢查小測驗</div>
@@ -1122,6 +1388,13 @@ const close = () => {
           </div>
           <div @click="close">
             <img
+              src="https://static.cmereye.com/imgs/2024/08/09bb619cd0663a64.png"
+              alt=""
+            />
+            <div>重新測試</div>
+          </div>
+          <div>
+            <img
               src="https://static.cmereye.com/imgs/2024/08/f9c47a61ad1c98f4.png"
               alt=""
             />
@@ -1134,6 +1407,13 @@ const close = () => {
           </div>
           <div @click="close">
             <img
+              src="https://static.cmereye.com/imgs/2024/08/09bb619cd0663a64.png"
+              alt=""
+            />
+            <div>重新測試</div>
+          </div>
+          <div>
+            <img
               src="https://static.cmereye.com/imgs/2024/08/f9c47a61ad1c98f4.png"
               alt=""
             />
@@ -1143,6 +1423,13 @@ const close = () => {
           <div>Level 2</div>
           <div>結果顯示有牙齦炎症狀，建議盡快盡求牙科醫生專業意見。</div>
           <div @click="close">
+            <img
+              src="https://static.cmereye.com/imgs/2024/08/09bb619cd0663a64.png"
+              alt=""
+            />
+            <div>重新測試</div>
+          </div>
+          <div>
             <img
               src="https://static.cmereye.com/imgs/2024/08/f6a89210c4a12d3b.png"
               alt=""
@@ -1157,6 +1444,13 @@ const close = () => {
           </div>
           <div @click="close">
             <img
+              src="https://static.cmereye.com/imgs/2024/08/09bb619cd0663a64.png"
+              alt=""
+            />
+            <div>重新測試</div>
+          </div>
+          <div>
+            <img
               src="https://static.cmereye.com/imgs/2024/08/f6a89210c4a12d3b.png"
               alt=""
             />
@@ -1166,7 +1460,7 @@ const close = () => {
           <PageAnimBtnTypeTwo :str="'立即WhatsApp預約檢查'" />
         </div>
       </div>
-      <div class="nurse_mobile" v-if="windowWidth < 768">
+      <div class="nurse_mobile">
         <div class="dentistryServices-title reason-title">
           <div class="dentistryServices-title-in bb reason-title-in">
             牙周治療後維護
@@ -1175,7 +1469,13 @@ const close = () => {
         <div>
           <div>口腔衛生控制</div>
           <div>
+            <img
+              v-if="windowWidth > 768"
+              src="https://static.cmereye.com/imgs/2024/08/49483bffaefde82d.png"
+              alt=""
+            />
             <svg
+              v-else
               xmlns="http://www.w3.org/2000/svg"
               width="176"
               height="22"
@@ -1192,7 +1492,13 @@ const close = () => {
           </div>
           <div>
             <div>
+              <img
+                v-if="windowWidth > 768"
+                src="https://static.cmereye.com/imgs/2024/08/adba6bbd0084e3b8.png"
+                alt=""
+              />
               <svg
+                v-else
                 xmlns="http://www.w3.org/2000/svg"
                 width="86"
                 height="22"
@@ -1204,7 +1510,13 @@ const close = () => {
               </svg>
             </div>
             <div>
+              <img
+                v-if="windowWidth > 768"
+                src="https://static.cmereye.com/imgs/2024/08/adba6bbd0084e3b8.png"
+                alt=""
+              />
               <svg
+                v-else
                 xmlns="http://www.w3.org/2000/svg"
                 width="86"
                 height="22"
@@ -1235,7 +1547,7 @@ const close = () => {
           </div>
         </div>
       </div>
-      <div class="health_mobile" v-if="windowWidth < 768">
+      <div class="health_mobile">
         <div>
           <span>深圳愛康健口腔醫院</span>
           <span>65歲及以上<i>長者優惠政策</i></span>
@@ -1282,7 +1594,7 @@ const close = () => {
           <div>*可使用醫院券或一般付款方式支付醫療費用</div>
         </div>
       </div>
-      <div class="doctor_new_mobile" v-if="windowWidth < 768">
+      <div class="doctor_new_mobile">
         <div class="dentistryServices-title reason-title">
           <div class="dentistryServices-title-in bb reason-title-in">
             牙周病牙醫推薦
@@ -1303,7 +1615,8 @@ const close = () => {
           </div>
         </div>
       </div>
-      <div class="reason2" v-if="windowWidth > 768">
+      <!-- 以下為舊版 -->
+      <div class="reason2" v-if="isShowOldNode">
         <div class="dentistryServices-title">
           <div class="dentistryServices-title-in bb">
             {{ reason2Data.title }}
@@ -1340,7 +1653,7 @@ const close = () => {
           </div>
         </div>
       </div>
-      <div class="care" v-if="windowWidth > 768">
+      <div class="care" v-if="isShowOldNode">
         <div class="dentistryServices-title care-title">
           <div class="dentistryServices-title-in bb care-title-in">
             {{ symptomData.title }}
@@ -1366,7 +1679,7 @@ const close = () => {
           <PageAnimBtnTypeTwo :str="'與我們了解更多'" />
         </div>
       </div>
-      <div class="note" v-if="windowWidth > 768">
+      <div class="note" v-if="isShowOldNode">
         <div class="dentistryServices-title note-title">
           <div class="dentistryServices-title-in bb note-title-in">
             {{ noteData.title }}
@@ -1454,8 +1767,8 @@ const close = () => {
           </div>
         </div>
       </div>
-      <ServiceProcess :processData="processData" v-if="windowWidth > 768" />
-      <div class="care2" v-if="windowWidth > 768">
+      <ServiceProcess :processData="processData" v-if="isShowOldNode" />
+      <div class="care2" v-if="isShowOldNode">
         <div class="care2-btn">
           <PageAnimBtnTypeTwo :str="'立即線上諮詢'" />
         </div>
@@ -1494,6 +1807,53 @@ const close = () => {
 
 
 <style lang="scss" scoped>
+.mobile_faq {
+  margin-top: 125px;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 241, 240, 0) 0%,
+    rgba(255, 241, 240, 0.7) 12.5%,
+    rgba(255, 241, 240, 0.7) 81.99%,
+    rgba(255, 241, 240, 0) 100%
+  );
+  box-sizing: border-box;
+  padding-top: 15px;
+  padding-bottom: 55px;
+  & > div:nth-child(2) {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+    gap: 0 180px;
+    & > div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 416px;
+      & > div:nth-child(2) {
+        color: var(--Theme-Color, #fc1682);
+        text-align: center;
+        font-family: FakePearl;
+        font-size: 50px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%; /* 65px */
+        & > div:nth-child(1) {
+          margin-top: 30px;
+          margin-bottom: 20px;
+        }
+        & > div:nth-child(2) {
+          color: var(--Grey-Deep, #4d4d4d);
+          text-align: justify;
+          font-family: FakePearl;
+          font-size: 28px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 160%; /* 44.8px */
+        }
+      }
+    }
+  }
+}
 .reason {
   margin-top: 188px;
   &-lists {
@@ -1501,27 +1861,188 @@ const close = () => {
     max-width: 1656px;
     display: flex;
     margin: 116px auto 0;
+    justify-content: center;
+    gap: 0 88px;
     &-item {
-      padding: 0 45px;
-      width: calc(100% / 3);
+      width: 462px;
+      box-sizing: border-box;
+      padding: 22px 30px 74px 30px;
+      border-radius: 20px;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      border: 3px solid var(--Theme-Color, #fc1682);
+      border-top: 52px solid #fc1682;
+      gap: 0 20px;
       .image {
         position: relative;
+        width: 200px;
+        height: 200px;
+        min-width: 200px;
+        min-height: 200px;
         img {
           width: 100%;
         }
       }
       .text {
-        color: #fc1682;
-        font-size: 35px;
+        color: var(--Grey-Deep, #4d4d4d);
+        text-align: justify;
+        font-family: 'Noto Sans HK';
+        font-size: 20px;
         font-style: normal;
-        font-weight: 900;
-        line-height: 160%;
-        width: 100%;
-        max-width: 90%;
-        margin: 35px auto 0;
+        font-weight: 400;
+        line-height: 160%; /* 32px */
+        letter-spacing: 4px;
+      }
+      position: relative;
+    }
+    &-item:nth-child(2) {
+      border: 3px solid var(--Theme-Color, #00aeff);
+      border-top: 52px solid #00aeff;
+    }
+    &-item:nth-child(1)::before,
+    &-item:nth-child(3)::before,
+    &-item:nth-child(2)::before {
+      content: '1';
+      color: var(--White, #fff);
+      text-align: center;
+      font-family: FakePearl;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 48px */
+      letter-spacing: 3px;
+      position: absolute;
+      top: -50px;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    &-item:nth-child(2)::before {
+      content: '2';
+    }
+    &-item:nth-child(3)::before {
+      content: '3';
+    }
+  }
+}
+.mobile_youtube {
+  margin: 33px auto 130px;
+  & > a {
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.mobile_introduce_one {
+  max-width: 1320px;
+  margin: 125px auto;
+  position: relative;
+  gap: 0 66px;
+  justify-content: flex-end;
+  & > div:nth-child(1) {
+    padding: 0 15px;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    padding: 30px 0;
+    gap: 0 30px;
+    & > div:nth-child(1) {
+      & > img {
+        position: relative;
+        z-index: 10;
+      }
+    }
+    & > div:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      color: var(--Grey-Deep, #4d4d4d);
+      font-family: FakePearl;
+      font-size: 50px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 120%; /* 31.2px */
+      padding-bottom: 10px;
+      & > span:nth-child(2) {
+        color: var(--Theme-Color, #fc1682);
       }
     }
   }
+  & > div:nth-child(1)::after {
+    content: none;
+  }
+
+  & > div:nth-child(2) {
+    position: absolute;
+    top: 40%;
+    left: 35%;
+    width: 442px;
+    margin-top: 20px;
+    box-sizing: border-box;
+    padding: 0;
+    color: var(--Grey-Deep, #4d4d4d);
+    text-align: justify;
+    font-family: 'Noto Sans HK';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 32px */
+    letter-spacing: 4px;
+  }
+}
+.mobile_introduce_one_waring {
+  box-sizing: border-box;
+  padding: 30px 33px;
+  width: 373px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  border-radius: 8px;
+  background: #fff1f0;
+  & > div:nth-child(1) {
+    color: var(--Grey-Deep, #4d4d4d);
+    text-align: center;
+    font-family: FakePearl;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 48px */
+    letter-spacing: 3px;
+  }
+  & > div:nth-child(2) {
+    color: var(--Theme-Color, #fc1682);
+    font-family: FakePearl;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%;
+    letter-spacing: 3px;
+    text-align: center;
+  }
+  & > div:nth-child(3) {
+    color: var(--Grey-Deep, #4d4d4d);
+    text-align: justify;
+    font-family: 'Noto Sans HK';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 32px */
+    letter-spacing: 4px;
+  }
+}
+.mobile_introduce_one_waring::before {
+  content: '';
+  position: absolute;
+  display: inline-block;
+  background: url('https://static.cmereye.com/imgs/2024/08/36d155c84abe8513.png')
+    no-repeat;
+  width: 56px;
+  height: 50px;
+  top: -28px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .reason2 {
   margin-top: 150px;
@@ -1655,45 +2176,42 @@ const close = () => {
 .care {
   margin-top: 140px;
   &-lists {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    // flex-wrap: wrap;
     width: 100%;
-    max-width: 1000px;
+    max-width: 1140px;
     margin: 54px auto 0;
+    gap: 46px 88px;
     &-item {
-      width: calc(100% / 4);
+      // width: calc(100% / 4);
       & > div {
         .image {
-          width: 100%;
-          position: relative;
-          padding: 0 calc((89px / 273px) * 100% / 2);
+          padding: 0;
           &-in {
-            width: 100%;
-            height: 0;
-            padding-bottom: 100%;
-            background: #fff1f0;
-            margin-bottom: 13px;
             border-radius: 10px;
-            position: relative;
             img {
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              max-width: 90%;
-              max-height: 90%;
+              width: 100%;
+              height: 100%;
             }
           }
         }
         .text {
+          margin-top: 10px;
           text-align: center;
           font-size: 24px;
-          font-weight: 600;
-          white-space: nowrap;
+          font-weight: 500;
+          padding: 0 40px;
+          // white-space: nowrap;
+        }
+      }
+      &:nth-of-type(1) {
+        .text {
+          padding: 0 50px;
         }
       }
       &:nth-of-type(n + 5) {
-        margin-top: 90px;
+        // margin-top: 90px;
       }
       &:nth-of-type(2),
       &:nth-of-type(4),
@@ -1702,7 +2220,7 @@ const close = () => {
         & > div {
           .image {
             &-in {
-              background: #fee6f1;
+              // background: #fee6f1;
             }
           }
         }
@@ -1797,7 +2315,7 @@ const close = () => {
     &-in {
       display: flex;
       align-items: center;
-      margin-bottom: 92px;
+      margin-bottom: 12px;
       padding: 0 calc((61 / (1444 + 122)) * 100%);
       width: calc(100% / 3);
       &:nth-of-type(4),
@@ -1851,7 +2369,7 @@ const close = () => {
           }
         }
         .name {
-          width: 100%;
+          width: 80%;
           color: #fff;
           font-size: 20px;
           font-weight: 700;
@@ -1861,6 +2379,18 @@ const close = () => {
           padding: 8px 15px;
           clip-path: polygon(0 0, 93% 0, 100% 100%, 0 100%);
           white-space: pre-wrap;
+        }
+        .mobile_text {
+          & > p {
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%;
+            letter-spacing: 4px;
+            & > span:nth-child(1) {
+              color: var(--Theme-Color, #fc1682);
+            }
+          }
         }
       }
       &-r {
@@ -1908,13 +2438,1238 @@ const close = () => {
       &:nth-of-type(5) {
         .step-lists-in-l {
           .name {
-            width: 110%;
+            width: 80%;
             clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
           }
         }
       }
     }
+    &>div:nth-child(3),
+    &>div:last-child{
+      &>div{
+        .image::after{
+          content: none;
+        }
+      }
+    }
   }
+}
+.pc_hospital {
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  margin: 125px;
+  align-items: center;
+  & > div:nth-child(1) {
+    color: var(--Theme-Color, #fc1682);
+    font-family: FakePearl;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    & > span:nth-child(1) {
+      color: var(--Blue-Deep, #00aeff);
+    }
+  }
+  & > div:nth-child(2) {
+    display: flex;
+    gap: 0 32px;
+    & > div:nth-child(2) {
+      & > div:nth-child(1) {
+        display: flex;
+        gap: 0 28px;
+      }
+      & > div:nth-child(2) {
+        display: flex;
+        gap: 0 64px;
+        margin-top: 50px;
+        margin-bottom: 20px;
+        & > div {
+          & > div:nth-child(1) {
+            & > div:nth-child(2) {
+              margin-left: 6px;
+            }
+            display: flex;
+            align-items: center;
+            color: var(--Theme-Color, #fc1682);
+            font-family: FakePearl;
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%; /* 35.2px */
+          }
+          & > div:nth-child(2) {
+            color: var(--Grey-Deep, #4d4d4d);
+            font-family: FakePearl;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%; /* 32px */
+            letter-spacing: 2px;
+          }
+        }
+      }
+      & > div:nth-child(3) {
+        display: flex;
+        gap: 0 55px;
+        & > a {
+          color: var(--Theme-Color, #fc1682);
+          text-align: center;
+          font-family: FakePearl;
+          font-size: 35px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 160%; /* 56px */
+          letter-spacing: 7px;
+          border-radius: 92px;
+          background: var(--White, #fff);
+          box-shadow: 3px 3px 12.4px 0px rgba(252, 22, 130, 0.5);
+          display: flex;
+          align-items: center;
+          box-sizing: border-box;
+          padding: 7px 40px;
+          position: relative;
+        }
+        & > a:nth-child(2) {
+          color: var(--White, #fff);
+          background: var(--Theme-Color, #fc1682);
+        }
+      }
+    }
+  }
+}
+.pc_hospital_address {
+  display: none;
+  position: absolute;
+  top: 72px;
+  left: 0;
+  width: 220%;
+  z-index: 10;
+  border-radius: 22px;
+  background: var(--White, #fff);
+  box-shadow: 3px 3px 12.4px 0px rgba(252, 22, 130, 0.5);
+  transition: all 0.3s ease;
+  & > div {
+    flex: 4;
+    box-sizing: border-box;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    & > span:nth-child(1) {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 160%; /* 32px */
+      letter-spacing: 4px;
+    }
+    & > span:nth-child(2) {
+      color: var(--Grey-Deep, #4d4d4d);
+      text-align: justify;
+      font-family: 'Noto Sans HK';
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 32px */
+      letter-spacing: 4px;
+    }
+  }
+  & > div:nth-child(2) {
+    flex: 4;
+  }
+}
+.pc_hospital_address_active {
+  display: flex;
+}
+.step_new_mobile {
+  margin-top: 125px;
+  .step_new_items {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 70px;
+    max-width: 980px;
+    margin: 50px auto 0;
+    & > div {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      & > div:nth-child(1) {
+        color: var(--Theme-Color, #fc1682);
+        text-align: center;
+        font-family: FakePearl;
+        font-size: 40.857px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 65.371px */
+      }
+      & > div:nth-child(3) {
+        margin-top: 22px;
+        color: var(--White, #fff);
+        text-align: center;
+        font-family: FakePearl;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 48px */
+        letter-spacing: 3px;
+        border-radius: 36.915px;
+        background: var(--Theme-Color, #fc1682);
+        box-shadow: 3.692px 3.692px 0px 0px #fff;
+        padding: 0 25px;
+      }
+      & > div:nth-child(4) {
+        display: flex;
+        flex-direction: column;
+        color: var(--Grey-Deep, #4d4d4d);
+        text-align: center;
+        font-family: 'Noto Sans HK';
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 32px */
+        letter-spacing: 4px;
+      }
+    }
+  }
+}
+.mobile_introduce_one_pc {
+  max-width: 1250px;
+  margin: 125px auto 125px;
+  & > div:nth-child(2) {
+    margin-top: 52px;
+    display: flex;
+    gap: 0 50px;
+    & > div:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      gap: 30px 0;
+      max-width: 705px;
+      color: var(--Grey-Deep, #4d4d4d);
+      font-family: 'Noto Sans HK';
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 32px */
+      letter-spacing: 4px;
+      span {
+        color: var(--Theme-Color, #fc1682);
+        font-family: 'Noto Sans HK';
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        letter-spacing: 4px;
+      }
+    }
+  }
+}
+.method_new_mobile {
+  max-width: 1250px;
+  margin: 125px auto 125px;
+  & > div:nth-child(2) {
+    margin-top: 50px;
+    display: flex;
+    gap: 0 60px;
+    & > div:nth-child(1) {
+      min-width: 480px;
+      & > img {
+        width: 100%;
+        border-radius: 11px;
+      }
+    }
+    & > div:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      gap: 30px 0;
+      & > div {
+        & > div:nth-child(1) {
+          color: #fc1682;
+          font-family: FakePearl;
+          font-size: 30px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 160%; /* 48px */
+          letter-spacing: 3px;
+        }
+        & > div:nth-child(2) {
+          color: var(--Grey-Deep, #4d4d4d);
+          text-align: justify;
+          font-family: 'Noto Sans HK';
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 160%; /* 32px */
+          letter-spacing: 4px;
+        }
+      }
+    }
+  }
+}
+.table_new_mobile {
+  margin-top: 13.33vw;
+  box-sizing: border-box;
+  padding: 0;
+  display: grid;
+  gap: 4px 4px;
+  // grid-template-columns: repeat(3, 1fr);
+  border-radius: 20px;
+  // overflow: hidden;
+  width: 100%;
+  max-width: 1245px;
+  margin: 0 auto;
+  & > div {
+    color: var(--Grey-Deep, #4d4d4d);
+    font-family: FakePearl;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 41.6px */
+    letter-spacing: 2.6px;
+    background: var(--Pink-Pale, #fee6f1);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px;
+    max-width: 100%;
+    width: 100%;
+  }
+  & > div:nth-child(1) {
+    grid-column: span 3;
+
+    background: var(--Theme-Color, #fc1682);
+    height: fit-content;
+    padding: 2.665vw 6.665vw 2.665vw 7.2vw;
+    color: var(--White, #fff);
+    text-align: center;
+    font-family: FakePearl;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 41.6px */
+    letter-spacing: 2.6px;
+    border-radius: 5.33vw 5.33vw 0 0;
+    white-space: nowrap;
+    padding: 12px 395px;
+  }
+  & > div:nth-child(2) {
+    background: #ccecbc;
+    text-align: center;
+    -webkit-text-stroke-width: 2;
+    -webkit-text-stroke-color: #fff;
+    font-family: FakePearl;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 41.6px */
+    letter-spacing: 2.6px;
+    text-align: center;
+    width: 176px;
+  }
+  & > div:nth-child(5) {
+    text-align: center;
+    grid-row: span 3;
+    background: #ffdbb1;
+    text-align: center;
+    font-family: FakePearl;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 41.6px */
+    letter-spacing: 2.6px;
+    width: 176px;
+  }
+  & > div:nth-child(12) {
+    text-align: center;
+    grid-row: span 4;
+    width: 176px;
+    border-radius: var(--Count, 0px) var(--Count, 0px) var(--Count, 0px) 20px;
+    background: #fca3a3;
+    text-align: center;
+    font-family: FakePearl;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 41.6px */
+    letter-spacing: 2.6px;
+  }
+  & > div:last-child {
+    border-radius: var(--Count, 0px) var(--Count, 0px) 20px var(--Count, 0px);
+  }
+  & > div:nth-child(3),
+  & > div:nth-child(6),
+  & > div:nth-child(8),
+  & > div:nth-child(10),
+  & > div:nth-child(13),
+  & > div:nth-child(15),
+  & > div:nth-child(17),
+  & > div:nth-child(19) {
+    text-align: center;
+    color: var(--Theme-Color, #fc1682);
+    font-family: FakePearl;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 41.6px */
+    letter-spacing: 2.6px;
+    width: 280px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.table_new_mobile_br {
+  display: none;
+}
+.eg_new_pc {
+  margin-top: 125px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .eg_img_pc {
+    margin-top: 63px;
+    display: flex;
+    flex-direction: column;
+    gap: 155px 0;
+    position: relative;
+    & > div {
+      & > div:nth-child(1) {
+        margin-bottom: 12px;
+        color: #fc1682;
+        text-align: center;
+        font-family: FakePearl;
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 48px */
+        letter-spacing: 3px;
+        text-decoration-line: underline;
+      }
+    }
+    & > div:nth-child(1)::after {
+      content: '';
+      width: 100%;
+      height: 1px;
+      background: #fc1682;
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+    }
+  }
+}
+.evaluate {
+  margin-top: 170px;
+  background: url('https://static.cmereye.com/imgs/2024/08/8bf5803f370150a6.png')
+    no-repeat;
+  padding: 80px 0 220px;
+  width: 100%;
+  background-size: 100% 100%;
+  & > div:nth-child(2) {
+    max-width: 1290px;
+    margin: 55px auto 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 34px;
+    & > div:nth-child(1) {
+      grid-row: span 2;
+      & > div:nth-child(1) {
+        background: #fff;
+        box-sizing: border-box;
+        padding: 22px 23px 30px;
+        border-radius: 18.377px;
+        & > div {
+          display: flex;
+          align-items: center;
+          gap: 0 5px;
+          margin-bottom: 10px;
+          & > div:nth-child(1) {
+            min-width: 43px;
+            & > img {
+              width: 100%;
+            }
+          }
+          & > div:nth-child(2) {
+            display: flex;
+            align-items: baseline;
+            color: var(--Theme-Color, #fc1682);
+            font-family: FakePearl;
+            font-size: 36.754px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%; /* 58.807px */
+            white-space: nowrap;
+            span {
+              font-size: 29.404px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 160%;
+            }
+          }
+        }
+      }
+      & > div:nth-child(2) {
+        margin-top: 38px;
+      }
+    }
+    .evaluate_item_two {
+      border-radius: 4.331px;
+      background: var(--White, #fff);
+      box-sizing: border-box;
+      padding: 25px;
+      & > div:nth-child(1) {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        & > div:nth-child(1) {
+          color: var(--Theme-Color, #fc1682);
+          font-family: FakePearl;
+          font-size: 25.985px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 160%; /* 41.576px */
+          letter-spacing: 2.599px;
+        }
+        & > div:nth-child(2) {
+          color: var(--Grey-Mid, #666);
+          text-align: right;
+          font-family: 'Noto Sans HK';
+          font-size: 17.324px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 160%; /* 27.718px */
+          letter-spacing: 3.465px;
+        }
+      }
+      & > div:nth-child(2) {
+        color: var(--Grey-Deep, #4d4d4d);
+        text-align: justify;
+        font-family: 'Noto Sans HK';
+        font-size: 17.324px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 27.718px */
+        letter-spacing: 3.465px;
+      }
+    }
+    .evaluate_item_two:nth-child(3),
+    .evaluate_item_two:nth-child(5) {
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          color: var(--Blue-Deep, #00aeff);
+        }
+      }
+    }
+  }
+}
+
+.test_tooth {
+  margin-top: 40px;
+  background: url('https://static.cmereye.com/imgs/2024/08/542f707beac2323d.png')
+    no-repeat;
+  background-position: center center;
+  min-height: 995px;
+}
+.questions {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 140px 0;
+  & > div:nth-child(1) {
+    & > div:nth-child(1) {
+      color: #fc1682;
+      font-family: FakePearl;
+      font-size: 31.392px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 130%; /* 40.809px */
+      text-align: center;
+      margin: 0 auto;
+    }
+    & > div:nth-child(2) {
+      color: var(--Grey-Deep, #4d4d4d);
+      text-align: center;
+      font-family: 'Noto Sans HK';
+      font-size: 18.835px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 160%; /* 30.136px */
+      letter-spacing: 1.884px;
+      width: fit-content;
+      margin: 0 auto;
+    }
+    margin-bottom: 35px;
+  }
+  & > div:nth-child(2) {
+    & > div {
+      width: 100%;
+      border-radius: 90px;
+      border: 1px solid #fc1682;
+      background: #fff;
+      color: var(--Grey-Deep, #4d4d4d);
+      text-align: center;
+
+      font-family: 'Noto Sans HK';
+      font-size: 18.835px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 160%; /* 30.136px */
+      letter-spacing: 1.884px;
+      padding: 10px 0;
+      box-sizing: border-box;
+      margin-bottom: 7px;
+      transition: all 0.5s ease;
+    }
+  }
+  & > div:nth-child(3) {
+    width: fit-content;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 10px 45px;
+    border-radius: 90px;
+    background: #fc1682;
+    color: var(--White, #fff);
+    text-align: center;
+    font-family: 'Noto Sans HK';
+    font-size: 18.835px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 30.136px */
+    letter-spacing: 1.884px;
+    margin-top: 21px;
+  }
+}
+.item_leven {
+  display: none;
+}
+.leven_active {
+  display: flex;
+}
+.question_active {
+  display: none;
+}
+.leven_one,
+.leven_two,
+.leven_three,
+.leven_four {
+  display: noe;
+  flex-direction: column;
+  align-items: center;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 140px 0;
+  position: relative;
+  & > div:nth-child(1) {
+    color: #14a033;
+    font-family: FakePearl;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 130%; /* 26px */
+    position: relative;
+    width: fit-content;
+    padding-bottom: 10px;
+  }
+  & > div:nth-child(1)::after {
+    content: '';
+    width: 120%;
+    height: 1px;
+    background: #14a033;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    display: inline-block;
+  }
+  & > div:nth-child(2) {
+    box-sizing: border-box;
+    padding: 0 65px;
+    margin-top: 30px;
+    color: #14a033;
+    text-align: justify;
+    /* ServiceList-MB */
+    font-family: FakePearl;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 24px */
+    letter-spacing: 1.5px;
+  }
+  & > div:nth-child(3) {
+    position: absolute;
+    bottom: 160px;
+    left: 75px;
+    width: 120px;
+    height: 120px;
+    & > img {
+      width: 100%;
+    }
+    & > div {
+      color: #fc1682;
+      text-align: center;
+      font-family: FakePearl;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 160%; /* 24px */
+      letter-spacing: 1.5px;
+    }
+  }
+  & > div:nth-child(4) {
+    margin-top: 70px;
+    margin-right: 0;
+    margin-left: auto;
+  }
+}
+.leven_two {
+  & > div:nth-child(1) {
+    color: #febf44;
+  }
+  & > div:nth-child(1)::after {
+    background: #febf44;
+  }
+  & > div:nth-child(2) {
+    color: #febf44;
+  }
+}
+.leven_three {
+  & > div:nth-child(1) {
+    color: #ff7c1c;
+  }
+  & > div:nth-child(1)::after {
+    background: #ff7c1c;
+  }
+  & > div:nth-child(2) {
+    color: #ff7c1c;
+  }
+}
+.leven_four {
+  & > div:nth-child(1) {
+    color: #ff1313;
+  }
+  & > div:nth-child(1)::after {
+    background: #ff1313;
+  }
+  & > div:nth-child(2) {
+    color: #ff1313;
+  }
+}
+.check_active {
+  background: #fee6f1 !important;
+  transition: all 0.5s ease;
+}
+
+.nurse_mobile {
+  max-width: 1500px;
+  margin: 25px auto 125px;
+  & > div:nth-child(2) {
+    margin-top: 85px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & > div:nth-child(1) {
+      color: var(--White, #fff);
+      font-family: FakePearl;
+      font-size: 30px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 48px */
+      letter-spacing: 3px;
+      border-radius: 55.897px;
+      background: var(--Theme-Color, #fc1682);
+      box-shadow: 5.59px 5.59px 0px 0px rgba(252, 22, 130, 0.3);
+      box-sizing: border-box;
+      padding: 8.8px 255.5px;
+    }
+    & > div:nth-child(3) {
+      display: flex;
+      gap: 0 360px;
+      & > div {
+        border-radius: 44.718px;
+        background: var(--Pink-Pale, #fee6f1);
+        box-shadow: 5.59px 5.59px 0px 0px rgba(252, 22, 130, 0.5);
+        color: var(--Theme-Color, #fc1682);
+        text-align: center;
+        font-family: FakePearl;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 160%; /* 41.6px */
+        letter-spacing: 2.6px;
+        box-sizing: border-box;
+        padding: 21px 140px;
+      }
+    }
+    & > div:nth-child(4) {
+      display: flex;
+      gap: 0 360px;
+    }
+    & > div:nth-child(5) {
+      display: flex;
+      gap: 0 120px;
+      & > div {
+        border-radius: 44.718px;
+        background: var(--Pink-Pale, #fee6f1);
+        box-shadow: 5.59px 5.59px 0px 0px rgba(252, 22, 130, 0.5);
+        color: var(--Theme-Color, #fc1682);
+        text-align: center;
+        font-family: FakePearl;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 160%; /* 41.6px */
+        letter-spacing: 2.6px;
+        box-sizing: border-box;
+        padding: 21px 92px;
+      }
+    }
+  }
+}
+.health_mobile {
+  background: url('https://static.cmereye.com/imgs/2024/08/1a7e7351a27885bc.png')
+    no-repeat;
+  background-position: center center;
+  min-height: 1028px;
+  margin-top: 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  & > div:nth-child(1) {
+    color: var(--Theme-Color, #fc1682);
+    text-align: center;
+    font-family: FakePearl;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+    display: flex;
+    flex-direction: column;
+    & > span {
+      i {
+        color: #00963e;
+        font-style: normal;
+      }
+    }
+  }
+  & > div:nth-child(2) {
+    max-width: 818px;
+    margin: 0 auto;
+    gap: 0 50px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 10px;
+    box-sizing: border-box;
+    padding: 30px;
+    border-radius: 20px 20px var(--Count, 0px) var(--Count, 0px);
+    background: transparent;
+    & > div:nth-child(1) {
+      margin-bottom: 30px;
+    }
+
+    & > div:nth-child(1) {
+      border-radius: 21.211px;
+      border: 1.414px solid #fc1682;
+      background: #fff;
+      box-shadow: 4.242px 4.242px 0px 0px rgba(252, 22, 130, 0.3);
+      position: relative;
+      box-sizing: border-box;
+      height: fit-content;
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          color: #14a033;
+          text-align: center;
+          font-family: FakePearl;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 160%; /* 32px */
+          padding: 20px 20px 10px 20px;
+        }
+        & > div:nth-child(2) {
+          border-radius: var(--Count, 0px) var(--Count, 0px) 21.211px 21.211px;
+          background: var(--Pink-Pale, #fee6f1);
+          padding: 15px 20px 20px 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          color: var(--Theme-Color, #fc1682);
+          text-align: center;
+          text-shadow: 0px 1.414px 0px var(--White, #fff);
+          -webkit-text-stroke-width: 1.4140625;
+          -webkit-text-stroke-color: #fff;
+          font-family: 'Noto Sans HK';
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 160%; /* 38.4px */
+          letter-spacing: 3.84px;
+
+          i {
+            color: var(--Grey-Deep, #4d4d4d);
+            font-family: 'Noto Sans HK';
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 160%;
+            letter-spacing: 3.2px;
+          }
+        }
+      }
+    }
+    & > div:nth-child(1)::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      background: url('https://static.cmereye.com/imgs/2024/08/108f8b713654014e.png')
+        no-repeat;
+      background-size: 100% 100%;
+      width: 230px;
+      height: 203px;
+      display: inline-block;
+    }
+    & > div:nth-child(2) {
+      border-radius: 21.211px;
+      border: 1.414px solid #fc1682;
+      background: #fff;
+      box-shadow: 4.242px 4.242px 0px 0px rgba(252, 22, 130, 0.3);
+      position: relative;
+      box-sizing: border-box;
+
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          color: #14a033;
+          text-align: center;
+          font-family: FakePearl;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 160%; /* 32px */
+          padding: 20px 20px 10px 20px;
+        }
+        & > div:nth-child(2) {
+          border-radius: var(--Count, 0px) var(--Count, 0px) 21.211px 21.211px;
+          background: var(--Pink-Pale, #fee6f1);
+          & > div:nth-child(1) {
+            padding: 15px 20px 0 20px;
+            & > span:nth-child(2) {
+              & > i {
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 160%; /* 32px */
+                letter-spacing: 3.2px;
+              }
+              color: var(--Theme-Color, #fc1682);
+              font-family: 'Noto Sans HK';
+              font-size: 35px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 160%;
+              letter-spacing: 5.6px;
+              & > span {
+                color: var(--Grey-Deep, #4d4d4d);
+                font-family: 'Noto Sans HK';
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 160%;
+                letter-spacing: 2.4px;
+                position: relative;
+              }
+              & > span::after {
+                position: absolute;
+                top: 38%;
+                left: 50%;
+                content: '';
+                display: inline-block;
+                width: 100%;
+                height: 1px;
+                background: var(--Grey-Deep, #4d4d4d);
+                transform: rotate(-6deg) translate(-50%, -50%);
+              }
+            }
+          }
+          & > div:nth-child(2) {
+            padding: 10px 20px;
+            border-top: 1px solid #fc1682;
+            border-bottom: 1px solid #fc1682;
+            & > span:nth-child(2) {
+              & > span {
+                color: var(--Theme-Color, #fc1682);
+                font-family: 'Noto Sans HK';
+                font-size: 35px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 120%;
+                letter-spacing: 5.6px;
+              }
+              & > i {
+                color: var(--Theme-Color, #fc1682);
+                font-family: 'Noto Sans HK';
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 100%;
+                letter-spacing: 3.2px;
+              }
+            }
+          }
+          & > div:nth-child(3) {
+            padding: 0 20px 20px 20px;
+            & > span:nth-child(1) {
+              & > i {
+                color: var(--Theme-Color, #fc1682);
+                font-family: 'Noto Sans HK';
+                font-size: 35px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 160%;
+                letter-spacing: 5.6px;
+                & > i {
+                  color: var(--Theme-Color, #fc1682);
+                  font-family: 'Noto Sans HK';
+                  font-size: 20px;
+                  font-style: normal;
+                  font-weight: 700;
+                  line-height: 160%;
+                  letter-spacing: 3.2px;
+                }
+              }
+            }
+            & > span:nth-child(2) {
+              & > i {
+                color: var(--Grey-Deep, #4d4d4d);
+                font-family: 'Noto Sans HK';
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 160%;
+                letter-spacing: 2.4px;
+                position: relative;
+              }
+              & > i::after {
+                position: absolute;
+                top: 38%;
+                left: 50%;
+                content: '';
+                display: inline-block;
+                width: 85%;
+                height: 1px;
+                background: var(--Grey-Deep, #4d4d4d);
+                transform: rotate(-6deg) translate(-50%, -50%);
+              }
+            }
+          }
+          & > div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+          color: var(--Grey-Deep, #4d4d4d);
+          text-align: center;
+          text-shadow: 0px 1.414px 0px var(--White, #fff);
+          -webkit-text-stroke-width: 1.4140625;
+          -webkit-text-stroke-color: #fff;
+          font-family: 'Noto Sans HK';
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 160%; /* 32px */
+          letter-spacing: 3.2px;
+        }
+      }
+    }
+    & > div:last-child {
+      grid-column: 2 span;
+      margin-top: 20px;
+      color: var(--Grey-Deep, #4d4d4d);
+      font-family: 'Noto Sans HK';
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 32px */
+      letter-spacing: 4px;
+      text-align: center;
+    }
+  }
+}
+.abs_box {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  background: url(https://static.cmereye.com/imgs/2024/08/804246100e3ed97f.png)
+    no-repeat;
+  background-size: 100% 100%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  & > span:nth-child(1) {
+    color: #fff;
+    text-align: center;
+    font-family: FakePearl;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%; /* 22.4px */
+  }
+  & > span:nth-child(2) {
+    color: #fff;
+    text-align: center;
+    font-family: FakePearl;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 32px */
+  }
+}
+
+.doctor_new_mobile {
+  margin-top: 50px;
+  & > div:nth-child(2) {
+    margin-top: 20px;
+    max-width: 100%;
+    margin: 20px 100px 0;
+    overflow-y: scroll;
+    display: flex;
+    gap: 0 30px;
+    box-sizing: border-box;
+    padding: 280px 10px 20px 10px;
+    & > div {
+      background: var(--Pink-Pale, #fee6f1);
+      position: relative;
+      min-width: 360px;
+      padding-top: 170px;
+      box-sizing: border-box;
+      padding: 90px 7px 20px 7px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 540px;
+      & > div:nth-child(1) {
+        background: var(--Pink-Pale, #fee6f1);
+        position: absolute;
+        top: -235px;
+        width: 310px;
+        height: 310px;
+        border-radius: 50%;
+        border: 3px solid #fff;
+        box-shadow: 1px 2px 17.1px 0px rgba(252, 22, 130, 0.5);
+        overflow: hidden;
+        & > img {
+          width: 100%;
+        }
+      }
+      & > div:nth-child(2) {
+        position: absolute;
+        z-index: 5;
+        top: 15px;
+        color: var(--Theme-Color, #fc1682);
+        text-align: center;
+        font-family: FakePearl;
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 56px */
+        letter-spacing: 7px;
+        background: #fff;
+        border: 5px solid #ffdde9;
+        width: 100%;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & > span {
+          padding-top: 5px;
+          color: var(--Theme-Color, #fc1682);
+          font-family: FakePearl;
+          font-size: 22px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 160%;
+          letter-spacing: 1px;
+        }
+      }
+      & > div:nth-child(3) {
+        background: var(
+          --Grad-Pink-Double,
+          linear-gradient(
+            90deg,
+            rgba(255, 221, 218, 0) 12.24%,
+            #fc1682 42.01%,
+            #fc1682 61.44%,
+            rgba(255, 221, 218, 0) 94.94%
+          )
+        );
+        color: var(--White, #fff);
+        text-align: center;
+        font-family: FakePearl;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 24px */
+        letter-spacing: 2.5px;
+        width: 100%;
+      }
+      & > div:nth-child(4) {
+        margin-top: 5px;
+        padding: 0 10px;
+        display: flex;
+        flex-direction: column;
+        & > span:nth-child(1) {
+          color: var(--Grey-Deep, #4d4d4d);
+          font-family: FakePearl;
+          font-size: 26px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 160%; /* 24px */
+          letter-spacing: 2.5px;
+        }
+        & > span:nth-child(2) {
+          color: var(--Grey-Deep, #4d4d4d);
+          text-align: justify;
+          font-family: FakePearl;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 160%; /* 19.2px */
+          letter-spacing: 4px;
+        }
+      }
+    }
+  }
+  & > div:nth-child(2)::-webkit-scrollbar {
+    height: 18px;
+    width: 0;
+    cursor: pointer;
+  }
+  & > div:nth-child(2)::-webkit-scrollbar-thumb {
+    height: 15px;
+    background: #fc1682;
+    cursor: pointer;
+  }
+  & > div:nth-child(2)::-webkit-scrollbar-track {
+    background: #ececec;
+  }
+}
+.consult_mobile {
+  width: fit-content;
+  border-radius: 95px;
+  background: var(--Theme-Color, #fc1682);
+  box-shadow: 1px 2px 17.1px 0px rgba(252, 22, 130, 0.5);
+  box-sizing: border-box;
+  padding: 6px 20px;
+  color: var(--White, #fff);
+  text-align: center;
+  font-family: FakePearl;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%; /* 32px */
+  position: absolute;
+  bottom: 20px;
 }
 @media (min-width: 768px) and (max-width: 1920px) {
   .reason {
@@ -1930,6 +3685,9 @@ const close = () => {
         }
       }
     }
+  }
+  .table_new_mobile_br {
+    display: none;
   }
   .reason2 {
     margin-top: 7.8125vw;
@@ -2030,6 +3788,9 @@ const close = () => {
   }
 }
 @media only screen and (max-width: 768px) {
+  .table_new_mobile_br {
+    display: block;
+  }
   .reason {
     margin-top: 55px;
     &-title {
@@ -2059,7 +3820,10 @@ const close = () => {
         flex-direction: row-reverse;
         gap: 0 16px;
         & > div:nth-child(1) {
-          width: 94px;
+          width: 94px !important;
+          height: 94px !important;
+          min-width: 94px !important;
+          min-height: 94px !important;
           & > img {
             width: 100%;
           }
@@ -2091,16 +3855,16 @@ const close = () => {
         display: flex;
         justify-content: center;
         align-items: center;
-        left: -5.33vw;
-        top: -0.533vw;
-        height: 104%;
-        width: 5.33vw;
+        left: -3.33vw !important;
+        top: -0.533vw !important;
+        height: 104% !important;
+        width: 5.33vw !important;
         border-radius: 10px var(--Count, 0px) var(--Count, 0px) 10px;
         background: var(--Theme-Color, #fc1682);
         color: var(--White, #fff);
         text-align: center;
         font-family: FakePearl;
-        font-size: 5.33vw;
+        font-size: 5.33vw !important;
         font-style: normal;
         font-weight: 400;
         line-height: 160%; /* 32px */
@@ -2398,19 +4162,36 @@ const close = () => {
     &-lists {
       width: auto;
       margin: 34px 15px 0;
+      max-width: 100%;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px 10px;
       &-item {
-        width: calc(100% / 3);
+        // width: calc(100% / 3);
         & > div {
           .image {
-            padding: 0 5px;
+            padding: 0;
+            width: 105px;
+            height: 105px;
+            & > img {
+              width: 100%;
+              height: 100%;
+            }
           }
           .text {
             white-space: pre-wrap;
-            font-size: 20px;
+            padding: 0;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+          }
+        }
+        &:nth-of-type(1) {
+          .text {
+            padding: 0;
           }
         }
         &:nth-of-type(n + 4) {
-          margin-top: 20px;
+          // margin-top: 20px;
         }
         &:nth-of-type(2),
         &:nth-of-type(4),
@@ -2419,7 +4200,7 @@ const close = () => {
           & > div {
             .image {
               &-in {
-                background: #fff1f0;
+                // background: #fff1f0;
               }
             }
           }
@@ -2428,7 +4209,7 @@ const close = () => {
           & > div {
             .image {
               &-in {
-                background: #fee6f1;
+                // background: #fee6f1;
               }
             }
           }
@@ -2572,13 +4353,20 @@ const close = () => {
       align-items: center;
     }
   }
+  .mobile_introduce_one_waring {
+    display: none;
+  }
   .mobile_introduce_one {
     box-sizing: border-box;
+    max-width: 100%;
+    width: 100%;
+    margin: 50px auto;
     & > div:nth-child(1) {
       padding: 0 15px;
       position: relative;
       display: flex;
       align-items: flex-end;
+      gap: 0;
       & > div:nth-child(1) {
         & > img {
           position: relative;
@@ -2610,9 +4398,9 @@ const close = () => {
       right: 0;
       position: absolute;
     }
-
     & > div:nth-child(2) {
       margin-top: 20px;
+      width: 100%;
       box-sizing: border-box;
       padding: 0 30px;
       color: var(--Grey-Deep, #4d4d4d);
@@ -2623,6 +4411,7 @@ const close = () => {
       font-weight: 400;
       line-height: 200%; /* 32px */
       letter-spacing: 1.6px;
+      position: static;
     }
   }
   .mobile_introduce_two {
@@ -2900,14 +4689,15 @@ const close = () => {
   .step_new_mobile {
     margin-top: 50px;
     box-sizing: border-box;
-    padding: 0 30px;
+    padding: 0 4vw;
   }
   .step_new_items {
     margin-top: 30px;
-    display: flex;
-    flex-wrap: wrap;
+    display: flex !important;
+    flex-wrap: wrap !important;
     justify-content: center;
-    gap: 25px 25px;
+    gap: 25px 25px !important;
+    max-width: 100%;
     & > div {
       position: relative;
       padding-top: 20px;
@@ -2921,23 +4711,23 @@ const close = () => {
         color: var(--Theme-Color, #fc1682);
         text-align: center;
         font-family: FakePearl;
-        font-size: 26px;
+        font-size: 26px !important;
         font-style: normal;
         font-weight: 600;
         line-height: 160%; /* 41.6px */
       }
       & > div:nth-child(3) {
-        margin-top: 12px;
+        margin-top: 12px !important;
         box-sizing: border-box;
-        padding: 5px 20px;
-        border-radius: 20px;
+        padding: 5px 20px !important;
+        border-radius: 20px !important;
         background: var(--Theme-Color, #fc1682);
-        box-shadow: 2px 2px 0px 0px #fff;
+        box-shadow: 2px 2px 0px 0px #fff !important;
         width: fit-content;
         color: var(--White, #fff);
         text-align: center;
         font-family: FakePearl;
-        font-size: 20px;
+        font-size: 20px !important;
         font-style: normal;
         font-weight: 400;
         line-height: 160%; /* 32px */
@@ -2948,11 +4738,11 @@ const close = () => {
         color: var(--Grey-Deep, #4d4d4d);
         text-align: center;
         font-family: FakePearl;
-        font-size: 12px;
+        font-size: 12px !important;
         font-style: normal;
-        font-weight: 400;
+        font-weight: 400 !important;
         line-height: 160%; /* 19.2px */
-        letter-spacing: 1.2px;
+        letter-spacing: 1.2px !important;
         display: flex;
         flex-direction: column;
       }
@@ -2966,10 +4756,13 @@ const close = () => {
       margin-top: 20px;
       display: flex;
       flex-direction: column;
-
+      & > div:nth-child(1) {
+        min-width: 100%;
+      }
       & > div:nth-child(2) {
         margin-top: 20px;
         display: flex;
+        flex-direction: row;
         gap: 0 40px;
         box-sizing: border-box;
         padding: 0 23px;
@@ -3150,6 +4943,7 @@ const close = () => {
     opacity: 0.2;
   }
   .evaluate {
+    max-width: 100%;
     margin-top: 50px;
     background: url('https://static.cmereye.com/imgs/2024/08/5d6748e39cf5023e.png')
       no-repeat;
@@ -3157,8 +4951,16 @@ const close = () => {
     box-sizing: border-box;
     padding: 35px 30px 40px;
     position: relative;
+
     & > div:nth-child(2) {
       margin-top: 20px;
+      max-width: 100%;
+      display: flex;
+      gap: 0;
+      flex-direction: column;
+      & > div {
+        grid-row: span 1;
+      }
     }
   }
   .evaluate_item_one,
@@ -3174,29 +4976,36 @@ const close = () => {
   .evaluate_item_one {
     margin-bottom: 16px;
     & > div:nth-child(1) {
-      margin-bottom: 7px;
-      justify-content: flex-start;
-      gap: 0 10px;
-      align-items: flex-end;
-      padding-left: 4px;
-      & > div:nth-child(2) {
-        color: var(--Theme-Color, #fc1682);
-        font-family: FakePearl;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 160%; /* 32px */
-        & > span {
-          font-size: 16px;
-          font-weight: 400;
-          line-height: 160%;
+      display: flex;
+      flex-direction: column;
+      & > div:nth-child(1) {
+        margin-bottom: 7px;
+        justify-content: flex-start;
+        gap: 0 10px;
+        align-items: flex-end;
+        padding-left: 4px;
+        & > div:nth-child(2) {
+          color: var(--Theme-Color, #fc1682);
+          font-family: FakePearl;
+          font-size: 20px !important;
+          font-style: normal;
+          font-weight: 400 !important;
+          line-height: 160%; /* 32px */
+          & > span {
+            font-size: 16px !important;
+            font-weight: 400 !important;
+            line-height: 160%;
+          }
+        }
+      }
+      & > a {
+        & > img {
+          width: 100%;
         }
       }
     }
-    & > a {
-      & > img {
-        width: 100%;
-      }
+    & > div:nth-child(2) {
+      display: none;
     }
   }
   .evaluate_item_two {
@@ -3207,18 +5016,18 @@ const close = () => {
       & > div:nth-child(1) {
         color: var(--Theme-Color, #fc1682);
         font-family: FakePearl;
-        font-size: 20px;
+        font-size: 20px !important;
         font-style: normal;
-        font-weight: 600;
+        font-weight: 600 !important;
         line-height: 160%; /* 32px */
       }
       & > div:nth-child(2) {
         color: var(--Grey-Mid, #666);
         text-align: right;
         font-family: 'Noto Sans HK';
-        font-size: 12px;
+        font-size: 12px !important;
         font-style: normal;
-        font-weight: 500;
+        font-weight: 500 !important;
         line-height: 160%; /* 19.2px */
         letter-spacing: 1.2px;
       }
@@ -3227,11 +5036,11 @@ const close = () => {
       color: var(--Grey-Deep, #4d4d4d);
       text-align: justify;
       font-family: 'Noto Sans HK';
-      font-size: 12px;
+      font-size: 12px !important;
       font-style: normal;
-      font-weight: 500;
+      font-weight: 500 !important;
       line-height: 160%; /* 19.2px */
-      letter-spacing: 1.2px;
+      letter-spacing: 1.2px !important;
     }
   }
   .item_name_even {
@@ -3259,6 +5068,7 @@ const close = () => {
     min-height: 615px;
   }
   .questions {
+    padding: 0;
     & > div:nth-child(1) {
       & > div:nth-child(1) {
         color: #fc1682;
@@ -3376,6 +5186,24 @@ const close = () => {
       letter-spacing: 1.5px;
     }
     & > div:nth-child(3) {
+      position: absolute;
+      bottom: 160px;
+      left: 75px;
+      & > img {
+        width: 100%;
+      }
+      & > div {
+        color: #fc1682;
+        text-align: center;
+        font-family: FakePearl;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 160%; /* 24px */
+        letter-spacing: 1.5px;
+      }
+    }
+    & > div:nth-child(4) {
       margin-top: 70px;
       margin-right: 0;
       margin-left: auto;
@@ -3420,6 +5248,8 @@ const close = () => {
   }
 
   .nurse_mobile {
+    margin: 0 auto;
+    max-width: 100%;
     & > div:nth-child(2) {
       margin-top: 20px;
       display: flex;
@@ -3502,6 +5332,8 @@ const close = () => {
     }
   }
   .health_mobile {
+    min-height: 828px;
+    background: none;
     margin-top: 52px;
     & > div:nth-child(1) {
       color: var(--Theme-Color, #fc1682);
@@ -3520,6 +5352,8 @@ const close = () => {
       }
     }
     & > div:nth-child(2) {
+      gap: 0;
+      max-width: 100%;
       margin-top: 10px;
       box-sizing: border-box;
       padding: 30px;
@@ -3529,10 +5363,14 @@ const close = () => {
         #fee6f1 -23.02%,
         rgba(255, 255, 255, 0) 58.97%
       );
+      display: flex;
+      flex-direction: column;
       & > div:nth-child(1) {
         margin-bottom: 30px;
       }
-
+      & > div:nth-child(1)::after {
+        content: none;
+      }
       & > div:nth-child(1) {
         border-radius: 21.211px;
         border: 1.414px solid #fc1682;
@@ -3744,6 +5582,7 @@ const close = () => {
         font-weight: 400;
         line-height: 200%; /* 32px */
         letter-spacing: 1.6px;
+        text-align: left;
       }
     }
   }
