@@ -431,7 +431,9 @@ onMounted(() => {
   getWindowWidth()
   window.addEventListener('resize', getWindowWidth)
   egImg(0)
-  doctorList_periodontal()
+  setTimeout(() => {
+    doctorList_periodontal()
+  }, 500);
 })
 // 处理医生数据 获得有 牙周病tag的医生
 interface doctorList_type {
