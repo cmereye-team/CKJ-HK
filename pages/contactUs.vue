@@ -710,6 +710,9 @@ const problemData = {
   }
 }
 @media screen and (max-width: 768px) {
+  .mbShow {
+    display: block;
+  }
   .img_complain {
     overflow: hidden;
     width: 100%;
