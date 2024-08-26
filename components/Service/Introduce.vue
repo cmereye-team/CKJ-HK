@@ -50,22 +50,25 @@ onMounted(() => {
           $t(introduceData.tabNavName)
         }}</span>
       </div>
-      <div class="introduce-in-t mbBox">
-        <img :src="introduceData.mbImg" alt="" />
-      </div>
-      <div class="introduce-in-l pageCon">
-        <div :class="['title', introduceData.pageName]">
-          {{ $t(introduceData.title) }}
-          <br
-            v-if="
-              route.path == '/dental-service/periodontal' && windowWidth < 768
-            "
-          /><span v-if="route.path == '/dental-service/periodontal'">
-            (深層洗牙/洗牙腳)</span
-          >
+      <div class="introduce_content">
+        <div class="introduce-in-t mbBox">
+          <img :src="introduceData.mbImg" alt="" />
         </div>
-        <div :class="['content', introduceData.pageName]">
-          {{ $t(introduceData.content) }}
+        <div class="introduce-in-l pageCon">
+          <div :class="['title', introduceData.pageName]">
+            <!-- {{ $t(introduceData.title) }} -->
+            <span v-html="$t(introduceData.title)"></span>
+            <br v-if="route.path == '/dental-service/periodontal'" /><span
+              v-if="
+                route.path == '/dental-service/periodontal' && windowWidth < 768
+              "
+            >
+              (深層洗牙/洗牙腳)</span
+            >
+          </div>
+          <div :class="['content', introduceData.pageName]">
+            {{ $t(introduceData.content) }}
+          </div>
         </div>
       </div>
     </div>
@@ -73,6 +76,9 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
+.introduce_content {
+  position: relative;
+}
 .introduce {
   &-in {
     margin-top: 45px;
