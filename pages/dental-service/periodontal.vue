@@ -430,10 +430,10 @@ const getWindowWidth = () => {
 onMounted(() => {
   getWindowWidth()
   window.addEventListener('resize', getWindowWidth)
-  egImg(0)
   setTimeout(() => {
-    doctorList_periodontal()
-  }, 500);
+    egImg(0)
+  }, 500)
+  doctorList_periodontal()
 })
 // 处理医生数据 获得有 牙周病tag的医生
 interface doctorList_type {
@@ -2446,10 +2446,10 @@ const isShowOldNode = ref(false)
         }
       }
     }
-    &>div:nth-child(3),
-    &>div:last-child{
-      &>div{
-        .image::after{
+    & > div:nth-child(3),
+    & > div:last-child {
+      & > div {
+        .image::after {
           content: none;
         }
       }
@@ -3682,8 +3682,9 @@ const isShowOldNode = ref(false)
       &-item {
         padding: 0 2.3438vw;
         .text {
-          font-size: 1.8229vw;
+          font-size: 1.1229vw;
           margin: 1.8229vw auto 0;
+          min-width: 186px;
         }
       }
     }

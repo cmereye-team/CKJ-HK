@@ -170,38 +170,6 @@ const onSubmit = async () => {
   // }
   postData(_form,_preferential)
   errorserver(_form,_preferential)
-  // return
-  // const { data }: any = await useFetch('https://admin.ckjhk.com/api.php/cms/addform/fcode/3',
-  //   {
-  //     method: 'post',
-  //     body: _formData,
-  //   }
-  // )
-  // let res = JSON.parse(data.value)
-  // if (res) {
-  //   if (res.code) {
-  //     ElMessage({
-  //       showClose: true,
-  //       message: '表單提交成功！我們會盡快回覆閣下。',
-  //       type: 'success',
-  //       duration: 0,
-  //     })
-  //     localStorage.setItem('contactForm', JSON.stringify(_form))
-  //     window.location.href = `/messagePage?c=${res.code}`
-  //   } else {
-  //     ElMessage({
-  //       showClose: true,
-  //       message: res.data,
-  //       type: 'error',
-  //     })
-  //   }
-  // } else {
-  //   ElMessage({
-  //     showClose: true,
-  //     message: '服务异常，请稍后重试',
-  //     type: 'error',
-  //   })
-  // }
   formLoading.value = false
   appState.setIsShowForm(false)
 }
