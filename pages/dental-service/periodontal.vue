@@ -1105,6 +1105,23 @@ const isShowOldNode = ref(false)
               <span>牙肉萎縮或牙齒鬆動</span>
             </div>
           </div>
+          <div>
+            <div>4</div>
+            <div>
+              <img
+                src="https://static.cmereye.com/imgs/2024/08/516d1644f51207ed.png"
+                srcset="
+                  https://static.cmereye.com/imgs/2024/08/c906b4f977cec876.png 400w,
+                  https://static.cmereye.com/imgs/2024/08/516d1644f51207ed.png
+                "
+                alt=""
+              />
+            </div>
+            <div>非常嚴重的牙周病</div>
+            <div>
+              <span>牙齒脫落</span>
+            </div>
+          </div>
         </div>
       </div>
       <div
@@ -2587,9 +2604,9 @@ const isShowOldNode = ref(false)
   .step_new_items {
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 0 70px;
-    max-width: 980px;
+    max-width: 1280px;
     margin: 50px auto 0;
     & > div {
       position: relative;
@@ -2619,6 +2636,7 @@ const isShowOldNode = ref(false)
         background: var(--Theme-Color, #fc1682);
         box-shadow: 3.692px 3.692px 0px 0px #fff;
         padding: 0 25px;
+        white-space: nowrap;
       }
       & > div:nth-child(4) {
         display: flex;
@@ -4696,10 +4714,12 @@ const isShowOldNode = ref(false)
   }
   .step_new_items {
     margin-top: 30px;
-    display: flex !important;
-    flex-wrap: wrap !important;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr) !important;
+    box-sizing: border-box;
+    padding: 0;
     justify-content: center;
-    gap: 25px 25px !important;
+    gap: 25px 15px !important;
     max-width: 100%;
     & > div {
       position: relative;
@@ -4719,6 +4739,14 @@ const isShowOldNode = ref(false)
         font-weight: 600;
         line-height: 160%; /* 41.6px */
       }
+      & > div:nth-child(2) {
+        width: 28vw;
+        height: 22.665vw;
+        margin: 0 auto;
+        & > img {
+          width: 100%;
+        }
+      }
       & > div:nth-child(3) {
         margin-top: 12px !important;
         box-sizing: border-box;
@@ -4730,7 +4758,7 @@ const isShowOldNode = ref(false)
         color: var(--White, #fff);
         text-align: center;
         font-family: FakePearl;
-        font-size: 20px !important;
+        font-size: 16px !important;
         font-style: normal;
         font-weight: 400;
         line-height: 160%; /* 32px */
