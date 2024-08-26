@@ -4746,7 +4746,7 @@ const isShowOldNode = ref(false)
       }
       & > div:nth-child(2) {
         width: 28vw;
-        height: 22.665vw;
+        height: 22.665vw !important;
         margin: 0 auto;
         & > img {
           width: 100%;
