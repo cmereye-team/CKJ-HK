@@ -1109,10 +1109,10 @@ const isShowOldNode = ref(false)
             <div>4</div>
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/08/516d1644f51207ed.png"
+                src="https://static.cmereye.com/imgs/2024/08/7d1a41a4f40c936c.png"
                 srcset="
-                  https://static.cmereye.com/imgs/2024/08/c906b4f977cec876.png 400w,
-                  https://static.cmereye.com/imgs/2024/08/516d1644f51207ed.png
+                  https://static.cmereye.com/imgs/2024/08/e4bcb7a79d8ce9e2.png 400w,
+                  https://static.cmereye.com/imgs/2024/08/7d1a41a4f40c936c.png
                 "
                 alt=""
               />
