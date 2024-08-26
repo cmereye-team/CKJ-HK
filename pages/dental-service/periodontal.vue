@@ -2622,6 +2622,11 @@ const isShowOldNode = ref(false)
         font-weight: 400;
         line-height: 160%; /* 65.371px */
       }
+      & > div:nth-child(2) {
+        display: flex;
+        align-items: flex-end;
+        height: 228px;
+      }
       & > div:nth-child(3) {
         margin-top: 22px;
         color: var(--White, #fff);
