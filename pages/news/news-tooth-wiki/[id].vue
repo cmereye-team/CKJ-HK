@@ -315,7 +315,7 @@ if (process.server) {
           <span>睇牙新資訊</span>
         </nuxt-link>
         <nuxt-link :to="'/news/tooth-wiki'">
-          <span :title="'牙齒百科'">牙齒百科</span>
+          <span :title="'牙齒百科'">牙齒百科11</span>
         </nuxt-link>
         <span>{{ coverageDeatail.name }}</span>
       </div>
