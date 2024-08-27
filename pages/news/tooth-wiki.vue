@@ -125,7 +125,7 @@ const subNum = () => {
   if (actPageNum.value > 1) {
     actPageNum.value--
     window.location.href = '#information'
-    getNewsLists()
+    getNewsLists('')
   }
 }
 
@@ -133,7 +133,7 @@ const addNum = () => {
   if (actPageNum.value < totalPageNum.value) {
     actPageNum.value++
     window.location.href = '#information'
-    getNewsLists()
+    getNewsLists('')
   }
 }
 
@@ -143,7 +143,7 @@ const toPage = (_page) => {
   }
   actPageNum.value = _page
   window.location.href = '#information'
-  getNewsLists()
+  getNewsLists('')
 }
 
 const handlelink = (id) => {
@@ -168,13 +168,13 @@ onMounted(() => {
     actPageNum.value = Number(sessionStorage.getItem('toothWikiPage')) || 1
   }
   setTimeout(() => {
-    getNewsLists()
+    getNewsLists('')
   })
 })
 
 if (process.server) {
   // console.log('server');
-  getNewsLists()
+  getNewsLists('')
 }
 
 const getPagination = (pageitem) => {
@@ -259,7 +259,7 @@ const handleClick = (event, _id) => {
       <div class="smallPageCon">
         <!-- <nuxt-link to="/news/news-tooth-wiki/102">测试</nuxt-link> -->
         <div class="lists" v-if="!errorpage">
-          <div class="str_s_black" v-if="strS !== ''" @click="getNewsLists()">
+          <div class="str_s_black" v-if="strS !== ''" @click="getNewsLists('')">
             返回列表
           </div>
           <div v-loading="loadingShow" class="listsbox">
