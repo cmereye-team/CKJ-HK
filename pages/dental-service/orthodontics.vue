@@ -1055,7 +1055,9 @@ const careData = {
         background: #fee6f1;
         display: flex;
         align-items: center;
+        justify-content: center;
         white-space: pre-wrap;
+        text-align: center;
         &:nth-of-type(1) {
           width: calc((102 / 1251) * 100%);
           border-radius: 60px 0 0 60px;
@@ -1352,7 +1354,6 @@ const careData = {
     font-weight: 400;
     line-height: 160%; /* 32px */
     position: absolute;
-    top: -20%;
     left: 50%;
     transform: translateX(-50%);
     background: url('https://static.cmereye.com/imgs/2024/08/70f1f6dc03eb021b.png')
@@ -1363,7 +1364,8 @@ const careData = {
     justify-content: center;
     align-items: center;
     transition: all 0.3s;
-    animation: youtube_bg 1s linear infinite;
+    animation: youtube_bg 3s linear infinite;
+    background-position: center center;
   }
   .youtobe-video::after {
     content: '優惠';
@@ -1383,9 +1385,11 @@ const careData = {
   @keyframes youtube_bg {
     0% {
       transform: translateX(-50%) rotate(0);
+      top: -20%;
     }
     100% {
       transform: translateX(-50%) rotate(360deg);
+      top: -20%;
     }
   }
   .orthodonticsPage {
@@ -1586,8 +1590,8 @@ const careData = {
     position: absolute;
     z-index: -1;
     width: 30%;
-    height: 260vw;
-    top: 0;
+    height: 200vw;
+    top: 10%;
     left: 50%;
     transform: translateX(-50%);
     background: linear-gradient(
@@ -1839,6 +1843,12 @@ const careData = {
       & > div:nth-child(3) {
         right: 0;
         bottom: 8vw;
+      }
+      & > div:nth-child(2) {
+        margin: 0 auto;
+        & > img {
+          margin: 0 auto;
+        }
       }
     }
   }
