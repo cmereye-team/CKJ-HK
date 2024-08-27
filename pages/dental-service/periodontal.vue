@@ -56,11 +56,11 @@ const symptomData = {
       title: '牙齒對冷熱敏感',
     },
     {
-      imgUrl: 'https://static.cmereye.com/imgs/2024/08/f7870df82236cf65.png',
+      imgUrl: 'https://static.cmereye.com/imgs/2024/08/16f8714f61804929.png',
       title: '牙縫變大',
     },
     {
-      imgUrl: 'https://static.cmereye.com/imgs/2024/08/16f8714f61804929.png',
+      imgUrl: 'https://static.cmereye.com/imgs/2024/08/f7870df82236cf65.png',
       title: '牙齒移位及鬆脫',
     },
     {
@@ -68,15 +68,15 @@ const symptomData = {
       title: '口氣異常',
     },
     {
-      imgUrl: 'https://static.cmereye.com/imgs/2024/08/62cc5d45cc330a55.png',
+      imgUrl: 'https://static.cmereye.com/imgs/2024/08/e07094dd166ce5cc.png',
       title: '牙齦疼痛',
     },
     {
-      imgUrl: 'https://static.cmereye.com/imgs/2024/08/4d837df8e0a06d5c.png',
+      imgUrl: 'https://static.cmereye.com/imgs/2024/08/62cc5d45cc330a55.png',
       title: '牙齦腫脹變色及化膿',
     },
     {
-      imgUrl: 'https://static.cmereye.com/imgs/2024/08/e07094dd166ce5cc.png',
+      imgUrl: 'https://static.cmereye.com/imgs/2024/08/4d837df8e0a06d5c.png',
       title: '牙齦流血',
     },
   ],
@@ -1885,7 +1885,7 @@ const isShowOldNode = ref(false)
     &-item {
       width: 462px;
       box-sizing: border-box;
-      padding: 22px 30px 74px 30px;
+      padding: 22px 30px 22px 30px;
       border-radius: 20px;
       background: #fff;
       display: flex;
@@ -2220,13 +2220,24 @@ const isShowOldNode = ref(false)
           text-align: center;
           font-size: 24px;
           font-weight: 500;
-          padding: 0 40px;
+          padding: 0;
           // white-space: nowrap;
         }
       }
       &:nth-of-type(1) {
         .text {
-          padding: 0 50px;
+          padding: 0 30px;
+        }
+      }
+      &:nth-of-type(2),
+      &:nth-of-type(4) {
+        .text {
+          padding: 0 20px;
+        }
+      }
+      &:nth-of-type(7) {
+        .text {
+          padding: 0 20px;
         }
       }
       &:nth-of-type(n + 5) {
@@ -3706,7 +3717,7 @@ const isShowOldNode = ref(false)
         padding: 0 2.3438vw;
         .text {
           font-size: 1.1229vw;
-          margin: 1.8229vw auto 0;
+          margin: 1vw auto;
           min-width: 186px;
         }
       }

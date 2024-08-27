@@ -60,7 +60,7 @@ onMounted(() => {
             <span v-html="$t(introduceData.title)"></span>
             <br v-if="route.path == '/dental-service/periodontal'" /><span
               v-if="
-                route.path == '/dental-service/periodontal' && windowWidth < 768
+                route.path == '/dental-service/periodontal' 
               "
             >
               (深層洗牙/洗牙腳)</span
