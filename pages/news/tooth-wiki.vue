@@ -110,6 +110,8 @@ const handleTags = (tags: any) => {
 
 let arrTags = ref<informationLists[]>([])
 const getTags = async (ele: any, str: string) => {
+  informationLists.value = []
+  arrTags.value = []
   await getNewsLists(str)
   informationLists.value.forEach((item) => {
     if (item.tags.includes(ele)) {
