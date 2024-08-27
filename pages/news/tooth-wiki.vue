@@ -34,7 +34,7 @@ let informationLists = ref([
     desc: '',
     name: '',
     time: '',
-    tags: '',
+    tags: [],
   },
 ])
 const formatDate = (dateString) => {
@@ -63,19 +63,22 @@ const formatDate = (dateString) => {
 let totalPageNum = ref(1)
 let actPageNum = ref(1)
 let loadingShow = ref(false)
-
-const getNewsLists = async () => {
+let strS = ref('')
+const getNewsLists = async (str: string) => {
+  strS.value = ''
+  if (str) {
+    strS.value = str
+  }
+  let url = `https://admin.ckjhk.com/api.php/list/16/page/${actPageNum.value}/num/6`
+  let filterUrl = `https://admin.ckjhk.com/api.php/list/16`
   loadingShow.value = true
   try {
-    const _res: any = await useFetch(
-      `https://admin.ckjhk.com/api.php/list/16/page/${actPageNum.value}/num/6`,
-      {
-        method: 'post',
-      }
-    )
+    const _res: any = await useFetch(strS.value === '' ? url : filterUrl, {
+      method: 'post',
+    })
     let res = JSON.parse(_res.data.value) || null
     if (res) {
-      totalPageNum.value = Math.ceil(res.rowtotal / 6)
+      totalPageNum.value =  Math.ceil(res.rowtotal / 6) 
       informationLists.value = res.data.map((item) => {
         return {
           id: item.id || '',
@@ -86,7 +89,7 @@ const getNewsLists = async () => {
           desc: item.ext_news_desc || '',
           name: item.title || '',
           time: formatDate(item.update_time) || '',
-          tags: item.ext_news_hashtag || '',
+          tags: handleTags(item.ext_news_hashtag) || [''],
         }
       })
     }
@@ -96,6 +99,26 @@ const getNewsLists = async () => {
     errorpage.value = true
     loadingShow.value = false
   }
+}
+
+const handleTags = (tags: any) => {
+  let _tags = tags.split('#')
+  return _tags.filter((item) => {
+    return item !== ''
+  })
+}
+
+const getTags = async (ele: any, str: string) => {
+  await getNewsLists(str)
+  let arrTags = ref([])
+  informationLists.value.forEach((item) => {
+    if (item.tags.includes(ele)) {
+      arrTags.value.push(item)
+    }
+  })
+  informationLists.value = arrTags.value
+  totalPageNum.value =  Math.ceil(informationLists.value.length / 6) 
+  return informationLists
 }
 
 const subNum = () => {
@@ -236,9 +259,12 @@ const handleClick = (event, _id) => {
       <div class="smallPageCon">
         <!-- <nuxt-link to="/news/news-tooth-wiki/102">测试</nuxt-link> -->
         <div class="lists" v-if="!errorpage">
+          <div class="str_s_black" v-if="strS !== ''" @click="getNewsLists()">
+            返回列表
+          </div>
           <div v-loading="loadingShow" class="listsbox">
+            <!-- :to="`/news/news-tooth-wiki/${item.id}`" -->
             <nuxt-link
-              :to="`/news/news-tooth-wiki/${item.id}`"
               :id="`i${item.id}`"
               :alt="item.name"
               :title="item.name"
@@ -300,7 +326,12 @@ const handleClick = (event, _id) => {
                 </div>
                 <div class="desc" v-html="item.desc"></div>
                 <div class="tags">
-                  {{ item.tags }}
+                  <span
+                    @click.stop="getTags(el, 'tag')"
+                    v-for="(el, index) in item.tags"
+                    :key="index"
+                    >#{{ el }}</span
+                  >
                 </div>
                 <div style="flex: 1"></div>
                 <div class="btn">
@@ -407,6 +438,16 @@ const handleClick = (event, _id) => {
   .listsbox {
     display: flex;
     flex-wrap: wrap;
+  }
+  .str_s_black {
+    margin: 10px 0;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    color: var(--indexColor1);
   }
   &-in {
     display: flex;
@@ -717,6 +758,10 @@ const handleClick = (event, _id) => {
     margin-top: 0px;
   }
   .lists {
+    .str_s_black {
+      margin: 10px 20px;
+      font-size: 16px;
+    }
     &-in {
       flex-direction: column;
       width: 100%;
