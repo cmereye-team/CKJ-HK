@@ -27,16 +27,16 @@ const headerConfig = {
 }
 
 let errorpage = ref(false)
-let informationLists = ref([
-  {
-    id: '',
-    img: '',
-    desc: '',
-    name: '',
-    time: '',
-    tags: [],
-  },
-])
+
+interface informationLists {
+    id: string;
+    img: string;
+    desc: string;
+    name: string;
+    time: string;
+    tags: string[];
+}
+let informationLists = ref<informationLists[]>([])
 const formatDate = (dateString) => {
   let _date = new Date(dateString)
   if (_date.getTime() > Date.now() - 86400000 * 2) {
@@ -108,9 +108,9 @@ const handleTags = (tags: any) => {
   })
 }
 
+let arrTags = ref<informationLists[]>([])
 const getTags = async (ele: any, str: string) => {
   await getNewsLists(str)
-  let arrTags = ref([])
   informationLists.value.forEach((item) => {
     if (item.tags.includes(ele)) {
       arrTags.value.push(item)
