@@ -1590,7 +1590,7 @@ const careData = {
     position: absolute;
     z-index: -1;
     width: 30%;
-    height: 200vw;
+    height: 190vw;
     top: 10%;
     left: 50%;
     transform: translateX(-50%);
