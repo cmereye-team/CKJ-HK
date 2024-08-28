@@ -579,6 +579,15 @@ const showDetail = () => {
   isShow.value = !isShow.value
 }
 const isShowOldNode = ref(false)
+const imgSrc = ref(false)
+const imgSrcHandel = (i: any) => {
+  if (i == 0) {
+    imgSrc.value = false
+  }
+  if (i == 1) {
+    imgSrc.value = true
+  }
+}
 </script>
 
 
@@ -891,19 +900,19 @@ const isShowOldNode = ref(false)
         <div>
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/08/baf68581008158d5.png"
+              :src="imgSrc ? 'https://static.cmereye.com/imgs/2024/02/2f20ab9660e0bfa7.webp':'https://static.cmereye.com/imgs/2024/08/baf68581008158d5.png'"
               alt=""
             />
           </div>
           <div>
             <div>
-              <div>
+              <div @click="imgSrcHandel(0)" style="border-radius: 5px;" :style="{border:imgSrc == false ? '1px solid #FC1682':'1px solid #fff'}">
                 <img
                   src="https://static.cmereye.com/imgs/2024/08/8f0a70c1e09405e6.png"
                   alt=""
                 />
               </div>
-              <div>
+              <div @click="imgSrcHandel(1)" style="border-radius: 5px;" :style="{border:imgSrc== true ? '1px solid #FC1682':'1px solid #fff'}">
                 <img
                   src="https://static.cmereye.com/imgs/2024/08/bdfac71abee9d68d.png"
                   alt=""
@@ -2812,7 +2821,8 @@ const isShowOldNode = ref(false)
     width: 316px;
     padding: 30px 15px;
     justify-content: center;
-    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+      1px 1px 0 #fff;
   }
   & > div:nth-child(5) {
     text-align: center;
@@ -2828,7 +2838,8 @@ const isShowOldNode = ref(false)
     width: 316px;
     padding: 30px 15px;
     justify-content: center;
-    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+      1px 1px 0 #fff;
   }
   & > div:nth-child(12) {
     text-align: center;
@@ -2836,7 +2847,8 @@ const isShowOldNode = ref(false)
     width: 316px;
     padding: 30px 15px;
     border-radius: var(--Count, 0px) var(--Count, 0px) var(--Count, 0px) 20px;
-    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+      1px 1px 0 #fff;
     background: #fca3a3;
     text-align: center;
     font-family: FakePearl;
@@ -4964,7 +4976,8 @@ const isShowOldNode = ref(false)
       line-height: 160%; /* 19.2px */
       letter-spacing: 0.32vw;
       text-align: center;
-      text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+      text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+        1px 1px 0 #fff;
     }
     & > div:nth-child(5) {
       max-width: 22.133vw;
@@ -4979,7 +4992,8 @@ const isShowOldNode = ref(false)
       line-height: 160%; /* 19.2px */
       letter-spacing: 0.32vw;
       min-height: 100%;
-      text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+      text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+        1px 1px 0 #fff;
     }
     & > div:nth-child(12) {
       max-width: 22.133vw;
@@ -4995,7 +5009,8 @@ const isShowOldNode = ref(false)
       font-weight: 400;
       line-height: 160%; /* 19.2px */
       letter-spacing: 0.32vw;
-      text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+      text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
+        1px 1px 0 #fff;
     }
     & > div:last-child {
       border-radius: var(--Count, 0px) var(--Count, 0px) 20px var(--Count, 0px);
