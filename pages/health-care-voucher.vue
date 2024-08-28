@@ -2608,6 +2608,10 @@ const newsmoduleLists = [
     }
   }
 }
+@media screen and (min-width: 769px) {
+  .explain_box_mobile{
+  display:none !important; 
+}  
 @media screen and (max-width: 768px) {
   .explain {
     color: var(--Grey-Deep, #4d4d4d);
