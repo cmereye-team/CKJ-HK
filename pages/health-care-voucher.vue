@@ -1210,6 +1210,7 @@ const newsmoduleLists = [
                   <div class="abs_box"><span>優惠</span><span>8</span></div>
                 </div>
               </div>
+              <div class="explain">優惠只限於網上及電話預約客戶</div>
               <!-- <div v-else class="new_info_content_items">
                 <div>
                   <div>
@@ -1424,7 +1425,7 @@ const newsmoduleLists = [
     }
   }
   & > div:nth-child(3) {
-    margin-top: 70px;
+    margin-top: 0px;
     color: var(--Grey-Deep, #4d4d4d);
     text-align: center;
     font-family: 'Noto Sans HK';
@@ -1434,6 +1435,18 @@ const newsmoduleLists = [
     line-height: 160%; /* 32px */
     letter-spacing: 4px;
   }
+}
+.explain {
+  color: var(--Grey-Deep, #4d4d4d);
+  text-align: right;
+  font-family: 'Noto Sans HK';
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  letter-spacing: 4px;
+  position: relative;
+  top: -30px;
 }
 .new_info_content_items {
   display: grid;
@@ -2596,6 +2609,18 @@ const newsmoduleLists = [
   }
 }
 @media screen and (max-width: 768px) {
+  .explain {
+    color: var(--Grey-Deep, #4d4d4d);
+    text-align: right;
+    font-family: 'Noto Sans HK';
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+    letter-spacing: 2px;
+    position: relative;
+    top: 20px;
+  }
   .iframe {
     width: 100%;
     height: 56vw;

@@ -100,7 +100,15 @@ const getNewsLists = async (str: string) => {
     loadingShow.value = false
   }
 }
-
+const checkAndRemoveLastChar = (str, charToRemove)=> {
+  // 检查字符串的最后一位是否为指定字符
+  if (str.endsWith(charToRemove)) {
+    // 如果是，则去除最后一位
+    return str.slice(0, -1);
+  }
+  // 如果不是，则返回原字符串
+  return str;
+}
 const handleTags = (tags: any) => {
   let _tags = tags.split('#')
   return _tags.filter((item) => {

@@ -170,6 +170,7 @@ onMounted(() => {
       changlangsfun('s')
     }
   }, 500)
+  isHealthCare()
 })
 const windowWidth = ref(1920)
 
@@ -262,6 +263,18 @@ const handlecopywechatcode = () => {
 }
 const handleopenwechat = () => {
   window.location.href = 'weixin://'
+}
+const showExplain = ref(true)
+const isHealthCare = () => {
+  if (route.path === '/dental-service/scaling-and-polishing') {
+    showExplain.value = true
+  } else if (route.path == '/health-care-voucher') {
+    showExplain.value = true
+  } else if (route.path == '/news/news-tooth-wiki/263') {
+    showExplain.value = true
+  } else {
+    showExplain.value = false
+  }
 }
 </script>
 
@@ -367,6 +380,9 @@ const handleopenwechat = () => {
         "
         class="waterBg-implant"
       ></div>
+      <div class="explain_box_mobile" v-if="showExplain">
+        <span>優惠只限於網上及電話預約客戶</span>
+      </div>
       <div
         v-if="
           [
@@ -381,6 +397,17 @@ const handleopenwechat = () => {
       >
         <div>29年專科•專業•專注</div>
         <div><span>港人首選</span>一站式連鎖牙科品牌</div>
+        <div
+          v-if="showExplain"
+          style="
+            font-style: normal;
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 160%;
+          "
+        >
+          <span style="color: #666666">優惠只限於網上及電話預約客戶</span>
+        </div>
       </div>
       <div
         v-if="headerConfig.pageName === 'periodontal-test'"
@@ -929,6 +956,21 @@ const handleopenwechat = () => {
   }
   .waterBg-implant {
     display: none;
+  }
+  .explain_box_mobile {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 160%;
+    position: relative;
+    z-index: 45;
+    display: flex;
+    top: 20px;
+    justify-content: flex-end;
+    margin-right: 230px;
+    & > span {
+      color: #666666;
+    }
   }
   &-text-implant {
     position: absolute;
@@ -1851,6 +1893,21 @@ const handleopenwechat = () => {
         -webkit-animation-timing-function: linear;
         -webkit-animation-iteration-count: infinite;
         filter: drop-shadow(0px -8px 4px rgba(77, 77, 77, 0.15));
+      }
+    }
+    .explain_box_mobile {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 160%;
+      position: relative;
+      z-index: 38;
+      top: -60px;
+      width: fit-content;
+      margin-right: 30px;
+      margin-left: auto;
+      & > span {
+        color: #666666;
       }
     }
     // &-bgImg-implant-mb {
