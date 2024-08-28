@@ -2236,7 +2236,7 @@ const isShowOldNode = ref(false)
       }
       &:nth-of-type(1) {
         .text {
-          padding: 0 30px;
+          padding: 0 40px;
         }
       }
       &:nth-of-type(2),
@@ -3820,7 +3820,7 @@ const isShowOldNode = ref(false)
           }
         }
         &:nth-of-type(n + 5) {
-          margin-top: 4.6875vw;
+          // margin-top: 4.6875vw;
         }
       }
     }
