@@ -900,19 +900,37 @@ const imgSrcHandel = (i: any) => {
         <div>
           <div>
             <img
-              :src="imgSrc ? 'https://static.cmereye.com/imgs/2024/02/2f20ab9660e0bfa7.webp':'https://static.cmereye.com/imgs/2024/08/baf68581008158d5.png'"
+              :src="
+                imgSrc
+                  ? 'https://static.cmereye.com/imgs/2024/02/2f20ab9660e0bfa7.webp'
+                  : 'https://static.cmereye.com/imgs/2024/08/baf68581008158d5.png'
+              "
               alt=""
             />
           </div>
           <div>
             <div>
-              <div @click="imgSrcHandel(0)" style="border-radius: 5px;" :style="{border:imgSrc == false ? '1px solid #FC1682':'1px solid #fff'}">
+              <div
+                @click="imgSrcHandel(0)"
+                style="border-radius: 5px"
+                :style="{
+                  border:
+                    imgSrc == false ? '1px solid #FC1682' : '1px solid #fff',
+                }"
+              >
                 <img
                   src="https://static.cmereye.com/imgs/2024/08/8f0a70c1e09405e6.png"
                   alt=""
                 />
               </div>
-              <div @click="imgSrcHandel(1)" style="border-radius: 5px;" :style="{border:imgSrc== true ? '1px solid #FC1682':'1px solid #fff'}">
+              <div
+                @click="imgSrcHandel(1)"
+                style="border-radius: 5px"
+                :style="{
+                  border:
+                    imgSrc == true ? '1px solid #FC1682' : '1px solid #fff',
+                }"
+              >
                 <img
                   src="https://static.cmereye.com/imgs/2024/08/bdfac71abee9d68d.png"
                   alt=""
@@ -1396,25 +1414,35 @@ const imgSrcHandel = (i: any) => {
           </div>
           <div>
             <div class="checkItem" @click="checkbox(0, 1)">
-              即使刷牙後，口腔仍然持續有異味
+              <span>即使刷牙後，口腔仍然持續有異味</span>
             </div>
             <div class="checkItem" @click="checkbox(1, 1)">
-              刷牙或使用牙線時牙齦經常會出血
+              <span>刷牙或使用牙線時牙齦經常會出血</span>
             </div>
             <div class="checkItem" @click="checkbox(2, 2)">
+              <span>
               牙齦比往時更加紅腫或容易疼痛
+              </span>
             </div>
             <div class="checkItem" @click="checkbox(3, 2)">
-              牙齦有膿瘡或牙齦間有膿液滲出
+              <span>
+                牙齦有膿瘡或牙齦間有膿液滲出
+              </span>
             </div>
             <div class="checkItem" @click="checkbox(4, 3)">
-              牙齦出現退縮，多隻牙齒看起來比往時更長
+              <span>
+                牙齦出現退縮，多隻牙齒看起來比往時更長
+              </span>
             </div>
             <div class="checkItem" @click="checkbox(5, 3)">
-              牙齒有鬆動的感覺或者咬合時感覺不對勁
+              <span>
+                牙齒有鬆動的感覺或者咬合時感覺不對勁
+              </span>
             </div>
             <div class="checkItem" @click="checkbox(6, 3)">
-              牙齒之間出現新的縫隙或者牙齦分隔
+              <span>
+                牙齒之間出現新的縫隙或者牙齦分隔
+              </span>
             </div>
           </div>
           <a @click="result()">看結果</a>
@@ -3100,7 +3128,41 @@ const imgSrcHandel = (i: any) => {
       box-sizing: border-box;
       margin-bottom: 12px;
       transition: all 0.5s ease;
-      animation: breathe 3s linear infinite;
+      overflow: hidden;
+      position: relative;
+      &>span {
+        position: relative;
+        z-index: 2;
+      }
+    }
+    & > div::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: 40%;
+      border-radius: 90px;
+      height: 100%;
+      background: linear-gradient(90deg, #ffffff00, #fdd3e3 50% ,#ffffff00);
+      transition: all 0.5s linear ;
+      animation: flow 2s linear infinite;
+    }
+    & > div:nth-child(2):before {
+      animation: flow 3s  linear infinite ;
+    }
+    & > div:nth-child(3):before {
+      animation: flow 4s linear  infinite;
+    }
+    & > div:nth-child(4):before {
+      animation: flow 5s linear infinite;
+    }
+    & > div:nth-child(5):before {
+      animation: flow 6s linear infinite;
+    }
+    & > div:nth-child(6):before {
+      animation: flow 2s linear infinite;
+    }
+    & > div:nth-child(7):before {
+      animation: flow 3s linear infinite;
     }
     & > div:hover {
       background: #fee6f1;
@@ -3130,17 +3192,15 @@ const imgSrcHandel = (i: any) => {
     letter-spacing: 1.884px;
   }
 }
-@keyframes breathe {
+@keyframes flow {
   0% {
-    box-shadow: 4px 4px 2px #fdd3e3;
-  }
-  50% {
-    box-shadow: 12px 10px 8px #fdd3e3;
+    left: -20%;
   }
   100% {
-    box-shadow: 4px 4px 2px #fdd3e3;
+    left: 120%;
   }
 }
+
 .item_leven {
   display: none;
 }
