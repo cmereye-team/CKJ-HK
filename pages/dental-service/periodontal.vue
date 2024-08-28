@@ -38,7 +38,7 @@ const orthodonticsIntroduceData = {
   title: '牙周治療',
   content:
     '牙周病為常見的口腔疾病，是牙齒周圍組織的一種慢性、感染性、破壞性的疾病。主要由牙菌斑和牙結石等長期累積所引起。這種慢性疾病隨著病情進展階段會破壞牙周組織，導致牙齦萎縮和牙骨吸收，重度牙周病患者可導致牙齒脫落。所以有牙周病應該盡快接受系統性治療，防止進一步惡化。',
-  mbImg: 'https://static.cmereye.com/imgs/2023/11/3f3d338958c5f8d6.jpg',
+  mbImg: 'https://static.cmereye.com/imgs/2024/08/a8716b7fb39f2801.jpg',
   pcImg: 'https://static.cmereye.com/imgs/2023/11/38143ec138e85da7.jpg',
   tabNavName: 'pages.dental-service.periodontal.introduce.tabNavName',
   pageName: 'periodontal-test',
@@ -423,8 +423,14 @@ let doctorObjs = {
 let doctorLists = ref(doctorLists_hk)
 
 let windowWidth = ref(390)
+let mobileShow = ref(false)
 const getWindowWidth = () => {
   windowWidth.value = window.innerWidth
+  if (windowWidth.value >= 768) {
+    mobileShow.value = true
+  } else {
+    mobileShow.value = false
+  }
 }
 
 onMounted(() => {
@@ -1159,8 +1165,8 @@ const isShowOldNode = ref(false)
         <div>
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/08/641b9dd999c48e22.png"
-              alt=""
+              src="https://static.cmereye.com/imgs/2024/08/c739e45383fa3cc0.png"
+              alt="牙周病治療簡介"
             />
           </div>
           <div>
@@ -1186,10 +1192,10 @@ const isShowOldNode = ref(false)
         <div>
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/08/26f0d41f99bd6e5b.png"
+              src="https://static.cmereye.com/imgs/2024/08/c0fc2e262b036b20.png"
               srcset="
                 https://static.cmereye.com/imgs/2024/08/3a724f5c62c66bca.png 400w,
-                https://static.cmereye.com/imgs/2024/08/26f0d41f99bd6e5b.png
+                https://static.cmereye.com/imgs/2024/08/c0fc2e262b036b20.png
               "
               alt=""
             />
@@ -1210,10 +1216,14 @@ const isShowOldNode = ref(false)
       </div>
       <div class="table_new_mobile">
         <div>愛康健提供的非手術性牙周治療服務</div>
-        <div>早期發現<br />牙周問題<br />患者</div>
+        <div>
+          早期發現<br v-if="!mobileShow" />牙周問題<br v-if="!mobileShow" />患者
+        </div>
         <div>預防<br />與維護</div>
         <div>定期的口腔清潔和回診洗牙可以大大降低病情惡化的風險</div>
-        <div>輕度及<br />中度牙周<br />患者</div>
+        <div>
+          輕度及<br v-if="!mobileShow" />中度牙周<br v-if="!mobileShow" />患者
+        </div>
         <div>齦上<br />潔治術</div>
         <div>清除牙齒表面的牙菌斑和牙結石</div>
         <div>
@@ -1224,7 +1234,7 @@ const isShowOldNode = ref(false)
         <div>深入牙齦，清除牙周袋內的牙菌斑和牙結石</div>
         <div>鬆牙<br />固定術</div>
         <div>固定因牙周病而鬆動的牙齒</div>
-        <div>重度<br />牙周患者</div>
+        <div>重度<br v-if="!mobileShow" />牙周患者</div>
         <div>牙周<br />翻瓣手術</div>
         <div>切開牙齦組織，徹底清除牙根表面的牙垢</div>
         <div>牙齦<br />切除術</div>
@@ -1398,7 +1408,7 @@ const isShowOldNode = ref(false)
               牙齒之間出現新的縫隙或者牙齦分隔
             </div>
           </div>
-          <div @click="result()">看結果</div>
+          <a @click="result()">看結果</a>
         </div>
         <div class="item_leven leven_one">
           <div>Level 0</div>
@@ -1406,10 +1416,7 @@ const isShowOldNode = ref(false)
             結果顯示沒有明顯的牙周問題，建議定期每半年洗牙及做好日常牙齒護理。
           </div>
           <div @click="close">
-            <img
-              src="https://static.cmereye.com/imgs/2024/08/09bb619cd0663a64.png"
-              alt=""
-            />
+            <img src="../../assets/images/reload.svg" alt="" />
             <div>重新測試</div>
           </div>
           <div>
@@ -1425,10 +1432,7 @@ const isShowOldNode = ref(false)
             結果顯示有輕度口腔衛生煩惱，建議預約洗牙並向牙科醫生請教正確日常牙齒護理方法。
           </div>
           <div @click="close">
-            <img
-              src="https://static.cmereye.com/imgs/2024/08/09bb619cd0663a64.png"
-              alt=""
-            />
+            <img src="../../assets/images/reload.svg" alt="" />
             <div>重新測試</div>
           </div>
           <div>
@@ -1442,10 +1446,7 @@ const isShowOldNode = ref(false)
           <div>Level 2</div>
           <div>結果顯示有牙齦炎症狀，建議盡快盡求牙科醫生專業意見。</div>
           <div @click="close">
-            <img
-              src="https://static.cmereye.com/imgs/2024/08/09bb619cd0663a64.png"
-              alt=""
-            />
+            <img src="../../assets/images/reload.svg" alt="" />
             <div>重新測試</div>
           </div>
           <div>
@@ -1462,10 +1463,7 @@ const isShowOldNode = ref(false)
             有機會造成牙齒脫落。
           </div>
           <div @click="close">
-            <img
-              src="https://static.cmereye.com/imgs/2024/08/09bb619cd0663a64.png"
-              alt=""
-            />
+            <img src="../../assets/images/reload.svg" alt="" />
             <div>重新測試</div>
           </div>
           <div>
@@ -1816,7 +1814,9 @@ const isShowOldNode = ref(false)
       <ServiceProblem :problemData="problemData" />
       <serviceCard />
       <NewAddress />
-      <ContactForm-new />
+      <div class="contact-box">
+        <ContactForm-new />
+      </div>
     </div>
     <PageFooter />
     <PageNavbar />
@@ -1826,6 +1826,16 @@ const isShowOldNode = ref(false)
 
 
 <style lang="scss" scoped>
+.contact-box {
+  :deep(.contactForm) {
+    .care_voucher {
+      & > label {
+        font-size: 1.4583vw;
+        letter-spacing: 0.2604vw;
+      }
+    }
+  }
+}
 .mobile_faq {
   margin-top: 125px;
   background: linear-gradient(
@@ -2772,7 +2782,6 @@ const isShowOldNode = ref(false)
   }
   & > div:nth-child(1) {
     grid-column: span 3;
-
     background: var(--Theme-Color, #fc1682);
     height: fit-content;
     padding: 2.665vw 6.665vw 2.665vw 7.2vw;
@@ -2800,7 +2809,10 @@ const isShowOldNode = ref(false)
     line-height: 160%; /* 41.6px */
     letter-spacing: 2.6px;
     text-align: center;
-    width: 176px;
+    width: 316px;
+    padding: 30px 15px;
+    justify-content: center;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
   }
   & > div:nth-child(5) {
     text-align: center;
@@ -2813,13 +2825,18 @@ const isShowOldNode = ref(false)
     font-weight: 500;
     line-height: 160%; /* 41.6px */
     letter-spacing: 2.6px;
-    width: 176px;
+    width: 316px;
+    padding: 30px 15px;
+    justify-content: center;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
   }
   & > div:nth-child(12) {
     text-align: center;
     grid-row: span 4;
-    width: 176px;
+    width: 316px;
+    padding: 30px 15px;
     border-radius: var(--Count, 0px) var(--Count, 0px) var(--Count, 0px) 20px;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
     background: #fca3a3;
     text-align: center;
     font-family: FakePearl;
@@ -2828,6 +2845,7 @@ const isShowOldNode = ref(false)
     font-weight: 500;
     line-height: 160%; /* 41.6px */
     letter-spacing: 2.6px;
+    justify-content: center;
   }
   & > div:last-child {
     border-radius: var(--Count, 0px) var(--Count, 0px) 20px var(--Count, 0px);
@@ -2903,6 +2921,7 @@ const isShowOldNode = ref(false)
   padding: 80px 0 220px;
   width: 100%;
   background-size: 100% 100%;
+  position: relative;
   & > div:nth-child(2) {
     max-width: 1290px;
     margin: 55px auto 0;
@@ -3000,6 +3019,19 @@ const isShowOldNode = ref(false)
     }
   }
 }
+.evaluate::before {
+  content: '';
+  background: url('https://static.cmereye.com/imgs/2024/08/a6ffed7809ac7793.png')
+    no-repeat;
+  background-position: center center;
+  width: 376px;
+  height: 104px;
+  display: inline-block;
+  position: absolute;
+  top: -5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
 
 .test_tooth {
   margin-top: 40px;
@@ -3011,7 +3043,7 @@ const isShowOldNode = ref(false)
 .questions {
   max-width: 500px;
   margin: 0 auto;
-  padding: 140px 0;
+  padding: 140px 0 90px;
   & > div:nth-child(1) {
     & > div:nth-child(1) {
       color: #fc1682;
@@ -3054,15 +3086,20 @@ const isShowOldNode = ref(false)
       letter-spacing: 1.884px;
       padding: 10px 0;
       box-sizing: border-box;
-      margin-bottom: 7px;
+      margin-bottom: 12px;
       transition: all 0.5s ease;
+      animation: breathe 3s linear infinite;
+    }
+    & > div:hover {
+      background: #fee6f1;
     }
   }
-  & > div:nth-child(3) {
+  & > a:nth-child(3) {
+    display: block;
     width: fit-content;
     margin: 0 auto;
     box-sizing: border-box;
-    padding: 10px 45px;
+    padding: 15px 85px;
     border-radius: 90px;
     background: #fc1682;
     color: var(--White, #fff);
@@ -3072,8 +3109,24 @@ const isShowOldNode = ref(false)
     font-style: normal;
     font-weight: 500;
     line-height: 160%; /* 30.136px */
-    letter-spacing: 1.884px;
+    letter-spacing: 4px;
     margin-top: 21px;
+  }
+  & > a:active {
+    transition: all 0.5s ease;
+    padding: 10px 45px;
+    letter-spacing: 1.884px;
+  }
+}
+@keyframes breathe {
+  0% {
+    box-shadow: 4px 4px 2px #fdd3e3;
+  }
+  50% {
+    box-shadow: 12px 10px 8px #fdd3e3;
+  }
+  100% {
+    box-shadow: 4px 4px 2px #fdd3e3;
   }
 }
 .item_leven {
@@ -3136,8 +3189,11 @@ const isShowOldNode = ref(false)
     position: absolute;
     bottom: 160px;
     left: 75px;
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     & > img {
       width: 100%;
     }
@@ -3150,6 +3206,7 @@ const isShowOldNode = ref(false)
       font-weight: 600;
       line-height: 160%; /* 24px */
       letter-spacing: 1.5px;
+      white-space: nowrap;
     }
   }
   & > div:nth-child(4) {
@@ -4205,6 +4262,10 @@ const isShowOldNode = ref(false)
       &-item {
         // width: calc(100% / 3);
         & > div {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
           .image {
             padding: 0;
             width: 105px;
@@ -4224,7 +4285,8 @@ const isShowOldNode = ref(false)
         }
         &:nth-of-type(1) {
           .text {
-            padding: 0;
+            padding: 0 25px;
+            width: fit-content;
           }
         }
         &:nth-of-type(n + 4) {
@@ -4332,7 +4394,8 @@ const isShowOldNode = ref(false)
         margin-bottom: 75px;
         position: absolute;
         top: 0;
-        padding: 300px 0 30px 0;
+        padding: 260px 0 30px 0;
+        background: rgb(255 255 255 / 16%);
       }
     }
   }
@@ -4700,6 +4763,7 @@ const isShowOldNode = ref(false)
       margin-top: 10px;
       display: flex;
       gap: 0 38px;
+      justify-content: center;
       & > div {
         width: fit-content;
         padding: 10px 30px;
@@ -4900,6 +4964,7 @@ const isShowOldNode = ref(false)
       line-height: 160%; /* 19.2px */
       letter-spacing: 0.32vw;
       text-align: center;
+      text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
     }
     & > div:nth-child(5) {
       max-width: 22.133vw;
@@ -4914,6 +4979,7 @@ const isShowOldNode = ref(false)
       line-height: 160%; /* 19.2px */
       letter-spacing: 0.32vw;
       min-height: 100%;
+      text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
     }
     & > div:nth-child(12) {
       max-width: 22.133vw;
@@ -4929,6 +4995,7 @@ const isShowOldNode = ref(false)
       font-weight: 400;
       line-height: 160%; /* 19.2px */
       letter-spacing: 0.32vw;
+      text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
     }
     & > div:last-child {
       border-radius: var(--Count, 0px) var(--Count, 0px) 20px var(--Count, 0px);
@@ -5158,15 +5225,16 @@ const isShowOldNode = ref(false)
         letter-spacing: 1.2px;
         padding: 10px 0;
         box-sizing: border-box;
-        margin-bottom: 7px;
+        margin-bottom: 10px;
         transition: all 0.5s ease;
       }
     }
-    & > div:nth-child(3) {
+    & > a {
+      display: block;
       width: fit-content;
       margin: 0 auto;
       box-sizing: border-box;
-      padding: 10px 45px;
+      padding: 10px 45px !important;
       border-radius: 90px;
       background: #fc1682;
       color: var(--White, #fff);
