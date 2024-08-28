@@ -2479,7 +2479,7 @@ const differData: any = {
             }
           }
           .name {
-            margin-top: 0;
+            margin-top: 6px;
             padding: 0;
             width: 100%;
             font-size: 16px;
@@ -2542,6 +2542,9 @@ const differData: any = {
         &:nth-of-type(4) {
           position: relative;
           top: 120px;
+        }
+        &:nth-of-type(n + 4) {
+          margin-bottom: 0px;
         }
       }
     }
