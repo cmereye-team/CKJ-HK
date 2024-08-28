@@ -49,34 +49,50 @@ const symptomData = {
   lists: [
     {
       imgUrl: 'https://static.cmereye.com/imgs/2024/08/407809ba68d40bca.png',
+      imgMobileUrl:
+        'https://static.cmereye.com/imgs/2024/08/15de17809a71d2a9.png',
       title: '牙齦萎縮牙根外露',
     },
     {
       imgUrl: 'https://static.cmereye.com/imgs/2024/08/1b662490098b35ee.png',
+      imgMobileUrl:
+        'https://static.cmereye.com/imgs/2024/08/84e7001089b55eb0.png',
       title: '牙齒對冷熱敏感',
     },
     {
       imgUrl: 'https://static.cmereye.com/imgs/2024/08/16f8714f61804929.png',
+      imgMobileUrl:
+        'https://static.cmereye.com/imgs/2024/08/94d041ef9700b12a.png',
       title: '牙縫變大',
     },
     {
       imgUrl: 'https://static.cmereye.com/imgs/2024/08/f7870df82236cf65.png',
+      imgMobileUrl:
+        'https://static.cmereye.com/imgs/2024/08/153e3de559d8e98b.png',
       title: '牙齒移位及鬆脫',
     },
     {
       imgUrl: 'https://static.cmereye.com/imgs/2024/08/f2aa30ef18d93722.png',
+      imgMobileUrl:
+        'https://static.cmereye.com/imgs/2024/08/2090d0e517f9769e.png',
       title: '口氣異常',
     },
     {
       imgUrl: 'https://static.cmereye.com/imgs/2024/08/e07094dd166ce5cc.png',
+      imgMobileUrl:
+        'https://static.cmereye.com/imgs/2024/08/1d066d3744f6e815.png',
       title: '牙齦疼痛',
     },
     {
       imgUrl: 'https://static.cmereye.com/imgs/2024/08/62cc5d45cc330a55.png',
+      imgMobileUrl:
+        'https://static.cmereye.com/imgs/2024/08/1d9c6d02532503a0.png',
       title: '牙齦腫脹變色及化膿',
     },
     {
       imgUrl: 'https://static.cmereye.com/imgs/2024/08/4d837df8e0a06d5c.png',
+      imgMobileUrl:
+        'https://static.cmereye.com/imgs/2024/08/12912d0da246a651.png',
       title: '牙齦流血',
     },
   ],
@@ -661,7 +677,16 @@ const imgSrcHandel = (i: any) => {
             <div>
               <div class="image">
                 <div class="image-in">
-                  <img :src="careItem.imgUrl" :alt="careItem.title" />
+                  <img
+                    v-if="windowWidth > 768"
+                    :src="careItem.imgUrl"
+                    :alt="careItem.title"
+                  />
+                  <img
+                    v-else
+                    :src="careItem.imgMobileUrl"
+                    :alt="careItem.title"
+                  />
                 </div>
               </div>
               <div class="text">{{ careItem.title }}</div>
@@ -688,11 +713,11 @@ const imgSrcHandel = (i: any) => {
         <div>
           <div>
             <img
+              src="https://static.cmereye.com/imgs/2024/08/93cb783ce4a8daab.png"
               srcset="
                 https://static.cmereye.com/imgs/2024/08/fbbfeeb7b74cc160.png 400w,
                 https://static.cmereye.com/imgs/2024/08/93cb783ce4a8daab.png
               "
-              src="https://static.cmereye.com/imgs/2024/08/93cb783ce4a8daab.png"
               alt=""
             />
           </div>
@@ -903,7 +928,7 @@ const imgSrcHandel = (i: any) => {
               :src="
                 imgSrc
                   ? 'https://static.cmereye.com/imgs/2024/02/2f20ab9660e0bfa7.webp'
-                  : 'https://static.cmereye.com/imgs/2024/08/baf68581008158d5.png'
+                  : 'https://static.cmereye.com/imgs/2024/02/3cc92ffa0caa8ed1.webp'
               "
               alt=""
             />
@@ -1019,10 +1044,17 @@ const imgSrcHandel = (i: any) => {
               </div>
             </div>
             <div>
-              <a @click="showDetail()">
+              <a
+                @click="showDetail()"
+                :class="[isShow == true ? 'pc_hospital_btn_active' : '']"
+              >
                 <span>交通路線</span>
                 <span
                   ><img
+                    :style="{
+                      transform: isShow == true ? 'rotate(90deg)' : 'rotate(0)',
+                      transition: 'all 0.3s',
+                    }"
                     src="https://static.cmereye.com/imgs/2024/08/b62f3468ff037777.png"
                     alt=""
                 /></span>
@@ -1246,12 +1278,12 @@ const imgSrcHandel = (i: any) => {
         <div>
           早期發現<br v-if="!mobileShow" />牙周問題<br v-if="!mobileShow" />患者
         </div>
-        <div>預防<br />與維護</div>
+        <div>預防<br v-if="!mobileShow" />與維護</div>
         <div>定期的口腔清潔和回診洗牙可以大大降低病情惡化的風險</div>
         <div>
           輕度及<br v-if="!mobileShow" />中度牙周<br v-if="!mobileShow" />患者
         </div>
-        <div>齦上<br />潔治術</div>
+        <div>齦上<br v-if="!mobileShow" />潔治術</div>
         <div>清除牙齒表面的牙菌斑和牙結石</div>
         <div>
           牙結石<br class="table_new_mobile_br" />刮除術<br />(深層洗牙/<br
@@ -1259,16 +1291,16 @@ const imgSrcHandel = (i: any) => {
           />洗牙腳)
         </div>
         <div>深入牙齦，清除牙周袋內的牙菌斑和牙結石</div>
-        <div>鬆牙<br />固定術</div>
+        <div>鬆牙<br v-if="!mobileShow" />固定術</div>
         <div>固定因牙周病而鬆動的牙齒</div>
         <div>重度<br v-if="!mobileShow" />牙周患者</div>
-        <div>牙周<br />翻瓣手術</div>
+        <div>牙周<br v-if="!mobileShow" />翻瓣手術</div>
         <div>切開牙齦組織，徹底清除牙根表面的牙垢</div>
-        <div>牙齦<br />切除術</div>
+        <div>牙齦<br v-if="!mobileShow" />切除術</div>
         <div>移除受感染的牙齦組織</div>
-        <div>牙周<br />植骨術</div>
+        <div>牙周<br v-if="!mobileShow" />植骨術</div>
         <div>對骨缺損進行填補，促進骨組織再生</div>
-        <div>膜齦<br />移植術</div>
+        <div>膜齦<br v-if="!mobileShow" />移植術</div>
         <div>移植健康的牙齦組織以修復受損區域</div>
       </div>
       <div class="eg_new_mobile" v-if="windowWidth < 768">
@@ -1420,29 +1452,19 @@ const imgSrcHandel = (i: any) => {
               <span>刷牙或使用牙線時牙齦經常會出血</span>
             </div>
             <div class="checkItem" @click="checkbox(2, 2)">
-              <span>
-              牙齦比往時更加紅腫或容易疼痛
-              </span>
+              <span> 牙齦比往時更加紅腫或容易疼痛 </span>
             </div>
             <div class="checkItem" @click="checkbox(3, 2)">
-              <span>
-                牙齦有膿瘡或牙齦間有膿液滲出
-              </span>
+              <span> 牙齦有膿瘡或牙齦間有膿液滲出 </span>
             </div>
             <div class="checkItem" @click="checkbox(4, 3)">
-              <span>
-                牙齦出現退縮，多隻牙齒看起來比往時更長
-              </span>
+              <span> 牙齦出現退縮，多隻牙齒看起來比往時更長 </span>
             </div>
             <div class="checkItem" @click="checkbox(5, 3)">
-              <span>
-                牙齒有鬆動的感覺或者咬合時感覺不對勁
-              </span>
+              <span> 牙齒有鬆動的感覺或者咬合時感覺不對勁 </span>
             </div>
             <div class="checkItem" @click="checkbox(6, 3)">
-              <span>
-                牙齒之間出現新的縫隙或者牙齦分隔
-              </span>
+              <span> 牙齒之間出現新的縫隙或者牙齦分隔 </span>
             </div>
           </div>
           <a @click="result()">看結果</a>
@@ -1863,16 +1885,6 @@ const imgSrcHandel = (i: any) => {
 
 
 <style lang="scss" scoped>
-.contact-box {
-  :deep(.contactForm) {
-    .care_voucher {
-      & > label {
-        font-size: 1.4583vw;
-        letter-spacing: 0.2604vw;
-      }
-    }
-  }
-}
 .mobile_faq {
   margin-top: 125px;
   background: linear-gradient(
@@ -2606,6 +2618,7 @@ const imgSrcHandel = (i: any) => {
           box-sizing: border-box;
           padding: 7px 40px;
           position: relative;
+          transition: all 0.3s ease;
         }
         & > a:nth-child(2) {
           color: var(--White, #fff);
@@ -2615,17 +2628,22 @@ const imgSrcHandel = (i: any) => {
     }
   }
 }
+.pc_hospital_btn_active {
+  transition: all 0.3s ease;
+  border-radius: 50px 50px 0 0 !important;
+}
 .pc_hospital_address {
   display: none;
+  opacity: 0;
   position: absolute;
   top: 72px;
   left: 0;
   width: 220%;
   z-index: 10;
-  border-radius: 22px;
+  border-radius: 0 22px 22px 22px;
   background: var(--White, #fff);
   box-shadow: 3px 3px 12.4px 0px rgba(252, 22, 130, 0.5);
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
   & > div {
     flex: 4;
     box-sizing: border-box;
@@ -2656,6 +2674,8 @@ const imgSrcHandel = (i: any) => {
 }
 .pc_hospital_address_active {
   display: flex;
+  transition: all 0.5s ease;
+  opacity: 1;
 }
 .step_new_mobile {
   margin-top: 125px;
@@ -3130,7 +3150,7 @@ const imgSrcHandel = (i: any) => {
       transition: all 0.5s ease;
       overflow: hidden;
       position: relative;
-      &>span {
+      & > span {
         position: relative;
         z-index: 2;
       }
@@ -3142,15 +3162,15 @@ const imgSrcHandel = (i: any) => {
       width: 40%;
       border-radius: 90px;
       height: 100%;
-      background: linear-gradient(90deg, #ffffff00, #fdd3e3 50% ,#ffffff00);
-      transition: all 0.5s linear ;
+      background: linear-gradient(90deg, #ffffff00, #fdd3e3 50%, #ffffff00);
+      transition: all 0.5s linear;
       animation: flow 2s linear infinite;
     }
     & > div:nth-child(2):before {
-      animation: flow 3s  linear infinite ;
+      animation: flow 3s linear infinite;
     }
     & > div:nth-child(3):before {
-      animation: flow 4s linear  infinite;
+      animation: flow 4s linear infinite;
     }
     & > div:nth-child(4):before {
       animation: flow 5s linear infinite;
@@ -3185,6 +3205,7 @@ const imgSrcHandel = (i: any) => {
     line-height: 160%; /* 30.136px */
     letter-spacing: 4px;
     margin-top: 21px;
+    box-shadow: 10px 10px 8px #fdd3e3;
   }
   & > a:active {
     transition: all 0.5s ease;
@@ -4357,7 +4378,7 @@ const imgSrcHandel = (i: any) => {
         }
         &:nth-of-type(1) {
           .text {
-            padding: 0 25px;
+            padding: 0 5.4665vw;
             width: fit-content;
           }
         }
@@ -4538,8 +4559,9 @@ const imgSrcHandel = (i: any) => {
       position: relative;
       display: flex;
       align-items: flex-end;
-      gap: 0;
+      gap: 0 3.2vw;
       & > div:nth-child(1) {
+        max-width: 175px;
         & > img {
           position: relative;
           z-index: 10;
@@ -4591,6 +4613,10 @@ const imgSrcHandel = (i: any) => {
     & > div:nth-child(1) {
       justify-content: center;
       gap: 0 20px;
+      &>div:nth-child(1){
+        position: relative;
+        left: -8vw;
+      }
     }
     & > div:nth-child(1)::after {
       width: 55%;
@@ -4630,11 +4656,11 @@ const imgSrcHandel = (i: any) => {
     }
     &-lists {
       width: auto;
-      margin: 57px 30px 0;
+      margin: 57px 8vw 0;
       padding: 0;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 30px 25px;
+      gap: 8vw 3.2vw;
       &-in {
         flex-direction: column;
         margin-bottom: 30px;
@@ -4792,6 +4818,11 @@ const imgSrcHandel = (i: any) => {
         color: var(--Theme-Color, #fc1682);
       }
       margin-bottom: 10px;
+    }
+    &>div:nth-child(2){
+      &>img{
+        margin: 0 auto;
+      }
     }
     & > div:nth-child(3) {
       margin-top: 8px;

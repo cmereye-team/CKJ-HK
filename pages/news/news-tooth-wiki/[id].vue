@@ -319,7 +319,7 @@ if (process.server) {
         </nuxt-link>
         <span>{{ coverageDeatail.name }}</span>
       </div>
-      <div class="is_new_tooth_wiki" v-if="windowWidth < 768 && !closeAd">
+      <div class="is_new_tooth_wiki" v-if="!closeAd">
         <div>
           <img
             src="https://static.cmereye.com/imgs/2024/08/e76f7c7e81a0f86e.png"

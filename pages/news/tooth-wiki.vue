@@ -29,12 +29,12 @@ const headerConfig = {
 let errorpage = ref(false)
 
 interface informationLists {
-    id: string;
-    img: string;
-    desc: string;
-    name: string;
-    time: string;
-    tags: string[];
+  id: string
+  img: string
+  desc: string
+  name: string
+  time: string
+  tags: string[]
 }
 let informationLists = ref<informationLists[]>([])
 const formatDate = (dateString) => {
@@ -78,7 +78,7 @@ const getNewsLists = async (str: string) => {
     })
     let res = JSON.parse(_res.data.value) || null
     if (res) {
-      totalPageNum.value =  Math.ceil(res.rowtotal / 6) 
+      totalPageNum.value = Math.ceil(res.rowtotal / 6)
       informationLists.value = res.data.map((item) => {
         return {
           id: item.id || '',
@@ -119,7 +119,7 @@ const getTags = async (ele: any, str: string) => {
     }
   })
   informationLists.value = arrTags.value
-  totalPageNum.value =  Math.ceil(informationLists.value.length / 6) 
+  totalPageNum.value = Math.ceil(informationLists.value.length / 6)
   return informationLists
 }
 
@@ -172,6 +172,9 @@ onMounted(() => {
   setTimeout(() => {
     getNewsLists('')
   })
+
+  getWindowWidth()
+  window.addEventListener('resize', getWindowWidth)
 })
 
 if (process.server) {
@@ -192,6 +195,13 @@ const getPagination = (pageitem) => {
     }
   }
 }
+
+let windowWidth = ref(390)
+
+const getWindowWidth = () => {
+  windowWidth.value = window.innerWidth
+}
+
 const shareFacebook = (event, id) => {
   event.preventDefault()
   window.open(
@@ -411,6 +421,25 @@ const handleClick = (event, _id) => {
 
 
 <style lang="scss" scoped>
+:deep(.is_new_tooth_wiki) {
+  display: flex;
+  flex-direction: column-reverse;
+  position: fixed;
+  right: 150px;
+  bottom: 300px;
+  &>div:nth-child(1){
+    width: 240px;
+  }
+  &>div:nth-child(2){
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    &>svg {
+      width: 30px;
+      height: 30px;
+    }
+  }
+}
 .tabNav {
   font-weight: 400;
   font-size: 1.25rem;

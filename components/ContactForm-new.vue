@@ -195,7 +195,8 @@ const onSubmit = async () => {
     _formData.append('preferential', `無`)
   }
   // return
-  const { data }: any = await useFetch('https://admin.ckjhk.com/api.php/cms/addform/fcode/3',
+  const { data }: any = await useFetch(
+    'https://admin.ckjhk.com/api.php/cms/addform/fcode/3',
     {
       method: 'post',
       body: _formData,
@@ -430,7 +431,7 @@ let privacyPolicy = ref(true)
             :label="`${$t('contactUs.contact_form.formItem.telephone_number')}`"
             prop="phone"
           >
-            <el-select class="areaCode" v-model="areaCode"  placeholder="請選擇">
+            <el-select class="areaCode" v-model="areaCode" placeholder="請選擇">
               <el-option label="+852" value="852" />
               <el-option label="+853" value="853" />
               <el-option label="+86" value="86" />
@@ -876,37 +877,41 @@ li {
       & > label {
         color: #00a752;
         font-family: FakePearl;
-        font-size: 16px;
         font-style: normal;
         font-weight: 400;
         line-height: 160%; /* 24px */
-        letter-spacing: 1.5px;
+        font-weight: 500;
+        font-size: 28px;
+        letter-spacing: 5px;
       }
       & > input:checked {
         content: '';
         color: #fff;
         // background-color: #007bff;
-        background: url('../assets/images/careVoucher.svg') no-repeat;
-        background-position: 1px -2px;
+        -webkit-appearance: none;
+        background: url('../assets/images/check3078.svg') no-repeat;
+        background-position: 0px 0px;
         border: 1px solid transparent;
         border-radius: 0;
         display: inline-block;
         text-align: center;
         background-size: contain;
-        width: 20px;
-        height: 20px;
+        width: 28px;
+        height: 29px;
         transition: all 0.1s ease-in;
       }
 
       & > input {
         position: relative;
-        background-color: #fff;
+        // background-color: #fff;
         -webkit-appearance: none;
-        border: 2px solid #fc1682;
+        border: 0px solid #fc1682;
+        background: url('../assets/images/boxpink.svg') no-repeat;
+        background-position: 0px 0px;
         border-radius: 0;
         outline: none;
-        width: 17px;
-        height: 17px;
+        width: 26px;
+        height: 27px;
         transition: all 0.1s ease-in;
       }
     }
@@ -1010,6 +1015,12 @@ li {
       }
       :deep(.el-select .el-input .el-select__caret) {
         font-size: 1.4583vw;
+      }
+      .care_voucher {
+        & > label {
+          font-size: 1.4583vw;
+          letter-spacing: 0.2604vw;
+        }
       }
       .privacyPolicy {
         margin-top: 1.5625vw;
