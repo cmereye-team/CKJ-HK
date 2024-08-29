@@ -415,7 +415,7 @@ const differData: any = {
           <img
             data-cfsrc="https://static.cmereye.com/imgs/2024/02/91c959b48d0683e6.jpg"
             srcset="
-              https://static.cmereye.com/imgs/2024/02/6588c782aea9aebe.jpg 768w,
+              https://static.cmereye.com/imgs/2024/08/13cd348fd7b8dddb.jpg 400w,
               https://static.cmereye.com/imgs/2024/02/91c959b48d0683e6.jpg
             "
             src="https://static.cmereye.com/imgs/2024/02/91c959b48d0683e6.jpg"
@@ -1901,7 +1901,7 @@ const differData: any = {
     margin-top: 0;
   }
   .reason {
-    margin-top: 54px;
+    margin-top: 94px;
     &-tc {
       margin: 40px auto;
       padding: 0 30px;
@@ -1912,7 +1912,6 @@ const differData: any = {
     }
     &-lists {
       padding: 0 30px;
-
       &-item {
         width: 100%;
         flex-direction: row;
@@ -1948,6 +1947,8 @@ const differData: any = {
               min-width: auto;
               width: fit-content;
               margin: 0 auto;
+              padding: 5px 18px;
+              line-height: 140%;
             }
           }
           .context {
@@ -2017,12 +2018,12 @@ const differData: any = {
         }
         .list-in:nth-child(1) {
           .list-in-img {
-            top: 175px;
+            top: 245px;
           }
         }
         .list-in:nth-child(2) {
           .list-in-img {
-            top: 285px;
+            top: 335px;
           }
         }
       }
@@ -2039,14 +2040,40 @@ const differData: any = {
         }
         .list-in:nth-child(1) {
           .list-in-img {
-            top: 205px;
+            top: 245px;
           }
         }
         .list-in:nth-child(2) {
           .list-in-img {
-            top: 320px;
+            top: 350px;
           }
         }
+      }
+      & > div::before {
+        content: '1';
+        position: absolute;
+        color: var(--Theme-Color, #fc1682);
+        font-family: 'Noto Sans HK';
+        font-size: 40px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 100%;
+        z-index: 5;
+        top: 115px;
+        top: 90px;
+        left: 20px;
+      }
+      & > div:nth-child(2)::before {
+        content: '2';
+      }
+      & > div:nth-child(3)::before {
+        content: '3';
+      }
+      & > div:nth-child(4)::before {
+        content: '4';
+      }
+      & > div:nth-child(5)::before {
+        content: '5';
       }
     }
     &-bt {
@@ -2119,12 +2146,14 @@ const differData: any = {
     }
   }
   .note {
-    margin-top: 50px;
+    margin-top: 90px;
     &-lists {
       width: auto;
+      justify-content: center;
       margin: 34px 15px 0;
       &-item {
         width: calc(100% / 2);
+        max-width: 26.92vw;
         & > div {
           .image {
             padding: 0 5px;
@@ -2163,6 +2192,7 @@ const differData: any = {
       background: url('https://static.cmereye.com/imgs/2024/08/226ad56f456f2008.png')
         no-repeat;
       background-size: 100% 100%;
+      height: 90.33vw;
 
       &-l {
         width: 100%;
@@ -2627,6 +2657,7 @@ const differData: any = {
           }
         }
         &:nth-of-type(1) {
+          position: relative;
           & > div:not(:first-child) {
             padding: 0;
             border-radius: 19px;
@@ -2639,11 +2670,48 @@ const differData: any = {
             font-weight: 400;
             line-height: 160%; /* 24px */
             letter-spacing: 1.5px;
+            width: fit-content;
+            line-height: 100%;
+            min-height: fit-content;
+            padding: 5px;
+          }
+          & > div:nth-child(2) {
+            position: absolute;
+            left: 29%;
+            top: 35px;
+          }
+          & > div:nth-child(3) {
+            position: absolute;
+            left: 70%;
+            top: 35px;
           }
         }
         &:nth-of-type(2) {
           & > div {
             padding: 0;
+          }
+          & > div:nth-child(1) {
+            width: 70px;
+            min-width: 70px;
+            img {
+              width: 100%;
+            }
+          }
+          & > div:nth-child(2),
+          & > div:nth-child(3) {
+            & > div {
+              width: 38.2vw;
+              img {
+                width: 100%;
+              }
+            }
+          }
+        }
+        &:nth-of-type(3),
+        &:nth-of-type(4),
+        &:nth-of-type(5) {
+          & > div:nth-child(1) {
+            background: #fdd3e3;
           }
         }
       }
