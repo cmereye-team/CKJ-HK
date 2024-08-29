@@ -1356,6 +1356,9 @@ const newsmoduleLists = [
   margin-top: 330px;
   margin-bottom: 220px;
 }
+:deep(.header-content .explain_box_mobile){
+  display: none !important;
+}
 .new_info_header {
   display: flex;
   justify-content: center;

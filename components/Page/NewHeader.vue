@@ -1119,13 +1119,17 @@ const handleopenwechat = () => {
     position: absolute;
     z-index: 38;
     bottom: 15%;
-    right: 12%;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
     line-height: 160%;
     color: #666666;
-    text-align: center;
+    text-align: right;
+    max-width: 1512px;
+    width: 100%;
+    padding: 0 30px;
+    left: 50%;
+    transform: translateX(-50%);
   }
   .pcMenuBox {
     &.course-new {
@@ -1443,7 +1447,7 @@ const handleopenwechat = () => {
     .explain_page_one {
       position: absolute;
       z-index: 38;
-      bottom: 20%;
+      bottom: 115px;
       right: 5%;
       font-style: normal;
       font-weight: 500;
@@ -1451,6 +1455,7 @@ const handleopenwechat = () => {
       line-height: 160%;
       width: fit-content;
       color: #666666;
+      width: 100%;
     }
     // margin-top: 0;
     &-bgImg {
