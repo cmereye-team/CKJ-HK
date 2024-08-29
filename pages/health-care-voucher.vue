@@ -2660,7 +2660,7 @@ const newsmoduleLists = [
     color: var(--Theme-Color, #fc1682);
     text-align: justify;
     font-family: FakePearl;
-    font-size: 20px;
+    font-size: 5.33vw;
     font-style: normal;
     font-weight: 400;
     line-height: 130%; /* 26px */
@@ -3557,11 +3557,12 @@ const newsmoduleLists = [
     color: #fc1682;
     text-align: center;
     font-family: FakePearl;
-    font-size: 20px;
+    font-size: 5.33vw;
     font-style: normal;
     font-weight: 400;
     line-height: 160%; /* 32px */
     letter-spacing: 1px;
+    padding: 0;
   }
   .new_table {
     box-sizing: border-box;
