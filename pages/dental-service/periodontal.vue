@@ -3187,7 +3187,7 @@ const imgSrcHandel = (i: any) => {
       border-radius: 90px;
       // transition: all 0.5s linear;
       // animation: flow 2s linear infinite;
-      animation-duration: 11s;
+      animation-duration: 7s;
       animation-name: flow2;
       animation-delay: 0s;
       animation-timing-function: linear;
@@ -3201,19 +3201,19 @@ const imgSrcHandel = (i: any) => {
       animation-delay: 1s;
     }
     & > div:nth-child(3):before {
-      animation-delay: 3s;
+      animation-delay: 2s;
     }
     & > div:nth-child(4):before {
-      animation-delay: 5s;
+      animation-delay: 3s;
     }
     & > div:nth-child(5):before {
-      animation-delay: 7s;
+      animation-delay: 4s;
     }
     & > div:nth-child(6):before {
-      animation-delay: 9s;
+      animation-delay: 5s;
     }
     & > div:nth-child(7):before {
-      animation-delay: 11s;
+      animation-delay: 6s;
     }
     & > div:hover {
       background: #fee6f1;
@@ -3264,9 +3264,17 @@ const imgSrcHandel = (i: any) => {
     background: #fff;
     opacity: 0;
   }
-  90% {
+  10%{
+    background: #fff;
+    opacity: 0;
+  }
+  80% {
     background: #fdd3e3;
     opacity: 1;
+  }
+  90% {
+    background: #fdd3e3;
+    opacity: 0;
   }
   100% {
     background: #fff;
