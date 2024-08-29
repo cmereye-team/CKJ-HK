@@ -395,18 +395,10 @@ const isHealthCare = () => {
         class="header-content-text-implant"
         :class="headerConfig.pageName"
       >
-        <div>29年專科•專業•專注</div>
-        <div><span>港人首選</span>一站式連鎖牙科品牌</div>
-        <div
-          v-if="showExplain"
-          style="
-            font-style: normal;
-            font-weight: 500;
-            font-size: 20px;
-            line-height: 160%;
-          "
-        >
-          <span style="color: #666666">優惠只限於網上及電話預約客戶</span>
+        <div style="display: none;">29年專科•專業•專注</div>
+        <div style="display: none;"><span>港人首選</span>一站式連鎖牙科品牌</div>
+        <div class="header_content_text_implant_span" v-if="showExplain">
+          <span>優惠只限於網上及電話預約客戶</span>
         </div>
       </div>
       <div
@@ -755,6 +747,15 @@ const isHealthCare = () => {
   to {
     opacity: 1;
     transform: translate(-50%, 0);
+  }
+}
+.header_content_text_implant_span {
+  font-style: normal;
+  font-weight: 500 !important;
+  font-size: 20px;
+  line-height: 160%;
+  & > span {
+    color: #666666 !important;
   }
 }
 .header-content {
