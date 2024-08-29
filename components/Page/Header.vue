@@ -752,7 +752,7 @@ const isHealthCare = () => {
 .header_content_text_implant_span {
   font-style: normal;
   font-weight: 500 !important;
-  font-size: 20px;
+  font-size: 20px !important;
   line-height: 160%;
   & > span {
     color: #666666 !important;
