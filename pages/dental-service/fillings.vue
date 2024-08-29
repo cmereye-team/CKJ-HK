@@ -2018,12 +2018,12 @@ const differData: any = {
         }
         .list-in:nth-child(1) {
           .list-in-img {
-            top: 65.33vw;
+            top: 54.33vw;
           }
         }
         .list-in:nth-child(2) {
           .list-in-img {
-            top: 89.33vw;
+            top: 80.33vw;
           }
         }
       }
@@ -2040,12 +2040,12 @@ const differData: any = {
         }
         .list-in:nth-child(1) {
           .list-in-img {
-            top: 65.33vw;
+            top: 55.33vw;
           }
         }
         .list-in:nth-child(2) {
           .list-in-img {
-            top: 93.33vw;
+            top: 85.33vw;
           }
         }
       }
