@@ -698,15 +698,16 @@ const imgSrcHandel = (i: any) => {
         </div>
       </div>
       <div class="mobile_youtube">
-        <a href="https://www.youtube.com/watch?v=Lb5GAx2ivrA" target="_blank">
-          <img
+        <a>
+          <!-- <img
             src="https://static.cmereye.com/imgs/2024/08/109d93d287fc37a0.png"
             srcset="
               https://static.cmereye.com/imgs/2024/08/d14596dd773dd95b.png 400w,
               https://static.cmereye.com/imgs/2024/08/109d93d287fc37a0.png
             "
             alt=""
-          />
+          /> -->
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Lb5GAx2ivrA?si=zWvVWe_NbC4Aqq5T" frameborder="0"></iframe>
         </a>
       </div>
       <div class="mobile_introduce_one">
@@ -1383,16 +1384,24 @@ const imgSrcHandel = (i: any) => {
                 href="https://www.youtube.com/watch?v=EVErMNv6P8A&list=PLP24ZB2HTnRicsyIlRD7e70kZjbRmqBoO&index=9"
                 target="_blank"
               >
-                <img
+                <!-- <img
                   src="https://static.cmereye.com/imgs/2024/08/b55bd699396049d1.png"
                   srcset="
                     https://static.cmereye.com/imgs/2024/08/ce865f7b5fa26303.png 400w,
                     https://static.cmereye.com/imgs/2024/08/b55bd699396049d1.png
                   "
                   alt=""
-                />
+                /> -->
+
+                <iframe
+                  src="https://www.youtube.com/embed/EVErMNv6P8A?si=L2_6UX_eqjGzPnEX"
+                  width="100%"
+                  height="100%"
+                  frameborder="0"
+                ></iframe>
               </a>
             </div>
+
             <div v-if="windowWidth > 768">
               <img
                 src="https://static.cmereye.com/imgs/2024/08/1ea128fa7a2f4ba4.png"
@@ -2008,11 +2017,14 @@ const imgSrcHandel = (i: any) => {
 .mobile_youtube {
   margin: 33px auto 130px;
   & > a {
+    width: 1000px;
+    height: 560px;
     border-radius: 12px;
     overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
   }
 }
 
@@ -3029,9 +3041,11 @@ const imgSrcHandel = (i: any) => {
             }
           }
         }
-      }
-      & > div:nth-child(2) {
-        margin-top: 38px;
+        & > a:nth-child(2) {
+          margin-top: 8px;
+          height: 225px;
+          display: block;
+        }
       }
     }
     .evaluate_item_two {
@@ -3164,30 +3178,42 @@ const imgSrcHandel = (i: any) => {
       content: '';
       position: absolute;
       top: 0;
-      width: 40%;
-      border-radius: 90px;
+      // width: 40%;
       height: 100%;
-      background: linear-gradient(90deg, #ffffff00, #fdd3e3 50%, #ffffff00);
-      transition: all 0.5s linear;
-      animation: flow 2s linear infinite;
+      // background: linear-gradient(90deg, #ffffff00, #fdd3e3 50%, #ffffff00);
+      width: 100%;
+      left: 0;
+      background: #fff;
+      border-radius: 90px;
+      // transition: all 0.5s linear;
+      // animation: flow 2s linear infinite;
+      animation-duration: 14s;
+      animation-name: flow2;
+      animation-delay: 0s;
+      animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
+      animation-iteration-count: infinite;
+      animation-fill-mode: forwards;
+    }
+    & > div:nth-child(1):before {
+      animation-delay: 1s;
     }
     & > div:nth-child(2):before {
-      animation: flow 3s linear infinite;
+      animation-delay: 3s;
     }
     & > div:nth-child(3):before {
-      animation: flow 4s linear infinite;
+      animation-delay: 5s;
     }
     & > div:nth-child(4):before {
-      animation: flow 5s linear infinite;
+      animation-delay: 7s;
     }
     & > div:nth-child(5):before {
-      animation: flow 6s linear infinite;
+      animation-delay: 9s;
     }
     & > div:nth-child(6):before {
-      animation: flow 2s linear infinite;
+      animation-delay: 11s;
     }
     & > div:nth-child(7):before {
-      animation: flow 3s linear infinite;
+      animation-delay: 13s;
     }
     & > div:hover {
       background: #fee6f1;
@@ -3212,6 +3238,13 @@ const imgSrcHandel = (i: any) => {
     margin-top: 51px;
     box-shadow: 10px 10px 8px #fdd3e3;
   }
+  & > a:hover {
+    transition: all 0.5s ease;
+    // padding: 10px 45px;
+    // letter-spacing: 1.884px;
+    transform: translateY(-10px);
+    box-shadow: 16px 16px 8px #e0acc4;
+  }
   & > a:active {
     transition: all 0.5s ease;
     padding: 10px 45px;
@@ -3226,7 +3259,16 @@ const imgSrcHandel = (i: any) => {
     left: 120%;
   }
 }
-
+@keyframes flow2 {
+  0% {
+    background: #fff;
+    opacity: 0;
+  }
+  100% {
+    background: #fdd3e3;
+    opacity: 1;
+  }
+}
 .item_leven {
   display: none;
 }
@@ -3980,10 +4022,10 @@ const imgSrcHandel = (i: any) => {
   }
 }
 @media only screen and (max-width: 768px) {
-  :deep(.header-content ) {
-    .explain_box_mobile{
+  :deep(.header-content) {
+    .explain_box_mobile {
       margin-right: auto;
-      margin-left: 0; 
+      margin-left: 0;
       top: 110px;
       z-index: 35px;
     }
@@ -4552,6 +4594,8 @@ const imgSrcHandel = (i: any) => {
   .mobile_youtube {
     margin: 22px auto 50px;
     & > a {
+      width: 100%;
+      height: 56.41vw;
       border-radius: 12px;
       overflow: hidden;
       display: flex;
@@ -5193,6 +5237,13 @@ const imgSrcHandel = (i: any) => {
       flex-direction: column;
       & > div {
         grid-row: span 1;
+        &>div:nth-child(1){
+          padding: 0 !important;
+          &>a {
+            width: 100%;
+            height: 43.585vw !important;
+          }
+        }
       }
     }
   }
