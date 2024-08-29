@@ -3187,33 +3187,33 @@ const imgSrcHandel = (i: any) => {
       border-radius: 90px;
       // transition: all 0.5s linear;
       // animation: flow 2s linear infinite;
-      animation-duration: 14s;
+      animation-duration: 11s;
       animation-name: flow2;
       animation-delay: 0s;
-      animation-timing-function: cubic-bezier(0.4, 0, 1, 1);
+      animation-timing-function: linear;
       animation-iteration-count: infinite;
       animation-fill-mode: forwards;
     }
     & > div:nth-child(1):before {
-      animation-delay: 1s;
+      animation-delay: 0s;
     }
     & > div:nth-child(2):before {
-      animation-delay: 3s;
+      animation-delay: 1s;
     }
     & > div:nth-child(3):before {
-      animation-delay: 5s;
+      animation-delay: 3s;
     }
     & > div:nth-child(4):before {
-      animation-delay: 7s;
+      animation-delay: 5s;
     }
     & > div:nth-child(5):before {
-      animation-delay: 9s;
+      animation-delay: 7s;
     }
     & > div:nth-child(6):before {
-      animation-delay: 11s;
+      animation-delay: 9s;
     }
     & > div:nth-child(7):before {
-      animation-delay: 13s;
+      animation-delay: 11s;
     }
     & > div:hover {
       background: #fee6f1;
@@ -3264,9 +3264,13 @@ const imgSrcHandel = (i: any) => {
     background: #fff;
     opacity: 0;
   }
-  100% {
+  90% {
     background: #fdd3e3;
     opacity: 1;
+  }
+  100% {
+    background: #fff;
+    opacity: 0;
   }
 }
 .item_leven {
