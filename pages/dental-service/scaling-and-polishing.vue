@@ -1812,6 +1812,14 @@ onMounted(() => {
 }
 
 @media screen and (max-width: 768px) {
+  :deep(.header-content ) {
+    .explain_box_mobile{
+      margin-right: auto;
+      margin-left: 0; 
+      top: 0px;
+      z-index: 35px;
+    }
+  }
   .reason-lists {
     flex-wrap: wrap;
     justify-content: space-around;

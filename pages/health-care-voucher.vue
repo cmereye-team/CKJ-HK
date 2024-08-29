@@ -1356,7 +1356,7 @@ const newsmoduleLists = [
   margin-top: 330px;
   margin-bottom: 220px;
 }
-:deep(.header-content .explain_box_mobile){
+:deep(.header-content .explain_box_mobile) {
   display: none !important;
 }
 .new_info_header {
@@ -2612,9 +2612,10 @@ const newsmoduleLists = [
   }
 }
 @media screen and (min-width: 769px) {
-  .explain_box_mobile{
-  display:none !important; 
-}  
+  .explain_box_mobile {
+    display: none !important;
+  }
+}
 @media screen and (max-width: 768px) {
   .explain {
     color: var(--Grey-Deep, #4d4d4d);
@@ -3565,6 +3566,8 @@ const newsmoduleLists = [
   .new_table {
     box-sizing: border-box;
     padding: 0 15px;
+    width: 100%;
+    max-width: 100%;
   }
   .new_table_tbody {
     width: 100%;

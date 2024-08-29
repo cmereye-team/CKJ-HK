@@ -1667,7 +1667,9 @@ const imgSrcHandel = (i: any) => {
             </div>
             <div class="abs_box"><span>優惠</span><span>2</span></div>
           </div>
-          <div>*可使用醫院券或一般付款方式支付醫療費用</div>
+          <div>
+            *可使用醫院券或一般付款方式支付醫療費用<br />優惠只限於網上及電話預約客戶。
+          </div>
         </div>
       </div>
       <div class="doctor_new_mobile">
@@ -3207,7 +3209,7 @@ const imgSrcHandel = (i: any) => {
     font-weight: 500;
     line-height: 160%; /* 30.136px */
     letter-spacing: 4px;
-    margin-top: 21px;
+    margin-top: 51px;
     box-shadow: 10px 10px 8px #fdd3e3;
   }
   & > a:active {
@@ -3978,6 +3980,14 @@ const imgSrcHandel = (i: any) => {
   }
 }
 @media only screen and (max-width: 768px) {
+  :deep(.header-content ) {
+    .explain_box_mobile{
+      margin-right: auto;
+      margin-left: 0; 
+      top: 110px;
+      z-index: 35px;
+    }
+  }
   .table_new_mobile_br {
     display: block;
   }

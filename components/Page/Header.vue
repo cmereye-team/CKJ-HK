@@ -268,6 +268,8 @@ const showExplain = ref(true)
 const isHealthCare = () => {
   if (route.path === '/dental-service/scaling-and-polishing') {
     showExplain.value = true
+  } else if (route.path == '/dental-service/periodontal') {
+    showExplain.value = true
   } else if (route.path == '/health-care-voucher') {
     showExplain.value = true
   } else if (route.path == '/news/news-tooth-wiki/263') {
@@ -380,7 +382,7 @@ const isHealthCare = () => {
         "
         class="waterBg-implant"
       ></div>
- 
+
       <div
         v-if="
           [
@@ -1524,6 +1526,14 @@ const isHealthCare = () => {
         margin-top: 60px;
       }
     }
+
+    .explain_box_mobile {
+      max-width: calc(80% + 60px);
+      padding: 10px 15px 0 30px;
+      & > span {
+        color: #666666;
+      }
+    }
   }
   .waterBg::after,
   .waterBg::before {
@@ -1532,6 +1542,13 @@ const isHealthCare = () => {
 }
 @media (min-width: 1001px) and (max-width: 1452px) {
   .header-content {
+    .explain_box_mobile {
+      max-width: calc(80% + 60px);
+      padding: 10px 15px 0 30px;
+      & > span {
+        color: #666666;
+      }
+    }
     &-in {
       width: calc(80% + 60px);
       padding: 10px 10px 0 30px;
@@ -1603,6 +1620,13 @@ const isHealthCare = () => {
 }
 @media (min-width: 768px) and (max-width: 1450px) {
   .header-content {
+    .explain_box_mobile {
+      max-width: calc(80% + 60px);
+      padding: 10px 15px 0 30px;
+      & > span {
+        color: #666666;
+      }
+    }
     &-in {
       padding: 10px 15px 0 30px;
       .logo {
@@ -1657,6 +1681,13 @@ const isHealthCare = () => {
 
 @media (min-width: 1450px) and (max-width: 1800px) {
   .header-content {
+    .explain_box_mobile {
+      max-width: calc(80% + 60px);
+      padding: 10px 30px 0 30px;
+      & > span {
+        color: #666666;
+      }
+    }
     &-in {
       width: calc(80% + 60px);
       padding: 10px 15px 0 30px;
@@ -2017,7 +2048,7 @@ const isHealthCare = () => {
     display: flex;
     align-items: center;
     flex-direction: column;
-    z-index: 30;
+    z-index: 38;
     font-style: normal;
     font-weight: 600;
     line-height: 160%;
