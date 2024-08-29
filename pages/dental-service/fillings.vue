@@ -1979,8 +1979,8 @@ const differData: any = {
               }
               &-img {
                 position: absolute;
-                left: 75px;
-                top: 195px;
+                left: 20.8vw;
+                top: 52vw;
                 width: 80px;
                 height: 80px;
                 margin-right: 14px;
@@ -2005,25 +2005,25 @@ const differData: any = {
           margin-top: 80px;
         }
         .list-in-img {
-          top: 175px;
+          top: 46.665vw;
         }
       }
       &-item:nth-of-type(4) {
         .image {
           position: relative;
-          top: -30px;
+          top: -8vw;
         }
         .list {
           padding-left: 25px;
         }
         .list-in:nth-child(1) {
           .list-in-img {
-            top: 245px;
+            top: 65.33vw;
           }
         }
         .list-in:nth-child(2) {
           .list-in-img {
-            top: 335px;
+            top: 89.33vw;
           }
         }
       }
@@ -2033,19 +2033,19 @@ const differData: any = {
         }
         .image {
           position: relative;
-          top: -50px;
+          top: -13.33vw;
         }
         .list {
           padding-left: 25px;
         }
         .list-in:nth-child(1) {
           .list-in-img {
-            top: 245px;
+            top: 65.33vw;
           }
         }
         .list-in:nth-child(2) {
           .list-in-img {
-            top: 350px;
+            top: 93.33vw;
           }
         }
       }
@@ -2060,8 +2060,8 @@ const differData: any = {
         line-height: 100%;
         z-index: 5;
         top: 115px;
-        top: 90px;
-        left: 20px;
+        top: 24vw;
+        left: 5.33vw;
       }
       & > div:nth-child(2)::before {
         content: '2';
