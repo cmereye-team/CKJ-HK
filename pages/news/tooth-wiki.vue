@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+
 useHead({
   title: '牙齒百科',
   meta: [
@@ -70,7 +71,7 @@ const getNewsLists = async (str: string) => {
     strS.value = str
   }
   let url = `https://admin.ckjhk.com/api.php/list/16/page/${actPageNum.value}/num/6`
-  let filterUrl = `https://admin.ckjhk.com/api.php/list/16`
+  let filterUrl = `https://admin.ckjhk.com/api.php/list/16/num/99`
   loadingShow.value = true
   try {
     const _res: any = await useFetch(strS.value === '' ? url : filterUrl, {
@@ -115,18 +116,23 @@ const handleTags = (tags: any) => {
     return item !== ''
   })
 }
-
 let arrTags = ref<informationLists[]>([])
 const getTags = async (ele: any, str: string) => {
   informationLists.value = []
   arrTags.value = []
   await getNewsLists(str)
   informationLists.value.forEach((item) => {
-    if (item.tags.includes(ele)) {
-      arrTags.value.push(item)
-    }
+    item.tags.forEach((it) => {
+      if (it.indexOf(ele) !== -1) {
+        arrTags.value.push(item)
+      } 
+    })
   })
-  informationLists.value = arrTags.value
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  })
+  informationLists.value  = Array.from(new Map(arrTags.value.map(item => [item.id, item])).values());
   totalPageNum.value = Math.ceil(informationLists.value.length / 6)
   return informationLists
 }
@@ -363,7 +369,7 @@ const handleClick = (event, _id) => {
               </div>
             </nuxt-link>
           </div>
-          <div class="lists-btn">
+          <div class="lists-btn" v-if="strS === ''">
             <div @click="subNum" :class="{ btndisabled: actPageNum === 1 }">
               <span class="subNum">
                 <img src="@/assets/images/icon_25.svg" alt="" />
