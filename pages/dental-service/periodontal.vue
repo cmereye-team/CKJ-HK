@@ -2871,6 +2871,7 @@ const imgSrcHandel = (i: any) => {
     justify-content: center;
     text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
       1px 1px 0 #fff;
+    white-space: nowrap;
   }
   & > div:nth-child(5) {
     text-align: center;
@@ -2888,6 +2889,7 @@ const imgSrcHandel = (i: any) => {
     justify-content: center;
     text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff,
       1px 1px 0 #fff;
+    white-space: nowrap;
   }
   & > div:nth-child(12) {
     text-align: center;
@@ -2906,6 +2908,7 @@ const imgSrcHandel = (i: any) => {
     line-height: 160%; /* 41.6px */
     letter-spacing: 2.6px;
     justify-content: center;
+    white-space: nowrap;
   }
   & > div:last-child {
     border-radius: var(--Count, 0px) var(--Count, 0px) 20px var(--Count, 0px);
@@ -4613,7 +4616,7 @@ const imgSrcHandel = (i: any) => {
     & > div:nth-child(1) {
       justify-content: center;
       gap: 0 20px;
-      &>div:nth-child(1){
+      & > div:nth-child(1) {
         position: relative;
         left: -8vw;
       }
@@ -4819,8 +4822,8 @@ const imgSrcHandel = (i: any) => {
       }
       margin-bottom: 10px;
     }
-    &>div:nth-child(2){
-      &>img{
+    & > div:nth-child(2) {
+      & > img {
         margin: 0 auto;
       }
     }
