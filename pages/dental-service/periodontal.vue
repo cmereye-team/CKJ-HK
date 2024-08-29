@@ -5815,7 +5815,7 @@ const imgSrcHandel = (i: any) => {
         font-style: normal;
         font-weight: 400;
         line-height: 200%; /* 32px */
-        letter-spacing: 1.6px;
+        letter-spacing: 0.8px;
         text-align: left;
       }
     }
