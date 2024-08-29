@@ -361,7 +361,7 @@ const stepData = {
       text: [
         {
           l: '詳細檢查',
-          r: '牙齦狀況、牙周袋深度測量',
+          r: '：牙齦狀況、牙周袋深度測量',
         },
         {
           l: 'X光檢查',
@@ -1139,10 +1139,10 @@ const imgSrcHandel = (i: any) => {
             <div>2</div>
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/08/34b59fb25e487f68.png"
+                src="https://static.cmereye.com/imgs/2024/08/8945b67ff72e1e10.png"
                 srcset="
                   https://static.cmereye.com/imgs/2024/08/2adbffbe54b348b4.png 400w,
-                  https://static.cmereye.com/imgs/2024/08/34b59fb25e487f68.png
+                  https://static.cmereye.com/imgs/2024/08/8945b67ff72e1e10.png
                 "
                 alt=""
               />
@@ -1157,10 +1157,10 @@ const imgSrcHandel = (i: any) => {
             <div>3</div>
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/08/8945b67ff72e1e10.png"
+                src="https://static.cmereye.com/imgs/2024/08/34b59fb25e487f68.png"
                 srcset="
                   https://static.cmereye.com/imgs/2024/08/1c4237335dc21b2d.png 400w,
-                  https://static.cmereye.com/imgs/2024/08/8945b67ff72e1e10.png
+                  https://static.cmereye.com/imgs/2024/08/34b59fb25e487f68.png
                 "
                 alt=""
               />
