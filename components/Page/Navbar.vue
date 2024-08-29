@@ -1069,7 +1069,7 @@ onMounted(() => {
   }
   .is_new_tooth_wiki {
     position: relative;
-    bottom: 70px;
+    bottom: 70px !important;
     left: 50%;
     transform: translateX(-50%);
     width: 100vw;
