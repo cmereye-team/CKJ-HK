@@ -380,9 +380,7 @@ const isHealthCare = () => {
         "
         class="waterBg-implant"
       ></div>
-      <div class="explain_box_mobile" v-if="showExplain">
-        <span>優惠只限於網上及電話預約客戶</span>
-      </div>
+ 
       <div
         v-if="
           [
@@ -395,11 +393,14 @@ const isHealthCare = () => {
         class="header-content-text-implant"
         :class="headerConfig.pageName"
       >
-        <div style="display: none;">29年專科•專業•專注</div>
-        <div style="display: none;"><span>港人首選</span>一站式連鎖牙科品牌</div>
-        <div class="header_content_text_implant_span" v-if="showExplain">
+        <div>29年專科•專業•專注</div>
+        <div><span>港人首選</span>一站式連鎖牙科品牌</div>
+        <!-- <div class="header_content_text_implant_span" v-if="showExplain">
           <span>優惠只限於網上及電話預約客戶</span>
-        </div>
+        </div> -->
+      </div>
+      <div class="explain_box_mobile" v-if="showExplain">
+        <span>優惠只限於網上及電話預約客戶</span>
       </div>
       <div
         v-if="headerConfig.pageName === 'periodontal-test'"
@@ -966,9 +967,13 @@ const isHealthCare = () => {
     position: relative;
     z-index: 45;
     display: flex;
-    top: 20px;
+    top: 130px;
     justify-content: flex-end;
     margin-right: 230px;
+    max-width: 1512px;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 0 30px;
     & > span {
       color: #666666;
     }
