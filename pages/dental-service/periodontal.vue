@@ -3401,7 +3401,8 @@ const imgSrcHandel = (i: any) => {
   }
 }
 .check_active {
-  background: #fee6f1 !important;
+  background: #FC1682 !important;
+  color: #fff !important;
   transition: all 0.5s ease;
 }
 
