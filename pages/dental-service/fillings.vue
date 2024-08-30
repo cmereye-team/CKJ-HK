@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import { url } from 'node:inspector'
 import { useAppState } from '~/stores/appState'
 const appState = useAppState()
 appState.setDentistryService('fillings')
@@ -212,12 +213,17 @@ const noteData2 = {
     },
   ],
 }
+
+const getUrl = file => {
+  return new URL(`../../assets/images/${file}.svg`,import.meta.url).href
+}
+
 const reasonData = {
   title: '蛀牙5個階段及對應治療方法',
   reasonLists: [
     {
       img: 'https://static.cmereye.com/imgs/2024/04/3888d359e0b7d48d.png',
-      mb_img: 'https://static.cmereye.com/imgs/2024/08/d026d58061c742a9.png',
+      mb_img: getUrl('fill5'),
       title: '脫鈣（初期蛀牙）',
       context: '出現白色斑點，牙齒表面粗糙。',
       lists: [
@@ -230,7 +236,7 @@ const reasonData = {
     },
     {
       img: 'https://static.cmereye.com/imgs/2024/04/9f38b6263937f9b6.png',
-      mb_img: 'https://static.cmereye.com/imgs/2024/08/91c22ff1aba268db.png',
+      mb_img: getUrl('fill4'),
       title: '外層琺瑯質受損',
       context: '牙齒出現黑色斑點或小洞。',
       lists: [
@@ -243,7 +249,7 @@ const reasonData = {
     },
     {
       img: 'https://static.cmereye.com/imgs/2024/04/936c3035a1b735c4.png',
-      mb_img: 'https://static.cmereye.com/imgs/2024/08/03385ce625749fbf.png',
+      mb_img: getUrl('fill3'),
       title: '內層象牙質受損',
       context: '牙齒對冷熱或甜食敏感。',
       lists: [
@@ -256,7 +262,7 @@ const reasonData = {
     },
     {
       img: 'https://static.cmereye.com/imgs/2024/04/b632a48711f84dc2.png',
-      mb_img: 'https://static.cmereye.com/imgs/2024/08/bab46de6ebe1ee78.png',
+      mb_img: getUrl('fill2'),
       title: '牙髓及神經受損',
       context: '持續性的疼痛，牙肉紅腫。',
       lists: [
@@ -274,7 +280,7 @@ const reasonData = {
     },
     {
       img: 'https://static.cmereye.com/imgs/2024/04/7cad4228b8f92fa0.png',
-      mb_img: 'https://static.cmereye.com/imgs/2024/08/5efb8c1b0ce5e4c0.png',
+      mb_img: getUrl('fill1'),
       title: '殘根',
       context: '牙冠部分極度損壞，僅剩牙根。',
       lists: [
