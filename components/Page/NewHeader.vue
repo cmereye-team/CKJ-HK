@@ -1446,7 +1446,7 @@ const handleopenwechat = () => {
   .header-content {
     .explain_page_one {
       position: absolute;
-      z-index: 29;
+      z-index: 35;
       bottom: 115px;
       right: 5%;
       font-style: normal;
