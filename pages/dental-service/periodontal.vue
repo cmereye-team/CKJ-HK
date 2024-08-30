@@ -3403,7 +3403,7 @@ const imgSrcHandel = (i: any) => {
 .check_active {
   background: #FC1682 !important;
   color: #fff !important;
-  transition: all 0.5s ease;
+  transition: all 0.5s ease !important;
 }
 
 .nurse_mobile {

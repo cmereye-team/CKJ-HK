@@ -1911,21 +1911,21 @@ const differData: any = {
       line-height: 2;
     }
     &-lists {
-      padding: 0 30px;
+      padding: 0 8vw;
       &-item {
         width: 100%;
         flex-direction: row;
-        padding: 40px 12px;
+        padding: 10.65vw 3.2vw;
         border-radius: 38px;
         position: relative;
-        gap: 0 5px;
-        margin-bottom: 24px;
+        gap: 0 1.33vw;
+        margin-bottom: 6.4vw;
         .image {
           width: 100%;
           height: auto;
           margin-right: 0;
-          width: 126px;
-          height: 126px;
+          width: 33.6vw;
+          height: 33.6vw;
           & > img {
             width: 100%;
           }
@@ -1942,47 +1942,47 @@ const differData: any = {
             right: 0;
             top: 0;
             span {
-              font-size: 20px;
-              letter-spacing: 4px;
+              font-size: 5.33vw;
+              letter-spacing: 1.065vw;
               min-width: auto;
               width: fit-content;
               margin: 0 auto;
-              padding: 5px 18px;
+              padding: 1.33vw 4.8vw;
               line-height: 140%;
             }
           }
           .context {
-            margin-top: 40px;
-            margin-bottom: 10px;
-            font-size: 15px;
-            letter-spacing: 1.5px;
+            margin-top: 10.65vw;
+            margin-bottom: 2.65vw;
+            font-size: 4vw;
+            letter-spacing: 0.4vw;
             align-items: flex-start;
             & > img {
-              width: 20px;
+              width: 5.33vw;
             }
           }
           .name {
-            font-size: 15px;
-            letter-spacing: 1.5px;
+            font-size: 4vw;
+            letter-spacing: 0.4vw;
 
             & > img {
-              width: 20px;
+              width: 5.3vw;
             }
           }
           .list {
             padding: 0;
-            margin-top: 20px;
-            padding-left: 30px;
+            margin-top: 5.3vw;
+            padding-left: 8vw;
             &-in {
               &:not(:last-child) {
-                margin-bottom: 20px;
+                margin-bottom: 5.3vw;
               }
               &-img {
                 position: absolute;
-                left: 20.8vw;
-                top: 52vw;
-                width: 80px;
-                height: 80px;
+                left: 85px;
+                top: 160px;
+                width: 21.33vw;
+                height: 21.33vw;
                 margin-right: 14px;
               }
               &-text {
@@ -2005,7 +2005,7 @@ const differData: any = {
           margin-top: 80px;
         }
         .list-in-img {
-          top: 46.665vw;
+          top: 155px;
         }
       }
       &-item:nth-of-type(4) {
@@ -2018,12 +2018,12 @@ const differData: any = {
         }
         .list-in:nth-child(1) {
           .list-in-img {
-            top: 54.33vw;
+            top: 200px;
           }
         }
         .list-in:nth-child(2) {
           .list-in-img {
-            top: 80.33vw;
+            top: 290px;
           }
         }
       }
@@ -2040,12 +2040,12 @@ const differData: any = {
         }
         .list-in:nth-child(1) {
           .list-in-img {
-            top: 55.33vw;
+            top: 175px;
           }
         }
         .list-in:nth-child(2) {
           .list-in-img {
-            top: 85.33vw;
+            top: 290px;
           }
         }
       }
@@ -2059,20 +2059,23 @@ const differData: any = {
         font-weight: 700;
         line-height: 100%;
         z-index: 5;
-        top: 115px;
-        top: 24vw;
-        left: 5.33vw;
+        top: 65px;
+        left: 20px;
       }
       & > div:nth-child(2)::before {
+        top: 75px;
         content: '2';
       }
       & > div:nth-child(3)::before {
+        top: 75px;
         content: '3';
       }
       & > div:nth-child(4)::before {
+        top: 95px;
         content: '4';
       }
       & > div:nth-child(5)::before {
+        top: 95px;
         content: '5';
       }
     }
@@ -2146,7 +2149,7 @@ const differData: any = {
     }
   }
   .note {
-    margin-top: 90px;
+    margin-top: 10vw;
     &-lists {
       width: auto;
       justify-content: center;
@@ -2166,6 +2169,7 @@ const differData: any = {
             padding: 0;
             font-size: 14px;
             letter-spacing: 1px;
+            color: #4d4d4d;
           }
         }
         &:nth-of-type(n + 4) {
@@ -2447,18 +2451,18 @@ const differData: any = {
     }
     &-lists {
       width: auto;
-      margin: 57px 30px 0;
+      margin: 15.2vw 8vw 0;
       padding: 0;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      gap: 30px 25px;
+      gap: 8vw 6.65vw;
       &-in {
         flex-direction: column;
-        margin-bottom: 30px;
+        margin-bottom: 8vw;
         width: 100%;
         padding: 0;
         &:nth-of-type(n + 4) {
-          margin-bottom: 30px;
+          margin-bottom: 8vw;
         }
         &:nth-of-type(5) {
           .step-lists-in-r {
@@ -2466,13 +2470,13 @@ const differData: any = {
           }
         }
         &-l {
-          width: 145px;
+          width: 38.65vw;
           position: relative;
           .title {
-            padding: 0 6px;
-            font-size: 26px;
-            width: 70px;
-            height: 61.286px;
+            padding: 0 1.6vw;
+            font-size: 6.93vw;
+            width: 18.65vw;
+            height: 16.53vw;
             background: url('https://static.cmereye.com/imgs/2024/08/a53173454afef713.png')
               no-repeat;
             background-position: center center;
@@ -2480,24 +2484,24 @@ const differData: any = {
             color: var(--Theme-Color, #fc1682);
             text-align: center;
             font-family: 'Noto Serif HK';
-            font-size: 60px;
+            font-size: 16vw;
             font-style: normal;
             font-weight: 400;
             line-height: 140%; /* 84px */
-            letter-spacing: -3px;
+            letter-spacing: -0.8vw;
             display: flex;
             justify-content: center;
             align-items: center;
             position: absolute;
             z-index: 5;
-            top: -30px;
-            left: -20px;
+            top: -8vw;
+            left: -5.3vw;
           }
           .image {
             padding: 0;
             border-radius: 12px;
             border: 1px solid var(--Theme-Color, #fc1682);
-            height: 98px;
+            height: 26.13vw;
             overflow: hidden;
             &::after {
               display: none;
@@ -2512,13 +2516,13 @@ const differData: any = {
             margin-top: 6px;
             padding: 0;
             width: 100%;
-            font-size: 16px;
+            font-size: 4.265vw;
             clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
             background: transparent;
             white-space: initial;
             color: var(--Theme-Color, #fc1682);
             font-family: FakePearl;
-            font-size: 16px;
+            font-size: 4.265vw;
             font-style: normal;
             font-weight: 500;
             line-height: 130%; /* 20.8px */
@@ -2526,7 +2530,7 @@ const differData: any = {
         }
         &-r {
           display: block;
-          margin-top: 30px;
+          margin-top: 8vw;
           margin-left: 0;
           img {
             transform: rotate(90deg);
@@ -2538,23 +2542,23 @@ const differData: any = {
           grid-column: span 2;
           .lastBox-t {
             & > div {
-              font-size: 26px;
+              font-size: 6.93vw;
               span {
-                font-size: 26px;
+                font-size: 6.93vw;
                 display: inline-block;
               }
               img {
-                width: 20px;
-                height: 22px;
+                width: 5.33vw;
+                height: 5.865vw;
               }
             }
           }
           .lastBox-b {
-            margin-top: 30px;
+            margin-top: 8vw;
             display: flex;
             justify-content: center;
             .bigBan {
-              font-size: 28px;
+              font-size: 7.465vw;
             }
           }
         }
@@ -2718,10 +2722,26 @@ const differData: any = {
     }
   }
   .introduceJY {
+    :deep(.introduce-in){
+      min-height: 91.73vw;
+    }
     :deep(.introduce-in-content) {
       position: absolute;
       left: 0;
-      padding: 120px 0 30px 0;
+      padding: 8vw 0 8vw 0;
+      box-sizing: border-box;
+      .introduce-in-content-in{
+        padding-top: 50px;
+        &>div:nth-child(1){
+          font-size: 6.93vw;
+          margin-bottom: 2.8vw;
+        }
+        &>div:nth-child(2){
+          line-height: 1.4;
+          font-size: 4.25vw;
+          padding: 0 8vw;
+        }
+      }
     }
   }
 }
