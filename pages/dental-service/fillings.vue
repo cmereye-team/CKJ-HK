@@ -217,7 +217,7 @@ const reasonData = {
   reasonLists: [
     {
       img: 'https://static.cmereye.com/imgs/2024/04/3888d359e0b7d48d.png',
-      mb_img: 'https://static.cmereye.com/imgs/2024/08/34f163eeb9d67118.png',
+      mb_img: 'https://static.cmereye.com/imgs/2024/08/d026d58061c742a9.png',
       title: '脫鈣（初期蛀牙）',
       context: '出現白色斑點，牙齒表面粗糙。',
       lists: [
@@ -230,7 +230,7 @@ const reasonData = {
     },
     {
       img: 'https://static.cmereye.com/imgs/2024/04/9f38b6263937f9b6.png',
-      mb_img: 'https://static.cmereye.com/imgs/2024/08/34f163eeb9d67118.png',
+      mb_img: 'https://static.cmereye.com/imgs/2024/08/91c22ff1aba268db.png',
       title: '外層琺瑯質受損',
       context: '牙齒出現黑色斑點或小洞。',
       lists: [
@@ -243,7 +243,7 @@ const reasonData = {
     },
     {
       img: 'https://static.cmereye.com/imgs/2024/04/936c3035a1b735c4.png',
-      mb_img: 'https://static.cmereye.com/imgs/2024/08/3cd7fefa6b3cffa2.png',
+      mb_img: 'https://static.cmereye.com/imgs/2024/08/03385ce625749fbf.png',
       title: '內層象牙質受損',
       context: '牙齒對冷熱或甜食敏感。',
       lists: [
@@ -256,7 +256,7 @@ const reasonData = {
     },
     {
       img: 'https://static.cmereye.com/imgs/2024/04/b632a48711f84dc2.png',
-      mb_img: 'https://static.cmereye.com/imgs/2024/08/3de774a3dea410e7.png',
+      mb_img: 'https://static.cmereye.com/imgs/2024/08/bab46de6ebe1ee78.png',
       title: '牙髓及神經受損',
       context: '持續性的疼痛，牙肉紅腫。',
       lists: [
@@ -274,7 +274,7 @@ const reasonData = {
     },
     {
       img: 'https://static.cmereye.com/imgs/2024/04/7cad4228b8f92fa0.png',
-      mb_img: 'https://static.cmereye.com/imgs/2024/08/5df8f5c82fa1d657.png',
+      mb_img: 'https://static.cmereye.com/imgs/2024/08/5efb8c1b0ce5e4c0.png',
       title: '殘根',
       context: '牙冠部分極度損壞，僅剩牙根。',
       lists: [
@@ -668,18 +668,11 @@ const differData: any = {
                   v-for="(itemIn, itemIndex) in item.lists"
                   :key="itemIndex"
                 >
-                  <div class="list-in-img">
-                    <img :src="itemIn.img" alt="" />
-                  </div>
+                  <!-- <div class="list-in-img"> -->
+                  <!-- <img :src="itemIn.img" alt="" /> -->
+                  <!-- </div> -->
                   <div class="list-in-text">
-                    <h2
-                      style="
-                        font-size: 15px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: 20px;
-                      "
-                    >
+                    <h2>
                       治療方法：<strong>{{ itemIn.name }}</strong>
                     </h2>
                     <p>{{ itemIn.text }}</p>
@@ -1911,21 +1904,21 @@ const differData: any = {
       line-height: 2;
     }
     &-lists {
-      padding: 0 8vw;
+      padding: 0 6.4vw;
       &-item {
         width: 100%;
         flex-direction: row;
-        padding: 10.65vw 3.2vw;
+        padding: 20.65vw 1.2vw 10.65vw 2vw;
         border-radius: 38px;
         position: relative;
-        gap: 0 1.33vw;
+        gap: 0 0.33vw;
         margin-bottom: 6.4vw;
         .image {
           width: 100%;
           height: auto;
           margin-right: 0;
-          width: 33.6vw;
-          height: 33.6vw;
+          width: 41.6vw;
+          height: 45.065vw;
           & > img {
             width: 100%;
           }
@@ -1952,13 +1945,17 @@ const differData: any = {
             }
           }
           .context {
-            margin-top: 10.65vw;
+            margin-top: 0;
             margin-bottom: 2.65vw;
             font-size: 4vw;
             letter-spacing: 0.4vw;
             align-items: flex-start;
+            position: relative;
             & > img {
               width: 5.33vw;
+              position: absolute;
+              left: -25px;
+              top: 6px;
             }
           }
           .name {
@@ -1971,8 +1968,8 @@ const differData: any = {
           }
           .list {
             padding: 0;
-            margin-top: 5.3vw;
-            padding-left: 8vw;
+            margin-top: 0;
+            padding-left: 0;
             &-in {
               &:not(:last-child) {
                 margin-bottom: 5.3vw;
@@ -1986,10 +1983,10 @@ const differData: any = {
                 margin-right: 14px;
               }
               &-text {
-                font-size: 15px;
-                letter-spacing: 1.5px;
+                font-size: 4vw;
+                letter-spacing: 0.4vw;
                 h2 {
-                  font-size: 20px;
+                  font-size: 4.265vw;
                   margin-bottom: 10px;
                 }
               }
@@ -2001,8 +1998,11 @@ const differData: any = {
         background: #fff1f0;
       }
       &-item:nth-of-type(2) {
+        .image {
+          margin-top: 0;
+        }
         .context {
-          margin-top: 80px;
+          margin-top: 0;
         }
         .list-in-img {
           top: 155px;
@@ -2011,10 +2011,11 @@ const differData: any = {
       &-item:nth-of-type(4) {
         .image {
           position: relative;
-          top: -8vw;
+          top: 0;
+          height: 69.865vw;
         }
         .list {
-          padding-left: 25px;
+          padding-left: 0;
         }
         .list-in:nth-child(1) {
           .list-in-img {
@@ -2029,14 +2030,15 @@ const differData: any = {
       }
       &-item:nth-of-type(5) {
         .context {
-          margin-top: 50px;
+          margin-top: 0;
         }
         .image {
           position: relative;
-          top: -13.33vw;
+          top: 0;
+          height: 69.865vw;
         }
         .list {
-          padding-left: 25px;
+          padding-left: 0;
         }
         .list-in:nth-child(1) {
           .list-in-img {
@@ -2063,19 +2065,19 @@ const differData: any = {
         left: 20px;
       }
       & > div:nth-child(2)::before {
-        top: 75px;
+        top: 65px;
         content: '2';
       }
       & > div:nth-child(3)::before {
-        top: 75px;
+        top: 65px;
         content: '3';
       }
       & > div:nth-child(4)::before {
-        top: 95px;
+        top: 65px;
         content: '4';
       }
       & > div:nth-child(5)::before {
-        top: 95px;
+        top: 75px;
         content: '5';
       }
     }
@@ -2722,7 +2724,7 @@ const differData: any = {
     }
   }
   .introduceJY {
-    :deep(.introduce-in){
+    :deep(.introduce-in) {
       min-height: 91.73vw;
     }
     :deep(.introduce-in-content) {
@@ -2730,13 +2732,13 @@ const differData: any = {
       left: 0;
       padding: 8vw 0 8vw 0;
       box-sizing: border-box;
-      .introduce-in-content-in{
+      .introduce-in-content-in {
         padding-top: 50px;
-        &>div:nth-child(1){
+        & > div:nth-child(1) {
           font-size: 6.93vw;
           margin-bottom: 2.8vw;
         }
-        &>div:nth-child(2){
+        & > div:nth-child(2) {
           line-height: 1.4;
           font-size: 4.25vw;
           padding: 0 8vw;
