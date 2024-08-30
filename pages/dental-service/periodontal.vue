@@ -707,7 +707,12 @@ const imgSrcHandel = (i: any) => {
             "
             alt=""
           /> -->
-          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/Lb5GAx2ivrA?si=zWvVWe_NbC4Aqq5T" frameborder="0"></iframe>
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/Lb5GAx2ivrA?si=zWvVWe_NbC4Aqq5T"
+            frameborder="0"
+          ></iframe>
         </a>
       </div>
       <div class="mobile_introduce_one">
@@ -3264,7 +3269,7 @@ const imgSrcHandel = (i: any) => {
     background: #fff;
     opacity: 0;
   }
-  10%{
+  10% {
     background: #fff;
     opacity: 0;
   }
@@ -3401,7 +3406,7 @@ const imgSrcHandel = (i: any) => {
   }
 }
 .check_active {
-  background: #FC1682 !important;
+  background: #fc1682 !important;
   color: #fff !important;
   transition: all 0.5s ease !important;
 }
@@ -5250,9 +5255,9 @@ const imgSrcHandel = (i: any) => {
       flex-direction: column;
       & > div {
         grid-row: span 1;
-        &>div:nth-child(1){
+        & > div:nth-child(1) {
           padding: 0 !important;
-          &>a {
+          & > a {
             width: 100%;
             height: 43.585vw !important;
           }
@@ -5541,8 +5546,9 @@ const imgSrcHandel = (i: any) => {
     }
   }
   .check_active {
-    background: #fee6f1 !important;
-    transition: all 0.5s ease;
+    background: #fc1682 !important;
+    color: #fff !important;
+    transition: all 0.5s ease !important;
   }
 
   .nurse_mobile {
