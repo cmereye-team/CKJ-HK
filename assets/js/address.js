@@ -51,7 +51,7 @@ export default [
       addressUrl: 'https://static.cmereye.com/imgs/2023/05/b741f54f1b105876.png',
       googleMap: 'https://goo.gl/maps/JMK7Huhaf9k88nbf8?coh=178572&entry=tt',
       baiduMap: 'https://j.map.baidu.com/24/Rxk',
-      imgLists: ['https://static.cmereye.com/imgs/2024/02/debf6ef681488273.png','https://static.cmereye.com/imgs/2024/06/0edd42343f06a817.webp','https://static.cmereye.com/imgs/2024/06/b8b0567ae5e40810.webp']
+      imgLists: ['https://static.cmereye.com/imgs/2024/02/debf6ef681488273.png','https://static.cmereye.com/imgs/2024/06/0edd42343f06a817.webp','https://static.cmereye.com/imgs/2024/06/b8b0567ae5e40810.webp','https://static.cmereye.com/imgs/2024/08/5883b6556c55848b.jpg']
     },
     {
       id: '104',
