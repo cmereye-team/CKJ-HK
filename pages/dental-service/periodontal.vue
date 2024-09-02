@@ -3168,7 +3168,7 @@ const imgSrcHandel = (i: any) => {
       font-weight: 500;
       line-height: 160%; /* 30.136px */
       letter-spacing: 1.884px;
-      padding: 10px 0;
+      padding: 0;
       box-sizing: border-box;
       margin-bottom: 12px;
       transition: all 0.5s ease;
@@ -3177,6 +3177,8 @@ const imgSrcHandel = (i: any) => {
       & > span {
         position: relative;
         z-index: 2;
+        display: block;
+        padding: 10px 0;  
       }
     }
     & > div::before {
@@ -3192,7 +3194,7 @@ const imgSrcHandel = (i: any) => {
       border-radius: 90px;
       // transition: all 0.5s linear;
       // animation: flow 2s linear infinite;
-      animation-duration: 7s;
+      animation-duration: 2.5s;
       animation-name: flow2;
       animation-delay: 0s;
       animation-timing-function: linear;
@@ -3203,22 +3205,22 @@ const imgSrcHandel = (i: any) => {
       animation-delay: 0s;
     }
     & > div:nth-child(2):before {
-      animation-delay: 1s;
+      animation-delay: 0.4s;
     }
     & > div:nth-child(3):before {
-      animation-delay: 2s;
+      animation-delay: 0.8s;
     }
     & > div:nth-child(4):before {
-      animation-delay: 3s;
+      animation-delay: 1.2s;
     }
     & > div:nth-child(5):before {
-      animation-delay: 4s;
+      animation-delay: 1.6s;
     }
     & > div:nth-child(6):before {
-      animation-delay: 5s;
+      animation-delay: 2s;
     }
     & > div:nth-child(7):before {
-      animation-delay: 6s;
+      animation-delay: 2.4s;
     }
     & > div:hover {
       background: #fee6f1;
@@ -3269,7 +3271,7 @@ const imgSrcHandel = (i: any) => {
     background: #fff;
     opacity: 0;
   }
-  10% {
+  40% {
     background: #fff;
     opacity: 0;
   }
@@ -3278,7 +3280,7 @@ const imgSrcHandel = (i: any) => {
     opacity: 1;
   }
   90% {
-    background: #fdd3e3;
+    background: #fff;
     opacity: 0;
   }
   100% {
@@ -3406,9 +3408,15 @@ const imgSrcHandel = (i: any) => {
   }
 }
 .check_active {
-  background: #fc1682 !important;
-  color: #fff !important;
-  transition: all 0.5s ease !important;
+  &>span {
+    display: block;
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    background: #fc1682 !important;
+    color: #fff !important;
+    transition: all 0.5s ease !important;
+  }
 }
 
 .nurse_mobile {

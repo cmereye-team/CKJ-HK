@@ -617,7 +617,7 @@ const differData: any = {
         <div class="note2-content">
           <div class="note2-content-l">
             <img
-              src="https://static.cmereye.com/imgs/2024/02/e593066f247bebff.webp"
+              src="https://static.cmereye.com/imgs/2024/09/012753add9d36390.png"
               alt=""
               v-if="windowWidth > 768"
             />
