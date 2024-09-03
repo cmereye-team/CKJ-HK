@@ -884,6 +884,11 @@ const problemData = {
 }
 
 @media only screen and (max-width: 768px) {
+  :deep(.explain_box_mobile) {
+    top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
   .ltimg {
     margin-top: 50px;
     padding: 0 0 60px 10px;

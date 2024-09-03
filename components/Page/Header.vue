@@ -268,9 +268,37 @@ const showExplain = ref(true)
 const isHealthCare = () => {
   if (route.path === '/dental-service/scaling-and-polishing') {
     showExplain.value = true
+  } else if (route.path == '/dental-service/implant') {
+    showExplain.value = true
+  } else if (route.path == '/dental-service/fillings') {
+    showExplain.value = true
+  } else if (route.path == '/dental-service/veneers') {
+    showExplain.value = true
+  } else if (route.path == '/dental-service/toothtray') {
+    showExplain.value = true
+  } else if (route.path == '/dental-service/rootCanal') {
+    showExplain.value = true
+  } else if (route.path == '/dental-service/orthodontics') {
+    showExplain.value = true
+  } else if (route.path == '/dental-service/invisiblebraces') {
+    showExplain.value = true
+  } else if (route.path == '/dental-service/all-ceramic-crowns') {
+    showExplain.value = true
+  } else if (route.path == '/dental-service/children-dentistry') {
+    showExplain.value = true
+  } else if (route.path == '/dental-service/wisdom-teeth-extraction') {
+    showExplain.value = true
+  } else if (route.path == '/dental-service/teeth-whitening') {
+    showExplain.value = true
+  } else if (route.path == '/dental-service/general-oral-examination') {
+    showExplain.value = true
   } else if (route.path == '/dental-service/periodontal') {
     showExplain.value = true
   } else if (route.path == '/health-care-voucher') {
+    showExplain.value = true
+  } else if (route.path == '/news/scaling-and-polishing-test') {
+    showExplain.value = true
+  } else if (route.path == '/news/news-tooth-wiki/263') {
     showExplain.value = true
   } else if (route.path == '/news/news-tooth-wiki/263') {
     showExplain.value = true
@@ -400,6 +428,13 @@ const isHealthCare = () => {
         <!-- <div class="header_content_text_implant_span" v-if="showExplain">
           <span>優惠只限於網上及電話預約客戶</span>
         </div> -->
+      </div>
+      <div
+        v-if="showExplain && windowWidth > 768"
+        class="header-content-text-implant"
+      >
+        <div>29年專科•專業•專注</div>
+        <div><span>港人首選</span>一站式連鎖牙科品牌</div>
       </div>
       <div class="explain_box_mobile" v-if="showExplain">
         <span>優惠只限於網上及電話預約客戶</span>

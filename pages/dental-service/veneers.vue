@@ -1325,6 +1325,11 @@ const caseLists = [
 }
 //md
 @media only screen and (max-width: 768px) {
+  :deep(.explain_box_mobile) {
+    top: 110px !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
   .bp {
     margin-top: 94px;
     &-text {

@@ -1254,6 +1254,11 @@ let newsMessageSwiperRef = {
   }
 }
 @media only screen and (max-width: 768px) {
+  :deep(.explain_box_mobile) {
+    top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
   .reason {
     margin-top: 54px;
     &-title {

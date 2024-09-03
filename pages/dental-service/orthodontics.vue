@@ -1302,6 +1302,11 @@ const careData = {
   }
 }
 @media only screen and (max-width: 768px) {
+  :deep(.explain_box_mobile) {
+    top: 110px !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
   .dentistryServices-title-in.bb span {
     font-size: 20px;
   }

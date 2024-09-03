@@ -214,8 +214,8 @@ const noteData2 = {
   ],
 }
 
-const getUrl = file => {
-  return new URL(`../../assets/images/${file}.svg`,import.meta.url).href
+const getUrl = (file) => {
+  return new URL(`../../assets/images/${file}.svg`, import.meta.url).href
 }
 
 const reasonData = {
@@ -1894,6 +1894,11 @@ const differData: any = {
 }
 
 @media only screen and (max-width: 768px) {
+  :deep(.explain_box_mobile) {
+    top: 110px !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
   .tabNav {
     padding: 30px;
     font-size: 1rem;

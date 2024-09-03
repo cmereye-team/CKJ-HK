@@ -1167,6 +1167,11 @@ const differData = {
   }
 }
 @media screen and (max-width: 768px) {
+  :deep(.explain_box_mobile) {
+    top: 110px !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
   .advantage {
     margin-top: 40px;
     &-title {

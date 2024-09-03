@@ -462,7 +462,8 @@ onMounted(() => {
       <div class="index_title pageCon">
         {{ $t('pages.dental-service.title') }}
       </div>
-      <div class="mobile_orthodontics">
+      <ServiceIntroduce v-if="windowWidth >768" :introduceData="orthodonticsIntroduceData" />
+      <div class="mobile_orthodontics" v-else>
         <ServiceIntroduce :introduceData="orthodonticsIntroduceData" />
       </div>
       <div class="reason">
@@ -1488,6 +1489,11 @@ onMounted(() => {
 }
 
 @media only screen and (max-width: 768px) {
+  :deep(.explain_box_mobile) {
+    top: 0 !important;
+    margin-left: 0 !important;
+    margin-right: auto !important;
+  }
   .mobile_orthodontics {
     :deep(.introduce) {
       .introduce-in-l {
