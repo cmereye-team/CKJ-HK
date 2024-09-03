@@ -36,7 +36,7 @@ onMounted(() => {
         backgroundSize: 'auto 100%',
       }"
     >
-      <div class="tabNav noTitle pageCon">
+      <div class="tabNav noTitle pageCon mobile_new">
         <nuxt-link :to="'/'" title="深圳愛康健口腔醫院" alt="深圳愛康健口腔醫院"
           ><span>{{ $t('pages.index.title') }}</span></nuxt-link
         >

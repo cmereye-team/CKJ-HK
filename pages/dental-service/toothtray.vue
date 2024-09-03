@@ -33,7 +33,7 @@ useHead({
 const orthodonticsIntroduceData = {
   title: 'pages.dental-service.toothtray.introduce.title',
   content: 'pages.dental-service.toothtray.introduce.content',
-  mbImg: 'https://static.cmereye.com/imgs/2023/05/97b2cb567b59ccdc.jpg',
+  mbImg: 'https://static.cmereye.com/imgs/2024/09/0fbecf869a4e73a4.png',
   pcImg: 'https://static.cmereye.com/imgs/2023/05/eff373fe8976c4f0.jpg',
   tabNavName: 'pages.dental-service.toothtray.introduce.tabNavName',
 }
@@ -431,7 +431,7 @@ const caseLists = [
   },
   {
     img: 'https://static.cmereye.com/static/ckj/imgs/toothtray/Ellipse202.png',
-    name: 'May',
+    name: 'May姐',
     jos: '準奶奶',
     context: '屋企辦喜事，補返隻缺牙見親戚朋友都有體面啲，影相都靚啲。',
   },
@@ -443,24 +443,48 @@ const caseLists = [
       '以前都整過假牙，但戴到好唔舒服。愛康健醫生手勢好好多，排牙好貼服，掂呀。',
   },
 ]
+
+let windowWidth = ref(390)
+const getWindowWidth = () => {
+  windowWidth.value = window.innerWidth
+}
+
+onMounted(() => {
+  getWindowWidth()
+  window.addEventListener('resize', getWindowWidth)
+})
 </script>
 
 <template>
-  <div>
+  <div style="overflow: hidden; width: 100%">
     <PageHeader :headerConfig="headerConfig" />
     <div class="pageIn whitebgColor">
       <div class="index_title pageCon">
         {{ $t('pages.dental-service.title') }}
       </div>
-      <ServiceIntroduce :introduceData="orthodonticsIntroduceData" />
+      <div class="mobile_orthodontics">
+        <ServiceIntroduce :introduceData="orthodonticsIntroduceData" />
+      </div>
       <div class="reason">
-        <div class="dentistryServices-title">
+        <div class="dentistryServices-title" v-if="windowWidth > 768">
           <div class="dentistryServices-title-in bb">
             {{ reasonData.title }}
           </div>
         </div>
+        <div v-else class="mobile_title">
+          <div>
+            <img
+              src="https://static.cmereye.com/imgs/2024/09/67a8f93c5dbf343f.png"
+              alt=""
+            />
+          </div>
+          <div>
+            全口牙托及<br />
+            局部牙托
+          </div>
+        </div>
         <div class="reason-in">
-          <div class="reason-in-l">
+          <div v-if="windowWidth > 768" class="reason-in-l">
             <img :src="reasonData.imgUrl" alt="" />
           </div>
           <div class="reason-in-r">
@@ -656,7 +680,7 @@ const caseLists = [
           </div>
         </div>
       </div>
-      <div class="advantage">
+      <div class="advantage" v-if="windowWidth > 768">
         <div class="advantage-title dentistryServices-title">
           <div class="dentistryServices-title-in bb">隱形牙箍四大優點</div>
         </div>
@@ -678,7 +702,29 @@ const caseLists = [
           </div>
         </div>
       </div>
-      <div class="case">
+      <div class="advantage" v-else>
+        <div class="advantage-title dentistryServices-title">
+          <div class="dentistryServices-title-in bb">隱形牙箍四大優點</div>
+        </div>
+        <div class="advantage-lists">
+          <div
+            class="advantage-lists-in"
+            v-for="(advantageItem, advantageIndex) in advantageData.lists"
+            :key="advantageIndex"
+          >
+            <div class="advantage-lists-in-image">
+              <img
+                :src="advantageItem.img"
+                :alt="advantageItem.name"
+                :title="advantageItem.name"
+              />
+            </div>
+            <div class="advantage-lists-in-name">{{ advantageItem.name }}</div>
+            <div class="advantage-lists-in-text">{{ advantageItem.text }}</div>
+          </div>
+        </div>
+      </div>
+      <div class="case" v-if="windowWidth > 768">
         <div class="case-title">
           <div class="case-title-in">個案分享</div>
         </div>
@@ -705,10 +751,37 @@ const caseLists = [
           </div>
         </div>
       </div>
+      <div class="case" v-else>
+        <div class="advantage-title dentistryServices-title">
+          <div class="dentistryServices-title-in bb">個案分享</div>
+        </div>
+        <div class="case-context">
+          <span>解決缺牙問題</span>
+          <span>我揀愛康健！</span>
+        </div>
+        <div class="case-content">
+          <div class="case-content-in">
+            <div v-for="(caseItem, caseIndex) in caseLists" :key="caseIndex">
+              <div class="case-content-in-l">
+                <div>
+                  <img :src="caseItem.img" alt="" />
+                </div>
+                <div>
+                  <span>{{ caseItem.jos }}</span>
+                  <span>{{ caseItem.name }}</span>
+                </div>
+              </div>
+              <div class="case-content-in-r">
+                {{ caseItem.context }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <ServiceProblem :problemData="problemData" />
       <serviceCard />
       <NewAddress />
-     <ContactForm-new />
+      <ContactForm-new />
     </div>
     <PageFooter />
     <PageNavbar />
@@ -718,6 +791,26 @@ const caseLists = [
 
 
 <style lang="scss" scoped>
+.mobile_orthodontics {
+  :deep(.introduce) {
+    .introduce-in-l {
+      position: absolute;
+      bottom: -20px;
+      .content {
+        width: 100%;
+        padding: 0 8vw;
+        font-weight: 400;
+        color: var(--Grey-Deep, #4d4d4d);
+        text-align: justify;
+        font-family: 'Noto Sans HK';
+        font-size: 16px;
+      }
+    }
+    .mobile_new {
+      margin: 6.65vw 8vw 12vw;
+    }
+  }
+}
 .reason {
   width: 100%;
   max-width: 894px;
@@ -747,7 +840,7 @@ const caseLists = [
           margin-bottom: 20px;
         }
         &::before {
-          content: '·';
+          content: none;
           font-size: 36px;
           display: inline-block;
           margin-right: 5px;
@@ -1150,6 +1243,26 @@ const caseLists = [
   }
 }
 @media (min-width: 768px) and (max-width: 1920px) {
+  .mobile_orthodontics {
+    :deep(.introduce) {
+      .introduce-in-l {
+        position: absolute;
+        bottom: -20px;
+        .content {
+          width: 100%;
+          padding: 0 8vw;
+          font-weight: 400;
+          color: var(--Grey-Deep, #4d4d4d);
+          text-align: justify;
+          font-family: 'Noto Sans HK';
+          font-size: 16px;
+        }
+      }
+      .mobile_new {
+        margin: 6.65vw 8vw 12vw;
+      }
+    }
+  }
   .reason {
     max-width: 46.5625vw;
     margin: 4.1667vw auto 0;
@@ -1375,20 +1488,97 @@ const caseLists = [
 }
 
 @media only screen and (max-width: 768px) {
+  .mobile_orthodontics {
+    :deep(.introduce) {
+      .introduce-in-l {
+        position: absolute;
+        bottom: -20px;
+        .content {
+          width: 100%;
+          padding: 0 8vw;
+          font-weight: 400;
+          color: var(--Grey-Deep, #4d4d4d);
+          text-align: justify;
+          font-family: 'Noto Sans HK';
+          font-size: 16px;
+        }
+      }
+      .mobile_new {
+        margin: 6.65vw 8vw 12vw;
+      }
+    }
+  }
+  :deep(.tabNav) {
+    padding: 0;
+  }
   .reason {
-    padding: 0 30px;
+    padding: 0 8vw;
+    width: 100%;
+    overflow: hidden;
     &-in {
       flex-direction: column;
+      margin-top: 0;
       &-l {
         width: 100%;
         margin-right: 0;
       }
       &-r {
-        margin-top: 40px;
+        margin-top: 5.33vw;
         .item {
-          font-size: 15px;
+          font-size: 4vw;
           letter-spacing: 4.5px;
+          .item-r h3 {
+            color: #fc1682;
+            font-family: 'Noto Sans HK';
+            font-size: 4.2665vw;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 200%; /* 32px */
+            letter-spacing: 1.6px;
+          }
+          .item-r p {
+            color: var(--Black, #4d4d4d);
+            font-family: 'Noto Sans HK';
+            font-size: 4.265vw;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 200%;
+            letter-spacing: 1.6px;
+          }
         }
+      }
+    }
+    .mobile_title {
+      display: flex;
+      align-items: flex-end;
+      flex-direction: row;
+      & > div:nth-child(1) {
+        & > img {
+          position: relative;
+          z-index: 4;
+        }
+      }
+      & > div:nth-child(2) {
+        color: var(--Grey-Deep, #4d4d4d);
+        font-family: FakePearl;
+        font-size: 5.33vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 32px */
+        padding-bottom: 2.8vw;
+        position: relative;
+        margin-left: 2.665vw;
+      }
+      & > div:nth-child(2)::after {
+        content: '';
+        display: inline-block;
+        width: 300%;
+        height: 1px;
+        background: #fc1682;
+        margin-left: 10px;
+        position: absolute;
+        left: -35px;
+        bottom: 15px;
       }
     }
   }
@@ -1407,12 +1597,21 @@ const caseLists = [
     &-context {
       margin: 15px 30px 0;
       font-weight: 500;
-      font-size: 14px;
+      font-size: 16px;
+      text-align: left;
     }
     &-tableRemark {
-      font-weight: 500;
-      font-size: 14px;
+      // font-weight: 500;
+      // font-size: 14px;
       margin-top: 8px;
+      margin: 0 10.65vw;
+      color: var(--Theme-Color, #fc1682);
+      text-align: center;
+      font-family: FakePearl;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 160%; /* 24px */
     }
     &-table {
       padding: 0 30px;
@@ -1538,19 +1737,33 @@ const caseLists = [
   }
   .advantage {
     margin-top: 60px;
+    overflow: hidden;
     &-title {
       margin-bottom: 0;
     }
     &-lists {
-      max-width: 390px;
-      padding: 0 15px;
+      // max-width: 390px;
+      margin-left: 30px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding-right: 50px;
+      padding-bottom: 20px;
       box-sizing: border-box;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
+      gap: 0 15px;
+      overflow-x: scroll;
       &-in {
-        width: 50%;
-        flex: initial;
-        width: calc((100% - 60px) / 2);
-        margin: 30px 15px 0;
+        // width: 50%;
+        // flex: initial;
+        border-radius: 10px;
+        border: 1px solid var(--Pink-Dark, #ffa8c6);
+        background: linear-gradient(
+          194deg,
+          #fee6f1 3.13%,
+          rgba(254, 230, 241, 0) 49.04%
+        );
+        min-width: 180px;
+        margin: 0;
         &-image {
           margin: 0 10px;
           padding-bottom: calc(100% - 20px);
@@ -1559,7 +1772,8 @@ const caseLists = [
             left: 18px;
           }
           img {
-            width: 100%;
+            // width: 100%;
+            width: 100px;
           }
         }
         &-name {
@@ -1571,6 +1785,8 @@ const caseLists = [
           font-size: 15px;
           padding: 0;
           letter-spacing: 3px;
+          box-sizing: border-box;
+          padding: 15px;
         }
         &:nth-child(n + 3) {
           .advantage-lists-in-name {
@@ -1582,16 +1798,24 @@ const caseLists = [
         }
       }
     }
+    &-lists::-webkit-scrollbar {
+      height: 12px;
+      width: 0;
+      cursor: pointer;
+    }
+    &-lists::-webkit-scrollbar-thumb {
+      height: 12px;
+      background: #fc1682;
+      border: none;
+      cursor: pointer;
+    }
+    &-lists::-webkit-scrollbar-track {
+      background: #fee6f1;
+    }
   }
   .case {
     margin-top: 60px;
-    background: linear-gradient(
-      279deg,
-      rgba(252, 22, 130, 0.4) -0.55%,
-      rgba(252, 22, 130, 0.28) -0.54%,
-      rgba(255, 168, 198, 0) 99.3%
-    );
-    padding: 44px 30px;
+    padding: 44px 0 0;
     &-title {
       &-in {
         font-size: 20px;
@@ -1599,28 +1823,76 @@ const caseLists = [
       }
     }
     &-context {
-      margin-top: 30px;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin: 30px auto;
       span {
         font-size: 16px;
       }
+      position: relative;
+      width: fit-content;
+    }
+    &-context::before {
+      content: '';
+      position: absolute;
+      background: url('https://static.cmereye.com/imgs/2024/09/b8d7b49444c440db.png') no-repeat;
+      width: 16px;
+      height: 15px;
+      background-size: cover;
+      display: inline-block;
+      left: -22px;
+      top: 0px;
+    }
+    &-context::after {
+      content: '';
+      position: absolute;
+      background: url('https://static.cmereye.com/imgs/2024/09/1e3be61edaf5a06f.png') no-repeat;
+      width: 16px;
+      height: 15px;
+      background-size: cover;
+      display: inline-block;
+      right: -22px;
+      bottom: 0px;
     }
     &-content {
-      background: none;
-      margin-top: 70px;
-      padding: 0;
+      background: linear-gradient(
+        180deg,
+        #fee6f1 0%,
+        rgba(254, 230, 241, 0) 100%
+      );
+      // background: none;
+      margin-top: 0;
+      padding: 0 8vw;
+      margin-right: 0;
       &-in {
-        flex-direction: column;
+        // flex-direction: column;
+        flex-direction: row;
+        overflow-x: scroll;
+        gap: 0 15px;
+        padding: 50px 0px 20px 0px;
+        margin: 30px 0;
+        justify-content: flex-start;
         & > div {
           width: 100%;
-          padding: 16px 12px;
+          padding: 4vw 7.465vw;
+          min-width: 180px;
           &:not(:first-child) {
             margin-left: 0px;
-            margin-top: 70px;
+            margin-top: 0;
           }
         }
         &-l {
-          align-items: flex-end;
+          // align-items: flex-end;
+          flex-direction: column;
+          align-items: center;
           margin-top: -70px;
+          & > div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            // justify-content: center;
+            align-items: center;
+          }
           img {
             width: 125px;
             height: 125px;
@@ -1628,7 +1900,7 @@ const caseLists = [
             border: 4px solid #fff;
           }
           span {
-            margin-left: 15px;
+            margin-left: 0;
             &:nth-of-type(1) {
               font-size: 20px;
             }
@@ -1641,6 +1913,20 @@ const caseLists = [
           margin-top: 10px;
           font-size: 16px;
         }
+      }
+      &-in::-webkit-scrollbar {
+        height: 8px;
+        width: 0;
+        cursor: pointer;
+      }
+      &-in::-webkit-scrollbar-thumb {
+        height: 12px;
+        background: #fc1682;
+        border: none;
+        cursor: pointer;
+      }
+      &-in::-webkit-scrollbar-track {
+        background: #fee6f1;
       }
     }
   }
