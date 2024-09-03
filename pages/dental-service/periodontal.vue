@@ -455,7 +455,7 @@ onMounted(() => {
   setTimeout(() => {
     egImg(0)
   }, 500)
-  doctorList_periodontal()
+  // doctorList_periodontal()
 })
 // 处理医生数据 获得有 牙周病tag的医生
 interface doctorList_type {
@@ -465,23 +465,229 @@ interface doctorList_type {
   posts: string
   org: string
   skilled: string
+  newSkilled: string
 }
 
-const list = ref([] as any[])
-const periodontalList = ref<doctorList_type[]>([])
-const doctorList_periodontal = () => {
-  list.value = [
-    ...doctorLists.value[0],
-    ...doctorLists.value[1],
-    ...doctorLists.value[2],
-    ...doctorLists.value[3],
-  ]
-  list.value.map((items) => {
-    if (items.tags.includes('口腔牙周病科')) {
-      periodontalList.value.push(items)
-    }
-  })
-}
+// const list = ref([] as any[])
+// const periodontalList = ref<doctorList_type[]>([])
+// const doctorList_periodontal = () => {
+//   list.value = [
+//     ...doctorLists.value[0],
+//     ...doctorLists.value[1],
+//     ...doctorLists.value[2],
+//     ...doctorLists.value[3],
+//   ]
+//   console.log(list.value[0],'newSkilled');
+
+//   list.value.map((items) => {
+//     if (items.tags.includes('口腔牙周病科')) {
+//       periodontalList.value.push(items)
+//     }
+//   })
+// }
+
+const periodontalList = [
+  {
+    id: '139',
+    dentalProfessionId: ['105'],
+    imgUrl: 'https://static.cmereye.com/imgs/2023/05/9e64ca61ad962a93.png',
+    mbImg:
+      'https://static.cmereye.com/static/ckj/imgs/doctor/Longhua/doctor502.png',
+    name: '曾紅艷',
+    org: '羅湖區，福田區，寶安區，龍華區 李川口腔診所，康輝門診，恆潔門診，雅健門診，炫雅門診',
+    newOrg:
+      '羅湖區，福田區，寶安區，龍華區 李川口腔診所，康輝門診，恆潔門診，雅健門診，炫雅門診',
+    tags: [],
+    text: '醫生',
+    posts: '集團牙周學總監',
+    job: '深圳愛康健口腔醫院牙周科主任',
+    skilled:
+      '牙潔治技術、各種牙周疾病的專業治療及手術治療（翻瓣術及牙周引導骨組織再造術、齦切除術）以及種植體周圍感染疾病的治療。',
+    newSkilled:
+      '牙潔治技術、各種牙周疾病的專業治療及手術治療（翻瓣術及牙周引導骨組織再造術、齦切除術），種植體周圍感染疾病治療 等。',
+    context:
+      '深圳愛康健口腔醫院牙周科主任， 集團牙周學總監， 集團牙周學科帶頭人， 美國牙周學會國際會員， 中華口腔醫學會牙周病學專委會會員， 畢業於南華大學口腔醫學專業， 2018年獲得廣東省民營口腔醫師病例展示競賽銀獎， 2020年華南國際會展牙周優秀病例大賽金獎， 2020廣東省口腔醫師病例大賽金獎。 曾於武漢大學口腔醫學院任職5年，從事口腔臨床工作20余年，完成5000余例牙周病的成功治療。師從香港大學牙學院牙體牙髓科主任張成飛教授及北京大學口腔醫學院胡文傑教授，常年參加國內外前沿口腔學術交流，並多次赴北京、上海、韓國、意大利等地參加口腔醫學領域專業培訓，受邀全國性牙周病學學術會議做病例分享。',
+    educated: '',
+    isIndexShow: true,
+  },
+  {
+    id: '101',
+    dentalProfessionId: ['102', '104', '105'],
+    imgUrl: 'https://static.cmereye.com/imgs/2023/05/6a7b889f6f185f2a.png',
+    mbImg:
+      'https://static.cmereye.com/static/ckj/imgs/doctor/Luohu/doctor101.png',
+    name: '鞏賢平',
+    org: '羅湖區 深圳愛康健口腔醫院，口腔牙周病科，口腔修復科，牙體牙髓科',
+    newOrg: '羅湖區 深圳愛康健口腔醫院',
+    tags: ['口腔牙周病科', '口腔修復科', '牙體牙髓科'],
+    text: '醫生',
+    newJobs: [
+      '愛康健口腔醫院院長',
+      '口腔專業主治醫師生',
+      '華西口腔醫學院碩士研究生',
+    ],
+    posts: '主治醫師',
+    job: '愛康健口腔醫院院長',
+    skilled:
+      '種植修復，微創美學修復，全口咬合重建等；熟練應用口腔顯微鏡並在顯微放大設備下進行種植手術、牙周美學手術及各類修復操作。熟練處理牙周病及牙體缺失、四環素、氟斑牙的全口美學修復工作，對於顯微治療有深入研究，具有豐富的口腔全科診療經驗。',
+    newSkilled:
+      '牙齒美容修復、烤瓷及全瓷修復、 各類復雜義齒修復、種植修復 等。',
+    context:
+      '主治醫師， 深圳愛康健口腔醫院院長， 集團口腔修復專業學科帶頭人， 華西口腔醫學院醫學碩士， 深圳電視臺第一現場《名醫直播問診》節目特邀專家。 從事口腔修復臨床、教學和科研工作近20年，多次赴香港、美國等地進行學習和學術交流，並受邀出席全國口腔修復學術研討會，在微創美學修復領域有著豐富的診療經驗，迄今已完成5000余例口腔微創美學修復。為人親和、細致認真、嫻熟的醫學素養是鞏醫生給人的印象，在簡短的交流中對顧客需求了如指掌，在結合專業技能使得顧客稱贊不已，充分發揮優秀醫務工作者的本質。',
+    educated: '口腔醫學碩士',
+    isIndexShow: true,
+  },
+  {
+    id: '103',
+    dentalProfessionId: ['102', '104', '105'],
+    imgUrl: 'https://static.cmereye.com/imgs/2023/05/81d8c2ccb62f31a9.png',
+    mbImg:
+      'https://static.cmereye.com/static/ckj/imgs/doctor/Luohu/doctor103.png',
+    name: '楊福強',
+    org: '羅湖區 深圳愛康健口腔醫院，口腔牙周病科，口腔修復科，牙體牙髓科',
+    newOrg: '羅湖區 深圳愛康健口腔醫院',
+    tags: ['口腔牙周病科', '口腔修復科', '牙體牙髓科'],
+    text: '醫生',
+    newJobs: [
+      '口腔醫院綜合科總監',
+      '口腔修復科醫生',
+      '口腔專業主治醫生',
+      '中華口腔醫學會委員',
+      '國際牙科研究會(IADR)會員',
+    ],
+    posts: '主治醫師',
+    job: '深圳愛康健口腔醫院副院長',
+    skilled:
+      '冠根一體化牙體牙髓及牙周病的診療，複雜牙的拔除，牙體缺損的嵌體修復，以及烤瓷冠、義齒的修復等方面的診治，在水激光治牙方面有著豐富的臨床經驗。臨床工作中致力於牙體保存，種植修復設計，咬合功能重建，微創美學牙體修復等。',
+    newSkilled:
+      '口腔美觀設計、瓷牙修復、牙體牙髓病的診治、牙體缺損的修復以及瓷冠、義齒的修復等方面的診治，水激光無痛治牙 等。',
+    context:
+      '主治醫師， 深圳愛康健口腔醫院副院長， 粵港資深修復醫師， 牙科研究會(IADR)會員， 中華口腔醫學會種植專科會員， 深圳口腔醫學會專業委員會委員， 德國漢堡大學牙科學院訪問學者。 口腔專業畢業後曾在三甲醫院從事口腔診療、科研、教學工作20多年，多次在北大口腔醫學院、中山大學光華口腔醫學院等國內口腔專業學府進修學習，累積豐富經驗，操作手法靈巧精確，善於解決疑難案例，擁有1萬多例烤瓷美容修復和牙周治療案例。近年來，多篇論文在國內外核心期刊發表，他主導的《烤瓷牙的遠期效果觀察》、《活動義齒的臨床設計》等論文，多次在國內各地口腔醫療技術研討會上獲得一等獎。',
+    educated: '',
+    isIndexShow: true,
+  },
+  {
+    id: '112',
+    dentalProfessionId: ['102', '104', '105'],
+    imgUrl: 'https://static.cmereye.com/imgs/2023/05/02d96f63cef851a3.png',
+    mbImg:
+      'https://static.cmereye.com/static/ckj/imgs/doctor/Luohu/doctor112.png',
+    name: '趙瑩',
+    org: '羅湖區，龍華區 深圳愛康健口腔醫院，口腔牙周病科，口腔修復科，牙體牙髓科',
+    newOrg: '羅湖區，龍華區 深圳愛康健口腔醫院',
+    tags: ['口腔牙周病科', '口腔修復科', '牙體牙髓科'],
+    text: '醫生',
+    newJobs: ['主治醫生', '口腔醫學碩士'],
+    posts: '主治醫師',
+    job: '主治醫師',
+    skilled:
+      '對牙體牙髓、各類義齒修復、外科拔牙、複雜牙周病的系統治療等方面有豐富的臨床經驗，在多發病聯合診治中有獨到思路，制定科學的治療計劃。熟悉掌握口腔科常見病、多發病的診斷、治療工作。',
+    newSkilled:
+      '對牙體牙髓、各類義齒修復、外科拔牙、複雜牙周病的系統治療，多發病聯合診治熟悉掌握口腔科常見病、多發病的診斷、治療工作',
+    context:
+      '主治醫師， 畢業於蘭州大學口腔醫學院， 中山大學光華口腔醫學碩士。 專注口腔醫療工作十余年。曾在深圳市人民醫院學習進修一年，曾被集團選派前往韓國首爾口腔整形醫院進行學術交流和學習，青年骨幹醫生，數次獲得省內口腔修復病例大賽優秀獎。趙醫生具有良好的醫德醫風，秉承專業、細心、手法輕巧，在牙體牙髓方面采用微創、無痛治療技術，嚴格執行無菌操作流程，在治療過程中注意顧客的感受，力求操作無痛、無不適、效果適合客戶滿意的體驗式服務。',
+    educated: '口腔醫學碩士',
+    isIndexShow: true,
+  },
+  {
+    id: '119',
+    dentalProfessionId: ['102', '104', '105'],
+    imgUrl: 'https://static.cmereye.com/imgs/2023/05/2c9d3870859fa8ab.png',
+    mbImg:
+      'https://static.cmereye.com/static/ckj/imgs/doctor/Luohu/doctor119.png',
+    name: '牟宇',
+    org: '羅湖區 深圳愛康健口腔醫院，口腔牙周病科，口腔修復科，牙體牙髓科',
+    newOrg: '羅湖區 深圳愛康健口腔醫院',
+    tags: ['口腔牙周病科', '口腔修復科', '牙體牙髓科'],
+    text: '醫生',
+    newJobs: ['主治醫生'],
+    posts: '主治醫師',
+    job: '',
+    skilled:
+      '牙齒疼痛的治療，各類缺失牙的活動、全瓷修復、烤瓷修復、嵌體修復、固定修復，前牙美容瓷牙修復，牙周炎的治療，種植牙的方案制定等。',
+    newSkilled:
+      '牙齒疼痛的治療，各類缺失牙的活動、全瓷修復、烤瓷修復、嵌體修復、固定修復，前牙美容瓷牙修復，牙周炎的治療，種植牙的方案制定等',
+    context:
+      '主治醫師， 全科醫師， 粵港口腔修復醫師， 中華口腔醫學會會員， 畢業於華西醫科大學。 從事口腔臨床工作10余年，有豐富的臨床經驗。具有良好的醫德醫風，多次參加口腔醫學會舉辦的口腔學研討論會及培訓，注重專業、無痛、細致的客戶服務。在口腔內科學、口腔修復學、口腔外科學積累了大量的臨床經驗，獲得廣大顧客一直好評。',
+    educated: '',
+    isIndexShow: true,
+  },
+  {
+    id: '140',
+    dentalProfessionId: ['105'],
+    imgUrl: 'https://static.cmereye.com/imgs/2023/05/a6e66496c44b89da.png',
+    mbImg:
+      'https://static.cmereye.com/static/ckj/imgs/doctor/Luohu/doctor140.png',
+    name: '陳蓉蓉',
+    org: '羅湖區，龍華區 康輝門診',
+    newOrg: '羅湖區，龍華區 康輝門診',
+    tags: [],
+    text: '醫生',
+    newJobs: ['牙周專科醫生'],
+    posts: '主治醫師',
+    job: '牙周專科醫師',
+    skilled:
+      '牙周治療、無痛拔牙、美容修復等，尤其擅長無痛治療在口腔臨床診療中的運用。',
+    newSkilled:
+      '牙周治療、無痛拔牙、美容修復等，尤其擅長無痛治療在口腔臨床診療中的運用',
+    context:
+      '執業醫師， 全科醫師， 牙周專科醫師， 曾在北京大學深圳醫院學習進修。 畢業於廣東醫科大學口腔醫學專業，積累了豐富的口腔臨床診療經驗，多次赴外學習交流牙周專科、修復專科理論知識和臨床操作技藝。追求無痛治療原則，工作認真，操作溫柔。技術嫻熟，有良好醫德，對待患者溫和負責，為患者提供個性化診療方案，深得患者信賴。',
+    educated: '',
+    isIndexShow: true,
+  },
+  {
+    id: '322',
+    dentalProfessionId: ['105'],
+    imgUrl:
+      'https://static.cmereye.com/static/ckj/imgs/doctor/Nanshan/doctor322pc.png',
+    mbImg:
+      'https://static.cmereye.com/static/ckj/imgs/doctor/Nanshan/doctor322.png',
+    name: '趙董博',
+    org: '南山區 恒雅口腔門診',
+    newOrg: '南山區 恒雅口腔門診',
+    tags: [],
+    text: '醫生',
+    newJobs: ['中華口腔醫學會會員', '體牙髓及牙周專委會會員'],
+    posts: '主治醫師',
+    job: '中華口腔醫學會會員，牙體牙髓及牙周專委會會員',
+    skilled:
+      '牙周病的診斷及序列治療，前後牙的美學樹脂充填，牙體牙髓疾病及根尖週疾病的診治，前牙貼面及後牙嵌體、全冠的修復，口腔常見多發疾病的預防及保健。',
+    newSkilled:
+      '牙周病的診斷及序列治療，前後牙的美學樹脂充填，牙體牙髓疾病及根尖週疾病的診治，前牙貼面及後牙嵌體、全冠的修復 等。',
+    context:
+      '畢業於河南大學醫學院口腔醫學專業，10餘年工作經驗，有豐富的口腔臨床操作經驗，多次參加國內知名專家教授的臨床技術操作培訓班，並應用於日常臨床診療操作中，給予不同患者個性化解決方案。',
+    educated: '口腔學士學位',
+    isIndexShow: true,
+  },
+  {
+    id: '120',
+    dentalProfessionId: ['105'],
+    imgUrl: 'https://static.cmereye.com/imgs/2023/05/001263c1e4ed1caa.png',
+    mbImg:
+      'https://static.cmereye.com/static/ckj/imgs/doctor/Luohu/doctor120.png',
+    name: '劉國強',
+    org: '羅湖區 深圳愛康健口腔醫院，口腔牙周病科',
+    newOrg: '羅湖區 深圳愛康健口腔醫院',
+    tags: ['口腔牙周病科'],
+    text: '醫生',
+    newJobs: [
+      '顯微根管治療醫生',
+      '中華口腔醫學會會員',
+      '牙體牙髓專委會成員',
+      '口腔修復學專委會成員',
+    ],
+    posts: '執業醫師',
+    job: '顯微根管治療醫師',
+    skilled:
+      '現代化根管治療，美學樹脂修復，各類固定及活動修復，各類複雜牙拔除。',
+    newSkilled:
+      '現代化根管治療，美學樹脂修復，各類固定及活動修復，各類複雜牙拔除。',
+    context:
+      '執業醫師， 顯微根管治療醫師， 中華口腔醫學會會員， 牙體牙髓專委會成員， 口腔修復學專委會成員。 畢業於荊楚理工大學醫學院，曾在湖北省三甲醫院進修，對於常見口腔疾病的診療積累了豐富的臨床診療經驗與深厚的口腔醫學理論知識，多次參加國內重大口腔行業學術會議的交流，熱衷於口腔修復及顯微根管治療牙病領域，善於制定個性化的科學治療方案，幫助患者快速恢復口腔健康。',
+    educated: '',
+    isIndexShow: true,
+  },
+]
 
 const egActive = ref(false)
 const egImg = (i: number) => {
@@ -1699,9 +1905,9 @@ const imgSrcHandel = (i: any) => {
               {{ doc.name }} <span>{{ doc.posts }}</span>
             </div>
             <div>{{ doc.org.slice(0, 3) }}</div>
-            <div v-if="doc.skilled.length > 0">
+            <div v-if="doc.newSkilled.length > 0">
               <span>擅長項目：</span>
-              <span>{{ doc.skilled }}</span>
+              <span>{{ doc.newSkilled }}</span>
             </div>
             <div class="consult_mobile">線上諮詢</div>
           </div>
@@ -3178,7 +3384,7 @@ const imgSrcHandel = (i: any) => {
         position: relative;
         z-index: 2;
         display: block;
-        padding: 10px 0;  
+        padding: 10px 0;
       }
     }
     & > div::before {
@@ -3408,7 +3614,7 @@ const imgSrcHandel = (i: any) => {
   }
 }
 .check_active {
-  &>span {
+  & > span {
     display: block;
     padding: 10px 0;
     width: 100%;
@@ -3806,7 +4012,7 @@ const imgSrcHandel = (i: any) => {
       display: flex;
       flex-direction: column;
       align-items: center;
-      min-height: 540px;
+      min-height: 500px;
       & > div:nth-child(1) {
         background: var(--Pink-Pale, #fee6f1);
         position: absolute;
@@ -3840,15 +4046,20 @@ const imgSrcHandel = (i: any) => {
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-right: 120px;
         & > span {
+          position: absolute;
           padding-top: 5px;
+          left: 60%;
+          text-align: left;
           color: var(--Theme-Color, #fc1682);
           font-family: FakePearl;
-          font-size: 22px;
+          font-size: 12px;
           font-style: normal;
           font-weight: 400;
           line-height: 160%;
           letter-spacing: 1px;
+          max-width: 160px;
         }
       }
       & > div:nth-child(3) {
@@ -5950,7 +6161,7 @@ const imgSrcHandel = (i: any) => {
         display: flex;
         flex-direction: column;
         align-items: center;
-        min-height: 480px;
+        min-height: 360px;
         & > div:nth-child(1) {
           background: var(--Pink-Pale, #fee6f1);
           position: absolute;
@@ -5972,7 +6183,7 @@ const imgSrcHandel = (i: any) => {
           color: var(--Theme-Color, #fc1682);
           text-align: center;
           font-family: FakePearl;
-          font-size: 20px;
+          font-size: 18px;
           font-style: normal;
           font-weight: 600;
           line-height: 160%; /* 32px */
@@ -5983,15 +6194,20 @@ const imgSrcHandel = (i: any) => {
           display: flex;
           justify-content: center;
           align-items: center;
+          padding-right: 80px;
+          letter-spacing: 2px;
           & > span {
+            position: absolute;
             padding-top: 5px;
             color: var(--Theme-Color, #fc1682);
             font-family: FakePearl;
-            font-size: 12px;
+            font-size: 10px;
             font-style: normal;
             font-weight: 600;
-            line-height: 160%;
-            letter-spacing: 1.2px;
+            line-height: 140%;
+            letter-spacing: 0px;
+            max-width: 180px;
+            left: 52%;
           }
         }
         & > div:nth-child(3) {
