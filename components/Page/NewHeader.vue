@@ -1618,7 +1618,7 @@ const handleopenwechat = () => {
     display: flex;
     align-items: center;
     flex-direction: column;
-    z-index: 38;
+    z-index: 35;
     font-style: normal;
     font-weight: 600;
     line-height: 160%;
