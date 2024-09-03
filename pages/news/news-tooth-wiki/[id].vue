@@ -268,6 +268,17 @@ onMounted(() => {
         )
       }
     }
+    if (route.path == '/news/news-tooth-wiki/271') {
+      const img_table_271_2 = document.getElementById('img_table_271_2')
+      if (img_table_271_2) {
+        img_table_271_2.insertAdjacentHTML(
+          'afterend',
+          `
+        <style>.box_271_2{max-width:960px;margin:0 auto;border-radius:20px;overflow:hidden}.title_box{color:#fff;font-family:FakePearl;font-size:35px;font-style:normal;font-weight:500;line-height:160%;padding:20px 0;text-align:center;border-radius:20px 20px var(--Count,0) var(--Count,0);border:2px solid #fff;background:#14a033;margin-bottom:2px}.clo_one,.clo_two{display:flex;flex-direction:column}.clo_one div{border:2px solid #fff;background:var(--Blue-Lightest,#e6f6ff)}.clo_two div{border:2px solid #fff;background:#dfede2;height:max-content}.clo_one,.clo_two{flex:1;gap:2px}.clo_one>div:nth-child(1),.clo_two>div:nth-child(1){color:#14a033;font-family:FakePearl;font-size:24px;font-style:normal;font-weight:500;line-height:140%;min-height:109px;display:flex;align-items:center;justify-content:center;text-align:center}.clo_one>div:nth-child(2),.clo_two>div:nth-child(2){color:#4d4d4d;font-family:FakePearl;font-size:17px;font-style:normal;font-weight:400;line-height:135%;box-sizing:border-box;padding:40px 16px 40px 10px;min-height:420px}.clo_one>div:nth-child(2) li,.clo_two>div:nth-child(2) li{margin-bottom:20px}.box_271_content{display:flex}.clo_one>div:nth-child(2) ul,.clo_two>div:nth-child(2) ul{list-style:disc}@media screen and (max-width:768px){.title_box{padding:2.65vw 0;font-size:4.8vw}.clo_one>div:nth-child(1),.clo_two>div:nth-child(1){font-size:2.65vw;min-height:18.4vw}.clo_one>div:nth-child(2),.clo_two>div:nth-child(2){font-size:2.13vw;padding:2.65vw 2.13vw 2.65vw 0;min-height:53.65vw}.clo_one>div:nth-child(2) ul,.clo_two>div:nth-child(2) ul{padding-left:5.03vw}.clo_one>div:nth-child(2) li,.clo_two>div:nth-child(2) li{margin-bottom:2.65vw}}</style><div class="box_271_2"><div class="title_box">醫療券涵蓋牙科服務</div><div class="box_271_content"><div class="clo_one"><div>預防性牙科項目</div><div><ul><li>牙齒檢查</li><li>牙科放射照（CT拍片／Ｘ光）</li><li>口腔衞生指導／口腔健康教育</li><li>洗牙／打磨</li><li>塗搽高濃度氟化物劑</li></ul></div></div><div class="clo_two"><div>跟進／監察<br>慢性病症牙科項目</div><div><ul><li>覆檢假牙托／牙橋／種植體</li><li>治理顳下頷關節（牙骹）病症／痛症</li><li>治理蛀牙，包括補牙、脫牙、杜牙根（牙髓治療）</li><li>治理牙周病，包括進階牙周治療</li></ul></div></div><div class="clo_one"><div>治理急性<br>病症牙科項目</div><div><ul><li>牙根刮治／清創</li><li>牙髓摘除</li><li>小型口腔手術</li><li>處方藥物</li></ul></div></div><div class="clo_two"><div>復康性牙科項目</div><div><ul><li>洞內嵌體／高嵌體</li><li>鑲配人造牙冠／牙橋</li><li>鑲配假牙托</li><li>種植牙</li></ul></div></div></div></div>
+          `
+        )
+      }
+    }
   }, 3000)
 })
 
