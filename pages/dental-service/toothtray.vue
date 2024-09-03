@@ -778,7 +778,7 @@ onMounted(() => {
           </div>
         </div>
       </div>
-      <ServiceProblem :problemData="problemData" />
+      <ServiceProblem :problemData="problemData" class="serviceProblem" />
       <serviceCard />
       <NewAddress />
       <ContactForm-new />
@@ -1836,7 +1836,8 @@ onMounted(() => {
     &-context::before {
       content: '';
       position: absolute;
-      background: url('https://static.cmereye.com/imgs/2024/09/b8d7b49444c440db.png') no-repeat;
+      background: url('https://static.cmereye.com/imgs/2024/09/b8d7b49444c440db.png')
+        no-repeat;
       width: 16px;
       height: 15px;
       background-size: cover;
@@ -1847,7 +1848,8 @@ onMounted(() => {
     &-context::after {
       content: '';
       position: absolute;
-      background: url('https://static.cmereye.com/imgs/2024/09/1e3be61edaf5a06f.png') no-repeat;
+      background: url('https://static.cmereye.com/imgs/2024/09/1e3be61edaf5a06f.png')
+        no-repeat;
       width: 16px;
       height: 15px;
       background-size: cover;
@@ -1929,6 +1931,10 @@ onMounted(() => {
         background: #fee6f1;
       }
     }
+  }
+  :deep(.problem-title-in),
+  :deep(.bb) {
+    font-size: 5.3334vw;
   }
 }
 </style>
