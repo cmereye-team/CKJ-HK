@@ -825,7 +825,7 @@ const handleopenwechat = () => {
     margin: 0 auto;
     padding: 20px 10px 0 30px;
     align-items: flex-end;
-    z-index: 40;
+    z-index: 50;
     position: relative;
     transition: all 0.5s;
     .logo {
@@ -1169,7 +1169,7 @@ const handleopenwechat = () => {
   height: 162px;
   width: 100%;
   position: absolute;
-  z-index: 35;
+  z-index: 45;
   left: 0px;
   bottom: 0px;
   animation-name: wave1;
@@ -1223,7 +1223,7 @@ const handleopenwechat = () => {
   height: 162px;
   width: 100%;
   position: absolute;
-  z-index: 35;
+  z-index: 45;
   left: 0px;
   bottom: 0px;
   animation-name: wave2;
@@ -1446,7 +1446,7 @@ const handleopenwechat = () => {
   .header-content {
     .explain_page_one {
       position: absolute;
-      z-index: 35;
+      z-index: 34;
       bottom: 115px;
       right: 5%;
       font-style: normal;
@@ -1618,7 +1618,7 @@ const handleopenwechat = () => {
     display: flex;
     align-items: center;
     flex-direction: column;
-    z-index: 35;
+    z-index: 38;
     font-style: normal;
     font-weight: 600;
     line-height: 160%;
