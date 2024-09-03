@@ -1532,7 +1532,7 @@ const imgSrcHandel = (i: any) => {
         <div class="item_leven leven_four">
           <div>Level 3</div>
           <div>
-            結果顯示有周炎症狀，建議盡快盡求牙科醫生專業意見。一旦進一步的感染，可導致牙骨受到不能逆轉的傷害，
+            結果顯示有牙周炎症狀，建議盡快盡求牙科醫生專業意見。一旦進一步的感染，可導致牙骨受到不能逆轉的傷害，
             有機會造成牙齒脫落。
           </div>
           <div @click="close">
