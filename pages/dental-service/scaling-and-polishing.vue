@@ -1162,7 +1162,7 @@ onMounted(() => {
               transform: translate(-50%, -50%) rotate(5deg);
             }
           }
-          &>:nth-of-type(1) {
+          &>span:nth-of-type(1) {
             font-size: 37px;
             line-height: 1.2;
           }
@@ -1185,7 +1185,7 @@ onMounted(() => {
           span {
             color: #fff;
           }
-          &>:nth-of-type(1) {
+          &>span:nth-of-type(1) {
             font-size: 37px;
             line-height: 1.2;
           }
