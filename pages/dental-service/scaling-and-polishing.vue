@@ -1144,7 +1144,7 @@ onMounted(() => {
         font-size: 24px;
         font-weight: 600;
         span {
-          font-size: 28px;
+          font-size: 37px;
           font-weight: 700;
           color: var(--indexColor);
           &:nth-of-type(2) {
@@ -1161,10 +1161,6 @@ onMounted(() => {
               left: 50%;
               transform: translate(-50%, -50%) rotate(5deg);
             }
-          }
-          &>span:nth-of-type(1) {
-            font-size: 37px;
-            line-height: 1.2;
           }
         }
         &:nth-of-type(1) {
@@ -1184,10 +1180,6 @@ onMounted(() => {
           background: var(--indexColor);
           span {
             color: #fff;
-          }
-          &>span:nth-of-type(1) {
-            font-size: 37px;
-            line-height: 1.2;
           }
         }
       }
@@ -1715,7 +1707,7 @@ onMounted(() => {
         .item-in {
           font-size: 1.25vw;
           span {
-            font-size: 1.4583vw;
+            font-size: 1.9271vw;
             &:nth-of-type(2) {
               font-size: 0.8333vw;
             }
@@ -1727,7 +1719,7 @@ onMounted(() => {
         &:nth-of-type(1) {
           height: 3.6458vw;
           .item-in {
-            font-size: 1.4583vw;
+            font-size: 1.9271vw;
           }
         }
         &:nth-of-type(3) {
