@@ -1162,6 +1162,10 @@ onMounted(() => {
               transform: translate(-50%, -50%) rotate(5deg);
             }
           }
+          &>:nth-of-type(1) {
+            font-size: 37px;
+            line-height: 1.2;
+          }
         }
         &:nth-of-type(1) {
           flex: 2;
@@ -1180,6 +1184,10 @@ onMounted(() => {
           background: var(--indexColor);
           span {
             color: #fff;
+          }
+          &>:nth-of-type(1) {
+            font-size: 37px;
+            line-height: 1.2;
           }
         }
       }
