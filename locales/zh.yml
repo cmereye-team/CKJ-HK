@@ -9,7 +9,7 @@ components:
       menu_index:
         name: 主页
       menu_brand:
-        name: 品牌理念
+        name: 關於愛康健
         course: 品牌介绍
         honor: 品牌荣誉
       menu_dental_service:

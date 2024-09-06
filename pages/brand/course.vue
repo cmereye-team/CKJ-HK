@@ -332,7 +332,7 @@ onMounted(() => {
   <div>
     <PageHeader :headerConfig="headerConfig" />
     <div class="pageIn whitebgColor">
-      <div class="index_title smallPageCon">{{ $t('pages.brand.title') }}</div>
+      <div class="index_title smallPageCon">關於愛康健</div>
       <div class="introduce bigPageCon">
         <div
           class="introduce-in"
@@ -350,17 +350,18 @@ onMounted(() => {
             >
               <span>{{ $t('pages.index.title') }}</span>
             </nuxt-link>
-            <nuxt-link :to="''">
+            <!-- <nuxt-link :to="''">
               <span>{{ $t('pages.brand.title') }}</span>
-            </nuxt-link>
-            <span :title="'品牌介紹'">品牌介紹</span>
+            </nuxt-link> -->
+            <span :title="'關於愛康健'">關於愛康健</span>
           </div>
           <div class="introduce-in-t mbBox">
             <img :src="introduceData.mbImg" />
           </div>
           <div class="introduce-in-l smallPageCon">
-            <div class="title">品牌介紹</div>
-            <div class="content">{{ $t(introduceData.content) }}</div>
+            <div class="title">關於愛康健</div>
+            <div class="content">作為深圳口腔專科醫院，深圳愛康健口腔醫院秉承著“專科·專業”的服務宗旨，對醫療資源進行了科學、合理的整合。
+              醫師團隊是畢業於國內知名口腔學院的專業人員；醫院各專業帶頭人，包括種植醫師、美學修復醫師、牙周病醫師等共同組成，帶領一批醫護人員一起構成愛康健口腔醫院的服務團隊。全程式預約一體化診療服務，讓每一位顧客享受健康微笑之旅。</div>
           </div>
         </div>
       </div>
@@ -496,7 +497,12 @@ onMounted(() => {
       </div> -->
       <div class="new_course_bg">
         <div class="new_course">
-          <div class="new_course_name">{{ $t(courseData.title) }}</div>
+          <!-- <div class="new_course_name">{{ $t(courseData.title) }}11</div> -->
+          <div class="dentistryServices-title reason-title">
+          <div class="dentistryServices-title-in bb reason-title-in">
+            {{ $t(courseData.title) }}
+          </div>
+        </div>
           <div>
             <div v-for="(item, index) in newCourseLists" :key="index">
               <div
@@ -793,11 +799,12 @@ onMounted(() => {
         color: var(--indexColor1);
       }
       .content {
-        font-weight: 600;
+        font-weight: 500;
         font-size: 20px;
-        max-width: 630px;
-        width: 630px;
+        max-width: 500px;
+        width: 500px;
         margin-top: 56px;
+        text-align: justify;
       }
     }
   }
@@ -807,7 +814,7 @@ onMounted(() => {
   font-size: 1.25rem;
   line-height: 160%;
   color: #cbcbcb;
-  margin-top: 83px;
+  margin-top: 50px;
   a {
     &:not(:last-child)::after {
       content: '';
@@ -972,6 +979,7 @@ onMounted(() => {
   transform: translateY(-50%);
 }
 .new_course_bg {
+  margin-top: 125px;
   width: 100%;
   position: relative;
   .new_course_name {
@@ -1464,6 +1472,7 @@ onMounted(() => {
 //md
 @media only screen and (max-width: 768px) {
   .new_course_bg {
+    margin-top: 60px;
     width: 100%;
     position: relative;
     .new_course_name {

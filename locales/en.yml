@@ -9,7 +9,7 @@ components:
       menu_index: 
         name: 'home'
       menu_brand: 
-        name: 'Brand concept'
+        name: 'About CKJ'
         course: 'Brand introduction'
         honor: 'Brand honor'
       menu_dental_service: 
