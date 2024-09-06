@@ -360,8 +360,10 @@ onMounted(() => {
           </div>
           <div class="introduce-in-l smallPageCon">
             <div class="title">關於愛康健</div>
-            <div class="content">作為深圳口腔專科醫院，深圳愛康健口腔醫院秉承著“專科·專業”的服務宗旨，對醫療資源進行了科學、合理的整合。
-              醫師團隊是畢業於國內知名口腔學院的專業人員；醫院各專業帶頭人，包括種植醫師、美學修復醫師、牙周病醫師等共同組成，帶領一批醫護人員一起構成愛康健口腔醫院的服務團隊。全程式預約一體化診療服務，讓每一位顧客享受健康微笑之旅。</div>
+            <div class="content">
+              作為深圳口腔專科醫院，深圳愛康健口腔醫院秉承著“專科·專業”的服務宗旨，對醫療資源進行了科學、合理的整合。
+              醫師團隊是畢業於國內知名口腔學院的專業人員；醫院各專業帶頭人，包括種植醫師、美學修復醫師、牙周病醫師等共同組成，帶領一批醫護人員一起構成愛康健口腔醫院的服務團隊。全程式預約一體化診療服務，讓每一位顧客享受健康微笑之旅。
+            </div>
           </div>
         </div>
       </div>
@@ -499,10 +501,10 @@ onMounted(() => {
         <div class="new_course">
           <!-- <div class="new_course_name">{{ $t(courseData.title) }}11</div> -->
           <div class="dentistryServices-title reason-title">
-          <div class="dentistryServices-title-in bb reason-title-in">
-            {{ $t(courseData.title) }}
+            <div class="dentistryServices-title-in bb reason-title-in">
+              {{ $t(courseData.title) }}
+            </div>
           </div>
-        </div>
           <div>
             <div v-for="(item, index) in newCourseLists" :key="index">
               <div

@@ -823,104 +823,6 @@ const imgSrcHandel = (i: any) => {
       <div class="mobile-orthodontics">
         <ServiceIntroduce :introduceData="orthodonticsIntroduceData" />
       </div>
-      <div class="mobile_faq">
-        <div class="dentistryServices-title reason-title">
-          <div class="dentistryServices-title-in bb reason-title-in">
-            常見牙周問題
-          </div>
-        </div>
-        <div>
-          <div>
-            <div>
-              <img
-                srcset="
-                  https://static.cmereye.com/imgs/2024/08/f70a8c03df580ef7.png 400w,
-                  https://static.cmereye.com/imgs/2024/08/5a8a206bcf96fc52.png
-                "
-                src="https://static.cmereye.com/imgs/2024/08/5a8a206bcf96fc52.png"
-                alt=""
-              />
-            </div>
-            <div>
-              <div>牙齦炎</div>
-              <div>
-                牙齦發炎，常由於牙菌斑堆積引起，若不及時治療，可能發展為更嚴重的問題
-              </div>
-            </div>
-          </div>
-          <div>
-            <div>
-              <img
-                srcset="
-                  https://static.cmereye.com/imgs/2024/08/449d691464bd572e.png 400w,
-                  https://static.cmereye.com/imgs/2024/08/329c15a4b7b8bc46.png
-                "
-                src="https://static.cmereye.com/imgs/2024/08/329c15a4b7b8bc46.png"
-                alt=""
-              />
-            </div>
-            <div>
-              <div>牙周炎</div>
-              <div>
-                進一步的感染，可能導致牙齦退縮和牙齒鬆動，嚴重時可導致牙齒脫落
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="care">
-        <div class="dentistryServices-title care-title">
-          <div class="dentistryServices-title-in bb care-title-in">
-            {{ symptomData.title }}
-          </div>
-        </div>
-        <div class="care-lists">
-          <div
-            v-for="(careItem, careIndex) in symptomData.lists"
-            :key="careIndex"
-            class="care-lists-item"
-          >
-            <div>
-              <div class="image">
-                <div class="image-in">
-                  <img
-                    v-if="windowWidth > 768"
-                    :src="careItem.imgUrl"
-                    :alt="careItem.title"
-                  />
-                  <img
-                    v-else
-                    :src="careItem.imgMobileUrl"
-                    :alt="careItem.title"
-                  />
-                </div>
-              </div>
-              <div class="text">{{ careItem.title }}</div>
-            </div>
-          </div>
-        </div>
-        <div class="care-btn" style="display: none">
-          <PageAnimBtnTypeTwo :str="'與我們了解更多'" />
-        </div>
-      </div>
-      <div class="mobile_youtube">
-        <a>
-          <!-- <img
-            src="https://static.cmereye.com/imgs/2024/08/109d93d287fc37a0.png"
-            srcset="
-              https://static.cmereye.com/imgs/2024/08/d14596dd773dd95b.png 400w,
-              https://static.cmereye.com/imgs/2024/08/109d93d287fc37a0.png
-            "
-            alt=""
-          /> -->
-          <iframe
-            width="100%"
-            height="100%"
-            src="https://www.youtube.com/embed/Lb5GAx2ivrA?si=zWvVWe_NbC4Aqq5T"
-            frameborder="0"
-          ></iframe>
-        </a>
-      </div>
       <div class="mobile_introduce_one">
         <div>
           <div>
@@ -993,50 +895,162 @@ const imgSrcHandel = (i: any) => {
           </div>
         </div>
       </div>
-      <div class="step">
-        <div class="step-in">
-          <div class="dentistryServices-title step-title">
-            <div class="dentistryServices-title-in bb step-title-in">
-              {{ stepData.title }}
+      <div class="step_new_mobile">
+        <div class="dentistryServices-title reason-title">
+          <div class="dentistryServices-title-in bb reason-title-in">
+            牙周病病變過程
+          </div>
+        </div>
+        <div class="step_new_items">
+          <div>
+            <div>1</div>
+            <div>
+              <img
+                src="https://static.cmereye.com/imgs/2024/08/cb4f7d50c4e973a6.png"
+                srcset="
+                  https://static.cmereye.com/imgs/2024/08/d9576e4ef6c8bbfa.png 400w,
+                  https://static.cmereye.com/imgs/2024/08/cb4f7d50c4e973a6.png
+                "
+                alt=""
+              />
+            </div>
+            <div>輕度牙周病</div>
+            <div>
+              <span>1-2 mm牙周袋</span>
+              <span>無牙齒移動</span>
             </div>
           </div>
-          <div class="step-lists">
-            <div
-              v-for="(stepItem, stepIndex) in stepData.lists"
-              :key="stepIndex"
-              class="step-lists-in"
-            >
-              <div class="step-lists-in-l" v-if="windowWidth > 767">
-                <div class="title">
-                  <img src="@/assets/images/icon_13.png" alt="" />
-                  {{ stepItem.title }}
-                </div>
-                <div class="image"><img :src="stepItem.pcImg" alt="" /></div>
-                <div class="name">{{ stepItem.name }}</div>
-                <div class="mobile_text">
-                  <p v-for="(el, i) in stepItem.text" :key="i">
-                    <span>{{ el.l }}</span
-                    ><span>{{ el.r }}</span>
-                  </p>
-                </div>
-              </div>
-              <div class="step-lists-in-l" v-else>
-                <div class="title">
-                  {{ stepItem.title.charAt(1) }}
-                </div>
-                <div class="image"><img :src="stepItem.img" alt="" /></div>
-                <div class="name">{{ stepItem.name }}</div>
-                <div class="mobile_text">
-                  <p v-for="(el, i) in stepItem.text" :key="i">
-                    <span>{{ el.l }}</span
-                    ><span>{{ el.r }}</span>
-                  </p>
-                </div>
-              </div>
+          <div>
+            <div>2</div>
+            <div>
+              <img
+                src="https://static.cmereye.com/imgs/2024/08/8945b67ff72e1e10.png"
+                srcset="
+                  https://static.cmereye.com/imgs/2024/08/2adbffbe54b348b4.png 400w,
+                  https://static.cmereye.com/imgs/2024/08/8945b67ff72e1e10.png
+                "
+                alt=""
+              />
+            </div>
+            <div>中度牙周病</div>
+            <div>
+              <span>3-4 mm牙周袋</span>
+              <span>輕微牙齒鬆動</span>
+            </div>
+          </div>
+          <div>
+            <div>3</div>
+            <div>
+              <img
+                src="https://static.cmereye.com/imgs/2024/08/34b59fb25e487f68.png"
+                srcset="
+                  https://static.cmereye.com/imgs/2024/08/1c4237335dc21b2d.png 400w,
+                  https://static.cmereye.com/imgs/2024/08/34b59fb25e487f68.png
+                "
+                alt=""
+              />
+            </div>
+            <div>重度牙周病</div>
+            <div>
+              <span>≥5 mm牙周袋</span>
+              <span>牙肉萎縮或牙齒鬆動</span>
+            </div>
+          </div>
+          <div>
+            <div>4</div>
+            <div>
+              <img
+                src="https://static.cmereye.com/imgs/2024/08/7d1a41a4f40c936c.png"
+                srcset="
+                  https://static.cmereye.com/imgs/2024/08/e4bcb7a79d8ce9e2.png 400w,
+                  https://static.cmereye.com/imgs/2024/08/7d1a41a4f40c936c.png
+                "
+                alt=""
+              />
+            </div>
+            <div>非常嚴重的牙周病</div>
+            <div>
+              <span>牙齒脫落</span>
             </div>
           </div>
         </div>
       </div>
+      <div
+        class="mobile_introduce_one mobile_introduce_three"
+        v-if="windowWidth < 768"
+      >
+        <div>
+          <div>
+            <img
+              src="https://static.cmereye.com/imgs/2024/08/3ed09fc6f9c1a6a2.png"
+              alt=""
+            />
+          </div>
+          <div><span>牙周病</span><span>治療簡介</span></div>
+        </div>
+        <div>
+          <div>
+            牙結石一旦形成只能透過牙醫專業清理，普通刷牙無法去除牙結石。
+          </div>
+          <div>
+            牙結石包括齦上結石和齦下結石，齦上結石可以透過超音波洗牙或噴砂洗牙等簡單方法清除。齦下結石必須進行專業的牙周刮治，也就是牙周治療，又稱深層洗牙或洗牙腳。
+          </div>
+          <div>
+            <span>重度牙周患者</span
+            >有機會需要做手術性治療，切開牙齦組織，徹底清除牙根表面的牙垢。每個人的情況都是不同的，醫生會透過檢查及評估，再按照病人的病情，擬定適切的治療方案。
+          </div>
+        </div>
+      </div>
+      <div class="health_mobile">
+        <div>
+          <span>深圳愛康健口腔醫院</span>
+          <span>65歲及以上<i>長者優惠政策</i></span>
+        </div>
+        <div>
+          <div>
+            <div>
+              <div>首次到診長者</div>
+              <div>
+                <span>免掛號費</span><span><i>及</i>CT拍片檢查費</span>
+              </div>
+            </div>
+            <div class="abs_box"><span>優惠</span><span>1</span></div>
+          </div>
+          <div>
+            <div>
+              <div>牙周治療套餐</div>
+              <div>
+                <div>
+                  <span>牙周病專科檢查記錄</span>
+                  <span
+                    ><i style="color: #fc1682">￥</i>240<span
+                      >(原價¥300/次)</span
+                    ></span
+                  >
+                </div>
+                <div>
+                  <span>輕度/中度/重度 牙周療程</span>
+                  <span
+                    >原價<span>9</span><i style="color: #fc1682">折</i></span
+                  >
+                </div>
+                <div>
+                  <span
+                    >贈送<i>2<i style="color: #fc1682">次</i></i
+                    >牙周治療後維</span
+                  >
+                  <span>護<i>（價值¥800/次）</i></span>
+                </div>
+              </div>
+            </div>
+            <div class="abs_box"><span>優惠</span><span>2</span></div>
+          </div>
+          <div>
+            *可使用醫院券或一般付款方式支付醫療費用<br />優惠只限於網上及電話預約客戶。
+          </div>
+        </div>
+      </div>
+
       <div class="hospital" v-if="windowWidth < 768">
         <div>
           <span>羅湖區</span>
@@ -1125,6 +1139,7 @@ const imgSrcHandel = (i: any) => {
           <div>交通路線</div>
           <div>百度地圖</div>
         </div>
+        <div>政府指定長者醫療券機構</div>
         <div class="care2-btn">
           <PageAnimBtnTypeTwo :str="'立即線上諮詢'" />
         </div>
@@ -1295,111 +1310,63 @@ const imgSrcHandel = (i: any) => {
             </div>
           </div>
         </div>
+        <div>政府指定長者醫療券機構</div>
         <div class="care2-btn">
           <PageAnimBtnTypeTwo :str="'立即預約牙齒檢查'" />
         </div>
       </div>
-      <div class="reason">
-        <div class="dentistryServices-title reason-title">
-          <div class="dentistryServices-title-in bb reason-title-in">
-            牙周病的成因
+      <div class="care">
+        <div class="dentistryServices-title care-title">
+          <div class="dentistryServices-title-in bb care-title-in">
+            {{ symptomData.title }}
           </div>
         </div>
-        <div class="reason-lists">
+        <div class="care-lists">
           <div
-            v-for="(item, index) in reasonData.reasonLists"
-            :key="index"
-            class="reason-lists-item"
+            v-for="(careItem, careIndex) in symptomData.lists"
+            :key="careIndex"
+            class="care-lists-item"
           >
-            <div class="image">
-              <img :src="item.img" alt="" v-if="windowWidth > 768" />
-              <img :src="item.mbImg" alt="" v-else />
-            </div>
-            <div class="text">
-              {{ item.context }}
+            <div>
+              <div class="image">
+                <div class="image-in">
+                  <img
+                    v-if="windowWidth > 768"
+                    :src="careItem.imgUrl"
+                    :alt="careItem.title"
+                  />
+                  <img
+                    v-else
+                    :src="careItem.imgMobileUrl"
+                    :alt="careItem.title"
+                  />
+                </div>
+              </div>
+              <div class="text">{{ careItem.title }}</div>
             </div>
           </div>
+        </div>
+        <div class="care-btn" style="display: none">
+          <PageAnimBtnTypeTwo :str="'與我們了解更多'" />
         </div>
       </div>
-      <div class="step_new_mobile">
-        <div class="dentistryServices-title reason-title">
-          <div class="dentistryServices-title-in bb reason-title-in">
-            牙周病病變過程
-          </div>
-        </div>
-        <div class="step_new_items">
-          <div>
-            <div>1</div>
-            <div>
-              <img
-                src="https://static.cmereye.com/imgs/2024/08/cb4f7d50c4e973a6.png"
-                srcset="
-                  https://static.cmereye.com/imgs/2024/08/d9576e4ef6c8bbfa.png 400w,
-                  https://static.cmereye.com/imgs/2024/08/cb4f7d50c4e973a6.png
-                "
-                alt=""
-              />
-            </div>
-            <div>輕度牙周病</div>
-            <div>
-              <span>1-2 mm牙周袋</span>
-              <span>無牙齒移動</span>
-            </div>
-          </div>
-          <div>
-            <div>2</div>
-            <div>
-              <img
-                src="https://static.cmereye.com/imgs/2024/08/8945b67ff72e1e10.png"
-                srcset="
-                  https://static.cmereye.com/imgs/2024/08/2adbffbe54b348b4.png 400w,
-                  https://static.cmereye.com/imgs/2024/08/8945b67ff72e1e10.png
-                "
-                alt=""
-              />
-            </div>
-            <div>中度牙周病</div>
-            <div>
-              <span>3-4 mm牙周袋</span>
-              <span>輕微牙齒鬆動</span>
-            </div>
-          </div>
-          <div>
-            <div>3</div>
-            <div>
-              <img
-                src="https://static.cmereye.com/imgs/2024/08/34b59fb25e487f68.png"
-                srcset="
-                  https://static.cmereye.com/imgs/2024/08/1c4237335dc21b2d.png 400w,
-                  https://static.cmereye.com/imgs/2024/08/34b59fb25e487f68.png
-                "
-                alt=""
-              />
-            </div>
-            <div>重度牙周病</div>
-            <div>
-              <span>≥5 mm牙周袋</span>
-              <span>牙肉萎縮或牙齒鬆動</span>
-            </div>
-          </div>
-          <div>
-            <div>4</div>
-            <div>
-              <img
-                src="https://static.cmereye.com/imgs/2024/08/7d1a41a4f40c936c.png"
-                srcset="
-                  https://static.cmereye.com/imgs/2024/08/e4bcb7a79d8ce9e2.png 400w,
-                  https://static.cmereye.com/imgs/2024/08/7d1a41a4f40c936c.png
-                "
-                alt=""
-              />
-            </div>
-            <div>非常嚴重的牙周病</div>
-            <div>
-              <span>牙齒脫落</span>
-            </div>
-          </div>
-        </div>
+      <div class="mobile_youtube">
+        <a>
+          <!-- <img
+            src="https://static.cmereye.com/imgs/2024/08/109d93d287fc37a0.png"
+            srcset="
+              https://static.cmereye.com/imgs/2024/08/d14596dd773dd95b.png 400w,
+              https://static.cmereye.com/imgs/2024/08/109d93d287fc37a0.png
+            "
+            alt=""
+          /> -->
+          <iframe
+            width="100%"
+            height="100%"
+            src="https://www.youtube.com/embed/Lb5GAx2ivrA?si=zWvVWe_NbC4Aqq5T"
+            frameborder="0"
+          ></iframe>
+        </a>
       </div>
       <div
         class="mobile_introduce_one mobile_introduce_three"
@@ -1514,6 +1481,53 @@ const imgSrcHandel = (i: any) => {
         <div>對骨缺損進行填補，促進骨組織再生</div>
         <div>膜齦<br v-if="!mobileShow" />移植術</div>
         <div>移植健康的牙齦組織以修復受損區域</div>
+      </div>
+      <div class="step">
+        <div class="step-in">
+          <div class="dentistryServices-title step-title">
+            <div class="dentistryServices-title-in bb step-title-in">
+              {{ stepData.title }}
+            </div>
+          </div>
+          <div class="step-lists">
+            <div
+              v-for="(stepItem, stepIndex) in stepData.lists"
+              :key="stepIndex"
+              class="step-lists-in"
+            >
+              <div class="step-lists-in-l" v-if="windowWidth > 767">
+                <div class="title">
+                  <img src="@/assets/images/icon_13.png" alt="" />
+                  {{ stepItem.title }}
+                </div>
+                <div class="image"><img :src="stepItem.pcImg" alt="" /></div>
+                <div class="name">{{ stepItem.name }}</div>
+                <div class="mobile_text">
+                  <p v-for="(el, i) in stepItem.text" :key="i">
+                    <span>{{ el.l }}</span
+                    ><span>{{ el.r }}</span>
+                  </p>
+                </div>
+              </div>
+              <div class="step-lists-in-l" v-else>
+                <div class="title">
+                  {{ stepItem.title.charAt(1) }}
+                </div>
+                <div class="image"><img :src="stepItem.img" alt="" /></div>
+                <div class="name">{{ stepItem.name }}</div>
+                <div class="mobile_text">
+                  <p v-for="(el, i) in stepItem.text" :key="i">
+                    <span>{{ el.l }}</span
+                    ><span>{{ el.r }}</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="care2-btn">
+        <PageAnimBtnTypeTwo :str="'立即WhatsApp預約檢查'" />
       </div>
       <div class="eg_new_mobile" v-if="windowWidth < 768">
         <div class="dentistryServices-title reason-title">
@@ -1655,6 +1669,27 @@ const imgSrcHandel = (i: any) => {
             <div>
               我太遲看醫生，有3隻牙已經留不住要拔掉，幸好其他牙齒還有救，但都已經十分嚴重，接近無晒牙骨。現在加固了牙齒，防止牙齒愈來愈鬆。江冬曉醫生很懂得照顧老人家，我很怕看牙，他令我堅持完成療程。同時也很感謝太太每次都陪我深圳睇牙。
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="doctor_new_mobile">
+        <div class="dentistryServices-title reason-title">
+          <div class="dentistryServices-title-in bb reason-title-in">
+            牙周病牙醫推薦
+          </div>
+        </div>
+        <div>
+          <div v-for="(doc, i) in periodontalList" :key="i" class="doc_item">
+            <div><img :src="doc.mbImg" alt="" /></div>
+            <div>
+              {{ doc.name }} <span>{{ doc.posts }}</span>
+            </div>
+            <div>{{ doc.org.slice(0, 3) }}</div>
+            <div v-if="doc.newSkilled.length > 0">
+              <span>擅長項目：</span>
+              <span>{{ doc.newSkilled }}</span>
+            </div>
+            <div class="consult_mobile">線上諮詢</div>
           </div>
         </div>
       </div>
@@ -1843,76 +1878,155 @@ const imgSrcHandel = (i: any) => {
           </div>
         </div>
       </div>
-      <div class="health_mobile">
-        <div>
-          <span>深圳愛康健口腔醫院</span>
-          <span>65歲及以上<i>長者優惠政策</i></span>
-        </div>
-        <div>
-          <div>
-            <div>
-              <div>首次到診長者</div>
-              <div>
-                <span>免掛號費</span><span><i>及</i>CT拍片檢查費</span>
-              </div>
-            </div>
-            <div class="abs_box"><span>優惠</span><span>1</span></div>
-          </div>
-          <div>
-            <div>
-              <div>牙周治療套餐</div>
-              <div>
-                <div>
-                  <span>牙周病專科檢查記錄</span>
-                  <span
-                    ><i style="color: #fc1682">￥</i>240<span
-                      >(原價¥300/次)</span
-                    ></span
-                  >
-                </div>
-                <div>
-                  <span>輕度/中度/重度 牙周療程</span>
-                  <span
-                    >原價<span>9</span><i style="color: #fc1682">折</i></span
-                  >
-                </div>
-                <div>
-                  <span
-                    >贈送<i>2<i style="color: #fc1682">次</i></i
-                    >牙周治療後維</span
-                  >
-                  <span>護<i>（價值¥800/次）</i></span>
-                </div>
-              </div>
-            </div>
-            <div class="abs_box"><span>優惠</span><span>2</span></div>
-          </div>
-          <div>
-            *可使用醫院券或一般付款方式支付醫療費用<br />優惠只限於網上及電話預約客戶。
-          </div>
-        </div>
-      </div>
-      <div class="doctor_new_mobile">
+      <ServiceProblem :problemData="problemData" />
+      <div class="mobile_faq">
         <div class="dentistryServices-title reason-title">
           <div class="dentistryServices-title-in bb reason-title-in">
-            牙周病牙醫推薦
+            常見牙周問題
           </div>
         </div>
         <div>
-          <div v-for="(doc, i) in periodontalList" :key="i" class="doc_item">
-            <div><img :src="doc.mbImg" alt="" /></div>
+          <div>
             <div>
-              {{ doc.name }} <span>{{ doc.posts }}</span>
+              <img
+                srcset="
+                  https://static.cmereye.com/imgs/2024/08/f70a8c03df580ef7.png 400w,
+                  https://static.cmereye.com/imgs/2024/08/5a8a206bcf96fc52.png
+                "
+                src="https://static.cmereye.com/imgs/2024/08/5a8a206bcf96fc52.png"
+                alt=""
+              />
             </div>
-            <div>{{ doc.org.slice(0, 3) }}</div>
-            <div v-if="doc.newSkilled.length > 0">
-              <span>擅長項目：</span>
-              <span>{{ doc.newSkilled }}</span>
+            <div>
+              <div>牙齦炎</div>
+              <div>
+                牙齦發炎，常由於牙菌斑堆積引起，若不及時治療，可能發展為更嚴重的問題
+              </div>
             </div>
-            <div class="consult_mobile">線上諮詢</div>
+          </div>
+          <div>
+            <div>
+              <img
+                srcset="
+                  https://static.cmereye.com/imgs/2024/08/449d691464bd572e.png 400w,
+                  https://static.cmereye.com/imgs/2024/08/329c15a4b7b8bc46.png
+                "
+                src="https://static.cmereye.com/imgs/2024/08/329c15a4b7b8bc46.png"
+                alt=""
+              />
+            </div>
+            <div>
+              <div>牙周炎</div>
+              <div>
+                進一步的感染，可能導致牙齦退縮和牙齒鬆動，嚴重時可導致牙齒脫落
+              </div>
+            </div>
           </div>
         </div>
       </div>
+      <div class="reason">
+        <div class="dentistryServices-title reason-title">
+          <div class="dentistryServices-title-in bb reason-title-in">
+            牙周病的成因
+          </div>
+        </div>
+        <div class="reason-lists">
+          <div
+            v-for="(item, index) in reasonData.reasonLists"
+            :key="index"
+            class="reason-lists-item"
+          >
+            <div class="image">
+              <img :src="item.img" alt="" v-if="windowWidth > 768" />
+              <img :src="item.mbImg" alt="" v-else />
+            </div>
+            <div class="text">
+              {{ item.context }}
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="step_new_mobile">
+        <div class="dentistryServices-title reason-title">
+          <div class="dentistryServices-title-in bb reason-title-in">
+            牙周病病變過程
+          </div>
+        </div>
+        <div class="step_new_items">
+          <div>
+            <div>1</div>
+            <div>
+              <img
+                src="https://static.cmereye.com/imgs/2024/08/cb4f7d50c4e973a6.png"
+                srcset="
+                  https://static.cmereye.com/imgs/2024/08/d9576e4ef6c8bbfa.png 400w,
+                  https://static.cmereye.com/imgs/2024/08/cb4f7d50c4e973a6.png
+                "
+                alt=""
+              />
+            </div>
+            <div>輕度牙周病</div>
+            <div>
+              <span>1-2 mm牙周袋</span>
+              <span>無牙齒移動</span>
+            </div>
+          </div>
+          <div>
+            <div>2</div>
+            <div>
+              <img
+                src="https://static.cmereye.com/imgs/2024/08/8945b67ff72e1e10.png"
+                srcset="
+                  https://static.cmereye.com/imgs/2024/08/2adbffbe54b348b4.png 400w,
+                  https://static.cmereye.com/imgs/2024/08/8945b67ff72e1e10.png
+                "
+                alt=""
+              />
+            </div>
+            <div>中度牙周病</div>
+            <div>
+              <span>3-4 mm牙周袋</span>
+              <span>輕微牙齒鬆動</span>
+            </div>
+          </div>
+          <div>
+            <div>3</div>
+            <div>
+              <img
+                src="https://static.cmereye.com/imgs/2024/08/34b59fb25e487f68.png"
+                srcset="
+                  https://static.cmereye.com/imgs/2024/08/1c4237335dc21b2d.png 400w,
+                  https://static.cmereye.com/imgs/2024/08/34b59fb25e487f68.png
+                "
+                alt=""
+              />
+            </div>
+            <div>重度牙周病</div>
+            <div>
+              <span>≥5 mm牙周袋</span>
+              <span>牙肉萎縮或牙齒鬆動</span>
+            </div>
+          </div>
+          <div>
+            <div>4</div>
+            <div>
+              <img
+                src="https://static.cmereye.com/imgs/2024/08/7d1a41a4f40c936c.png"
+                srcset="
+                  https://static.cmereye.com/imgs/2024/08/e4bcb7a79d8ce9e2.png 400w,
+                  https://static.cmereye.com/imgs/2024/08/7d1a41a4f40c936c.png
+                "
+                alt=""
+              />
+            </div>
+            <div>非常嚴重的牙周病</div>
+            <div>
+              <span>牙齒脫落</span>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
       <!-- 以下為舊版 -->
       <div class="reason2" v-if="isShowOldNode">
         <div class="dentistryServices-title">
@@ -2092,7 +2206,7 @@ const imgSrcHandel = (i: any) => {
           </div>
         </div>
       </div>
-      <ServiceProblem :problemData="problemData" />
+
       <serviceCard />
       <NewAddress />
       <div class="contact-box">
@@ -2155,7 +2269,7 @@ const imgSrcHandel = (i: any) => {
   }
 }
 .reason {
-  margin-top: 188px;
+  margin-top: 128px;
   &-lists {
     width: 100%;
     max-width: 1656px;
@@ -2605,6 +2719,7 @@ const imgSrcHandel = (i: any) => {
   }
 }
 .step {
+  margin-bottom: 60px;
   width: 100%;
   background: linear-gradient(
     90deg,
@@ -2851,6 +2966,16 @@ const imgSrcHandel = (i: any) => {
         }
       }
     }
+  }
+  & > div:nth-child(3) {
+    display: flex;
+    justify-content: center;
+    color: #358639;
+    font-family: FakePearl;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
   }
 }
 .pc_hospital_btn_active {
@@ -3324,7 +3449,7 @@ const imgSrcHandel = (i: any) => {
 }
 
 .test_tooth {
-  margin-top: 40px;
+  margin-top: 125px;
   background: url('https://static.cmereye.com/imgs/2024/08/542f707beac2323d.png')
     no-repeat;
   background-position: center center;
@@ -4779,7 +4904,7 @@ const imgSrcHandel = (i: any) => {
         margin-bottom: 75px;
         position: absolute;
         top: 0;
-        padding: 260px 0 30px 0;
+        padding: 160px 0 30px 0;
         background: rgb(255 255 255 / 16%);
       }
     }
@@ -4847,7 +4972,7 @@ const imgSrcHandel = (i: any) => {
     box-sizing: border-box;
     max-width: 100%;
     width: 100%;
-    margin: 50px auto;
+    margin: 125px auto 75px;
     & > div:nth-child(1) {
       padding: 0 15px;
       position: relative;
@@ -5182,6 +5307,15 @@ const imgSrcHandel = (i: any) => {
         border-radius: 63px;
         background: var(--Theme-Color, #fc1682);
       }
+    }
+    & > div:nth-child(5) {
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 32px */
+      color: #358639;
+      text-align: center;
+      margin: 20px 0 0 0;
     }
   }
   .step_new_mobile {
