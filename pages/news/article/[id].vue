@@ -458,11 +458,7 @@ onMounted(() => {
               <div>瀏覽次數︰{{ coverageDeatail.visits }}</div>
               <div>更新時間︰{{ coverageDeatail.time }}</div>
               <div class="righeBox">
-                <span
-                  class="copy"
-                  title="複製鏈接"
-                  @click="copyText"
-                ></span>
+                <span class="copy" title="複製鏈接" @click="copyText"></span>
                 <a
                   :href="`https://www.facebook.com/sharer/sharer.php?u=https://www.ckjhk.com/news/article/${_nid}`"
                   target="_block"
@@ -601,7 +597,7 @@ onMounted(() => {
       </div>
       <!-- <div @click="handlegetData">獲取數據</div> -->
       <NewAddress />
-     <ContactForm-new />
+      <ContactForm-new />
     </div>
     <PageFooter />
     <PageNavbar />
@@ -664,7 +660,10 @@ onMounted(() => {
   font-size: 50px;
   h1 {
     font-weight: 600;
+    font-size: 50px;
     font-family: var(--contextTitleFamily);
+    color: var(--indexColor1);
+    line-height: 1.3;
   }
 }
 .content {
@@ -709,10 +708,12 @@ onMounted(() => {
     font-size: 30px;
     font-weight: 600;
     font-family: var(--contextTitleFamily);
+    line-height: 1.6;
   }
   :deep(.content-text) {
     color: var(--textColor);
     font-size: 20px;
+    line-height: 1.6;
     font-family: var(--contextFamily);
     span {
       font-family: var(--contextFamily);
@@ -1309,7 +1310,12 @@ onMounted(() => {
   }
   .content-title {
     margin-top: 30px;
-    font-size: 28px;
+    h1 {
+      font-family: var(--contextTitleFamily);
+      color: var(--indexColor1);
+      font-size: 20px;
+      line-height: 1.6;
+    }
   }
   .content {
     width: 100%;
@@ -1329,10 +1335,12 @@ onMounted(() => {
     :deep(.content-h2) {
       // padding: 0 30px;
       font-size: 20px;
+      line-height: 1.6;
     }
     :deep(.content-text) {
       // padding: 0 30px;
       font-size: 16px;
+      line-height: 2;
       display: inline-block;
       text-align: justify;
     }
