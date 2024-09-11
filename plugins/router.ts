@@ -53,6 +53,31 @@ export default defineNuxtPlugin((nuxtApp) => {
                       <p>拔牙</p>
                       <p>牙周病治療</p>
                       <p>根管治療</p>
+                      <p>種植牙</p>
+                      <p>補牙</p>
+                      <p>拔牙</p>
+                      <p>牙周病治療</p>
+                      <p>根管治療</p> 
+                      <p>種植牙</p>
+                      <p>補牙</p>
+                      <p>拔牙</p>
+                      <p>牙周病治療</p>
+                      <p>根管治療</p> 
+                      <p>種植牙</p>
+                      <p>補牙</p>
+                      <p>拔牙</p>
+                      <p>牙周病治療</p>
+                      <p>根管治療</p> 
+                      <p>種植牙</p>
+                      <p>補牙</p>
+                      <p>拔牙</p>
+                      <p>牙周病治療</p>
+                      <p>根管治療</p> 
+                      <p>種植牙</p>
+                      <p>補牙</p>
+                      <p>拔牙</p>
+                      <p>牙周病治療</p>
+                      <p>根管治療</p>
                     </marquee>
                     <img class="marquee-img" src="https://static.cmereye.com/imgs/2024/09/0b3fd6c541862a25.png"  alt="">
                   </a>
