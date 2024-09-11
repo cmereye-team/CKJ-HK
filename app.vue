@@ -82,7 +82,7 @@ function popupAlertCreated() {
           <div class="healthCareVoucherPop">
             <div class="close">×</div>
             <nuxt-link to="/health-care-voucher">
-              <img src="https://static.cmereye.com/imgs/2024/08/665992e97473e732.png"  alt="">
+              <img src="https://static.cmereye.com/imgs/2024/09/b4ae2fcaebed54c3.png"  alt="">
             </nuxt-link>
         </div>
         `
@@ -91,7 +91,14 @@ function popupAlertCreated() {
           <div class="healthCareVoucherPop">
             <div class="close">×</div>
             <nuxt-link to="/health-care-voucher">
-              <img src="https://static.cmereye.com/imgs/2024/08/e05bf86f046c6430.png"  alt="">
+              <img src="https://static.cmereye.com/imgs/2024/09/ddad2a71a4310edf.png"  alt="">
+              <marquee class="marquee" direction="up" height="160">
+                <p>種植牙</p>
+                <p>補牙</p>
+                <p>拔牙</p>
+                <p>牙周病治療</p>
+                <p>根管治療</p>
+              </marquee>
             </nuxt-link>
         </div>
         `
@@ -191,6 +198,24 @@ onMounted(() => {
     position: absolute;
     bottom: 50px;
   }
+  .marquee {
+    position: absolute;
+    right: 0;
+    bottom: 20px;
+    transform: translateX(25%);
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 160%;
+    color: #00a752;
+    max-height: 95px;
+  }
+  .marquee-img {
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    width: 70%;
+  }
 }
 .is_new_tooth_wiki {
   display: flex;
@@ -231,7 +256,7 @@ onMounted(() => {
       position: fixed;
       top: auto;
       left: auto;
-      right: 110px;
+      right: 0;
       bottom: 0;
       z-index: 999;
     }
@@ -239,13 +264,13 @@ onMounted(() => {
     .close {
       color: #000;
       opacity: 0.7;
-      font-size: 4rem;
+      font-size: 3rem;
       position: relative;
       cursor: pointer;
       top: auto;
       left: auto;
-      right: 75px;
-      bottom: 33%;
+      right: 11.625vw;
+      bottom: 6.054vw;
       z-index: 100000;
     }
 
@@ -255,9 +280,21 @@ onMounted(() => {
       position: absolute;
       bottom: 50px;
     }
+    // .marquee {
+    //   position: absolute;
+    //   right: 0;
+    //   bottom: 20px;
+    //   margin-left: 3.828vw;
+    //   font-style: normal;
+    //   font-weight: 500;
+    //   font-size: 18px;
+    //   line-height: 140%;
+    //   color: #00a752;
+    //   height: 120px;
+    // }
   }
   .is_new_tooth_wiki {
-    right: 150px!important;
+    right: 150px !important;
     bottom: 360px !important;
   }
 }
@@ -281,7 +318,7 @@ onMounted(() => {
       position: fixed;
       top: auto;
       left: auto;
-      right: 110px;
+      right: 40px;
       bottom: 0;
       z-index: 999;
     }
@@ -294,8 +331,8 @@ onMounted(() => {
       cursor: pointer;
       top: auto;
       left: auto;
-      right: 40px;
-      bottom: 65px;
+      right: 11.85vw;
+      bottom: 4.685vw;
       z-index: 100000;
     }
 
@@ -304,6 +341,18 @@ onMounted(() => {
       right: 20px;
       position: absolute;
       bottom: 50px;
+    }
+    .marquee {
+      position: absolute;
+      right: 0;
+      bottom: 0px;
+      // margin-left: 50px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      height: 80px;
+      line-height: 160%;
+      color: #00a752;
     }
   }
   .is_new_tooth_wiki {
@@ -331,8 +380,8 @@ onMounted(() => {
       position: fixed;
       top: auto;
       left: auto;
-      right: 100px;
-      bottom: 36px;
+      right: 0;
+      bottom: 115px;
       z-index: 999;
     }
 
@@ -355,16 +404,28 @@ onMounted(() => {
       position: absolute;
       bottom: 50px;
     }
+    .marquee {
+      position: absolute;
+      right: 0;
+      bottom: 0px;
+      // margin-left: 34px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 140%;
+      color: #00a752;
+      height: 50px;
+    }
   }
   .is_new_tooth_wiki {
     right: 130px !important;
     bottom: 220px !important;
-    &>div:nth-child(1){
+    & > div:nth-child(1) {
       width: 120px !important;
     }
-    &>div:nth-child(2){
+    & > div:nth-child(2) {
       top: -30px !important;
-      &>svg{
+      & > svg {
         width: 30px !important;
         width: 30px !important;
       }
@@ -384,15 +445,15 @@ onMounted(() => {
     z-index: 999;
     .healthCareVoucherPop {
       width: 12%;
-      height: 30%;
+      height: 16%;
       display: flex;
       align-items: center;
       justify-content: flex-end;
       position: fixed;
       top: auto;
       left: auto;
-      right: 5px;
-      bottom: -28px;
+      right: 0px;
+      bottom: 80px;
       z-index: 999;
     }
 
@@ -415,6 +476,18 @@ onMounted(() => {
       position: absolute;
       bottom: 50px;
     }
+    .marquee {
+      position: absolute;
+      right: 0;
+      bottom: 0px;
+      // margin-left: 26px;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 10px;
+      line-height: 140%;
+      color: #00a752;
+      height: 45px;
+    }
   }
 }
 @media screen and (max-width: 767px) {
@@ -426,34 +499,34 @@ onMounted(() => {
     transform: translate(0, 0);
     top: auto;
     position: relative;
-    right: 22px;
+    right: 29.33vw;
     bottom: auto;
     font-size: 1.4rem;
     top: -70px;
   }
   #popup-alert .healthCareVoucherPop {
-    width: 40px;
-    height: 120px;
-    bottom: 170px;
-    right: 4px;
+    width: 37.33vw;
+    height: 26.65vw;
+    bottom: 45.33vw;
+    right: 0;
   }
   #popup-alert .healthCareVoucherPop > a {
     padding-left: 0;
     width: 100%;
-    right: 4px;
+    right: 0;
     position: absolute;
     bottom: 0;
   }
   .is_new_tooth_wiki {
     right: 0;
     justify-content: center;
-    align-items:center;
-    &>div:nth-child(2){
+    align-items: center;
+    & > div:nth-child(2) {
       top: 0 !important;
       right: 20% !important;
-      &>svg {
-        width: 20px;
-        height: 20px;
+      & > svg {
+        width: 5.33vw;
+        height: 5.33vw;
       }
     }
   }

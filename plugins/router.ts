@@ -37,7 +37,7 @@ export default defineNuxtPlugin((nuxtApp) => {
                 <div class="healthCareVoucherPop">
                   <div class="close">×</div>
                   <a href="/health-care-voucher">
-                    <img src="https://static.cmereye.com/imgs/2024/08/665992e97473e732.png"  alt="">
+                    <img src="https://static.cmereye.com/imgs/2024/09/b4ae2fcaebed54c3.png"  alt="">
                   </a>
               </div>
               `
@@ -46,7 +46,15 @@ export default defineNuxtPlugin((nuxtApp) => {
                 <div class="healthCareVoucherPop">
                   <div class="close">×</div>
                   <a href="/health-care-voucher">
-                    <img src="https://static.cmereye.com/imgs/2024/08/e05bf86f046c6430.png"  alt="">
+                    <img src="https://static.cmereye.com/imgs/2024/09/5cb4d1135f329cd3.png"  alt="">
+                    <marquee class="marquee" direction="up" height="100">
+                      <p>種植牙</p>
+                      <p>補牙</p>
+                      <p>拔牙</p>
+                      <p>牙周病治療</p>
+                      <p>根管治療</p>
+                    </marquee>
+                    <img class="marquee-img" src="https://static.cmereye.com/imgs/2024/09/0b3fd6c541862a25.png"  alt="">
                   </a>
               </div>
               `
