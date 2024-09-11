@@ -208,7 +208,8 @@ onMounted(() => {
     font-size: 18px;
     line-height: 160%;
     color: #00a752;
-    max-height: 95px;
+    // max-height: 95px;
+    height: 120px;
   }
   .marquee-img {
     position: absolute;
