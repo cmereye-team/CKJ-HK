@@ -270,7 +270,7 @@ onMounted(() => {
       top: auto;
       left: auto;
       right: 11.625vw;
-      bottom: 6.054vw;
+      bottom: 6.254vw;
       z-index: 100000;
     }
 
