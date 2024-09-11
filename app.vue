@@ -117,7 +117,7 @@ onMounted(() => {
     top: auto;
     left: auto;
     right: 0;
-    bottom: 150px;
+    bottom: 100px;
     width: 312px;
     height: 315px;
     z-index: 999;
@@ -308,23 +308,33 @@ onMounted(() => {
   }
 }
 @media screen and (max-width: 767px) {
+  #popup-alert {
+    & > div {
+      position: fixed;
+      top: auto;
+      left: auto;
+      right: 0;
+      bottom: 36.43vw;
+      width: 38.93vw;
+      height: 39.2vw;
+      z-index: 999;
+    }
+  }
   #popup-alert .close {
     color: #000;
     opacity: 0.7;
-    font-size: 4rem;
-    left: auto;
-    transform: translate(0, 0);
-    top: auto;
-    position: relative;
-    right: 29.33vw;
-    bottom: auto;
     font-size: 1.4rem;
-    top: -70px;
+    position: absolute;
+    top: 0;
+    left: 15px;
+    right: auto;
+    bottom: auto;
   }
   #popup-alert .healthCareVoucherPop {
-    width: 37.33vw;
-    height: 26.65vw;
-    bottom: 45.33vw;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    bottom: 0;
     right: 0;
   }
   #popup-alert .healthCareVoucherPop > a {
