@@ -69,50 +69,6 @@ const getWindowWidth = () => {
 }
 
 const route = useRoute()
-// const closeAlert = ref(true)
-function popupAlertCreated() {
-  var container = document.getElementById('popup-alert')
-  // var  创建一个id healthCareVoucherPopTop
-  var healthCareVoucherPopTop = document.createElement('div')
-
-  const domWidth = window.innerWidth
-  if (windowWidth.value < 768) {
-    // 插入节点
-    healthCareVoucherPopTop.innerHTML = `
-          <div class="healthCareVoucherPop">
-            <div class="close">×</div>
-            <nuxt-link to="/health-care-voucher">
-              <img src="https://static.cmereye.com/imgs/2024/09/b4ae2fcaebed54c3.png"  alt="">
-            </nuxt-link>
-        </div>
-        `
-  } else {
-    healthCareVoucherPopTop.innerHTML = `
-          <div class="healthCareVoucherPop">
-            <div class="close">×</div>
-            <nuxt-link to="/health-care-voucher">
-              <img src="https://static.cmereye.com/imgs/2024/09/ddad2a71a4310edf.png"  alt="">
-              <marquee class="marquee" direction="up" height="160">
-                <p>種植牙</p>
-                <p>補牙</p>
-                <p>拔牙</p>
-                <p>牙周病治療</p>
-                <p>根管治療</p>
-              </marquee>
-            </nuxt-link>
-        </div>
-        `
-  }
-  if (container) {
-    container.appendChild(healthCareVoucherPopTop)
-  }
-  // 绑定事件healthCareVoucherPop
-  healthCareVoucherPopTop.addEventListener('click', function (e) {
-    if (container) {
-      container.style.display = 'none'
-    }
-  })
-}
 
 onMounted(() => {
   locale.value = 'hk'
@@ -156,25 +112,27 @@ onMounted(() => {
 
 <style lang="scss">
 #popup-alert {
-  width: fit-content;
-  height: fit-content;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  .healthCareVoucherPop {
-    width: 18%;
-    height: 30%;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+  & > div {
     position: fixed;
     top: auto;
     left: auto;
     right: 0;
+    bottom: 150px;
+    width: 312px;
+    height: 315px;
+    z-index: 999;
+  }
+
+  .healthCareVoucherPop {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: relative;
+    top: auto;
+    left: auto;
+    right: 0px;
     bottom: 0;
     z-index: 999;
   }
@@ -182,40 +140,47 @@ onMounted(() => {
   .close {
     color: #000;
     opacity: 0.7;
-    font-size: 4rem;
+    font-size: 3rem;
     position: absolute;
     cursor: pointer;
-    top: auto;
-    left: auto;
-    right: 40px;
-    bottom: 310px;
-    z-index: 100000;
+    top: 20px;
+    left: 40px;
+    right: auto;
+    bottom: auto;
+    z-index: 960;
   }
 
   .healthCareVoucherPop > a {
     width: 100%;
     right: 20px;
     position: absolute;
-    bottom: 50px;
+    bottom: 0;
   }
   .marquee {
     position: absolute;
-    right: 0;
+    right: auto;
+    left: 75px;
     bottom: 20px;
-    transform: translateX(25%);
     font-style: normal;
     font-weight: 500;
     font-size: 18px;
     line-height: 160%;
     color: #00a752;
-    // max-height: 95px;
-    height: 120px;
+    height: 80px;
+    transform: translateY(-15px);
+    width: 100px;
+    background: #fff;
+    border-radius: 0 30px 60px 0;
+    p {
+      border-bottom: 1px solid #00a752;
+    }
   }
   .marquee-img {
     position: absolute;
     bottom: 10px;
-    right: 0;
-    width: 70%;
+    right: auto;
+    width: 60%;
+    left: 100px;
   }
 }
 .is_new_tooth_wiki {
@@ -238,186 +203,18 @@ onMounted(() => {
   }
 }
 @media screen and (min-width: 1920px) {
-  #popup-alert {
-    width: fit-content;
-    height: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    .healthCareVoucherPop {
-      width: 15%;
-      height: 30%;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      position: fixed;
-      top: auto;
-      left: auto;
-      right: 0;
-      bottom: 0;
-      z-index: 999;
-    }
-
-    .close {
-      color: #000;
-      opacity: 0.7;
-      font-size: 3rem;
-      position: relative;
-      cursor: pointer;
-      top: auto;
-      left: auto;
-      right: 11.625vw;
-      bottom: 6.254vw;
-      z-index: 100000;
-    }
-
-    .healthCareVoucherPop > a {
-      width: 100%;
-      right: 20px;
-      position: absolute;
-      bottom: 50px;
-    }
-    // .marquee {
-    //   position: absolute;
-    //   right: 0;
-    //   bottom: 20px;
-    //   margin-left: 3.828vw;
-    //   font-style: normal;
-    //   font-weight: 500;
-    //   font-size: 18px;
-    //   line-height: 140%;
-    //   color: #00a752;
-    //   height: 120px;
-    // }
-  }
   .is_new_tooth_wiki {
     right: 150px !important;
     bottom: 360px !important;
   }
 }
 @media screen and (min-width: 1440px) and (max-width: 1919px) {
-  #popup-alert {
-    width: fit-content;
-    height: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    .healthCareVoucherPop {
-      width: 15%;
-      height: 30%;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      position: fixed;
-      top: auto;
-      left: auto;
-      right: 40px;
-      bottom: 0;
-      z-index: 999;
-    }
-
-    .close {
-      color: #000;
-      opacity: 0.7;
-      font-size: 4rem;
-      position: relative;
-      cursor: pointer;
-      top: auto;
-      left: auto;
-      right: 11.85vw;
-      bottom: 4.685vw;
-      z-index: 100000;
-    }
-
-    .healthCareVoucherPop > a {
-      width: 100%;
-      right: 20px;
-      position: absolute;
-      bottom: 50px;
-    }
-    .marquee {
-      position: absolute;
-      right: 0;
-      bottom: 0px;
-      // margin-left: 50px;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 14px;
-      height: 80px;
-      line-height: 160%;
-      color: #00a752;
-    }
-  }
   .is_new_tooth_wiki {
     right: 130px !important;
     bottom: 300px !important;
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1439px) {
-  #popup-alert {
-    width: fit-content;
-    height: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    .healthCareVoucherPop {
-      width: 12%;
-      height: 22%;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      position: fixed;
-      top: auto;
-      left: auto;
-      right: 0;
-      bottom: 115px;
-      z-index: 999;
-    }
-
-    .close {
-      color: #000;
-      opacity: 0.7;
-      font-size: 2rem;
-      position: relative;
-      cursor: pointer;
-      top: auto;
-      left: auto;
-      right: 35px;
-      bottom: 70px;
-      z-index: 100000;
-    }
-
-    .healthCareVoucherPop > a {
-      width: 100%;
-      right: 20px;
-      position: absolute;
-      bottom: 50px;
-    }
-    .marquee {
-      position: absolute;
-      right: 0;
-      bottom: 0px;
-      // margin-left: 34px;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 12px;
-      line-height: 140%;
-      color: #00a752;
-      height: 50px;
-    }
-  }
   .is_new_tooth_wiki {
     right: 130px !important;
     bottom: 220px !important;
@@ -433,28 +230,30 @@ onMounted(() => {
     }
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1919px) {
   #popup-alert {
-    width: fit-content;
-    height: fit-content;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999;
-    .healthCareVoucherPop {
-      width: 12%;
-      height: 16%;
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
+    & > div {
       position: fixed;
       top: auto;
       left: auto;
-      right: 0px;
+      right: 0;
       bottom: 80px;
+      width: 250px;
+      height: 253px;
+      z-index: 999;
+    }
+
+    .healthCareVoucherPop {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      position: relative;
+      top: auto;
+      left: auto;
+      right: 0px;
+      bottom: 0;
       z-index: 999;
     }
 
@@ -464,30 +263,47 @@ onMounted(() => {
       font-size: 2rem;
       position: relative;
       cursor: pointer;
-      top: auto;
-      left: auto;
-      right: 35px;
-      bottom: 70px;
-      z-index: 100000;
+      top: -30px;
+      left: 40px;
+      right: auto;
+      bottom: auto;
+      z-index: 960;
     }
 
     .healthCareVoucherPop > a {
       width: 100%;
       right: 20px;
-      position: absolute;
+      position: relative;
       bottom: 50px;
+      & > img:nth-child(1) {
+        width: 100%;
+      }
     }
     .marquee {
-      position: absolute;
-      right: 0;
-      bottom: 0px;
-      // margin-left: 26px;
+      position: relative;
+      right: auto;
+      left: 55px;
+      bottom: 100px;
       font-style: normal;
       font-weight: 500;
-      font-size: 10px;
+      font-size: 12px;
       line-height: 140%;
       color: #00a752;
-      height: 45px;
+      height: 60px;
+      transform: translateY(15px);
+      max-width: 70px;
+      background: #fff;
+      border-radius: 0 30px 60px 0;
+      p {
+        border-bottom: 1px solid #00a752;
+      }
+    }
+    .marquee-img {
+      position: absolute;
+      bottom: 80px;
+      right: auto;
+      width: 60%;
+      left: 80px;
     }
   }
 }
