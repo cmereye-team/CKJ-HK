@@ -1169,6 +1169,7 @@ onMounted(() => {
     font-family: var(--contextFamily);
     .span_a_underline {
       text-decoration: underline 2px var(--indexColor1) !important;
+      color: var(--indexColor1) !important;
     }
   }
   ul {
