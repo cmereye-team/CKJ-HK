@@ -143,7 +143,7 @@ const pageDetail:any = {
       type: 'img',
       list: [
         // 'https://static.cmereye.com/imgs/2024/06/3333f1a2e79eeb16.webp',
-        'https://static.cmereye.com/imgs/2024/09/730b4a535475fab7.jpg'
+        'https://static.cmereye.com/imgs/2024/09/4229166f41cc2c28.jpg'
       ],
       className: 'imgone'
     },
