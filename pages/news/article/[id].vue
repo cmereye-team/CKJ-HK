@@ -1161,6 +1161,20 @@ onMounted(() => {
     }
   }
 }
+:deep(.content) {
+  p {
+    color: var(--textColor);
+    font-size: 20px;
+    line-height: 1.6;
+    font-family: var(--contextFamily);
+    .span_a_underline {
+      text-decoration: underline 2px var(--indexColor1) !important;
+    }
+  }
+  ul {
+    list-style: disc;
+  }
+}
 @media (min-width: 768px) and (max-width: 850px) {
   .content-bdetail {
     .btn {
