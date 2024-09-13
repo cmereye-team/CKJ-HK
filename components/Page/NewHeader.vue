@@ -30,17 +30,18 @@ const menuLists: any = [
   },
   {
     name: 'components.header.menuLists.menu_brand.name',
-    link: `/brand/${appState.brand}`,
-    child: [
-      {
-        name: 'components.header.menuLists.menu_brand.course',
-        link: '/brand/course',
-      },
-      {
-        name: 'components.header.menuLists.menu_brand.honor',
-        link: '/brand/honor',
-      },
-    ],
+    link: `/brand/course`,
+    child: [],
+    // child: [
+    //   {
+    //     name: 'components.header.menuLists.menu_brand.course',
+    //     link: '/brand/course',
+    //   },
+    //   {
+    //     name: 'components.header.menuLists.menu_brand.honor',
+    //     link: '/brand/honor',
+    //   },
+    // ],
   },
   {
     name: 'components.header.menuLists.menu_dental_service.name',
