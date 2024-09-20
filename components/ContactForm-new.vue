@@ -3,6 +3,8 @@ import service from '~/assets/js/service'
 import type { FormInstance, FormRules } from 'element-plus'
 import { useAppState } from '~/stores/appState'
 const route = useRoute()
+const router = useRouter()
+
 // import { smallPhoneNum } from '~/assets/js/common'
 const appState = useAppState()
 
@@ -213,7 +215,8 @@ const onSubmit = async () => {
       })
       localStorage.setItem('contactForm', JSON.stringify(_form))
       reForm()
-      window.location.href = `/messagePage?c=${res.code}`
+      // window.location.href = `/messagePage?c=${res.code}`
+      router.push({ path: `/messagePage?c=${res.code}` })
     } else {
       ElMessage({
         showClose: true,
