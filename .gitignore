@@ -3,7 +3,7 @@ nuxt.d.ts
 
 # private config
 .env
-
+.sh
 # deps
 node_modules
 
@@ -11,6 +11,9 @@ node_modules
 .nuxt
 dist
 .output
+dist
+dist.zip
+generate_and_zip.sh
 
 # IDE
 .idea

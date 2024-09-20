@@ -307,6 +307,22 @@ const isHealthCare = () => {
     showExplain.value = false
   }
 }
+
+const hideDiv = () => {
+  if (
+    route.path == '/news/coverage' ||
+    route.path == '/news/information' ||
+    route.path == '/news/tooth-wiki' ||
+    route.path == '/medical-team' ||
+    route.path == '/contactUs' ||
+    route.path == '/brand/course' ||
+    route.path == '/federation-of-trade-unions-zone'
+  ) {
+    return false
+  } else {
+    return true
+  }
+}
 </script>
 
 <template>
@@ -437,7 +453,7 @@ const isHealthCare = () => {
         <div>29年專科•專業•專注</div>
         <div><span>港人首選</span>一站式連鎖牙科品牌</div>
       </div>
-      <div class="explain_box_mobile" v-if="showExplain">
+      <div class="explain_box_mobile" v-if="hideDiv()">
         <span>優惠只限於網上及電話預約客戶</span>
       </div>
       <div

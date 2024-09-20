@@ -1119,7 +1119,7 @@ const handleopenwechat = () => {
   .explain_page_one {
     position: absolute;
     z-index: 35;
-    bottom: 15%;
+    bottom: 13%;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
