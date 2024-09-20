@@ -374,8 +374,8 @@ let privacyPolicy = ref(true)
               placeholder="請選擇"
               :disabled-date="disabledDate"
               :shortcuts="shortcuts"
-              format="YYYY/MM/DD"
-              value-format="YYYY-MM-DD"
+              format="yyyy-MM-dd"
+              value-format="yyyy-MM-dd"
             />
           </el-form-item>
           <!-- </el-col> -->
