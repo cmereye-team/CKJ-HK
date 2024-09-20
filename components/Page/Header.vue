@@ -1005,7 +1005,7 @@ const isHealthCare = () => {
     position: relative;
     z-index: 45;
     display: flex;
-    top: 130px;
+    top: 110px;
     justify-content: flex-end;
     margin-right: 230px;
     max-width: 1512px;
@@ -1381,7 +1381,7 @@ const isHealthCare = () => {
     &.veneers-test,
     &.health-care-voucher,
     &.scaling-and-polishing-test {
-      margin-top: 100px;
+      margin-top: 80px;
       transition: all 0.3s;
     }
   }
@@ -1951,7 +1951,7 @@ const isHealthCare = () => {
         background-image: url(@/assets/images/back_wave01.png);
         background-repeat: repeat-x;
         background-position: center 20px;
-        height: 162px;
+        height: 185px;
         width: 100%;
         position: absolute;
         z-index: 1;

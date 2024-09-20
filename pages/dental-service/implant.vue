@@ -2429,6 +2429,10 @@ const { height } = useWindowSize()
   }
 }
 @media screen and (max-width: 768px) {
+  :deep(.explain_box_mobile) {
+    top: 0px !important;
+    margin-left: 0 !important;
+  }
   @keyframes identifier {
     0% {
       background: url(https://static.cmereye.com/imgs/2024/02/ea9a267c45465e86.png);
@@ -2448,7 +2452,7 @@ const { height } = useWindowSize()
     }
   }
   .dentistryServices {
-    padding: 90px 0;
+    padding: 50px 0;
     .tabNav {
       padding: 30px;
       font-size: 1rem;
