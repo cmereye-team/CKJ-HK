@@ -1,17 +1,18 @@
 <script lang="ts" setup>
-
 useHead({
   title: '最新資訊',
   meta: [
     {
       hid: 'description',
       name: 'description',
-      content: '愛康健作為深圳愛康健口腔醫院是一家專業口腔醫院，秉承著「專科·專業」的服務理念，科學、合理地整合醫療資源。我們的醫師團隊均畢業於國內知名口腔學院，包括種植醫師、美學修復醫師、牙周病醫師等專業人員。他們帶領著醫護人員共同構成我們的服務團隊，為患者提供專業、優質的口腔醫療服務。',
+      content:
+        '愛康健作為深圳愛康健口腔醫院是一家專業口腔醫院，秉承著「專科·專業」的服務理念，科學、合理地整合醫療資源。我們的醫師團隊均畢業於國內知名口腔學院，包括種植醫師、美學修復醫師、牙周病醫師等專業人員。他們帶領著醫護人員共同構成我們的服務團隊，為患者提供專業、優質的口腔醫療服務。',
     },
     {
       hid: 'Keywords',
       name: 'Keywords',
-      content: '愛康健 深圳愛康健 深圳專業牙科中心 愛康健醫院 愛康健口腔醫院 深圳愛康健口腔醫院愛康健 CKJ愛康健齒科集團 深圳口腔專科醫院 愛康健齒科集團 深圳牙科醫院牙科服務內地牙科 深圳口腔專科 基本牙科 美容牙科 高階牙科 愛康健',
+      content:
+        '愛康健 深圳愛康健 深圳專業牙科中心 愛康健醫院 愛康健口腔醫院 深圳愛康健口腔醫院愛康健 CKJ愛康健齒科集團 深圳口腔專科醫院 愛康健齒科集團 深圳牙科醫院牙科服務內地牙科 深圳口腔專科 基本牙科 美容牙科 高階牙科 愛康健',
     },
   ],
 })
@@ -22,7 +23,7 @@ const headerConfig = {
   mbImg: 'https://static.cmereye.com/imgs/2024/06/cb4c9a34a7e67357.jpg',
   pageName: 'coverage',
   pcText: [],
-  mbText: []
+  mbText: [],
 }
 
 let errorpage = ref(false)
@@ -33,48 +34,54 @@ let informationLists = ref([
     desc: '',
     name: '',
     time: '',
-    videos: ''
-  }
+    videos: '',
+  },
 ])
-const formatDate = (dateString) =>{  
-    var date = new Date(dateString);  
-    var year = date.getFullYear();  
-    var month = ("0" + (date.getMonth() + 1)).slice(-2); // getMonth() is zero-based  
-    var day = ("0" + date.getDate()).slice(-2);  
-    return year + "年" + month + "月" + day + "日";  
-}  
+const formatDate = (dateString) => {
+  var date = new Date(dateString)
+  var year = date.getFullYear()
+  var month = ('0' + (date.getMonth() + 1)).slice(-2) // getMonth() is zero-based
+  var day = ('0' + date.getDate()).slice(-2)
+  return year + '年' + month + '月' + day + '日'
+}
 
 let totalPageNum = ref(1)
-let actPageNum = ref(1) 
+let actPageNum = ref(1)
 let loadingShow = ref(false)
 
 const getNewsLists = async () => {
   loadingShow.value = true
-  try{
-    const _res:any = await useFetch(`https://admin.ckjhk.com/api.php/list/15/page/${actPageNum.value}/num/6`,{
-      method: 'post',
-    });
+  try {
+    const _res: any = await useFetch(
+      `https://admin.ckjhk.com/api.php/list/15/page/${actPageNum.value}/num/6`,
+      {
+        method: 'post',
+      }
+    )
     // const _res:any = await useFetch(`https://admin.ckjhk.com/api.php/list/15`,{
     //   method: 'post',
     // });
     let res = JSON.parse(_res.data.value) || null
-    if(res){
+    if (res) {
       // console.log(res)
       totalPageNum.value = Math.ceil(res.rowtotal / 6)
-      informationLists.value = res.data.map(item=>{
-        return{
+      informationLists.value = res.data.map((item) => {
+        return {
           id: item.id || '',
-          img: (item.ico.indexOf('/static/upload/image') !== -1 ? `https://admin.ckjhk.com${item.ico}`:item.ico) || '',
+          img:
+            (item.ico.indexOf('/static/upload/image') !== -1
+              ? `https://admin.ckjhk.com${item.ico}`
+              : item.ico) || '',
           desc: item.ext_news_desc || '',
           name: item.title || '',
           time: formatDate(item.ext_news_time) || '',
-          videos: item.ext_news_videos || ''
+          videos: item.ext_news_videos || '',
         }
       })
     }
     sessionStorage.setItem('informationPage', String(actPageNum.value))
     loadingShow.value = false
-  }catch{
+  } catch {
     errorpage.value = true
     loadingShow.value = false
   }
@@ -82,49 +89,49 @@ const getNewsLists = async () => {
 }
 
 const subNum = () => {
-  if(actPageNum.value > 1){
-    actPageNum.value --
-    window.location.href = "#information"
+  if (actPageNum.value > 1) {
+    actPageNum.value--
+    window.location.href = '#information'
     getNewsLists()
   }
 }
 
 const addNum = () => {
-  if(actPageNum.value < totalPageNum.value){
-    actPageNum.value ++
-    window.location.href = "#information"
+  if (actPageNum.value < totalPageNum.value) {
+    actPageNum.value++
+    window.location.href = '#information'
     getNewsLists()
   }
 }
 
 const toPage = (_page) => {
-  if(actPageNum.value === _page){
+  if (actPageNum.value === _page) {
     return
   }
   actPageNum.value = _page
-  window.location.href = "#information"
+  window.location.href = '#information'
   getNewsLists()
 }
 
-const handlelink = (id) =>{
+const handlelink = (id) => {
   // sessionStorage.setItem('informationid', String(id))
 }
-const goAnchor = (_hash: any)=>{
-  const a = document.querySelector(_hash);
-  let top = a.offsetTop-300
-  if(a){
+const goAnchor = (_hash: any) => {
+  const a = document.querySelector(_hash)
+  let top = a.offsetTop - 300
+  if (a) {
     let b = 0
     const timeTop = setInterval(() => {
-      document.body.scrollTop = document.documentElement.scrollTop = b += 50;
+      document.body.scrollTop = document.documentElement.scrollTop = b += 50
       if (b >= top) {
-          clearInterval(timeTop);
+        clearInterval(timeTop)
       }
-  }, 10);
+    }, 10)
   }
 }
 
-onMounted(()=>{
-  if(sessionStorage.getItem('informationPage')){
+onMounted(() => {
+  if (sessionStorage.getItem('informationPage')) {
     actPageNum.value = Number(sessionStorage.getItem('informationPage')) || 1
     // getNewsLists()
   }
@@ -133,43 +140,50 @@ onMounted(()=>{
   //     goAnchor(`#i${sessionStorage.getItem('informationid')}`)
   //   },1000)
   // }
-  setTimeout(()=>{
+  setTimeout(() => {
     getNewsLists()
   })
 })
 
-
-if(process.server){
+if (process.server) {
   // console.log('server');
   getNewsLists()
-}else{
+} else {
   // console.log('client');
   // getNewsLists()
 }
 
 const getPagination = (pageitem) => {
-  if(actPageNum.value>=4 && actPageNum.value<totalPageNum.value-3){
-    return actPageNum.value-3+pageitem
-  }else{
-    if(actPageNum.value<4){
+  if (actPageNum.value >= 4 && actPageNum.value < totalPageNum.value - 3) {
+    return actPageNum.value - 3 + pageitem
+  } else {
+    if (actPageNum.value < 4) {
       return pageitem + 1
-    }else if(actPageNum.value>=totalPageNum.value-3){
-      return totalPageNum.value-6+pageitem
-    }else{
+    } else if (actPageNum.value >= totalPageNum.value - 3) {
+      return totalPageNum.value - 6 + pageitem
+    } else {
       return 0
     }
   }
 }
-
 </script>
 
 <template>
   <div>
     <PageHeader :headerConfig="headerConfig" />
     <div class="pageIn whitebgColor informationPage">
-      <div class="index_title smallPageCon informationPage-title" id="information">最新資訊</div>
+      <div
+        class="index_title smallPageCon informationPage-title"
+        id="information"
+      >
+        最新資訊
+      </div>
       <div class="tabNav noTitle smallPageCon">
-        <nuxt-link :to="'/'" title="深圳愛康健口腔醫院" alt="深圳愛康健口腔醫院">
+        <nuxt-link
+          :to="'/'"
+          title="深圳愛康健口腔醫院"
+          alt="深圳愛康健口腔醫院"
+        >
           <span>主頁</span>
         </nuxt-link>
         <nuxt-link :to="''">
@@ -180,56 +194,98 @@ const getPagination = (pageitem) => {
       <div class="smallPageCon">
         <div class="lists" v-if="!errorpage">
           <div v-loading="loadingShow">
-            <nuxt-link :to="`/news/news-information/${item.id}`" :id="`i${item.id}`" class="lists-in" v-for="(item,index) in informationLists" :key="index" @click="handlelink(item.id)">
+            <nuxt-link
+              :to="`/news/news-information/${item.id}`"
+              :id="`i${item.id}`"
+              class="lists-in"
+              v-for="(item, index) in informationLists"
+              :key="index"
+              @click="handlelink(item.id)"
+            >
               <div class="lists-in-img">
                 <div class="videos" v-if="item.videos !== ''">
-                  <iframe :src="`https://www.facebook.com/plugins/video.php?height=476&href=https%3A%2F%2Fwww.facebook.com%2Fckjdental.hk%2Fvideos%2F${item.videos}%2F&show_text=false&width=476&t=0`" width="476" height="476" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay;"></iframe>
+                  <iframe
+                    :src="`https://www.facebook.com/plugins/video.php?&href=https%3A%2F%2Fwww.facebook.com%2Fckjdental.hk%2Fvideos%2F${item.videos}%2F&show_text=false&width=476&t=0`"
+                    width="100%"
+                    height="100%"
+                    style="border: none; overflow: hidden"
+                    scrolling="no"
+                    frameborder="0"
+                    allowfullscreen="true"
+                    allow="autoplay;"
+                  ></iframe>
                 </div>
-                <img v-else loading="lazy" :src="item.img" alt="">
+                <img v-else loading="lazy" :src="item.img" alt="" />
               </div>
               <div class="lists-in-context">
                 <div class="lists-in-context-top">
                   <div class="title">
-                    {{item.name}}
+                    {{ item.name }}
                   </div>
                   <!-- <div class="time">
                     <span>{{item.time}}</span>
                   </div> -->
                 </div>
-                <div class="desc" v-html="item.desc">
-                </div>
-                <div style="flex: 1;"></div>
+                <div class="desc" v-html="item.desc"></div>
+                <div style="flex: 1"></div>
                 <div class="btn">
-                  <nuxt-link :to="`/news/news-information/${item.id}`">查看全文</nuxt-link>
+                  <nuxt-link :to="`/news/news-information/${item.id}`"
+                    >查看全文</nuxt-link
+                  >
                 </div>
               </div>
             </nuxt-link>
           </div>
           <div class="lists-btn">
-            <div @click="subNum" :class="{btndisabled: actPageNum === 1}">
+            <div @click="subNum" :class="{ btndisabled: actPageNum === 1 }">
               <span class="subNum">
-                <img src="@/assets/images/icon_25.svg" alt="">
+                <img src="@/assets/images/icon_25.svg" alt="" />
               </span>
             </div>
             <div class="lists-btn-page">
-              <section v-if="totalPageNum<=7">
-                <span class="y" :class="{act: actPageNum === pageitem}" v-for="pageitem in totalPageNum" :key="pageitem" @click="toPage(pageitem)">
+              <section v-if="totalPageNum <= 7">
+                <span
+                  class="y"
+                  :class="{ act: actPageNum === pageitem }"
+                  v-for="pageitem in totalPageNum"
+                  :key="pageitem"
+                  @click="toPage(pageitem)"
+                >
                   {{ pageitem }}
                 </span>
               </section>
               <section v-else>
-                <span class="y" :class="{act: actPageNum === 1}" @click="toPage(1)">1</span>
-                <span v-if="actPageNum>4">...</span>
-                <span class="y" :class="{act: actPageNum === getPagination(pageitem)}" v-for="pageitem in 5" :key="pageitem" @click="toPage(getPagination(pageitem))">
-                    {{getPagination(pageitem)}}
+                <span
+                  class="y"
+                  :class="{ act: actPageNum === 1 }"
+                  @click="toPage(1)"
+                  >1</span
+                >
+                <span v-if="actPageNum > 4">...</span>
+                <span
+                  class="y"
+                  :class="{ act: actPageNum === getPagination(pageitem) }"
+                  v-for="pageitem in 5"
+                  :key="pageitem"
+                  @click="toPage(getPagination(pageitem))"
+                >
+                  {{ getPagination(pageitem) }}
                 </span>
-                <span v-if="actPageNum<=totalPageNum-4">...</span>
-                <span class="y" :class="{act: actPageNum === totalPageNum}" @click="toPage(totalPageNum)">{{totalPageNum}}</span>
+                <span v-if="actPageNum <= totalPageNum - 4">...</span>
+                <span
+                  class="y"
+                  :class="{ act: actPageNum === totalPageNum }"
+                  @click="toPage(totalPageNum)"
+                  >{{ totalPageNum }}</span
+                >
               </section>
             </div>
-            <div @click="addNum" :class="{btndisabled: actPageNum === totalPageNum}">
+            <div
+              @click="addNum"
+              :class="{ btndisabled: actPageNum === totalPageNum }"
+            >
               <span class="addNum">
-                <img src="@/assets/images/icon_25.svg" alt="">
+                <img src="@/assets/images/icon_25.svg" alt="" />
               </span>
             </div>
           </div>
@@ -237,7 +293,7 @@ const getPagination = (pageitem) => {
         <div class="lists" v-else>服務異常</div>
       </div>
       <NewAddress />
-     <ContactForm-new />
+      <ContactForm-new />
     </div>
     <PageFooter />
     <PageNavbar />
@@ -269,24 +325,30 @@ const getPagination = (pageitem) => {
     color: var(--indexColor1);
   }
 }
-.lists{
+.lists {
   margin-top: calc(77 / 1448 * 100%);
   min-height: 300px;
-  &-in{
+  &-in {
     display: flex;
     margin-bottom: calc(100 / 1448 * 100%);
-    &-img{
-      width: calc(500 / 1448* 100%);
-      margin-right: calc(26 / 1448* 100%);
-      img{
+    &-img {
+      width: calc(500 / 1448 * 100%);
+      margin-right: calc(26 / 1448 * 100%);
+      img {
         width: 100%;
       }
-      .videos{
+      .videos {
         width: 100%;
         height: 0;
-        padding-bottom: 100%;
+        padding-bottom: 0;
         position: relative;
-        iframe{
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        min-height: 250px;
+        iframe {
           position: absolute;
           left: 0;
           top: 0;
@@ -295,48 +357,48 @@ const getPagination = (pageitem) => {
         }
       }
     }
-    &-context{
+    &-context {
       flex: 1;
       display: flex;
       flex-direction: column;
-      &-top{
+      &-top {
         display: flex;
         justify-content: space-between;
         margin-bottom: 23px;
-        .title{
+        .title {
           color: var(--indexColor1);
-          font-family:  var(--contextFamily);
+          font-family: var(--contextFamily);
           font-size: 30px;
           font-style: normal;
           font-weight: 500;
           line-height: 130%;
-          display: -webkit-box;  
-          -webkit-line-clamp: 2; 
-          line-clamp: 2; 
-          -webkit-box-orient: vertical;  
-          overflow: hidden;  
-          text-overflow: ellipsis; 
+          display: -webkit-box;
+          -webkit-line-clamp: 2;
+          line-clamp: 2;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
       }
-      .desc{
+      .desc {
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
         line-height: 160%; /* 32px */
         letter-spacing: 2px;
         color: var(--textColor);
-        display: -webkit-box;  
-        -webkit-line-clamp: 10; 
-        line-clamp: 10; 
-        -webkit-box-orient: vertical;  
-        overflow: hidden;  
+        display: -webkit-box;
+        -webkit-line-clamp: 10;
+        line-clamp: 10;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
         text-overflow: ellipsis;
       }
-      .btn{
+      .btn {
         margin-top: 10px;
         display: flex;
         // justify-content: center;
-        a{
+        a {
           font-size: 30px;
           font-style: normal;
           font-weight: 400;
@@ -347,55 +409,56 @@ const getPagination = (pageitem) => {
           background: var(--indexColor1);
           border-radius: 40px;
           padding: calc(7 / 922 * 100%) calc(40 / 922 * 100%);
-          transition: all .3s;
-          box-shadow: 3px 3px 12.4px 0px rgba(252, 22, 130, 0.50);
-          &:hover{
-            background: #FF85AF;
+          transition: all 0.3s;
+          box-shadow: 3px 3px 12.4px 0px rgba(252, 22, 130, 0.5);
+          &:hover {
+            background: #ff85af;
           }
         }
       }
     }
   }
-  &-btn{
+  &-btn {
     display: flex;
     justify-content: center;
     align-items: center;
-    &>div{
+    & > div {
       font-size: 26px;
       margin: 0 10px;
       color: var(--textColor);
-      span{
+      span {
         color: var(--indexColor1);
         cursor: pointer;
-        &:hover{
-          opacity: .7;
+        &:hover {
+          opacity: 0.7;
         }
       }
-      &.btndisabled{
-        span{
-          opacity: .7;
+      &.btndisabled {
+        span {
+          opacity: 0.7;
           cursor: not-allowed;
         }
       }
     }
-    .subNum,.addNum{
-      img{
+    .subNum,
+    .addNum {
+      img {
         width: 12px;
         height: auto;
       }
     }
-    .addNum{
-      img{
+    .addNum {
+      img {
         transform: rotate(180deg);
       }
     }
-    &-page{
+    &-page {
       display: flex;
-      &>section{
+      & > section {
         display: flex;
         height: 30px;
       }
-      .y{
+      .y {
         margin: 0 5px;
         color: var(--indexColor1);
         border-radius: 50%;
@@ -408,8 +471,8 @@ const getPagination = (pageitem) => {
         align-items: center;
         font-size: 20px;
         letter-spacing: -0.8px;
-        transition: all .3s;
-        &.act{
+        transition: all 0.3s;
+        &.act {
           background: var(--indexColor1);
           color: #fff;
         }
@@ -418,22 +481,21 @@ const getPagination = (pageitem) => {
   }
 }
 @media (min-width: 768px) and (max-width: 1452px) {
-  .lists{
-    &-in{
-      &-context{
-        &-top{
-          .title{
+  .lists {
+    &-in {
+      &-context {
+        &-top {
+          .title {
             font-size: 1.8vw;
           }
-          
         }
-        .desc{
-          font-size: 1vw; 
-          -webkit-line-clamp: 5; 
+        .desc {
+          font-size: 1vw;
+          -webkit-line-clamp: 5;
           line-clamp: 5;
         }
-        .btn{
-          a{
+        .btn {
+          a {
             font-size: 1.6;
           }
         }
@@ -442,9 +504,9 @@ const getPagination = (pageitem) => {
   }
 }
 @media screen and (max-width: 768px) {
-  .informationPage{
+  .informationPage {
     padding: 0 0 90px;
-    &-title{
+    &-title {
       z-index: 1;
     }
   }
@@ -453,40 +515,40 @@ const getPagination = (pageitem) => {
     font-size: 1rem;
     margin-top: 0px;
   }
-  .lists{
-    &-in{
+  .lists {
+    &-in {
       flex-direction: column;
       margin-bottom: 90px;
-      &-img{
+      &-img {
         order: 1;
         width: 100%;
         margin-left: 0;
       }
-      &-context{
+      &-context {
         order: 2;
         padding: 24px 30px 0;
-        &-top{
+        &-top {
           margin-bottom: 23px;
           flex-direction: column;
-          .title{
+          .title {
             font-size: 26px;
           }
-          .time{
-            span{
+          .time {
+            span {
               text-align: left;
               font-size: 16px;
             }
           }
         }
-        .desc{
+        .desc {
           font-size: 16px;
           text-align: justify;
         }
-        .btn{
+        .btn {
           margin-top: 23px;
           display: flex;
           justify-content: center;
-          a{
+          a {
             margin: 0 auto;
             font-size: 28px;
             padding: 8px 29px;
@@ -494,16 +556,16 @@ const getPagination = (pageitem) => {
         }
       }
     }
-    &-btn{
-      &>div{
+    &-btn {
+      & > div {
         font-size: 20px;
         margin: 0 5px;
       }
-      &-page{
-        &>section{
+      &-page {
+        & > section {
           height: 25px;
         }
-        .y{
+        .y {
           width: 25px;
           height: 25px;
           font-size: 16px;

@@ -554,7 +554,7 @@ const handleopenwechat = () => {
                 class="menuLists-childLists-item"
                 @click="handleMenuChild(item, itemChildIndex)"
               >
-                <nuxt-link :to="itemChild.link" @click.native="handleMbMenu">
+                <nuxt-link :to="itemChild.link" @click="handleMbMenu">
                   {{ $t(itemChild.name) }}
                 </nuxt-link>
               </div>
@@ -1313,6 +1313,8 @@ const handleopenwechat = () => {
   .header-content {
     &-in {
       padding: 10px 15px 0 30px;
+      position: relative;
+      z-index: 20;
       .logo {
         width: 20%;
         margin-bottom: 15px;
@@ -1368,6 +1370,8 @@ const handleopenwechat = () => {
     &-in {
       width: calc(80% + 60px);
       padding: 10px 15px 0 30px;
+      position: relative;
+      z-index: 20;
       .logo {
         width: 20%;
         margin-bottom: 10px;
