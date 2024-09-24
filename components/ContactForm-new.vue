@@ -196,14 +196,12 @@ const onSubmit = async () => {
   } else {
     _formData.append('preferential', `無`)
   }
+  const host = ref('https://admin.ckjhk.com/api.php/cms/addform/fcode/3')
   // return
-  const { data }: any = await useFetch(
-    'https://admin.ckjhk.com/api.php/cms/addform/fcode/3',
-    {
-      method: 'post',
-      body: _formData,
-    }
-  )
+  const { data }: any = await useFetch(host, {
+    method: 'post',
+    body: _formData,
+  })
   let res = JSON.parse(data.value)
   if (res) {
     if (res.code) {
