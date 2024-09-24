@@ -312,6 +312,7 @@ const hideDiv = () => {
   if (
     route.path == '/news/coverage' ||
     route.path == '/news/information' ||
+    route.path == '/news/information/' ||
     route.path == '/news/tooth-wiki' ||
     route.path == '/medical-team' ||
     route.path == '/contactUs' ||
@@ -650,7 +651,7 @@ const hideDiv = () => {
                 class="menuLists-childLists-item"
                 @click="handleMenuChild(item, itemChildIndex)"
               >
-                <nuxt-link :to="itemChild.link" @click.native="handleMbMenu">
+                <nuxt-link :to="itemChild.link" @click="handleMbMenu">
                   {{ $t(itemChild.name) }}
                 </nuxt-link>
               </div>
