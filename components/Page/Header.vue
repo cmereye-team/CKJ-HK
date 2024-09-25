@@ -23,6 +23,10 @@ defineProps({
     type: String,
     default: '',
   },
+  isPageNoBanner: {
+    type: Boolean,
+    default: false,
+  },
 })
 
 const menuLists: any = [
@@ -314,6 +318,7 @@ const hideDiv = () => {
     route.path == '/news/information' ||
     route.path == '/news/information/' ||
     route.path == '/news/tooth-wiki' ||
+    route.path == '/messagePage' ||
     route.path == '/medical-team' ||
     route.path == '/contactUs' ||
     route.path == '/brand/course' ||

@@ -1,5 +1,18 @@
 #!/bin/bash
 
+# 判断文件夹中包含dist 和dist.zip 则删除
+
+# 检查dist文件夹是否存在
+if [ -d "dist" ]; then
+    # 检查dist文件夹中是否包含dist.zip文件
+    if [ -f "dist/dist.zip" ]; then
+        # 删除dist.zip文件
+        rm "dist/dist.zip"
+        echo "Deleted dist.zip file."
+    fi
+fi
+
+
 # Run pnpm run generate
 echo "Executing 'pnpm run generate' after git push..."
 pnpm run generate

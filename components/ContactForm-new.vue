@@ -202,6 +202,7 @@ const onSubmit = async () => {
     method: 'post',
     body: _formData,
   })
+
   let res = JSON.parse(data.value)
   if (res) {
     if (res.code) {
@@ -213,7 +214,6 @@ const onSubmit = async () => {
       })
       localStorage.setItem('contactForm', JSON.stringify(_form))
       reForm()
-      // window.location.href = `/messagePage?c=${res.code}`
       router.push({ path: `/messagePage?c=${res.code}` })
     } else {
       ElMessage({
