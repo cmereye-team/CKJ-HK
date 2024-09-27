@@ -163,7 +163,7 @@ const classNamefilter = (_menu: any, _idx: number) => {
 const imgBgHeight = ref({
   offsetHeight: 0,
 })
-
+const isArticle = ref(false)
 const isFiexdHeader = ref(false)
 onMounted(() => {
   getScrollHeight()
@@ -176,6 +176,9 @@ onMounted(() => {
     }
   }, 500)
   isHealthCare()
+  if (route.path == '/news/article/275' || route.path == '/news/article/275/') {
+    isArticle.value = true
+  }
 })
 const windowWidth = ref(1920)
 
@@ -459,7 +462,11 @@ const hideDiv = () => {
         <div>29年專科•專業•專注</div>
         <div><span>港人首選</span>一站式連鎖牙科品牌</div>
       </div>
-      <div class="explain_box_mobile" v-if="hideDiv()">
+      <div
+        class="explain_box_mobile"
+        v-if="hideDiv()"
+        :style="{ top: isArticle ? '50px' : '110px' }"
+      >
         <span>優惠只限於網上及電話預約客戶</span>
       </div>
       <div
