@@ -176,10 +176,15 @@ onMounted(() => {
     }
   }, 500)
   isHealthCare()
-  if (route.path == '/news/article/275' || route.path == '/news/article/275/') {
+  styleArticle()
+})
+
+const styleArticle = () => {
+  const regex = /^\/news\/news-tooth-wiki\/\d+$/
+  if (regex.test(route.path)) {
     isArticle.value = true
   }
-})
+}
 const windowWidth = ref(1920)
 
 const getWindowWidth = () => {
