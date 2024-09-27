@@ -226,34 +226,34 @@ onMounted(() => {
         <span class="navMbContactFormBtn">預約表格</span>
       </div>
     </div>
-    <div
-        class="is_new_tooth_wiki"
-        v-if="pathLink == '/news/tooth-wiki' && !closeAd"
-        @click="toContactUs"
-      >
-        <div>
-          <img
-            src="https://static.cmereye.com/imgs/2024/08/e76f7c7e81a0f86e.png"
-            alt=""
-          />
-        </div>
-        <div @click="closeAd = true">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-          >
-            <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M4.29289 4.29289C4.68342 3.90237 5.31658 3.90237 5.70711 4.29289L10 8.58579L14.2929 4.29289C14.6834 3.90237 15.3166 3.90237 15.7071 4.29289C16.0976 4.68342 16.0976 5.31658 15.7071 5.70711L11.4142 10L15.7071 14.2929C16.0976 14.6834 16.0976 15.3166 15.7071 15.7071C15.3166 16.0976 14.6834 16.0976 14.2929 15.7071L10 11.4142L5.70711 15.7071C5.31658 16.0976 4.68342 16.0976 4.29289 15.7071C3.90237 15.3166 3.90237 14.6834 4.29289 14.2929L8.58579 10L4.29289 5.70711C3.90237 5.31658 3.90237 4.68342 4.29289 4.29289Z"
-              fill="#AAAAAA"
-            />
-          </svg>
-        </div>
+    <!-- <div
+      class="is_new_tooth_wiki"
+      v-if="pathLink == '/news/tooth-wiki' && !closeAd"
+      @click="toContactUs"
+    >
+      <div>
+        <img
+          src="https://static.cmereye.com/imgs/2024/08/e76f7c7e81a0f86e.png"
+          alt=""
+        />
       </div>
+      <div @click="closeAd = true">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          viewBox="0 0 20 20"
+          fill="none"
+        >
+          <path
+            fill-rule="evenodd"
+            clip-rule="evenodd"
+            d="M4.29289 4.29289C4.68342 3.90237 5.31658 3.90237 5.70711 4.29289L10 8.58579L14.2929 4.29289C14.6834 3.90237 15.3166 3.90237 15.7071 4.29289C16.0976 4.68342 16.0976 5.31658 15.7071 5.70711L11.4142 10L15.7071 14.2929C16.0976 14.6834 16.0976 15.3166 15.7071 15.7071C15.3166 16.0976 14.6834 16.0976 14.2929 15.7071L10 11.4142L5.70711 15.7071C5.31658 16.0976 4.68342 16.0976 4.29289 15.7071C3.90237 15.3166 3.90237 14.6834 4.29289 14.2929L8.58579 10L4.29289 5.70711C3.90237 5.31658 3.90237 4.68342 4.29289 4.29289Z"
+            fill="#AAAAAA"
+          />
+        </svg>
+      </div>
+    </div> -->
     <div
       class="navForm"
       :style="{ bottom: appState.isShowForm ? '0' : '-150%' }"
@@ -1067,23 +1067,23 @@ onMounted(() => {
       transform: translateX(0);
     }
   }
-  .is_new_tooth_wiki {
-    position: relative;
-    bottom: 70px !important;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100vw;
-    // background: #fff;
-    filter: drop-shadow(0 -3px 5px rgba(252, 22, 130, 0.3));
-    & > div:nth-child(1) {
-      display: flex;
-      justify-content: center;
-    }
-    & > div:nth-child(2) {
-      position: absolute;
-      top: 15px;
-      right: 15%;
-    }
-  }
+  // .is_new_tooth_wiki {
+  //   position: relative;
+  //   bottom: 70px !important;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  //   width: 100vw;
+  //   // background: #fff;
+  //   filter: drop-shadow(0 -3px 5px rgba(252, 22, 130, 0.3));
+  //   & > div:nth-child(1) {
+  //     display: flex;
+  //     justify-content: center;
+  //   }
+  //   & > div:nth-child(2) {
+  //     position: absolute;
+  //     top: 15px;
+  //     right: 15%;
+  //   }
+  // }
 }
 </style>

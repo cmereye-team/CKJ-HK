@@ -183,53 +183,53 @@ onMounted(() => {
     left: 100px;
   }
 }
-.is_new_tooth_wiki {
-  display: flex;
-  flex-direction: column-reverse;
-  position: fixed;
-  right: 150px;
-  bottom: 300px;
-  & > div:nth-child(1) {
-    width: 240px;
-  }
-  & > div:nth-child(2) {
-    position: absolute;
-    right: 20px;
-    top: -15px;
-    & > svg {
-      width: 30px;
-      height: 30px;
-    }
-  }
-}
-@media screen and (min-width: 1920px) {
-  .is_new_tooth_wiki {
-    right: 150px !important;
-    bottom: 360px !important;
-  }
-}
-@media screen and (min-width: 1440px) and (max-width: 1919px) {
-  .is_new_tooth_wiki {
-    right: 130px !important;
-    bottom: 300px !important;
-  }
-}
-@media screen and (min-width: 1024px) and (max-width: 1439px) {
-  .is_new_tooth_wiki {
-    right: 130px !important;
-    bottom: 220px !important;
-    & > div:nth-child(1) {
-      width: 120px !important;
-    }
-    & > div:nth-child(2) {
-      top: -30px !important;
-      & > svg {
-        width: 30px !important;
-        width: 30px !important;
-      }
-    }
-  }
-}
+// .is_new_tooth_wiki {
+//   display: flex;
+//   flex-direction: column-reverse;
+//   position: fixed;
+//   right: 150px;
+//   bottom: 300px;
+//   & > div:nth-child(1) {
+//     width: 240px;
+//   }
+//   & > div:nth-child(2) {
+//     position: absolute;
+//     right: 20px;
+//     top: -15px;
+//     & > svg {
+//       width: 30px;
+//       height: 30px;
+//     }
+//   }
+// }
+// @media screen and (min-width: 1920px) {
+//   .is_new_tooth_wiki {
+//     right: 150px !important;
+//     bottom: 360px !important;
+//   }
+// }
+// @media screen and (min-width: 1440px) and (max-width: 1919px) {
+//   .is_new_tooth_wiki {
+//     right: 130px !important;
+//     bottom: 300px !important;
+//   }
+// }
+// @media screen and (min-width: 1024px) and (max-width: 1439px) {
+//   .is_new_tooth_wiki {
+//     right: 130px !important;
+//     bottom: 220px !important;
+//     & > div:nth-child(1) {
+//       width: 120px !important;
+//     }
+//     & > div:nth-child(2) {
+//       top: -30px !important;
+//       & > svg {
+//         width: 30px !important;
+//         width: 30px !important;
+//       }
+//     }
+//   }
+// }
 @media screen and (min-width: 768px) and (max-width: 1919px) {
   #popup-alert {
     & > div {
