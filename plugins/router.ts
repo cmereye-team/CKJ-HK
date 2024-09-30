@@ -23,7 +23,7 @@ export default defineNuxtPlugin((nuxtApp) => {
         }
       }, 2000);
     }
-    const excludedPaths = ['/health-care-voucher'];
+    const excludedPaths = ['/health-care-voucher', "/health-care-voucher/"];
     if (!excludedPaths.includes(to.path)) {
       function popupAlertCreated() {
         var container = document.getElementById('popup-alert')

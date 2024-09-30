@@ -305,7 +305,7 @@ const orgLists = [
     'https://static.cmereye.com/static/ckjnewsite/org/org-4012.png',
     'https://static.cmereye.com/static/ckjnewsite/org/org-4013.png',
     'https://static.cmereye.com/imgs/2024/08/649a4dcca06fa45a.png',
-    'https://static.cmereye.com/imgs/2024/08/fb3b34ba5e3335e3.png'
+    'https://static.cmereye.com/imgs/2024/08/fb3b34ba5e3335e3.png',
   ],
 ]
 const handleorgtabfun = (orgTabIndex) => {
@@ -925,7 +925,10 @@ const contentDom = ref(false)
                 </Swiper-slide>
               </Swiper>
             </div>
-            <div class="index-latestNews-line brandConcept-line"  v-if="windowWidth < 767">
+            <div
+              class="index-latestNews-line brandConcept-line"
+              v-if="windowWidth < 767"
+            >
               <PageSwiperPointLine
                 :latestNewsNum="Latest_Movies[Latest_Movies_cur].length"
                 :latestNewsCurrent="currtNew"
@@ -1177,17 +1180,20 @@ const contentDom = ref(false)
           </div>
         </div>
         <div class="index-caseSharing-in">
-          <div class="in-top" v-if="windowWidth > 767">
-            <CaseSharingVideoItem :caseSharingData="caseSharingTopData" />
+          <div class="in-top">
+            <!-- <CaseSharingVideoItem :caseSharingData="caseSharingTopData" /> -->
+            <iframe
+              src="https://www.youtube.com/embed/Q7sHcjs6oCs?si=JmhIgriXU-qvuOkg"
+              width="100%"
+              height="100%"
+              frameborder="0"
+            ></iframe>
           </div>
-          <div class="share-item" v-else>
+          <div class="share-item" style="display: none">
             <div>
               <div>
                 <div>
-                  <img
-                    src="../assets/images/zmm.svg"
-                    alt="星級客戶"
-                  />
+                  <img src="../assets/images/zmm.svg" alt="星級客戶" />
                 </div>
                 <div>
                   <div class="item-date">17/4/24</div>
@@ -1689,6 +1695,7 @@ svg:hover path {
     margin: 45px auto;
     .in-top {
       display: flex;
+      height: 587px;
     }
     .in-cen {
       display: flex;
@@ -2260,6 +2267,10 @@ svg:hover path {
       width: 70%;
       max-width: 54.4792vw;
       margin: 2.3438vw auto;
+      .in-top {
+        display: flex;
+        height: 30.2vw;
+      }
       .in-cen {
         margin-top: 6.25vw;
         &-box {
@@ -2739,7 +2750,13 @@ svg:hover path {
     &-in {
       width: 100%;
       margin: 15px auto 0;
-      padding: 20px 30px;
+      // padding: 20px 30px;
+      padding: 20px 0;
+      .in-top {
+        display: flex;
+        width: 100%;
+        height: 56vw;
+      }
       .in-cen {
         margin-top: 34px;
         flex-direction: column;

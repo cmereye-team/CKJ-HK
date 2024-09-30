@@ -1126,8 +1126,8 @@ const handleopenwechat = () => {
     line-height: 160%;
     color: #666666;
     text-align: right;
-    max-width: 1512px;
-    width: 100%;
+    max-width: 90%;
+    width: 1521px;
     padding: 0 30px;
     left: 50%;
     transform: translateX(-50%);
@@ -1258,6 +1258,10 @@ const handleopenwechat = () => {
 
 @media (min-width: 768px) and (max-width: 1000px) {
   .header-content {
+    .explain_page_one {
+      max-width: 80%;
+      width: 80%;
+    }
     &-text-implant {
       div {
         width: calc(80%);
@@ -1285,6 +1289,10 @@ const handleopenwechat = () => {
 }
 @media (min-width: 1001px) and (max-width: 1452px) {
   .header-content {
+    .explain_page_one {
+      max-width: 80%;
+      width: 80%;
+    }
     &-in {
       width: calc(80% + 60px);
       padding: 10px 10px 0 30px;
@@ -1448,7 +1456,7 @@ const handleopenwechat = () => {
     .explain_page_one {
       position: absolute;
       z-index: 34;
-      bottom: 115px;
+      bottom: 30.65vw;
       right: 5%;
       font-style: normal;
       font-weight: 500;
@@ -1467,7 +1475,7 @@ const handleopenwechat = () => {
     }
     &-bgImg-implant {
       position: relative;
-      top: 60px;
+      top: 16vw;
       z-index: 1;
       &.course-new {
         padding-bottom: 5px;
@@ -1493,7 +1501,7 @@ const handleopenwechat = () => {
       text-align: left;
       z-index: 1;
       & > div {
-        font-size: 20px;
+        font-size: 5.3vw;
       }
       &.course-new {
         display: block;
@@ -1508,12 +1516,12 @@ const handleopenwechat = () => {
         background-image: url(@/assets/images/back_wave03.png);
         background-repeat: repeat-x;
         background-position: center bottom;
-        height: 162px;
+        height: 43.2vw;
         width: 100%;
         position: absolute;
         z-index: 1;
         left: 0px;
-        bottom: 20px;
+        bottom: 5.3vw;
         animation-name: wave2;
         animation-duration: 10s;
         animation-timing-function: linear;
@@ -1527,13 +1535,13 @@ const handleopenwechat = () => {
         content: '';
         background-image: url(@/assets/images/back_wave01.png);
         background-repeat: repeat-x;
-        background-position: center 20px;
-        height: 162px;
+        background-position: center 5.3vw;
+        height: 43.2vw;
         width: 100%;
         position: absolute;
         z-index: 1;
         left: 0px;
-        bottom: 20px;
+        bottom: 5.3vw;
         animation-name: wave1;
         animation-duration: 20s;
         animation-timing-function: linear;
@@ -1551,7 +1559,7 @@ const handleopenwechat = () => {
       justify-content: space-between;
       align-items: center;
       margin: 0;
-      padding: 20px 0 0 20px;
+      padding: 5.3vw 0 0 5.3vw;
       .logo {
         width: 125px;
         margin-bottom: 0;
@@ -1564,7 +1572,7 @@ const handleopenwechat = () => {
         align-items: center;
         &-menuopen {
           display: block;
-          width: 20px;
+          width: 5.3vw;
           margin-right: 25px;
         }
         &-lists {
@@ -1574,7 +1582,7 @@ const handleopenwechat = () => {
             display: block;
             margin-right: 15px;
             img {
-              width: 20px;
+              width: 5.3vw;
             }
           }
         }
@@ -1583,7 +1591,7 @@ const handleopenwechat = () => {
     &-span {
       width: 70px;
       font-weight: 400;
-      font-size: 20px;
+      font-size: 5.3vw;
       right: 30px;
       bottom: 60px;
     }
@@ -1639,7 +1647,7 @@ const handleopenwechat = () => {
       &-item {
         width: 100%;
         text-align: center;
-        padding: 20px 0;
+        padding: 5.3vw 0;
         font-size: 18px;
         position: relative;
         &:not(:last-child)::before {
@@ -1681,7 +1689,7 @@ const handleopenwechat = () => {
         align-items: center;
         font-size: 1rem;
         font-weight: 500;
-        margin-top: 20px;
+        margin-top: 5.3vw;
         color: var(--indexColor);
         &-item {
           width: 100%;
@@ -1700,7 +1708,7 @@ const handleopenwechat = () => {
     }
     .langItem {
       width: calc(100% - 60px);
-      padding: 20px 0;
+      padding: 5.3vw 0;
       margin: 0 30px;
       display: flex;
       border-top: 2px solid var(--indexColor2);
@@ -1718,7 +1726,7 @@ const handleopenwechat = () => {
       font-weight: 400;
       font-size: 1.25rem;
       line-height: 23px;
-      margin-top: 20px;
+      margin-top: 5.3vw;
       img {
         display: inline-block;
         vertical-align: middle;

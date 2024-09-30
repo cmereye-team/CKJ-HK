@@ -416,315 +416,6 @@ const newsmoduleLists = [
           $t('components.header.menuLists.health-care-voucher.name')
         }}</span>
       </div>
-      <div class="content">
-        <div class="new_defule">
-          2024年2月19日，政府公布深圳愛康健齒科已經正式成為「長者醫療券大灣區試點計劃」的參與機構。這個計劃旨在資助符合條件的長者跨境到愛康健齒科口腔醫院使用長者醫療券支付治療費用。政府預計約有170萬名合資格的長者將從中受益。
-        </div>
-        <div>
-          <img
-            loading="lazy"
-            src="https://static.cmereye.com/imgs/2024/02/74d44b6145445bfd.webp"
-            title="灣區長者醫療券"
-            alt="灣區長者醫療券"
-          />
-        </div>
-        <div class="new_defule">
-          2024年8月5日，香港衛生署正式與深圳愛康健口腔醫院簽署服務協議，並公布相關使用細節。「長者醫療券大灣區試點計劃」首次有牙科專業醫療機構參與，為醫療券計劃在內地推行帶來一大突破，讓合資格香港長者可在深圳使用醫療券接受牙科服務的選擇更多，以回應香港長者對牙科服務的殷切需求。
-        </div>
-        <div>
-          <img
-            loading="lazy"
-            src="https://static.cmereye.com/imgs/2024/08/4831c2a8a353d328.png"
-            title="灣區長者醫療券"
-            alt="灣區長者醫療券"
-          />
-        </div>
-        <div class="new_defule">
-          2024年8月14日起，合資格申領醫療券的香港長者將可在深圳愛康健口腔醫院使用醫療券支付門診醫療護理費用，為居住在大灣區內地城市的合資格香港長者提供更大的便利和靈活性。
-        </div>
-        <div style="margin: 0 0 80px 0">
-          <!-- <img
-            loading="lazy"
-            src="https://static.cmereye.com/imgs/2024/08/dc30c123de004e45.png"
-            title="灣區長者醫療券"
-            alt="灣區長者醫療券"
-          /> -->
-          <iframe
-            class="iframe"
-            src="https://www.youtube.com/embed/XzxwTy9Iheg?si=3BXyyQXpUmhlSRkb"
-            width="100%"
-            height="100%"
-            frameborder="0"
-          ></iframe>
-        </div>
-        <div class="nob" style="margin: 0 0 20px 0">
-          <h1>深圳愛康健口腔醫院簡介</h1>
-        </div>
-        <div class="new_two_img">
-          <img
-            loading="lazy"
-            src="https://static.cmereye.com/imgs/2024/08/22290f84b6d30b72.jpg"
-            title="灣區長者醫療券"
-            alt="灣區長者醫療券"
-          />
-          <img
-            loading="lazy"
-            src="https://static.cmereye.com/imgs/2024/08/e664507ec2ca2726.jpg"
-            title="灣區長者醫療券"
-            alt="灣區長者醫療券"
-          />
-        </div>
-        <div class="new_defule">
-          深圳愛康健口腔醫院是深圳市政府批准成立的二級口腔專科醫院，位於深圳市羅湖區建設路羅湖火車站大樓C區1-2樓北側、4-8樓，建築面積約8500平方米，設置牙椅64台，床位20張。醫院內有數十位來自華西、北大、港大等高校畢業的醫生，設置六大專科，提供全面性牙科醫療服務。以及提供優質醫療服務，包括無假日齒科、可自選預約醫生、一醫一患一診室、全程陪護、廣東話服務等。
-        </div>
-        <div class="new_address">
-          <div>
-            <span>醫院地址：</span>
-            <span class="indexColor a"
-              >深圳市羅湖區羅湖火車站大廈C區1樓大堂（出關後步行4分鐘）</span
-            >
-          </div>
-          <div>
-            <span>醫院營業時間：</span>
-            <span class="indexColor a">上午9:00-下午6:00（假日照常應診）</span>
-          </div>
-          <div>
-            <span>查詢及預約電話：</span>
-            <span class="indexColor a">(852) 6933 8128 </span>
-          </div>
-        </div>
-        <div class="btn">
-          <a href="https://bit.ly/愛康健長者醫療券預約">{{
-            $t('health-care-voucher.pageDetail.btn')
-          }}</a>
-        </div>
-        <div class="nob" style="margin: 100px 0 50px 0">
-          <h1>使用醫療券預約方法及就醫流程</h1>
-        </div>
-        <div class="new_defule">
-          <span class="new_address_gray"
-            >長者可透過深圳愛康健口腔醫院香港官方網站進行</span
-          ><a
-            href="https://bit.ly/%E6%84%9B%E5%BA%B7%E5%81%A5%E9%95%B7%E8%80%85%E9%86%AB%E7%99%82%E5%88%B8%E9%A0%90%E7%B4%84"
-            target="_blank"
-            class="new_address_pink"
-          >
-            網上查詢
-          </a>
-        </div>
-        <div class="new_defule">
-          <span class="new_address_gray">或致電</span
-          ><a
-            class="new_address_pink"
-            href="tel://852 69338128"
-            target="_blank"
-          >
-            69338128 </a
-          ><span class="new_address_gray">進行登記預約。</span>
-        </div>
-        <div class="new_defule">
-          長者亦可親身前往該院一樓大堂接待處，待醫院職員安排分診。完成分診後，長者可前往五樓、六樓或七樓出示有效香港身份證或由入境事務處發出的《豁免登記證明書》進行身份認證及掛號。在接受牙科治療後，長者可按醫院指示到收費專窗使用醫療券支付服務費用。
-        </div>
-        <!-- <div class="nob">
-          <h1>{{$t('health-care-voucher.pageDetail.nob')}}</h1>
-        </div> -->
-        <!-- <div>
-          <p class="time">{{$t('health-care-voucher.pageDetail.time')}}</p>
-        </div> -->
-        <!-- <div v-for="(item,index) in pageDetail.content" :key="index" :class="item.className || ''">
-          <section v-if="item.type === 'p'">
-            <p :class="{english:langCur === 'english'}">
-              <section v-for="(pitem,pindex) in item.list" :key="pindex">
-                <section v-if="pitem.type.includes('a')">
-                  <a :href="pitem.link" :class="pitem.type">{{pitem.text}}</a>
-                </section>
-                <section v-else>
-                  <span :class="pitem.type">
-                    {{$t(pitem.text)}}
-                  </span>
-                </section>
-              </section>
-            </p>
-          </section>
-          <section v-else-if="item.type === 'h2'">
-            <h2>{{$t(item.text)}}</h2>
-          </section>
-          <section v-else-if="item.type === 'h3'">
-            <h3>{{$t(item.text)}}</h3>
-          </section>
-          <section v-else-if="item.type === 'img'">
-            <section class="imgItem" v-for="(imgItem,imgIndex) in item.list" :key="imgIndex">
-              <img loading="lazy" :src="imgItem" alt="">
-            </section>
-          </section>
-          <section v-else-if="item.type === 'ul'">
-            <ul>
-              <li v-for="(liItem,liIndex) in item.list" :key="liIndex">
-                {{$t(liItem)}}
-              </li>
-            </ul>
-          </section>
-          <section v-else></section>
-        </div> -->
-        <!-- <div class="btn">
-          <a href="https://bit.ly/愛康健長者醫療券預約">{{$t('health-care-voucher.pageDetail.btn')}}</a>
-        </div> -->
-        <!-- <div class="tags">
-          <span v-for="(tagItem,tagIndex) in pageDetail.tags" :key="tagIndex">
-            {{$t(tagItem)}}
-          </span>
-        </div> -->
-      </div>
-      <div class="new_step">
-        <div class="resolve_step">
-          <div>
-            <div>醫院就醫流程</div>
-            <div>
-              <img src="../assets/images/step.svg" alt="step" />
-            </div>
-            <!-- <div
-              :class="[
-                docHeight == 'pc'
-                  ? 'step_shade step_active'
-                  : 'step_shade_mb step_active_mb',
-              ]"
-            ></div> -->
-          </div>
-        </div>
-        <div class="step_pink">
-          *長者在香港以外地方使用醫療券時，需要先同意加入電子健康紀錄互通系統（「醫健通」）（如未曾加入）。
-        </div>
-      </div>
-      <div class="content new_table">
-        <div
-          class="new_table_title"
-          style="margin: 100px 0 50px 0; justify-content: center"
-        >
-          <h1>可使用長者醫療券的牙科治療項目</h1>
-        </div>
-        <div class="new_table_tbody">
-          <div>
-            <div>
-              <span>預防性牙科項目</span>
-            </div>
-            <div>
-              <span><i>1</i>牙齒檢查</span>
-              <span><i>2</i>牙科放射照（CT拍片／Ｘ光）</span>
-              <span><i>3</i>口腔衞生指導／口腔健康教育</span>
-              <span><i>4</i>洗牙／打磨</span>
-              <span><i>5</i>塗搽高濃度氟化物劑</span>
-              <p>
-                ＊可參與長者醫療券獎賞先導計劃，累計使用至少1,000元醫療券可發放500元獎賞
-              </p>
-            </div>
-          </div>
-          <div>
-            <div>
-              <span>治理急性病症牙科項目</span>
-            </div>
-            <div>
-              <span><i>1</i>牙根刮治／清創</span>
-              <span><i>2</i>牙髓摘除</span>
-              <span><i>3</i>小型口腔手術</span>
-              <span><i>4</i>處方藥物</span>
-            </div>
-          </div>
-          <div>
-            <div>
-              <span>跟進／監察慢性病症</span>
-              <span>牙科項目</span>
-            </div>
-            <div>
-              <span><i>1</i>覆檢假牙托／牙橋／種植體</span>
-              <span><i>2</i>治理顳下頷關節（牙骹）病症／痛症</span>
-              <span><i>3</i>治理蛀牙，包括補牙、脫牙、杜牙根（牙髓治療）</span>
-              <span><i>4</i>治理牙周病，包括進階牙周治療</span>
-              <p>
-                ＊可參與長者醫療券獎賞先導計劃，累計使用至少1,000元醫療券可發放500元獎賞
-              </p>
-            </div>
-          </div>
-          <div>
-            <div>
-              <span>復康性牙科項目</span>
-            </div>
-            <div>
-              <span><i>1</i>洞內嵌體／高嵌體</span>
-              <span><i>2</i>鑲配人造牙冠／牙橋</span>
-              <span><i>3</i>鑲配假牙托</span>
-              <span><i>4</i>鑲配假牙托</span>
-            </div>
-          </div>
-        </div>
-        <div class="btn">
-          <a href="https://bit.ly/愛康健長者醫療券預約">{{
-            $t('health-care-voucher.pageDetail.btn')
-          }}</a>
-        </div>
-      </div>
-      <div class="content">
-        <div class="nob" style="margin: 100px 0 50px 0">
-          <h1>如何參加長者醫療券計劃？</h1>
-        </div>
-        <div class="new_defule">
-          凡年滿
-          65歲並持有有效香港身份證或入境事務處發出的《豁免登記證明書》的長者，即符合資格領取及使用醫療券支付私營基層醫療服務的費用。
-        </div>
-        <div class="new_defule">
-          每名合資格長者每年可獲發的醫療券金額為2,000港元，醫療券的累積金額上限為
-          8,000港元。
-        </div>
-        <div class="mb_new_defule">
-          <span class="new_address_pink">查詢醫療券使用記錄</span><br />
-          <div class="new_defule">
-            醫院為長者申報使用醫療券，有關戶口内的醫療券使用記錄亦會即時更新。在完成申報後醫院會給長者一份《醫療券使用記錄》，列明扣取前、已扣取及剩餘的醫療券金額，以供保存。
-          </div>
-        </div>
-        <div class="mb_new_defule">
-          <span class="new_address_pink">長者醫療券獎賞先導計劃</span><br />
-          <div class="new_defule">
-            於2023年11月13日推出，為期3年的「長者醫療券獎賞先導計劃」（「獎賞先導計劃」），透過發放獎賞，鼓勵65歲或以上的合資格香港長者使用醫療券，接受私營醫療服務提供者提供的健康檢查、慢性疾病診斷和管理等特定基層醫療服務。只要主要到診原因屬指明的特定基層醫療用途，長者在該次服務所使用的醫療券金額便可累積計算以賺取獎賞，供日後用作支付該等特定基層醫療服務費用。
-          </div>
-        </div>
-        <div class="new_defule">
-          長者醫療券獎賞先導計劃」適用於愛康健口腔醫院，接受預防性牙科項目及跟進／監察慢性病症牙科項目時，
-          同一年度內累計使用至少1,000元醫療券，醫健通（資助）系統即會自動發放500元獎賞至其醫療券戶口。
-        </div>
-      </div>
-      <div class="content" style="margin-bottom: 85px">
-        <div class="nob" style="margin: 100px 0 50px 0">
-          <h1 style="text-align: left">長者醫療券相關連結</h1>
-        </div>
-        <div class="new_address">
-          <div>
-            <span>醫療券官方網頁：</span
-            ><a
-              href="https://www.hcv.gov.hk/tc/index.html"
-              target="_blank"
-              class="new_address_pink"
-              >https://www.hcv.gov.hk/tc/index.html</a
-            >
-          </div>
-          <div>
-            <span>醫健通官方網頁：</span
-            ><a
-              href="https://www.ehealth.gov.hk/tc/"
-              target="_blank"
-              class="new_address_pink"
-              >https://www.ehealth.gov.hk/tc/</a
-            >
-          </div>
-          <div>
-            <span>醫療券深圳愛康健口腔醫院官方網頁：</span
-            ><a
-              href="https://www.hcv.gov.hk/tc/hcv_gba_pilot_scheme/szckjsh.html"
-              target="_blank"
-              class="new_address_pink"
-              >https://www.hcv.gov.hk/tc/hcv_gba_pilot_scheme/szckjsh.html</a
-            >
-          </div>
-        </div>
-      </div>
       <div class="new_info_health">
         <div class="new_info_header">
           <div>
@@ -1312,6 +1003,278 @@ const newsmoduleLists = [
           </div>
         </div>
       </div>
+      <div class="content new_table">
+        <div class="btn">
+          <a href="https://bit.ly/愛康健長者醫療券預約">{{
+            $t('health-care-voucher.pageDetail.btn')
+          }}</a>
+        </div>
+        <div
+          class="new_table_title"
+          style="justify-content: center"
+          :style="{ margin: windowWidth < 768 ? '30px 0' : '100px 0 50px 0' }"
+        >
+          <h1>可使用長者醫療券的牙科治療項目</h1>
+        </div>
+        <div class="new_table_tbody">
+          <div>
+            <div>
+              <span>預防性牙科項目</span>
+            </div>
+            <div>
+              <span><i>1</i>牙齒檢查</span>
+              <span><i>2</i>牙科放射照（CT拍片／Ｘ光）</span>
+              <span><i>3</i>口腔衞生指導／口腔健康教育</span>
+              <span><i>4</i>洗牙／打磨</span>
+              <span><i>5</i>塗搽高濃度氟化物劑</span>
+              <p>
+                ＊可參與長者醫療券獎賞先導計劃，累計使用至少1,000元醫療券可發放500元獎賞
+              </p>
+            </div>
+          </div>
+          <div>
+            <div>
+              <span>治理急性病症牙科項目</span>
+            </div>
+            <div>
+              <span><i>1</i>牙根刮治／清創</span>
+              <span><i>2</i>牙髓摘除</span>
+              <span><i>3</i>小型口腔手術</span>
+              <span><i>4</i>處方藥物</span>
+            </div>
+          </div>
+          <div>
+            <div>
+              <span>跟進／監察慢性病症</span>
+              <span>牙科項目</span>
+            </div>
+            <div>
+              <span><i>1</i>覆檢假牙托／牙橋／種植體</span>
+              <span><i>2</i>治理顳下頷關節（牙骹）病症／痛症</span>
+              <span><i>3</i>治理蛀牙，包括補牙、脫牙、杜牙根（牙髓治療）</span>
+              <span><i>4</i>治理牙周病，包括進階牙周治療</span>
+              <p>
+                ＊可參與長者醫療券獎賞先導計劃，累計使用至少1,000元醫療券可發放500元獎賞
+              </p>
+            </div>
+          </div>
+          <div>
+            <div>
+              <span>復康性牙科項目</span>
+            </div>
+            <div>
+              <span><i>1</i>洞內嵌體／高嵌體</span>
+              <span><i>2</i>鑲配人造牙冠／牙橋</span>
+              <span><i>3</i>鑲配假牙托</span>
+              <span><i>4</i>鑲配假牙托</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="new_two_img">
+          <img
+            loading="lazy"
+            src="https://static.cmereye.com/imgs/2024/09/0f56c2bbbbfca1a7.png"
+            title="灣區長者醫療券"
+            alt="灣區長者醫療券"
+          />
+          <img
+            loading="lazy"
+            src="https://static.cmereye.com/imgs/2024/08/e664507ec2ca2726.jpg"
+            title="灣區長者醫療券"
+            alt="灣區長者醫療券"
+          />
+          <div class="nob">
+            <h2>深圳愛康健口腔醫院簡介</h2>
+          </div>
+        </div>
+        <div class="new_defule">
+          深圳愛康健口腔醫院是深圳市政府批准成立的二級口腔專科醫院，位於深圳市羅湖區建設路羅湖火車站大樓C區1-2樓北側、4-8樓，建築面積約8500平方米，設置牙椅64台，床位20張。醫院內有數十位來自華西、北大、港大等高校畢業的醫生，設置六大專科，提供全面性牙科醫療服務。以及提供優質醫療服務，包括無假日齒科、可自選預約醫生、一醫一患一診室、全程陪護、廣東話服務等。
+        </div>
+        <div class="new_address">
+          <div>
+            <span>醫院地址：</span>
+            <span class="indexColor a"
+              >深圳市羅湖區羅湖火車站大廈C區1樓大堂（出關後步行4分鐘）</span
+            >
+          </div>
+          <div>
+            <span>醫院營業時間：</span>
+            <span class="indexColor a">上午9:00-下午6:00（假日照常應診）</span>
+          </div>
+          <div>
+            <span>查詢及預約電話：</span>
+            <span class="indexColor a">(852) 6933 8128 </span>
+          </div>
+        </div>
+        <div
+          class="nob"
+          :style="{ margin: windowWidth < 768 ? '30px 0' : '100px 0 50px 0' }"
+        >
+          <h1>使用醫療券預約方法及就醫流程</h1>
+        </div>
+        <div class="new_defule">
+          <span class="new_address_gray"
+            >長者可透過深圳愛康健口腔醫院香港官方網站進行</span
+          ><a
+            href="https://bit.ly/%E6%84%9B%E5%BA%B7%E5%81%A5%E9%95%B7%E8%80%85%E9%86%AB%E7%99%82%E5%88%B8%E9%A0%90%E7%B4%84"
+            target="_blank"
+            class="new_address_pink"
+          >
+            網上查詢
+          </a>
+        </div>
+        <div class="new_defule">
+          <span class="new_address_gray">或致電</span
+          ><a
+            class="new_address_pink"
+            href="tel://852 69338128"
+            target="_blank"
+          >
+            69338128 </a
+          ><span class="new_address_gray">進行登記預約。</span>
+        </div>
+        <div class="new_defule">
+          長者亦可親身前往該院一樓大堂接待處，待醫院職員安排分診。完成分診後，長者可前往五樓、六樓或七樓出示有效香港身份證或由入境事務處發出的《豁免登記證明書》進行身份認證及掛號。在接受牙科治療後，長者可按醫院指示到收費專窗使用醫療券支付服務費用。
+        </div>
+      </div>
+      <div class="new_step">
+        <div class="resolve_step">
+          <div>
+            <div>醫院就醫流程</div>
+            <div>
+              <img src="../assets/images/step.svg" alt="step" />
+            </div>
+            <!-- <div
+              :class="[
+                docHeight == 'pc'
+                  ? 'step_shade step_active'
+                  : 'step_shade_mb step_active_mb',
+              ]"
+            ></div> -->
+          </div>
+        </div>
+        <div class="content">
+          <div class="btn">
+            <a href="https://bit.ly/愛康健長者醫療券預約">{{
+              $t('health-care-voucher.pageDetail.btn')
+            }}</a>
+          </div>
+        </div>
+        <div class="content">
+          <div
+            class="nob"
+            :style="{ margin: windowWidth < 768 ? '30px 0' : '100px 0 50px 0' }"
+          >
+            <h1>如何參加長者醫療券計劃？</h1>
+          </div>
+          <div class="new_defule">
+            凡年滿
+            65歲並持有有效香港身份證或入境事務處發出的《豁免登記證明書》的長者，即符合資格領取及使用醫療券支付私營基層醫療服務的費用。
+          </div>
+          <div class="new_defule">
+            每名合資格長者每年可獲發的醫療券金額為2,000港元，醫療券的累積金額上限為
+            8,000港元。
+          </div>
+          <div class="mb_new_defule">
+            <span class="new_address_pink">查詢醫療券使用記錄</span><br />
+            <div class="new_defule">
+              醫院為長者申報使用醫療券，有關戶口内的醫療券使用記錄亦會即時更新。在完成申報後醫院會給長者一份《醫療券使用記錄》，列明扣取前、已扣取及剩餘的醫療券金額，以供保存。
+            </div>
+          </div>
+          <div class="mb_new_defule">
+            <span class="new_address_pink">長者醫療券獎賞先導計劃</span><br />
+            <div class="new_defule">
+              於2023年11月13日推出，為期3年的「長者醫療券獎賞先導計劃」（「獎賞先導計劃」），透過發放獎賞，鼓勵65歲或以上的合資格香港長者使用醫療券，接受私營醫療服務提供者提供的健康檢查、慢性疾病診斷和管理等特定基層醫療服務。只要主要到診原因屬指明的特定基層醫療用途，長者在該次服務所使用的醫療券金額便可累積計算以賺取獎賞，供日後用作支付該等特定基層醫療服務費用。
+            </div>
+          </div>
+          <div class="new_defule">
+            長者醫療券獎賞先導計劃」適用於愛康健口腔醫院，接受預防性牙科項目及跟進／監察慢性病症牙科項目時，
+            同一年度內累計使用至少1,000元醫療券，醫健通（資助）系統即會自動發放500元獎賞至其醫療券戶口。
+          </div>
+          <div class="step_pink">
+            *長者在香港以外地方使用醫療券時，需要先同意加入電子健康紀錄互通系統（「醫健通」）（如未曾加入）。
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="nob" style="margin: 50px 0 20px 0">
+          <h1 style="text-align: left">長者醫療券相關連結</h1>
+        </div>
+        <div class="new_address">
+          <div>
+            <span>醫療券官方網頁：</span
+            ><a
+              href="https://www.hcv.gov.hk/tc/index.html"
+              target="_blank"
+              class="new_address_pink"
+              >https://www.hcv.gov.hk/tc/index.html</a
+            >
+          </div>
+          <div>
+            <span>醫健通官方網頁：</span
+            ><a
+              href="https://www.ehealth.gov.hk/tc/"
+              target="_blank"
+              class="new_address_pink"
+              >https://www.ehealth.gov.hk/tc/</a
+            >
+          </div>
+          <div>
+            <span>醫療券深圳愛康健口腔醫院官方網頁：</span
+            ><a
+              href="https://www.hcv.gov.hk/tc/hcv_gba_pilot_scheme/szckjsh.html"
+              target="_blank"
+              class="new_address_pink"
+              >https://www.hcv.gov.hk/tc/hcv_gba_pilot_scheme/szckjsh.html</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="content">
+        <div class="new_defule">
+          2024年2月19日，政府公布深圳愛康健齒科已經正式成為「長者醫療券大灣區試點計劃」的參與機構。這個計劃旨在資助符合條件的長者跨境到愛康健齒科口腔醫院使用長者醫療券支付治療費用。政府預計約有170萬名合資格的長者將從中受益。
+        </div>
+        <div>
+          <img
+            loading="lazy"
+            src="https://static.cmereye.com/imgs/2024/02/74d44b6145445bfd.webp"
+            title="灣區長者醫療券"
+            alt="灣區長者醫療券"
+          />
+        </div>
+        <div class="new_defule">
+          2024年8月5日，香港衛生署正式與深圳愛康健口腔醫院簽署服務協議，並公布相關使用細節。「長者醫療券大灣區試點計劃」首次有牙科專業醫療機構參與，為醫療券計劃在內地推行帶來一大突破，讓合資格香港長者可在深圳使用醫療券接受牙科服務的選擇更多，以回應香港長者對牙科服務的殷切需求。
+        </div>
+        <div>
+          <img
+            loading="lazy"
+            src="https://static.cmereye.com/imgs/2024/08/4831c2a8a353d328.png"
+            title="灣區長者醫療券"
+            alt="灣區長者醫療券"
+          />
+        </div>
+        <div class="new_defule">
+          2024年8月14日起，合資格申領醫療券的香港長者將可在深圳愛康健口腔醫院使用醫療券支付門診醫療護理費用，為居住在大灣區內地城市的合資格香港長者提供更大的便利和靈活性。
+        </div>
+        <div style="margin: 0 0 80px 0">
+          <!-- <img
+            loading="lazy"
+            src="https://static.cmereye.com/imgs/2024/08/dc30c123de004e45.png"
+            title="灣區長者醫療券"
+            alt="灣區長者醫療券"
+          /> -->
+          <iframe
+            class="iframe"
+            src="https://www.youtube.com/embed/XzxwTy9Iheg?si=3BXyyQXpUmhlSRkb"
+            width="100%"
+            height="100%"
+            frameborder="0"
+          ></iframe>
+        </div>
+      </div>
+
       <div class="newsmodule smallPageCon">
         <div class="newsmodule-title">
           <div class="index_title">醫療券資訊</div>
@@ -1353,8 +1316,8 @@ const newsmoduleLists = [
 <style lang="scss" scoped>
 .new_info_health {
   position: relative;
-  margin-top: 330px;
-  margin-bottom: 220px;
+  margin-top: 230px;
+  margin-bottom: 0;
 }
 :deep(.header-content .explain_box_mobile) {
   display: none !important;
@@ -1399,7 +1362,7 @@ const newsmoduleLists = [
   position: relative;
   z-index: 10;
   box-sizing: border-box;
-  padding: 120px 0;
+  padding: 120px 0 0;
   max-width: 1450px;
   margin: 0 auto;
   margin-top: 30px;
@@ -2084,7 +2047,7 @@ const newsmoduleLists = [
     line-height: 160%; /* 32px */
     letter-spacing: 4px;
     max-width: 960px;
-    margin: 100px auto;
+    margin: 20px auto;
   }
 }
 @keyframes mask {
@@ -2147,11 +2110,11 @@ const newsmoduleLists = [
 .new_two_img {
   width: 100%;
   display: flex;
-  gap: 0 2%;
-  & > img {
-    flex: 1;
-    width: 49%;
-  }
+  flex-direction: column;
+  align-items: center;
+  gap: 20px 0;
+  box-sizing: border-box;
+  padding: 0 50px;
 }
 .new_table {
   margin: 98px auto 100px;
@@ -2326,7 +2289,7 @@ const newsmoduleLists = [
   max-width: 960px;
   margin: 60px auto;
   & > div {
-    margin-bottom: 45px;
+    margin-bottom: 35px;
     &.nob {
       margin-bottom: 0;
     }
@@ -2617,6 +2580,13 @@ const newsmoduleLists = [
   }
 }
 @media screen and (max-width: 768px) {
+  .new_two_img {
+    .nob {
+      h2 {
+        white-space: nowrap;
+      }
+    }
+  }
   .explain {
     color: var(--Grey-Deep, #4d4d4d);
     text-align: right;
@@ -2635,8 +2605,8 @@ const newsmoduleLists = [
   }
   .new_info_health {
     position: relative;
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin-top: 20px;
+    margin-bottom: 0;
   }
   .new_info_header {
     display: flex;
@@ -2664,46 +2634,46 @@ const newsmoduleLists = [
     font-style: normal;
     font-weight: 400;
     line-height: 130%; /* 26px */
-    max-width: 200px;
-    margin-left: 80px;
+    max-width: 57.33vw;
+    margin-left: 21.33vw;
   }
   .new_info_content_bg::before {
     position: absolute;
     content: '';
     display: inline-block;
-    width: 18px;
-    height: 22px;
+    width: 4.8vw;
+    height: 5.865vw;
     background: url('https://static.cmereye.com/imgs/2024/08/843c8466fed81592.png')
       no-repeat;
     background-size: 100% 100%;
-    top: -16px;
+    top: -4.265vw;
     left: 20%;
   }
   .new_info_content {
     position: relative;
     z-index: 10;
     box-sizing: border-box;
-    padding: 30px;
-    max-width: 1450px;
+    padding: 0 8vw;
+    max-width: 100%;
     margin: 0 auto;
-    margin-top: 10px;
+    margin-top: 2.65vw;
     & > div:nth-child(1) {
       color: var(--Grey-Deep, #4d4d4d);
       font-family: 'Noto Sans HK';
-      font-size: 16px;
+      font-size: 4.265vw;
       font-style: normal;
       font-weight: 400;
       line-height: 200%; /* 32px */
       letter-spacing: 1.6px;
     }
     & > div:nth-child(2) {
-      margin-top: 30px;
+      margin-top: 8vw;
       & > div:nth-child(1) {
-        margin-bottom: 20px;
+        margin-bottom: 5.3vw;
         color: var(--Theme-Color, #fc1682);
         text-align: center;
         font-family: 'Noto Sans HK';
-        font-size: 16px;
+        font-size: 4.265vw;
         font-style: normal;
         font-weight: 700;
         line-height: 200%; /* 32px */
@@ -2711,10 +2681,10 @@ const newsmoduleLists = [
       }
     }
     & > div:nth-child(3) {
-      margin-top: 30px;
+      margin-top: 8vw;
       color: var(--Grey-Deep, #4d4d4d);
       font-family: 'Noto Sans HK';
-      font-size: 16px;
+      font-size: 4.265vw;
       font-style: normal;
       font-weight: 400;
       line-height: 200%; /* 32px */
@@ -2723,7 +2693,7 @@ const newsmoduleLists = [
     }
   }
   .new_info_content_bg {
-    border-radius: 20px 20px var(--Count, 0px) var(--Count, 0px);
+    border-radius: 5.3vw 5.3vw var(--Count, 0px) var(--Count, 0px);
     background: linear-gradient(180deg, #fee6f1 -23.02%, #fff 58.97%);
     position: relative;
     z-index: 5;
@@ -2731,32 +2701,32 @@ const newsmoduleLists = [
   .new_info_content_items {
     display: flex;
     flex-direction: column;
-    gap: 30px 0;
-    margin-left: 10px;
+    gap: 8vw 0;
+    margin-left: 2.65vw;
     align-items: center;
     & > div {
       margin: 0;
-      width: 315px;
+      width: 84vw;
       position: relative;
       z-index: 5;
       & > div:nth-child(1) {
-        border-radius: 30px;
+        border-radius: 8vw;
         border: 2px solid #fc1682;
         background: #fff;
         box-shadow: 6px 6px 0px 0px rgba(252, 22, 130, 0.3);
         & > div:nth-child(1) {
-          padding: 20px 0 10px;
+          padding: 5.3vw 0 2.65vw;
           color: #14a033;
           text-align: center;
           font-family: FakePearl;
-          font-size: 20px;
+          font-size: 5.3vw;
           font-style: normal;
           font-weight: 500;
           line-height: 160%; /* 32px */
         }
         & > div:nth-child(2) {
           box-sizing: border-box;
-          padding: 20px 30px;
+          padding: 5.3vw 8vw;
           border-radius: var(--Count, 0px) var(--Count, 0px) 30px 30px;
           background: var(--Pink-Pale, #fee6f1);
         }
@@ -2771,7 +2741,7 @@ const newsmoduleLists = [
           -webkit-text-stroke-width: 2;
           -webkit-text-stroke-color: #fff;
           font-family: 'Noto Sans HK';
-          font-size: 24px;
+          font-size: 6.4vw;
           font-style: normal;
           font-weight: 700;
           line-height: 160%; /* 38.4px */
@@ -2779,7 +2749,7 @@ const newsmoduleLists = [
           i {
             color: var(--Grey-Deep, #4d4d4d);
             font-family: 'Noto Sans HK';
-            font-size: 20px;
+            font-size: 5.3vw;
             font-style: normal;
             font-weight: 500;
             line-height: 160%;
@@ -3272,7 +3242,7 @@ const newsmoduleLists = [
       180deg,
       rgba(252, 22, 130, 0.4) -68.47%,
       rgba(252, 22, 130, 0.28) -68.46%,
-      rgba(255, 168, 198, 0) 63.88%
+      rgba(255, 168, 198, 0) 43.88%
     );
     .resolve_step {
       max-width: 960px;
@@ -3457,18 +3427,18 @@ const newsmoduleLists = [
       }
       &.btn {
         max-width: 100%;
-        margin-top: 30px;
-        padding: 30px 0;
+        margin-top: 8vw;
+        padding: 8vw 0;
         overflow: hidden;
         a {
-          font-size: 26px;
-          padding: 5px 20px;
+          font-size: 6.43vw;
+          padding: 1.3vw 5.3vw;
 
           &::after {
             right: -10px;
             top: 45%;
-            width: 28px;
-            height: 33px;
+            width: 7.465vw;
+            height: 8.8vw;
           }
         }
       }
@@ -3476,10 +3446,10 @@ const newsmoduleLists = [
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
-        margin-top: 40px;
+        margin-top: 10.65vw;
         margin-bottom: 0;
         span {
-          font-size: 16px;
+          font-size: 4.265vw;
           border-bottom: 0;
           text-decoration-line: underline;
           &:last-child {
@@ -3489,35 +3459,37 @@ const newsmoduleLists = [
       }
     }
     h1 {
-      font-size: 20px;
+      font-size: 5vw;
       color: var(--indexColor1);
-      padding: 0 30px;
+      padding: 0 8vw;
+      white-space: nowrap;
+      box-sizing: border-box;
     }
     h2 {
-      font-size: 20px;
+      font-size: 5.3vw;
       line-height: 200%;
-      padding: 0 30px;
+      padding: 0 8vw;
     }
     h3 {
-      font-size: 20px;
-      padding: 0 30px;
+      font-size: 5.3vw;
+      padding: 0 8vw;
     }
     ul {
-      padding: 0 30px;
+      padding: 0 8vw;
       li {
-        font-size: 16px;
+        font-size: 4.265vw;
         line-height: 200%;
       }
     }
     p {
-      padding: 0 30px;
-      font-size: 16px;
+      padding: 0 8vw;
+      font-size: 4.265vw;
       line-height: 200%;
       letter-spacing: 3px;
       text-align: justify;
       &.time {
-        font-size: 16px;
-        margin-top: 20px;
+        font-size: 4.265vw;
+        margin-top: 5.3vw;
       }
       a {
         text-align: initial;
@@ -3528,7 +3500,7 @@ const newsmoduleLists = [
   }
   .newsmodule {
     position: relative;
-    margin-top: 60px;
+    margin-top: 16vw;
     &-title {
       .mewsmodule-btn {
         position: absolute;
@@ -3537,20 +3509,20 @@ const newsmoduleLists = [
         transform: translate(-50%, 200%);
         & > a {
           float: initial;
-          font-size: 20px;
-          margin-left: 10px;
+          font-size: 5.3vw;
+          margin-left: 2.65vw;
           &::before {
             border-bottom: 1px solid var(--indexColor1);
           }
           &::after {
-            font-size: 18px;
+            font-size: 4.8vw;
           }
         }
       }
     }
     &-lists {
       grid-template-columns: repeat(1, 1fr);
-      margin-top: 30px;
+      margin-top: 8vw;
     }
   }
   .new_table_title h1 {
@@ -3569,6 +3541,10 @@ const newsmoduleLists = [
     padding: 0 15px;
     width: 100%;
     max-width: 100%;
+    margin-top: 0;
+    .btn {
+      margin-top: 0 !important;
+    }
   }
   .new_table_tbody {
     width: 100%;
