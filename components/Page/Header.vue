@@ -2070,7 +2070,7 @@ const hideDiv = () => {
         background-image: url(@/assets/images/back_wave01.png);
         background-repeat: repeat-x;
         background-position: center 20px;
-        height: 49.33vw;
+        height: 45.33vw;
         width: 100%;
         position: absolute;
         z-index: 1;
@@ -2115,7 +2115,7 @@ const hideDiv = () => {
       justify-content: space-between;
       align-items: center;
       margin: 0;
-      padding: 5.3vw 0 0 5.3vw;
+      padding: 5.3vw 0 5.3vw 5.3vw;
       .logo {
         width: 33.3vw;
         margin-bottom: 0;
