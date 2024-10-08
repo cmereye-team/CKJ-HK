@@ -1326,14 +1326,15 @@ const handleopenwechat = () => {
 @media (min-width: 768px) and (max-width: 1450px) {
   .header-content {
     &-in {
-      padding: 10px 15px 0 30px;
+      width: calc(80% + 120px);
+      padding: 10px 0 0 0;
       .logo {
         width: 20%;
         margin-bottom: 15px;
       }
       .menu {
         .menuItem {
-          font-size: 100%;
+          font-size: clamp(16px, 1.2vw, 1.8vw);
           padding: 0 0 10px;
           & > a {
             padding: 0 1vw;

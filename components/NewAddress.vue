@@ -80,7 +80,7 @@ watch(
 <template>
   <div class="index-contactUs smallPageCon">
       <div class="index-contactUs-t">
-        <div class="index_title">{{$t('contactUs.title')}}</div>
+        <div class="index_title">來院路線</div>
       </div>
       <div class="index-contactUs-tab">
         <AreaTab @changeTabCur="changeTabCur" />

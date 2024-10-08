@@ -450,7 +450,7 @@ const hideDiv = () => {
             'rootCanal-test',
             'scaling-and-polishing-test',
             'health-care-voucher',
-          ].includes(headerConfig.pageName)
+          ].includes(headerConfig.pageName) && windowWidth > 768
         "
         class="header-content-text-implant"
         :class="headerConfig.pageName"
@@ -461,13 +461,13 @@ const hideDiv = () => {
           <span>優惠只限於網上及電話預約客戶</span>
         </div> -->
       </div>
-      <div
+      <!-- <div
         v-if="showExplain && windowWidth > 768"
         class="header-content-text-implant"
       >
         <div>29年專科•專業•專注</div>
         <div><span>港人首選</span>一站式連鎖牙科品牌</div>
-      </div>
+      </div> -->
       <div
         class="explain_box_mobile"
         v-if="hideDiv()"
@@ -516,7 +516,13 @@ const hideDiv = () => {
           headerConfig.pageName,
         ]"
       >
-        <div ref="headerMenu" class="pageCon header-content-in pc_tel">
+        <div
+          ref="headerMenu"
+          class="pageCon header-content-in"
+          :class="[
+            route.name == 'health-care-voucher' ? 'health_max_width' : 'pc_tel',
+          ]"
+        >
           <div class="logo">
             <nuxt-link
               :to="'/'"
@@ -635,8 +641,11 @@ const hideDiv = () => {
             </div>
           </div>
           <div class="icon">
-            <nuxt-link to="/health-care-voucher" class="health_care_voucher mb_gov_voucher">
-              <img src="@/assets/images/1321315134.svg" alt="">
+            <nuxt-link
+              to="/health-care-voucher"
+              class="health_care_voucher mb_gov_voucher"
+            >
+              <img src="@/assets/images/1321315134.svg" alt="" />
             </nuxt-link>
             <div class="icon-menuopen" @click="menuBoxBool = !menuBoxBool">
               <img v-if="!menuBoxBool" src="@/assets/images/icon_61.png" />
@@ -1440,7 +1449,7 @@ const hideDiv = () => {
     background: #fff;
     width: 100%;
     .health_care_voucher {
-      display: none;
+      display: none !important;
     }
     .pc_menu_tel {
       display: none;
@@ -1485,6 +1494,53 @@ const hideDiv = () => {
       font-style: normal;
       font-weight: 400;
       line-height: 160%; /* 35.2px */
+    }
+  }
+}
+.header-content {
+  .headerBox02 {
+    .health_max_width {
+      width: 100%;
+      max-width: 1512px;
+      box-sizing: border-box;
+      padding: 20px 10px 0 30px;
+      .menu {
+        .menuItem {
+          font-size: clamp(12px, 0.8vw, 1.4vw);
+          padding: 0 0 10px;
+          & > a {
+            padding: 0 0.8vw;
+            box-sizing: border-box;
+          }
+          &.langItem {
+            padding: 0 0.8vw 10px;
+            & > img {
+              width: 20px;
+            }
+          }
+          .triangleIcon:after {
+            border: 5px solid;
+            border-color: #666666 transparent transparent transparent;
+          }
+          .menuChild {
+            padding: 0 10px;
+            &-item {
+              font-size: 1rem;
+            }
+            &::before {
+              border: 5px solid;
+              border-color: transparent transparent #fff transparent;
+              position: absolute;
+              top: -10px;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+          }
+          .serviceCard {
+            padding: 12px 6px;
+          }
+        }
+      }
     }
   }
 }
@@ -1720,9 +1776,9 @@ const hideDiv = () => {
     }
     &-text-implant {
       bottom: 80px;
-      &.health-care-voucher {
-        bottom: 100px;
-      }
+      // &.health-care-voucher {
+      //   bottom: 80px;
+      // }
       div {
         width: calc(80%);
         margin: 0 auto;
@@ -1764,31 +1820,90 @@ const hideDiv = () => {
     }
   }
 }
+// @media (min-width: 768px) and (max-width: 1450px) {
+//   .header-content {
+//     .explain_box_mobile {
+//       padding: 10px 15px 0 20px;
+//       & > span {
+//         color: #666666;
+//       }
+//     }
+//     &-in {
+//       .pc_tel {
+//         max-width: 90%;
+//       }
+//       width: calc(90% + 60px);
+//       padding: 10px 15px 0 30px;
+//       .logo {
+//         width: 20%;
+//         margin-bottom: 15px;
+//       }
+//       .menu {
+//         padding: 10px 15px 0 20px;
+//         .menuItem {
+//           font-size: 0.8vw;
+//           padding: 0 0 8px;
+//           & > a {
+//             padding: 0 0.8vw;
+//             box-sizing: border-box;
+//           }
+//           &.langItem {
+//             padding: 0 1vw 10px;
+//             & > img {
+//               width: 20px;
+//             }
+//           }
+//           .triangleIcon:after {
+//             border: 5px solid;
+//             border-color: #666666 transparent transparent transparent;
+//           }
+//           .menuChild {
+//             padding: 0 10px;
+//             &-item {
+//               font-size: 1rem;
+//             }
+//             &::before {
+//               border: 5px solid;
+//               border-color: transparent transparent #fff transparent;
+//               position: absolute;
+//               top: -10px;
+//               left: 50%;
+//               transform: translateX(-50%);
+//             }
+//           }
+//           .serviceCard {
+//             padding: 12px 6px;
+//           }
+//         }
+//       }
+//     }
+//     &-text-implant {
+//       div {
+//         font-size: 100%;
+//       }
+//     }
+//   }
+//   .pc_menu_tel {
+//     & > a {
+//       font-size: 12px;
+//     }
+//   }
+// }
 @media (min-width: 768px) and (max-width: 1450px) {
   .header-content {
-    .explain_box_mobile {
-      padding: 10px 15px 0 20px;
-      & > span {
-        color: #666666;
-      }
-    }
     &-in {
-      .pc_tel {
-        max-width: 90%;
-      }
-      width: calc(90% + 60px);
-      padding: 10px 15px 0 30px;
+      width: calc(80% + 120px);
+      padding: 10px 0 0 0;
       .logo {
         width: 20%;
         margin-bottom: 15px;
       }
       .menu {
-        padding: 10px 15px 0 20px;
         .menuItem {
-          font-size: 0.8vw;
-          padding: 0 0 8px;
+          font-size: clamp(16px, 1.2vw, 1.8vw);
+          padding: 0 0 10px;
           & > a {
-            padding: 0 0.8vw;
+            padding: 0 1vw;
             box-sizing: border-box;
           }
           &.langItem {
@@ -1826,14 +1941,104 @@ const hideDiv = () => {
         font-size: 100%;
       }
     }
+    .headerBox02 {
+      .pc_tel {
+        max-width: 90%;
+        width: 90%;
+      }
+      .menu {
+        .menuItem {
+          font-size: clamp(14px, 1vw, 1.4vw);
+          padding: 0 0 10px;
+          & > a {
+            padding: 0 1vw;
+            box-sizing: border-box;
+          }
+          &.langItem {
+            padding: 0 1vw 10px;
+            & > img {
+              width: 20px;
+            }
+          }
+          .triangleIcon:after {
+            border: 5px solid;
+            border-color: #666666 transparent transparent transparent;
+          }
+          .menuChild {
+            padding: 0 10px;
+            &-item {
+              font-size: 1rem;
+            }
+            &::before {
+              border: 5px solid;
+              border-color: transparent transparent #fff transparent;
+              position: absolute;
+              top: -10px;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+          }
+          .serviceCard {
+            padding: 12px 6px;
+          }
+        }
+      }
+    }
   }
-  .pc_menu_tel {
-    & > a {
-      font-size: 12px;
+  .header-content {
+    .headerBox02 {
+      .health_max_width {
+        max-width: 100vw;
+        width: 100vw;
+        box-sizing: border-box;
+        padding: 10px 20px 0;
+        .menu {
+          .menuItem {
+            font-size: clamp(12px, 0.8vw, 1.4vw);
+            padding: 0 0 10px;
+            & > a {
+              padding: 0 0.8vw;
+              box-sizing: border-box;
+            }
+            &.langItem {
+              padding: 0 0.8vw 10px;
+              & > img {
+                width: 20px;
+              }
+            }
+            .triangleIcon:after {
+              border: 5px solid;
+              border-color: #666666 transparent transparent transparent;
+            }
+            .menuChild {
+              padding: 0 10px;
+              &-item {
+                font-size: 1rem;
+              }
+              &::before {
+                border: 5px solid;
+                border-color: transparent transparent #fff transparent;
+                position: absolute;
+                top: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+              }
+            }
+            .serviceCard {
+              padding: 12px 6px;
+            }
+          }
+        }
+      }
+    }
+    .headerBox01 {
+      .health_max_width {
+        width: calc(90% + 40px) !important;
+        padding: 10px 0 0 0;
+      }
     }
   }
 }
-
 @media (min-width: 1450px) and (max-width: 1800px) {
   .header-content {
     .explain_box_mobile {
@@ -1844,15 +2049,15 @@ const hideDiv = () => {
       }
     }
     &-in {
-      width: calc(90% + 60px);
-      padding: 10px 15px 0 20px;
+      width: calc(90% + 40px);
+      padding: 10px 0 0 0;
       .logo {
         width: 20%;
         margin-bottom: 10px;
       }
       .menu {
         .menuItem {
-          font-size: 0.8vw;
+          font-size: clamp(18px, 0.8vw, 1.2vw);
           padding: 0 0 10px;
           & > a {
             padding: 0 0.8vw;
@@ -1916,6 +2121,59 @@ const hideDiv = () => {
       bottom: 5vw;
       div {
         font-size: 100%;
+      }
+    }
+  }
+  .header-content {
+    .headerBox02 {
+      .health_max_width {
+        max-width: 100vw;
+        width: 100vw;
+        box-sizing: border-box;
+        padding: 10px 20px 0;
+        .menu {
+          .menuItem {
+            font-size: clamp(14px, 1vw, 1.4vw);
+            padding: 0 0 10px;
+            & > a {
+              padding: 0 1vw;
+              box-sizing: border-box;
+            }
+            &.langItem {
+              padding: 0 0.8vw 10px;
+              & > img {
+                width: 20px;
+              }
+            }
+            .triangleIcon:after {
+              border: 5px solid;
+              border-color: #666666 transparent transparent transparent;
+            }
+            .menuChild {
+              padding: 0 10px;
+              &-item {
+                font-size: 1rem;
+              }
+              &::before {
+                border: 5px solid;
+                border-color: transparent transparent #fff transparent;
+                position: absolute;
+                top: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+              }
+            }
+            .serviceCard {
+              padding: 12px 6px;
+            }
+          }
+        }
+      }
+    }
+    .headerBox01 {
+      .health_max_width {
+        max-width: 90%;
+        width: 90%;
       }
     }
   }
