@@ -489,7 +489,7 @@ const handleopenwechat = () => {
             </div>
           </div>
           <div class="icon">
-            <div class="icon-lists">
+            <!-- <div class="icon-lists">
               <nuxt-link
                 class="icon-lists-in"
                 to="https://www.facebook.com/ckjdental.hk/"
@@ -511,7 +511,13 @@ const handleopenwechat = () => {
               >
                 <img src="@/assets/images/icon_32.svg" alt="youtobe" />
               </nuxt-link>
-            </div>
+            </div> -->
+            <nuxt-link
+              to="/health-care-voucher"
+              class="health_care_voucher mb_gov_voucher"
+            >
+              <img src="@/assets/images/1321315134.svg" alt="" />
+            </nuxt-link>
             <div class="icon-menuopen" @click="menuBoxBool = !menuBoxBool">
               <img v-if="!menuBoxBool" src="@/assets/images/icon_61.png" />
               <img v-else src="@/assets/images/icon_7.svg" />
@@ -1742,6 +1748,36 @@ const handleopenwechat = () => {
       &-in:not(:last-child) {
         margin-right: 25px;
       }
+    }
+  }
+  .health_care_voucher {
+    display: flex;
+    flex-direction: column;
+    margin-right: 3vw;
+    & > span:nth-child(1) {
+      box-sizing: border-box;
+      padding: 0.53vw 1.6vw;
+      display: block;
+      border-radius: 2px;
+      background: var(---Green, #00a752);
+      color: var(--White, #fff);
+      text-align: right;
+      font-family: FakePearl;
+      font-size: 3.73vw;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%; /* 18.2px */
+      letter-spacing: 3.78px;
+    }
+    & > span:nth-child(2) {
+      color: var(--Grey-Deep, #4d4d4d);
+      text-align: right;
+      font-family: FakePearl;
+      font-size: 3.73vw;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%; /* 18.2px */
+      letter-spacing: 1.4px;
     }
   }
 }

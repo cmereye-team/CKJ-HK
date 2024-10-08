@@ -635,9 +635,39 @@ const hideDiv = () => {
             </div>
           </div>
           <div class="icon">
-            <nuxt-link to="/health-care-voucher" class="health_care_voucher mb_gov_voucher">
-              <img src="@/assets/images/1321315134.svg" alt="">
-            </nuxt-link>
+            <div class="icon-lists" v-if="route.name !== 'health-care-voucher'">
+              <nuxt-link
+                class="icon-lists-in"
+                to="https://www.facebook.com/ckjdental.hk/"
+              >
+                <img src="@/assets/images/icon_33.svg" alt="facebook" />
+              </nuxt-link>
+              <nuxt-link
+                class="icon-lists-in"
+                to="https://www.instagram.com/ckj_hk/"
+              >
+                <img src="@/assets/images/icon_31.svg" alt="instagram" />
+              </nuxt-link>
+              <div class="icon-lists-in" to="" @click="handlecopywechatcode">
+                <img src="@/assets/images/icon_34.svg" alt="weChat" />
+              </div>
+              <nuxt-link
+                class="icon-lists-in"
+                to="https://www.youtube.com/channel/UC4AQD5eeOiHIGd3QYFGK4aA"
+              >
+                <img src="@/assets/images/icon_32.svg" alt="youtobe" />
+              </nuxt-link>
+            </div>
+            <div
+              v-if="route.name == 'health-care-voucher'"
+              :class="
+                route.name == 'health-care-voucher' ? 'mb_gov_voucher' : ''
+              "
+              class="health_care_voucher mb_gov_voucher"
+            >
+              <span>香港長者醫療券</span>
+              <span>政府指定預約網站</span>
+            </div>
             <div class="icon-menuopen" @click="menuBoxBool = !menuBoxBool">
               <img v-if="!menuBoxBool" src="@/assets/images/icon_61.png" />
               <img v-else src="@/assets/images/icon_7.svg" />
@@ -2070,7 +2100,7 @@ const hideDiv = () => {
         background-image: url(@/assets/images/back_wave01.png);
         background-repeat: repeat-x;
         background-position: center 20px;
-        height: 49.33vw;
+        height: 39.33vw;
         width: 100%;
         position: absolute;
         z-index: 1;
@@ -2388,12 +2418,12 @@ const hideDiv = () => {
     }
   }
   .icon {
-    & > a:nth-child(1) {
+    & > div:nth-child(1) {
       display: flex;
       flex-direction: column;
       align-items: center;
       width: max-content;
-      margin-right: 3vw;
+      margin-right: 3px;
       & > span:nth-child(1) {
         box-sizing: border-box;
         padding: 0.53vw 1.6vw;
