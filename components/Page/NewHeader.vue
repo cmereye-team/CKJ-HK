@@ -852,7 +852,7 @@ const handleopenwechat = () => {
         font-weight: 600;
         position: relative;
         & > a {
-          padding: 0 20px;
+          padding: 0 10px;
           display: inline-block;
           text-align: center;
         }
