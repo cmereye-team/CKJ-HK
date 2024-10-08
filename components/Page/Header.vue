@@ -614,12 +614,7 @@ const hideDiv = () => {
                 </div>
               </div>
             </div>
-            <div
-              class="pc_menu_tel"
-              v-if="
-                route.path == ('/health-care-voucher' || '/health-care-voucher/')
-              "
-            >
+            <div class="pc_menu_tel" v-if="route.name == 'health-care-voucher'">
               <a>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -640,17 +635,7 @@ const hideDiv = () => {
             </div>
           </div>
           <div class="icon">
-            <div
-              v-if="
-                route.path ==
-                ('/health-care-voucher' || '/health-care-voucher/')
-              "
-              class="health_care_voucher"
-            >
-              <span>香港長者醫療券</span>
-              <span>政府指定預約網站</span>
-            </div>
-            <div class="icon-lists" v-else>
+            <div class="icon-lists" v-if="route.name !== 'health-care-voucher'">
               <nuxt-link
                 class="icon-lists-in"
                 to="https://www.facebook.com/ckjdental.hk/"
@@ -672,6 +657,16 @@ const hideDiv = () => {
               >
                 <img src="@/assets/images/icon_32.svg" alt="youtobe" />
               </nuxt-link>
+            </div>
+            <div
+              v-if="route.name == 'health-care-voucher'"
+              :class="
+                route.name == 'health-care-voucher' ? 'mb_gov_voucher' : ''
+              "
+              class="health_care_voucher mb_gov_voucher"
+            >
+              <span>香港長者醫療券</span>
+              <span>政府指定預約網站</span>
             </div>
             <div class="icon-menuopen" @click="menuBoxBool = !menuBoxBool">
               <img v-if="!menuBoxBool" src="@/assets/images/icon_61.png" />
@@ -1525,11 +1520,11 @@ const hideDiv = () => {
 }
 .health_care_voucher {
   margin-right: 10px;
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   align-items: center;
   & > span:nth-child(1) {
-    white-space: nowrap;
+    white-space: nowrap !important;
     box-sizing: border-box;
     padding: 2px 4px 2px 6px;
     color: var(--White, #fff);
@@ -2105,7 +2100,7 @@ const hideDiv = () => {
         background-image: url(@/assets/images/back_wave01.png);
         background-repeat: repeat-x;
         background-position: center 20px;
-        height: 49.33vw;
+        height: 39.33vw;
         width: 100%;
         position: absolute;
         z-index: 1;
@@ -2392,7 +2387,7 @@ const hideDiv = () => {
       }
     }
   }
-  .health_care_voucher {
+  .mb_gov_voucher {
     display: flex;
     flex-direction: column;
     margin-right: 3px;
@@ -2420,6 +2415,40 @@ const hideDiv = () => {
       font-weight: 400;
       line-height: 130%; /* 18.2px */
       letter-spacing: 1.4px;
+    }
+  }
+  .icon {
+    & > div:nth-child(1) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: max-content;
+      margin-right: 3px;
+      & > span:nth-child(1) {
+        box-sizing: border-box;
+        padding: 0.53vw 1.6vw;
+        display: block;
+        border-radius: 2px;
+        background: var(---Green, #00a752);
+        color: var(--White, #fff);
+        text-align: right;
+        font-family: FakePearl;
+        font-size: 3.73vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%; /* 18.2px */
+        letter-spacing: 3.78px;
+      }
+      & > span:nth-child(2) {
+        color: var(--Grey-Deep, #4d4d4d);
+        text-align: right;
+        font-family: FakePearl;
+        font-size: 3.73vw;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 130%; /* 18.2px */
+        letter-spacing: 1.4px;
+      }
     }
   }
 }
