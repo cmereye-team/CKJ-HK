@@ -1417,9 +1417,9 @@ const newsmoduleLists = [
 .new_info_content_items {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 64px 125px;
+  gap: 64px clamp(10px, 3vw, 125px);
   & > div {
-    width: 402px;
+    width: clamp(340px, 20.9vw, 402px);
     position: relative;
     z-index: 5;
     & > div:nth-child(1) {
@@ -1428,7 +1428,7 @@ const newsmoduleLists = [
       background: #fff;
       box-shadow: 6px 6px 0px 0px rgba(252, 22, 130, 0.3);
       & > div:nth-child(1) {
-        padding: 30px 0 15px;
+        padding: clamp(10px, 0.05vw,30px) 0 15px;
         color: #14a033;
         text-align: center;
         font-family: FakePearl;
@@ -1440,7 +1440,7 @@ const newsmoduleLists = [
       }
       & > div:nth-child(2) {
         box-sizing: border-box;
-        padding: 20px 30px;
+        padding: 20px clamp(10px, 0.05vw,30px);
         border-radius: var(--Count, 0px) var(--Count, 0px) 30px 30px;
         background: var(--Pink-Pale, #fee6f1);
       }
