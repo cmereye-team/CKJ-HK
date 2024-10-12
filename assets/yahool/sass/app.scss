@@ -1,0 +1,280 @@
+// $IndexColor: var(--indexColor);
+//使用 var(font_family)
+:root{
+  --indexColor: #FF6096;
+  --indexColor1: #FC1682;
+  --indexColor2: #FEE6F1;
+  --indexColor3: #FEA9D1;
+  --textColor: #4d4d4d;
+  --indexFontFamily: 'FakePearl-Regular','幼圆', Serif;
+  // --contextFamily: 'Noto Serif HK', Serif;
+  --contextFamily: 'Noto Sans HK', Serif;
+  --contextTitleFamily: 'youyuan', Serif;
+}
+
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+HK:wght@300;400;500;600;700;900&display=swap');
+// @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100..900&display=swap');
+
+// @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap");
+
+@import 'variables';
+
+@font-face {
+  font-family: 'FakePearl-Regular';
+  src: url(https://cdn.jsdelivr.net/gh/max32002/FakePearl@1.1/webfont/FakePearl-Regular.woff2) format("woff2")
+  , url(https://cdn.jsdelivr.net/gh/max32002/FakePearl@1.1/webfont/FakePearl-Regular.woff) format("woff");
+  font-display: swap;
+}
+@font-face {
+  font-family: 'youyuan';
+  // src: url(https://static.cmereye.com/static/font/QingNingYouYuan-2.ttf);
+  src: url(https://static.cmereye.com/static/font/ChillRoundGothic_Bold.ttf), url(https://static.cmereye.com/static/font/ChillRoundGothic_Medium.ttf);
+}
+@font-face {
+  font-family: 'NotoSansHans';
+  src: url(https://static.cmereye.com/static/font/NotoSansHans-Medium.woff2);
+}
+body,div,span,h1,h2,h3,h4,h5,h6,p,li{
+  // font-family: 'Noto Serif HK', Serif;
+  // font-family: 'FakePearl-Regular','幼圆', Serif;
+  font-family: var(--indexFontFamily);
+  -webkit-tap-highlight-color: rgba($color: #000000, $alpha: 0);
+}
+.a:focus,input:focus,p:focus,div:focus{
+  -webkit-tap-highlight-color: rgba($color: #000000, $alpha: 0);
+  // -webkit-user-modify: read-write-plaintext-only;
+}
+
+
+// components
+::-webkit-scrollbar {
+  width: 16px;
+}
+::-webkit-scrollbar-track {
+  background: theme('colors.gray.100');
+  border-left: 1px solid theme('colors.gray.200');
+}
+::-webkit-scrollbar-thumb {
+  border: 4px solid theme('colors.gray.100');
+  background-clip: padding-box;
+  border-radius: 9999px;
+  background-color: theme('colors.slate.300');
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: theme('colors.slate.400');
+}
+html.dark {
+  font-size: 16px;
+  ::-webkit-scrollbar-track {
+    background: theme('colors.slate.800');
+    border-left: 1px solid theme('colors.slate.700');
+  }
+  ::-webkit-scrollbar-thumb {
+    border-color: theme('colors.slate.800');
+    background-color: theme('colors.slate.500');
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: theme('colors.slate.400');
+  }
+}
+// html{
+  // font-size: 16px;
+  // -moz-text-size-adjust: 100%;
+  // -webkit-text-size-adjust: 100%;
+  // -ms-text-size-adjust: 100%;
+  // text-size-adjust: 100%;
+// }
+body{
+  width: 100% !important;
+  cursor: url(@/assets/images/icon_14.svg)11 11, auto;
+  &::-webkit-scrollbar{
+    width: 5px;
+    display: none;
+  }
+  &::-webkit-scrollbar-thumb{
+    background: var(--indexColor1);
+    width: 5px;
+  }
+  &::-webkit-scrollbar-track{
+    background: var(--indexColor2);
+    width: 5px;
+  }
+}
+.bgColor{
+  background: var(--indexColor1);
+  cursor: url(@/assets/images/icon_37.svg)11 11, auto;
+}
+.whitebgColor{
+  background: #ffffff;
+}
+.pageIn{
+  padding: 140px 0 0;
+  position: relative;
+  z-index: 1;
+}
+.bigPageCon{
+  width: 100%;
+  max-width: 1920px;
+  margin: auto;
+}
+.pageCon{
+  width: 80%;
+  max-width: 1450px;
+  // width: 75.625%;
+  margin: 0 auto;
+  // min-height: 100vh;
+  // overflow: hidden;
+} 
+.smallPageCon{
+  width: 70%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+.index_title {
+  font-style: normal;
+  position: relative;
+  font-weight: 500;
+  // font-size: 30px;
+  font-size: 24px;
+  line-height: 150%;
+  text-indent: 55px;
+  color: #666666;
+  background: url(@/assets/images/indexTitle_bg_2.png) no-repeat;
+  background-size: auto 100%;
+  // background-position: 0px 5px;
+  padding-bottom: 5px;
+}
+.dentistryServices{
+  &-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    &-in{
+      font-weight: 700;
+      font-size: 35px;
+      line-height: 160%;
+      color: #666666;
+      text-align: center;
+      &.bb{
+        // border-bottom: 5px solid var(--indexColor1);
+        position: relative;
+        padding-bottom: 5px;
+        &::after{
+          content: '';
+          width: 100%;
+          height: 5px;
+          border-radius: 3px;
+          background: var(--indexColor1);
+          position: absolute;
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
+    &-line{
+      width: 100px;
+      height: 5px;
+      background: var(--indexColor1);
+      border-radius: 2px;
+    }
+  }
+}
+.mbBox{
+  display: none;
+}
+
+@media (min-width: 768px) and (max-width: 1900px){
+  .smallPageCon{
+    width: 70%;
+  }
+}
+@media (min-width: 1450px) and (max-width: 1600px) {
+  // .pageCon{
+  //   width: 90%;
+  // }
+}
+@media (min-width: 768px) and (max-width: 1600px) {
+  .pageIn{
+    padding: 120px 0 0;
+  }
+  .pageCon{
+    margin: 0 auto;
+  } 
+  .index_title {
+    font-size: 1.6vw;
+    text-indent: 3.5vw;
+  }
+  .dentistryServices{
+    &-title{
+      &-in{
+        font-size: 2vw;
+        &.bb{
+          padding-bottom: 4px;
+          &::after{
+            height: 4px;
+          }
+        }
+      }
+      &-line{
+        width: 7vw;
+        height: 5px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .pageCon,.smallPageCon{
+    width: 100%;
+  } 
+  .pageIn{
+    padding:30px 0 0;
+  }
+  .pcBox{
+    display: none;
+  }
+  .mbBox{
+    display: block;
+  }
+  .index_title {
+    width: calc(100% - 30px);
+    font-size: 18px;
+    background-size: auto 85%;
+    text-indent: 35px;
+    margin-left: 30px;
+    background-position: 0px 3px;
+  }
+  .dentistryServices{
+    &-title{
+      &-in{
+        font-weight: 600;
+        font-size: 1.625rem;
+        &.bb{
+          // border-bottom: 3px solid var(--indexColor1);
+          span{
+            display: block;
+          }
+          padding-bottom: 3px;
+          &::after{
+            height: 3px;
+          }
+        }
+      }
+      &-line{
+        width: 50px;
+        height: 3px;
+      }
+    }
+  }
+}
+
+
+
+
+
+// animations
+@import 'animations/transitions';
+
+
