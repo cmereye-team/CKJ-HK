@@ -29,8 +29,8 @@ const introduceJY = {
 }
 
 const headerConfig = {
-  img: 'https://static.cmereye.com/imgs/2024/07/cf1ff2f8db19914a.webp',
-  mbImg: 'https://static.cmereye.com/imgs/2024/07/cbeb76ebe61e16af.webp',
+  img: 'https://ckjhk.com/images/0d34fd49d3e9.avif',
+  mbImg: 'https://ckjhk.com/images/03894f5419a4.avif',
   bg: '',
   pageName: 'invisalign-test',
   pcText: [],
@@ -797,6 +797,21 @@ const differData: any = {
 </template>
 
 <style lang="scss" scoped>
+:deep(.header-content) {
+  .explain_box_mobile {
+    background: transparent !important;
+    position: absolute;
+    bottom: 70px;
+    z-index: 38;
+    right: 0;
+    left: 0;
+    top: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 0 auto !important;
+  }
+}
 .reason {
   margin-top: 120px;
   margin-bottom: 120px;
@@ -1898,6 +1913,21 @@ const differData: any = {
     top: 110px !important;
     margin-left: 0 !important;
     margin-right: auto !important;
+  }
+  :deep(.header-content) {
+    .explain_box_mobile {
+      align-items: flex-end;
+      background: transparent !important;
+      display: flex;
+      justify-content: flex-end;
+      margin: 0 auto !important;
+      left: 0;
+      right: auto;
+      bottom: -20px;
+      position: absolute;
+      top: auto;
+      z-index: 35;
+    }
   }
   .tabNav {
     padding: 30px;

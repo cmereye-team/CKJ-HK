@@ -498,6 +498,7 @@ onMounted(() => {
         </div>
       </div> -->
       <div class="new_course_bg">
+        <a id="course" class="hash_link"></a>
         <div class="new_course">
           <!-- <div class="new_course_name">{{ $t(courseData.title) }}11</div> -->
           <div class="dentistryServices-title reason-title">
@@ -552,6 +553,7 @@ onMounted(() => {
         </div>
       </div>
       <div class="new_course_box">
+        <a id="activity" class="hash_link"></a>
         <div class="dentistryServices-title reason-title">
           <div class="dentistryServices-title-in bb reason-title-in">
             最新活動
@@ -560,6 +562,7 @@ onMounted(() => {
         <BrandCourse />
       </div>
       <div class="honor-box">
+        <a id="honor" class="hash_link"></a>
         <!-- 荣誉 -->
         <div class="honor">
           <div class="honor-bg">
@@ -984,6 +987,7 @@ onMounted(() => {
   margin-top: 125px;
   width: 100%;
   position: relative;
+  display: block;
   .new_course_name {
     margin-top: 70px;
     margin-bottom: 45px;
@@ -1005,9 +1009,20 @@ onMounted(() => {
     letter-spacing: 4px;
     margin-bottom: 10px;
   }
+  .hash_link {
+    display: block;
+    position: absolute;
+    top: -250px;
+  }
 }
 .new_course_box {
   margin: 125px auto;
+  position: relative;
+  .hash_link {
+    display: block;
+    position: absolute;
+    top: -250px;
+  }
 }
 .detail {
   display: flex;
@@ -1038,7 +1053,8 @@ onMounted(() => {
 }
 .new_course {
   max-width: 925px;
-  margin: 0 auto;
+  margin: 125px auto 0;
+  display: block;
   & > div:nth-child(2) {
     & > div:not(:last-child) {
       padding-bottom: 16px;
@@ -1144,6 +1160,12 @@ onMounted(() => {
 .honor-box {
   margin-top: 125px;
   margin-bottom: 125px;
+  position: relative;
+  .hash_link {
+    display: block;
+    position: absolute;
+    top: -250px;
+  }
 }
 .honor {
   margin-top: 20px;

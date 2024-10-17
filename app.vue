@@ -87,6 +87,14 @@ onMounted(() => {
 //     popupAlertCreated()
 //   }
 // })
+
+const isYahoo = () => {
+  return checkForYahoo(route.name) ? true : false
+}
+
+const checkForYahoo = (inputString) => {
+  return inputString.includes('yahoo')
+}
 </script>
 
 <template>
@@ -96,7 +104,8 @@ onMounted(() => {
     >
       <div v-if="route.path !== '/health-care-voucher'" id="popup-alert"></div>
       <NuxtLayout>
-        <PageMenuBar />
+        <YahooPageMenuBar v-if="isYahoo()" />
+        <PageMenuBar v-else />
         <NuxtPage />
       </NuxtLayout>
       <noscript

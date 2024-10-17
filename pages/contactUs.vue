@@ -184,9 +184,28 @@ const problemData = {
   <div>
     <PageHeader :headerConfig="headerConfig" />
     <div class="contactUs">
-      <!-- <NewAddress /> -->
-      <NewAddress />
+      <div class="tabNav noTitle smallPageCon">
+        <nuxt-link
+          :to="'/'"
+          title="深圳愛康健口腔醫院"
+          alt="深圳愛康健口腔醫院"
+        >
+          <span>主頁</span>
+        </nuxt-link>
+        <span :title="'聯絡我們'">聯絡我們</span>
+      </div>
+      <div class="contact_map">
+        <img
+          src="https://static.cmereye.com/imgs/2024/10/8e3b33149bcb34e8.png"
+          alt=""
+        />
+      </div>
+      <div class="contactUs_one">
+        <a id="contactUs" class="hash_link"></a>
+        <NewAddress />
+      </div>
       <div class="complain">
+        <a id="appeal" class="hash_link">1</a>
         <div class="dentistryServices-title note-title">
           <div class="dentistryServices-title-in bb note-title-in">
             長者醫療券使用者及<br class="mbShow" />一般客人申訴途徑
@@ -352,7 +371,10 @@ const problemData = {
       <div class="serviceCard">
         <serviceCard :isIndexShow="true" />
       </div>
-      <ServiceProblem :problem-data="problemData" />
+      <div class="contactUs_three">
+        <a id="Q&A" class="hash_link">1</a>
+        <ServiceProblem :problem-data="problemData" />
+      </div>
       <ContactForm-new />
       <div class="environment">
         <div class="environment-title">
@@ -406,11 +428,62 @@ const problemData = {
 </template>
 
 <style lang="scss" scoped>
+.tabNav {
+  font-weight: 400;
+  font-size: 1.25rem;
+  line-height: 160%;
+  color: #cbcbcb;
+  // margin-top: ;
+  padding-top: 44px;
+  a {
+    &:not(:last-child)::after {
+      content: '';
+      width: 20px;
+      height: 2px;
+      margin: 0 10px;
+      background: #cbcbcb;
+      display: inline-block;
+      vertical-align: middle;
+      margin-top: -4px;
+    }
+  }
+  & > span {
+    cursor: pointer;
+    color: var(--indexColor1);
+  }
+}
 .contactUs {
   background: #fff;
   padding-bottom: 143px;
   position: relative;
   z-index: 1;
+}
+.contact_map {
+  background: #fff;
+  box-sizing: border-box;
+  padding: 0 30px;
+  max-width: 1280px;
+  margin: 0 auto;
+  img {
+    margin: 0 auto 0;
+    padding-top: 76px;
+  }
+}
+.contactUs_one {
+  position: relative;
+  .hash_link {
+    display: block;
+    position: absolute;
+    top: -150px;
+  }
+}
+.contactUs_three {
+  position: relative;
+  .hash_link {
+    display: block;
+    position: absolute;
+    top: -220px;
+  }
 }
 .environment {
   margin-top: 154px;
@@ -465,6 +538,7 @@ const problemData = {
   display: none;
 }
 .complain {
+  position: relative;
   max-width: 1280px;
   margin: 150px auto 50px;
   & > div:nth-child(1) {
@@ -498,6 +572,11 @@ const problemData = {
         color: var(--indexColor1);
       }
     }
+  }
+  .hash_link {
+    display: block;
+    position: absolute;
+    top: -240px;
   }
 }
 .img_complain_last {
@@ -710,6 +789,41 @@ const problemData = {
   }
 }
 @media screen and (max-width: 768px) {
+  :deep(.header-content) {
+    .explain_box_mobile {
+      align-items: flex-end;
+      background: transparent !important;
+      display: flex;
+      justify-content: flex-end;
+      margin: 0 auto !important;
+      left: auto;
+      right: 0;
+      bottom: -20px;
+      position: absolute;
+      top: auto;
+      z-index: 35;
+    }
+    .waterBg-implant::after,
+    .waterBg-implant::before {
+      height: 20.33vw;
+    }
+    .coverage {
+      padding-bottom: 0 !important;
+    }
+  }
+  .contact_map {
+    background: #fff;
+    margin: 24px auto;
+    img {
+      box-sizing: border-box;
+      padding: 0;
+    }
+  }
+  .tabNav {
+    padding: 23px 30px 0;
+    font-size: 1rem;
+    margin-top: 0px;
+  }
   .mbShow {
     display: block;
   }

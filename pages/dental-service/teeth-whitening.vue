@@ -25,8 +25,8 @@ useHead({
 })
 
 const headerConfig = {
-  img: 'https://static.cmereye.com/imgs/2024/07/a246879d9cf326e5.webp',
-  mbImg: 'https://static.cmereye.com/imgs/2024/07/e1638e31c9717196.webp',
+  img: 'https://ckjhk.com/images/f0cd2339d256.avif',
+  mbImg: 'https://ckjhk.com/images/2f4ba652b04f.avif',
   bg: '',
   pageName: 'scaling-and-polishing-test',
   pcText: [],
@@ -681,7 +681,7 @@ const handley = (bool = false) => {
       <ServiceProblem :problemData="problemData" />
       <serviceCard />
       <NewAddress />
-     <ContactForm-new />
+      <ContactForm-new />
     </div>
     <PageFooter />
     <PageNavbar />
@@ -691,6 +691,21 @@ const handley = (bool = false) => {
 
 
 <style lang="scss" scoped>
+:deep(.header-content) {
+  .explain_box_mobile {
+    background: transparent !important;
+    position: absolute;
+    bottom: 70px;
+    z-index: 38;
+    right: 0;
+    left: 0;
+    top: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 0 auto !important;
+  }
+}
 .notice {
   width: 100%;
   max-width: 1450px;
@@ -1718,6 +1733,25 @@ const handley = (bool = false) => {
     top: 0 !important;
     margin-left: 0 !important;
     margin-right: auto !important;
+  }
+  :deep(.header-content) {
+    .explain_box_mobile {
+      align-items: flex-end;
+      background: transparent !important;
+      display: flex;
+      justify-content: flex-end;
+      margin: 0 auto !important;
+      left: auto;
+      right: 0;
+      bottom: -20px;
+      position: absolute;
+      top: auto;
+      z-index: 35;
+    }
+    .waterBg-implant::after,
+    .waterBg-implant::before{
+      height: 25.33vw;
+    }
   }
   .notice {
     margin: 90px auto 0;

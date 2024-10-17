@@ -22,8 +22,11 @@ if [ $? -eq 0 ]; then
     echo "pnpm run generate completed successfully. Creating zip archive..."
 
     # Define the directories and files to include in the zip archive
+    # 获取当前 github 分支名称
+    BRANCH_NAME=$(git rev-parse --abbrev-ref HEAD)
+    # SOURCE_DIR 修改为  dist_BRANCH_NAME
     SOURCE_DIR="dist"  # Change this to the directory containing generated files
-    ZIP_FILE="dist.zip"
+    ZIP_FILE="dist_$BRANCH_NAME.zip"
 
     # Create the zip archive
     zip -r "$ZIP_FILE" "$SOURCE_DIR"

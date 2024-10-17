@@ -22,8 +22,8 @@ useHead({
 })
 
 const headerConfig = {
-  mbImg: 'https://static.cmereye.com/imgs/2024/07/f5627d6c020252a6.webp',
-  img: 'https://static.cmereye.com/imgs/2024/07/f6bc2ce0f5e69a84.webp',
+  img: 'https://ckjhk.com/images/ad624c2bda06.avif',
+  mbImg: 'https://ckjhk.com/images/8c62f7575d82.avif',
   bg: '',
   pageName: 'invisalign-test',
   pcText: ['自由．舒適．美觀', '保持自然笑容 牙齒更加美麗動人'],
@@ -265,20 +265,20 @@ const differData = {
       </div>
       <ServiceIntroduce :introduceData="orthodonticsIntroduceData" />
       <div class="dental_implant_technology-video">
-          <div class="youtobe-video">
-            <div class="youtobe-video-in">
-              <iframe
-                width="560"
-                src="https://www.youtube.com/embed/j2zJsOOq_TM"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-            </div>
+        <div class="youtobe-video">
+          <div class="youtobe-video-in">
+            <iframe
+              width="560"
+              src="https://www.youtube.com/embed/j2zJsOOq_TM"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
           </div>
         </div>
-		
+      </div>
+
       <div class="bp">
         <div class="dentistryServices-title">
           <div class="dentistryServices-title-in bb">
@@ -440,7 +440,7 @@ const differData = {
       <ServiceProblem :problemData="problemData" />
       <serviceCard />
       <NewAddress />
-     <ContactForm-new />
+      <ContactForm-new />
     </div>
     <PageFooter />
     <PageNavbar />
@@ -448,25 +448,40 @@ const differData = {
 </template>
 
 <style scoped lang="scss">
-  .youtobe-video {
-    margin: 80px auto 0;
-    max-width: 960px;
-    width: 80%
-}
-
- .youtobe-video-in {
-    height: 0;
-    padding-bottom: 56.4285714286%;
-    position: relative;
-    width: 100%
-}
-
- .youtobe-video-in>iframe{
-    height: 100%;
-    left: 0;
+:deep(.header-content) {
+  .explain_box_mobile {
+    background: transparent !important;
     position: absolute;
-    top: 0;
-    width: 100%
+    bottom: 70px;
+    z-index: 38;
+    right: 0;
+    left: 0;
+    top: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 0 auto !important;
+  }
+}
+.youtobe-video {
+  margin: 80px auto 0;
+  max-width: 960px;
+  width: 80%;
+}
+
+.youtobe-video-in {
+  height: 0;
+  padding-bottom: 56.4285714286%;
+  position: relative;
+  width: 100%;
+}
+
+.youtobe-video-in > iframe {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 @keyframes btnAnim {
   0% {
@@ -1171,6 +1186,21 @@ const differData = {
     top: 110px !important;
     margin-left: 0 !important;
     margin-right: auto !important;
+  }
+  :deep(.header-content) {
+    .explain_box_mobile {
+      align-items: flex-end;
+      background: transparent !important;
+      display: flex;
+      justify-content: flex-end;
+      margin: 0 auto !important;
+      left: 0;
+      right: auto;
+      bottom: -20px;
+      position: absolute;
+      top: auto;
+      z-index: 35;
+    }
   }
   .advantage {
     margin-top: 40px;

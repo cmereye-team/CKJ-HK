@@ -12,6 +12,8 @@ components:
         name: 'About CKJ'
         course: 'Brand introduction'
         honor: 'Brand honor'
+        history: 發展歷程
+        activity: 最新活動 
       menu_dental_service: 
         name: 'Dental service'
       health-care-voucher: 
@@ -29,6 +31,9 @@ components:
         name: 'Case sharing'
       menu_contactUs: 
         name: 'Contact us'
+        come_route: 來院路線
+        appeal: 申訴途徑
+        Q&A: 常見問題
   footer: 
     text1: '28 years of specialty focus'
     text2: 'Hong Kong people choose a one-stop chain dental brand'

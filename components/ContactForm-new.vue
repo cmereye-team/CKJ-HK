@@ -96,7 +96,7 @@ const rules = reactive<FormRules>({
   // gender: [{ required: true, message: '請選擇稱呼', trigger: 'change' }],
   phone: [
     { required: true, message: '請填寫您的電話', trigger: 'change' },
-    { min: 8, max: 11, message: '請填寫正確的電話', trigger: 'change' },
+    { type: 'number', message: '請填寫正確的電話', trigger: 'change' },
   ],
   // email: [{ type: 'email', required: true, validator: valiemail, trigger: 'blur' }],
   service: [{ required: true, message: '請選擇服務', trigger: 'change' }],
@@ -377,6 +377,7 @@ let privacyPolicy = ref(true)
               :shortcuts="shortcuts"
               format="YYYY/MM/DD"
               value-format="YYYY-MM-DD"
+              :editable="false"
             />
           </el-form-item>
           <!-- </el-col> -->
@@ -437,7 +438,11 @@ let privacyPolicy = ref(true)
               <el-option label="+853" value="853" />
               <el-option label="+86" value="86" />
             </el-select>
-            <el-input v-model="form.phone" maxlength="12" />
+            <el-input
+              v-model.number="form.phone"
+              type="number"
+              maxlength="12"
+            />
           </el-form-item>
           <el-form-item>
             <div class="care_voucher">

@@ -22,8 +22,8 @@ useHead({
 })
 
 const headerConfig = {
-  img: 'https://static.cmereye.com/imgs/2024/07/463c458aa087ce98.webp',
-  mbImg: 'https://static.cmereye.com/imgs/2024/07/5fc4ccc4b442bc4f.webp',
+  img: 'https://ckjhk.com/images/e024c11b5ba1.avif',
+  mbImg: 'https://ckjhk.com/images/4b08dbb3e679.avif',
   bg: '',
   pageName: 'orthodontics-test',
   pcText: ['追求美學極致，展現最燦爛笑容', '愛康健為愛美的您打造完美面部輪廓'],
@@ -634,6 +634,21 @@ const careData = {
 
 
 <style lang="scss" scoped>
+:deep(.header-content) {
+  .explain_box_mobile {
+    background: transparent !important;
+    position: absolute;
+    bottom: 70px;
+    z-index: 38;
+    right: 0;
+    left: 0;
+    top: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 0 auto !important;
+  }
+}
 .youtobe-video {
   margin: 80px auto 0;
   max-width: 960px;
@@ -1307,6 +1322,21 @@ const careData = {
     margin-left: 0 !important;
     margin-right: auto !important;
   }
+  :deep(.header-content) {
+    .explain_box_mobile {
+      align-items: flex-end;
+      background: transparent !important;
+      display: flex;
+      justify-content: flex-end;
+      margin: 0 auto !important;
+      left: 0;
+      right: auto;
+      bottom: -20px;
+      position: absolute;
+      top: auto;
+      z-index: 35;
+    }
+  }
   .dentistryServices-title-in.bb span {
     font-size: 20px;
   }
@@ -1398,7 +1428,7 @@ const careData = {
     }
   }
   .orthodonticsPage {
-    padding: 24vw 0;
+    padding: 14vw 0 24vw 0;
   }
   .bp {
     margin-top: 52px;

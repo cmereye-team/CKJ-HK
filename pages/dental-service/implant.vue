@@ -24,8 +24,8 @@ useHead({
 })
 
 const headerConfig = {
-  img: 'https://static.cmereye.com/imgs/2024/07/5c45af4101fdf9a2.webp',
-  mbImg: 'https://static.cmereye.com/imgs/2024/07/ee6a1e4ae4ea7fa5.png',
+  img: 'https://ckjhk.com/images/e7bcb6e21e1d.avif',
+  mbImg: 'https://ckjhk.com/images/dc9f477ad4dc.avif',
   bg: '',
   pageName: 'implant',
   pcText: ['享受失而復得的喜悅', '重拾完整人生之旅'],
@@ -1502,6 +1502,21 @@ const { height } = useWindowSize()
 </template>
 
 <style lang="scss" scoped>
+:deep(.header-content) {
+  .explain_box_mobile {
+    background: transparent !important;
+    position: absolute;
+    bottom: 70px;
+    z-index: 38;
+    right: 0;
+    left: 0;
+    top: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 0 auto !important;
+  }
+}
 .dentistryServices {
   background: #fff;
   padding: 143px 0;
@@ -2432,6 +2447,25 @@ const { height } = useWindowSize()
   :deep(.explain_box_mobile) {
     top: 0px !important;
     margin-left: 0 !important;
+  }
+  :deep(.header-content) {
+    .explain_box_mobile {
+      align-items: flex-end;
+      background: transparent !important;
+      display: flex;
+      justify-content: flex-end;
+      margin: 0 auto !important;
+      left: auto;
+      right: 0;
+      bottom: -20px;
+      position: absolute;
+      top: auto;
+      z-index: 35;
+    }
+    .waterBg-implant::after,
+    .waterBg-implant::before{
+      height: 25.33vw;
+    }
   }
   @keyframes identifier {
     0% {

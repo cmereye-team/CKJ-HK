@@ -39,8 +39,8 @@ const orthodonticsIntroduceData = {
 }
 
 const headerConfig = {
-  mbImg: 'https://static.cmereye.com/imgs/2024/07/128f425b955b98de.webp',
-  img: 'https://static.cmereye.com/imgs/2024/07/87f5df166c39f6a4.webp',
+  img: 'https://ckjhk.com/images/0f2fb503658a.avif',
+  mbImg: 'https://ckjhk.com/images/aef7959f481f.avif',
   bg: '',
   pageName: 'scaling-and-polishing-test',
   pcText: [],
@@ -462,7 +462,10 @@ onMounted(() => {
       <div class="index_title pageCon">
         {{ $t('pages.dental-service.title') }}
       </div>
-      <ServiceIntroduce v-if="windowWidth >768" :introduceData="orthodonticsIntroduceData" />
+      <ServiceIntroduce
+        v-if="windowWidth > 768"
+        :introduceData="orthodonticsIntroduceData"
+      />
       <div class="mobile_orthodontics" v-else>
         <ServiceIntroduce :introduceData="orthodonticsIntroduceData" />
       </div>
@@ -792,6 +795,21 @@ onMounted(() => {
 
 
 <style lang="scss" scoped>
+:deep(.header-content) {
+  .explain_box_mobile {
+    background: transparent !important;
+    position: absolute;
+    bottom: 70px;
+    z-index: 38;
+    right: 0;
+    left: 0;
+    top: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 0 auto !important;
+  }
+}
 .mobile_orthodontics {
   :deep(.introduce) {
     .introduce-in-l {
@@ -1493,6 +1511,25 @@ onMounted(() => {
     top: 0 !important;
     margin-left: 0 !important;
     margin-right: auto !important;
+  }
+  :deep(.header-content) {
+    .explain_box_mobile {
+      align-items: flex-end;
+      background: transparent !important;
+      display: flex;
+      justify-content: flex-end;
+      margin: 0 auto !important;
+      left: auto;
+      right: 0;
+      bottom: -20px;
+      position: absolute;
+      top: auto;
+      z-index: 35;
+    }
+    .waterBg-implant::after,
+    .waterBg-implant::before{
+      height: 25.33vw;
+    }
   }
   .mobile_orthodontics {
     :deep(.introduce) {

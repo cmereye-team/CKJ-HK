@@ -24,8 +24,8 @@ useHead({
 })
 
 const headerConfig = {
-  mbImg: 'https://static.cmereye.com/imgs/2024/07/de7777ea68eb2b87.webp',
-  img: 'https://static.cmereye.com/imgs/2024/07/dd5b8eb7d71b83bf.webp',
+  img: 'https://ckjhk.com/images/00be1de5411e.avif',
+  mbImg: 'https://ckjhk.com/images/d66eb4e655c5.avif',
   bg: '',
   pageName: 'scaling-and-polishing-test',
   pcText: [
@@ -609,33 +609,25 @@ onMounted(() => {
                 <p>
                   <span>潔淨度</span>
                   <span
-                    ><img
-                      src="../../assets/images/3star.svg"
-                      alt="潔淨度"
+                    ><img src="../../assets/images/3star.svg" alt="潔淨度"
                   /></span>
                 </p>
                 <p>
                   <span>美白度</span>
                   <span
-                    ><img
-                      src="../../assets/images/2star.svg"
-                      alt="美白度"
+                    ><img src="../../assets/images/2star.svg" alt="美白度"
                   /></span>
                 </p>
                 <p>
                   <span>舒適度</span>
                   <span
-                    ><img
-                      src="../../assets/images/3star.svg"
-                      alt="舒適度"
+                    ><img src="../../assets/images/3star.svg" alt="舒適度"
                   /></span>
                 </p>
                 <p>
                   <span>性價比</span>
                   <span
-                    ><img
-                      src="../../assets/images/5star.svg"
-                      alt="性價比"
+                    ><img src="../../assets/images/5star.svg" alt="性價比"
                   /></span>
                 </p>
                 <p>超聲波清除牙結石</p>
@@ -661,33 +653,25 @@ onMounted(() => {
                 <p>
                   <span>潔淨度</span>
                   <span
-                    ><img
-                      src="../../assets/images/4star.svg"
-                      alt="潔淨度"
+                    ><img src="../../assets/images/4star.svg" alt="潔淨度"
                   /></span>
                 </p>
                 <p>
                   <span>美白度</span>
                   <span
-                    ><img
-                      src="../../assets/images/4star.svg"
-                      alt="美白度"
+                    ><img src="../../assets/images/4star.svg" alt="美白度"
                   /></span>
                 </p>
                 <p>
                   <span>舒適度</span>
                   <span
-                    ><img
-                      src="../../assets/images/4star.svg"
-                      alt="舒適度"
+                    ><img src="../../assets/images/4star.svg" alt="舒適度"
                   /></span>
                 </p>
                 <p>
                   <span>性價比</span>
                   <span
-                    ><img
-                      src="../../assets/images/5star.svg"
-                      alt="性價比"
+                    ><img src="../../assets/images/5star.svg" alt="性價比"
                   /></span>
                 </p>
                 <p>噴砂能深入清潔細小牙縫</p>
@@ -714,33 +698,25 @@ onMounted(() => {
                 <p>
                   <span>潔淨度</span>
                   <span
-                    ><img
-                      src="../../assets/images/5star.svg"
-                      alt="潔淨度"
+                    ><img src="../../assets/images/5star.svg" alt="潔淨度"
                   /></span>
                 </p>
                 <p>
                   <span>美白度</span>
                   <span
-                    ><img
-                      src="../../assets/images/5star.svg"
-                      alt="美白度"
+                    ><img src="../../assets/images/5star.svg" alt="美白度"
                   /></span>
                 </p>
                 <p>
                   <span>舒適度</span>
                   <span
-                    ><img
-                      src="../../assets/images/5star.svg"
-                      alt="舒適度"
+                    ><img src="../../assets/images/5star.svg" alt="舒適度"
                   /></span>
                 </p>
                 <p>
                   <span>性價比</span>
                   <span
-                    ><img
-                      src="../../assets/images/4star.svg"
-                      alt="性價比"
+                    ><img src="../../assets/images/4star.svg" alt="性價比"
                   /></span>
                 </p>
                 <p>能減緩牙石積聚速度</p>
@@ -990,6 +966,21 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
+:deep(.header-content) {
+  .explain_box_mobile {
+    background: transparent !important;
+    position: absolute;
+    bottom: 70px;
+    z-index: 38;
+    right: 0;
+    left: 0;
+    top: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 0 auto !important;
+  }
+}
 .tabNav {
   font-weight: 400;
   font-size: 1.25rem;
@@ -1811,12 +1802,31 @@ onMounted(() => {
 }
 
 @media screen and (max-width: 768px) {
-  :deep(.header-content ) {
-    .explain_box_mobile{
+  :deep(.header-content) {
+    .explain_box_mobile {
       margin-right: auto;
-      margin-left: 0; 
+      margin-left: 0;
       top: 0px;
       z-index: 35px;
+    }
+  }
+  :deep(.header-content) {
+    .explain_box_mobile {
+      align-items: flex-end;
+      background: transparent !important;
+      display: flex;
+      justify-content: flex-end;
+      margin: 0 auto !important;
+      left: auto;
+      right: 0;
+      bottom: -20px;
+      position: absolute;
+      top: auto;
+      z-index: 35;
+    }
+    .waterBg-implant::after,
+    .waterBg-implant::before{
+      height: 25.33vw;
     }
   }
   .reason-lists {
@@ -2197,8 +2207,7 @@ onMounted(() => {
         & > div:nth-child(1) {
           & > div:nth-child(1)::after {
             content: '';
-            background: url('../../assets/images/blueTag.svg')
-              no-repeat;
+            background: url('../../assets/images/blueTag.svg') no-repeat;
             background-size: 100%;
           }
         }
@@ -2208,8 +2217,7 @@ onMounted(() => {
       & > div:nth-child(1) {
         & > div:nth-child(1) {
           & > div:nth-child(1)::after {
-            background: url('../../assets/images/orangeTag.svg')
-              no-repeat;
+            background: url('../../assets/images/orangeTag.svg') no-repeat;
             background-size: 100%;
           }
         }

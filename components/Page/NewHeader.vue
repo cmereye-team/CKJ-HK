@@ -30,18 +30,21 @@ const menuLists: any = [
   },
   {
     name: 'components.header.menuLists.menu_brand.name',
-    link: `/brand/course`,
-    child: [],
-    // child: [
-    //   {
-    //     name: 'components.header.menuLists.menu_brand.course',
-    //     link: '/brand/course',
-    //   },
-    //   {
-    //     name: 'components.header.menuLists.menu_brand.honor',
-    //     link: '/brand/honor',
-    //   },
-    // ],
+    link: ``,
+    child: [
+      {
+        name: 'components.header.menuLists.menu_brand.history',
+        link: '/brand/course#course',
+      },
+      {
+        name: 'components.header.menuLists.menu_brand.activity',
+        link: '/brand/course#activity',
+      },
+      {
+        name: 'components.header.menuLists.menu_brand.honor',
+        link: '/brand/course#honor',
+      },
+    ],
   },
   {
     name: 'components.header.menuLists.menu_dental_service.name',
@@ -104,8 +107,21 @@ const menuLists: any = [
   },
   {
     name: 'components.header.menuLists.menu_contactUs.name',
-    link: '/contactUs',
-    child: [],
+    link: '',
+    child: [
+      {
+        name: 'components.header.menuLists.menu_contactUs.come_route',
+        link: '/contactUs#contactUs'
+      },
+      {
+        name: 'components.header.menuLists.menu_contactUs.appeal',
+        link: '/contactUs#appeal'
+      },
+      {
+        name: 'components.header.menuLists.menu_contactUs.Q&A',
+        link: '/contactUs#Q&A'
+      },
+    ],
   },
 ]
 
@@ -994,7 +1010,7 @@ const handleopenwechat = () => {
             text-align: center;
             padding: 0;
             font-weight: 500;
-            font-size: 18px;
+            font-size: 20px;
             color: #666666;
             transition: all 0.3s;
             &:not(:last-child) {

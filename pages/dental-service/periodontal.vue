@@ -24,8 +24,8 @@ useHead({
 })
 
 const headerConfig = {
-  img: 'https://static.cmereye.com/imgs/2024/07/3f7664e32f68531c.webp',
-  mbImg: 'https://static.cmereye.com/imgs/2024/07/f7fb0336dfc73077.webp',
+  img: 'https://ckjhk.com/images/65cb25252c59.avif',
+  mbImg: 'https://ckjhk.com/images/054c687da9a6.avif',
   bg: '',
   pageName: 'periodontal-test',
   pcText: ['健康牙齒，從牙周病治療開始', '保持清新口氣、牙肉年輕'],
@@ -2221,6 +2221,21 @@ const imgSrcHandel = (i: any) => {
 
 
 <style lang="scss" scoped>
+:deep(.header-content) {
+  .explain_box_mobile {
+    background: transparent !important;
+    position: absolute;
+    bottom: 70px;
+    z-index: 38;
+    right: 0;
+    left: 0;
+    top: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 0 auto !important;
+  }
+}
 .mobile_faq {
   margin-top: 125px;
   background: linear-gradient(
@@ -4390,6 +4405,21 @@ const imgSrcHandel = (i: any) => {
       margin-left: 0;
       top: 110px;
       z-index: 35px;
+    }
+  }
+  :deep(.header-content) {
+    .explain_box_mobile {
+      align-items: flex-end;
+      background: transparent !important;
+      display: flex;
+      justify-content: flex-end;
+      margin: 0 auto !important;
+      left: 0;
+      right: auto;
+      bottom: -20px;
+      position: absolute;
+      top: auto;
+      z-index: 35;
     }
   }
   .table_new_mobile_br {

@@ -22,8 +22,8 @@ useHead({
 })
 
 const headerConfig = {
-  img: 'https://static.cmereye.com/imgs/2024/07/9058c9d3e5359c12.webp',
-  mbImg: 'https://static.cmereye.com/imgs/2024/07/0e06beb2f029da53.webp',
+  img: 'https://ckjhk.com/images/61810bbd8210.avif',
+  mbImg: 'https://ckjhk.com/images/381d508a5442.avif',
   bg: '',
   pageName: 'scaling-and-polishing-test',
   pcText: [],
@@ -751,6 +751,21 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
+:deep(.header-content) {
+  .explain_box_mobile {
+    background: transparent !important;
+    position: absolute;
+    bottom: 70px;
+    z-index: 38;
+    right: 0;
+    left: 0;
+    top: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 0 auto !important;
+  }
+}
 .point_solution_requires_tooth_extraction {
   width: 100%;
   max-width: 1024px;
@@ -1311,6 +1326,25 @@ onMounted(() => {
     top: 0 !important;
     margin-left: 0 !important;
     margin-right: auto !important;
+  }
+  :deep(.header-content) {
+    .explain_box_mobile {
+      align-items: flex-end;
+      background: transparent !important;
+      display: flex;
+      justify-content: flex-end;
+      margin: 0 auto !important;
+      left: auto;
+      right: 0;
+      bottom: -20px;
+      position: absolute;
+      top: auto;
+      z-index: 35;
+    }
+    .waterBg-implant::after,
+    .waterBg-implant::before{
+      height: 25.33vw;
+    }
   }
   .point_solution_requires_tooth_extraction {
     margin: 40px auto 0;

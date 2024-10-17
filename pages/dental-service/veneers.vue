@@ -22,8 +22,8 @@ useHead({
 })
 
 const headerConfig = {
-  mbImg: 'https://static.cmereye.com/imgs/2024/07/762ab4f8546616ec.webp',
-  img: 'https://static.cmereye.com/imgs/2024/07/eb640efb520b6266.webp',
+  img: 'https://ckjhk.com/images/3b3f4da9e25a.avif',
+  mbImg: 'https://ckjhk.com/images/ccbf250ef028.avif',
   bg: '',
   pageName: 'veneers-test',
   pcText: ['自訂零死角潔白微笑線', '展現自信微笑'],
@@ -510,7 +510,7 @@ const caseLists = [
       <ServiceProblem :problemData="problemData" />
       <serviceCard />
       <NewAddress />
-     <ContactForm-new />
+      <ContactForm-new />
     </div>
     <PageFooter />
     <PageNavbar />
@@ -520,6 +520,21 @@ const caseLists = [
 
 
 <style lang="scss" scoped>
+:deep(.header-content) {
+  .explain_box_mobile {
+    background: transparent !important;
+    position: absolute;
+    bottom: 70px;
+    z-index: 38;
+    right: 0;
+    left: 0;
+    top: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 0 auto !important;
+  }
+}
 .bp {
   margin-top: 108px;
   &-text {
@@ -1329,6 +1344,21 @@ const caseLists = [
     top: 110px !important;
     margin-left: 0 !important;
     margin-right: auto !important;
+  }
+  :deep(.header-content) {
+    .explain_box_mobile {
+      align-items: flex-end;
+      background: transparent !important;
+      display: flex;
+      justify-content: flex-end;
+      margin: 0 auto !important;
+      left: 0;
+      right: auto;
+      bottom: -20px;
+      position: absolute;
+      top: auto;
+      z-index: 35;
+    }
   }
   .bp {
     margin-top: 94px;

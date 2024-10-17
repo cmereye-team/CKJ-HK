@@ -37,18 +37,21 @@ const menuLists: any = [
   },
   {
     name: 'components.header.menuLists.menu_brand.name',
-    link: `/brand/course`,
-    // child: [
-    //   {
-    //     name: 'components.header.menuLists.menu_brand.course',
-    //     link: '/brand/course',
-    //   },
-    //   {
-    //     name: 'components.header.menuLists.menu_brand.honor',
-    //     link: '/brand/honor',
-    //   },
-    // ],
-    child: [],
+    link: ``,
+    child: [
+      {
+        name: 'components.header.menuLists.menu_brand.history',
+        link: '/brand/course#course',
+      },
+      {
+        name: 'components.header.menuLists.menu_brand.activity',
+        link: '/brand/course#activity',
+      },
+      {
+        name: 'components.header.menuLists.menu_brand.honor',
+        link: '/brand/course#honor',
+      },
+    ],
   },
   {
     name: 'components.header.menuLists.menu_dental_service.name',
@@ -111,8 +114,21 @@ const menuLists: any = [
   },
   {
     name: 'components.header.menuLists.menu_contactUs.name',
-    link: '/contactUs',
-    child: [],
+    link: '',
+    child: [
+      {
+        name: 'components.header.menuLists.menu_contactUs.come_route',
+        link: '/contactUs#contactUs',
+      },
+      {
+        name: 'components.header.menuLists.menu_contactUs.appeal',
+        link: '/contactUs#appeal',
+      },
+      {
+        name: 'components.header.menuLists.menu_contactUs.Q&A',
+        link: '/contactUs#Q&A',
+      },
+    ],
   },
 ]
 
@@ -324,14 +340,21 @@ const isHealthCare = () => {
 const hideDiv = () => {
   if (
     route.path == '/news/coverage' ||
+    route.path == '/news/coverage/' ||
     route.path == '/news/information' ||
     route.path == '/news/information/' ||
     route.path == '/news/tooth-wiki' ||
+    route.path == '/news/tooth-wiki/' ||
     route.path == '/messagePage' ||
+    route.path == '/messagePage/' ||
     route.path == '/medical-team' ||
+    route.path == '/medical-team/' ||
     route.path == '/contactUs' ||
+    route.path == '/contactUs/' ||
     route.path == '/brand/course' ||
-    route.path == '/federation-of-trade-unions-zone'
+    route.path == '/brand/course/' ||
+    route.path == '/federation-of-trade-unions-zone' ||
+    route.path == '/federation-of-trade-unions-zone/'
   ) {
     return false
   } else {
@@ -442,7 +465,6 @@ const hideDiv = () => {
         "
         class="waterBg-implant"
       ></div>
-
       <div
         v-if="
           [
@@ -457,17 +479,7 @@ const hideDiv = () => {
       >
         <div>29年專科•專業•專注</div>
         <div><span>港人首選</span>一站式連鎖牙科品牌</div>
-        <!-- <div class="header_content_text_implant_span" v-if="showExplain">
-          <span>優惠只限於網上及電話預約客戶</span>
-        </div> -->
       </div>
-      <!-- <div
-        v-if="showExplain && windowWidth > 768"
-        class="header-content-text-implant"
-      >
-        <div>29年專科•專業•專注</div>
-        <div><span>港人首選</span>一站式連鎖牙科品牌</div>
-      </div> -->
       <div
         class="explain_box_mobile"
         v-if="hideDiv()"
@@ -592,12 +604,6 @@ const hideDiv = () => {
                   </nuxt-link>
                 </div>
               </div>
-              <!-- <div
-                v-if="menuItem.link.includes('/dental-service')"
-                class="menuChild serviceCard"
-              >
-                <serviceCard :is-menu="true" />
-              </div> -->
             </div>
             <div class="menuItem langItem">
               <img src="@/assets/images/icon_26.svg" alt="" />
@@ -726,14 +732,6 @@ const hideDiv = () => {
           }}
         </div>
         <div class="menuBox-icon">
-          <!-- <div class="menuBox-icon-in">
-            <nuxt-link
-              to="https://www.facebook.com/ckjdental.hk/"
-              target="_blank"
-            >
-              <img src="@/assets/images/icon_01.png" />
-            </nuxt-link>
-          </div> -->
           <div class="menuBox-icon-in">
             <nuxt-link to="https://www.instagram.com/ckj_hk/" target="_blank">
               <img src="@/assets/images/icon_02.svg" />
@@ -1134,10 +1132,10 @@ const hideDiv = () => {
     width: 100%;
     max-width: 1512px;
     display: flex;
-    background: #fff;
+    background: #ffffff00;
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 20px 10px 0 30px;
+    padding: 10px 10px 0 30px;
     align-items: flex-end;
     z-index: 40;
     position: relative;
@@ -1311,7 +1309,7 @@ const hideDiv = () => {
             text-align: center;
             padding: 0;
             font-weight: 500;
-            font-size: clamp(14px, 0.092vw, 18px);
+            font-size: clamp(14px, 1.092vw, 20px);
             color: #666666;
             transition: all 0.3s;
             & > a {
@@ -1448,9 +1446,9 @@ const hideDiv = () => {
     position: relative;
     background: #fff;
     width: 100%;
-    .health_care_voucher {
-      display: none !important;
-    }
+    // .health_care_voucher {
+    //   display: none !important;
+    // }
     .pc_menu_tel {
       display: none;
     }
@@ -1490,7 +1488,7 @@ const hideDiv = () => {
       color: var(--Theme-Color, #fc1682);
       text-align: center;
       font-family: FakePearl;
-      font-size: clamp(18px, 1.146vw, 22px);
+      font-size: clamp(14px, 1.146vw, 22px);
       font-style: normal;
       font-weight: 400;
       line-height: 160%; /* 35.2px */
@@ -1501,19 +1499,19 @@ const hideDiv = () => {
   .headerBox02 {
     .health_max_width {
       width: 100%;
-      max-width: 1512px;
+      max-width: 100%;
       box-sizing: border-box;
-      padding: 20px 10px 0 30px;
+      padding: 20px 5px 0;
       .menu {
         .menuItem {
-          font-size: clamp(12px, 0.8vw, 1.4vw);
+          font-size: clamp(12px, 0.7vw, 1.4vw);
           padding: 0 0 10px;
           & > a {
-            padding: 0 0.8vw;
+            padding: 0 0.7vw;
             box-sizing: border-box;
           }
           &.langItem {
-            padding: 0 0.8vw 10px;
+            padding: 0 0.7vw 10px;
             & > img {
               width: 20px;
             }
@@ -1595,6 +1593,11 @@ const hideDiv = () => {
   -webkit-animation-timing-function: linear;
   -webkit-animation-iteration-count: infinite;
   filter: drop-shadow(0px -8px 4px rgba(77, 77, 77, 0.15));
+  height: 178px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  z-index: 35;
 }
 @keyframes menuIconAnim {
   30% {

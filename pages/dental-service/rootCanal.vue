@@ -26,8 +26,8 @@ useHead({
 })
 
 const headerConfig = {
-  img: 'https://static.cmereye.com/imgs/2024/07/cc50d28281a5b904.webp',
-  mbImg: 'https://static.cmereye.com/imgs/2024/07/fef8a5df6d6d516a.webp',
+  img: 'https://ckjhk.com/images/d69e0a71aed5.avif',
+  mbImg: 'https://ckjhk.com/images/bcaa8401b557.avif',
   bg: '',
   pageName: 'rootCanal-test',
   pcText: [
@@ -668,6 +668,21 @@ let newsMessageSwiperRef = {
 </template>
 
 <style lang="scss" scoped>
+:deep(.header-content) {
+  .explain_box_mobile {
+    background: transparent !important;
+    position: absolute;
+    bottom: 70px;
+    z-index: 38;
+    right: 0;
+    left: 0;
+    top: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 0 auto !important;
+  }
+}
 .reason {
   margin-top: 188px;
   &-lists {
@@ -1258,6 +1273,25 @@ let newsMessageSwiperRef = {
     top: 0 !important;
     margin-left: 0 !important;
     margin-right: auto !important;
+  }
+  :deep(.header-content) {
+    .explain_box_mobile {
+      align-items: flex-end;
+      background: transparent !important;
+      display: flex;
+      justify-content: flex-end;
+      margin: 0 auto !important;
+      left: auto;
+      right: 0;
+      bottom: -20px;
+      position: absolute;
+      top: auto;
+      z-index: 35;
+    }
+    .waterBg-implant::after,
+    .waterBg-implant::before{
+      height: 25.33vw;
+    }
   }
   .reason {
     margin-top: 54px;

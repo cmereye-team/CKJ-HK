@@ -25,8 +25,8 @@ useHead({
 })
 
 const headerConfig = {
-  mbImg: 'https://static.cmereye.com/imgs/2024/07/41087a480bea35c6.webp',
-  img: 'https://static.cmereye.com/imgs/2024/07/4a174e658acf164b.webp',
+  img: 'https://ckjhk.com/images/24b4cd201903.avif',
+  mbImg: 'https://www.ckjhk.com/images/425066149906.avif',
   bg: '',
   pageName: 'scaling-and-polishing-test',
   pcText: [],
@@ -444,6 +444,21 @@ watch(
 
 
 <style lang="scss" scoped>
+:deep(.header-content) {
+  .explain_box_mobile {
+    background: transparent !important;
+    position: absolute;
+    bottom: 70px;
+    z-index: 38;
+    right: 0;
+    left: 0;
+    top: auto;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    margin: 0 auto !important;
+  }
+}
 .tabNav {
   font-weight: 400;
   font-size: 1.25rem;
@@ -1422,6 +1437,25 @@ watch(
     top: 0 !important;
     margin-left: 0 !important;
     margin-right: auto !important;
+  }
+  :deep(.header-content) {
+    .explain_box_mobile {
+      align-items: flex-end;
+      background: transparent !important;
+      display: flex;
+      justify-content: flex-end;
+      margin: 0 auto !important;
+      left: auto;
+      right: 0;
+      bottom: -20px;
+      position: absolute;
+      top: auto;
+      z-index: 35;
+    }
+    .waterBg-implant::after,
+    .waterBg-implant::before{
+      height: 25.33vw;
+    }
   }
   .tabNav {
     padding: 30px;

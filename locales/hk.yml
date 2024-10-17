@@ -12,6 +12,8 @@ components:
         name: 關於愛康健
         course: 品牌介紹
         honor: 品牌榮譽
+        history: 發展歷程
+        activity: 最新活動 
       menu_dental_service:
         name: 牙科服務
       health-care-voucher:
@@ -29,6 +31,9 @@ components:
         name: 個案分享
       menu_contactUs:
         name: 聯絡我們
+        come_route: 來院路線
+        appeal: 申訴途徑
+        Q&A: 常見問題
   footer:
     text1: 29年專科 • 專業 • 專注
     text2: 港人首選一站式連鎖牙科品牌
