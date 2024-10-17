@@ -530,10 +530,7 @@ const hideDiv = () => {
       >
         <div
           ref="headerMenu"
-          class="pageCon header-content-in"
-          :class="[
-            route.name == 'health-care-voucher' ? 'health_max_width' : 'pc_tel',
-          ]"
+          class="pageCon header-content-in health_max_width"
         >
           <div class="logo">
             <nuxt-link
@@ -548,100 +545,91 @@ const hideDiv = () => {
             </div>
           </div>
           <div class="menu">
-            <div
-              v-for="(menuItem, menuIndex) in menuLists"
-              :key="menuIndex"
-              class="menuItem"
-            >
-              <nuxt-link
-                :class="[
-                  menuItem.child.length ? 'triangleIcon' : '',
-                  {
-                    'health-care-voucher':
-                      menuItem.link === '/health-care-voucher',
-                  },
-                  {
-                    'federation-of-trade-unions-zone':
-                      menuItem.link === '/federation-of-trade-unions-zone',
-                  },
-                ]"
-                :to="
-                  ['/news', '/dental-service'].includes(menuItem.link)
-                    ? 'javaScript:void(0)'
-                    : menuItem.link
-                "
-                :title="$t(menuItem.name)"
-              >
-                <span>{{ $t(menuItem.name) }}</span>
-              </nuxt-link>
+            <div>
               <div
-                v-if="menuItem.child.length"
-                class="menuChild"
-                :class="{
-                  serviceCard: menuItem.link.includes('/dental-service'),
-                }"
+                v-for="(menuItem, menuIndex) in menuLists"
+                :key="menuIndex"
+                class="menuItem"
               >
-                <div
-                  v-for="(menuChildItem, menuChildIndex) in menuItem.child"
-                  :key="menuChildIndex"
+                <nuxt-link
                   :class="[
-                    'menuChild-item',
-                    classNamefilter(menuChildItem, menuChildIndex),
+                    menuItem.child.length ? 'triangleIcon' : '',
+                    {
+                      'health-care-voucher':
+                        menuItem.link === '/health-care-voucher',
+                    },
+                    {
+                      'federation-of-trade-unions-zone':
+                        menuItem.link === '/federation-of-trade-unions-zone',
+                    },
                   ]"
-                  @click.stop="handleMenuChild(menuItem, menuChildIndex)"
+                  :to="
+                    ['/news', '/dental-service'].includes(menuItem.link)
+                      ? 'javaScript:void(0)'
+                      : menuItem.link
+                  "
+                  :title="$t(menuItem.name)"
                 >
-                  <nuxt-link
-                    :to="menuChildItem.link"
-                    :class="{ hot: menuChildItem.isHot }"
+                  <span>{{ $t(menuItem.name) }}</span>
+                </nuxt-link>
+                <div
+                  v-if="menuItem.child.length"
+                  class="menuChild"
+                  :class="{
+                    serviceCard: menuItem.link.includes('/dental-service'),
+                  }"
+                >
+                  <div
+                    v-for="(menuChildItem, menuChildIndex) in menuItem.child"
+                    :key="menuChildIndex"
+                    :class="[
+                      'menuChild-item',
+                      classNamefilter(menuChildItem, menuChildIndex),
+                    ]"
+                    @click.stop="handleMenuChild(menuItem, menuChildIndex)"
                   >
-                    {{
-                      menuChildItem.link ===
-                      '/dental-service/wisdom-teeth-extraction'
-                        ? '拔牙\n'
-                        : ''
-                    }}
-                    {{ $t(menuChildItem.name) }}
-                  </nuxt-link>
+                    <nuxt-link
+                      :to="menuChildItem.link"
+                      :class="{ hot: menuChildItem.isHot }"
+                    >
+                      {{
+                        menuChildItem.link ===
+                        '/dental-service/wisdom-teeth-extraction'
+                          ? '拔牙\n'
+                          : ''
+                      }}
+                      {{ $t(menuChildItem.name) }}
+                    </nuxt-link>
+                  </div>
+                </div>
+              </div>
+              <div class="menuItem langItem">
+                <img src="@/assets/images/icon_26.svg" alt="" />
+                <div class="menuChild">
+                  <div
+                    :class="[
+                      'menuChild-item',
+                      { 'langItem-act': appState.langs === 't' },
+                    ]"
+                  >
+                    <span class="zh_click" @click="glangs('t')">繁體</span>
+                  </div>
+                  <div
+                    :class="[
+                      'menuChild-item',
+                      { 'langItem-act': appState.langs === 's' },
+                    ]"
+                  >
+                    <span class="zh_click" @click="glangs('s')">简体</span>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="menuItem langItem">
-              <img src="@/assets/images/icon_26.svg" alt="" />
-              <div class="menuChild">
-                <div
-                  :class="[
-                    'menuChild-item',
-                    { 'langItem-act': appState.langs === 't' },
-                  ]"
-                >
-                  <span class="zh_click" @click="glangs('t')">繁體</span>
-                </div>
-                <div
-                  :class="[
-                    'menuChild-item',
-                    { 'langItem-act': appState.langs === 's' },
-                  ]"
-                >
-                  <span class="zh_click" @click="glangs('s')">简体</span>
-                </div>
-              </div>
-            </div>
-            <div class="pc_menu_tel" v-if="route.name == 'health-care-voucher'">
-              <a>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="22"
-                  height="25"
-                  viewBox="0 0 22 25"
-                  fill="none"
-                >
-                  <path
-                    d="M19.1786 24.6466C19.0841 24.6466 18.9871 24.6466 18.8913 24.631C14.0503 24.0992 9.52647 21.7561 6.08632 17.9985C2.64616 14.241 0.501229 9.30025 0.0149361 4.0133C-0.0253836 3.59334 0.0161533 3.16882 0.136815 2.76765C0.257477 2.36648 0.454531 1.99775 0.71502 1.6857C0.994569 1.34981 1.33543 1.08159 1.71566 0.898308C2.09589 0.715024 2.50706 0.620741 2.92268 0.62153H6.49556C7.12779 0.620751 7.74415 0.837587 8.25709 1.24123C8.77002 1.64487 9.15343 2.21478 9.35284 2.86999L10.5175 6.66453C10.6952 7.24449 10.7207 7.86723 10.5911 8.46219C10.4614 9.05716 10.1817 9.60057 9.78376 10.0309L9.22472 10.6414C10.1546 12.2182 11.3863 13.5561 12.8351 14.5631L13.3838 13.9625C13.7796 13.5309 14.2775 13.2281 14.8219 13.0878C15.3662 12.9475 15.9356 12.9754 16.4663 13.1683L19.9408 14.4402C20.5397 14.6576 21.0608 15.0752 21.4303 15.634C21.7998 16.1927 21.999 16.8643 21.9996 17.5535V21.4555C22.0118 22.2868 21.7217 23.0895 21.1929 23.6876C20.6641 24.2857 19.9398 24.6306 19.1786 24.6466ZM2.92268 2.81487C2.79095 2.81153 2.66008 2.83878 2.53872 2.89481C2.41736 2.95085 2.30829 3.03439 2.21871 3.13992C2.14416 3.22817 2.08734 3.33248 2.0519 3.44614C2.01647 3.5598 2.0032 3.6803 2.01296 3.7999C2.45514 8.58302 4.39687 13.0524 7.50956 16.4518C10.6223 19.8512 14.7147 21.9717 19.0945 22.4546H19.1682C19.2752 22.4529 19.3808 22.4279 19.4788 22.3811C19.5768 22.3343 19.6652 22.2665 19.7389 22.1819C19.9085 21.9864 20.0014 21.7262 19.9977 21.4569V17.5535C19.9976 17.3233 19.9312 17.099 19.8079 16.9123C19.6846 16.7256 19.5106 16.5861 19.3106 16.5134L15.8361 15.2485C15.6592 15.1841 15.4694 15.1747 15.288 15.2213C15.1065 15.268 14.9405 15.3689 14.8086 15.5128L14.2534 16.1205C13.8773 16.5296 13.3686 16.7601 12.8377 16.7621C12.4409 16.7626 12.0533 16.6316 11.7261 16.3862C10.0456 15.2138 8.61601 13.6598 7.53469 11.8299C7.28434 11.4116 7.17365 10.9118 7.22126 10.4147C7.26887 9.91763 7.47188 9.45367 7.79609 9.10095L8.36418 8.48054C8.4966 8.33696 8.58938 8.15561 8.63194 7.9572C8.6745 7.75879 8.66512 7.5513 8.60487 7.35843L7.44799 3.5653C7.38202 3.34676 7.25455 3.15654 7.08376 3.02179C6.91296 2.88703 6.70756 2.81462 6.49686 2.81487H2.92268ZM20.9954 9.39349C20.7292 9.39312 20.474 9.27746 20.2858 9.07187C20.0975 8.86629 19.9916 8.58756 19.9913 8.29682C19.9899 6.843 19.4605 5.44916 18.5191 4.42115C17.5778 3.39315 16.3015 2.81496 14.9703 2.81346C14.704 2.81346 14.4486 2.69792 14.2603 2.49225C14.0719 2.28659 13.9661 2.00764 13.9661 1.71679C13.9661 1.42593 14.0719 1.14699 14.2603 0.941325C14.4486 0.735659 14.704 0.620117 14.9703 0.620117C16.834 0.622362 18.6207 1.43188 19.9385 2.87105C21.2563 4.31023 21.9976 6.26152 21.9996 8.29682C21.9993 8.58756 21.8934 8.86629 21.7051 9.07187C21.5169 9.27746 21.2617 9.39312 20.9954 9.39349ZM16.9839 9.39349C16.7177 9.39312 16.4624 9.27746 16.2742 9.07187C16.0859 8.86629 15.98 8.58756 15.9797 8.29682C15.9793 8.00608 15.8734 7.72735 15.6852 7.52177C15.4969 7.31618 15.2417 7.20052 14.9755 7.20015C14.709 7.20015 14.4534 7.08453 14.265 6.87873C14.0765 6.67294 13.9707 6.39381 13.9707 6.10277C13.9707 5.81173 14.0765 5.5326 14.265 5.32681C14.4534 5.12101 14.709 5.00539 14.9755 5.00539C15.7745 5.00614 16.5406 5.3532 17.1054 5.97034C17.6703 6.58748 17.9877 7.42424 17.9881 8.29682C17.9879 8.44126 17.9616 8.58425 17.9108 8.71759C17.8599 8.85093 17.7855 8.972 17.6917 9.07387C17.598 9.17574 17.4867 9.25641 17.3644 9.31126C17.242 9.36611 17.111 9.39405 16.9787 9.39349H16.9839Z"
-                    fill="#FC1682"
-                  />
-                </svg>
-              </a>
-              <a href="http://" target="_blank" rel="noopener noreferrer"
+            <div class="pc_menu_tel">
+              <a
+                href="tel: +852 6933 8128"
+                target="_blank"
+                rel="noopener noreferrer"
                 >香港真人熱線電話：(852) 6933 8128</a
               >
             </div>
@@ -858,7 +846,6 @@ const hideDiv = () => {
     width: 100%;
     box-sizing: border-box;
     position: fixed;
-    // top: 0;
     left: 50%;
     transform: translateX(-50%);
     z-index: -1;
@@ -1122,7 +1109,6 @@ const hideDiv = () => {
     &.veneers-test,
     &.scaling-and-polishing-test {
       max-width: 100%;
-      // min-height: calc(726 / 1920 * 100vw);
       img {
         width: 100%;
       }
@@ -1135,278 +1121,283 @@ const hideDiv = () => {
     background: #ffffff00;
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 10px 10px 0 30px;
     align-items: flex-end;
     z-index: 40;
     position: relative;
     transition: all 0.5s;
     .logo {
-      width: clamp(280px, 15.105vw, 290px);
-      margin-bottom: clamp(15px, 1.0465vw, 20px);
+      width: clamp(300px, 15.105vw, 320px);
     }
     .pc_tel {
-      max-width: 90%;
+      max-width: 100%;
     }
     .menu {
       flex: 1;
-      color: #666666;
       display: flex;
       justify-content: flex-end;
-      align-items: flex-end;
-      align-items: center;
-      .menuItem {
-        padding: 0 0 clamp(15px, 1.0465vw, 20px);
-        cursor: pointer;
-        font-size: clamp(16px, 1.145vw, 22px);
-        font-weight: 600;
-        position: relative;
-        & > a {
-          padding: 0 clamp(8px, 0.052vw, 10px);
-          display: inline-block;
-          text-align: center;
-        }
-        &.langItem {
-          padding: 0 1vw clamp(8px, 0.052vw, 10px);
-          & > img {
-            width: clamp(15px, 1.0465vw, 20px);
+      & > div:nth-child(1) {
+        color: #666666;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        align-items: center;
+        .menuItem {
+          padding: 0 0 clamp(15px, 1.0465vw, 20px);
+          cursor: pointer;
+          font-size: clamp(16px, 1.145vw, 22px);
+          font-weight: 600;
+          position: relative;
+          & > a {
+            padding: 0 clamp(8px, 0.052vw, 10px);
+            display: inline-block;
+            text-align: center;
           }
-        }
-        &.langItem {
-          padding: 0 clamp(15px, 1.0465vw, 20px) clamp(20px, 1.3vw, 25px);
-          .menuChild {
-            .menuChild-item {
-              & > span {
-                color: var(--textColor);
-              }
-              &.langItem-act {
+          &.langItem {
+            padding: 0 1vw clamp(8px, 0.052vw, 10px);
+            & > img {
+              width: clamp(15px, 1.0465vw, 20px);
+            }
+          }
+          &.langItem {
+            padding: 0 clamp(15px, 1.0465vw, 20px) clamp(20px, 1.3vw, 25px);
+            .menuChild {
+              .menuChild-item {
                 & > span {
-                  color: var(--indexColor1);
+                  color: var(--textColor);
+                }
+                &.langItem-act {
+                  & > span {
+                    color: var(--indexColor1);
+                  }
                 }
               }
             }
           }
-        }
-        .triangleIcon:after {
-          content: '';
-          width: 0px;
-          height: 0px;
-          border: clamp(8px, 0.052vw, 10px) solid;
-          border-color: #666666 transparent transparent transparent;
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        .triangleIcon:hover {
-          &:after {
-            border-color: var(--indexColor1) transparent transparent transparent;
-          }
-        }
-        span {
-          position: relative;
-          display: inline-block;
-          &::before {
-            content: '';
-            width: 0;
-            position: absolute;
-            left: 50%;
-            bottom: -2px;
-            transform: translateX(-50%);
-            height: 2px;
-            background: var(--textColor);
-            transition: all 0.3s;
-            border-radius: 2px;
-          }
-        }
-        & > .router-link-exact-active {
-          color: var(--indexColor1);
-          &.triangleIcon:after {
-            border-color: var(--indexColor1) transparent transparent transparent;
-          }
-          span {
-            &::before {
-              width: 100%;
-              bottom: 2px;
-              background: var(--indexColor1);
-            }
-          }
-          &.health-care-voucher {
-            span {
-              &::before {
-                background: #00a752;
-              }
-            }
-          }
-          &.federation-of-trade-unions-zone {
-            span {
-              &::before {
-                background: #e60013;
-              }
-            }
-          }
-        }
-        &:hover {
-          color: var(--indexColor1);
           .triangleIcon:after {
-            border-color: var(--indexColor1) transparent transparent transparent;
-          }
-          span {
-            &::before {
-              width: 100%;
-              bottom: 2px;
-              background: var(--indexColor1);
-            }
-          }
-          .health-care-voucher {
-            span {
-              &::before {
-                background: #00a752;
-              }
-            }
-          }
-          .federation-of-trade-unions-zone {
-            span {
-              &::before {
-                background: #e60013;
-              }
-            }
-          }
-        }
-        .health-care-voucher {
-          color: #00a752;
-          .router-link-exact-active {
-            color: #00a752;
-          }
-        }
-        .federation-of-trade-unions-zone {
-          color: #e60013;
-          .router-link-exact-active {
-            color: #e60013;
-          }
-        }
-        &:hover .menuChild {
-          display: flex;
-          animation: animBottomIn 0.5s forwards;
-        }
-        .menuChild {
-          position: absolute;
-          top: 100%;
-          left: 50%;
-          transform: translate(-50%, 20px);
-          opacity: 0;
-          min-width: 130%;
-          z-index: 2;
-          display: none;
-          flex-direction: column;
-          transition: all 0.3s;
-          padding: 0 clamp(19px, 1.04vw, 20px) 5px;
-          box-sizing: border-box;
-          background: #ffffff;
-          filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.15));
-          border-radius: 6px;
-          &-item {
-            width: 100%;
-            text-align: center;
-            padding: 0;
-            font-weight: 500;
-            font-size: clamp(14px, 1.092vw, 20px);
-            color: #666666;
-            transition: all 0.3s;
-            & > a {
-              display: block;
-              padding: clamp(8px, 0.052vw, 10px) 0 5px;
-            }
-            &:not(:last-child) {
-              border-bottom: 1px solid var(--indexColor2);
-            }
-            &:hover {
-              color: var(--indexColor1);
-            }
-            &.menuChildCurrent {
-              color: var(--indexColor1);
-            }
-          }
-          &::before {
             content: '';
             width: 0px;
             height: 0px;
             border: clamp(8px, 0.052vw, 10px) solid;
-            border-color: transparent transparent #fff transparent;
+            border-color: #666666 transparent transparent transparent;
             position: absolute;
-            top: clamp(-14px, -0.092vw, -18px);
+            bottom: 0;
             left: 50%;
             transform: translateX(-50%);
           }
-        }
-        .serviceCard {
-          width: 500px;
-          flex-direction: row;
-          flex-wrap: wrap;
-          padding: clamp(15px, 1.0465vw, 20px) clamp(8px, 0.052vw, 10px);
-          border-radius: clamp(14px, 0.083vw, 16px);
-          .menuChild-item {
-            width: calc(100% / 3);
-            border: none;
-            padding: 0;
+          .triangleIcon:hover {
+            &:after {
+              border-color: var(--indexColor1) transparent transparent
+                transparent;
+            }
+          }
+          span {
             position: relative;
-            white-space: pre-wrap;
-            line-height: 1.2;
-            & > a {
-              height: 56px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              &.hot {
-                position: relative;
-                color: var(--indexColor1);
-                &::after {
-                  content: '·';
-                  position: absolute;
-                  left: 50%;
-                  top: 0;
-                  font-size: clamp(25px, 1.5625vw, 30px);
-                  color: var(--indexColor1);
-                  margin-top: -8px;
+            display: inline-block;
+            &::before {
+              content: '';
+              width: 0;
+              position: absolute;
+              left: 50%;
+              bottom: -2px;
+              transform: translateX(-50%);
+              height: 2px;
+              background: var(--textColor);
+              transition: all 0.3s;
+              border-radius: 2px;
+            }
+          }
+          & > .router-link-exact-active {
+            color: var(--indexColor1);
+            &.triangleIcon:after {
+              border-color: var(--indexColor1) transparent transparent
+                transparent;
+            }
+            span {
+              &::before {
+                width: 100%;
+                bottom: 2px;
+                background: var(--indexColor1);
+              }
+            }
+            &.health-care-voucher {
+              span {
+                &::before {
+                  background: #00a752;
                 }
               }
             }
-            &:not(:nth-of-type(3n)) {
-              &::before {
-                content: '';
-                width: 0;
-                height: 60%;
-                border-right: 1px solid #f7c3c3;
-                top: 20%;
-                right: 0;
-                position: absolute;
-              }
-            }
-            &:not(:nth-of-type(n + 13)) {
-              &::after {
-                content: '';
-                width: 80%;
-                height: 0;
-                border-bottom: 1px solid #f7c3c3;
-                left: 10%;
-                bottom: 0;
-                position: absolute;
+            &.federation-of-trade-unions-zone {
+              span {
+                &::before {
+                  background: #e60013;
+                }
               }
             }
           }
-          &::after {
-            content: '';
-            width: 100px;
-            height: calc(90 / 130 * 100px);
-            background: url(https://static.cmereye.com/imgs/2024/04/4f39b444ca1b0a1d.png)
-              no-repeat;
-            background-size: 100% auto;
-            display: block;
+          &:hover {
+            color: var(--indexColor1);
+            .triangleIcon:after {
+              border-color: var(--indexColor1) transparent transparent
+                transparent;
+            }
+            span {
+              &::before {
+                width: 100%;
+                bottom: 2px;
+                background: var(--indexColor1);
+              }
+            }
+            .health-care-voucher {
+              span {
+                &::before {
+                  background: #00a752;
+                }
+              }
+            }
+            .federation-of-trade-unions-zone {
+              span {
+                &::before {
+                  background: #e60013;
+                }
+              }
+            }
+          }
+          .health-care-voucher {
+            color: #00a752;
+            .router-link-exact-active {
+              color: #00a752;
+            }
+          }
+          .federation-of-trade-unions-zone {
+            color: #e60013;
+            .router-link-exact-active {
+              color: #e60013;
+            }
+          }
+          &:hover .menuChild {
+            display: flex;
+            animation: animBottomIn 0.5s forwards;
+          }
+          .menuChild {
             position: absolute;
-            bottom: 0px;
-            right: 30px;
-            overflow: hidden;
-            background-position-y: calc(90 / 130 * 100px);
-            animation: menuIconAnim 1.5s 0.5s forwards;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, 20px);
+            opacity: 0;
+            min-width: 130%;
+            z-index: 2;
+            display: none;
+            flex-direction: column;
+            transition: all 0.3s;
+            padding: 0 clamp(19px, 1.04vw, 20px) 5px;
+            box-sizing: border-box;
+            background: #ffffff;
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.15));
+            border-radius: 6px;
+            &-item {
+              width: 100%;
+              text-align: center;
+              padding: 0;
+              font-weight: 500;
+              font-size: clamp(14px, 1.092vw, 20px);
+              color: #666666;
+              transition: all 0.3s;
+              & > a {
+                display: block;
+                padding: clamp(8px, 0.052vw, 10px) 0 5px;
+              }
+              &:not(:last-child) {
+                border-bottom: 1px solid var(--indexColor2);
+              }
+              &:hover {
+                color: var(--indexColor1);
+              }
+              &.menuChildCurrent {
+                color: var(--indexColor1);
+              }
+            }
+            &::before {
+              content: '';
+              width: 0px;
+              height: 0px;
+              border: clamp(8px, 0.052vw, 10px) solid;
+              border-color: transparent transparent #fff transparent;
+              position: absolute;
+              top: clamp(-14px, -0.092vw, -18px);
+              left: 50%;
+              transform: translateX(-50%);
+            }
+          }
+          .serviceCard {
+            width: 500px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: clamp(15px, 1.0465vw, 20px) clamp(8px, 0.052vw, 10px);
+            border-radius: clamp(14px, 0.083vw, 16px);
+            .menuChild-item {
+              width: calc(100% / 3);
+              border: none;
+              padding: 0;
+              position: relative;
+              white-space: pre-wrap;
+              line-height: 1.2;
+              & > a {
+                height: 56px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &.hot {
+                  position: relative;
+                  color: var(--indexColor1);
+                  &::after {
+                    content: '·';
+                    position: absolute;
+                    left: 50%;
+                    top: 0;
+                    font-size: clamp(25px, 1.5625vw, 30px);
+                    color: var(--indexColor1);
+                    margin-top: -8px;
+                  }
+                }
+              }
+              &:not(:nth-of-type(3n)) {
+                &::before {
+                  content: '';
+                  width: 0;
+                  height: 60%;
+                  border-right: 1px solid #f7c3c3;
+                  top: 20%;
+                  right: 0;
+                  position: absolute;
+                }
+              }
+              &:not(:nth-of-type(n + 13)) {
+                &::after {
+                  content: '';
+                  width: 80%;
+                  height: 0;
+                  border-bottom: 1px solid #f7c3c3;
+                  left: 10%;
+                  bottom: 0;
+                  position: absolute;
+                }
+              }
+            }
+            &::after {
+              content: '';
+              width: 100px;
+              height: calc(90 / 130 * 100px);
+              background: url(https://static.cmereye.com/imgs/2024/04/4f39b444ca1b0a1d.png)
+                no-repeat;
+              background-size: 100% auto;
+              display: block;
+              position: absolute;
+              bottom: 0px;
+              right: 30px;
+              overflow: hidden;
+              background-position-y: calc(90 / 130 * 100px);
+              animation: menuIconAnim 1.5s 0.5s forwards;
+            }
           }
         }
       }
@@ -1446,9 +1437,6 @@ const hideDiv = () => {
     position: relative;
     background: #fff;
     width: 100%;
-    // .health_care_voucher {
-    //   display: none !important;
-    // }
     .pc_menu_tel {
       display: none;
     }
@@ -1465,7 +1453,7 @@ const hideDiv = () => {
       align-items: center;
       .logo {
         display: flex;
-        gap: 0 25px;
+        gap: 0 clamp(15px, 0.052vw, 30px);
         align-items: center;
         & > a {
           img {
@@ -1475,7 +1463,7 @@ const hideDiv = () => {
       }
     }
     .pc_tel {
-      max-width: 90%;
+      max-width: 100%;
     }
     .health_care_voucher {
       display: flex;
@@ -1484,14 +1472,16 @@ const hideDiv = () => {
       display: flex;
       align-items: center;
       gap: 0 clamp(8px, 0.052vw, 10px);
-      padding: 0 0 clamp(15px, 1.0465vw, 20px);
-      color: var(--Theme-Color, #fc1682);
+      padding: clamp(15px, 1.0465vw, 20px) clamp(20px, 3.0465vw, 60px)
+        clamp(15px, 1.0465vw, 20px) clamp(15px, 1.0465vw, 20px);
+      color: #fff;
       text-align: center;
       font-family: FakePearl;
       font-size: clamp(14px, 1.146vw, 22px);
       font-style: normal;
       font-weight: 400;
       line-height: 160%; /* 35.2px */
+      background: var(--Theme-Color, #fc1682);
     }
   }
 }
@@ -1501,10 +1491,10 @@ const hideDiv = () => {
       width: 100%;
       max-width: 100%;
       box-sizing: border-box;
-      padding: 20px 5px 0;
+      padding-left: clamp(30px, 3.2803vw, 100px);
       .menu {
         .menuItem {
-          font-size: clamp(12px, 0.7vw, 1.4vw);
+          font-size: clamp(22px, 0.7vw, 22px);
           padding: 0 0 10px;
           & > a {
             padding: 0 0.7vw;
@@ -1537,6 +1527,12 @@ const hideDiv = () => {
           .serviceCard {
             padding: 12px 6px;
           }
+        }
+      }
+      .logo {
+        .health_care_voucher {
+          padding-left: clamp(15px, 1.0465vw, 20px);
+          border-left: 1px solid #aaa;
         }
       }
     }
@@ -1755,11 +1751,8 @@ const hideDiv = () => {
     }
     &-in {
       width: calc(80% + 60px);
-      padding: clamp(8px, 0.069vw, 10px) clamp(8px, 0.069vw, 10px) 0
-        clamp(24px, 1.56vw, 30px);
       .logo {
         width: clamp(180px, 137.5vw, 200px);
-        margin-bottom: 15px;
       }
     }
     .waterBg {
@@ -1773,15 +1766,9 @@ const hideDiv = () => {
       &.scaling-and-polishing-test {
         bottom: 65px;
       }
-      // &.health-care-voucher{
-      //   bottom: 70px;
-      // }
     }
     &-text-implant {
       bottom: 80px;
-      // &.health-care-voucher {
-      //   bottom: 80px;
-      // }
       div {
         width: calc(80%);
         margin: 0 auto;
@@ -1816,90 +1803,15 @@ const hideDiv = () => {
     }
     &-btn-implant {
       bottom: 12vw;
-      // span{
-      //   font-size: 2vw;
-      //   padding: 5px 4vw;
-      // }
     }
   }
 }
-// @media (min-width: 768px) and (max-width: 1450px) {
-//   .header-content {
-//     .explain_box_mobile {
-//       padding: 10px 15px 0 20px;
-//       & > span {
-//         color: #666666;
-//       }
-//     }
-//     &-in {
-//       .pc_tel {
-//         max-width: 90%;
-//       }
-//       width: calc(90% + 60px);
-//       padding: 10px 15px 0 30px;
-//       .logo {
-//         width: 20%;
-//         margin-bottom: 15px;
-//       }
-//       .menu {
-//         padding: 10px 15px 0 20px;
-//         .menuItem {
-//           font-size: 0.8vw;
-//           padding: 0 0 8px;
-//           & > a {
-//             padding: 0 0.8vw;
-//             box-sizing: border-box;
-//           }
-//           &.langItem {
-//             padding: 0 1vw 10px;
-//             & > img {
-//               width: 20px;
-//             }
-//           }
-//           .triangleIcon:after {
-//             border: 5px solid;
-//             border-color: #666666 transparent transparent transparent;
-//           }
-//           .menuChild {
-//             padding: 0 10px;
-//             &-item {
-//               font-size: 1rem;
-//             }
-//             &::before {
-//               border: 5px solid;
-//               border-color: transparent transparent #fff transparent;
-//               position: absolute;
-//               top: -10px;
-//               left: 50%;
-//               transform: translateX(-50%);
-//             }
-//           }
-//           .serviceCard {
-//             padding: 12px 6px;
-//           }
-//         }
-//       }
-//     }
-//     &-text-implant {
-//       div {
-//         font-size: 100%;
-//       }
-//     }
-//   }
-//   .pc_menu_tel {
-//     & > a {
-//       font-size: 12px;
-//     }
-//   }
-// }
 @media (min-width: 768px) and (max-width: 1450px) {
   .header-content {
     &-in {
       width: calc(80% + 120px);
-      padding: 10px 0 0 0;
       .logo {
         width: 20%;
-        margin-bottom: 15px;
       }
       .menu {
         .menuItem {
@@ -1994,13 +1906,12 @@ const hideDiv = () => {
         max-width: 100vw;
         width: 100vw;
         box-sizing: border-box;
-        padding: 10px 20px 0;
         .menu {
           .menuItem {
             font-size: clamp(12px, 0.8vw, 1.4vw);
             padding: 0 0 10px;
             & > a {
-              padding: 0 0.8vw;
+              padding: 0 0.3vw;
               box-sizing: border-box;
             }
             &.langItem {
@@ -2053,10 +1964,8 @@ const hideDiv = () => {
     }
     &-in {
       width: calc(90% + 40px);
-      padding: 10px 0 0 0;
       .logo {
         width: 20%;
-        margin-bottom: 10px;
       }
       .menu {
         .menuItem {
@@ -2113,10 +2022,6 @@ const hideDiv = () => {
     }
     &-btn-implant {
       bottom: calc(100px + 5vw);
-      // span{
-      //   font-size: 1.9vw;
-      //   padding: .3vw 3.5vw;
-      // }
     }
     &-text-implant {
       width: calc(80% + 60px);
@@ -2133,7 +2038,6 @@ const hideDiv = () => {
         max-width: 100vw;
         width: 100vw;
         box-sizing: border-box;
-        padding: 10px 20px 0;
         .menu {
           .menuItem {
             font-size: clamp(14px, 1vw, 1.4vw);
@@ -2242,7 +2146,6 @@ const hideDiv = () => {
       }
     }
     &-bgImg-implant {
-      // display: none;
       position: relative;
       top: 16vw;
       &.rootCanal-test {
@@ -2363,13 +2266,6 @@ const hideDiv = () => {
         color: #666666;
       }
     }
-    // &-bgImg-implant-mb {
-    //   display: block;
-    //   padding-top: 80px;
-    //   img {
-    //     width: 100%;
-    //   }
-    // }
     &-in {
       position: fixed;
       top: 0;
