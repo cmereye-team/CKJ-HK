@@ -1,4 +1,5 @@
- <script lang="ts" setup>
+<script lang="ts" setup>
+import { Autoplay } from 'swiper'
 import { useAppState } from '~/stores/appState'
 import { Scrollbar } from 'swiper'
 import { useElementBounding, useWindowSize } from '@vueuse/core'
@@ -246,18 +247,22 @@ const Blue_light_whitening_technology = {
     {
       name: '滲透美白',
       text: '30分鐘滲透美白因子，能快速滲透到牙齒各個部位。',
+      img: 'https://static.cmereye.com/imgs/2024/10/f365733eb64e15b8.jpg',
     },
     {
       name: '舒適美白',
       text: '低溫藍光照射，舒適治療，避免紫外線和紅外線對牙齒的傷害。',
+      img: 'https://static.cmereye.com/imgs/2024/10/1c7b098c08564ed3.png',
     },
     {
       name: '健康美白',
       text: '美白分子能快速分解，促進牙釉質再生，保護牙齒，實現健康美白。',
+      img: 'https://static.cmereye.com/imgs/2024/10/bb9705c7938c9730.png',
     },
     {
       name: '健康美白',
       text: '一次治療即可提升3-8個VITA色階，輕鬆實現美白效果。',
+      img: 'https://static.cmereye.com/imgs/2024/10/8768872219998927.png',
     },
   ],
   topText: [
@@ -299,6 +304,30 @@ const handley = (bool = false) => {
     effectImgCur.value = String(Number(effectImgCur.value) + 1)
   }
 }
+
+let windowWidth = ref(390)
+
+const getWindowWidth = () => {
+  windowWidth.value = window.innerWidth
+}
+onMounted(() => {
+  getWindowWidth()
+  window.addEventListener('resize', getWindowWidth)
+})
+let currtNew = ref(1)
+const handleLineCur = (_value: number) => {
+  newsSwiperRef.slideToLoop(_value - 1)
+}
+
+let newsSwiperRef = {
+  slideToLoop: (a) => {},
+}
+const setNewsSwiperRef = (swiper: any) => {
+  newsSwiperRef = swiper
+}
+const onSlideChange = (swiper: any) => {
+  currtNew.value = (swiper.realIndex ? Number(swiper.realIndex) : 0) + 1
+}
 </script>
 
 
@@ -306,35 +335,13 @@ const handley = (bool = false) => {
   <div>
     <PageHeader :headerConfig="headerConfig" />
     <div class="pageIn whitebgColor">
-      <div class="index_title pageCon">
+      <div class="index_title pageCon" v-if="windowWidth < 768">
         {{ $t('pages.dental-service.title') }}
       </div>
-      <ServiceIntroduce :introduceData="orthodonticsIntroduceData" />
-      <div class="note">
-        <div class="dentistryServices-title">
-          <div class="dentistryServices-title-in bb">
-            {{ newnoteData.title }}
-          </div>
-        </div>
-        <div class="note-content">
-          <div class="note-content-l">
-            <img
-              src="https://static.cmereye.com/imgs/2024/05/a0567b485d4d93be.webp"
-              alt=""
-            />
-          </div>
-          <div class="note-content-r">
-            <div
-              v-for="(noteItem, noteIndex) in newnoteData.lists"
-              :key="noteIndex"
-            >
-              <span>·</span>
-              <span>{{ $t(noteItem.name) }}</span>
-            </div>
-          </div>
-        </div>
+      <div class="two_banner">
+        <ServiceIntroduce :introduceData="orthodonticsIntroduceData" />
       </div>
-      <div class="condition">
+      <!-- <div class="condition">
         <div class="dentistryServices-title">
           <div class="dentistryServices-title-in bb">你有以下情況嗎？</div>
         </div>
@@ -356,7 +363,7 @@ const handley = (bool = false) => {
             </div>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="Blue_light_whitening_technology">
         <div class="dentistryServices-title">
           <div class="dentistryServices-title-in bb">
@@ -378,10 +385,7 @@ const handley = (bool = false) => {
             :key="index"
           >
             <div class="image">
-              <img
-                src="https://static.cmereye.com/imgs/2024/05/ee9c1ce6cd3e202d.png"
-                alt=""
-              />
+              <img :src="item.img" :alt="item.name" />
             </div>
             <h3>{{ item.name }}</h3>
             <p>{{ item.text }}</p>
@@ -430,33 +434,143 @@ const handley = (bool = false) => {
             </div>
           </div>
         </div>
-        <div class="step-info">
-          <div class="infobg" ref="infobg">
-            <img
-              srcset="
-                https://static.cmereye.com/imgs/2024/05/cbb4198d0a4133a5.png  768w,
-                https://static.cmereye.com/imgs/2024/05/c1fd7f501e059f40.webp
-              "
-              src="https://static.cmereye.com/imgs/2024/05/c1fd7f501e059f40.webp"
-              alt=""
-            />
-            <div :class="{ anim: top < 350 }">
-              <p>牙齒美白不僅是對的投資，更是對<span>自我信心</span>的提升。</p>
-              <p>
-                讓我們幫助您擁有一個<span>閃耀的笑容</span>，展現出最好的自己。
-              </p>
+      </div>
+      <div class="share_video_eg">
+        <div class="share_video_eg_head">
+          <div class="index_title pageCon">真實見證：美白蛻變之旅</div>
+          <a
+            v-if="windowWidth > 768"
+            href="https://www.youtube.com/@ckjhkofficial"
+            target="_blank"
+          >
+            <div>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="44"
+                height="36"
+                viewBox="0 0 44 36"
+                fill="none"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M41.6583 2.69702C42.341 3.48136 42.8312 4.45663 43.08 5.52523C44 9.46938 44 17.6944 44 17.6944C44 17.6944 44 25.9195 43.08 29.8637C42.8312 30.9323 42.341 31.9075 41.6583 32.6919C40.9756 33.4762 40.1245 34.0421 39.19 34.3329C35.75 35.3889 22 35.3889 22 35.3889C22 35.3889 8.25 35.3889 4.81 34.3329C3.87554 34.0421 3.02438 33.4762 2.34169 32.6919C1.65901 31.9075 1.16876 30.9323 0.92 29.8637C0 25.9195 0 17.6944 0 17.6944C0 17.6944 0 9.46938 0.92 5.52523C1.16876 4.45663 1.65901 3.48136 2.34169 2.69702C3.02438 1.91268 3.87554 1.34678 4.81 1.05596C8.25 0 22 0 22 0C22 0 35.75 0 39.19 1.05596C40.1245 1.34678 40.9756 1.91268 41.6583 2.69702ZM29.0078 17.6953L17.5078 10.2266V25.1641L29.0078 17.6953Z"
+                  fill="#FC1682"
+                />
+              </svg>
+            </div>
+            <div>@ckjhkofficial</div>
+          </a>
+        </div>
+        <div class="share_video_eg_content">
+          <div>
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/Ti7Mms_BJoI?si=bYmCsY62ijEEZz-H"
+            >
+            </iframe>
+            <div>
+              【深圳探店】忠實用家體驗深圳愛康健美白牙齒服務<br />
+              真實分享！｜ftRyan@RM Channel
             </div>
           </div>
-          <div class="lists">
-            <div
-              class="lists-in"
-              v-for="(item, index) in stepData.infoLists"
-              :key="index"
-            >
-              <div class="centerBox">
-                <h3>{{ item.name }}</h3>
-                <p>{{ item.text }}</p>
+          <div v-if="windowWidth > 768">
+            <div>
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/xfJJtkkk2Dk?si=7l4B2EnrDt89jwAf"
+              ></iframe>
+              <div>
+                【深圳探店】第一次體驗愛康健洗牙? 輕鬆幫你KO頑固牙漬｜ft
+                Starry星星
               </div>
+            </div>
+            <div>
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/lt49gozXD2A?si=csnmcxMOrAhCgOLB"
+              ></iframe>
+              <div>
+                【深圳探店】深圳洗牙初體驗 過程舒服 手勢純熟 物超所值｜ft
+                FiFi海晴@Fi系旅遊
+              </div>
+            </div>
+          </div>
+          <div v-else>
+            <Swiper
+              :loop="true"
+              :modules="[Autoplay]"
+              :autoplay="{
+                delay: 3000,
+              }"
+              @swiper="setNewsSwiperRef"
+              @slideChange="onSlideChange"
+            >
+              <Swiper-slide>
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/xfJJtkkk2Dk?si=7l4B2EnrDt89jwAf"
+                ></iframe>
+                <div>
+                  【深圳探店】第一次體驗愛康健洗牙? 輕鬆幫你KO頑固牙漬｜ft
+                  Starry星星
+                </div>
+              </Swiper-slide>
+              <Swiper-slide>
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src="https://www.youtube.com/embed/lt49gozXD2A?si=csnmcxMOrAhCgOLB"
+                ></iframe>
+                <div>
+                  【深圳探店】深圳洗牙初體驗 過程舒服 手勢純熟 物超所值｜ft
+                  FiFi海晴@Fi系旅遊
+                </div>
+              </Swiper-slide>
+            </Swiper>
+          </div>
+          <div
+            class="index-latestNews-line brandConcept-line"
+            v-if="windowWidth < 767"
+          >
+            <PageSwiperPointLine
+              :latestNewsNum="2"
+              :latestNewsCurrent="currtNew"
+              @changeLineCur="handleLineCur"
+            ></PageSwiperPointLine>
+          </div>
+        </div>
+      </div>
+      <div class="step-info">
+        <div class="infobg" ref="infobg">
+          <img
+            srcset="
+              https://static.cmereye.com/imgs/2024/05/cbb4198d0a4133a5.png  768w,
+              https://static.cmereye.com/imgs/2024/05/c1fd7f501e059f40.webp
+            "
+            src="https://static.cmereye.com/imgs/2024/05/c1fd7f501e059f40.webp"
+            alt=""
+          />
+          <div :class="{ anim: top < 350 }">
+            <p>牙齒美白不僅是對的投資，更是對<span>自我信心</span>的提升。</p>
+            <p>
+              讓我們幫助您擁有一個<span>閃耀的笑容</span>，展現出最好的自己。
+            </p>
+          </div>
+        </div>
+        <div class="lists">
+          <div
+            class="lists-in"
+            v-for="(item, index) in stepData.infoLists"
+            :key="index"
+          >
+            <div class="centerBox">
+              <h3>{{ item.name }}</h3>
+              <p>{{ item.text }}</p>
             </div>
           </div>
         </div>
@@ -560,6 +674,30 @@ const handley = (bool = false) => {
           </div>
           <div class="effect-r-b">
             <PageAnimBtnTypeTwo :str="'點擊預約'" />
+          </div>
+        </div>
+      </div>
+      <div class="note">
+        <div class="dentistryServices-title">
+          <div class="dentistryServices-title-in bb">
+            {{ newnoteData.title }}
+          </div>
+        </div>
+        <div class="note-content">
+          <div class="note-content-l">
+            <img
+              src="https://static.cmereye.com/imgs/2024/05/a0567b485d4d93be.webp"
+              alt=""
+            />
+          </div>
+          <div class="note-content-r">
+            <div
+              v-for="(noteItem, noteIndex) in newnoteData.lists"
+              :key="noteIndex"
+            >
+              <span>·</span>
+              <span>{{ $t(noteItem.name) }}</span>
+            </div>
           </div>
         </div>
       </div>
@@ -1404,6 +1542,89 @@ const handley = (bool = false) => {
     transform: scale(1) translate(0);
   }
 }
+.two_banner {
+  :deep(.introduce-in) {
+    background: none !important;
+    height: auto !important;
+    .introduce_content {
+      display: none !important;
+    }
+  }
+}
+.share_video_eg {
+  max-width: 1356px;
+  margin: 0 auto;
+  position: relative;
+  :deep(.pageCon) {
+    width: 100% !important;
+  }
+  .share_video_eg_head {
+    & > a {
+      position: absolute;
+      right: 0;
+      top: 0;
+      color: var(--Grey-Deep, #4d4d4d);
+      text-align: center;
+      font-family: FakePearl;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 35.2px */
+      display: flex;
+      align-items: center;
+      gap: 0 10px;
+    }
+  }
+  .share_video_eg_content {
+    margin-top: 38px;
+    margin-bottom: 35px;
+    display: flex;
+    gap: 0 33px;
+    & > div:nth-child(1) {
+      width: clamp(540px, 540px, 540px);
+      & > iframe {
+        height: clamp(305px, 305px, 305px);
+      }
+      & > div {
+        margin-top: 15px;
+        box-sizing: border-box;
+        padding: 0 20px;
+        color: #4d4d4d;
+        text-align: justify;
+        font-family: FakePearl;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 32px */
+        min-height: 96px;
+      }
+    }
+    & > div:nth-child(2) {
+      display: flex;
+      align-items: flex-end;
+      gap: 0 33px;
+      & > div {
+        width: clamp(375px, 375px, 375px);
+        & > iframe {
+          height: clamp(211px, 211px, 211px);
+        }
+        & > div {
+          color: var(--Grey-Deep, #4d4d4d);
+          text-align: justify;
+          font-family: FakePearl;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 160%; /* 32px */
+          margin-top: 15px;
+          box-sizing: border-box;
+          padding: 0 20px;
+          min-height: 96px;
+        }
+      }
+    }
+  }
+}
 @media (min-width: 768px) and (max-width: 1920px) {
   .condition {
     margin-top: 7.6563vw;
@@ -1729,6 +1950,60 @@ const handley = (bool = false) => {
 }
 
 @media only screen and (max-width: 768px) {
+  .share_video_eg {
+    overflow: hidden;
+    box-sizing: border-box;
+    opacity: 0.8;
+    padding: 20px;
+    background: #fff7f6;
+    max-width: 100%;
+    .share_video_eg_content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      & > div:nth-child(1) {
+        width: 325px;
+        & > iframe {
+          height: 183px;
+        }
+        & > div {
+          margin-top: 10px;
+          color: var(--Grey-Deep, #4d4d4d);
+          text-align: justify;
+          font-family: FakePearl;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 160%; /* 32px */
+          padding: 0;
+        }
+      }
+      & > div:nth-child(2) {
+        width: 325px;
+        margin-top: 40px;
+        .swiper-slide {
+          & > iframe {
+            height: 183px;
+          }
+          & > div {
+            margin-top: 10px;
+            color: var(--Grey-Deep, #4d4d4d);
+            text-align: justify;
+            font-family: FakePearl;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%; /* 32px */
+            padding: 0;
+          }
+        }
+      }
+      .index-latestNews-line {
+        width: 35%;
+        margin: 20px auto 0;
+      }
+    }
+  }
   :deep(.explain_box_mobile) {
     top: 0 !important;
     margin-left: 0 !important;
@@ -1749,7 +2024,7 @@ const handley = (bool = false) => {
       z-index: 35;
     }
     .waterBg-implant::after,
-    .waterBg-implant::before{
+    .waterBg-implant::before {
       height: 25.33vw;
     }
   }
@@ -1918,15 +2193,15 @@ const handley = (bool = false) => {
     }
   }
   .Blue_light_whitening_technology {
-    margin-top: 80px;
+    margin-top: 30px;
     padding: 0 30px;
     &-topText {
       margin-top: 35px;
       p {
         line-height: 200%; /* 32px */
         letter-spacing: 1.6px;
-        font-size: 16px;
-        padding: 0 15px;
+        font-size: clamp(12px, 4.265vw, 16px);
+        padding: 0;
         &:nth-of-type(2) {
           display: block;
         }
@@ -1934,22 +2209,28 @@ const handley = (bool = false) => {
     }
     &-content {
       grid-template-columns: repeat(2, 1fr);
-      gap: 30px 38px;
+      gap: 30px 18px;
       margin-top: 45px;
       .lists-in {
         .image {
           img {
-            width: 98px;
-            height: 98px;
+            width: 41.6vw;
+            height: 41.6vw;
           }
         }
         h3 {
-          font-size: 16px;
+          font-size: clamp(12px, 4.265vw, 16px);
+          margin: 12px auto;
         }
         p {
-          font-size: 12px;
-          letter-spacing: 1.2px;
           padding: 0 5px;
+          color: #4d4d4d;
+          font-family: FakePearl;
+          font-size: clamp(10px, 3.2vw, 12px);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 160%; /* 19.2px */
+          letter-spacing: 1.2px;
         }
       }
     }

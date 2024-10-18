@@ -38,14 +38,32 @@ const navFormClose = () => {
 }
 
 const toContactUs = () => {
-  // window.location.href = '#contactUsFormNav'
   const el = document.getElementById('contactUsFormNav')
   if (el) {
     el.scrollIntoView({ behavior: 'smooth' })
   }
-  // else{
-  //   handleNavFormNav()
-  // }
+}
+onMounted(() => {
+  window.addEventListener('scroll', hiddenPopupAlert)
+})
+const hiddenPopupAlert = () => {
+  const popupAlert = document.getElementById('popup-alert')
+  if (!popupAlert) return // Early exit if popupAlert is not found
+  const contactForm = ref<HTMLElement | null>(null);
+  contactForm.value = document.querySelector('.contactForm')
+  if (!contactForm.value) return // Early exit if contactForm is not found
+
+  const scrollTop =
+    document.documentElement.scrollTop || document.body.scrollTop
+  const contactFormTop = contactForm.value.offsetTop
+  const targetHeight = contactForm.value.offsetHeight
+  const windowHeight =
+    window.innerHeight || document.documentElement.clientHeight
+  const isInView =
+    contactFormTop < scrollTop + windowHeight &&
+    contactFormTop + targetHeight > scrollTop
+
+  popupAlert.style.display = isInView ? 'none' : 'flex'
 }
 
 const centerDialogVisible = ref(false)
