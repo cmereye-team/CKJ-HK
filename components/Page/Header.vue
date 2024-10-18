@@ -154,6 +154,14 @@ const handleMenuChild = (_menu: any, _idx: number) => {
     appState.setCurNum(_idx)
     menuBoxBool.value = false
   }
+  if (route.name == 'contactUs') {
+    appState.setCurNum(_idx)
+    menuBoxBool.value = false
+  }
+  if (route.name == 'brand-course') {
+    appState.setCurNum(_idx)
+    menuBoxBool.value = false
+  }
 }
 const classNamefilter = (_menu: any, _idx: number) => {
   let className = ''
@@ -2273,6 +2281,7 @@ const hideDiv = () => {
       align-items: center;
       margin: 0;
       padding: 5.3vw 0 5.3vw 5.3vw;
+      background: #fff;
       .logo {
         width: 33.3vw;
         margin-bottom: 0;
