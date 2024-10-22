@@ -1453,7 +1453,7 @@ watch(
       z-index: 35;
     }
     .waterBg-implant::after{
-      height: 25.33vw;
+        bottom: -28vw;
     }
   }
   .tabNav {

@@ -25,7 +25,7 @@ useHead({
 
 const headerConfig = {
   img: 'https://ckjhk.com/images/e7bcb6e21e1d.avif',
-  mbImg: 'https://ckjhk.com/images/dc9f477ad4dc.avif',
+  mbImg: 'https://ckjhk.com/images/0849d7968bbd.avif',
   bg: '',
   pageName: 'implant',
   pcText: ['享受失而復得的喜悅', '重拾完整人生之旅'],
@@ -2464,7 +2464,7 @@ const { height } = useWindowSize()
     }
     .waterBg-implant::after,
     .waterBg-implant::before{
-      height: 25.33vw;
+        bottom: -28vw;
     }
   }
   @keyframes identifier {

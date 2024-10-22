@@ -23,7 +23,7 @@ useHead({
 
 const headerConfig = {
   img: 'https://ckjhk.com/images/e024c11b5ba1.avif',
-  mbImg: 'https://ckjhk.com/images/4b08dbb3e679.avif',
+  mbImg: 'https://ckjhk.com/images/82fe225f004b.avif',
   bg: '',
   pageName: 'orthodontics-test',
   pcText: ['追求美學極致，展現最燦爛笑容', '愛康健為愛美的您打造完美面部輪廓'],

@@ -628,7 +628,7 @@ const hideDiv = () => {
                       { 'langItem-act': appState.langs === 's' },
                     ]"
                   >
-                    <span class="zh_click" @click="glangs('s')">简体</span>
+                    <span class="zh_click" @click="glangs('s')">簡體</span>
                   </div>
                 </div>
               </div>
@@ -713,7 +713,7 @@ const hideDiv = () => {
               'font-family': '微软雅黑',
             }"
             @click="glangs('s')"
-            >简体中文</span
+            >簡體中文</span
           >
         </div>
         <!-- 立即預約 -->
@@ -1172,10 +1172,12 @@ const hideDiv = () => {
               .menuChild-item {
                 & > span {
                   color: var(--textColor);
+                  white-space: nowrap;
                 }
                 &.langItem-act {
                   & > span {
                     color: var(--indexColor1);
+                    white-space: nowrap;
                   }
                 }
               }

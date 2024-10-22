@@ -111,15 +111,15 @@ const menuLists: any = [
     child: [
       {
         name: 'components.header.menuLists.menu_contactUs.come_route',
-        link: '/contactUs#contactUs'
+        link: '/contactUs#contactUs',
       },
       {
         name: 'components.header.menuLists.menu_contactUs.appeal',
-        link: '/contactUs#appeal'
+        link: '/contactUs#appeal',
       },
       {
         name: 'components.header.menuLists.menu_contactUs.Q&A',
-        link: '/contactUs#Q&A'
+        link: '/contactUs#Q&A',
       },
     ],
   },
@@ -499,7 +499,7 @@ const handleopenwechat = () => {
                     { 'langItem-act': appState.langs === 's' },
                   ]"
                 >
-                  <span class="zh_click" @click="glangs('s')">简体</span>
+                  <span class="zh_click" @click="glangs('s')">簡體</span>
                 </div>
               </div>
             </div>

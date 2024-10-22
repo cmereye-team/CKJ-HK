@@ -23,7 +23,7 @@ useHead({
 
 const headerConfig = {
   img: 'https://ckjhk.com/images/3ec0077781bc.avif',
-  mbImg: 'https://ckjhk.com/images/cc951ce33ba9.avif',
+  mbImg: 'https://ckjhk.com/images/a66a9b2de05f.avif',
   bg: '',
   pageName: 'scaling-and-polishing-test',
   pcText: [],
@@ -897,7 +897,7 @@ const handleServicesInclude = (index) => {
     }
     .waterBg-implant::after,
     .waterBg-implant::before{
-      height: 25.33vw;
+        bottom: -28vw;
     }
   }
   .notice {

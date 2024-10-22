@@ -27,7 +27,7 @@ useHead({
 
 const headerConfig = {
   img: 'https://ckjhk.com/images/f0cd2339d256.avif',
-  mbImg: 'https://ckjhk.com/images/2f4ba652b04f.avif',
+  mbImg: 'https://ckjhk.com/images/1b57745f2e29.avif',
   bg: '',
   pageName: 'scaling-and-polishing-test',
   pcText: [],
@@ -2025,7 +2025,7 @@ const onSlideChange = (swiper: any) => {
     }
     .waterBg-implant::after,
     .waterBg-implant::before {
-      height: 25.33vw;
+        bottom: -28vw;
     }
   }
   .notice {

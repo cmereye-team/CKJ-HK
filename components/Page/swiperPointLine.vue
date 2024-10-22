@@ -69,15 +69,15 @@ onMounted(()=>{
     }
     .boxRound{
       position: absolute;
-      top: -10px;
+      top: -7px;
       left: 0;
       width: 100%;
       display: flex;
       justify-content: space-between;
       cursor: pointer;
       &-in{
-        width: 24px;
-        height: 24px;
+        width: 16px;
+        height: 16px;
         background: var(--indexColor2);
         border-radius: 50%;
         .current{

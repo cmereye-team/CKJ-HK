@@ -40,7 +40,7 @@ const orthodonticsIntroduceData = {
 
 const headerConfig = {
   img: 'https://ckjhk.com/images/0f2fb503658a.avif',
-  mbImg: 'https://ckjhk.com/images/aef7959f481f.avif',
+  mbImg: 'https://ckjhk.com/images/9750a0dae653.avif',
   bg: '',
   pageName: 'scaling-and-polishing-test',
   pcText: [],
@@ -1528,7 +1528,7 @@ onMounted(() => {
     }
     .waterBg-implant::after,
     .waterBg-implant::before{
-      height: 25.33vw;
+        bottom: -28vw;
     }
   }
   .mobile_orthodontics {

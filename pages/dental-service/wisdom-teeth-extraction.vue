@@ -23,7 +23,7 @@ useHead({
 
 const headerConfig = {
   img: 'https://ckjhk.com/images/61810bbd8210.avif',
-  mbImg: 'https://ckjhk.com/images/381d508a5442.avif',
+  mbImg: 'https://ckjhk.com/images/eb5a199255c1.avif',
   bg: '',
   pageName: 'scaling-and-polishing-test',
   pcText: [],
@@ -1343,7 +1343,7 @@ onMounted(() => {
     }
     .waterBg-implant::after,
     .waterBg-implant::before{
-      height: 25.33vw;
+        bottom: -28vw;
     }
   }
   .point_solution_requires_tooth_extraction {

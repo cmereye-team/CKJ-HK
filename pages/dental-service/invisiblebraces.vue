@@ -23,7 +23,7 @@ useHead({
 
 const headerConfig = {
   img: 'https://ckjhk.com/images/ad624c2bda06.avif',
-  mbImg: 'https://ckjhk.com/images/8c62f7575d82.avif',
+  mbImg: 'https://ckjhk.com/images/d0780cf9a727.avif',
   bg: '',
   pageName: 'invisalign-test',
   pcText: ['自由．舒適．美觀', '保持自然笑容 牙齒更加美麗動人'],

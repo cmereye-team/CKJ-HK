@@ -805,7 +805,8 @@ const problemData = {
     }
     .waterBg-implant::after,
     .waterBg-implant::before {
-      height: 20.33vw;
+      // height: 20.33vw;
+      bottom: -30vw;
     }
     .coverage {
       padding-bottom: 0 !important;

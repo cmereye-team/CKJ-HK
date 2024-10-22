@@ -1344,7 +1344,7 @@ onMounted(() => {
       z-index: 35;
     }
     .waterBg-implant::after{
-      height: 25.33vw;
+        bottom: -28vw;
     }
   }
   .point_solution_requires_tooth_extraction {

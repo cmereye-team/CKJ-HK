@@ -23,7 +23,7 @@ useHead({
 
 const headerConfig = {
   img: 'https://ckjhk.com/images/3b3f4da9e25a.avif',
-  mbImg: 'https://ckjhk.com/images/ccbf250ef028.avif',
+  mbImg: 'https://ckjhk.com/images/1593fce46297.avif',
   bg: '',
   pageName: 'veneers-test',
   pcText: ['自訂零死角潔白微笑線', '展現自信微笑'],

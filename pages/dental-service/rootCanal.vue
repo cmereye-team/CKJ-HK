@@ -27,7 +27,7 @@ useHead({
 
 const headerConfig = {
   img: 'https://ckjhk.com/images/d69e0a71aed5.avif',
-  mbImg: 'https://ckjhk.com/images/bcaa8401b557.avif',
+  mbImg: 'https://ckjhk.com/images/c1ce4d342670.avif',
   bg: '',
   pageName: 'rootCanal-test',
   pcText: [
@@ -1290,7 +1290,7 @@ let newsMessageSwiperRef = {
     }
     .waterBg-implant::after,
     .waterBg-implant::before{
-      height: 25.33vw;
+        bottom: -28vw;
     }
   }
   .reason {

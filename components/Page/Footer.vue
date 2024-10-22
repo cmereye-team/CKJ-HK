@@ -72,15 +72,15 @@ const handleopenwechat = () => {
 <template>
   <div class="bgColor footerBox">
     <!-- <div class="footer-l"> -->
-      <div class="footer-content bigPageCon">
-        <div class="footer-content-nav">
+    <div class="footer-content bigPageCon">
+      <!-- <div class="footer-content-nav">
         <div v-for="(navItem, navIndex) in navLists" :key="navIndex">
           <nuxt-link :to="navItem.link" :title="$t(navItem.name)">
             {{ $t(navItem.name) }}
           </nuxt-link>
         </div>
-      </div>
-        <div class="footer-content-logo_one">
+      </div> -->
+      <div class="footer-content-logo_one">
           <nuxt-link
             :to="'/'"
             title="深圳愛康健口腔醫院"
@@ -89,7 +89,7 @@ const handleopenwechat = () => {
             <img src="@/assets/images/footerLogo.svg" alt="logo" />
           </nuxt-link>
         </div>
-        <div class="footer-content-text">
+      <div class="footer-content-text">
           {{ $t('components.footer.text1') }} {{ '\n'
           }}{{ $t('components.footer.text2') }}
           <nuxt-link :to="`tel: ${phoneNum}`" class="footer-content-text-tel">
@@ -97,75 +97,75 @@ const handleopenwechat = () => {
             <span>香港熱線：(852) {{ smallPhoneNum }}</span>
           </nuxt-link>
         </div>
-        <div class="footer-content-icon">
-          <div class="footer-content-icon-in">
-            <nuxt-link
-              to="https://www.facebook.com/ckjdental.hk/"
-              target="_blank"
-            >
-              <img
-                src="@/assets/images/icon_1.png"
-                alt="facebook"
-                title="facebook"
-              />
-            </nuxt-link>
-          </div>
-          <div class="footer-content-icon-in">
-            <nuxt-link to="https://www.instagram.com/ckj_hk/" target="_blank">
-              <img
-                src="@/assets/images/icon_2.png"
-                alt="instagram"
-                title="instagram"
-              />
-            </nuxt-link>
-          </div>
-          <div class="footer-content-icon-in">
-            <nuxt-link
-              to="https://www.youtube.com/channel/UC4AQD5eeOiHIGd3QYFGK4aA"
-              target="_blank"
-            >
-              <img
-                src="@/assets/images/icon_3.png"
-                alt="youtube"
-                title="youtube"
-              />
-            </nuxt-link>
-          </div>
-          <div class="footer-content-icon-in">
-            <div class="weChat">
-              <img src="@/assets/images/navIcon_3.png" alt="weChat" />
-              <div class="navbarBox">
-                <div class="navbarBox-in">
-                  <div class="weChat">
-                    <img
-                      src="https://static.cmereye.com/imgs/2023/09/a43a869a1fc07eea.jpg"
-                      alt="二维码"
-                    />
-                  </div>
+      <div class="footer-content-icon">
+        <div class="footer-content-icon-in">
+          <nuxt-link
+            to="https://www.facebook.com/ckjdental.hk/"
+            target="_blank"
+          >
+            <img
+              src="@/assets/images/icon_1.png"
+              alt="facebook"
+              title="facebook"
+            />
+          </nuxt-link>
+        </div>
+        <div class="footer-content-icon-in">
+          <nuxt-link to="https://www.instagram.com/ckj_hk/" target="_blank">
+            <img
+              src="@/assets/images/icon_2.png"
+              alt="instagram"
+              title="instagram"
+            />
+          </nuxt-link>
+        </div>
+        <div class="footer-content-icon-in">
+          <nuxt-link
+            to="https://www.youtube.com/channel/UC4AQD5eeOiHIGd3QYFGK4aA"
+            target="_blank"
+          >
+            <img
+              src="@/assets/images/icon_3.png"
+              alt="youtube"
+              title="youtube"
+            />
+          </nuxt-link>
+        </div>
+        <div class="footer-content-icon-in">
+          <div class="weChat">
+            <img src="@/assets/images/navIcon_3.png" alt="weChat" />
+            <div class="navbarBox">
+              <div class="navbarBox-in">
+                <div class="weChat">
+                  <img
+                    src="https://static.cmereye.com/imgs/2023/09/a43a869a1fc07eea.jpg"
+                    alt="二维码"
+                  />
                 </div>
               </div>
             </div>
-            <div class="weChat-mb" @click="handlecopywechatcode()">
-              <img src="@/assets/images/navIcon_3.png" alt="weChat" />
-            </div>
+          </div>
+          <div class="weChat-mb" @click="handlecopywechatcode()">
+            <img src="@/assets/images/navIcon_3.png" alt="weChat" />
           </div>
         </div>
-        <div class="footer-content-Disclaimer">
-          <nuxt-link to="/privacyPolicy">{{
-            $t('components.footer.privacy_policy')
-          }}</nuxt-link>
-          &
-          <nuxt-link to="/disclaimer">{{
-            $t('components.footer.disclaimer')
-          }}</nuxt-link>
-        </div>
-        <div class="footer-content-copyright">
-          ©2024 {{ $t('components.footer.all_rights_reserved') }}
-        </div>
-        <div class="footer-content-copyright">
-          本網站資訊僅供參考，不能作診療及醫療為依據
-        </div>
       </div>
+      <div class="footer-content-Disclaimer">
+        <nuxt-link to="/privacyPolicy">{{
+          $t('components.footer.privacy_policy')
+        }}</nuxt-link>
+        &
+        <nuxt-link to="/disclaimer">{{
+          $t('components.footer.disclaimer')
+        }}</nuxt-link>
+      </div>
+      <div class="footer-content-copyright">
+        ©2024 {{ $t('components.footer.all_rights_reserved') }}
+      </div>
+      <div class="footer-content-copyright">
+        本網站資訊僅供參考，不能作診療及醫療為依據
+      </div>
+    </div>
     <!-- </div>
     <div class="footer-c">
       <div class="footer-c-nav">
@@ -297,7 +297,7 @@ const handleopenwechat = () => {
 //       display: flex;
 //       flex-direction: column;
 //       font-size: 22px;
-//       line-height: 160%; 
+//       line-height: 160%;
 //       color: #fff;
 //       &>div{
 //         margin: 10px 0;
@@ -384,7 +384,7 @@ const handleopenwechat = () => {
     }
   }
   &-icon {
-    margin-top: 30px;
+    // margin-top: 30px;
     display: flex;
     &-in {
       padding: 0 12.5px;
@@ -485,7 +485,7 @@ const handleopenwechat = () => {
       }
     }
     &-icon {
-      margin-top: 1.5625vw;
+      // margin-top: 1.5625vw;
       &-in {
         padding: 0 0.651vw;
         .weChat {

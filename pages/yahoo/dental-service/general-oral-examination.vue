@@ -897,7 +897,7 @@ const handleServicesInclude = (index) => {
     }
     .waterBg-implant::after,
     .waterBg-implant::before{
-      height: 25.33vw;
+        bottom: -28vw;
     }
   }
   .notice {
