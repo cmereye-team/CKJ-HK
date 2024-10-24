@@ -513,7 +513,8 @@ const caseLists = [
       <ContactForm-new />
     </div>
     <PageFooter />
-    <PageNavbar />
+    <PageNewNavbarSide v-if="windowWidth > 768" />
+    <PageNavbar v-else />
   </div>
 </template>
 

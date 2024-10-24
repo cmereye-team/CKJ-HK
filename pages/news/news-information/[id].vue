@@ -266,6 +266,15 @@ const handlegetData = () => {
 if (process.server) {
   getDetail()
 }
+let windowWidth = ref(390)
+
+const getWindowWidth = () => {
+  windowWidth.value = window.innerWidth
+}
+onMounted(() => {
+  getWindowWidth()
+  window.addEventListener('resize', getWindowWidth)
+})
 </script>
 
 <template>
@@ -406,10 +415,11 @@ if (process.server) {
       </div>
       <!-- <div @click="handlegetData">獲取數據</div> -->
       <NewAddress />
-     <ContactForm-new />
+      <ContactForm-new />
     </div>
     <PageFooter />
-    <PageNavbar />
+    <PageNewNavbarSide v-if="windowWidth > 768" />
+    <PageNavbar v-else />
   </div>
 </template>
 
@@ -680,7 +690,6 @@ if (process.server) {
   }
 }
 @media screen and (max-width: 768px) {
-  
   :deep(iframe) {
     max-width: 100%;
     height: auto;

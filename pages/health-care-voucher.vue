@@ -1308,7 +1308,9 @@ const newsmoduleLists = [
       <ContactForm-new />
     </div>
     <PageFooter />
-    <PageNavbar :langType="langCur" />
+    <!-- <PageNavbar :langType="langCur" /> -->
+    <PageNewNavbarSide v-if="windowWidth > 768" />
+    <PageNavbar :langType="langCur" v-else />
   </div>
 </template>
 
@@ -1428,7 +1430,7 @@ const newsmoduleLists = [
       background: #fff;
       box-shadow: 6px 6px 0px 0px rgba(252, 22, 130, 0.3);
       & > div:nth-child(1) {
-        padding: clamp(10px, 0.05vw,30px) 0 15px;
+        padding: clamp(10px, 0.05vw, 30px) 0 15px;
         color: #14a033;
         text-align: center;
         font-family: FakePearl;
@@ -1440,7 +1442,7 @@ const newsmoduleLists = [
       }
       & > div:nth-child(2) {
         box-sizing: border-box;
-        padding: 20px clamp(10px, 0.05vw,30px);
+        padding: 20px clamp(10px, 0.05vw, 30px);
         border-radius: var(--Count, 0px) var(--Count, 0px) 30px 30px;
         background: var(--Pink-Pale, #fee6f1);
       }

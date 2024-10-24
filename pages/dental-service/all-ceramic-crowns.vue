@@ -167,6 +167,15 @@ const problemData = {
     },
   ],
 }
+let windowWidth = ref(390)
+
+const getWindowWidth = () => {
+  windowWidth.value = window.innerWidth
+}
+onMounted(() => {
+  getWindowWidth()
+  window.addEventListener('resize', getWindowWidth)
+})
 </script>
 
 
@@ -334,7 +343,8 @@ const problemData = {
       <ContactForm-new />
     </div>
     <PageFooter />
-    <PageNavbar />
+    <PageNewNavbarSide v-if="windowWidth > 768" />
+    <PageNavbar v-else />
   </div>
 </template>
 
@@ -920,7 +930,7 @@ const problemData = {
     }
     .waterBg-implant::after,
     .waterBg-implant::before {
-        bottom: -28vw;
+      bottom: -28vw;
     }
   }
   .ltimg {

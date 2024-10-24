@@ -1495,9 +1495,11 @@ const { height } = useWindowSize()
       <ContactForm-new />
     </div>
     <PageFooter />
-    <PageNavbar
+    <!-- <PageNavbar
       :showDialogBox="top < (height / 3) * 2 && bottom > height / 3"
-    />
+    /> -->
+    <PageNewNavbarSide v-if="windowWidth > 768" />
+    <PageNavbar v-else />
   </div>
 </template>
 
@@ -2463,8 +2465,8 @@ const { height } = useWindowSize()
       z-index: 35;
     }
     .waterBg-implant::after,
-    .waterBg-implant::before{
-        bottom: -28vw;
+    .waterBg-implant::before {
+      bottom: -28vw;
     }
   }
   @keyframes identifier {

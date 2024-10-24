@@ -149,6 +149,15 @@ const handleServicesInclude = (index) => {
   services_include_cur.value = index
   swiperRef.slideToLoop(index)
 }
+let windowWidth = ref(390)
+
+const getWindowWidth = () => {
+  windowWidth.value = window.innerWidth
+}
+onMounted(() => {
+  getWindowWidth()
+  window.addEventListener('resize', getWindowWidth)
+})
 </script>
 
 
@@ -318,10 +327,11 @@ const handleServicesInclude = (index) => {
       <ServiceProblem :problemData="problemData" />
       <serviceCard />
       <NewAddress />
-     <ContactForm-new />
+      <ContactForm-new />
     </div>
     <PageFooter />
-    <PageNavbar />
+    <PageNewNavbarSide v-if="windowWidth > 768" />
+    <PageNavbar v-else />
   </div>
 </template>
 
@@ -896,8 +906,8 @@ const handleServicesInclude = (index) => {
       z-index: 35;
     }
     .waterBg-implant::after,
-    .waterBg-implant::before{
-        bottom: -28vw;
+    .waterBg-implant::before {
+      bottom: -28vw;
     }
   }
   .notice {

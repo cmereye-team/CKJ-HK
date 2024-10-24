@@ -822,7 +822,8 @@ const onSlideChange = (swiper: any) => {
       <ContactForm-new />
     </div>
     <PageFooter />
-    <PageNavbar />
+    <PageNewNavbarSide v-if="windowWidth > 768" />
+    <PageNavbar v-else />
   </div>
 </template>
 
@@ -2025,7 +2026,7 @@ const onSlideChange = (swiper: any) => {
     }
     .waterBg-implant::after,
     .waterBg-implant::before {
-        bottom: -28vw;
+      bottom: -28vw;
     }
   }
   .notice {

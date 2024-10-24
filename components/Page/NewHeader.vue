@@ -208,7 +208,9 @@ let bannerLists = ref([
 ])
 onMounted(() => {
   getScrollHeight()
+  getWindowWidth()
   window.addEventListener('scroll', getScrollHeight)
+  window.addEventListener('resize', getWindowWidth)
   setTimeout(() => {
     if (route.path.includes('/cn')) {
       changlangsfun('s')
@@ -335,6 +337,12 @@ const handlecopywechatcode = () => {
 const handleopenwechat = () => {
   window.location.href = 'weixin://'
 }
+
+const windowWidth = ref(1920)
+
+const getWindowWidth = () => {
+  windowWidth.value = window.innerWidth
+}
 </script>
 
 <template>
@@ -415,7 +423,10 @@ const handleopenwechat = () => {
           headerConfig.pageName,
         ]"
       >
-        <div ref="headerMenu" class="pageCon header-content-in">
+        <div
+          ref="headerMenu"
+          class="pageCon header-content-in health_max_width"
+        >
           <div class="logo">
             <nuxt-link
               :to="'/'"
@@ -423,85 +434,99 @@ const handleopenwechat = () => {
               alt="深圳愛康健口腔醫院"
               ><img src="@/assets/images/logo_11.svg" alt=""
             /></nuxt-link>
+            <div v-if="windowWidth > 768" class="health_care_voucher">
+              <span>香港長者醫療券</span>
+              <span>政府指定預約網站</span>
+            </div>
           </div>
           <div class="menu">
-            <div
-              v-for="(menuItem, menuIndex) in menuLists"
-              :key="menuIndex"
-              class="menuItem"
-            >
-              <nuxt-link
-                :class="[
-                  menuItem.child.length ? 'triangleIcon' : '',
-                  {
-                    'health-care-voucher':
-                      menuItem.link === '/health-care-voucher',
-                  },
-                  {
-                    'federation-of-trade-unions-zone':
-                      menuItem.link === '/federation-of-trade-unions-zone',
-                  },
-                ]"
-                :to="
-                  ['/news', '/dental-service'].includes(menuItem.link)
-                    ? 'javaScript:void(0)'
-                    : menuItem.link
-                "
-                :title="$t(menuItem.name)"
-              >
-                <span>{{ $t(menuItem.name) }}</span>
-              </nuxt-link>
+            <div>
               <div
-                v-if="menuItem.child.length"
-                class="menuChild"
-                :class="{
-                  serviceCard: menuItem.link.includes('/dental-service'),
-                }"
+                v-for="(menuItem, menuIndex) in menuLists"
+                :key="menuIndex"
+                class="menuItem"
               >
-                <div
-                  v-for="(menuChildItem, menuChildIndex) in menuItem.child"
-                  :key="menuChildIndex"
+                <nuxt-link
                   :class="[
-                    'menuChild-item',
-                    classNamefilter(menuChildItem, menuChildIndex),
+                    menuItem.child.length ? 'triangleIcon' : '',
+                    {
+                      'health-care-voucher':
+                        menuItem.link === '/health-care-voucher',
+                    },
+                    {
+                      'federation-of-trade-unions-zone':
+                        menuItem.link === '/federation-of-trade-unions-zone',
+                    },
                   ]"
-                  @click.stop="handleMenuChild(menuItem, menuChildIndex)"
+                  :to="
+                    ['/news', '/dental-service'].includes(menuItem.link)
+                      ? 'javaScript:void(0)'
+                      : menuItem.link
+                  "
+                  :title="$t(menuItem.name)"
                 >
-                  <nuxt-link
-                    :to="menuChildItem.link"
-                    :class="{ hot: menuChildItem.isHot }"
+                  <span>{{ $t(menuItem.name) }}</span>
+                </nuxt-link>
+                <div
+                  v-if="menuItem.child.length"
+                  class="menuChild"
+                  :class="{
+                    serviceCard: menuItem.link.includes('/dental-service'),
+                  }"
+                >
+                  <div
+                    v-for="(menuChildItem, menuChildIndex) in menuItem.child"
+                    :key="menuChildIndex"
+                    :class="[
+                      'menuChild-item',
+                      classNamefilter(menuChildItem, menuChildIndex),
+                    ]"
+                    @click.stop="handleMenuChild(menuItem, menuChildIndex)"
                   >
-                    {{
-                      menuChildItem.link ===
-                      '/dental-service/wisdom-teeth-extraction'
-                        ? '拔牙\n'
-                        : ''
-                    }}
-                    {{ $t(menuChildItem.name) }}
-                  </nuxt-link>
+                    <nuxt-link
+                      :to="menuChildItem.link"
+                      :class="{ hot: menuChildItem.isHot }"
+                    >
+                      {{
+                        menuChildItem.link ===
+                        '/dental-service/wisdom-teeth-extraction'
+                          ? '拔牙\n'
+                          : ''
+                      }}
+                      {{ $t(menuChildItem.name) }}
+                    </nuxt-link>
+                  </div>
+                </div>
+              </div>
+              <div class="menuItem langItem">
+                <img src="@/assets/images/icon_26.svg" alt="" />
+                <div class="menuChild">
+                  <div
+                    :class="[
+                      'menuChild-item',
+                      { 'langItem-act': appState.langs === 't' },
+                    ]"
+                  >
+                    <span class="zh_click" @click="glangs('t')">繁體</span>
+                  </div>
+                  <div
+                    :class="[
+                      'menuChild-item',
+                      { 'langItem-act': appState.langs === 's' },
+                    ]"
+                  >
+                    <span class="zh_click" @click="glangs('s')">簡體</span>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="menuItem langItem">
-              <img src="@/assets/images/icon_26.svg" alt="" />
-              <div class="menuChild">
-                <div
-                  :class="[
-                    'menuChild-item',
-                    { 'langItem-act': appState.langs === 't' },
-                  ]"
-                >
-                  <span class="zh_click" @click="glangs('t')">繁體</span>
-                </div>
-                <div
-                  :class="[
-                    'menuChild-item',
-                    { 'langItem-act': appState.langs === 's' },
-                  ]"
-                >
-                  <span class="zh_click" @click="glangs('s')">簡體</span>
-                </div>
-              </div>
+            <div class="pc_menu_tel">
+              <a
+                href="tel: +852 6933 8128"
+                target="_blank"
+                rel="noopener noreferrer"
+                >香港真人熱線電話：(852) 6933 8128</a
+              >
             </div>
           </div>
           <div class="icon">
@@ -841,288 +866,304 @@ const handleopenwechat = () => {
   }
   &-in {
     width: 100%;
-    max-width: 1512px;
+    max-width: 100%;
     display: flex;
     background: #fff;
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 20px 10px 0 30px;
+    padding: 0;
     align-items: flex-end;
+    align-items: center;
     z-index: 50;
     position: relative;
     transition: all 0.5s;
     .logo {
-      width: 290px;
-      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 0 clamp(15px, 0.052vw, 30px);
+      .health_care_voucher {
+        display: flex;
+        flex-direction: column;
+        border-left: 1px solid #aaa;
+        padding-left: clamp(15px, 1.0465vw, 20px);
+      }
     }
     .menu {
       flex: 1;
-      color: #666666;
       display: flex;
+      align-items: center;
       justify-content: flex-end;
-      align-items: flex-end;
-      .menuItem {
-        padding: 0 0 20px;
-        cursor: pointer;
-        font-size: 22px;
-        font-weight: 600;
-        position: relative;
-        & > a {
-          padding: 0 10px;
-          display: inline-block;
-          text-align: center;
-        }
-        &.langItem {
-          padding: 0 20px 25px;
-          .menuChild {
-            .menuChild-item {
-              & > span {
-                color: var(--textColor);
-              }
-              &.langItem-act {
+      & > div:first-child {
+        color: #666666;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+        .menuItem {
+          padding: 0 0 20px;
+          cursor: pointer;
+          font-size: 22px;
+          font-weight: 600;
+          position: relative;
+          & > a {
+            padding: 0 10px;
+            display: inline-block;
+            text-align: center;
+          }
+          &.langItem {
+            padding: 0 20px 25px;
+            .menuChild {
+              .menuChild-item {
                 & > span {
-                  color: var(--indexColor1);
+                  color: var(--textColor);
+                }
+                &.langItem-act {
+                  & > span {
+                    color: var(--indexColor1);
+                  }
                 }
               }
             }
           }
-        }
-        .triangleIcon:after {
-          content: '';
-          width: 0px;
-          height: 0px;
-          border: 10px solid;
-          border-color: #666666 transparent transparent transparent;
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-        .triangleIcon:hover {
-          &:after {
-            border-color: var(--indexColor1) transparent transparent transparent;
-          }
-        }
-        span {
-          position: relative;
-          display: inline-block;
-          &::before {
-            content: '';
-            width: 0;
-            position: absolute;
-            left: 50%;
-            bottom: -2px;
-            transform: translateX(-50%);
-            height: 2px;
-            background: var(--textColor);
-            transition: all 0.3s;
-            border-radius: 2px;
-          }
-        }
-        & > .router-link-exact-active {
-          color: var(--indexColor1);
-          &.triangleIcon:after {
-            border-color: var(--indexColor1) transparent transparent transparent;
-          }
-          span {
-            &::before {
-              width: 100%;
-              bottom: 2px;
-              background: var(--indexColor1);
-            }
-          }
-          &.health-care-voucher {
-            span {
-              &::before {
-                background: #00a752;
-              }
-            }
-          }
-          &.federation-of-trade-unions-zone {
-            span {
-              &::before {
-                background: #e60013;
-              }
-            }
-          }
-        }
-        &:hover {
-          color: var(--indexColor1);
           .triangleIcon:after {
-            border-color: var(--indexColor1) transparent transparent transparent;
-          }
-          span {
-            &::before {
-              width: 100%;
-              bottom: 2px;
-              background: var(--indexColor1);
-            }
-          }
-          .health-care-voucher {
-            span {
-              &::before {
-                background: #00a752;
-              }
-            }
-          }
-          .federation-of-trade-unions-zone {
-            span {
-              &::before {
-                background: #e60013;
-              }
-            }
-          }
-        }
-        &:hover .menuChild {
-          display: flex;
-          animation: animBottomIn 0.5s forwards;
-        }
-        .health-care-voucher {
-          color: #00a752;
-          .router-link-exact-active {
-            color: #00a752;
-          }
-        }
-        .federation-of-trade-unions-zone {
-          color: #e60013;
-          .router-link-exact-active {
-            color: #e60013;
-          }
-        }
-        .menuChild {
-          position: absolute;
-          top: 100%;
-          left: 50%;
-          transform: translate(-50%, 20px);
-          opacity: 0;
-          min-width: 130%;
-          z-index: 2;
-          display: none;
-          flex-direction: column;
-          transition: all 0.3s;
-          padding: 0 20px 5px;
-          box-sizing: border-box;
-          background: #ffffff;
-          filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.15));
-          border-radius: 6px;
-          &-item {
-            width: 100%;
-            text-align: center;
-            padding: 0;
-            font-weight: 500;
-            font-size: 20px;
-            color: #666666;
-            transition: all 0.3s;
-            &:not(:last-child) {
-              border-bottom: 1px solid var(--indexColor2);
-            }
-            &:hover {
-              color: var(--indexColor1);
-            }
-            &.menuChildCurrent {
-              color: var(--indexColor1);
-            }
-            & > a {
-              padding: 10px 0 5px;
-              display: block;
-            }
-            // &>a{
-            //   &.hot{
-            //     position: relative;
-            //     color: var(--indexColor1);
-            //     &::after{
-            //       content: '·';
-            //       position: absolute;
-            //       left: 50%;
-            //       top: 0;
-            //       font-size: 30px;
-            //       color: var(--indexColor1);
-            //       margin-top: -8px;
-            //     }
-            //   }
-            // }
-          }
-          &::before {
             content: '';
             width: 0px;
             height: 0px;
             border: 10px solid;
-            border-color: transparent transparent #fff transparent;
+            border-color: #666666 transparent transparent transparent;
             position: absolute;
-            top: -18px;
+            bottom: 0;
             left: 50%;
             transform: translateX(-50%);
           }
-        }
-        .serviceCard {
-          width: 500px;
-          flex-direction: row;
-          flex-wrap: wrap;
-          padding: 20px 10px;
-          border-radius: 16px;
-          .menuChild-item {
-            width: calc(100% / 3);
-            border: none;
-            padding: 0;
+          .triangleIcon:hover {
+            &:after {
+              border-color: var(--indexColor1) transparent transparent
+                transparent;
+            }
+          }
+          span {
             position: relative;
-            white-space: pre-wrap;
-            line-height: 1.2;
-            & > a {
-              height: 56px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              &.hot {
-                position: relative;
-                color: var(--indexColor1);
-                &::after {
-                  content: '·';
-                  position: absolute;
-                  left: 50%;
-                  top: 0;
-                  font-size: 30px;
-                  color: var(--indexColor1);
-                  margin-top: -8px;
+            display: inline-block;
+            &::before {
+              content: '';
+              width: 0;
+              position: absolute;
+              left: 50%;
+              bottom: -2px;
+              transform: translateX(-50%);
+              height: 2px;
+              background: var(--textColor);
+              transition: all 0.3s;
+              border-radius: 2px;
+            }
+          }
+          & > .router-link-exact-active {
+            color: var(--indexColor1);
+            &.triangleIcon:after {
+              border-color: var(--indexColor1) transparent transparent
+                transparent;
+            }
+            span {
+              &::before {
+                width: 100%;
+                bottom: 2px;
+                background: var(--indexColor1);
+              }
+            }
+            &.health-care-voucher {
+              span {
+                &::before {
+                  background: #00a752;
                 }
               }
             }
-            &:not(:nth-of-type(3n)) {
-              &::before {
-                content: '';
-                width: 0;
-                height: 60%;
-                border-right: 1px solid #f7c3c3;
-                top: 20%;
-                right: 0;
-                position: absolute;
-              }
-            }
-            &:not(:nth-of-type(n + 13)) {
-              &::after {
-                content: '';
-                width: 80%;
-                height: 0;
-                border-bottom: 1px solid #f7c3c3;
-                left: 10%;
-                bottom: 0;
-                position: absolute;
+            &.federation-of-trade-unions-zone {
+              span {
+                &::before {
+                  background: #e60013;
+                }
               }
             }
           }
-          &::after {
-            content: '';
-            width: 100px;
-            height: calc(90 / 130 * 100px);
-            background: url(https://static.cmereye.com/imgs/2024/04/4f39b444ca1b0a1d.png)
-              no-repeat;
-            background-size: 100% auto;
-            display: block;
+          &:hover {
+            color: var(--indexColor1);
+            .triangleIcon:after {
+              border-color: var(--indexColor1) transparent transparent
+                transparent;
+            }
+            span {
+              &::before {
+                width: 100%;
+                bottom: 2px;
+                background: var(--indexColor1);
+              }
+            }
+            .health-care-voucher {
+              span {
+                &::before {
+                  background: #00a752;
+                }
+              }
+            }
+            .federation-of-trade-unions-zone {
+              span {
+                &::before {
+                  background: #e60013;
+                }
+              }
+            }
+          }
+          &:hover .menuChild {
+            display: flex;
+            animation: animBottomIn 0.5s forwards;
+          }
+          .health-care-voucher {
+            color: #00a752;
+            .router-link-exact-active {
+              color: #00a752;
+            }
+          }
+          .federation-of-trade-unions-zone {
+            color: #e60013;
+            .router-link-exact-active {
+              color: #e60013;
+            }
+          }
+          .menuChild {
             position: absolute;
-            bottom: 0px;
-            right: 30px;
-            overflow: hidden;
-            background-position-y: calc(90 / 130 * 100px);
-            animation: menuIconAnim 1.5s 0.5s forwards;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, 20px);
+            opacity: 0;
+            min-width: 130%;
+            z-index: 2;
+            display: none;
+            flex-direction: column;
+            transition: all 0.3s;
+            padding: 0 20px 5px;
+            box-sizing: border-box;
+            background: #ffffff;
+            filter: drop-shadow(0px 0px 6px rgba(0, 0, 0, 0.15));
+            border-radius: 6px;
+            &-item {
+              width: 100%;
+              text-align: center;
+              padding: 0;
+              font-weight: 500;
+              font-size: 20px;
+              color: #666666;
+              transition: all 0.3s;
+              &:not(:last-child) {
+                border-bottom: 1px solid var(--indexColor2);
+              }
+              &:hover {
+                color: var(--indexColor1);
+              }
+              &.menuChildCurrent {
+                color: var(--indexColor1);
+              }
+              & > a {
+                padding: 10px 0 5px;
+                display: block;
+              }
+              // &>a{
+              //   &.hot{
+              //     position: relative;
+              //     color: var(--indexColor1);
+              //     &::after{
+              //       content: '·';
+              //       position: absolute;
+              //       left: 50%;
+              //       top: 0;
+              //       font-size: 30px;
+              //       color: var(--indexColor1);
+              //       margin-top: -8px;
+              //     }
+              //   }
+              // }
+            }
+            &::before {
+              content: '';
+              width: 0px;
+              height: 0px;
+              border: 10px solid;
+              border-color: transparent transparent #fff transparent;
+              position: absolute;
+              top: -18px;
+              left: 50%;
+              transform: translateX(-50%);
+            }
+          }
+          .serviceCard {
+            width: 500px;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 20px 10px;
+            border-radius: 16px;
+            .menuChild-item {
+              width: calc(100% / 3);
+              border: none;
+              padding: 0;
+              position: relative;
+              white-space: pre-wrap;
+              line-height: 1.2;
+              & > a {
+                height: 56px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &.hot {
+                  position: relative;
+                  color: var(--indexColor1);
+                  &::after {
+                    content: '·';
+                    position: absolute;
+                    left: 50%;
+                    top: 0;
+                    font-size: 30px;
+                    color: var(--indexColor1);
+                    margin-top: -8px;
+                  }
+                }
+              }
+              &:not(:nth-of-type(3n)) {
+                &::before {
+                  content: '';
+                  width: 0;
+                  height: 60%;
+                  border-right: 1px solid #f7c3c3;
+                  top: 20%;
+                  right: 0;
+                  position: absolute;
+                }
+              }
+              &:not(:nth-of-type(n + 13)) {
+                &::after {
+                  content: '';
+                  width: 80%;
+                  height: 0;
+                  border-bottom: 1px solid #f7c3c3;
+                  left: 10%;
+                  bottom: 0;
+                  position: absolute;
+                }
+              }
+            }
+            &::after {
+              content: '';
+              width: 100px;
+              height: calc(90 / 130 * 100px);
+              background: url(https://static.cmereye.com/imgs/2024/04/4f39b444ca1b0a1d.png)
+                no-repeat;
+              background-size: 100% auto;
+              display: block;
+              position: absolute;
+              bottom: 0px;
+              right: 30px;
+              overflow: hidden;
+              background-position-y: calc(90 / 130 * 100px);
+              animation: menuIconAnim 1.5s 0.5s forwards;
+            }
           }
         }
       }
@@ -1130,6 +1171,7 @@ const handleopenwechat = () => {
     .icon {
       display: none;
     }
+    background: #fff;
   }
   .waterBg {
     position: relative;
@@ -1162,7 +1204,11 @@ const handleopenwechat = () => {
   .headerBox01 {
     position: relative;
     background: #fff;
-    width: 100%;
+    .health_max_width {
+      width: 100%;
+      max-width: 1520px;
+      margin: 0 auto;
+    }
   }
   .headerBox02 {
     position: fixed;
@@ -1175,6 +1221,9 @@ const handleopenwechat = () => {
     .header-content-in {
       align-items: center;
       .logo {
+        display: flex;
+        gap: 0 clamp(15px, 0.052vw, 30px);
+        align-items: center;
         & > a {
           img {
             height: 30px;
@@ -1182,6 +1231,70 @@ const handleopenwechat = () => {
         }
       }
     }
+    .pc_tel {
+      max-width: 100%;
+    }
+    .health_care_voucher {
+      display: flex;
+    }
+    .health_max_width {
+      box-sizing: border-box;
+      max-width: 100%;
+      padding-left: clamp(30px, 3.2803vw, 100px);
+      width: 100%;
+      align-items: center;
+    }
+    .pc_menu_tel {
+      display: flex;
+      align-items: center;
+      gap: 0 clamp(8px, 0.052vw, 10px);
+      padding: clamp(15px, 1.0465vw, 20px) clamp(20px, 3.0465vw, 60px)
+        clamp(15px, 1.0465vw, 20px) clamp(15px, 1.0465vw, 20px);
+      color: #fff;
+      text-align: center;
+      font-family: FakePearl;
+      font-size: clamp(14px, 1.146vw, 22px);
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 35.2px */
+      background: var(--Theme-Color, #fc1682);
+    }
+  }
+}
+.headerBox01 {
+  position: relative;
+  background: #fff;
+  width: 100%;
+  .pc_menu_tel {
+    display: none;
+  }
+}
+.headerBox02 {
+  position: fixed;
+  background: #fff;
+  top: 0;
+  width: 100vw;
+  z-index: 100;
+  box-shadow: 0px 4px 8px var(--indexColor3);
+  margin-top: 0 !important;
+  .header-content-in {
+    align-items: center;
+    .logo {
+      display: flex;
+      gap: 0 clamp(15px, 0.052vw, 30px);
+      align-items: center;
+      & > a {
+        img {
+          height: 30px;
+        }
+      }
+    }
+  }
+  .pc_tel {
+    max-width: 100%;
+  }
+  .health_care_voucher {
+    display: flex;
   }
 }
 .waterBg::after {
@@ -1277,7 +1390,37 @@ const handleopenwechat = () => {
 .menuBox {
   display: none;
 }
-
+.health_care_voucher {
+  margin-right: 10px;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  & > span:nth-child(1) {
+    white-space: nowrap !important;
+    box-sizing: border-box;
+    padding: 2px 4px 2px 6px;
+    color: var(--White, #fff);
+    text-align: right;
+    font-family: FakePearl;
+    font-size: clamp(10px, 0.7vw, 14px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 18.2px */
+    letter-spacing: clamp(2px, 0.2vw, 3.78px);
+    border-radius: 2px;
+    background: var(---Green, #00a752);
+  }
+  & > span:nth-child(2) {
+    color: var(--Grey-Deep, #4d4d4d);
+    text-align: right;
+    font-family: FakePearl;
+    font-size: clamp(10px, 0.7vw, 14px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 18.2px */
+    letter-spacing: 1.4px;
+  }
+}
 @media (min-width: 768px) and (max-width: 1000px) {
   .header-content {
     .explain_page_one {
@@ -1312,15 +1455,63 @@ const handleopenwechat = () => {
 @media (min-width: 1001px) and (max-width: 1452px) {
   .header-content {
     .explain_page_one {
-      max-width: 80%;
-      width: 80%;
+      max-width: 90%;
+      width: calc(90% + 40px) !important;
+      padding: 0;
+      bottom: 9.5%;
     }
     &-in {
-      width: calc(80% + 60px);
-      padding: 10px 10px 0 30px;
+      // width: calc(80% + 60px);
+      // padding: 10px 10px 0 30px;
+      box-sizing: border-box;
+      max-width: 100vw;
+      width: 100vw;
       .logo {
         width: 200px;
-        margin-bottom: 15px;
+      }
+      .menu {
+        & > div:first-child {
+          align-items: flex-end;
+          align-items: center;
+          color: #666;
+          display: flex;
+          justify-content: flex-end;
+          .menuItem {
+            font-size: clamp(12px, 1.2vw, 1.8vw);
+            padding: 0 0 10px;
+            & > a {
+              padding: 0 0.4vw;
+              box-sizing: border-box;
+            }
+            &.langItem {
+              padding: 0 1vw 10px;
+              & > img {
+                width: 20px;
+              }
+            }
+            .triangleIcon:after {
+              border: 5px solid;
+              border-color: #666666 transparent transparent transparent;
+            }
+            .menuChild {
+              padding: 0 10px;
+              &-item {
+                font-size: 1rem;
+              }
+              &::before {
+                border: 5px solid;
+                border-color: transparent transparent #fff transparent;
+                position: absolute;
+                top: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+              }
+            }
+            .serviceCard {
+              padding: 12px 6px;
+            }
+          }
+        }
       }
     }
     &-text-implant {
@@ -1337,51 +1528,71 @@ const handleopenwechat = () => {
       bottom: 18vw;
     }
   }
+  .waterBg::after,
+  .waterBg::before {
+    height: 120px;
+    bottom: -30px;
+  }
+  :deep(.bannerLine) {
+    bottom: 80px !important;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 1450px) {
   .header-content {
     &-in {
-      width: calc(80% + 120px);
-      padding: 10px 0 0 0;
+      // width: calc(80% + 120px);
+      // padding: 10px 0 0 0;
+      align-items: center;
+      box-sizing: border-box;
+      max-width: 100%;
+      padding-left: clamp(30px, 3.2803vw, 100px);
+      width: 100%;
       .logo {
         width: 20%;
-        margin-bottom: 15px;
+        // margin-bottom: 15px;
       }
       .menu {
-        .menuItem {
-          font-size: clamp(16px, 1.2vw, 1.8vw);
-          padding: 0 0 10px;
-          & > a {
-            padding: 0 1vw;
-            box-sizing: border-box;
-          }
-          &.langItem {
-            padding: 0 1vw 10px;
-            & > img {
-              width: 20px;
+        & > div:first-child {
+          align-items: flex-end;
+          align-items: center;
+          color: #666;
+          display: flex;
+          justify-content: flex-end;
+          .menuItem {
+            font-size: clamp(12px, 1.2vw, 1.8vw);
+            padding: 0 0 10px;
+            & > a {
+              padding: 0 0.4vw;
+              box-sizing: border-box;
             }
-          }
-          .triangleIcon:after {
-            border: 5px solid;
-            border-color: #666666 transparent transparent transparent;
-          }
-          .menuChild {
-            padding: 0 10px;
-            &-item {
-              font-size: 1rem;
+            &.langItem {
+              padding: 0 1vw 10px;
+              & > img {
+                width: 20px;
+              }
             }
-            &::before {
+            .triangleIcon:after {
               border: 5px solid;
-              border-color: transparent transparent #fff transparent;
-              position: absolute;
-              top: -10px;
-              left: 50%;
-              transform: translateX(-50%);
+              border-color: #666666 transparent transparent transparent;
             }
-          }
-          .serviceCard {
-            padding: 12px 6px;
+            .menuChild {
+              padding: 0 10px;
+              &-item {
+                font-size: 1rem;
+              }
+              &::before {
+                border: 5px solid;
+                border-color: transparent transparent #fff transparent;
+                position: absolute;
+                top: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+              }
+            }
+            .serviceCard {
+              padding: 12px 6px;
+            }
           }
         }
       }
@@ -1392,51 +1603,109 @@ const handleopenwechat = () => {
       }
     }
   }
+  .header-content {
+    .headerBox02 {
+      .health_max_width {
+        max-width: 100vw;
+        width: 100vw;
+        box-sizing: border-box;
+        .menu {
+          .menuItem {
+            font-size: clamp(12px, 0.8vw, 1.4vw);
+            padding: 0 0 10px;
+            & > a {
+              padding: 0 0.3vw;
+              box-sizing: border-box;
+            }
+            &.langItem {
+              padding: 0 0.8vw 10px;
+              & > img {
+                width: 20px;
+              }
+            }
+            .triangleIcon:after {
+              border: 5px solid;
+              border-color: #666666 transparent transparent transparent;
+            }
+            .menuChild {
+              padding: 0 10px;
+              &-item {
+                font-size: 1rem;
+              }
+              &::before {
+                border: 5px solid;
+                border-color: transparent transparent #fff transparent;
+                position: absolute;
+                top: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+              }
+            }
+            .serviceCard {
+              padding: 12px 6px;
+            }
+          }
+        }
+      }
+    }
+    .headerBox01 {
+      .health_max_width {
+        width: calc(90% + 40px) !important;
+        padding: 10px 0 0 0;
+      }
+    }
+  }
 }
 
 @media (min-width: 1450px) and (max-width: 1800px) {
   .header-content {
     &-in {
-      width: calc(80% + 60px);
-      padding: 10px 15px 0 30px;
+      // width: calc(80% + 60px);
+      // padding: 10px 15px 0 30px;
+      box-sizing: border-box;
+      max-width: 100vw;
+      width: 100vw;
+      padding-left: clamp(30px, 3.2803vw, 100px);
       .logo {
         width: 20%;
-        margin-bottom: 10px;
+        // margin-bottom: 10px;
       }
       .menu {
-        .menuItem {
-          font-size: 1.1vw;
-          padding: 0 0 10px;
-          & > a {
-            padding: 0 1vw;
-            box-sizing: border-box;
-          }
-          &.langItem {
-            padding: 0 1vw 1vw;
-            & > img {
-              width: 1vw;
+        & > div:nth-child(1) {
+          .menuItem {
+            font-size: 1.1vw;
+            padding: 0 0 10px;
+            & > a {
+              padding: 0 0.6vw;
+              box-sizing: border-box;
             }
-          }
-          .triangleIcon:after {
-            border: 5px solid;
-            border-color: #666666 transparent transparent transparent;
-          }
-          .menuChild {
-            padding: 0 10px;
-            &-item {
-              font-size: 1.1vw;
+            &.langItem {
+              padding: 0 0.6vw 1vw;
+              & > img {
+                width: 1vw;
+              }
             }
-            &::before {
+            .triangleIcon:after {
               border: 5px solid;
-              border-color: transparent transparent #fff transparent;
-              position: absolute;
-              top: -10px;
-              left: 50%;
-              transform: translateX(-50%);
+              border-color: #666666 transparent transparent transparent;
             }
-          }
-          .serviceCard {
-            padding: 12px 6px;
+            .menuChild {
+              padding: 0 10px;
+              &-item {
+                font-size: 1.1vw;
+              }
+              &::before {
+                border: 5px solid;
+                border-color: transparent transparent #fff transparent;
+                position: absolute;
+                top: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+              }
+            }
+            .serviceCard {
+              padding: 12px 6px;
+            }
           }
         }
       }
@@ -1469,6 +1738,58 @@ const handleopenwechat = () => {
       bottom: 5vw;
       div {
         font-size: 100%;
+      }
+    }
+  }
+  .header-content {
+    .headerBox02 {
+      .health_max_width {
+        max-width: 100vw;
+        width: 100vw;
+        box-sizing: border-box;
+        .menu {
+          .menuItem {
+            font-size: clamp(14px, 1vw, 1.4vw);
+            padding: 0 0 10px;
+            & > a {
+              padding: 0 1vw;
+              box-sizing: border-box;
+            }
+            &.langItem {
+              padding: 0 0.8vw 10px;
+              & > img {
+                width: 20px;
+              }
+            }
+            .triangleIcon:after {
+              border: 5px solid;
+              border-color: #666666 transparent transparent transparent;
+            }
+            .menuChild {
+              padding: 0 10px;
+              &-item {
+                font-size: 1rem;
+              }
+              &::before {
+                border: 5px solid;
+                border-color: transparent transparent #fff transparent;
+                position: absolute;
+                top: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+              }
+            }
+            .serviceCard {
+              padding: 12px 6px;
+            }
+          }
+        }
+      }
+    }
+    .headerBox01 {
+      .health_max_width {
+        max-width: 90%;
+        width: 90%;
       }
     }
   }
@@ -1583,11 +1904,21 @@ const handleopenwechat = () => {
       align-items: center;
       margin: 0;
       padding: 5.3vw 0 0 5.3vw;
+      position: fixed;
+      top: 0;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0;
+      padding: 5.3vw 0 5.3vw 5.3vw;
+      background: #fff;
+      .menu {
+        display: none;
+      }
       .logo {
         width: 125px;
         margin-bottom: 0;
       }
-      .menu {
+      .menu:nth-child(1) {
         display: none;
       }
       .icon {

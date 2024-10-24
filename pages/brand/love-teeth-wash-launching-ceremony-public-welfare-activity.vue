@@ -2,133 +2,152 @@
 import { phoneNum } from '~/assets/js/common'
 const locale = useState<string>('locale.setting')
 useHead({
-  title: "活動消息",
+  title: '活動消息',
   meta: [
-    { name: 'viewport', content: 'width=device-width, initial-scale=1, maximum-scale=1' },
+    {
+      name: 'viewport',
+      content: 'width=device-width, initial-scale=1, maximum-scale=1',
+    },
     {
       hid: 'description',
       name: 'description',
-      content: '愛康健集團是大灣區牙科連鎖機構，其口腔醫院為香港政府指定長者醫療券大灣區試點。（香港熱線: 6933 8128）14間門診有超過20種牙科治療項目，專注為港服務超過29年。',
+      content:
+        '愛康健集團是大灣區牙科連鎖機構，其口腔醫院為香港政府指定長者醫療券大灣區試點。（香港熱線: 6933 8128）14間門診有超過20種牙科治療項目，專注為港服務超過29年。',
     },
     {
       hid: 'Keywords',
       name: 'Keywords',
-      content: '愛康健 深圳愛康健 深圳專業牙科中心 愛康健醫院 愛康健口腔醫院 深圳愛康健口腔醫院愛康健 CKJ愛康健齒科集團 愛康健齒科集團 深圳口腔專科醫院 深圳牙科醫院牙科服務內地牙科 深圳口腔專科 基本牙科 美容牙科 高階牙科 工聯會洗牙 工聯會免費洗牙 愛康健洗牙',
+      content:
+        '愛康健 深圳愛康健 深圳專業牙科中心 愛康健醫院 愛康健口腔醫院 深圳愛康健口腔醫院愛康健 CKJ愛康健齒科集團 愛康健齒科集團 深圳口腔專科醫院 深圳牙科醫院牙科服務內地牙科 深圳口腔專科 基本牙科 美容牙科 高階牙科 工聯會洗牙 工聯會免費洗牙 愛康健洗牙',
     },
     {
       name: 'author',
       content: '愛康健口腔醫院',
     },
-    { property: 'og:image', content: 'https://www.ckjhk.com/favicon.ico' }
+    { property: 'og:image', content: 'https://www.ckjhk.com/favicon.ico' },
   ],
 })
 
 const headerConfig = ref({
   img: 'https://static.cmereye.com/imgs/2024/06/aff51ea64680551e.jpg',
   bg: '',
-  mbImg: "https://static.cmereye.com/imgs/2024/06/146e9d4b12bfaa4b.jpg",
+  mbImg: 'https://static.cmereye.com/imgs/2024/06/146e9d4b12bfaa4b.jpg',
   pageName: 'health-care-voucher',
   pcText: [],
-  mbText: []
+  mbText: [],
 })
 interface plist {
-  type: String,
+  type: String
   text: String
 }
 
-
-const pageDetail:any = {
+const pageDetail: any = {
   title: '',
   img: '',
   content: [
     {
-      type: "p",
+      type: 'p',
       list: [
         {
-          type: "defule",
-          text: '2024年5月25日，愛康健齒科集團在立法會議員梁文廣的倡議下，聯同香港中旅集團、油深起動、深水埗居民聯會及油尖旺社團聯會，成功舉辦了「健康社區由『齒』起」愛心洗牙啟動禮」。本次公益活動為逾千名長者及其他有需求的市民提供無償援助，提供免費牙科檢查、洗牙及交通接送服務，目的是為了減輕香港基層市民的牙科醫療負擔。'
-        }
-      ]
+          type: 'defule',
+          text: '2024年5月25日，愛康健齒科集團在立法會議員梁文廣的倡議下，聯同香港中旅集團、油深起動、深水埗居民聯會及油尖旺社團聯會，成功舉辦了「健康社區由『齒』起」愛心洗牙啟動禮」。本次公益活動為逾千名長者及其他有需求的市民提供無償援助，提供免費牙科檢查、洗牙及交通接送服務，目的是為了減輕香港基層市民的牙科醫療負擔。',
+        },
+      ],
     },
     {
       type: 'img',
-      list: [
-        'https://static.cmereye.com/imgs/2024/06/7eae2e75f1449ed2.jpg',
-      ],
-      className: 'imgone'
+      list: ['https://static.cmereye.com/imgs/2024/06/7eae2e75f1449ed2.jpg'],
+      className: 'imgone',
     },
     {
-      type: "p",
+      type: 'p',
       list: [
         {
-          type: "defule",
-          text: '此活動不僅關注牙科健康，亦對香港社會的健康福祉作出重要貢獻，促進了兩地醫療服務的交流與互通，為市民帶來更多的醫療選擇與資源。'
-        }
-      ]
+          type: 'defule',
+          text: '此活動不僅關注牙科健康，亦對香港社會的健康福祉作出重要貢獻，促進了兩地醫療服務的交流與互通，為市民帶來更多的醫療選擇與資源。',
+        },
+      ],
     },
     {
       type: 'img',
-      list: [
-        'https://static.cmereye.com/imgs/2024/06/e1289dcab68aaffc.jpg',
-      ],
-      className: 'imgone'
+      list: ['https://static.cmereye.com/imgs/2024/06/e1289dcab68aaffc.jpg'],
+      className: 'imgone',
     },
     {
-      type: "p",
+      type: 'p',
       list: [
         {
-          type: "defule",
-          text: '作為一家服務香港市民近30年的口腔醫療機構，愛康健口腔集團致力於為有需要人士提供優質牙科服務。集團期望未來能夠繼續推動更多有益於公眾健康的活動，使每位市民都能擁有健康的笑容。'
-        }
-      ]
+          type: 'defule',
+          text: '作為一家服務香港市民近30年的口腔醫療機構，愛康健口腔集團致力於為有需要人士提供優質牙科服務。集團期望未來能夠繼續推動更多有益於公眾健康的活動，使每位市民都能擁有健康的笑容。',
+        },
+      ],
     },
     {
       type: 'img',
-      list: [
-        'https://static.cmereye.com/imgs/2024/06/e086b64a4eaa700b.jpg',
-      ],
-      className: 'imgone'
+      list: ['https://static.cmereye.com/imgs/2024/06/e086b64a4eaa700b.jpg'],
+      className: 'imgone',
     },
-  ]
+  ],
 }
 const introduceData = {
   title: ['愛心洗牙啟動禮公益活動'],
   time: '2024年5月30日',
-  content: ['與立法會議員、香港中旅集團及社福團體，為過千位長者及有需要人士提供免費基層牙科醫療及交通接送服務'],
+  content: [
+    '與立法會議員、香港中旅集團及社福團體，為過千位長者及有需要人士提供免費基層牙科醫療及交通接送服務',
+  ],
   mbImg: 'https://static.cmereye.com/imgs/2024/06/7ea5e8d2d7e2be8c.jpg',
   pcImg: 'https://static.cmereye.com/imgs/2024/06/3e797a0560da8613.jpg',
   tabNavName: '活動消息',
 }
-const shareFacebook = (event) =>{
-  event.preventDefault();
-  window.open(`https://www.facebook.com/sharer/sharer.php?u=https://www.ckjhk.com/brand/love-teeth-wash-launching-ceremony-public-welfare-activity`)  
+const shareFacebook = (event) => {
+  event.preventDefault()
+  window.open(
+    `https://www.facebook.com/sharer/sharer.php?u=https://www.ckjhk.com/brand/love-teeth-wash-launching-ceremony-public-welfare-activity`
+  )
 }
-function copySpecifiedText(event) {  
-  event.preventDefault();
-    if (navigator.clipboard) {  
-        navigator.clipboard.writeText(`https://www.ckjhk.com/brand/love-teeth-wash-launching-ceremony-public-welfare-activity`).then(function() {  
+function copySpecifiedText(event) {
+  event.preventDefault()
+  if (navigator.clipboard) {
+    navigator.clipboard
+      .writeText(
+        `https://www.ckjhk.com/brand/love-teeth-wash-launching-ceremony-public-welfare-activity`
+      )
+      .then(
+        function () {
           ElMessage({
             showClose: true,
             message: '已複製到剪切板',
             type: 'success',
-          }) 
-        }, function(err) {
-            ElMessage({
-              showClose: true,
-              message: '操作異常，請刷新頁面試試',
-              type: 'warning',
-            })
-        });  
-    } else {  
-        alert('您的瀏覽器不支持此功能，請更新瀏覽器');  
-    }  
+          })
+        },
+        function (err) {
+          ElMessage({
+            showClose: true,
+            message: '操作異常，請刷新頁面試試',
+            type: 'warning',
+          })
+        }
+      )
+  } else {
+    alert('您的瀏覽器不支持此功能，請更新瀏覽器')
+  }
 }
 
 let actShowShare = ref(false)
-const handleClick = (event) =>{
-  event.preventDefault();
+const handleClick = (event) => {
+  event.preventDefault()
   actShowShare.value = !actShowShare.value
 }
+
+let windowWidth = ref(390)
+
+const getWindowWidth = () => {
+  windowWidth.value = window.innerWidth
+}
+onMounted(() => {
+  getWindowWidth()
+  window.addEventListener('resize', getWindowWidth)
+})
 </script>
 
 <template>
@@ -228,29 +247,30 @@ const handleClick = (event) =>{
         </div>
       </div>
       <NewAddress />
-     <ContactForm-new />
+    <ContactForm-new />
     </div>
     <PageFooter />
-    <PageNavbar />
+    <PageNewNavbarSide v-if="windowWidth > 768" />
+    <PageNavbar v-else />
   </div>
 </template>
 
 
 <style lang="scss" scoped>
-.health-care-voucher-top{
+.health-care-voucher-top {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
-  .lang{
+  .lang {
     display: flex;
-    span{
+    span {
       cursor: pointer;
       color: var(--textColor);
-      &:hover{
+      &:hover {
         color: var(--indexColor1);
       }
-      &:not(:last-child){
-        &::after{
+      &:not(:last-child) {
+        &::after {
           content: '|';
           display: inline-block;
           color: var(--textColor);
@@ -260,7 +280,7 @@ const handleClick = (event) =>{
     }
   }
 }
-.health-care-voucher{
+.health-care-voucher {
   padding-top: 100px;
 }
 .tabNav {
@@ -298,7 +318,7 @@ const handleClick = (event) =>{
         font-weight: 700;
         font-size: 50px;
         padding-top: 150px;
-        span{
+        span {
           display: block;
         }
       }
@@ -308,14 +328,14 @@ const handleClick = (event) =>{
         max-width: 630px;
         width: 630px;
         margin-top: 56px;
-        span{
+        span {
           display: block;
-          &:not(:last-child){
+          &:not(:last-child) {
             margin-bottom: 50px;
           }
         }
       }
-      .time{
+      .time {
         color: #666;
         font-size: 20px;
         font-style: normal;
@@ -325,124 +345,124 @@ const handleClick = (event) =>{
     }
   }
 }
-.content{
+.content {
   width: 100%;
   margin: 60px auto;
-  &>div{
+  & > div {
     margin-bottom: 45px;
-    &.nob{
+    &.nob {
       margin-bottom: 0;
     }
-    &.imgone{
+    &.imgone {
       width: 1011px;
       margin: 10px auto 45px;
     }
   }
-  p{
-    color: var(--Grey-Deep, #4D4D4D);
+  p {
+    color: var(--Grey-Deep, #4d4d4d);
     text-align: justify;
-    font-family: "GenSenRounded TW";
+    font-family: 'GenSenRounded TW';
     font-size: 28px;
     font-style: normal;
     font-weight: 700;
-    line-height: 160%; 
+    line-height: 160%;
   }
 }
-.pageBottom{
+.pageBottom {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border-top: 1px solid var(--indexColor1);
   padding-top: 9px;
-  &-l{
-    color: var(--Grey-Pale, #AAA);
+  &-l {
+    color: var(--Grey-Pale, #aaa);
     font-size: 28px;
     font-style: normal;
     font-weight: 700;
     line-height: 160%; /* 44.8px */
   }
-  &-r{
+  &-r {
     display: flex;
     align-items: center;
-    span{
+    span {
       padding: 5px 20px;
       display: flex;
       align-items: center;
-      color: #4267B2;
+      color: #4267b2;
       font-size: 27.929px;
       font-style: normal;
       font-weight: 400;
       line-height: 130%;
       border-left: 1px solid var(--indexColor1);
       cursor: pointer;
-      svg{
+      svg {
         width: 35px;
         height: 35px;
         margin-right: 10px;
       }
-      &:nth-child(2){
+      &:nth-child(2) {
         color: var(--indexColor1);
       }
     }
   }
-  .shareIcon{
+  .shareIcon {
+    position: relative;
+    display: none;
+    &-img {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       position: relative;
-      display: none;
-      &-img{
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
+      border: 2px solid #fc1682;
+      z-index: 21;
+      & > img {
+        width: 16px;
+        height: auto;
+      }
+      &.act {
+        border: none;
+      }
+    }
+    &-in {
+      position: absolute;
+      z-index: 20;
+      top: 0;
+      right: 0;
+      width: 159px;
+      height: 115px;
+      background: url(https://static.cmereye.com/static/ckj/imgs/default/shareIcon-new.svg);
+      background-size: 100% 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      filter: drop-shadow(0 2px 3px rgba(0, 0, 0, 0.3));
+      padding: 12px 0;
+      &-item {
         display: flex;
         align-items: center;
-        justify-content: center;
-        position: relative;
-        border: 2px solid #FC1682;
-        z-index: 21;
-        &>img{
-          width: 16px;
-          height: auto;
+        padding: 5px 10px;
+        margin: 0 2px;
+        border-radius: 3px;
+        color: #4267b2;
+        & > img {
+          width: 20px;
+          margin-right: 5px;
         }
-        &.act{
-          border: none;
+        & > span {
+          font-size: 14px;
         }
-      }
-      &-in{
-        position: absolute;
-        z-index: 20;
-        top: 0;
-        right: 0;
-        width: 159px;
-        height: 115px;
-        background: url(https://static.cmereye.com/static/ckj/imgs/default/shareIcon-new.svg);
-        background-size: 100% 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        filter: drop-shadow(0 2px 3px rgba(0,0,0,.3));
-        padding: 12px 0;
-        &-item{
-          display: flex;
-          align-items: center;
-          padding: 5px 10px;
-          margin: 0 2px;
-          border-radius: 3px;
-          color: #4267B2;
-          &>img{
-            width: 20px;
-            margin-right: 5px;
-          }
-          &>span{
-            font-size: 14px;
-          }
-          &:hover{
-            background: #F6F6F6;
-          }
-          &:nth-child(2){
-            color: var(--indexColor1);
-          }
+        &:hover {
+          background: #f6f6f6;
+        }
+        &:nth-child(2) {
+          color: var(--indexColor1);
         }
       }
     }
+  }
 }
 @media (min-width: 768px) and (max-width: 1920px) {
   .introduce {
@@ -461,55 +481,54 @@ const handleClick = (event) =>{
           max-width: 32.8125vw;
           width: 32.8125vw;
           margin-top: 2.9167vw;
-          span{
-            &:not(:last-child){
+          span {
+            &:not(:last-child) {
               margin-bottom: 2.6042vw;
             }
           }
         }
-        .time{
+        .time {
           font-size: 1.0417vw;
         }
       }
     }
   }
-  .content{
+  .content {
     margin: 3.125vw auto;
-    &>div{
+    & > div {
       margin-bottom: 2.3438vw;
-      &.imgone{
+      &.imgone {
         width: 52.6563vw;
-        margin: .5208vw auto 2.3438vw;
+        margin: 0.5208vw auto 2.3438vw;
       }
     }
-    p{
+    p {
       font-size: 1.4583vw;
     }
   }
-  .pageBottom{
-    padding-top: .4688vw;
-    &-l{
+  .pageBottom {
+    padding-top: 0.4688vw;
+    &-l {
       font-size: 1.4583vw;
     }
-    &-r{
-      span{
-        padding: .2604vw 1.0417vw;
+    &-r {
+      span {
+        padding: 0.2604vw 1.0417vw;
         font-size: 1.4546vw;
-        svg{
+        svg {
           width: 1.8229vw;
           height: 1.8229vw;
-          margin-right: .5208vw;
+          margin-right: 0.5208vw;
         }
       }
     }
-    
   }
 }
 @media screen and (max-width: 768px) {
-  .health-care-voucher-top{
+  .health-care-voucher-top {
     flex-direction: column-reverse;
     flex-wrap: wrap;
-    .lang{
+    .lang {
       width: calc(100% - 30px);
       // margin-right: 30px;
       margin-left: 30px;
@@ -517,7 +536,7 @@ const handleClick = (event) =>{
       margin-bottom: 20px;
     }
   }
-  .health-care-voucher{
+  .health-care-voucher {
     position: relative;
     z-index: 1;
     padding-top: 0px;
@@ -554,39 +573,39 @@ const handleClick = (event) =>{
           margin-top: 20px;
           font-weight: 400;
         }
-        .time{
+        .time {
           padding: 0 30px;
         }
       }
     }
   }
-  .content{
+  .content {
     margin-top: 40px;
-    &>div{
-      &.imgone{
+    & > div {
+      &.imgone {
         width: 100%;
       }
     }
-    p{
+    p {
       padding: 0 30px;
       font-size: 16px;
       font-weight: 400;
       line-height: 160%;
     }
   }
-  .pageBottom{
+  .pageBottom {
     border-bottom: 1px solid var(--indexColor1);
     width: auto;
     margin: 0 30px;
     padding-bottom: 9px;
-    &-l{
+    &-l {
       font-size: 16px;
       font-weight: 700;
     }
-    &-r{
+    &-r {
       display: none;
     }
-    .shareIcon{
+    .shareIcon {
       display: block;
     }
   }

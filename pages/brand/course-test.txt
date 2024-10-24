@@ -363,7 +363,8 @@ onMounted(()=>{
       <NewAddress />
     </div>
     <PageFooter />
-    <PageNavbar />
+    <Page
+     />
   </div>
 </template>
 

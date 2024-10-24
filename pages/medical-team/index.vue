@@ -181,6 +181,15 @@ watch(appState, (n, o) => {
 const doctorTeam = ref(null)
 const { top, bottom } = useElementBounding(doctorTeam)
 const { height } = useWindowSize()
+let windowWidth = ref(390)
+
+const getWindowWidth = () => {
+  windowWidth.value = window.innerWidth
+}
+onMounted(() => {
+  getWindowWidth()
+  window.addEventListener('resize', getWindowWidth)
+})
 </script>
 
 <template>
@@ -304,9 +313,11 @@ const { height } = useWindowSize()
       <ContactForm-new />
     </div>
     <PageFooter />
-    <PageNavbar
+    <!-- <PageNavbar
       :showDialogBox="top < (height / 3) * 2 && bottom > height / 3"
-    />
+    /> -->
+    <PageNewNavbarSide v-if="windowWidth > 768" />
+    <PageNavbar v-else />
   </div>
 </template>
 

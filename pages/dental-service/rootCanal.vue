@@ -661,9 +661,11 @@ let newsMessageSwiperRef = {
       <ContactForm-new />
     </div>
     <PageFooter />
-    <PageNavbar
+    <!-- <PageNavbar
       :showDialogBox="top < (height / 3) * 2 && bottom > height / 3"
-    />
+    /> -->
+    <PageNewNavbarSide v-if="windowWidth > 768" />
+    <PageNavbar v-else />
   </div>
 </template>
 
@@ -1289,8 +1291,8 @@ let newsMessageSwiperRef = {
       z-index: 35;
     }
     .waterBg-implant::after,
-    .waterBg-implant::before{
-        bottom: -28vw;
+    .waterBg-implant::before {
+      bottom: -28vw;
     }
   }
   .reason {
@@ -1801,7 +1803,7 @@ let newsMessageSwiperRef = {
         fill: #f7c3c3;
       }
     }
-    &>div:nth-child(1) {
+    & > div:nth-child(1) {
       border-right: 1px solid #fc1682;
     }
   }

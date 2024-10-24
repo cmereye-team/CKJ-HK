@@ -1308,7 +1308,11 @@ const contentDom = ref(false)
     <!-- <div style="position: fixed; top: 50%; left: 0;z-index: 9999;">{{top}} --- {{bottom}} --- {{(top<(height / 3 * 2)) && (bottom > 0)}}</div> -->
     <!-- <PageAdbox /> -->
     <PageFooter />
-    <PageNavbar
+    <!-- <PageNavbar
+      :showDialogBox="top < (height / 3) * 2 && bottom > height / 3"
+    /> -->
+    <PageNewNavbarSide v-if="windowWidth > 768" />
+    <PageNavbar v-else
       :showDialogBox="top < (height / 3) * 2 && bottom > height / 3"
     />
   </div>

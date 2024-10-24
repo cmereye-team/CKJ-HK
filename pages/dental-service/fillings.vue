@@ -386,6 +386,7 @@ const differData: any = {
     },
   ],
 }
+
 </script>
 
 
@@ -792,7 +793,8 @@ const differData: any = {
       <ContactForm-new />
     </div>
     <PageFooter />
-    <PageNavbar />
+    <PageNewNavbarSide v-if="windowWidth > 768" />
+    <PageNavbar v-else />
   </div>
 </template>
 

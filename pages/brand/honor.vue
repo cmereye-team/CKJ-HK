@@ -48,6 +48,15 @@ const setSwiperRef = (swiper: any) => {
 const handleProcessBtn = (_type: string) => {
   swiperRef[_type]()
 }
+let windowWidth = ref(390)
+
+const getWindowWidth = () => {
+  windowWidth.value = window.innerWidth
+}
+onMounted(() => {
+  getWindowWidth()
+  window.addEventListener('resize', getWindowWidth)
+})
 </script>
 
 
@@ -276,7 +285,8 @@ const handleProcessBtn = (_type: string) => {
       <ContactForm-new />
     </div>
     <PageFooter />
-    <PageNavbar />
+    <PageNewNavbarSide v-if="windowWidth > 768" />
+    <PageNavbar v-else />
   </div>
 </template>
 

@@ -1,17 +1,18 @@
 <script lang="ts" setup>
-
 useHead({
   title: '最新資訊',
   meta: [
     {
       hid: 'description',
       name: 'description',
-      content: '愛康健作為深圳愛康健口腔醫院是一家專業口腔醫院，秉承著「專科·專業」的服務理念，科學、合理地整合醫療資源。我們的醫師團隊均畢業於國內知名口腔學院，包括種植醫師、美學修復醫師、牙周病醫師等專業人員。他們帶領著醫護人員共同構成我們的服務團隊，為患者提供專業、優質的口腔醫療服務。',
+      content:
+        '愛康健作為深圳愛康健口腔醫院是一家專業口腔醫院，秉承著「專科·專業」的服務理念，科學、合理地整合醫療資源。我們的醫師團隊均畢業於國內知名口腔學院，包括種植醫師、美學修復醫師、牙周病醫師等專業人員。他們帶領著醫護人員共同構成我們的服務團隊，為患者提供專業、優質的口腔醫療服務。',
     },
     {
       hid: 'Keywords',
       name: 'Keywords',
-      content: '愛康健 深圳愛康健 深圳專業牙科中心 愛康健醫院 愛康健口腔醫院 深圳愛康健口腔醫院愛康健 CKJ愛康健齒科集團 深圳口腔專科醫院 愛康健齒科集團 深圳牙科醫院牙科服務內地牙科 深圳口腔專科 基本牙科 美容牙科 高階牙科 愛康健',
+      content:
+        '愛康健 深圳愛康健 深圳專業牙科中心 愛康健醫院 愛康健口腔醫院 深圳愛康健口腔醫院愛康健 CKJ愛康健齒科集團 深圳口腔專科醫院 愛康健齒科集團 深圳牙科醫院牙科服務內地牙科 深圳口腔專科 基本牙科 美容牙科 高階牙科 愛康健',
     },
   ],
 })
@@ -22,46 +23,52 @@ const headerConfig = {
   mbImg: 'https://static.cmereye.com/imgs/2024/06/cb4c9a34a7e67357.jpg',
   pageName: 'coverage',
   pcText: [],
-  mbText: []
+  mbText: [],
 }
 
-const formatDate = (dateString) =>{  
-    var date = new Date(dateString);  
-    var year = date.getFullYear();  
-    var month = ("0" + (date.getMonth() + 1)).slice(-2); // getMonth() is zero-based  
-    var day = ("0" + date.getDate()).slice(-2);  
-    return year + "年" + month + "月" + day + "日";  
-}  
+const formatDate = (dateString) => {
+  var date = new Date(dateString)
+  var year = date.getFullYear()
+  var month = ('0' + (date.getMonth() + 1)).slice(-2) // getMonth() is zero-based
+  var day = ('0' + date.getDate()).slice(-2)
+  return year + '年' + month + '月' + day + '日'
+}
 
 let pageNumber = ref(1)
 let totalPageNum = ref(1)
-let maxPage = 50;
+let maxPage = 50
 
-let serverInformationLists:any = ref([])
+let serverInformationLists: any = ref([])
 const getServerNewsLists = async () => {
-  try{
-    const _res:any = await useFetch(`https://admin.ckjhk.com/api.php/list/14/page/${pageNumber.value}/num/100`,{
-      method: 'post',
-    });
+  try {
+    const _res: any = await useFetch(
+      `https://admin.ckjhk.com/api.php/list/14/page/${pageNumber.value}/num/100`,
+      {
+        method: 'post',
+      }
+    )
     let res = JSON.parse(_res.data.value) || null
-    if(res){
+    if (res) {
       totalPageNum.value = Math.ceil(res.rowtotal / 100)
-      let _arr = res.data.map(item=>{
-        return{
+      let _arr = res.data.map((item) => {
+        return {
           id: item.id || '',
-          img: (item.ico.indexOf('/static/upload/image') !== -1 ? `https://admin.ckjhk.com${item.ico}`:item.ico) || '',
+          img:
+            (item.ico.indexOf('/static/upload/image') !== -1
+              ? `https://admin.ckjhk.com${item.ico}`
+              : item.ico) || '',
           desc: item.ext_news_desc || '',
           name: item.title || '',
-          time: formatDate(item.ext_news_time) || ''
+          time: formatDate(item.ext_news_time) || '',
         }
       })
       serverInformationLists.value = [...serverInformationLists.value, ..._arr]
-      if(pageNumber.value < totalPageNum.value && pageNumber.value < maxPage){
+      if (pageNumber.value < totalPageNum.value && pageNumber.value < maxPage) {
         pageNumber.value++
         getServerNewsLists()
       }
     }
-  }catch{
+  } catch {
     console.log('error')
   }
 }
@@ -71,21 +78,35 @@ const getServerNewsLists = async () => {
 //     getServerNewsLists()
 //   })
 // })
-if(process.server){
+if (process.server) {
   getServerNewsLists()
-}else{
+} else {
   getServerNewsLists()
 }
+let windowWidth = ref(390)
 
+const getWindowWidth = () => {
+  windowWidth.value = window.innerWidth
+}
+onMounted(() => {
+  getWindowWidth()
+  window.addEventListener('resize', getWindowWidth)
+})
 </script>
 
 <template>
   <div>
     <PageHeader :headerConfig="headerConfig" />
     <div class="pageIn whitebgColor informationPage">
-      <div class="index_title pageCon informationPage-title" id="information">媒體報導</div>
+      <div class="index_title pageCon informationPage-title" id="information">
+        媒體報導
+      </div>
       <div class="tabNav noTitle pageCon">
-        <nuxt-link :to="'/'" title="深圳愛康健口腔醫院" alt="深圳愛康健口腔醫院">
+        <nuxt-link
+          :to="'/'"
+          title="深圳愛康健口腔醫院"
+          alt="深圳愛康健口腔醫院"
+        >
           <span>主頁</span>
         </nuxt-link>
         <nuxt-link :to="''">
@@ -95,15 +116,20 @@ if(process.server){
       </div>
       <div class="pageCon">
         <div class="serveLink">
-          <nuxt-link :to="`/news/article/${serverItem.id}`" v-for="(serverItem,serverIndex) in serverInformationLists" :key="serverIndex">
-            {{serverItem.name}}
+          <nuxt-link
+            :to="`/news/article/${serverItem.id}`"
+            v-for="(serverItem, serverIndex) in serverInformationLists"
+            :key="serverIndex"
+          >
+            {{ serverItem.name }}
           </nuxt-link>
         </div>
       </div>
       <NewAddress />
     </div>
     <PageFooter />
-    <PageNavbar />
+    <PageNewNavbarSide v-if="windowWidth > 768" />
+    <PageNavbar v-else />
   </div>
 </template>
 
@@ -132,20 +158,19 @@ if(process.server){
     color: var(--indexColor1);
   }
 }
-.serveLink{
-  a{
+.serveLink {
+  a {
     font-size: 30px;
     display: block;
     margin-top: 30px;
   }
 }
 @media (min-width: 768px) and (max-width: 1452px) {
-  
 }
 @media screen and (max-width: 768px) {
-  .informationPage{
+  .informationPage {
     padding: 0 0 90px;
-    &-title{
+    &-title {
       z-index: 1;
     }
   }
@@ -154,8 +179,8 @@ if(process.server){
     font-size: 1rem;
     margin-top: 0px;
   }
-  .serveLink{
-    a{
+  .serveLink {
+    a {
       font-size: 20px;
     }
   }

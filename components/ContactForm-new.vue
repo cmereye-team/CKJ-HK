@@ -433,7 +433,11 @@ let privacyPolicy = ref(true)
             :label="`${$t('contactUs.contact_form.formItem.telephone_number')}`"
             prop="phone"
           >
-            <el-select class="areaCode" v-model="areaCode" placeholder="請選擇">
+            <el-select
+              class="areaCode type_number"
+              v-model="areaCode"
+              placeholder="請選擇"
+            >
               <el-option label="+852" value="852" />
               <el-option label="+853" value="853" />
               <el-option label="+86" value="86" />
@@ -586,6 +590,11 @@ ul {
   .el-select-dropdown {
     min-width: 145px !important;
   }
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none !important;
+  margin: 0;
 }
 @media screen and (max-width: 768px) {
   .el-select-dropdown {

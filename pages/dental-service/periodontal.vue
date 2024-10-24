@@ -2214,7 +2214,8 @@ const imgSrcHandel = (i: any) => {
       </div>
     </div>
     <PageFooter />
-    <PageNavbar />
+    <PageNewNavbarSide v-if="windowWidth > 768" />
+    <PageNavbar v-else />
   </div>
 </template>
 

@@ -725,7 +725,9 @@ onMounted(() => {
               </div>
               <div>20/2/24</div>
             </div>
-            <div>原本以為剝智慧齒會痛好耐，感謝張名妃醫生醫術好所以冇咩痛，過咗一個星期已經可以正常進食</div>
+            <div>
+              原本以為剝智慧齒會痛好耐，感謝張名妃醫生醫術好所以冇咩痛，過咗一個星期已經可以正常進食
+            </div>
           </div>
           <div>
             <div>
@@ -746,7 +748,8 @@ onMounted(() => {
       <ContactForm-new />
     </div>
     <PageFooter />
-    <PageNavbar />
+    <PageNewNavbarSide v-if="windowWidth > 768" />
+    <PageNavbar v-else />
   </div>
 </template>
 
@@ -1342,8 +1345,8 @@ onMounted(() => {
       z-index: 35;
     }
     .waterBg-implant::after,
-    .waterBg-implant::before{
-        bottom: -28vw;
+    .waterBg-implant::before {
+      bottom: -28vw;
     }
   }
   .point_solution_requires_tooth_extraction {

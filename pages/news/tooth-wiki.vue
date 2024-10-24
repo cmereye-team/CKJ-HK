@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-
 useHead({
   title: '牙齒百科',
   meta: [
@@ -101,14 +100,14 @@ const getNewsLists = async (str: string) => {
     loadingShow.value = false
   }
 }
-const checkAndRemoveLastChar = (str, charToRemove)=> {
+const checkAndRemoveLastChar = (str, charToRemove) => {
   // 检查字符串的最后一位是否为指定字符
   if (str.endsWith(charToRemove)) {
     // 如果是，则去除最后一位
-    return str.slice(0, -1);
+    return str.slice(0, -1)
   }
   // 如果不是，则返回原字符串
-  return str;
+  return str
 }
 const handleTags = (tags: any) => {
   let _tags = tags.split('#')
@@ -125,14 +124,16 @@ const getTags = async (ele: any, str: string) => {
     item.tags.forEach((it) => {
       if (it.indexOf(ele) !== -1) {
         arrTags.value.push(item)
-      } 
+      }
     })
   })
   window.scrollTo({
     top: 0,
     behavior: 'smooth',
   })
-  informationLists.value  = Array.from(new Map(arrTags.value.map(item => [item.id, item])).values());
+  informationLists.value = Array.from(
+    new Map(arrTags.value.map((item) => [item.id, item])).values()
+  )
   totalPageNum.value = Math.ceil(informationLists.value.length / 6)
   return informationLists
 }
@@ -429,7 +430,8 @@ const handleClick = (event, _id) => {
       <ContactForm-new />
     </div>
     <PageFooter />
-    <PageNavbar />
+    <PageNewNavbarSide v-if="windowWidth > 768" />
+    <PageNavbar v-else />
   </div>
 </template>
 

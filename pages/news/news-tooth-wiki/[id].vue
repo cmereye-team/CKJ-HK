@@ -473,7 +473,7 @@ if (process.server) {
       <ContactForm-new />
     </div>
     <PageFooter />
-    <PageNavbar />
+    <PageNewNavbarSide />
   </div>
 </template>
 

@@ -204,6 +204,15 @@ watch(
     shownav.value = true
   }, 1000)
 )
+let windowWidth = ref(390)
+
+const getWindowWidth = () => {
+  windowWidth.value = window.innerWidth
+}
+onMounted(() => {
+  getWindowWidth()
+  window.addEventListener('resize', getWindowWidth)
+})
 </script>
 
 
@@ -437,7 +446,8 @@ watch(
       </nuxt-link>
     </div>
     <PageFooter />
-    <PageNavbar />
+    <PageNewNavbarSide v-if="windowWidth > 768" />
+    <PageNavbar v-else />
   </div>
 </template>
 
@@ -1453,8 +1463,8 @@ watch(
       z-index: 35;
     }
     .waterBg-implant::after,
-    .waterBg-implant::before{
-        bottom: -28vw;
+    .waterBg-implant::before {
+      bottom: -28vw;
     }
   }
   .tabNav {
