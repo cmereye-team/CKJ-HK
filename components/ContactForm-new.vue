@@ -72,6 +72,32 @@ const shortcuts = [
 
 // const timestamp = Date.parse(new Date().toString())
 
+const phoneNumLength = (rule: any, phoneNum: any, callback: any) => {
+  if (!phoneNum) {
+    return callback(new Error('电话号码不能为空'))
+  }
+  switch (areaCode.value) {
+    case '86':
+      if (String(phoneNum).length !== 11) {
+        return callback(new Error('請輸入正確的電話號碼'))
+      }
+      break
+    case '853':
+      if (String(phoneNum).length !== 8) {
+        return callback(new Error('請輸入正確的電話號碼'))
+      }
+      break
+    case '852':
+      if (String(phoneNum).length !== 8) {
+        return callback(new Error('請輸入正確的電話號碼'))
+      }
+      break
+    default:
+      return callback(new Error('不支持的区号'))
+  }
+  callback()
+}
+
 var valiemail = (rule: any, value: any, callback: any) => {
   const mailReg = /^([a-zA-Z0-9_-_._-])+@([a-zA-Z0-9_-])+(.[a-zA-Z0-9_-])+/
   if (!value) {
@@ -95,8 +121,11 @@ const rules = reactive<FormRules>({
   area: [{ required: true, message: '請選擇區域', trigger: 'change' }],
   // gender: [{ required: true, message: '請選擇稱呼', trigger: 'change' }],
   phone: [
-    { required: true, message: '請填寫您的電話', trigger: 'change' },
-    { type: 'number', message: '請填寫正確的電話', trigger: 'change' },
+    {
+      required: true,
+      validator: phoneNumLength,
+      trigger: 'blur',
+    },
   ],
   // email: [{ type: 'email', required: true, validator: valiemail, trigger: 'blur' }],
   service: [{ required: true, message: '請選擇服務', trigger: 'change' }],
@@ -339,7 +368,7 @@ onMounted(() => {
   window.addEventListener('resize', getWindowWidth)
 })
 
-let areaCode = ref('+852')
+let areaCode = ref('852')
 let privacyPolicy = ref(true)
 </script>
 
