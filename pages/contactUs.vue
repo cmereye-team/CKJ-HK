@@ -205,7 +205,7 @@ const problemData = {
         <NewAddress />
       </div>
       <div class="complain">
-        <a id="appeal" class="hash_link">1</a>
+        <a id="appeal" class="hash_link"></a>
         <div class="dentistryServices-title note-title">
           <div class="dentistryServices-title-in bb note-title-in">
             長者醫療券使用者及<br class="mbShow" />一般客人申訴途徑
@@ -372,7 +372,7 @@ const problemData = {
         <serviceCard :isIndexShow="true" />
       </div>
       <div class="contactUs_three">
-        <a id="Q&A" class="hash_link">1</a>
+        <a id="Q&A" class="hash_link"></a>
         <ServiceProblem :problem-data="problemData" />
       </div>
       <ContactForm-new />

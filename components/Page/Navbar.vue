@@ -47,7 +47,7 @@ onMounted(() => {
   window.addEventListener('scroll', hiddenPopupAlert)
 })
 const hiddenPopupAlert = () => {
-  const popupAlert = document.getElementById('popup-alert')
+  const popupAlert = document.getElementById('popup-alert-two')
   if (!popupAlert) return // Early exit if popupAlert is not found
   const contactForm = ref<HTMLElement | null>(null);
   contactForm.value = document.querySelector('.contactForm')

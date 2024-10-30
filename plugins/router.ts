@@ -17,7 +17,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     }
     if (from.path !== '/health-care-voucher') {
       setTimeout(() => {
-        var container = document.getElementById('popup-alert')
+        var container = document.getElementById('popup-alert-two')
         if (container) {
           container.style.display = 'flex'
         }
@@ -26,7 +26,7 @@ export default defineNuxtPlugin((nuxtApp) => {
     const excludedPaths = ['/health-care-voucher', "/health-care-voucher/"];
     if (!excludedPaths.includes(to.path)) {
       function popupAlertCreated() {
-        var container = document.getElementById('popup-alert')
+        var container = document.getElementById('popup-alert-two')
         // var  创建一个id healthCareVoucherPopTop
         var healthCareVoucherPopTop = document.createElement('div')
         const domWidth = window.innerWidth
@@ -37,7 +37,7 @@ export default defineNuxtPlugin((nuxtApp) => {
                 <div class="healthCareVoucherPop">
                   <div class="close">×</div>
                   <a href="/health-care-voucher">
-                    <img src="https://static.cmereye.com/imgs/2024/09/b4ae2fcaebed54c3.png"  alt="">
+                    <img src="https://static.cmereye.com/imgs/2024/10/4803cecce2a0156d.png"  alt="">
                   </a>
               </div>
               `
@@ -46,40 +46,7 @@ export default defineNuxtPlugin((nuxtApp) => {
                 <div class="healthCareVoucherPop">
                   <div class="close">×</div>
                   <a href="/health-care-voucher">
-                    <img src="https://static.cmereye.com/imgs/2024/09/5cb4d1135f329cd3.png"  alt="">
-                    <marquee class="marquee" direction="up" height="100">
-                      <p>種植牙</p>
-                      <p>補牙</p>
-                      <p>拔牙</p>
-                      <p>牙周病治療</p>
-                      <p>根管治療</p>
-                      <p>種植牙</p>
-                      <p>補牙</p>
-                      <p>拔牙</p>
-                      <p>牙周病治療</p>
-                      <p>根管治療</p> 
-                      <p>種植牙</p>
-                      <p>補牙</p>
-                      <p>拔牙</p>
-                      <p>牙周病治療</p>
-                      <p>根管治療</p> 
-                      <p>種植牙</p>
-                      <p>補牙</p>
-                      <p>拔牙</p>
-                      <p>牙周病治療</p>
-                      <p>根管治療</p> 
-                      <p>種植牙</p>
-                      <p>補牙</p>
-                      <p>拔牙</p>
-                      <p>牙周病治療</p>
-                      <p>根管治療</p> 
-                      <p>種植牙</p>
-                      <p>補牙</p>
-                      <p>拔牙</p>
-                      <p>牙周病治療</p>
-                      <p>根管治療</p>
-                    </marquee>
-                    <img class="marquee-img" src="https://static.cmereye.com/imgs/2024/09/0b3fd6c541862a25.png"  alt="">
+                    <img src="https://static.cmereye.com/imgs/2024/10/3539f42e4493aa38.png"  alt="">
                   </a>
               </div>
               `

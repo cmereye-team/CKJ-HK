@@ -776,6 +776,7 @@ contactUs:
       service_selection: 服務選擇
       please_select_service: 請選擇服務
       submit_the_form: 提交表格
+      explain: 備注
   addressLists: 
     address_101: 
       name: '深圳愛康健口腔醫院（羅湖）'

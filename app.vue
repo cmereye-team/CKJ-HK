@@ -102,7 +102,7 @@ const checkForYahoo = (inputString) => {
     <Body
       class="antialiased duration-300 transition-colors text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-900 overscroll-y-none"
     >
-      <div v-if="route.path !== '/health-care-voucher'" id="popup-alert"></div>
+      <div v-if="route.path !== '/health-care-voucher'" id="popup-alert-two"></div>
       <NuxtLayout>
         <YahooPageMenuBar v-if="isYahoo()" />
         <PageMenuBar v-else />
@@ -120,15 +120,15 @@ const checkForYahoo = (inputString) => {
 </template>
 
 <style lang="scss">
-#popup-alert {
+#popup-alert-two {
   & > div {
     position: fixed;
     top: auto;
     left: auto;
     right: 0;
     bottom: 100px;
-    width: 312px;
-    height: 315px;
+    width: 192px;
+    height: 135px;
     z-index: 999;
   }
 
@@ -136,13 +136,13 @@ const checkForYahoo = (inputString) => {
     width: 100%;
     height: 100%;
     display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+    align-items: center;
+    justify-content: center;
     position: relative;
     top: auto;
     left: auto;
-    right: 0px;
-    bottom: 0;
+    right: 20px;
+    bottom: 180px;
     z-index: 999;
   }
 
@@ -152,9 +152,9 @@ const checkForYahoo = (inputString) => {
     font-size: 3rem;
     position: absolute;
     cursor: pointer;
-    top: 20px;
-    left: 40px;
-    right: auto;
+    top: -60px;
+    left: auto;
+    right: 20px;
     bottom: auto;
     z-index: 960;
   }
@@ -240,15 +240,15 @@ const checkForYahoo = (inputString) => {
 //   }
 // }
 @media screen and (min-width: 768px) and (max-width: 1919px) {
-  #popup-alert {
+  #popup-alert-two {
     & > div {
       position: fixed;
       top: auto;
       left: auto;
-      right: 0;
-      bottom: 80px;
-      width: 250px;
-      height: 253px;
+      right: 1.04165vw;
+      bottom: 16.86vw;
+      width: 10vw;
+      height: 7.03125vw;
       z-index: 999;
     }
 
@@ -261,7 +261,7 @@ const checkForYahoo = (inputString) => {
       position: relative;
       top: auto;
       left: auto;
-      right: 0px;
+      right: 0;
       bottom: 0;
       z-index: 999;
     }
@@ -269,21 +269,21 @@ const checkForYahoo = (inputString) => {
     .close {
       color: #000;
       opacity: 0.7;
-      font-size: 2rem;
-      position: relative;
+      font-size: 3rem;
+      position: absolute;
       cursor: pointer;
-      top: -30px;
-      left: 40px;
-      right: auto;
+      top: -4.825vw;
+      left: auto;
+      right: 0;
       bottom: auto;
       z-index: 960;
     }
 
     .healthCareVoucherPop > a {
       width: 100%;
-      right: 20px;
+      right: 0;
       position: relative;
-      bottom: 50px;
+      bottom: 0;
       & > img:nth-child(1) {
         width: 100%;
       }
@@ -317,36 +317,36 @@ const checkForYahoo = (inputString) => {
   }
 }
 @media screen and (max-width: 767px) {
-  #popup-alert {
+  #popup-alert-two {
     & > div {
       position: fixed;
       top: auto;
       left: auto;
       right: 0;
       bottom: 36.43vw;
-      width: 38.93vw;
-      height: 39.2vw;
+      width: 23.2vw;
+      height: 16.265vw;
       z-index: 999;
     }
   }
-  #popup-alert .close {
+  #popup-alert-two .close {
     color: #000;
     opacity: 0.7;
     font-size: 1.4rem;
     position: absolute;
-    top: 0;
-    left: 15px;
+    top: -5.865vw;
+    left: 17.33vw;
     right: auto;
     bottom: auto;
   }
-  #popup-alert .healthCareVoucherPop {
+  #popup-alert-two .healthCareVoucherPop {
     width: 100%;
     height: 100%;
     position: relative;
     bottom: 0;
     right: 0;
   }
-  #popup-alert .healthCareVoucherPop > a {
+  #popup-alert-two .healthCareVoucherPop > a {
     padding-left: 0;
     width: 100%;
     right: 0;

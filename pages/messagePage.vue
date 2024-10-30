@@ -36,6 +36,7 @@ interface detail {
   area: string
   service: string
   careVoucher: boolean
+  explain: string
   dayOne: string
 }
 
@@ -44,6 +45,7 @@ const messageDetail = ref({
   phone: '+852 98765432',
   area: '羅湖區',
   service: '洗牙',
+  explain: '',
   careVoucher: false,
   dayOne: '2024-XX-XX',
 })
@@ -84,18 +86,20 @@ onMounted(() => {
           <div class="user-submit">
             <div>
               <div>姓名：</div>
-              <div>WhatsApp電話：</div>
               <div>預約日期：</div>
-              <div>預約區域：</div>
               <div>診症服務：</div>
+              <div>預約區域：</div>
+              <div>WhatsApp電話：</div>
+              <div>備註：</div>
               <div>使用長者醫療券：</div>
             </div>
             <div>
               <div>{{ messageDetail.name }}</div>
-              <div>{{ messageDetail.phone }}</div>
               <div>{{ messageDetail.dayOne }}</div>
-              <div>{{ messageDetail.area }}</div>
               <div>{{ messageDetail.service }}</div>
+              <div>{{ messageDetail.area }}</div>
+              <div>{{ messageDetail.phone }}</div>
+              <div>{{ messageDetail.explain }}</div>
               <div>{{ messageDetail.careVoucher ? '是' : '否' }}</div>
             </div>
           </div>
@@ -118,10 +122,14 @@ onMounted(() => {
             </div>
             <li>
               <ul>
-                <nuxt-link to="/dental-service/scaling-and-polishing">超聲波洗牙 ¥88/次</nuxt-link>
+                <nuxt-link to="/dental-service/scaling-and-polishing"
+                  >超聲波洗牙 ¥88/次</nuxt-link
+                >
               </ul>
               <ul>
-                <nuxt-link to="/dental-service/teeth-whitening">藍光美白療程 ¥980/次</nuxt-link>
+                <nuxt-link to="/dental-service/teeth-whitening"
+                  >藍光美白療程 ¥980/次</nuxt-link
+                >
               </ul>
             </li>
           </div>
@@ -134,7 +142,7 @@ onMounted(() => {
     </div>
     <PageFooter />
     <PageNewNavbarSide v-if="windowWidth > 768" />
-        <PageNavbar v-else />
+    <PageNavbar v-else />
   </div>
 </template>
 
