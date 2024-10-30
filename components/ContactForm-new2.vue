@@ -909,6 +909,11 @@ li {
         color: #4d4d4d;
       }
     }
+    :deep(.el-form-item:nth-child(6)) {
+      .el-form-item__label::after {
+        content: none !important;
+      }
+    }
     :deep(.el-form-item__content) {
       display: flex;
       flex-wrap: nowrap;
