@@ -778,7 +778,7 @@ onMounted(() => {
         </div>
       </div>
       <NewAddress />
-      <ContactForm-new />
+      <ContactForm-new2 />
     </div>
     <PageFooter />
     <PageNewNavbarSide v-if="windowWidth > 768" />

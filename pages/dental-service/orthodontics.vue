@@ -624,7 +624,7 @@ const careData = {
       <ServiceProblem :problemData="problemData" />
       <serviceCard />
       <NewAddress />
-      <ContactForm-new class="contactForm" />
+      <ContactForm-new2 class="contactForm" />
     </div>
     <PageFooter />
     <PageNewNavbarSide v-if="windowWidth > 768" />

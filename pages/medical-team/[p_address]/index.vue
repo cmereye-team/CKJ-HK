@@ -302,7 +302,7 @@ onMounted(() => {
         </div>
       </div>
       <NewAddress />
-      <ContactForm-new />
+      <ContactForm-new2 />
     </div>
     <PageFooter />
     <!-- <PageNavbar :showDialogBox="(top<(height / 3 * 2)) && (bottom > (height / 3))" /> -->

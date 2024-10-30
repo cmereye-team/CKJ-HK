@@ -416,7 +416,7 @@ onMounted(() => {
       <ServiceProblem :problemData="problemData" />
       <serviceCard />
       <NewAddress />
-      <ContactForm-new />
+      <ContactForm-new2 />
     </div>
     <div class="YaNavBox shownav" v-if="shownav_2">
       <img

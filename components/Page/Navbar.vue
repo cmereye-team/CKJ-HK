@@ -276,7 +276,7 @@ onMounted(() => {
       class="navForm"
       :style="{ bottom: appState.isShowForm ? '0' : '-150%' }"
     >
-      <ContactForm-new />
+      <ContactForm-new2 />
       <div class="navForm-icon" @click="navFormClose">
         <img src="@/assets/images/icon_7.svg" alt="close" />
       </div>

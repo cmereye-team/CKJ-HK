@@ -375,7 +375,7 @@ const problemData = {
         <a id="Q&A" class="hash_link"></a>
         <ServiceProblem :problem-data="problemData" />
       </div>
-      <ContactForm-new />
+      <ContactForm-new2 />
       <div class="environment">
         <div class="environment-title">
           <div class="index_title">

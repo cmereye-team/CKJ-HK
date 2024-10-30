@@ -606,7 +606,7 @@ onMounted(() => {
       </div>
       <!-- <div @click="handlegetData">獲取數據</div> -->
       <NewAddress />
-      <ContactForm-new />
+      <ContactForm-new2 />
     </div>
     <PageFooter />
     <PageNewNavbarSide v-if="windowWidth > 768" />

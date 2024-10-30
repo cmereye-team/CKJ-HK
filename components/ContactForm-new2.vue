@@ -805,13 +805,17 @@ li {
   &-bg {
     position: relative;
     padding: 71px 0 75px;
-    background: linear-gradient(
-      270deg,
-      rgba(255, 241, 240, 0) 2.6%,
-      rgba(255, 241, 240, 0.7) 23.89%,
-      rgba(255, 241, 240, 0.7) 75.33%,
-      rgba(255, 241, 240, 0) 97.4%
-    );
+    // background: linear-gradient(
+    //   270deg,
+    //   rgba(255, 241, 240, 0) 2.6%,
+    //   rgba(255, 241, 240, 0.7) 23.89%,
+    //   rgba(255, 241, 240, 0.7) 75.33%,
+    //   rgba(255, 241, 240, 0) 97.4%
+    // );
+    background: url('https://static.cmereye.com/imgs/2024/10/b248f2c5945aad87.png')
+      no-repeat;
+    background-position: center center;
+    background-size: cover;
   }
   &-title {
     display: flex;
@@ -1067,6 +1071,24 @@ li {
         height: 26px;
         transition: all 0.1s ease-in;
       }
+      & > input:checked::after {
+        content: '';
+        color: #fff;
+        background-color: #fc1682;
+        -webkit-appearance: none;
+        border-radius: 50%;
+        display: inline-block;
+        border: 3px solid #ffffff;
+        text-align: center;
+        background-size: contain;
+        width: 20px;
+        height: 20px;
+        transition: all 0.1s ease-in;
+        position: absolute;
+        z-index: 5;
+        left: 0px;
+        top: 0px;
+      }
 
       & > input {
         position: relative;
@@ -1278,6 +1300,11 @@ li {
           width: 1.354vw;
           height: 1.354vw;
         }
+        & > input:checked::after {
+          width: 1.004vw;
+          height: 1.004vw;
+          border: 2px solid #ffffff;
+        }
         & > input {
           width: 1.354vw;
           height: 1.354vw;
@@ -1318,7 +1345,11 @@ li {
     width: 100%;
     &-bg {
       padding: 70px 0 50px;
-      background: #fff;
+      // background: #fff;
+      background: url('https://static.cmereye.com/imgs/2024/10/58f8e580415873fd.png')
+        no-repeat;
+      background-position: center center;
+      background-size: cover;
     }
     span {
       // &:first-child {
@@ -1739,6 +1770,11 @@ li {
       & > input:checked {
         width: 4.2vw;
         height: 4.2vw;
+      }
+      & > input:checked::after {
+        width: 2.8vw;
+        height: 2.8vw;
+        border: 2px solid #ffffff;
       }
       & > input {
         width: 4.2vw;

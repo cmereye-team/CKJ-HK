@@ -302,7 +302,7 @@ onMounted(() => {
         <div class="lists" v-else>服務異常</div>
       </div>
       <NewAddress />
-      <ContactForm-new />
+      <ContactForm-new2 />
     </div>
     <PageFooter />
     <PageNewNavbarSide v-if="windowWidth > 768" />

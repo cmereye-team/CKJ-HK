@@ -1305,7 +1305,7 @@ const newsmoduleLists = [
         </div>
       </div>
       <NewAddress />
-      <ContactForm-new />
+      <ContactForm-new2 />
     </div>
     <PageFooter />
     <!-- <PageNavbar :langType="langCur" /> -->

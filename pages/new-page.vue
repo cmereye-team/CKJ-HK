@@ -21,6 +21,6 @@ useHead({
 
 <template>
   <div>
-    <ContactForm-new />
+    <ContactForm-new2 />
   </div>
 </template>

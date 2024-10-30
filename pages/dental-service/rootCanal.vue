@@ -658,7 +658,7 @@ let newsMessageSwiperRef = {
       <!-- <ServiceProblem :problem-data="problemData" /> -->
       <serviceCard />
       <NewAddress />
-      <ContactForm-new />
+      <ContactForm-new2 />
     </div>
     <PageFooter />
     <!-- <PageNavbar
