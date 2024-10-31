@@ -5,7 +5,7 @@ import { useWindowScroll, useWindowSize } from '@vueuse/core'
 const { width, height } = useWindowSize()
 const { x, y } = useWindowScroll()
 const route = useRoute()
-
+const coupon = ref('https://bit.ly/愛康健長者醫療券預約')
 defineProps({
   langType: {
     default: '',
@@ -49,7 +49,7 @@ onMounted(() => {
 const hiddenPopupAlert = () => {
   const popupAlert = document.getElementById('popup-alert-two')
   if (!popupAlert) return // Early exit if popupAlert is not found
-  const contactForm = ref<HTMLElement | null>(null);
+  const contactForm = ref<HTMLElement | null>(null)
   contactForm.value = document.querySelector('.contactForm')
   if (!contactForm.value) return // Early exit if contactForm is not found
 
@@ -119,6 +119,11 @@ watch(y, (n, o) => {
 })
 const pathLink = ref('')
 const closeAd = ref(false)
+
+const showOrHide = ref(false)
+const handleWhatsApp = () => {
+  showOrHide.value = !showOrHide.value
+}
 
 onMounted(() => {
   if (width.value > 768) {
@@ -212,14 +217,34 @@ onMounted(() => {
       />
     </div>
     <div class="navbar-content-mb">
-      <nuxt-link
-        class="navbar-content-mb-in"
-        id="navMbWhatsapp"
-        :to="whatsapplink"
-      >
-        <img src="@/assets/images/icon_65.svg" alt="" />
-        <span>WhatsApp</span>
-      </nuxt-link>
+      <div class="navbar-content-mb-in">
+        <div
+          @click="handleWhatsApp"
+          class="navbar-whatsApp"
+          :class="[showOrHide ? 'navbar-whatsApp-open' : '']"
+        >
+          <img src="@/assets/images/icon_65.svg" alt="" />
+          <span>WhatsApp</span>
+        </div>
+        <div
+          :class="[
+            showOrHide
+              ? 'navbar-content-whatsApp'
+              : 'hide-navbar-content-whatsApp',
+          ]"
+        >
+          <nuxt-link class="whatsApp-coupon" id="navMbWhatsapp" :to="coupon">
+            <span>醫療券專線</span>
+          </nuxt-link>
+          <nuxt-link
+            class="whatsApp-normal"
+            id="navMbWhatsapp"
+            :to="whatsapplink"
+          >
+            <span>一般諮詢</span>
+          </nuxt-link>
+        </div>
+      </div>
       <nuxt-link
         class="navbar-content-mb-in"
         id="navMbTel"
@@ -907,7 +932,8 @@ onMounted(() => {
       bottom: 0;
       left: 0;
       display: flex;
-      justify-content: center;
+      // justify-content: center;
+      // justify-content: space-between;
       padding-bottom: constant(safe-area-inset-bottom);
       padding-bottom: env(safe-area-inset-bottom);
       // border-: ;
@@ -1008,18 +1034,91 @@ onMounted(() => {
         &-center {
           color: var(--textColor);
         }
-        &:nth-of-type(2) {
+        &:nth-child(2) {
           flex: 1.5;
           background: #fff;
-          // margin-top: -10px;
-          // border-radius: 10px 10px 0 0;
           justify-content: flex-start;
-          // padding: 15px 0 10px;
           padding-left: 10px;
         }
-        & > span {
-          // margin-top: 5px;
+        &:nth-child(1) {
+          position: relative;
+          & > div:nth-child(1) {
+            display: flex;
+            gap: 0 1vw;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 8px 0 8px;
+            justify-content: center;
+          }
         }
+      }
+      .navbar-whatsApp::before {
+        content: '';
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+        left: 50%;
+        transform: translateX(-50%) rotate(-180deg);
+        background: url('https://static.cmereye.com/imgs/2024/10/de9383afa6ddf7b3.png')
+          no-repeat;
+        width: 10px;
+        height: 6px;
+        background-size: cover;
+        transition: all 0.1s;
+      }
+      .navbar-whatsApp-open::before {
+        transform: translateX(-50%) rotate(0deg);
+        transition: all 0.1s;
+      }
+      .navbar-content-whatsApp {
+        display: flex;
+        position: absolute;
+        left: 0;
+        bottom: 110%;
+        transition: all 0.1s;
+        flex-direction: column;
+        background: #fff;
+        width: 100%;
+        opacity: 1;
+        z-index: 5;
+        .whatsApp-coupon {
+          border-radius: var(--Count, 0px) 5px 5px var(--Count, 0px);
+          border: 1px solid var(--White, #fff);
+          background: var(---Green, #00a752);
+          color: var(--White, #fff);
+          text-align: center;
+          font-family: FakePearl;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 160%; /* 24px */
+          letter-spacing: 1.5px;
+        }
+        .whatsApp-normal {
+          border-radius: var(--Count, 0px) 5px 5px var(--Count, 0px);
+          border: 1px solid var(--White, #fff);
+          background: var(--Pink-Mid, #fdd3e3);
+          color: var(--Grey-Deep, #4d4d4d);
+          text-align: center;
+          -webkit-text-stroke-width: 1;
+          -webkit-text-stroke-color: var(--White, #fff);
+          font-family: FakePearl;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 160%; /* 24px */
+          letter-spacing: 1.5px;
+        }
+      }
+      .hide-navbar-content-whatsApp {
+        // display: none;
+        position: absolute;
+        left: 0;
+        bottom: 110%;
+        z-index: -1;
+        opacity: 0;
+        height: 0;
+        transition: all 0s;
       }
       & > a:nth-child(2) {
         position: relative;
