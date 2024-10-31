@@ -1800,7 +1800,7 @@ const getWindowWidth = () => {
     .explain_page_one {
       position: absolute;
       z-index: 34;
-      bottom: 30.65vw;
+      bottom: 25.65vw;
       right: 5%;
       font-style: normal;
       font-weight: 500;
@@ -1830,7 +1830,7 @@ const getWindowWidth = () => {
     &-btn-implant {
       &.bannerLine {
         position: relative;
-        bottom: -80px;
+        bottom: -100px;
         z-index: 2;
         .bannerLine-in {
           width: 150px;
@@ -1860,12 +1860,12 @@ const getWindowWidth = () => {
         background-image: url(@/assets/images/back_wave03.png);
         background-repeat: repeat-x;
         background-position: center bottom;
-        height: 43.2vw;
+        height: 42.2vw;
         width: 100%;
         position: absolute;
         z-index: 1;
         left: 0px;
-        bottom: 5.3vw;
+        bottom: 2.7vw;
         animation-name: wave2;
         animation-duration: 10s;
         animation-timing-function: linear;
@@ -1880,12 +1880,12 @@ const getWindowWidth = () => {
         background-image: url(@/assets/images/back_wave01.png);
         background-repeat: repeat-x;
         background-position: center 5.3vw;
-        height: 43.2vw;
+        height: 42.2vw;
         width: 100%;
         position: absolute;
         z-index: 1;
         left: 0px;
-        bottom: 5.3vw;
+        bottom: 2.7vw;
         animation-name: wave1;
         animation-duration: 20s;
         animation-timing-function: linear;
@@ -2126,6 +2126,53 @@ const getWindowWidth = () => {
       font-weight: 400;
       line-height: 130%; /* 18.2px */
       letter-spacing: 1.4px;
+    }
+  }
+}
+@media screen and (min-width: 431px) and (max-width: 768px) {
+  .waterBg-implant {
+    display: block;
+    margin-top: -30px;
+    &::before {
+      content: '';
+      background-image: url(@/assets/images/back_wave03.png);
+      background-repeat: repeat-x;
+      background-position: center bottom;
+      height: 32.2vw !important;
+      width: 100%;
+      position: absolute;
+      z-index: 1;
+      left: 0px;
+      bottom: 2.7vw;
+      animation-name: wave2;
+      animation-duration: 10s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      -webkit-animation-name: wave2;
+      -webkit-animation-duration: 10s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
+    }
+    &::after {
+      content: '';
+      background-image: url(@/assets/images/back_wave01.png);
+      background-repeat: repeat-x;
+      background-position: center 5.3vw;
+      height: 32.2vw !important;
+      width: 100%;
+      position: absolute;
+      z-index: 1;
+      left: 0px;
+      bottom: 2.7vw;
+      animation-name: wave1;
+      animation-duration: 20s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      -webkit-animation-name: wave1;
+      -webkit-animation-duration: 20s;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
+      filter: drop-shadow(0px -8px 4px rgba(77, 77, 77, 0.15));
     }
   }
 }

@@ -66,17 +66,17 @@ const checkboxGroup1 = ref([])
 const cities = cityOptions
 const checkGroup = () => {
   // 获取当前选中的值的数量
-  const selectedValuesLength = checkboxGroup1.value.length;
+  const selectedValuesLength = checkboxGroup1.value.length
   // 如果选中的值超过4个
   if (selectedValuesLength > 4) {
     // 计算需要移除的值的索引
-    const indexToRemove = selectedValuesLength - 4;
+    const indexToRemove = selectedValuesLength - 4
     // 从选中的值中移除前面的值直到数量不超过4个
     for (let i = 0; i < indexToRemove; i++) {
-      checkboxGroup1.value.shift(); // shift() 方法用于删除并返回数组的第一个元素
+      checkboxGroup1.value.shift() // shift() 方法用于删除并返回数组的第一个元素
     }
   }
-};
+}
 
 const disabledDate = (date: any) => {
   return date && date.valueOf() < Date.now() - 86400000
@@ -92,7 +92,7 @@ const shortcuts = [
 
 const phoneNumLength = (rule: any, phoneNum: any, callback: any) => {
   if (!phoneNum) {
-    return callback(new Error('电话号码不能为空'))
+    return callback(new Error('電話號碼不能爲空'))
   }
   switch (areaCode.value) {
     case '86':
@@ -111,7 +111,7 @@ const phoneNumLength = (rule: any, phoneNum: any, callback: any) => {
       }
       break
     default:
-      return callback(new Error('不支持的区号'))
+      return callback(new Error('不支持的區號'))
   }
   callback()
 }
@@ -307,14 +307,14 @@ const postData = async (_form, _preferential) => {
     msgtype: 'text',
     text: {
       content: `名称：${_form.name}
-  联系方式：${areaCode.value} ${_form.phone}
-  服务：${_form.service}
-  来源：${location.href}
-  优惠信息：${_preferential ? _preferential.text : '無'}
+  聯繫方式：${areaCode.value} ${_form.phone}
+  服務：${_form.service}
+  來源：${location.href}
+  優惠信息：${_preferential ? _preferential.text : '無'}
   預約日期：${_form.dayOne}
   診症區域：${_form.area}
   使用長者醫療券：${(_form.careVoucher = _form.careVoucher ? '是' : '否')}
-  提交时间：${new Date().toLocaleString()}
+  提交時間：${new Date().toLocaleString()}
   备注信息：服务器离线由备用服务推送`,
     },
   }
@@ -335,7 +335,7 @@ const postData = async (_form, _preferential) => {
   } else {
     ElMessage({
       showClose: true,
-      message: '服务异常，请稍后重试',
+      message: '服務異常，請稍後重試',
       type: 'error',
     })
   }
@@ -429,7 +429,12 @@ let privacyPolicy = ref(true)
             :label="`${$t('contactUs.contact_form.formItem.name')}`"
             prop="name"
           >
-            <el-input v-model="form.name" name="name"  placeholder="姓名" maxlength="30" />
+            <el-input
+              v-model="form.name"
+              name="name"
+              placeholder="姓名"
+              maxlength="30"
+            />
           </el-form-item>
           <el-form-item label="預約日期" prop="dayOne">
             <el-date-picker
@@ -494,26 +499,33 @@ let privacyPolicy = ref(true)
             :label="`${$t('contactUs.contact_form.formItem.telephone_number')}`"
             prop="phone"
           >
-            <el-select
-              class="areaCode type_number"
-              v-model="areaCode"
-              placeholder="請選擇"
-            >
-              <el-option label="+852" value="852" />
-              <el-option label="+853" value="853" />
-              <el-option label="+86" value="86" />
-            </el-select>
-            <el-input
-              v-model.number="form.phone"
-              type="number"
-              maxlength="12"
-            />
+            <div class="phone_input">
+              <el-select
+                class="areaCode type_number"
+                v-model="areaCode"
+                placeholder="請選擇"
+              >
+                <el-option label="+852" value="852" />
+                <el-option label="+853" value="853" />
+                <el-option label="+86" value="86" />
+              </el-select>
+              <el-input
+                v-model.number="form.phone"
+                type="number"
+                maxlength="12"
+              />
+            </div>
           </el-form-item>
           <el-form-item
             :label="`${$t('contactUs.contact_form.formItem.explain')}`"
             prop="explain"
           >
-            <el-input v-model="form.explain" placeholder="歡迎填寫" name="name" maxlength="30" />
+            <el-input
+              v-model="form.explain"
+              placeholder="歡迎填寫"
+              name="name"
+              maxlength="30"
+            />
           </el-form-item>
           <el-form-item>
             <div class="explain_item">
@@ -788,6 +800,24 @@ input::-webkit-inner-spin-button {
       color: var(--Grey-Deep, #4d4d4d);
       overflow: hidden;
     }
+  }
+}
+.phone_input {
+  display: flex;
+  border: 1px solid var(--indexColor1);
+  :deep(.el-input) {
+    border: none !important;
+    box-shadow: none !important;
+  }
+  :deep(.el-input .is-focus) {
+    border: none !important;
+    box-shadow: none !important;
+  }
+  & > div:nth-child(1) {
+    flex: 4;
+  }
+  & > div:nth-child(2) {
+    flex: 6;
   }
 }
 
@@ -1414,6 +1444,7 @@ li {
     }
     &-in {
       margin: 21px auto 0;
+      position: relative;
       :deep(.el-form-item__error) {
         font-size: 12px;
       }
@@ -1696,6 +1727,8 @@ li {
     }
   }
   :deep(.el-form) {
+    position: relative;
+    max-width: 100%;
     & > div:nth-child(2) {
       & > div:nth-child(2) {
         & > div:nth-child(1) {
@@ -1707,15 +1740,14 @@ li {
       }
     }
     & > div:nth-child(1) {
-      position: relative;
-      width: 180%;
-      max-width: 42.665vw;
+      position: absolute;
+      left: 0;
+      width: 50vw;
     }
     & > div:nth-child(2) {
-      position: relative;
-      right: -15.933vw;
-      min-width: 71%;
-      max-width: 40vw;
+      position: absolute;
+      width: 30vw;
+      right: 0;
 
       .el-input__suffix {
         display: none !important;
@@ -1723,6 +1755,8 @@ li {
     }
     & > div:nth-child(3) {
       position: relative;
+      margin-top: 18vw;
+      margin-bottom: 15vw;
       .service_explain {
         position: absolute;
         top: -5.075vw;
@@ -1736,11 +1770,19 @@ li {
       }
     }
     & > div:nth-child(4) {
-      max-width: 24vw;
-      min-width: 25vw;
+      position: absolute;
+      left: 0;
+      width: 25vw;
+      top: 62vw;
     }
     & > div:nth-child(5) {
-      min-width: 55vw;
+      width: 55vw;
+      position: absolute;
+      right: 0;
+      top: 62vw;
+    }
+    & > div:nth-child(6) {
+      margin-top: 4vw;
     }
   }
   .checkboxGroup {
@@ -1757,8 +1799,8 @@ li {
         font-weight: 500;
         line-height: 120%; /* 19.2px */
         letter-spacing: 0.32vw;
-        margin: 1.33vw 1vw;
-        padding: 1.633vw 2.6665vw;
+        margin: 1.13vw 1vw 0 0;
+        padding: 1.433vw 2.4665vw;
         overflow: hidden;
       }
     }
@@ -1775,8 +1817,8 @@ li {
         font-weight: 500;
         line-height: 120%; /* 19.2px */
         letter-spacing: 0.32vw;
-        margin: 1.33vw 1vw;
-        padding: 1.633vw 2.6665vw;
+        margin: 1.13vw 1vw 0 0;
+        padding: 1.433vw 2.4665vw;
         position: relative;
         overflow: hidden;
       }

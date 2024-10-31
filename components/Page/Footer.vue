@@ -67,10 +67,19 @@ const handlecopywechatcode = () => {
 const handleopenwechat = () => {
   window.location.href = 'weixin://'
 }
+
+const windowWidth = ref(1920)
+onMounted(() => {
+  getWindowWidth()
+  window.addEventListener('resize', getWindowWidth)
+})
+const getWindowWidth = () => {
+  windowWidth.value = window.innerWidth
+}
 </script>
 
 <template>
-  <div class="bgColor footerBox">
+  <div class="footerBox" :class="[windowWidth > 768 ? 'bgColor' : '']">
     <!-- <div class="footer-l"> -->
     <div class="footer-content bigPageCon">
       <!-- <div class="footer-content-nav">
@@ -80,23 +89,23 @@ const handleopenwechat = () => {
           </nuxt-link>
         </div>
       </div> -->
-      <div class="footer-content-logo_one">
-          <nuxt-link
-            :to="'/'"
-            title="深圳愛康健口腔醫院"
-            alt="深圳愛康健口腔醫院"
-          >
-            <img src="@/assets/images/footerLogo.svg" alt="logo" />
-          </nuxt-link>
-        </div>
-      <div class="footer-content-text">
-          {{ $t('components.footer.text1') }} {{ '\n'
-          }}{{ $t('components.footer.text2') }}
-          <nuxt-link :to="`tel: ${phoneNum}`" class="footer-content-text-tel">
-            <img src="@/assets/images/navIcon_1.png" alt="" />
-            <span>香港熱線：(852) {{ smallPhoneNum }}</span>
-          </nuxt-link>
-        </div>
+      <div class="footer-content-logo_one" v-if="windowWidth > 768">
+        <nuxt-link
+          :to="'/'"
+          title="深圳愛康健口腔醫院"
+          alt="深圳愛康健口腔醫院"
+        >
+          <img src="@/assets/images/footerLogo.svg" alt="logo" />
+        </nuxt-link>
+      </div>
+      <div class="footer-content-text" v-if="windowWidth > 768">
+        {{ $t('components.footer.text1') }} {{ '\n'
+        }}{{ $t('components.footer.text2') }}
+        <nuxt-link :to="`tel: ${phoneNum}`" class="footer-content-text-tel">
+          <img src="@/assets/images/navIcon_1.png" alt="" />
+          <span>香港熱線：(852) {{ smallPhoneNum }}</span>
+        </nuxt-link>
+      </div>
       <div class="footer-content-icon">
         <div class="footer-content-icon-in">
           <nuxt-link
@@ -104,7 +113,11 @@ const handleopenwechat = () => {
             target="_blank"
           >
             <img
-              src="@/assets/images/icon_1.png"
+              :src="
+                windowWidth > 768
+                  ? 'https://static.cmereye.com/imgs/2024/10/012ab8bd96c68994.png'
+                  : 'https://static.cmereye.com/imgs/2024/10/87ad0da43715eae9.png'
+              "
               alt="facebook"
               title="facebook"
             />
@@ -113,7 +126,11 @@ const handleopenwechat = () => {
         <div class="footer-content-icon-in">
           <nuxt-link to="https://www.instagram.com/ckj_hk/" target="_blank">
             <img
-              src="@/assets/images/icon_2.png"
+              :src="
+                windowWidth > 768
+                  ? 'https://static.cmereye.com/imgs/2024/10/557be955fecd6eb0.png'
+                  : 'https://static.cmereye.com/imgs/2024/10/ac7851b9dd66bb63.png'
+              "
               alt="instagram"
               title="instagram"
             />
@@ -125,7 +142,11 @@ const handleopenwechat = () => {
             target="_blank"
           >
             <img
-              src="@/assets/images/icon_3.png"
+              :src="
+                windowWidth > 768
+                  ? 'https://static.cmereye.com/imgs/2024/10/aa222b0aacc9468d.png'
+                  : 'https://static.cmereye.com/imgs/2024/10/2d3aba1b6cb227c0.png'
+              "
               alt="youtube"
               title="youtube"
             />
@@ -146,23 +167,48 @@ const handleopenwechat = () => {
             </div>
           </div>
           <div class="weChat-mb" @click="handlecopywechatcode()">
-            <img src="@/assets/images/navIcon_3.png" alt="weChat" />
+            <img
+              :src="
+                windowWidth > 768
+                  ? '@/assets/images/navIcon_3.png'
+                  : 'https://static.cmereye.com/imgs/2024/10/1bea0c6a70890bf6.png'
+              "
+              alt="weChat"
+            />
           </div>
         </div>
       </div>
-      <div class="footer-content-Disclaimer">
-        <nuxt-link to="/privacyPolicy">{{
-          $t('components.footer.privacy_policy')
-        }}</nuxt-link>
-        &
-        <nuxt-link to="/disclaimer">{{
-          $t('components.footer.disclaimer')
-        }}</nuxt-link>
+      <div class="mb_bg_footer">
+        <div class="mb_title"  v-if="windowWidth < 768">
+          <div>
+            <img
+              src="https://static.cmereye.com/imgs/2024/10/85e5b9b4bb032541.png"
+              alt="深圳市醫保定點醫院"
+            />
+            <div>深圳市醫保定點醫院</div>
+          </div>
+          <div>
+            <img
+              src="https://static.cmereye.com/imgs/2024/10/7b2188149c4c5cda.png"
+              alt="深圳二級口腔醫院"
+            />
+            <div>深圳二級口腔醫院</div>
+          </div>
+        </div>
+        <div class="footer-content-Disclaimer">
+          <nuxt-link to="/privacyPolicy">{{
+            $t('components.footer.privacy_policy')
+          }}</nuxt-link>
+          &
+          <nuxt-link to="/disclaimer">{{
+            $t('components.footer.disclaimer')
+          }}</nuxt-link>
+        </div>
+        <div class="footer-content-copyright">
+          ©2024 {{ $t('components.footer.all_rights_reserved') }}
+        </div>
       </div>
-      <div class="footer-content-copyright">
-        ©2024 {{ $t('components.footer.all_rights_reserved') }}
-      </div>
-      <div class="footer-content-copyright">
+      <div class="footer-content-copyright" v-if="windowWidth > 768">
         本網站資訊僅供參考，不能作診療及醫療為依據
       </div>
     </div>
@@ -514,8 +560,36 @@ const handleopenwechat = () => {
   }
 }
 @media screen and (max-width: 768px) {
+  // :deep(.bgColor) {
+  //   background: transparent !important;
+
+  // }
+  .mb_bg_footer {
+    background: var(--indexColor1);
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px 0 30px;
+    .mb_title {
+      display: flex;
+      justify-content: center;
+      gap: 0 15px;
+      margin-bottom: 20px;
+      & > div {
+        display: flex;
+        align-items: center;
+        gap: 0 1px;
+        color: var(--White, #fff);
+        text-align: center;
+        font-family: FakePearl;
+        font-size: 13.128px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 21.004px */
+      }
+    }
+  }
   .footer-content {
-    padding: 50px 0 170px;
+    padding: 5px 0 40px;
     &-nav {
       flex-direction: column;
       text-align: center;
@@ -525,7 +599,7 @@ const handleopenwechat = () => {
       margin-top: 20px;
     }
     &-icon {
-      margin: 30px 0;
+      margin: 15px 0;
       &-in {
         .weChat {
           display: none;
