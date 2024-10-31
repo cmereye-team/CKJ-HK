@@ -45,7 +45,7 @@ let form: any = reactive({
   area: '羅湖區',
   // email: '',
   service: '',
-  explain: '歡迎填寫',
+  explain: '',
   careVoucher: route.path == '/health-care-voucher' ? true : false,
 })
 
@@ -57,7 +57,7 @@ const reForm = () => {
     area: '',
     phone: '',
     service: '',
-    explain: '歡迎填寫',
+    explain: '',
     careVoucher: route.path == '/health-care-voucher' ? true : false,
   }
 }
@@ -65,14 +65,18 @@ const cityOptions = service.map((item) => item.name)
 const checkboxGroup1 = ref([])
 const cities = cityOptions
 const checkGroup = () => {
-  if (checkboxGroup1.value.length > 4) {
-    ElMessage({
-      showClose: true,
-      message: '請勾選最多4項。',
-      type: 'warning',
-    })
+  // 获取当前选中的值的数量
+  const selectedValuesLength = checkboxGroup1.value.length;
+  // 如果选中的值超过4个
+  if (selectedValuesLength > 4) {
+    // 计算需要移除的值的索引
+    const indexToRemove = selectedValuesLength - 4;
+    // 从选中的值中移除前面的值直到数量不超过4个
+    for (let i = 0; i < indexToRemove; i++) {
+      checkboxGroup1.value.shift(); // shift() 方法用于删除并返回数组的第一个元素
+    }
   }
-}
+};
 
 const disabledDate = (date: any) => {
   return date && date.valueOf() < Date.now() - 86400000
@@ -112,14 +116,11 @@ const phoneNumLength = (rule: any, phoneNum: any, callback: any) => {
   callback()
 }
 const serviceLength = (rule: any, service: any, callback: any) => {
-  if (!service) {
+  if (!checkboxGroup1.value.length) {
     return callback(new Error('請選擇服務'))
   }
   if (checkboxGroup1.value.length < 1) {
     return callback(new Error('請選擇服務不少於1個'))
-  }
-  if (checkboxGroup1.value.length > 4) {
-    return callback(new Error('選擇服務不超過4個'))
   }
   callback()
 }
@@ -157,7 +158,6 @@ const rules = reactive<FormRules>({
     {
       required: true,
       validator: serviceLength,
-      message: '請選擇服務',
       trigger: 'change',
     },
   ],
@@ -429,7 +429,7 @@ let privacyPolicy = ref(true)
             :label="`${$t('contactUs.contact_form.formItem.name')}`"
             prop="name"
           >
-            <el-input v-model="form.name" name="name" maxlength="30" />
+            <el-input v-model="form.name" name="name"  placeholder="姓名" maxlength="30" />
           </el-form-item>
           <el-form-item label="預約日期" prop="dayOne">
             <el-date-picker
@@ -469,14 +469,16 @@ let privacyPolicy = ref(true)
           <el-form-item :label="`診症服務`" prop="service" label-width="100%">
             <span class="service_explain"></span>
             <!-- <FormCheckboxGroup /> -->
-            <el-checkbox-group v-model="checkboxGroup1" @change="checkGroup">
-              <el-checkbox-button
-                v-for="city in cities"
-                :label="$t(city)"
-                :key="$t(city)"
-                >{{ $t(city) }}</el-checkbox-button
-              >
-            </el-checkbox-group>
+            <div class="checkboxGroup">
+              <el-checkbox-group v-model="checkboxGroup1" @change="checkGroup">
+                <el-checkbox-button
+                  v-for="city in cities"
+                  :label="$t(city)"
+                  :key="$t(city)"
+                  >{{ $t(city) }}</el-checkbox-button
+                >
+              </el-checkbox-group>
+            </div>
           </el-form-item>
           <el-form-item label="診症區域" prop="area">
             <el-select v-model="form.area" placeholder="請選擇">
@@ -511,7 +513,7 @@ let privacyPolicy = ref(true)
             :label="`${$t('contactUs.contact_form.formItem.explain')}`"
             prop="explain"
           >
-            <el-input v-model="form.explain" name="name" maxlength="30" />
+            <el-input v-model="form.explain" placeholder="歡迎填寫" name="name" maxlength="30" />
           </el-form-item>
           <el-form-item>
             <div class="explain_item">
@@ -665,10 +667,11 @@ input::-webkit-inner-spin-button {
 }
 @media screen and (max-width: 768px) {
   .el-select-dropdown {
-    max-width: 155.5px;
-    min-width: 155.5px !important;
+    max-width: 95.5px;
+    min-width: 80.5px !important;
     .el-select-dropdown__item {
       padding-left: 11px;
+      padding-right: 12px;
     }
   }
   #el-id-1024-8 {
@@ -678,7 +681,7 @@ input::-webkit-inner-spin-button {
     }
     .el-select-dropdown__item {
       padding-left: 11px;
-      padding-right: 20px;
+      padding-right: 12px;
     }
   }
 }
@@ -728,61 +731,66 @@ input::-webkit-inner-spin-button {
     grid-column: 1 / 3;
   }
 }
-:deep(.el-checkbox-button) {
-  & > span {
-    border-radius: 43px !important;
-    border: 2px solid var(--Pink-Pale, #fee6f1) !important;
-    background: var(--White, #fff);
-    color: var(--Grey-Deep, #4d4d4d);
-    text-align: center;
-    font-family: FakePearl;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 160%; /* 38.4px */
-    margin: 10px;
-    overflow: hidden;
+.checkboxGroup {
+  :deep(.el-checkbox-button) {
+    & > span {
+      border-radius: 43px !important;
+      border: 2px solid var(--Pink-Pale, #fee6f1) !important;
+      background: var(--White, #fff);
+      color: var(--Grey-Deep, #4d4d4d);
+      text-align: center;
+      font-family: FakePearl;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 160%; /* 38.4px */
+      overflow: hidden;
+      margin: 5px 8px;
+      padding: 8px 15px;
+    }
+  }
+  :deep(.el-checkbox-button.is-checked) {
+    & > span {
+      border-radius: 40px !important;
+      border: 2px solid var(--Theme-Color, #fc1682) !important;
+      background: var(--Theme-Color, #fc1682);
+      color: var(--White, #fff);
+      text-align: center;
+      font-family: FakePearl;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 160%; /* 38.4px */
+      margin: 5px 8px;
+      padding: 8px 15px;
+      position: relative;
+      overflow: hidden;
+    }
+    & > span::before {
+      content: '';
+      position: absolute;
+      background: url('https://static.cmereye.com/imgs/2024/10/bf3ad20161919c12.png')
+        no-repeat;
+      background-size: 100% 100%;
+      right: 0;
+      bottom: 0;
+      z-index: 3;
+      width: 46px;
+      height: 28px;
+      border: 0px;
+    }
+  }
+  :deep(.is-focus) {
+    & > span {
+      border-radius: 40px !important;
+      border: 2px solid var(--Pink-Pale, #fee6f1) !important;
+      background: var(--White, #fff);
+      color: var(--Grey-Deep, #4d4d4d);
+      overflow: hidden;
+    }
   }
 }
-:deep(.el-checkbox-button.is-checked) {
-  & > span {
-    border-radius: 40px !important;
-    border: 2px solid var(--Theme-Color, #fc1682) !important;
-    background: var(--Theme-Color, #fc1682);
-    color: var(--White, #fff);
-    text-align: center;
-    font-family: FakePearl;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 160%; /* 38.4px */
-    margin: 10px;
-    position: relative;
-    overflow: hidden;
-  }
-  & > span::before {
-    content: '';
-    position: absolute;
-    background: url('https://static.cmereye.com/imgs/2024/10/bf3ad20161919c12.png')
-      no-repeat;
-    background-size: 100% 100%;
-    right: 0;
-    bottom: 0;
-    z-index: 3;
-    width: 46px;
-    height: 28px;
-    border: 0px;
-  }
-}
-:deep(.is-focus) {
-  & > span {
-    border-radius: 40px !important;
-    border: 2px solid var(--Pink-Pale, #fee6f1) !important;
-    background: var(--White, #fff);
-    color: var(--Grey-Deep, #4d4d4d);
-    overflow: hidden;
-  }
-}
+
 li {
   &.el-select-dropdown__item {
     color: var(--indexColor1);
@@ -1179,65 +1187,91 @@ li {
         font-weight: 400;
       }
     }
+
+    & > div:nth-child(1) {
+      position: relative;
+      width: 100%;
+      max-width: 42.665vw;
+    }
+    & > div:nth-child(2) {
+      position: relative;
+      width: 100%;
+      max-width: 36.4vw;
+      right: 0;
+
+      .el-input__suffix {
+        display: none !important;
+      }
+    }
+
+    & > div:nth-child(4) {
+      // max-width: 24vw;
+      width: 100%;
+    }
+
     .el-input__wrapper {
       padding: 1px 0.5723vw;
     }
   }
-  :deep(.el-checkbox-button) {
-    & > span {
-      border-radius: 43px !important;
-      border: 2px solid var(--Pink-Pale, #fee6f1) !important;
-      background: var(--White, #fff);
-      color: var(--Grey-Deep, #4d4d4d);
-      text-align: center;
-      font-family: FakePearl;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 1.8646vw;
-      letter-spacing: 0.0646vw;
-      font-size: 1.4583vw;
-      margin: 10px;
-      overflow: hidden;
+  .checkboxGroup {
+    :deep(.el-checkbox-button) {
+      & > span {
+        border-radius: 43px !important;
+        border: 2px solid var(--Pink-Pale, #fee6f1) !important;
+        background: var(--White, #fff);
+        color: var(--Grey-Deep, #4d4d4d);
+        text-align: center;
+        font-family: FakePearl;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.8646vw;
+        letter-spacing: 0.0646vw;
+        font-size: 1.4583vw;
+        margin: 0.26vw 0.4165vw;
+        padding: 0.4165vw 0.78125vw;
+        overflow: hidden;
+      }
     }
-  }
-  :deep(.el-checkbox-button.is-checked) {
-    & > span {
-      border-radius: 40px !important;
-      border: 2px solid var(--Theme-Color, #fc1682) !important;
-      background: var(--Theme-Color, #fc1682);
-      color: var(--White, #fff);
-      text-align: center;
-      font-family: FakePearl;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 1.8646vw;
-      font-size: 1.4583vw;
-      letter-spacing: 0.0646vw;
-      margin: 10px;
-      position: relative;
-      overflow: hidden;
+    :deep(.el-checkbox-button.is-checked) {
+      & > span {
+        border-radius: 40px !important;
+        border: 2px solid var(--Theme-Color, #fc1682) !important;
+        background: var(--Theme-Color, #fc1682);
+        color: var(--White, #fff);
+        text-align: center;
+        font-family: FakePearl;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 1.8646vw;
+        font-size: 1.4583vw;
+        letter-spacing: 0.0646vw;
+        margin: 0.26vw 0.4165vw;
+        padding: 0.4165vw 0.78125vw;
+        position: relative;
+        overflow: hidden;
+      }
+      & > span::before {
+        content: '';
+        position: absolute;
+        background: url('https://static.cmereye.com/imgs/2024/10/bf3ad20161919c12.png')
+          no-repeat;
+        background-size: 100% 100%;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
+        width: 2.3958vw;
+        height: 1.4583vw;
+        border: 0px;
+      }
     }
-    & > span::before {
-      content: '';
-      position: absolute;
-      background: url('https://static.cmereye.com/imgs/2024/10/bf3ad20161919c12.png')
-        no-repeat;
-      background-size: 100% 100%;
-      right: 0;
-      bottom: 0;
-      z-index: 3;
-      width: 2.3958vw;
-      height: 1.4583vw;
-      border: 0px;
-    }
-  }
-  :deep(.is-focus) {
-    & > span {
-      border-radius: 40px !important;
-      border: 2px solid var(--Pink-Pale, #fee6f1) !important;
-      background: var(--White, #fff);
-      color: var(--Grey-Deep, #4d4d4d);
-      overflow: hidden;
+    :deep(.is-focus) {
+      & > span {
+        border-radius: 40px !important;
+        border: 2px solid var(--Pink-Pale, #fee6f1) !important;
+        background: var(--White, #fff);
+        color: var(--Grey-Deep, #4d4d4d);
+        overflow: hidden;
+      }
     }
   }
 
@@ -1578,7 +1612,7 @@ li {
     height: calc(100% + 40px);
   }
 }
-@media (min-width: 768px) and (max-width: 1600px) {
+@media (min-width: 769px) and (max-width: 1600px) {
   .animbtntypetwo {
     &-in {
       & > span {
@@ -1672,6 +1706,21 @@ li {
         }
       }
     }
+    & > div:nth-child(1) {
+      position: relative;
+      width: 180%;
+      max-width: 42.665vw;
+    }
+    & > div:nth-child(2) {
+      position: relative;
+      right: -15.933vw;
+      min-width: 71%;
+      max-width: 40vw;
+
+      .el-input__suffix {
+        display: none !important;
+      }
+    }
     & > div:nth-child(3) {
       position: relative;
       .service_explain {
@@ -1686,62 +1735,73 @@ li {
         font-weight: 400;
       }
     }
-  }
-  :deep(.el-checkbox-button) {
-    & > span {
-      border-radius: 11.465vw !important;
-      border: 0.53vw solid var(--Pink-Pale, #fee6f1) !important;
-      background: var(--White, #fff);
-      color: var(--Grey-Deep, #4d4d4d);
-      text-align: center;
-      font-family: FakePearl;
-      font-size: 3.2vw;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 120%; /* 19.2px */
-      letter-spacing: 0.32vw;
-      margin: 1.33vw 1vw;
-      overflow: hidden;
+    & > div:nth-child(4) {
+      max-width: 24vw;
+      min-width: 25vw;
+    }
+    & > div:nth-child(5) {
+      min-width: 55vw;
     }
   }
-  :deep(.el-checkbox-button.is-checked) {
-    & > span {
-      border-radius: 10.65vw !important;
-      border: 0.53vw solid var(--Theme-Color, #fc1682) !important;
-      background: var(--Theme-Color, #fc1682);
-      color: var(--White, #fff);
-      text-align: center;
-      font-family: FakePearl;
-      font-size: 3.2vw;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 120%; /* 19.2px */
-      letter-spacing: 0.32vw;
-      margin: 1.33vw 0.53vw;
-      position: relative;
-      overflow: hidden;
+  .checkboxGroup {
+    :deep(.el-checkbox-button) {
+      & > span {
+        border-radius: 11.465vw !important;
+        border: 0.53vw solid var(--Pink-Pale, #fee6f1) !important;
+        background: var(--White, #fff);
+        color: var(--Grey-Deep, #4d4d4d);
+        text-align: center;
+        font-family: FakePearl;
+        font-size: 3.2vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%; /* 19.2px */
+        letter-spacing: 0.32vw;
+        margin: 1.33vw 1vw;
+        padding: 1.633vw 2.6665vw;
+        overflow: hidden;
+      }
     }
-    & > span::before {
-      content: '';
-      position: absolute;
-      background: url('https://static.cmereye.com/imgs/2024/10/bf3ad20161919c12.png')
-        no-repeat;
-      background-size: 100% 100%;
-      right: 0;
-      bottom: 0;
-      z-index: 3;
-      width: 6.0958vw;
-      height: 4.0583vw;
-      border: 0px;
+    :deep(.el-checkbox-button.is-checked) {
+      & > span {
+        border-radius: 10.65vw !important;
+        border: 0.53vw solid var(--Theme-Color, #fc1682) !important;
+        background: var(--Theme-Color, #fc1682);
+        color: var(--White, #fff);
+        text-align: center;
+        font-family: FakePearl;
+        font-size: 3.2vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 120%; /* 19.2px */
+        letter-spacing: 0.32vw;
+        margin: 1.33vw 1vw;
+        padding: 1.633vw 2.6665vw;
+        position: relative;
+        overflow: hidden;
+      }
+      & > span::before {
+        content: '';
+        position: absolute;
+        background: url('https://static.cmereye.com/imgs/2024/10/bf3ad20161919c12.png')
+          no-repeat;
+        background-size: 100% 100%;
+        right: 0;
+        bottom: 0;
+        z-index: 3;
+        width: 6.0958vw;
+        height: 4.0583vw;
+        border: 0px;
+      }
     }
-  }
-  :deep(.is-focus) {
-    & > span {
-      border-radius: 10.65vw !important;
-      border: 0.563vw solid var(--Pink-Pale, #fee6f1) !important;
-      background: var(--White, #fff);
-      color: var(--Grey-Deep, #4d4d4d);
-      overflow: hidden;
+    :deep(.is-focus) {
+      & > span {
+        border-radius: 10.65vw !important;
+        border: 0.563vw solid var(--Pink-Pale, #fee6f1) !important;
+        background: var(--White, #fff);
+        color: var(--Grey-Deep, #4d4d4d);
+        overflow: hidden;
+      }
     }
   }
 
