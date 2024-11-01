@@ -1742,11 +1742,11 @@ li {
     & > div:nth-child(1) {
       position: absolute;
       left: 0;
-      width: 50vw;
+      width: 41vw;
     }
     & > div:nth-child(2) {
       position: absolute;
-      width: 30vw;
+      width: 41vw;
       right: 0;
 
       .el-input__suffix {
@@ -1776,13 +1776,18 @@ li {
       top: 62vw;
     }
     & > div:nth-child(5) {
-      width: 55vw;
+      width: 57vw;
       position: absolute;
       right: 0;
       top: 62vw;
     }
     & > div:nth-child(6) {
       margin-top: 4vw;
+    }
+  }
+  .phone_input {
+    :deep(.el-input){
+      height: 28px;
     }
   }
   .checkboxGroup {

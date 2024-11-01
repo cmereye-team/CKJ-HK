@@ -1795,13 +1795,13 @@ const getWindowWidth = () => {
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 480px) {
   .header-content {
     .explain_page_one {
       position: absolute;
       z-index: 34;
-      bottom: 25.65vw;
-      right: 5%;
+      bottom: -5.65vw;
+      right: 0;
       font-style: normal;
       font-weight: 500;
       font-size: 14px;
@@ -1809,6 +1809,8 @@ const getWindowWidth = () => {
       width: fit-content;
       color: #666666;
       width: 100%;
+      left: auto;
+      transform: translateX(0);
     }
     // margin-top: 0;
     &-bgImg {
@@ -1823,8 +1825,8 @@ const getWindowWidth = () => {
       z-index: 1;
       &.course-new {
         padding-bottom: 5px;
-        margin-top: 10px;
-        margin-bottom: 10px;
+        margin-top: 20px;
+        margin-bottom: 0px;
       }
     }
     &-btn-implant {
@@ -1860,7 +1862,7 @@ const getWindowWidth = () => {
         background-image: url(@/assets/images/back_wave03.png);
         background-repeat: repeat-x;
         background-position: center bottom;
-        height: 42.2vw;
+        height: 37.2vw;
         width: 100%;
         position: absolute;
         z-index: 1;
@@ -1880,7 +1882,7 @@ const getWindowWidth = () => {
         background-image: url(@/assets/images/back_wave01.png);
         background-repeat: repeat-x;
         background-position: center 5.3vw;
-        height: 42.2vw;
+        height: 37.2vw;
         width: 100%;
         position: absolute;
         z-index: 1;
@@ -2129,51 +2131,386 @@ const getWindowWidth = () => {
     }
   }
 }
-@media screen and (min-width: 431px) and (max-width: 768px) {
-  .waterBg-implant {
-    display: block;
-    margin-top: -30px;
-    &::before {
-      content: '';
-      background-image: url(@/assets/images/back_wave03.png);
-      background-repeat: repeat-x;
-      background-position: center bottom;
-      height: 32.2vw !important;
-      width: 100%;
+@media screen and (min-width: 481px) and (max-width: 768px) {
+  .header-content {
+    .explain_page_one {
       position: absolute;
-      z-index: 1;
-      left: 0px;
-      bottom: 2.7vw;
-      animation-name: wave2;
-      animation-duration: 10s;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-      -webkit-animation-name: wave2;
-      -webkit-animation-duration: 10s;
-      -webkit-animation-timing-function: linear;
-      -webkit-animation-iteration-count: infinite;
+      z-index: 34;
+      bottom: -5.65vw;
+      right: 5%;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 160%;
+      width: fit-content;
+      color: #666666;
+      width: 100%;
     }
-    &::after {
-      content: '';
-      background-image: url(@/assets/images/back_wave01.png);
-      background-repeat: repeat-x;
-      background-position: center 5.3vw;
-      height: 32.2vw !important;
-      width: 100%;
-      position: absolute;
+    // margin-top: 0;
+    &-bgImg {
+      position: relative;
+      &.course-new {
+        margin-top: 70px;
+      }
+    }
+    &-bgImg-implant {
+      position: relative;
+      top: 16vw;
       z-index: 1;
-      left: 0px;
-      bottom: 2.7vw;
-      animation-name: wave1;
-      animation-duration: 20s;
-      animation-timing-function: linear;
-      animation-iteration-count: infinite;
-      -webkit-animation-name: wave1;
-      -webkit-animation-duration: 20s;
-      -webkit-animation-timing-function: linear;
-      -webkit-animation-iteration-count: infinite;
-      filter: drop-shadow(0px -8px 4px rgba(77, 77, 77, 0.15));
+      &.course-new {
+        padding-bottom: 5px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+    }
+    &-btn-implant {
+      &.bannerLine {
+        position: relative;
+        bottom: -100px;
+        z-index: 2;
+        .bannerLine-in {
+          width: 150px;
+        }
+      }
+    }
+    &-text-implant {
+      position: relative;
+      margin-top: 25px;
+      width: calc(100% - 60px);
+      bottom: auto;
+      text-align: left;
+      z-index: 1;
+      & > div {
+        font-size: 5.3vw;
+      }
+      &.course-new {
+        display: block;
+        margin-top: 150px;
+      }
+    }
+    .waterBg-implant {
+      display: block;
+      margin-top: -30px;
+      &::before {
+        content: '';
+        background-image: url(@/assets/images/back_wave03.png);
+        background-repeat: repeat-x;
+        background-position: center bottom;
+        height: 26.2vw;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        left: 0px;
+        bottom: 2.7vw;
+        animation-name: wave2;
+        animation-duration: 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        -webkit-animation-name: wave2;
+        -webkit-animation-duration: 10s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+      }
+      &::after {
+        content: '';
+        background-image: url(@/assets/images/back_wave01.png);
+        background-repeat: repeat-x;
+        background-position: center 5.3vw;
+        height: 26.2vw;
+        width: 100%;
+        position: absolute;
+        z-index: 1;
+        left: 0px;
+        bottom: 2.7vw;
+        animation-name: wave1;
+        animation-duration: 20s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        -webkit-animation-name: wave1;
+        -webkit-animation-duration: 20s;
+        -webkit-animation-timing-function: linear;
+        -webkit-animation-iteration-count: infinite;
+        filter: drop-shadow(0px -8px 4px rgba(77, 77, 77, 0.15));
+      }
+    }
+    &-in {
+      position: fixed;
+      top: 0;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0;
+      padding: 5.3vw 0 0 5.3vw;
+      position: fixed;
+      top: 0;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0;
+      padding: 5.3vw 0 5.3vw 5.3vw;
+      background: #fff;
+      .menu {
+        display: none;
+      }
+      .logo {
+        width: 125px;
+        margin-bottom: 0;
+      }
+      .menu:nth-child(1) {
+        display: none;
+      }
+      .icon {
+        display: flex;
+        align-items: center;
+        &-menuopen {
+          display: block;
+          width: 5.3vw;
+          margin-right: 25px;
+        }
+        &-lists {
+          display: flex;
+          align-items: center;
+          &-in {
+            display: block;
+            margin-right: 15px;
+            img {
+              width: 5.3vw;
+            }
+          }
+        }
+      }
+    }
+    &-span {
+      width: 70px;
+      font-weight: 400;
+      font-size: 5.3vw;
+      right: 30px;
+      bottom: 60px;
+    }
+    .waterBg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      &.course-new {
+        bottom: auto;
+      }
+    }
+    .headerBox02 {
+      position: relative;
+      z-index: 40;
+    }
+  }
+  .waterBg::after {
+    transform: rotate(180deg);
+    top: -50px;
+  }
+  .waterBg::before {
+    transform: rotate(180deg);
+    top: -60px;
+  }
+  .menuBox {
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    z-index: 35;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%;
+    color: var(--indexColor1);
+    transition: all 0.3s;
+    overflow: hidden;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .menuLists {
+      margin-top: 120px;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      &-item {
+        width: 100%;
+        text-align: center;
+        padding: 5.3vw 0;
+        font-size: 18px;
+        position: relative;
+        &:not(:last-child)::before {
+          content: '';
+          width: calc(100% - 60px);
+          height: 2px;
+          background: var(--indexColor2);
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          position: absolute;
+        }
+        &.childIcon:after {
+          content: '';
+          width: 0;
+          height: 0;
+          display: inline-block;
+          position: absolute;
+          right: 34%;
+          top: 29px;
+          border-top: 10px solid;
+          border-left: 6px solid;
+          border-right: 6px solid;
+          border-bottom: 10px solid;
+          border-color: var(--indexColor1) transparent transparent transparent;
+          vertical-align: middle;
+        }
+        &.health-care-voucher {
+          color: #00a752;
+        }
+        &.federation-of-trade-unions-zone {
+          color: #e60013;
+        }
+      }
+      &-childLists {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-size: 1rem;
+        font-weight: 500;
+        margin-top: 5.3vw;
+        color: var(--indexColor);
+        &-item {
+          width: 100%;
+          height: 100%;
+          a {
+            width: 100%;
+            height: 100%;
+            padding: 10px 0;
+            display: block;
+            &.router-link-exact-active {
+              background: var(--indexColor2);
+            }
+          }
+        }
+      }
+    }
+    .langItem {
+      width: calc(100% - 60px);
+      padding: 5.3vw 0;
+      margin: 0 30px;
+      display: flex;
+      border-top: 2px solid var(--indexColor2);
+      justify-content: center;
+      align-items: center;
+      & > span {
+        margin-left: 10px;
+      }
+    }
+    &-btn {
+      margin-top: 51px;
+      font-size: 1.25rem;
+    }
+    &-phone {
+      font-weight: 400;
+      font-size: 1.25rem;
+      line-height: 23px;
+      margin-top: 5.3vw;
+      img {
+        display: inline-block;
+        vertical-align: middle;
+        margin-top: -3px;
+        margin-right: 5px;
+      }
+    }
+    &-icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin: 50px auto 180px;
+      &-in:not(:last-child) {
+        margin-right: 25px;
+      }
+    }
+  }
+  .health_care_voucher {
+    display: flex;
+    flex-direction: column;
+    margin-right: 3vw;
+    & > span:nth-child(1) {
+      box-sizing: border-box;
+      padding: 0.53vw 1.6vw;
+      display: block;
+      border-radius: 2px;
+      background: var(---Green, #00a752);
+      color: var(--White, #fff);
+      text-align: right;
+      font-family: FakePearl;
+      font-size: 3.73vw;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%; /* 18.2px */
+      letter-spacing: 3.78px;
+    }
+    & > span:nth-child(2) {
+      color: var(--Grey-Deep, #4d4d4d);
+      text-align: right;
+      font-family: FakePearl;
+      font-size: 3.73vw;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 130%; /* 18.2px */
+      letter-spacing: 1.4px;
     }
   }
 }
+// @media screen and (min-width: 431px) and (max-width: 768px) {
+//   .waterBg-implant {
+//     display: block;
+//     margin-top: -30px;
+//     &::before {
+//       content: '';
+//       background-image: url(@/assets/images/back_wave03.png);
+//       background-repeat: repeat-x;
+//       background-position: center bottom;
+//       height: 22.2vw !important;
+//       width: 100%;
+//       position: absolute;
+//       z-index: 1;
+//       left: 0px;
+//       bottom: 2.7vw;
+//       animation-name: wave2;
+//       animation-duration: 10s;
+//       animation-timing-function: linear;
+//       animation-iteration-count: infinite;
+//       -webkit-animation-name: wave2;
+//       -webkit-animation-duration: 10s;
+//       -webkit-animation-timing-function: linear;
+//       -webkit-animation-iteration-count: infinite;
+//     }
+//     &::after {
+//       content: '';
+//       background-image: url(@/assets/images/back_wave01.png);
+//       background-repeat: repeat-x;
+//       background-position: center 5.3vw;
+//       height: 22.2vw !important;
+
+//       width: 100%;
+//       position: absolute;
+//       z-index: 1;
+//       left: 0px;
+//       bottom: 2.7vw;
+//       animation-name: wave1;
+//       animation-duration: 20s;
+//       animation-timing-function: linear;
+//       animation-iteration-count: infinite;
+//       -webkit-animation-name: wave1;
+//       -webkit-animation-duration: 20s;
+//       -webkit-animation-timing-function: linear;
+//       -webkit-animation-iteration-count: infinite;
+//       filter: drop-shadow(0px -8px 4px rgba(77, 77, 77, 0.15));
+//     }
+//   }
+// }
 </style>

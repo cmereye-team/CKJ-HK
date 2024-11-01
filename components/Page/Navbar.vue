@@ -45,6 +45,7 @@ const toContactUs = () => {
 }
 onMounted(() => {
   window.addEventListener('scroll', hiddenPopupAlert)
+  // window.addEventListener('scroll', hidePopupAlertNew)
 })
 const hiddenPopupAlert = () => {
   const popupAlert = document.getElementById('popup-alert-two')
@@ -65,6 +66,20 @@ const hiddenPopupAlert = () => {
 
   popupAlert.style.display = isInView ? 'none' : 'flex'
 }
+
+// const hidePopupAlertNew = () => {
+//   const popupAlert = document.getElementById('popup-alert-two')
+//   if (!popupAlert) return
+//   popupAlert.style.display = 'none'
+//   const scrollTop =
+//     document.documentElement.scrollTop || document.body.scrollTop
+//   console.log(scrollTop,scrollTop > 500, 'scrollTop')
+//   if (scrollTop > 500) {
+//     popupAlert.style.display = 'flex'
+//   } else {
+//     popupAlert.style.display = 'none'
+//   }
+// }
 
 const centerDialogVisible = ref(false)
 const handlecopywechatcode = () => {
@@ -105,11 +120,11 @@ const changeConfig = () => {
   if (y.value > (width.value * (580 / 1920)) / 2) {
     _opacity.value = 1
     _visibility.value = 'unset'
-    _top.value = '30vh'
+    _top.value = '20vh'
   } else {
     _opacity.value = 0
     _visibility.value = 'hidden'
-    _top.value = '40vh'
+    _top.value = '30vh'
   }
 }
 watch(y, (n, o) => {
@@ -1049,6 +1064,7 @@ onMounted(() => {
             box-sizing: border-box;
             padding: 8px 0 8px;
             justify-content: center;
+            align-items: flex-end;
           }
         }
       }
@@ -1077,10 +1093,12 @@ onMounted(() => {
         bottom: 110%;
         transition: all 0.1s;
         flex-direction: column;
-        background: #fff;
+        background: transparent;
         width: 100%;
+        gap: 3px 0;
         opacity: 1;
         z-index: 5;
+        box-shadow: none;
         .whatsApp-coupon {
           border-radius: var(--Count, 0px) 5px 5px var(--Count, 0px);
           border: 1px solid var(--White, #fff);
@@ -1091,7 +1109,7 @@ onMounted(() => {
           font-size: 15px;
           font-style: normal;
           font-weight: 400;
-          line-height: 160%; /* 24px */
+          line-height: 280%; /* 24px */
           letter-spacing: 1.5px;
         }
         .whatsApp-normal {
@@ -1106,7 +1124,7 @@ onMounted(() => {
           font-size: 15px;
           font-style: normal;
           font-weight: 400;
-          line-height: 160%; /* 24px */
+          line-height: 280%; /* 24px */
           letter-spacing: 1.5px;
         }
       }

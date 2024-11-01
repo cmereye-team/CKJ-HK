@@ -37,6 +37,7 @@ onMounted(() => {
   if (width.value > 768) {
     changeConfig()
   }
+  // window.addEventListener('scroll', openHealthCare)
 })
 
 const smoothScrollToTop = () => {
@@ -45,6 +46,14 @@ const smoothScrollToTop = () => {
     behavior: 'smooth', // 平滑滚动
   })
 }
+const closePopUp = ref(true)
+const closeHealthCare = () => {
+  closePopUp.value = false
+}
+// const openHealthCare = () => {
+//   closePopUp.value = true
+// }
+
 </script>
 
 <template>
@@ -58,6 +67,15 @@ const smoothScrollToTop = () => {
       top: width > 768 ? _top : 'auto',
     }"
   >
+    <div class="whatpsApp voucher" v-if="closePopUp">
+      <div @click.stop="closeHealthCare">X</div>
+      <nuxt-link href="/health-care-voucher" class="whatsApp_svg">
+        <img
+          src="https://static.cmereye.com/imgs/2024/10/3539f42e4493aa38.png"
+          alt=""
+        />
+      </nuxt-link>
+    </div>
     <a :href="whatsapplink" target="_blank" class="whatpsApp">
       <div class="whatsApp_text">WhatsApp</div>
       <div class="whatsApp_svg">
@@ -146,6 +164,9 @@ const smoothScrollToTop = () => {
   right: 3.5vw;
   top: 40vh;
   z-index: 99;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
   & > a,
   & > div {
     display: block;
@@ -179,6 +200,42 @@ const smoothScrollToTop = () => {
       z-index: 5;
     }
   }
+  & > div:nth-child(1) {
+    position: relative;
+    display: block;
+    & > div:nth-child(1) {
+      position: absolute;
+      top: -30px;
+      color: #000;
+      font-family: var(--indexFontFamily);
+      opacity: 0.7;
+      line-height: 160%; /* 41.6px */
+      letter-spacing: 1.2px;
+      font-size: 1.8rem;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transform: translate(0);
+      background: transparent;
+      right: 0;
+    }
+  }
+}
+.voucher {
+  position: relative;
+  display: block;
+  // & > div:nth-child(1) {
+  //   position: absolute;
+  //   top: 10px;
+  //   color: #000;
+  //   opacity: 0.7;
+  //   font-size: 3rem;
+  //   background: transparent;
+  //   width: 25px;
+  //   height: 25px;
+  // }
 }
 .whatpsApp:hover {
   .whatsApp_text {

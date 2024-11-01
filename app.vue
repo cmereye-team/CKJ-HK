@@ -80,6 +80,7 @@ onMounted(() => {
   //     popupAlertCreated()
   //   }
   // }, 2000)
+  // 页面自动滚动
 })
 
 // watch(() => route, () => {
@@ -102,7 +103,10 @@ const checkForYahoo = (inputString) => {
     <Body
       class="antialiased duration-300 transition-colors text-gray-800 dark:text-gray-200 bg-white dark:bg-gray-900 overscroll-y-none"
     >
-      <div v-if="route.path !== '/health-care-voucher'" id="popup-alert-two"></div>
+      <div
+        v-if="route.path !== '/health-care-voucher'"
+        id="popup-alert-two"
+      ></div>
       <NuxtLayout>
         <YahooPageMenuBar v-if="isYahoo()" />
         <PageMenuBar v-else />
@@ -123,9 +127,10 @@ const checkForYahoo = (inputString) => {
 #popup-alert-two {
   & > div {
     position: fixed;
-    top: auto;
+    top: clamp(300px, 1vh, 350px);
+    // top: 350px;
     left: auto;
-    right: 0;
+    right: 20px;
     bottom: 100px;
     width: 192px;
     height: 135px;
@@ -139,9 +144,9 @@ const checkForYahoo = (inputString) => {
     align-items: center;
     justify-content: center;
     position: relative;
-    top: auto;
-    left: auto;
-    right: 20px;
+    top: 0;
+    left: 0;
+    right: 0;
     bottom: 180px;
     z-index: 999;
   }
@@ -154,14 +159,14 @@ const checkForYahoo = (inputString) => {
     cursor: pointer;
     top: -60px;
     left: auto;
-    right: 20px;
+    right: 5px;
     bottom: auto;
     z-index: 960;
   }
 
   .healthCareVoucherPop > a {
     width: 100%;
-    right: 20px;
+    right: 0;
     position: absolute;
     bottom: 0;
   }
@@ -243,9 +248,9 @@ const checkForYahoo = (inputString) => {
   #popup-alert-two {
     & > div {
       position: fixed;
-      top: auto;
+      top: 22vh;
       left: auto;
-      right: 1.04165vw;
+      right: 2.04165vw;
       bottom: 16.86vw;
       width: 10vw;
       height: 7.03125vw;
@@ -259,8 +264,8 @@ const checkForYahoo = (inputString) => {
       align-items: flex-start;
       justify-content: flex-start;
       position: relative;
-      top: auto;
-      left: auto;
+      top: 0;
+      left: 0;
       right: 0;
       bottom: 0;
       z-index: 999;
@@ -323,7 +328,7 @@ const checkForYahoo = (inputString) => {
       top: auto;
       left: auto;
       right: 0;
-      bottom: 36.43vw;
+      bottom: 19.43vh;
       width: 23.2vw;
       height: 16.265vw;
       z-index: 999;

@@ -41,15 +41,6 @@ export default defineNuxtPlugin((nuxtApp) => {
                   </a>
               </div>
               `
-        } else {
-          healthCareVoucherPopTop.innerHTML = `
-                <div class="healthCareVoucherPop">
-                  <div class="close">×</div>
-                  <a href="/health-care-voucher">
-                    <img src="https://static.cmereye.com/imgs/2024/10/3539f42e4493aa38.png"  alt="">
-                  </a>
-              </div>
-              `
         }
         if (container) {
           // container 设置为空 
