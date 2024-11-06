@@ -177,7 +177,7 @@ const stepData = {
 
 const reasonData = {
   title: 'pages.dental-service.implant.reason.title',
-  text: '種植牙五大優點',
+  text: `種植牙<span>5</span>大優點`,
   imgUrl: 'https://static.cmereye.com/imgs/2023/05/bab7e2cd0e553a7f.jpg',
   pageName: 'implant',
   reasonLists: [
@@ -333,7 +333,7 @@ const plagueData = {
     },
     {
       type: 'img',
-      context: 'https://static.cmereye.com/imgs/2024/07/adb081574894addb.png',
+      context: 'https://static.cmereye.com/imgs/2024/11/cc9f357a0cf06ce0.png',
     },
     {
       type: 'text',
@@ -357,7 +357,6 @@ const onSlideChange = (swiper: any) => {
 }
 
 let windowWidth = ref(1920)
-
 let showYaAnim = ref(false)
 
 onMounted(() => {
@@ -367,13 +366,11 @@ onMounted(() => {
     e.preventDefault()
   })
 })
-
 const getWindowWidth = () => {
   windowWidth.value = window.innerWidth
 }
 
 let implantCaseCurrent = ref(1)
-
 //走马灯事件
 const onSlideImplantCaseChange = (swiper: any) => {
   implantCaseCurrent.value = swiper.realIndex + 1
@@ -469,12 +466,17 @@ const implantCaseData = [
 let yaImgCurrtNum = ref(6)
 const yaImgFu = (_idx, _type) => {
   if (_type) {
-    // console.log(_idx,'按住了')
+    console.log(_idx, '按住了')
     yaImgCurrtNum.value = _idx
   } else {
-    // console.log(_idx,'不按了')
+    console.log(_idx, '不按了')
     yaImgCurrtNum.value = 6
   }
+}
+
+const showMark = ref(false)
+const showImg = () => {
+  showMark.value = !showMark.value
 }
 
 let Plant_brand_series_cur = ref(0)
@@ -483,47 +485,115 @@ const Plant_brand_series_data = [
   {
     id: '1101',
     name: ['美國', '皓聖'],
-    img: 'https://static.cmereye.com/imgs/2024/02/451f4fbf1a45ce90.png',
+    img: 'https://static.cmereye.com/imgs/2024/11/e2ccb31ba455256e.png',
     logo: 'https://static.cmereye.com/imgs/2024/02/9badffc6183d36ba.png',
-    lists: ['暢銷全球100多個國家', '經濟實惠之選', '即剝即種'],
+    compare: [
+      'https://static.cmereye.com/static/ckj/imgs/svg/pc5star.svg',
+      'https://static.cmereye.com/static/ckj/imgs/svg/pc3star.svg',
+      'https://static.cmereye.com/static/ckj/imgs/svg/pc3star.svg',
+    ],
+    nation: 'https://static.cmereye.com/imgs/2024/11/5c90f4f3ff45a33b.png',
+    lists: [
+      '· 經濟實惠，全球暢銷',
+      '· 純鈦材料，親和力強',
+      '· 特殊螺紋設計，適合即剝即種',
+    ],
   },
   {
     id: '1102',
     name: ['韓國', '奧齒泰'],
-    img: 'https://static.cmereye.com/imgs/2024/02/21015f2908f11759.png',
+    img: 'https://static.cmereye.com/imgs/2024/11/1eed57cea099bec0.png',
     logo: 'https://static.cmereye.com/imgs/2024/02/3f53e24f1f9ce65a.png',
-    lists: ['適合亞洲人種植', '性價比高'],
+    compare: [
+      'https://static.cmereye.com/static/ckj/imgs/svg/pc3star.svg',
+      'https://static.cmereye.com/static/ckj/imgs/svg/pc3star.svg',
+      'https://static.cmereye.com/static/ckj/imgs/svg/pc3star.svg',
+    ],
+    nation: 'https://static.cmereye.com/imgs/2024/11/660585dbc09dd5a2.png',
+    lists: [
+      '· 亞洲人種植首選',
+      '· 獲FDA、CE、SFDA三認證',
+      '· 體積小，譽為適合亞洲人的植體',
+    ],
   },
   {
     id: '1103',
     name: ['瑞士', '拓美親水'],
-    img: 'https://static.cmereye.com/imgs/2024/02/b317ade36efb87d3.png',
+    img: 'https://static.cmereye.com/imgs/2024/11/da0e4aad3f154fc4.png',
     logo: 'https://static.cmereye.com/imgs/2024/02/1ed372ab9936505f.png',
-    lists: ['癒合週期短', '可於前牙使用', '高效抗菌'],
+    compare: [
+      'https://static.cmereye.com/static/ckj/imgs/svg/pc4star.svg',
+      'https://static.cmereye.com/static/ckj/imgs/svg/pc5star.svg',
+      'https://static.cmereye.com/static/ckj/imgs/svg/pc4star.svg',
+    ],
+    nation: 'https://static.cmereye.com/imgs/2024/11/a6616d72b02218a2.png',
+    lists: [
+      '· 穩固耐用',
+      '· 超親水表面處理，長期穩定',
+      '· 調節性能高，適用不同情況',
+    ],
   },
   {
     id: '1104',
     name: ['德國', '植體'],
-    img: 'https://static.cmereye.com/imgs/2024/02/0c7521c0041ce4b1.png',
+    img: 'https://static.cmereye.com/imgs/2024/11/7ecab30696d065c6.png',
     logo: 'https://static.cmereye.com/imgs/2024/02/0db21351ca26a0a7.png',
-    lists: ['德國老品牌精密傑作', '完美保存牙骨及組織', '全球終身保養'],
+    compare: [
+      'https://static.cmereye.com/static/ckj/imgs/svg/pc3star.svg',
+      'https://static.cmereye.com/static/ckj/imgs/svg/pc4star.svg',
+      'https://static.cmereye.com/static/ckj/imgs/svg/pc5star.svg',
+    ],
+    nation: 'https://static.cmereye.com/imgs/2024/11/dc15500df8e7b2c7.png',
+    lists: [
+      '· 專利精密設計，穩定出眾，終身保養',
+      '· 個人化美學設計，滿意度高',
+      '· 完美保存牙骨及組織',
+    ],
   },
   {
     id: '1105',
     name: ['瑞士', '士卓曼'],
-    img: 'https://static.cmereye.com/imgs/2024/02/fac98f00c8e3f380.png',
+    img: 'https://static.cmereye.com/imgs/2024/11/0b1034cc09108979.png',
     logo: 'https://static.cmereye.com/imgs/2024/02/c35e7ba905606dd0.png',
+    compare: [
+      'https://static.cmereye.com/static/ckj/imgs/svg/pc4star.svg',
+      'https://static.cmereye.com/static/ckj/imgs/svg/pc5star.svg',
+      'https://static.cmereye.com/static/ckj/imgs/svg/pc4star.svg',
+    ],
+    nation: 'https://static.cmereye.com/imgs/2024/11/315093faa529d0f8.png',
     lists: [
-      '全球終身保養',
-      '全球認可最大植體品牌',
-      '癒合時間最短，最快３週完成',
-      '煙酒及糖尿病人士適用',
+      '· 國際頂級植體，價格平香港1/3',
+      '· 國際口腔植牙協會推薦',
+      '· 癒合時間短，最快4週完成',
+      '· 煙酒及糖尿病人士適用',
+      '· 全球終身保養',
+    ],
+  },
+  {
+    id: '1106',
+    name: ['瑞士', '士卓曼BLX'],
+    img: 'https://static.cmereye.com/imgs/2024/11/d0491768aa6c1cff.png',
+    logo: 'https://static.cmereye.com/imgs/2024/02/c35e7ba905606dd0.png',
+    compare: [
+      'https://static.cmereye.com/static/ckj/imgs/svg/pc4star.svg',
+      'https://static.cmereye.com/static/ckj/imgs/svg/pc5star.svg',
+      'https://static.cmereye.com/static/ckj/imgs/svg/pc5star.svg',
+    ],
+    nation: 'https://static.cmereye.com/imgs/2024/11/37d07a7454f419a0.png',
+    lists: [
+      '· 獨特植體保留更多骨頭，創傷更小',
+      '· 親水性抗發炎，加快骨細胞與植體結合',
+      '· 癒合時間最短，最快3-4週完成',
+      '· 大量長期文獻支持',
+      '· 原廠全球終身保養',
     ],
   },
 ]
 
 const plant_brand_series_ref = ref({
   slideToLoop: (a) => {},
+  slidePrev: () => {},
+  slideNext: () => {},
 })
 const set_plant_brand_series_ref = (swiper: any) => {
   plant_brand_series_ref.value = swiper
@@ -534,6 +604,10 @@ const on_plant_brand_series_change = (swiper: any) => {
 }
 const handle_lant_brand_series_tab = (_idx: number) => {
   plant_brand_series_ref.value.slideToLoop(_idx)
+}
+
+const brand_btn = (_type: string) => {
+  plant_brand_series_ref.value[_type]()
 }
 
 const doctorData = {
@@ -678,6 +752,213 @@ const { height } = useWindowSize()
             src="https://static.cmereye.com/imgs/2024/02/889bd45e5e2ee385.png"
             alt=""
           />
+        </div>
+      </div>
+      <div class="Plant_brand_series" v-if="windowWidth > 768">
+        <div class="dentistryServices-title">
+          <div class="dentistryServices-title-in bb">植體品牌系列</div>
+        </div>
+        <div class="Plant_brand_series-tab" v-if="windowWidth > 768">
+          <span
+            :class="{ active: Plant_brand_series_cur === tabIndex }"
+            v-for="(tabItem, tabIndex) in Plant_brand_series_data"
+            :key="tabIndex"
+            @click="handle_lant_brand_series_tab(tabIndex)"
+          >
+            <span
+              v-for="(tabspanitem, tabspanindex) in tabItem.name"
+              :key="tabspanindex"
+            >
+              {{ tabspanitem }}
+            </span>
+          </span>
+        </div>
+        <Swiper
+          :loop="true"
+          :modules="[Autoplay]"
+          :autoplay="{
+            delay: 3000,
+          }"
+          @swiper="set_plant_brand_series_ref"
+          @slideChange="on_plant_brand_series_change"
+        >
+          <Swiper-slide
+            v-for="(
+              plant_brand_series_item, plant_brand_series_index
+            ) in Plant_brand_series_data"
+            :key="plant_brand_series_index"
+          >
+            <div class="Plant_brand_series-content">
+              <div>
+                <div class="Plant_brand_series-content-l">
+                  <div><img :src="plant_brand_series_item.img" alt="" /></div>
+                </div>
+                <div class="Plant_brand_series-content-r">
+                  <div>
+                    <div>
+                      <img :src="plant_brand_series_item.logo" alt="" />
+                    </div>
+                    <div>
+                      <img :src="plant_brand_series_item.nation" alt="" />
+                    </div>
+                    <div class="item_compare">
+                      <div>
+                        <div>性價比</div>
+                        <div>
+                          <img
+                            :src="plant_brand_series_item.compare[0]"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <div>耐用度</div>
+                        <div>
+                          <img
+                            :src="plant_brand_series_item.compare[1]"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <div>客製化</div>
+                        <div>
+                          <img
+                            :src="plant_brand_series_item.compare[2]"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <span
+                  v-for="(item, index) in plant_brand_series_item.lists"
+                  :key="index"
+                >
+                  {{ item }}
+                </span>
+              </div>
+            </div>
+          </Swiper-slide>
+        </Swiper>
+        <div class="brand_btn">
+          <div class="brand_btn_left" @click="brand_btn('slidePrev')">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="107"
+              height="107"
+              viewBox="0 0 107 107"
+              fill="none"
+            >
+              <g filter="url(#filter0_d_1167_2367)">
+                <circle cx="51.5" cy="51.5" r="49.5" fill="white" />
+              </g>
+              <path
+                d="M59.0859 69.3037L38.999 51.4994L59.0859 33.695"
+                stroke="#FC1682"
+                stroke-width="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <defs>
+                <filter
+                  id="filter0_d_1167_2367"
+                  x="0"
+                  y="0"
+                  width="107"
+                  height="107"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset dx="2" dy="2" />
+                  <feGaussianBlur stdDeviation="2" />
+                  <feComposite in2="hardAlpha" operator="out" />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0.988235 0 0 0 0 0.0862745 0 0 0 0 0.509804 0 0 0 0.24 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="BackgroundImageFix"
+                    result="effect1_dropShadow_1167_2367"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="effect1_dropShadow_1167_2367"
+                    result="shape"
+                  />
+                </filter>
+              </defs>
+            </svg>
+          </div>
+          <div class="brand_btn_right" @click="brand_btn('slideNext')">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="107"
+              height="107"
+              viewBox="0 0 107 107"
+              fill="none"
+            >
+              <g filter="url(#filter0_d_1166_2259)">
+                <circle cx="51.5" cy="51.5" r="49.5" fill="white" />
+              </g>
+              <path
+                d="M43 31L65.6154 51.4878L43 73"
+                stroke="#FC1682"
+                stroke-width="9.69231"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <defs>
+                <filter
+                  id="filter0_d_1166_2259"
+                  x="0"
+                  y="0"
+                  width="107"
+                  height="107"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset dx="2" dy="2" />
+                  <feGaussianBlur stdDeviation="2" />
+                  <feComposite in2="hardAlpha" operator="out" />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0.988235 0 0 0 0 0.0862745 0 0 0 0 0.509804 0 0 0 0.24 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="BackgroundImageFix"
+                    result="effect1_dropShadow_1166_2259"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="effect1_dropShadow_1166_2259"
+                    result="shape"
+                  />
+                </filter>
+              </defs>
+            </svg>
+          </div>
         </div>
       </div>
       <div class="brand_mobile" v-if="windowWidth < 768">
@@ -902,7 +1183,53 @@ const { height } = useWindowSize()
             <ul>
               <li>國際頂級植體，價格平香港1/3</li>
               <li>國際口腔植牙協會推薦</li>
-              <li>癒合時間最短，最快4週完成</li>
+              <li>癒合時間短，最快4週完成</li>
+              <li>煙酒及糖尿病人士適用</li>
+              <li>全球終身保養</li>
+            </ul>
+          </div>
+          <div>
+            <div>
+              <div>
+                <img
+                  src="https://static.cmereye.com/imgs/2024/11/d0491768aa6c1cff.png"
+                  alt=""
+                />
+              </div>
+              <div>
+                <div>
+                  <img
+                    src="https://static.cmereye.com/imgs/2024/07/fb380b1160ac9312.png"
+                    alt=""
+                  />
+                </div>
+                <div>瑞士士卓曼</div>
+                <div>
+                  <p>
+                    <span>性價比</span>
+                    <span
+                      ><img src="../../assets/images/4star.svg" alt=""
+                    /></span>
+                  </p>
+                  <p>
+                    <span>耐用度</span>
+                    <span
+                      ><img src="../../assets/images/5star.svg" alt=""
+                    /></span>
+                  </p>
+                  <p>
+                    <span>客製化</span>
+                    <span
+                      ><img src="../../assets/images/5star.svg" alt=""
+                    /></span>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <ul>
+              <li>國際頂級植體，價格平香港1/3</li>
+              <li>國際口腔植牙協會推薦</li>
+              <li>癒合時間短，最快4週完成</li>
               <li>煙酒及糖尿病人士適用</li>
               <li>全球終身保養</li>
             </ul>
@@ -931,7 +1258,7 @@ const { height } = useWindowSize()
           <PageAnimBtnTypeTwo str="取得免費口腔CT檢查" />
         </div>
       </div>
-      <div class="notice" v-if="windowWidth > 767">
+      <!-- <div class="notice" v-if="windowWidth > 767">
         <div class="dentistryServices-title notice-title">
           <div class="dentistryServices-title-in bb notice-title-in">
             <span>傳統植牙和</span>
@@ -965,7 +1292,7 @@ const { height } = useWindowSize()
             >{{ $t(bottomTextItem) }}</span
           >
         </div>
-      </div>
+      </div> -->
       <ServiceReason :reasonData="reasonData" />
       <div class="step">
         <div class="step-in">
@@ -982,15 +1309,25 @@ const { height } = useWindowSize()
             >
               <div class="step-lists-in-l">
                 <div class="title">
-                  <img src="@/assets/images/icon_13.png" alt="" />
-                  {{ stepItem.title }}
+                  <!-- <img src="@/assets/images/icon_13.png" alt="" /> -->
+                  <!-- {{ stepItem.title }} -->
+                  <div>
+                    <img
+                      src="https://static.cmereye.com/imgs/2024/11/3b0a5e9326c68638.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>0{{ stepIndex + 1 }}</div>
                 </div>
                 <div class="image"><img :src="stepItem.img" alt="" /></div>
                 <div class="name">{{ stepItem.name }}</div>
                 <div class="context">{{ stepItem.context }}</div>
               </div>
               <div class="step-lists-in-r">
-                <img src="@/assets/images/icon_12.png" alt="" />
+                <img
+                  src="https://static.cmereye.com/imgs/2024/11/5e6a778026dfcb28.png"
+                  alt=""
+                />
               </div>
             </div>
           </div>
@@ -1028,7 +1365,8 @@ const { height } = useWindowSize()
           </div>
         </div>
       </div>
-      <div v-if="windowWidth < 768" class="classify">
+
+      <div class="classify">
         <div
           class="dentistryServices-title-in bb notice-title-in classify-title"
         >
@@ -1073,7 +1411,7 @@ const { height } = useWindowSize()
                 </div>
                 <div>
                   <img
-                    src="https://static.cmereye.com/imgs/2024/07/fecbf4cf52a26629.png"
+                    src="https://static.cmereye.com/imgs/2024/11/bcd3ee26b3fa9cef.png"
                     alt="微創植牙"
                   />
                 </div>
@@ -1123,7 +1461,7 @@ const { height } = useWindowSize()
                 </div>
                 <div>
                   <img
-                    src="https://static.cmereye.com/imgs/2024/07/9baee4806f0f6a90.png"
+                    src="https://static.cmereye.com/imgs/2024/11/4591094d74d5db03.png"
                     alt="傳統植牙"
                   />
                 </div>
@@ -1143,71 +1481,10 @@ const { height } = useWindowSize()
           </div>
         </div>
       </div>
-      <div class="Plant_brand_series" v-if="windowWidth > 768">
-        <div class="dentistryServices-title">
-          <div class="dentistryServices-title-in bb">植體品牌系列</div>
-        </div>
-        <div class="Plant_brand_series-tab">
-          <span
-            :class="{ active: Plant_brand_series_cur === tabIndex }"
-            v-for="(tabItem, tabIndex) in Plant_brand_series_data"
-            :key="tabIndex"
-            @click="handle_lant_brand_series_tab(tabIndex)"
-          >
-            <span
-              v-for="(tabspanitem, tabspanindex) in tabItem.name"
-              :key="tabspanindex"
-            >
-              {{ tabspanitem }}
-            </span>
-          </span>
-        </div>
-        <Swiper
-          :loop="true"
-          :modules="[Autoplay]"
-          :autoplay="{
-            delay: 3000,
-          }"
-          @swiper="set_plant_brand_series_ref"
-          @slideChange="on_plant_brand_series_change"
-        >
-          <Swiper-slide
-            v-for="(
-              plant_brand_series_item, plant_brand_series_index
-            ) in Plant_brand_series_data"
-            :key="plant_brand_series_index"
-          >
-            <div class="Plant_brand_series-content">
-              <div class="Plant_brand_series-content-l">
-                <img :src="plant_brand_series_item.img" alt="" />
-              </div>
-              <div class="Plant_brand_series-content-r">
-                <div><img :src="plant_brand_series_item.logo" alt="" /></div>
-                <div>
-                  <span
-                    v-for="(
-                      tabspanitem, tabspanindex
-                    ) in plant_brand_series_item.name"
-                    :key="tabspanindex"
-                  >
-                    {{ tabspanitem }}
-                  </span>
-                </div>
-                <div>
-                  <span
-                    v-for="(item, index) in plant_brand_series_item.lists"
-                    :key="index"
-                  >
-                    {{ item }}
-                  </span>
-                </div>
-              </div>
-            </div>
-          </Swiper-slide>
-        </Swiper>
-      </div>
+
       <div class="doctorTeam" ref="doctorTeam">
-        <ServiceSpecializedTeam :doctorData="doctorData" />
+        <!-- <ServiceSpecializedTeam :doctorData="doctorData" /> -->
+        <ServiceSpecializedTeamNew :doctorData="doctorData" />
       </div>
       <div class="implantCase">
         <div class="implantCase-title dentistryServices-title">
@@ -1246,13 +1523,27 @@ const { height } = useWindowSize()
                     }"
                     :key="implantCaseIndex"
                   >
+                    <!-- :style="{
+                        opacity: yaImgCurrtNum === implantCaseIndex ? 0 : 1,
+                      }" -->
                     <img
                       class="ya"
+                      :src="
+                        showMark
+                          ? implantCaseItem.dataLists[1].imgs[0]
+                          : implantCaseItem.dataLists[0].imgs[0]
+                      "
+                      alt=""
+                      v-if="windowWidth > 768"
+                    />
+                    <img
+                      v-else
+                      class="ya"
+                      alt=""
                       :style="{
                         opacity: yaImgCurrtNum === implantCaseIndex ? 0 : 1,
                       }"
                       :src="implantCaseItem.dataLists[1].imgs[0]"
-                      alt=""
                     />
                     <img
                       class="rightMbIcon"
@@ -1260,6 +1551,16 @@ const { height } = useWindowSize()
                       alt=""
                       @touchstart="yaImgFu(implantCaseIndex, true)"
                       @touchend="yaImgFu(implantCaseIndex, false)"
+                    />
+                  </div>
+                  <div
+                    v-if="windowWidth > 768"
+                    class="click_btn"
+                    @click="showImg()"
+                  >
+                    <img
+                      src="https://static.cmereye.com/imgs/2024/11/a6ee3442fce7e3e6.png"
+                      alt=""
                     />
                   </div>
                   <!-- <div>
@@ -1275,120 +1576,6 @@ const { height } = useWindowSize()
               </div>
             </swiper-slide>
           </swiper>
-          <div class="leftBtn" @click="handleProcessBtn('slidePrev')">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="107"
-              height="107"
-              viewBox="0 0 107 107"
-              fill="none"
-            >
-              <g filter="url(#filter0_d_1167_2367)">
-                <circle cx="51.5" cy="51.5" r="49.5" fill="white" />
-              </g>
-              <path
-                d="M59.0859 69.3037L38.999 51.4994L59.0859 33.695"
-                stroke="#FC1682"
-                stroke-width="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <defs>
-                <filter
-                  id="filter0_d_1167_2367"
-                  x="0"
-                  y="0"
-                  width="107"
-                  height="107"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB"
-                >
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
-                  />
-                  <feOffset dx="2" dy="2" />
-                  <feGaussianBlur stdDeviation="2" />
-                  <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 0.988235 0 0 0 0 0.0862745 0 0 0 0 0.509804 0 0 0 0.24 0"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in2="BackgroundImageFix"
-                    result="effect1_dropShadow_1167_2367"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="effect1_dropShadow_1167_2367"
-                    result="shape"
-                  />
-                </filter>
-              </defs>
-            </svg>
-          </div>
-          <div class="rightBtn" @click="handleProcessBtn('slideNext')">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="107"
-              height="107"
-              viewBox="0 0 107 107"
-              fill="none"
-            >
-              <g filter="url(#filter0_d_1166_2259)">
-                <circle cx="51.5" cy="51.5" r="49.5" fill="white" />
-              </g>
-              <path
-                d="M43 31L65.6154 51.4878L43 73"
-                stroke="#FC1682"
-                stroke-width="9.69231"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <defs>
-                <filter
-                  id="filter0_d_1166_2259"
-                  x="0"
-                  y="0"
-                  width="107"
-                  height="107"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB"
-                >
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
-                  />
-                  <feOffset dx="2" dy="2" />
-                  <feGaussianBlur stdDeviation="2" />
-                  <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 0.988235 0 0 0 0 0.0862745 0 0 0 0 0.509804 0 0 0 0.24 0"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in2="BackgroundImageFix"
-                    result="effect1_dropShadow_1166_2259"
-                  />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="effect1_dropShadow_1166_2259"
-                    result="shape"
-                  />
-                </filter>
-              </defs>
-            </svg>
-          </div>
           <div class="implantCase-content-line">
             <PageSwiperPointLine
               :latestNewsNum="implantCaseData.length"
@@ -1442,8 +1629,8 @@ const { height } = useWindowSize()
           </div>
         </div>
       </div>
-      <ServiceCase v-if="windowWidth > 768" />
-      <div v-else class="note-mobile">
+      <!-- <ServiceCase v-if="windowWidth > 768" /> -->
+      <div class="note-mobile">
         <div class="index_title">客戶分享</div>
         <div class="note-bg-mobile">
           <div>
@@ -1519,9 +1706,17 @@ const { height } = useWindowSize()
     margin: 0 auto !important;
   }
 }
+:deep(.implantCase-title) {
+  align-items: center !important;
+}
+@media (min-width: 1001px) and (max-width: 1452px) {
+  :deep(.header-content-text-implant) {
+    bottom: 100px;
+  }
+}
 .dentistryServices {
   background: #fff;
-  padding: 143px 0;
+  padding: 60px 0 0;
   position: relative;
   z-index: 1;
   .tabNav {
@@ -1549,17 +1744,18 @@ const { height } = useWindowSize()
   }
   .plague {
     width: 100%;
+    margin: 150px auto 150px;
     // background: linear-gradient(
     //   135deg,
     //   rgba(255, 241, 240, 0.25) 0%,
     //   rgba(255, 221, 218, 0.25) 100%
     // );
-    background: linear-gradient(
-      110deg,
-      rgba(252, 22, 130, 0.1) -0.92%,
-      rgba(255, 168, 198, 0) 100%
-    );
-    padding: 98px 0;
+    // background: linear-gradient(
+    //   110deg,
+    //   rgba(252, 22, 130, 0.1) -0.92%,
+    //   rgba(255, 168, 198, 0) 100%
+    // );
+    // padding: 98px 0;
     margin-top: 30px;
     &-in {
       width: 100%;
@@ -1567,62 +1763,62 @@ const { height } = useWindowSize()
       margin: 0 auto;
     }
     &-lists {
-      margin-top: 98px;
+      padding-top: 98px;
       display: flex;
+      justify-content: center;
       flex-wrap: wrap;
+      position: relative;
       & > div {
         display: flex;
         justify-content: center;
-        &:nth-of-type(1) {
-          width: 100%;
-          span {
-            margin-bottom: -60px;
-          }
-        }
-        &:nth-of-type(2) {
-          width: calc(100% / 3);
-        }
-        &:nth-of-type(3) {
-          width: calc(100% / 3);
-          img {
-            margin-bottom: -80px;
-            margin-top: 80px;
-          }
-        }
-        &:nth-of-type(4) {
-          width: calc(100% / 3);
-        }
-        &:nth-of-type(5) {
-          width: 50%;
-          justify-content: flex-end;
-          margin-top: 53px;
-          padding-right: 33.5px;
-        }
-        &:nth-of-type(6) {
-          margin-top: 53px;
-          width: 50%;
-          justify-content: flex-start;
-          padding-left: 33.5px;
-        }
+        align-items: center;
         span {
-          width: 260px;
-          height: 260px;
-          font-size: 35px;
-          font-weight: 900;
+          padding: 6px 45px;
+          width: max-content;
           display: flex;
           justify-content: center;
           align-items: center;
-          color: #fff;
-          border-radius: 50%;
-          // background: var(--indexColor3);
-          // border-radius: var(--Count, 260px);
-          background: var(--Pink-Dark, #ffa8c6);
+          color: var(--White, #fff);
+          text-align: center;
+          font-family: FakePearl;
+          font-size: 35px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 160%; /* 56px */
+          letter-spacing: 7px;
+          white-space: nowrap;
+          border-radius: 86.165px;
+          background: var(--Theme-Color, #fc1682);
+          box-shadow: 2.81px 2.81px 11.613px 0px rgba(252, 22, 130, 0.5);
         }
         img {
-          width: 260px;
-          height: 260px;
+          width: 468px;
+          height: 468px;
           border-radius: 50%;
         }
+      }
+      & > div:not(:nth-of-type(3)) {
+        position: absolute;
+      }
+      & > div:nth-child(6) {
+        top: 210px;
+        right: 30px;
+      }
+      & > div:nth-child(5) {
+        top: 460px;
+        right: -10px;
+      }
+      & > div:nth-child(4) {
+        top: 50px;
+        margin-right: 100px;
+      }
+      & > div:nth-child(2) {
+        top: 500px;
+        left: 100px;
+      }
+      & > div:nth-child(1) {
+        top: 290px;
+        left: 0;
       }
     }
   }
@@ -1631,20 +1827,36 @@ const { height } = useWindowSize()
     display: flex;
     flex-direction: column;
     &-title {
-      order: 2;
-      margin-top: 80px;
+      order: 1;
+      margin: 0 auto;
+      margin-top: 144px;
+      margin-bottom: 50px;
     }
     &-video {
-      order: 1;
+      order: 3;
+      // margin: 20px auto 50px;
+      margin-bottom: 40px;
+      .youtobe-video {
+        margin-top: 0;
+        margin-bottom: 80px;
+      }
     }
     &-context {
       width: 100%;
-      max-width: 1016px;
-      margin: 20px auto 50px;
+      max-width: 1006px;
+      margin: -20px auto 30px;
       font-size: 20px;
       line-height: 160%;
       text-align: center;
-      order: 3;
+      order: 2;
+      color: var(--Grey-Deep, #4d4d4d);
+      text-align: center;
+      font-family: 'Noto Sans HK';
+      font-size: 23px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 36.8px */
+      letter-spacing: 4.6px;
     }
     &-img {
       width: 100%;
@@ -1758,6 +1970,7 @@ const { height } = useWindowSize()
         display: flex;
         align-items: center;
         margin-bottom: 60px;
+        position: relative;
         &:nth-of-type(n + 4) {
           margin-bottom: 0;
         }
@@ -1769,10 +1982,11 @@ const { height } = useWindowSize()
         }
         &-l {
           width: 100%;
-          max-width: 400px;
+          max-width: clamp(200px, 20.83vw, 400px);
           height: 100%;
           display: flex;
           flex-direction: column;
+          position: relative;
           .title {
             display: flex;
             align-items: center;
@@ -1780,9 +1994,23 @@ const { height } = useWindowSize()
             font-weight: 700;
             margin-bottom: 15px;
             color: #666666;
-            img {
-              height: auto;
-              margin-right: 15px;
+            position: relative;
+            width: fit-content;
+            position: absolute;
+            top: -8px;
+            left: -8px;
+            & > div:nth-child(2) {
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              color: var(--White, #fff);
+              text-align: center;
+              font-family: FakePearl;
+              font-size: 35px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 160%; /* 56px */
             }
           }
           .image {
@@ -1793,33 +2021,142 @@ const { height } = useWindowSize()
             }
           }
           .name {
-            color: #fff;
-            font-size: 20px;
-            font-weight: 700;
-            background: var(--indexColor1);
-            margin-top: 24px;
-            margin-bottom: 15px;
-            padding: 8px 15px;
-            clip-path: polygon(0 0, 80% 0, 85% 100%, 0 100%);
+            margin-top: 16px;
+            margin-bottom: 8px;
+            // padding: 8px 0;
+            // clip-path: polygon(0 0, 80% 0, 85% 100%, 0 100%);
+            color: var(--Theme-Color, #fc1682);
+            font-family: FakePearl;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%; /* 44.8px */
           }
           .context {
+            color: var(--Grey-Deep, #4d4d4d);
+            font-family: 'Noto Sans HK';
             font-size: 20px;
-            font-weight: 700;
-            color: #666666;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%; /* 32px */
+            letter-spacing: 4px;
           }
+          z-index: 5;
         }
         &-r {
-          margin-left: 50px;
-          img {
-            width: 15px;
-            height: auto;
+          margin-left: 0;
+          position: absolute;
+          z-index: 1;
+          right: -35%;
+          top: 25%;
+        }
+      }
+    }
+  }
+  .classify {
+    max-width: 1490px;
+    margin: 165px auto 45px;
+    .classify-title {
+      width: fit-content;
+      margin: 0 auto 60px;
+    }
+    .classify-item {
+      display: grid;
+      gap: 0 105px;
+      grid-template-columns: repeat(2, 1fr);
+      & > div:nth-child(1),
+      & > div:nth-child(2) {
+        position: relative;
+        & > div:nth-child(1) {
+          & > div:nth-child(1) {
+            border-radius: var(--Count, 0px) 37.406px 37.406px var(--Count, 0px);
+            background: var(--Theme-Color, #fc1682);
+            width: fit-content;
+            padding: 8px 60px;
+            color: var(--White, #fff);
+            text-align: center;
+            font-family: FakePearl;
+            font-size: 35px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%; /* 56px */
+            letter-spacing: 7px;
+            margin-bottom: 25px;
+          }
+          & > div:nth-child(2) {
+            display: flex;
+            & > div:nth-child(1) {
+              margin-left: 60px;
+              & > p {
+                display: flex;
+                align-items: center;
+                gap: 0 20px;
+                & > span:nth-child(1) {
+                  color: #fc1682;
+                  font-family: FakePearl;
+                  font-size: 30px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: 160%; /* 48px */
+                  letter-spacing: 3px;
+                }
+                & > span:nth-child(2) {
+                  transform: scale(1.2);
+                }
+              }
+            }
+            & > div:nth-child(2) {
+              position: absolute;
+              top: 27px;
+              right: 8px;
+            }
           }
         }
+        & > ul {
+          margin-top: 30px;
+          color: var(--Grey-Deep, #4d4d4d);
+          font-family: FakePearl;
+          font-size: 26px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 160%; /* 41.6px */
+          letter-spacing: 2.6px;
+          & > li {
+            list-style: disc;
+          }
+        }
+      }
+      & > div:nth-child(2) {
+        & > div:nth-child(1) {
+          & > div:nth-child(1) {
+            background: #00aeff;
+          }
+        }
+      }
+      & > div:nth-child(3) {
+        grid-column: 1 / 3;
+        margin: 120px auto 0;
+        color: var(--Theme-Color, #fc1682);
+        text-align: center;
+        font-family: FakePearl;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 160%; /* 41.6px */
+        letter-spacing: 2.6px;
+        max-width: 460px;
+      }
+      .implantCaseBoxSwiper {
+        overflow: visible;
       }
     }
   }
   .Plant_brand_series {
     margin-top: 80px;
+    position: relative;
+    & > div {
+      align-items: center;
+    }
     &-tab {
       width: 100%;
       max-width: 864px;
@@ -1832,7 +2169,9 @@ const { height } = useWindowSize()
         border-top: 2px solid var(--indexColor1);
         border-bottom: 2px solid var(--indexColor1);
         border-left: 2px solid var(--indexColor1);
-        padding: 7px 0;
+        padding: 7px 20px;
+        width: fit-content;
+        white-space: nowrap;
         text-align: center;
         cursor: pointer;
         transition: all 0.3s;
@@ -1850,48 +2189,88 @@ const { height } = useWindowSize()
         }
       }
     }
+    .brand_btn {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      display: flex;
+      z-index: 10;
+      justify-content: space-around;
+      .brand_btn_left {
+        position: absolute;
+        left: calc((100% - 562px - 495px) / 2);
+        top: 25%;
+        cursor: pointer;
+        z-index: 2;
+      }
+      .brand_btn_right {
+        position: absolute;
+        right: calc((100% - 562px - 495px) / 2);
+        top: 25%;
+        cursor: pointer;
+        z-index: 2;
+      }
+    }
     &-content {
       width: 100%;
       max-width: 700px;
       margin: 0 auto;
       display: flex;
-      &-l {
-        width: calc(300 / 700 * 100%);
-        margin-right: calc(30 / 695 * 100%);
-        img {
-          width: 100%;
+      flex-direction: column;
+      & > div:nth-child(1) {
+        display: flex;
+        justify-content: space-between;
+        &-l {
+          width: calc(300 / 700 * 100%);
+          margin-right: calc(30 / 695 * 100%);
+          img {
+            width: 100%;
+          }
         }
-      }
-      &-r {
-        flex: 1;
-        & > div {
-          & > img {
-            max-width: 100%;
-          }
-          &:nth-of-type(2) {
-            width: 70%;
-            color: #fff;
-            background: var(--indexColor1);
-            font-size: 30px;
-            line-height: 160%;
-            padding-left: 17px;
-            clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
-            margin: 10px 0;
-          }
-          &:nth-of-type(3) {
-            display: flex;
-            flex-direction: column;
-            span {
-              font-size: 26px;
-              line-height: 1.6;
-              &::before {
-                content: '·';
-                display: inline-block;
-                margin-right: 10px;
+        &-r {
+          flex: 1;
+          & > div {
+            & > img {
+              max-width: 100%;
+            }
+            &:nth-of-type(2) {
+              width: 70%;
+              color: #fff;
+              background: var(--indexColor1);
+              font-size: 30px;
+              line-height: 160%;
+              padding-left: 17px;
+              clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
+              margin: 10px 0;
+            }
+            &:nth-of-type(3) {
+              display: flex;
+              flex-direction: column;
+              span {
+                font-size: 26px;
+                line-height: 1.6;
+                &::before {
+                  content: '·';
+                  display: inline-block;
+                  margin-right: 10px;
+                }
               }
             }
           }
         }
+      }
+      & > div:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        color: var(--Grey-Deep, #4d4d4d);
+        font-family: FakePearl;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 160%; /* 41.6px */
+        letter-spacing: 2.6px;
       }
     }
   }
@@ -1941,7 +2320,7 @@ const { height } = useWindowSize()
           line-height: 64px;
           font-style: normal;
           font-weight: 600;
-          font-size: 20px;
+          font-size: 24px;
           color: #666666;
           text-align: center;
         }
@@ -1950,7 +2329,8 @@ const { height } = useWindowSize()
   }
   .implantCase {
     margin-top: 112px;
-    overflow-x: hidden;
+    // overflow-x: hidden;
+    position: relative;
     &-content {
       margin-top: 40px;
       padding: 127px 0;
@@ -1963,10 +2343,11 @@ const { height } = useWindowSize()
       );
       width: 100%;
       position: relative;
-      cursor: url(@/assets/images/icon_17.svg) 54 54, auto;
+      // cursor: url(@/assets/images/icon_17.svg) 54 54, auto;
       .implantCaseBoxSwiper {
         width: 100%;
         margin: 0 auto;
+        overflow: visible;
         .implantCaseText {
           display: none;
         }
@@ -1991,9 +2372,9 @@ const { height } = useWindowSize()
             justify-content: center;
             position: relative;
             border-radius: 30px;
-            overflow: hidden;
+            // overflow: hidden;
             transition: all 0.3s;
-            cursor: url(@/assets/images/icon_18.svg) 54 54, auto;
+            // cursor: url(@/assets/images/icon_18.svg) 54 54, auto;
             div {
               width: 100%;
             }
@@ -2047,6 +2428,14 @@ const { height } = useWindowSize()
         margin: 60px auto 0;
       }
     }
+    .click_btn {
+      display: flex !important;
+      width: fit-content !important;
+      position: absolute;
+      right: -30px;
+      top: -40px;
+      z-index: 5;
+    }
   }
   .youtobe-video {
     width: 80%;
@@ -2097,6 +2486,9 @@ const { height } = useWindowSize()
     display: flex;
     justify-content: center;
     flex-direction: column;
+    & > div:nth-child(1) {
+      align-items: center;
+    }
     &-in {
       display: flex;
       flex-direction: column;
@@ -2140,6 +2532,25 @@ const { height } = useWindowSize()
     }
   }
 }
+.item_compare {
+  margin-top: 14px;
+  & > div {
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 0 12px;
+    color: var(--Theme-Color, #fc1682);
+    font-family: FakePearl;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 41.6px */
+    letter-spacing: 2.6px;
+  }
+}
+:deep(.dentistryServices-title) {
+  align-items: center;
+}
 .contactForm {
   margin-top: 100px;
 }
@@ -2154,21 +2565,94 @@ const { height } = useWindowSize()
     clip-path: polygon(110% 0, 120% 0, 110% 100%, 100% 100%);
   }
 }
-@media (any-hover: hover) {
-  .dentistryServices {
-    .implantCase {
-      &-content {
-        .implantCaseBoxSwiper {
-          .implantCaseBox {
-            &-t {
-              div {
-                .ya {
-                  &:hover {
-                    opacity: 0 !important;
-                  }
-                }
-              }
-            }
+
+.note-mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 135px;
+  background: linear-gradient(180deg, rgba(255, 241, 240, 0) 0%, #fee6f1 100%);
+  padding-bottom: 80px;
+  & > div:nth-child(2) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0 16px;
+    & > div:nth-child(1) {
+      grid-column: 1 / 4;
+      color: var(--Theme-Color, #fc1682);
+      text-align: center;
+      font-family: FakePearl;
+      font-size: 35px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 56px */
+      letter-spacing: 7px;
+      margin: 55px auto;
+      display: flex;
+      flex-direction: column;
+    }
+    & > div:not(:nth-of-type(1)) {
+      display: flex;
+      width: 515px;
+      padding: 30px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px 0;
+      background: #fff;
+      box-sizing: border-box;
+      height: fit-content;
+      & > div:nth-child(1) {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        & > div:nth-child(1) {
+          display: flex;
+          flex-direction: column;
+          & > span:nth-child(1) {
+            color: var(--Blue-Deep, #00aeff);
+            font-family: FakePearl;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 160%; /* 44.8px */
+          }
+          & > span:nth-child(2) {
+            color: var(--Grey-Pale, #aaa);
+            font-family: 'Noto Sans HK';
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%; /* 32px */
+            letter-spacing: 4px;
+          }
+        }
+        & > div:nth-child(2) {
+          color: var(--Grey-Mid, #666);
+          font-family: 'Noto Sans HK';
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 160%; /* 32px */
+          letter-spacing: 4px;
+        }
+      }
+      & > div:nth-child(2) {
+        color: var(--Grey-Deep, #4d4d4d);
+        font-family: 'Noto Sans HK';
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 32px */
+        letter-spacing: 3.5px;
+        width: 100%;
+      }
+    }
+    & > div:nth-of-type(3) {
+      margin-top: 60px;
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          & > span:nth-child(1) {
+            color: var(--Theme-Color, #fc1682);
           }
         }
       }
@@ -2177,173 +2661,550 @@ const { height } = useWindowSize()
 }
 @media (min-width: 768px) and (max-width: 1920px) {
   .dentistryServices {
+    background: #fff;
+    padding: 0 0;
+    position: relative;
+    z-index: 1;
+    .tabNav {
+      font-weight: 400;
+      font-size: 1.25rem;
+      line-height: 160%;
+      color: #cbcbcb;
+      margin-top: clamp(10px, 1.0416vw, 20px);
+      a {
+        &:not(:last-child)::after {
+          content: '';
+          width: clamp(10px, 1.0416vw, 20px);
+          height: 2px;
+          margin: 0 10px;
+          background: #cbcbcb;
+          display: inline-block;
+          vertical-align: middle;
+          margin-top: -4px;
+        }
+      }
+      & > span {
+        cursor: pointer;
+        color: var(--indexColor1);
+      }
+    }
     .plague {
-      padding: 5.1042vw 0;
-      margin-top: 1.5625vw;
+      width: 100%;
+      margin: clamp(120px, 7.8125vw, 150px) auto clamp(120px, 7.8125vw, 150px);
+      // background: linear-gradient(
+      //   135deg,
+      //   rgba(255, 241, 240, 0.25) 0%,
+      //   rgba(255, 221, 218, 0.25) 100%
+      // );
+      // background: linear-gradient(
+      //   110deg,
+      //   rgba(252, 22, 130, 0.1) -0.92%,
+      //   rgba(255, 168, 198, 0) 100%
+      // );
+      // padding: 98px 0;
+      margin-top: 30px;
       &-in {
-        max-width: 41.8229vw;
+        width: 100%;
+        max-width: 803px;
+        margin: 0 auto;
       }
       &-lists {
-        margin-top: 5.1042vw;
+        padding-top: 98px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: relative;
         & > div {
-          &:nth-of-type(1) {
-            span {
-              margin-bottom: -3.125vw;
-            }
-          }
-          &:nth-of-type(3) {
-            img {
-              margin-bottom: -4.1667vw;
-              margin-top: 4.1667vw;
-            }
-          }
-          &:nth-of-type(5) {
-            margin-top: 2.7604vw;
-            padding-right: 1.7448vw;
-          }
-          &:nth-of-type(6) {
-            margin-top: 2.7604vw;
-            padding-left: 1.7448vw;
-          }
+          display: flex;
+          justify-content: center;
+          align-items: center;
           span {
-            width: 13.5417vw;
-            height: 13.5417vw;
-            font-size: 1.8229vw;
+            padding: 6px 45px;
+            width: max-content;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: var(--White, #fff);
+            text-align: center;
+            font-family: FakePearl;
+            font-size: 35px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%; /* 56px */
+            letter-spacing: 7px;
+            white-space: nowrap;
+            border-radius: 86.165px;
+            background: var(--Theme-Color, #fc1682);
+            box-shadow: 2.81px 2.81px 11.613px 0px rgba(252, 22, 130, 0.5);
           }
           img {
-            width: 13.5417vw;
-            height: 13.5417vw;
+            width: 468px;
+            height: 468px;
+            border-radius: 50%;
           }
+        }
+        & > div:not(:nth-of-type(3)) {
+          position: absolute;
+        }
+        & > div:nth-child(6) {
+          top: 210px;
+          right: 30px;
+        }
+        & > div:nth-child(5) {
+          top: 460px;
+          right: -10px;
+        }
+        & > div:nth-child(4) {
+          top: 50px;
+          margin-right: 100px;
+        }
+        & > div:nth-child(2) {
+          top: 500px;
+          left: 100px;
+        }
+        & > div:nth-child(1) {
+          top: 290px;
+          left: 0;
         }
       }
     }
     .Dental_implant_technology {
+      margin-top: 0px;
+      display: flex;
+      flex-direction: column;
       &-title {
-        margin-top: 4.1667vw;
+        order: 1;
+        margin: 0 auto;
+        margin-top: 144px;
+        margin-bottom: 50px;
+      }
+      &-video {
+        order: 3;
+        // margin: 20px auto 50px;
+        margin-bottom: 40px;
+        .youtobe-video {
+          margin-top: 0;
+          margin-bottom: 80px;
+        }
       }
       &-context {
-        max-width: 52.9167vw;
-        margin: 1.0417vw auto 2.6042vw;
-        font-size: 1.0417vw;
+        width: 100%;
+        max-width: 1006px;
+        margin: -20px auto 30px;
+        font-size: clamp(10px, 1.0416vw, 20px);
+        line-height: 160%;
+        text-align: center;
+        order: 2;
+        color: var(--Grey-Deep, #4d4d4d);
+        text-align: center;
+        font-family: 'Noto Sans HK';
+        font-size: 23px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 36.8px */
+        letter-spacing: 4.6px;
       }
       &-img {
-        max-width: 54.0625vw;
+        width: 100%;
+        max-width: 1038px;
+        margin: 0 auto;
+        order: 4;
       }
     }
     .notice {
-      max-width: 75.5208vw;
-      margin: 10.4167vw auto 0;
+      width: 100%;
+      max-width: 1450px;
+      margin: 200px auto 0;
       &-topText,
       &-bottomText {
+        width: 100%;
         span {
-          font-size: 1.0417vw;
+          display: block;
+          font-style: normal;
+          font-weight: 600;
+          font-size: clamp(10px, 1.0416vw, 20px);
+          line-height: 160%;
+          text-align: center;
+          color: #666666;
         }
       }
       &-topText {
-        margin: 1.8229vw auto 0;
+        margin: 35px auto 0;
+        display: none;
       }
       &-bottomText {
-        margin: 2.8125vw auto 0;
+        margin: 54px auto 0;
       }
       &-in {
-        margin: 2.8125vw auto 0;
+        width: 90%;
+        margin: 54px auto 0;
         .lists {
-          border-radius: 3.125vw;
+          border-radius: 60px;
+          overflow: hidden;
           &-in {
+            display: flex;
             & > div {
-              margin-bottom: 0.4167vw;
-              padding: 2.6042vw 2.0833vw;
-              font-size: 1.0417vw;
+              background: var(--indexColor2);
+              margin-bottom: 8px;
+              padding: 50px 40px;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              font-size: clamp(10px, 1.0416vw, 20px);
+              color: #666666;
+              &:nth-of-type(1) {
+                padding: 0;
+                flex: 1;
+                color: var(--indexColor);
+                font-weight: 900;
+              }
+              &:nth-of-type(2) {
+                width: 43.5%;
+              }
+              &:nth-of-type(3) {
+                width: 43.5%;
+              }
               &:not(:last-child) {
-                margin-right: 0.4167vw;
+                margin-right: 8px;
               }
             }
             &:nth-of-type(1) {
               & > div {
-                padding: 0.6771vw 0;
-                font-size: 1.4583vw;
+                padding: 13px 0;
+                font-size: 28px;
+                font-weight: 600;
+                color: #fff;
+                background: var(--indexColor);
+                margin-bottom: 0;
+              }
+            }
+            &:last-child {
+              & > div {
+                margin-bottom: 0;
               }
             }
           }
         }
       }
       &-line {
-        width: 4.3229vw;
-        margin: 1.1458vw auto;
+        width: 83px;
+        margin: 22px auto;
       }
     }
     .step {
-      padding: 5.1042vw 0;
-      margin-top: 10.7292vw;
+      width: 100%;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 241, 240, 0) 0%,
+        rgba(255, 241, 240, 0.7) 12.5%,
+        rgba(255, 241, 240, 0.7) 81.99%,
+        rgba(255, 241, 240, 0) 100%
+      );
+      padding: 98px 0;
+      margin-top: 206px;
       &-in {
-        max-width: 75.2083vw;
+        width: 100%;
+        max-width: clamp(1000px, 75vw, 1444px);
+        margin: 0 auto;
       }
       &-lists {
-        margin-top: 5.1042vw;
+        margin-top: 98px;
+        // display: flex;
+        // flex-wrap: wrap;
+        // justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
         &-in {
-          margin-bottom: 3.125vw;
+          display: flex;
+          align-items: center;
+          margin-bottom: 60px;
+          position: relative;
+          &:nth-of-type(n + 4) {
+            margin-bottom: 0;
+          }
+          &:nth-of-type(3),
+          &:nth-of-type(6) {
+            .step-lists-in-r {
+              display: none;
+            }
+          }
           &-l {
-            max-width: 20.8333vw;
+            width: 100%;
+            max-width: clamp(200px, 20.83vw, 400px);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
             .title {
-              font-size: 1.8229vw;
-              margin-bottom: 0.7813vw;
-              img {
-                margin-right: 0.7813vw;
+              display: flex;
+              align-items: center;
+              font-size: 35px;
+              font-weight: 700;
+              margin-bottom: 15px;
+              color: #666666;
+              position: relative;
+              width: fit-content;
+              position: absolute;
+              top: -8px;
+              left: -8px;
+              & > div:nth-child(2) {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                color: var(--White, #fff);
+                text-align: center;
+                font-family: FakePearl;
+                font-size: 35px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 160%; /* 56px */
               }
             }
             .image {
+              width: 100%;
               img {
-                border-radius: 1.5625vw;
+                width: 100%;
+                border-radius: 30px;
               }
             }
             .name {
-              font-size: 1.0417vw;
-              margin-top: 1.25vw;
-              margin-bottom: 0.7813vw;
-              padding: 0.4167vw 0.7813vw;
+              margin-top: 16px;
+              margin-bottom: 8px;
+              // padding: 8px 0;
+              // clip-path: polygon(0 0, 80% 0, 85% 100%, 0 100%);
+              color: var(--Theme-Color, #fc1682);
+              font-family: FakePearl;
+              font-size: clamp(18px, 1.4583vw, 28px);
+              font-style: normal;
+              font-weight: 400;
+              line-height: 160%; /* 44.8px */
             }
             .context {
-              font-size: 1.0417vw;
+              color: var(--Grey-Deep, #4d4d4d);
+              font-family: 'Noto Sans HK';
+              font-size: clamp(14px, 1.041583vw, 20px);
+              font-style: normal;
+              font-weight: 400;
+              line-height: 160%; /* 32px */
+              letter-spacing: 4px;
             }
+            z-index: 5;
           }
           &-r {
-            margin-left: 2.6042vw;
-            img {
-              width: 0.7813vw;
+            margin-left: 0;
+            position: absolute;
+            z-index: 1;
+            right: clamp(-45px, -8.25vw, -160px);
+            top: 22%;
+          }
+        }
+      }
+    }
+    .classify {
+      max-width: clamp(100px, 77.6vw, 1490px);
+      margin: clamp(120px, 8.59375vw, 165px) auto clamp(120px, 7.8125vw, 150px);
+      .classify-title {
+        width: fit-content;
+        margin: 0 auto 60px;
+      }
+      .classify-item {
+        display: grid;
+        gap: 0 clamp(75px, 5.46875vw, 105px);
+        grid-template-columns: repeat(2, 1fr);
+        & > div:nth-child(1),
+        & > div:nth-child(2) {
+          position: relative;
+          & > div:nth-child(1) {
+            & > div:nth-child(1) {
+              border-radius: var(--Count, 0px) 37.406px 37.406px
+                var(--Count, 0px);
+              background: var(--Theme-Color, #fc1682);
+              width: fit-content;
+              padding: 8px clamp(20px, 3.125vw, 60px);
+              color: var(--White, #fff);
+              text-align: center;
+              font-family: FakePearl;
+              font-size: clamp(25px, 1.8229vw, 35px);
+              font-style: normal;
+              font-weight: 400;
+              line-height: 160%; /* 56px */
+              letter-spacing: 7px;
+              margin-bottom: 25px;
+            }
+            & > div:nth-child(2) {
+              display: flex;
+              & > div:nth-child(1) {
+                margin-left: clamp(20px, 3.125vw, 60px);
+                & > p {
+                  display: flex;
+                  align-items: center;
+                  gap: 0 20px;
+                  & > span:nth-child(1) {
+                    color: #fc1682;
+                    font-family: FakePearl;
+                    font-size: clamp(10px, 1.5625vw, 30px);
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 160%; /* 48px */
+                    letter-spacing: 3px;
+                  }
+                  & > span:nth-child(2) {
+                    transform: scale(1.2);
+                  }
+                }
+              }
+              & > div:nth-child(2) {
+                position: absolute;
+                top: 27px;
+                right: 8px;
+                width: 14.15vw;
+                height: 14.15vw;
+                & > img {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
             }
           }
+          & > ul {
+            margin-top: clamp(10px, 1.5625vw, 30px);
+            color: var(--Grey-Deep, #4d4d4d);
+            font-family: FakePearl;
+            font-size: clamp(14px, 1.354vw, 26px);
+            font-style: normal;
+            font-weight: 500;
+            line-height: 160%; /* 41.6px */
+            letter-spacing: 2.6px;
+            & > li {
+              list-style: disc;
+            }
+          }
+        }
+        & > div:nth-child(2) {
+          & > div:nth-child(1) {
+            & > div:nth-child(1) {
+              background: #00aeff;
+            }
+          }
+        }
+        & > div:nth-child(3) {
+          grid-column: 1 / 3;
+          margin: clamp(80px, 6.25vw, 120px) auto 0;
+          color: var(--Theme-Color, #fc1682);
+          text-align: center;
+          font-family: FakePearl;
+          font-size: clamp(14px, 1.354vw, 26px);
+          font-style: normal;
+          font-weight: 500;
+          line-height: 160%; /* 41.6px */
+          letter-spacing: 2.6px;
+          max-width: clamp(320px, 23.95vw, 460px);
+        }
+        .implantCaseBoxSwiper {
+          overflow: visible;
         }
       }
     }
     .Plant_brand_series {
-      margin-top: 4.1667vw;
+      margin-top: 80px;
+      position: relative;
+      & > div {
+        align-items: center;
+      }
       &-tab {
-        max-width: 45vw;
-        margin: 1.5625vw auto;
+        width: 100%;
+        max-width: 864px;
+        margin: 30px auto;
+        display: flex;
         & > span {
-          font-size: 1.1458vw;
-          padding: 0.3646vw 0;
+          flex: 1;
+          color: var(--indexColor1);
+          font-size: 22px;
+          border-top: 2px solid var(--indexColor1);
+          border-bottom: 2px solid var(--indexColor1);
+          border-left: 2px solid var(--indexColor1);
+          padding: 7px 0;
+          text-align: center;
+          cursor: pointer;
+          transition: all 0.3s;
           &:first-child {
-            border-radius: 0.2604vw 0 0 0.2604vw;
+            border-radius: 5px 0 0 5px;
           }
           &:last-child {
-            border-radius: 0 0.2604vw 0.2604vw 0;
+            border-radius: 0 5px 5px 0;
+            border-right: 2px solid var(--indexColor1);
+          }
+          &:hover,
+          &.active {
+            background: var(--indexColor1);
+            color: #fff;
           }
         }
       }
+      .brand_btn {
+        position: absolute;
+        top: 55%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        display: flex;
+        z-index: 10;
+        justify-content: space-around;
+        .brand_btn_left {
+          position: absolute;
+          left: calc((100% - 562px - 495px) / 2);
+          top: 25%;
+          cursor: pointer;
+          z-index: 2;
+        }
+        .brand_btn_right {
+          position: absolute;
+          right: calc((100% - 562px - 495px) / 2);
+          top: 25%;
+          cursor: pointer;
+          z-index: 2;
+        }
+      }
       &-content {
+        width: 100%;
+        max-width: 700px;
+        margin: 0 auto;
+        display: flex;
+        &-l {
+          width: calc(300 / 700 * 100%);
+          margin-right: calc(30 / 695 * 100%);
+          img {
+            width: 100%;
+          }
+        }
         &-r {
+          flex: 1;
           & > div {
+            & > img {
+              max-width: 100%;
+            }
             &:nth-of-type(2) {
-              font-size: 1.5625vw;
-              padding-left: 0.8854vw;
-              margin: 0.5208vw 0;
+              width: 70%;
+              color: #fff;
+              background: var(--indexColor1);
+              font-size: 30px;
+              line-height: 160%;
+              padding-left: 17px;
+              clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
+              margin: 10px 0;
             }
             &:nth-of-type(3) {
+              display: flex;
+              flex-direction: column;
               span {
-                font-size: 1.3542vw;
+                font-size: 26px;
+                line-height: 1.6;
                 &::before {
-                  margin-right: 0.5208vw;
+                  content: '·';
+                  display: inline-block;
+                  margin-right: 10px;
                 }
               }
             }
@@ -2352,95 +3213,364 @@ const { height } = useWindowSize()
       }
     }
     .doctorTeam {
-      margin-top: 4.1667vw;
+      margin-top: 80px;
+    }
+    .note {
+      margin-top: 100px;
+      .noteCard {
+        // display: flex;
+        // flex-wrap: wrap;
+        margin: clamp(26px, 2.8125vw, 54px) auto 0;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: clamp(35px, 3.645vw, 70px) clamp(45px, 4.6875vw, 90px);
+        // justify-content: space-between;
+        max-width: 1040px;
+        &-in {
+          cursor: pointer;
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 0;
+          box-sizing: border-box;
+          &-image {
+            width: clamp(110px, 9.583vw, 184px);
+            height: clamp(110px, 9.583vw, 184px);
+            padding-top: 0;
+            position: relative;
+            background: var(--indexColor2);
+            border-radius: 10px;
+            img {
+              position: absolute;
+              left: 50%;
+              top: 50%;
+              transform: translate(-50%, -50%);
+              max-width: 90%;
+              max-height: 90%;
+            }
+          }
+          &:nth-of-type(1) > &-image,
+          &:nth-of-type(3) > &-image,
+          &:nth-of-type(6) > &-image,
+          &:nth-of-type(8) > &-image {
+            background: #fff1f0;
+          }
+          &-name {
+            height: auto;
+            line-height: 100%;
+            font-style: normal;
+            font-weight: 600;
+            font-size: clamp(12px, 1.25vw, 24px);
+            color: #666666;
+            text-align: center;
+            margin-top: 12px;
+          }
+        }
+      }
     }
     .implantCase {
-      margin-top: 5.8333vw;
+      margin-top: 112px;
+      // overflow-x: hidden;
+      position: relative;
       &-content {
-        margin-top: 2.0833vw;
-        padding: 6.6146vw 0;
+        margin-top: 40px;
+        padding: 127px 0;
+        background: linear-gradient(
+          269deg,
+          rgba(255, 241, 240, 0) 0.53%,
+          rgba(255, 241, 240, 0.7) 12.92%,
+          rgba(255, 241, 240, 0.7) 81.78%,
+          rgba(255, 241, 240, 0) 99.62%
+        );
+        width: 100%;
+        position: relative;
+        // cursor: url(@/assets/images/icon_17.svg) 54 54, auto;
         .implantCaseBoxSwiper {
+          width: 100%;
+          margin: 0 auto;
+          .implantCaseText {
+            display: none;
+          }
           .implantCaseBox {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            width: max-content;
+            margin: 0 auto;
+
             &-t {
-              max-width: 29.2708vw;
-              font-size: 1.8229vw;
-              border-radius: 1.5625vw;
+              width: 100%;
+              max-width: 562px;
+              margin: 0 auto;
+              color: #4d4d4d;
+              font-size: 35px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 160%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              position: relative;
+              border-radius: 30px;
+              // overflow: hidden;
+              transition: all 0.3s;
+              // cursor: url(@/assets/images/icon_18.svg) 54 54, auto;
+              div {
+                width: 100%;
+              }
+              img {
+                width: 100%;
+                transition: all 0.3s;
+              }
+              .rightMbIcon {
+                display: none;
+              }
             }
             &:not(:first-child) {
               .implantCaseBox-t {
-                margin-top: 3.0729vw;
+                margin-top: 59px;
               }
             }
             &-b {
-              margin-top: 3.125vw;
+              margin-top: 60px;
               img {
-                border-radius: 1.5625vw;
+                border-radius: 30px;
+                margin: 0 auto;
               }
+              // div{
+              //   img{
+              //     border-radius: 30px;
+              //     margin: 0 auto;
+              //   }
+              //   &:not(:first-child){
+              //     margin-top: 33px;
+              //   }
+              // }
             }
           }
         }
         .leftBtn {
-          svg {
-            width: 5.2083vw;
-            height: 5.2083vw;
-          }
+          position: absolute;
+          left: calc((100% - 562px - 495px) / 2);
+          top: 25%;
+          cursor: pointer;
+          z-index: 2;
         }
         .rightBtn {
-          svg {
-            width: 5.2083vw;
-            height: 5.2083vw;
-          }
+          position: absolute;
+          right: calc((100% - 562px - 495px) / 2);
+          top: 25%;
+          cursor: pointer;
+          z-index: 2;
         }
         &-line {
-          width: 16.9792vw;
-          margin: 3.125vw auto 0;
+          width: 326px;
+          margin: 60px auto 0;
         }
       }
-    }
-    .note {
-      margin-top: 5.2083vw;
-      .noteCard {
-        margin: 2.8125vw auto 0;
-        max-width: 56.7708vw;
-        &-in {
-          padding: 0 2.3438vw;
-          &-image {
-            border-radius: 0.5208vw;
-          }
-          &-name {
-            height: 3.3333vw;
-            line-height: 3.3333vw;
-            font-size: 1.0417vw;
-          }
-        }
+      .click_btn {
+        display: flex !important;
+        width: fit-content !important;
+        position: absolute;
+        right: -30px;
+        top: -40px;
+        z-index: 5;
       }
     }
     .youtobe-video {
-      max-width: 50vw;
-      margin: 4.1667vw auto 0;
+      width: 80%;
+      max-width: 960px;
+      margin: 80px auto 0;
+      &-in {
+        width: 100%;
+        height: 0;
+        padding-bottom: calc(316 / 560 * 100%);
+        position: relative;
+        & > iframe {
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .confidence_ecommendation {
+      margin-top: 144px;
+      &-in {
+        width: 100%;
+        max-width: 1041px;
+        display: flex;
+        margin: 54px auto 0;
+        flex-wrap: wrap;
+        justify-content: center;
+        & > div {
+          width: calc(100% / 3);
+          display: flex;
+          justify-content: center;
+          margin-bottom: 60px;
+          // align-content: center;
+          align-items: center;
+          flex-wrap: nowrap;
+          img {
+            height: auto;
+          }
+        }
+      }
     }
     .technology {
-      max-width: 52.9167vw;
-      margin: 7.5vw auto 0;
-      padding-bottom: 2.6042vw;
+      width: 100%;
+      max-width: 1016px;
+      margin: 144px auto 0;
+      padding-bottom: 50px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      & > div:nth-child(1) {
+        align-items: center;
+      }
       &-in {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         &-img {
-          max-width: 28.75vw;
-          margin-top: 1.7708vw;
+          width: 100%;
+          max-width: 552px;
+          margin-top: 34px;
+          img {
+            margin: 0 auto;
+          }
         }
         &-t {
-          margin-top: 1.1979vw;
-          font-size: 1.0417vw;
-          letter-spacing: 0.2083vw;
+          margin-top: 23px;
+          text-align: center;
+          color: var(--textColor);
+          font-family: 'Noto Sans HK';
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 160%; /* 32px */
+          letter-spacing: 4px;
         }
         &-b {
-          margin-top: 1.7708vw;
-          font-size: 1.0417vw;
-          letter-spacing: 0.2083vw;
+          margin-top: 34px;
+          /* Content-PC */
+          color: var(--textColor);
+          font-family: 'Noto Sans HK';
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 160%; /* 32px */
+          letter-spacing: 4px;
         }
       }
       &-btn {
-        margin-top: 2.6042vw;
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+      }
+    }
+  }
+  :deep(.dentistryServices-title) {
+    align-items: center;
+  }
+  .note-mobile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 135px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 241, 240, 0) 0%,
+      #fee6f1 100%
+    );
+    padding-bottom: 80px;
+    & > div:nth-child(2) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0 16px;
+      & > div:nth-child(1) {
+        grid-column: 1 / 4;
+        color: var(--Theme-Color, #fc1682);
+        text-align: center;
+        font-family: FakePearl;
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 56px */
+        letter-spacing: 7px;
+        margin: 55px auto;
+        display: flex;
+        flex-direction: column;
+      }
+      & > div:not(:nth-of-type(1)) {
+        display: flex;
+        width: 26.82vw;
+        padding: 1.5625vw;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.625vw 0;
+        background: #fff;
+        box-sizing: border-box;
+        height: fit-content;
+        & > div:nth-child(1) {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          & > div:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+            & > span:nth-child(1) {
+              color: var(--Blue-Deep, #00aeff);
+              font-family: FakePearl;
+              font-size: clamp(14px, 1.453vw, 26px);
+              font-style: normal;
+              font-weight: 500;
+              line-height: 160%; /* 44.8px */
+            }
+            & > span:nth-child(2) {
+              color: var(--Grey-Pale, #aaa);
+              font-family: 'Noto Sans HK';
+              font-size: 1.0465vw;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 160%; /* 32px */
+              letter-spacing: 4px;
+            }
+          }
+          & > div:nth-child(2) {
+            color: var(--Grey-Mid, #666);
+            font-family: 'Noto Sans HK';
+            font-size: 1.0465vw;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%; /* 32px */
+            letter-spacing: 4px;
+          }
+        }
+        & > div:nth-child(2) {
+          color: var(--Grey-Deep, #4d4d4d);
+          font-family: 'Noto Sans HK';
+          font-size: 1.0465vw;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 160%; /* 32px */
+          letter-spacing: 3.5px;
+          width: 100%;
+        }
+      }
+      & > div:nth-of-type(3) {
+        margin-top: 3.125vw;
+        & > div:nth-child(1) {
+          & > div:nth-child(1) {
+            & > span:nth-child(1) {
+              color: var(--Theme-Color, #fc1682);
+            }
+          }
+        }
       }
     }
   }
@@ -2449,6 +3579,40 @@ const { height } = useWindowSize()
   :deep(.explain_box_mobile) {
     top: 0px !important;
     margin-left: 0 !important;
+  }
+  :deep(.header-content-in) {
+    width: 100vw;
+  }
+  :deep(.logo) {
+    .health_care_voucher {
+      display: none !important;
+    }
+  }
+  :deep(.context-in) {
+    font-size: 22px !important;
+  }
+  :deep(.servicesCard) {
+    grid-gap: 7.205vw 4.6153vw !important;
+    & > div:nth-child(7) {
+      .servicesCard-in-name {
+        max-width: 45px;
+      }
+    }
+    & > div:nth-child(11) {
+      .servicesCard-in-name {
+        max-width: 55px;
+      }
+    }
+    & > div:nth-child(12) {
+      .servicesCard-in-name {
+        max-width: 55px;
+      }
+    }
+    & > div:last-child {
+      .servicesCard-in-name {
+        max-width: 70px;
+      }
+    }
   }
   :deep(.header-content) {
     .explain_box_mobile {
@@ -2464,9 +3628,30 @@ const { height } = useWindowSize()
       top: auto;
       z-index: 35;
     }
-    .waterBg-implant::after,
+    .waterBg-implant {
+      width: 100vw;
+    }
+
+    .waterBg::after,
+    .waterBg::before {
+      bottom: -8vw;
+      width: 100vw;
+    }
+    .waterBg-implant::after {
+      height: 23.33vw;
+    }
     .waterBg-implant::before {
-      bottom: -28vw;
+      height: 20.33vw;
+      animation: wavea-cbdedece 10s linear infinite;
+    }
+  }
+  @keyframes wavea-cbdedece {
+    0% {
+      background-position: 0 20px;
+    }
+
+    to {
+      background-position: 1080px 20px;
     }
   }
   @keyframes identifier {
@@ -2513,6 +3698,7 @@ const { height } = useWindowSize()
     .plague {
       margin-top: 0;
       padding: 31px 0 44px;
+      margin: 0 auto;
       &-in {
         max-width: 403px;
       }
@@ -2524,6 +3710,7 @@ const { height } = useWindowSize()
       &-lists {
         margin-top: 34px;
         position: relative;
+        padding-top: 0;
         & > div {
           &:nth-of-type(1) {
             width: fit-content;
@@ -2540,8 +3727,9 @@ const { height } = useWindowSize()
             align-items: center;
             position: absolute;
             z-index: 4;
-            bottom: -8px;
-            left: 30px;
+            bottom: auto;
+            top: 160px;
+            left: 80px;
           }
           &:nth-of-type(3) {
             width: 180px;
@@ -2563,8 +3751,9 @@ const { height } = useWindowSize()
             padding-right: 0;
             position: absolute;
             z-index: 4;
-            right: 40px;
-            bottom: 10px;
+            right: 45px;
+            bottom: auto;
+            top: 135px;
           }
           &:nth-of-type(6) {
             margin-top: 0;
@@ -2586,6 +3775,12 @@ const { height } = useWindowSize()
             box-shadow: 1.075px 1.075px 4.443px 0px rgba(252, 22, 130, 0.5);
             box-sizing: border-box;
             padding: 2.5px 14px;
+
+            font-size: 12.54px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%; /* 20.064px */
+            letter-spacing: 2.508px;
           }
           img {
             width: 180px;
@@ -2740,8 +3935,9 @@ const { height } = useWindowSize()
           &-r {
             margin-top: 30px;
             margin-left: 0;
+            display: none !important;
             img {
-              transform: rotate(90deg);
+              // transform: rotate(90deg);
             }
           }
         }
@@ -2749,6 +3945,7 @@ const { height } = useWindowSize()
     }
     .Plant_brand_series {
       margin-top: 30px;
+      display: none !important;
       &-tab {
         padding: 0 30px;
         & > span {
@@ -2813,10 +4010,11 @@ const { height } = useWindowSize()
       }
     }
     .doctorTeam {
-      margin-top: 60px;
+      margin-top: 0;
     }
     .implantCase {
       margin-top: 90px;
+      overflow: hidden;
       &-content {
         margin-top: 31px;
         background: linear-gradient(
@@ -2856,10 +4054,13 @@ const { height } = useWindowSize()
               .rightMbIcon {
                 display: block;
                 position: absolute;
-                width: 27px;
+                width: 45px;
                 height: auto;
-                right: 10px;
-                top: 10px;
+                right: -10px;
+                top: -12px;
+              }
+              .click_btn {
+                display: none !important;
               }
             }
             &-b {
@@ -3070,6 +4271,15 @@ const { height } = useWindowSize()
         margin-top: 25px;
       }
     }
+    .brand_btn {
+      display: none !important;
+      .brand_btn_left {
+        display: none;
+      }
+      .brand_btn_right {
+        display: none;
+      }
+    }
   }
   .step-in {
     position: relative;
@@ -3110,28 +4320,33 @@ const { height } = useWindowSize()
     width: fit-content;
     margin: 0 auto;
   }
+  .classify {
+    max-width: 100vw !important;
+    width: 100vw;
+    margin-top: 0 !important;
+  }
   .classify-item {
     margin: 30px 0 50px;
-    display: flex;
-    flex-direction: column;
-    gap: 40px 0;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 40px 0 !important;
     & > div {
       position: relative;
       & > div:nth-child(1) {
         & > div:nth-child(1) {
-          border-radius: var(--Count, 0px) 20px 20px var(--Count, 0px);
+          border-radius: var(--Count, 0px) 20px 20px var(--Count, 0px) !important;
           background: var(--Theme-Color, #fc1682);
           color: var(--White, #fff);
           text-align: center;
           font-family: FakePearl;
-          font-size: 16px;
+          font-size: 16px !important;
           font-style: normal;
           font-weight: 500;
-          line-height: 130%; /* 20.8px */
+          line-height: 130% !important; /* 20.8px */
           box-sizing: border-box;
-          padding: 5px 20px 5px 29px;
+          padding: 5px 20px 5px 29px !important;
           width: fit-content;
-          margin-left: 0;
+          margin-left: 0 !important;
         }
         & > div:nth-child(2) {
           display: flex;
@@ -3140,32 +4355,44 @@ const { height } = useWindowSize()
           & > div:nth-child(1) {
             display: flex;
             flex-direction: column;
-            gap: 5px 0;
+            gap: 5px 0 !important;
+            margin-left: 0 !important;
             & > p {
               display: flex;
               align-items: center;
               & > span:nth-child(1) {
                 color: #fc1682;
                 font-family: FakePearl;
-                font-size: 16px;
+                font-size: 16px !important;
                 font-style: normal;
                 font-weight: 600;
                 line-height: 130%; /* 20.8px */
-                margin-right: 10px;
+                margin-right: 10px !important;
               }
             }
           }
           & > div:nth-child(2) {
             position: absolute;
-            top: 0;
+            top: 0 !important;
             right: 30px;
+            width: 130px !important;
+            height: 130px !important;
+            & > img {
+              width: 100%;
+              height: 100%;
+            }
           }
         }
       }
       & > ul {
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 30px !important;
+        padding-right: 30px !important;
         list-style: disc;
+        font-size: 15px !important;
+        font-style: normal;
+        font-weight: 400 !important;
+        line-height: 160%; /* 24px */
+        letter-spacing: 1.5px !important;
       }
     }
     & > div:nth-child(2) {
@@ -3182,29 +4409,32 @@ const { height } = useWindowSize()
       color: var(--Theme-Color, #fc1682);
       text-align: center;
       font-family: FakePearl;
-      font-size: 15px;
+      font-size: 15px !important;
       font-style: normal;
       font-weight: 600;
       line-height: 160%; /* 24px */
-      letter-spacing: 1.5px;
+      letter-spacing: 1.5px !important;
+      margin: 0 !important;
     }
   }
   .note-mobile {
     margin-top: 40px;
-    padding: 0 0 20px 0;
+    padding: 0 20px 20px;
     box-sizing: border-box;
     & > .index_title {
-      margin-left: 0;
       margin: 0 30px;
+      padding-left: 30px;
       width: fit-content;
       position: relative;
       color: var(--Grey-Deep, #4d4d4d);
       font-family: FakePearl;
-      font-size: 20px;
+      font-size: 5.12vw;
       font-style: normal;
-      font-weight: 5.12vw;
       line-height: 160%; /* 32px */
       font-weight: 600;
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
       &::before {
         content: '';
         height: 3px;
@@ -3219,14 +4449,19 @@ const { height } = useWindowSize()
       }
     }
     & > .note-bg-mobile {
+      display: flex !important;
+      flex-direction: column;
       box-sizing: border-box;
-      padding: 0 30px 20px;
+      align-items: center !important;
       width: 100vw;
       background: linear-gradient(
         180deg,
         rgba(255, 241, 240, 0) 0%,
         #fee6f1 100%
       );
+      align-items: flex-start !important;
+      padding: 0 20px;
+
       & > div:nth-child(1) {
         margin-top: 20px;
         display: flex;
@@ -3234,67 +4469,61 @@ const { height } = useWindowSize()
         color: var(--Theme-Color, #fc1682);
         text-align: center;
         font-family: FakePearl;
-        font-size: 20px;
+        font-size: 20px !important;
         font-style: normal;
-        font-weight: 500;
-        line-height: 160%; /* 32px */
+        font-weight: 500 !important;
+        line-height: 160% !important; /* 32px */
+        margin: 20px auto !important;
       }
-
       & > div:not(:first-child) {
-        margin-top: 16px;
-        max-width: 74.35vw;
+        max-width: 290px !important;
         box-sizing: border-box;
-        padding: 2.56vw 3.84vw;
+        padding: 10px 15px !important;
         background: #fff;
+        gap: 0 !important;
         & > div:nth-child(1) {
           display: flex;
           justify-content: space-between;
+          align-items: center;
           & > div:nth-child(1) {
             display: flex;
             flex-direction: column;
             & > span:nth-child(1) {
               color: var(--Blue-Deep, #00aeff);
               font-family: FakePearl;
-              font-size: 5.128vw;
+              font-size: 20px;
               font-style: normal;
-              font-weight: 600;
-              line-height: 160%; /* 32px */
+              font-weight: 400;
+              line-height: 160%;
             }
             & > span:nth-child(2) {
-              color: var(--Grey-Pale, #aaa);
-              font-family: 'Noto Sans HK';
-              font-size: 3.07vw;
-              font-style: normal;
-              font-weight: 500;
-              line-height: 160%; /* 19.2px */
-              letter-spacing: 1.2px;
+              display: none !important;
             }
           }
           & > div:nth-child(2) {
             color: var(--Grey-Mid, #666);
-            text-align: right;
             font-family: 'Noto Sans HK';
-            font-size: 3.07vw;
+            font-size: 12px !important;
             font-style: normal;
             font-weight: 500;
             line-height: 160%; /* 19.2px */
-            letter-spacing: 1.2px;
+            letter-spacing: 1.2px !important;
           }
         }
         & > div:nth-child(2) {
           margin-top: 8px;
           color: var(--Grey-Deep, #4d4d4d);
-          text-align: justify;
+          text-align: justify !important;
           font-family: 'Noto Sans HK';
-          font-size: 3.07vw;
+          font-size: 12px !important;
           font-style: normal;
           font-weight: 500;
           line-height: 160%; /* 19.2px */
-          letter-spacing: 1.2px;
+          letter-spacing: 1.2px !important;
         }
       }
       & > div:not(:first-child):nth-child(odd) {
-        margin: 16px 0 0 auto;
+        margin: 35px 0 35px auto;
         & > div:nth-child(1) {
           & > div:nth-child(1) {
             & > span:nth-child(1) {
@@ -3315,6 +4544,15 @@ const { height } = useWindowSize()
         display: flex;
         justify-content: space-between;
         padding-left: 25px;
+        &>div:nth-child(1){
+          width: 150px;
+          height: 150px;
+          &>img{
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
         & > div:nth-child(2) {
           & > div:nth-child(1) {
             display: flex;
@@ -3455,6 +4693,25 @@ const { height } = useWindowSize()
     & > div:nth-child(5) {
       & > div:nth-child(1) {
         & > div:nth-child(2) {
+          & > div:nth-child(2)::before {
+            content: '';
+            position: absolute;
+            left: -10px;
+            top: 0;
+            background: url('https://static.cmereye.com/imgs/2024/07/0f4222f2b8594d57.png')
+              no-repeat;
+            width: 42px;
+            height: 30px;
+          }
+        }
+      }
+    }
+    & > div:nth-child(6) {
+      & > div:nth-child(1) {
+        & > div:nth-child(2) {
+          & > div:nth-child(2){
+            background: var(--Theme-Color, #fc1682);
+          }
           & > div:nth-child(2)::before {
             content: '';
             position: absolute;

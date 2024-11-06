@@ -804,10 +804,12 @@ input::-webkit-inner-spin-button {
 }
 .phone_input {
   display: flex;
-  border: 1px solid var(--indexColor1);
+  border: 2px solid var(--indexColor1);
+  line-height: 30px;
   :deep(.el-input) {
     border: none !important;
     box-shadow: none !important;
+    height: 51px !important;
   }
   :deep(.el-input .is-focus) {
     border: none !important;
@@ -1449,9 +1451,9 @@ li {
         font-size: 12px;
       }
       :deep(.el-input) {
-        height: 30px;
+        height: 28px;
         font-size: 15px;
-        border: 1px solid var(--indexColor1);
+        border: 2px solid var(--indexColor1);
       }
       :deep(.el-input__inner) {
         font-size: 15px;
@@ -1787,7 +1789,7 @@ li {
   }
   .phone_input {
     :deep(.el-input){
-      height: 28px;
+      height: 24px !important;
     }
   }
   .checkboxGroup {

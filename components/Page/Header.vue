@@ -304,41 +304,41 @@ const handleopenwechat = () => {
 }
 const showExplain = ref(true)
 const isHealthCare = () => {
+  console.log(route.name,'route.name');
+  
   if (route.path === '/dental-service/scaling-and-polishing') {
     showExplain.value = true
-  } else if (route.path == '/dental-service/implant') {
+  } else if (route.name == 'dental-service-implant') {
     showExplain.value = true
-  } else if (route.path == '/dental-service/fillings') {
+  } else if (route.name == 'dental-service-fillings') {
     showExplain.value = true
-  } else if (route.path == '/dental-service/veneers') {
+  } else if (route.name == 'dental-serviceveneers') {
     showExplain.value = true
-  } else if (route.path == '/dental-service/toothtray') {
+  } else if (route.name == 'dental-service-toothtray') {
     showExplain.value = true
-  } else if (route.path == '/dental-service/rootCanal') {
+  } else if (route.name == 'dental-service-rootCanal') {
     showExplain.value = true
-  } else if (route.path == '/dental-service/orthodontics') {
+  } else if (route.name == 'dental-service-orthodontics') {
     showExplain.value = true
-  } else if (route.path == '/dental-service/invisiblebraces') {
+  } else if (route.path == 'dental-service-invisiblebraces') {
     showExplain.value = true
-  } else if (route.path == '/dental-service/all-ceramic-crowns') {
+  } else if (route.name == 'dental-service-all-ceramic-crowns') {
     showExplain.value = true
-  } else if (route.path == '/dental-service/children-dentistry') {
+  } else if (route.name == 'dental-service-children-dentistry') {
     showExplain.value = true
-  } else if (route.path == '/dental-service/wisdom-teeth-extraction') {
+  } else if (route.name == 'dental-service-wisdom-teeth-extraction') {
     showExplain.value = true
-  } else if (route.path == '/dental-service/teeth-whitening') {
+  } else if (route.name == 'dental-service-teeth-whitening') {
     showExplain.value = true
-  } else if (route.path == '/dental-service/general-oral-examination') {
+  } else if (route.name == 'dental-service-general-oral-examination') {
     showExplain.value = true
-  } else if (route.path == '/dental-service/periodontal') {
+  } else if (route.name == 'dental-service-periodontal') {
     showExplain.value = true
-  } else if (route.path == '/health-care-voucher') {
+  } else if (route.name == 'health-care-voucher') {
     showExplain.value = true
-  } else if (route.path == '/news/scaling-and-polishing-test') {
+  } else if (route.name == 'news-scaling-and-polishing-test') {
     showExplain.value = true
-  } else if (route.path == '/news/news-tooth-wiki/263') {
-    showExplain.value = true
-  } else if (route.path == '/news/news-tooth-wiki/263') {
+  } else if (route.name == 'news-news-tooth-wiki-263') {
     showExplain.value = true
   } else {
     showExplain.value = false

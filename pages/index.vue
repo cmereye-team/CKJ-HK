@@ -180,7 +180,9 @@ const changleDoctorLists: any = () => {
   actDoctorListd.value = b
 }
 let loading = ref(false)
+const checkId = ref('101')
 const handletab2 = async (id: string, dpc: Boolean = false) => {
+  checkId.value = id
   if (!dpc && dentalProfessionCur.value === id) return
   actDoctorListd.value = []
   loading.value = true
@@ -604,6 +606,38 @@ onMounted(() => {
 
 // 临时隐藏  contentDom
 const contentDom = ref(false)
+
+const groupPhoto = ref([
+  'https://static.cmereye.com/imgs/2024/11/d43bcfc01f99a97f.jpg',
+  'https://static.cmereye.com/imgs/2024/11/533cd5d2e1944a98.jpg',
+  'https://static.cmereye.com/imgs/2024/11/dce268191178f65d.jpg',
+  '',
+  'https://static.cmereye.com/imgs/2024/11/43f7fdfa344a8b78.jpg',
+  'https://static.cmereye.com/imgs/2024/11/1877a39445db8018.jpg',
+  '',
+])
+
+const checkGroupPhoto = () => {
+  switch (checkId.value) {
+    case '101':
+      return groupPhoto.value[0]
+    case '102':
+      return groupPhoto.value[1]
+    case '103':
+      return groupPhoto.value[2]
+    case '104':
+      return groupPhoto.value[3]
+    case '105':
+      return groupPhoto.value[4]
+    case '106':
+      return groupPhoto.value[5]
+    case '107':
+      return groupPhoto.value[6]
+
+    default:
+      return groupPhoto.value[0]
+  }
+}
 </script>
 
 <template>
@@ -619,9 +653,9 @@ const contentDom = ref(false)
         <div class="index-doctorTeam-t smallPageCon">
           <div class="index_title index_title_2">醫生團隊</div>
         </div>
-        <div class="index-doctorTeam-tab1 index-doctorTeam-con">
+        <!-- <div class="index-doctorTeam-tab1 index-doctorTeam-con">
           <AreaTab />
-        </div>
+        </div> -->
         <div class="index-doctorTeam-tab2 index-doctorTeam-con">
           <div
             class="index-doctorTeam-tab2-in"
@@ -645,7 +679,13 @@ const contentDom = ref(false)
             </div>
           </div>
         </div>
-        <div class="index-doctorTeam-lists index-doctorTeam-con">
+        <div class="group_photo" v-if="checkGroupPhoto()" v-loading="loading">
+          <img :src="checkGroupPhoto()" alt="" />
+        </div>
+        <div class="team_doctor_everybody">
+          <NewDoctor :id="checkId" />
+        </div>
+        <!-- <div class="index-doctorTeam-lists index-doctorTeam-con">
           <div class="pcLists">
             <section v-if="actDoctorListd.length < 7">
               <div
@@ -782,7 +822,6 @@ const contentDom = ref(false)
                       {{ doctorItem.newSkilled }}
                     </span>
                   </div>
-                  <!-- doctorItem.tags 为空判断    windowWidth < 767 == false  判断移动端增加margin -->
                   <div
                     class="detail-5"
                     v-if="doctorItem.tags.length > 0"
@@ -804,7 +843,7 @@ const contentDom = ref(false)
               </div>
             </Swiper-slide>
           </Swiper>
-        </div>
+        </div>  -->
       </div>
       <!-- 關於我們 -->
       <AboutUs />
@@ -1312,7 +1351,8 @@ const contentDom = ref(false)
       :showDialogBox="top < (height / 3) * 2 && bottom > height / 3"
     /> -->
     <PageNewNavbarSide v-if="windowWidth > 768" />
-    <PageNavbar v-else
+    <PageNavbar
+      v-else
       :showDialogBox="top < (height / 3) * 2 && bottom > height / 3"
     />
   </div>
@@ -1439,7 +1479,7 @@ svg:hover path {
     }
   }
   &-tab2 {
-    margin-top: 10px;
+    margin-top: 30px;
     &-in {
       width: 100%;
       display: flex;
@@ -1678,6 +1718,12 @@ svg:hover path {
   .index-doctorTeam-detail-swiper {
     // overflow: visible;
     padding-bottom: 40px;
+  }
+  .group_photo {
+    max-width: 860px;
+    margin: 62px auto 50px;
+  }
+  .team_doctor_everybody {
   }
 }
 //個案分享
@@ -2330,7 +2376,7 @@ svg:hover path {
       }
     }
     &-tab2 {
-      margin-top: 0.5208vw;
+      margin-top: 1.5208vw;
       &-in {
         & > div {
           padding: 0.2604vw 0;
@@ -2743,6 +2789,10 @@ svg:hover path {
           }
         }
       }
+    }
+    .group_photo {
+      max-width: 100%;
+      margin: 24px auto;
     }
   }
   //個案分享
