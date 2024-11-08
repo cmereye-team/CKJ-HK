@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { defineProps } from "vue";
+import { defineProps } from 'vue'
 defineProps({
   introduceData: {
     type: Object,
@@ -20,11 +20,17 @@ defineProps({
 <template>
   <div class="introduce bigPageCon">
     <div class="introduce-in">
-      <img :data-cfsrc="introduceData.pcImg" :srcset="`${introduceData.mbImg} 768w, ${introduceData.pcImg}`" :src="introduceData.pcImg" :alt="$t(introduceData.title)" :title="$t(introduceData.title)">
+      <img
+        :data-cfsrc="introduceData.pcImg"
+        :srcset="`${introduceData.mbImg} 768w, ${introduceData.pcImg}`"
+        :src="introduceData.pcImg"
+        :alt="$t(introduceData.title)"
+        :title="$t(introduceData.title)"
+      />
       <div class="introduce-in-content pageCon">
         <div class="introduce-in-content-in">
           <div>{{ $t(introduceData.title) }}</div>
-          <div>{{ $t(introduceData.content) }}</div>
+          <div v-html="$t(introduceData.content)"></div>
         </div>
       </div>
     </div>
@@ -33,13 +39,13 @@ defineProps({
 
 
 <style lang="scss" scoped>
-.introduce{
-  &-in{
+.introduce {
+  &-in {
     position: relative;
-    &>img{
+    & > img {
       width: 100%;
     }
-    &-content{
+    &-content {
       position: absolute;
       // width: 100%;
       height: 100%;
@@ -48,21 +54,21 @@ defineProps({
       transform: translateX(-50%);
       display: flex;
       align-items: center;
-      &-in{
+      &-in {
         width: calc(668 / 1450 * 100%);
-        &>div{
+        & > div {
           color: var(--textColor);
-          &:nth-of-type(1){
+          &:nth-of-type(1) {
             font-size: 50px;
             line-height: 130%;
             margin-bottom: calc(50 / 668 * 100%);
             font-weight: 600;
           }
-          &:nth-of-type(2){
+          &:nth-of-type(2) {
             font-size: 28px;
             line-height: 160%;
-            text-align: justify;
-            white-space: pre-wrap;
+            // text-align: justify;
+            // white-space: pre-wrap;
           }
         }
       }
@@ -70,17 +76,17 @@ defineProps({
   }
 }
 @media (min-width: 768px) and (max-width: 1800px) {
-  .introduce{
-    &-in{
-      &-content{
+  .introduce {
+    &-in {
+      &-content {
         width: 80%;
-        &-in{
+        &-in {
           width: calc(668 / 1450 * 100%);
-          &>div{
-            &:nth-of-type(1){
+          & > div {
+            &:nth-of-type(1) {
               font-size: 2.6vw;
             }
-            &:nth-of-type(2){
+            &:nth-of-type(2) {
               font-size: 1.6vw;
             }
           }
@@ -90,29 +96,33 @@ defineProps({
   }
 }
 @media screen and (max-width: 768px) {
-  .introduce{
+  .introduce {
     margin-top: 60px;
-    &-in{
-      &-content{
+    &-in {
+      &-content {
         position: initial;
         transform: none;
-        &-in{
+        &-in {
           width: 100%;
-          &>div{
+          & > div {
             padding: 0 30px;
-            &:nth-of-type(1){
+            &:nth-of-type(1) {
               font-size: 26px;
               line-height: 180%;
               margin-bottom: 10px;
             }
-            &:nth-of-type(2){
+            &:nth-of-type(2) {
               font-size: 16px;
               line-height: 200%;
+              letter-spacing: 1.6px;
             }
           }
         }
       }
     }
+  }
+  :deep(.pc) {
+    display: none;
   }
 }
 </style>

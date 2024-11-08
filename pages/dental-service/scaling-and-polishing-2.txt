@@ -48,9 +48,9 @@ const orthodonticsIntroduceData = {
 const introduceJY = {
   title: '洗牙服務',
   content:
-    '提供洗牙和深層洗牙服務，定期洗牙有效去除牙齒上的牙垢、牙菌膜和牙結石，更能預防牙周病或其他口腔問題。<br class="pc" /><br class="pc" />建議每半年至一年進行一次洗牙，為您的口腔健康護航。',
-  mbImg: 'https://static.cmereye.com/imgs/2024/11/e2060998e6c2c550.jpg',
-  pcImg: 'https://static.cmereye.com/imgs/2024/11/694b54ff0a7831fc.png',
+    '提供洗牙和深層洗牙服務，定期洗牙有效去除\n牙齒上的牙垢、牙菌膜和牙結石，更能預防牙\n周病或其他口腔問題。\n\n建議每半年至一年進行一次洗牙，為您的口腔\n健康護航。',
+  mbImg: 'https://static.cmereye.com/imgs/2023/10/6caab98f1d6e048f.jpg',
+  pcImg: 'https://static.cmereye.com/imgs/2024/02/dbe0ada69cd40f64.png',
 }
 
 const reasonData = {
@@ -207,7 +207,7 @@ const careData = {
   lists: [
     {
       img: 'https://static.cmereye.com/imgs/2023/10/9ee1140fe832c40d.png',
-      text: `避免過度<br class="pc" />清潔口腔`,
+      text: '避免過度清潔口腔',
     },
     {
       img: 'https://static.cmereye.com/imgs/2023/10/29723aa73549d385.png',
@@ -215,19 +215,19 @@ const careData = {
     },
     {
       img: 'https://static.cmereye.com/imgs/2023/10/fa97affc4ee443a6.png',
-      text: `避免吃冰冷、<br  class="pc"  />酸、甜的食物`,
+      text: '避免吃冰冷、酸、甜的食物',
     },
     {
       img: 'https://static.cmereye.com/imgs/2023/10/b00b6fbbd953800a.png',
-      text: `避免喝酒和<br  class="pc"  />吸煙`,
+      text: '避免喝酒和吸煙',
     },
     {
       img: 'https://static.cmereye.com/imgs/2023/10/b681fad6412d727b.png',
-      text: `使用防敏感<br class="pc" />牙膏`,
+      text: '使用防敏感牙膏',
     },
     {
       img: 'https://static.cmereye.com/imgs/2023/10/678fdab4c186e0d6.png',
-      text: `定期覆診檢查`,
+      text: '定期覆診檢查',
     },
   ],
 }
@@ -357,90 +357,10 @@ let windowWidth = ref(390)
 const getWindowWidth = () => {
   windowWidth.value = window.innerWidth
 }
-
-let Plant_brand_series_cur = ref(0)
-const plant_brand_series_ref = ref({
-  slideToLoop: (a) => {},
-  slidePrev: () => {},
-  slideNext: () => {},
-})
-const set_plant_brand_series_ref = (swiper: any) => {
-  plant_brand_series_ref.value = swiper
-}
-const on_plant_brand_series_change = (swiper: any) => {
-  // plant_brand_series_ref.value.slideToLoop(swiper.realIndex)
-  Plant_brand_series_cur.value = swiper.realIndex
-}
-const handle_lant_brand_series_tab = (_idx: number) => {
-  plant_brand_series_ref.value.slideToLoop(_idx)
-}
-
-const brand_btn = (_type: string) => {
-  plant_brand_series_ref.value[_type]()
-}
-const Plant_brand_series_data = [
-  {
-    id: '1101',
-    name: ['基礎專業', '洗牙'],
-    price: '88',
-    oldPrice: '180',
-    img: 'https://static.cmereye.com/imgs/2024/11/01fd99a1cf216221.png',
-    compare: [
-      'https://static.cmereye.com/static/ckj/imgs/svg/pc3star.svg',
-      'https://static.cmereye.com/static/ckj/imgs/svg/pc2star.svg',
-      'https://static.cmereye.com/static/ckj/imgs/svg/pc3star.svg',
-      'https://static.cmereye.com/static/ckj/imgs/svg/pc5star.svg',
-    ],
-    lists: [
-      '· 超聲波清除牙結石',
-      '· 有效預防牙周炎、細菌引起的牙齒疾病',
-      '· 有拋光處理',
-    ],
-  },
-  {
-    id: '1102',
-    name: ['菌斑導向專業洗牙', '(含鹽)'],
-    price: '168',
-    oldPrice: '180',
-    img: 'https://static.cmereye.com/imgs/2024/11/7d36488bc41e7ad6.png',
-    compare: [
-      'https://static.cmereye.com/static/ckj/imgs/svg/pc4star.svg',
-      'https://static.cmereye.com/static/ckj/imgs/svg/pc4star.svg',
-      'https://static.cmereye.com/static/ckj/imgs/svg/pc4star.svg',
-      'https://static.cmereye.com/static/ckj/imgs/svg/pc5star.svg',
-    ],
-    lists: [
-      '· 噴砂能深入清潔細小牙縫',
-      '· 菌斑導向能及早找出潛在隱患',
-      '· 減少一般超聲波洗牙引致的痛楚不適',
-      '· 有效清除牙齒上煙、茶、咖啡漬',
-    ],
-  },
-  {
-    id: '1103',
-    name: ['菌斑導向專業洗牙', '(無鹽)'],
-    price: '550',
-    oldPrice: '',
-    img: 'https://static.cmereye.com/imgs/2024/11/958f0c3e3acf223f.png',
-    compare: [
-      'https://static.cmereye.com/static/ckj/imgs/svg/pc5star.svg',
-      'https://static.cmereye.com/static/ckj/imgs/svg/pc5star.svg',
-      'https://static.cmereye.com/static/ckj/imgs/svg/pc5star.svg',
-      'https://static.cmereye.com/static/ckj/imgs/svg/pc4star.svg',
-    ],
-    lists: ['· 能減緩牙石積聚速度', '· 略帶薄荷清香，無鹽不帶咸味'],
-  },
-]
-
 onMounted(() => {
   getWindowWidth()
   window.addEventListener('resize', getWindowWidth)
 })
-
-const removeSurroundingParentheses = (str) => {
-  // 直接尝试移除括号，如果没有括号则不会改变原字符串
-  return str.replace(/^\((.*)\)$/, '$1')
-}
 </script>
 
 <template>
@@ -471,7 +391,7 @@ const removeSurroundingParentheses = (str) => {
             {{ reasonData.title }}
           </div>
         </div>
-        <!-- <div class="reason-lists">
+        <div class="reason-lists">
           <div
             v-for="(item, index) in reasonData.reasonLists"
             :key="index"
@@ -479,32 +399,12 @@ const removeSurroundingParentheses = (str) => {
           >
             <div class="image">
               <img :src="item.img" alt="" />
+              <!-- <div>
+                0{{index+1}}
+              </div> -->
             </div>
             <div class="text">
               {{ item.context }}
-            </div>
-          </div>
-        </div> -->
-        <div class="new-reason-lists">
-          <div class="bg_new_reason"></div>
-          <div class="item-list">
-            <div>
-              <img
-                src="https://static.cmereye.com/imgs/2024/11/7dc685808f0eef3b.png"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                src="https://static.cmereye.com/imgs/2024/11/bc74f8baed0214c8.png"
-                alt=""
-              />
-            </div>
-            <div>
-              <img
-                src="https://static.cmereye.com/imgs/2024/11/a883fc9ca408b1ec.png"
-                alt=""
-              />
             </div>
           </div>
         </div>
@@ -512,298 +412,327 @@ const removeSurroundingParentheses = (str) => {
       <div class="introduceJY">
         <ServiceIntroduceJY :introduceData="introduceJY" />
       </div>
-      <div class="Plant_brand_series" v-if="windowWidth > 768">
-        <div class="dentistryServices-title">
-          <div class="dentistryServices-title-in bb">洗牙技術及類別</div>
+      <div class="difference" v-if="windowWidth > 767">
+        <div class="dentistryServices-title difference-title">
+          <div class="dentistryServices-title-in bb difference-title-in">
+            {{ differenceData.title }}
+          </div>
         </div>
-        <div class="Plant_brand_series-tab" v-if="windowWidth > 768">
-          <span
-            :class="{ active: Plant_brand_series_cur === tabIndex }"
-            v-for="(tabItem, tabIndex) in Plant_brand_series_data"
-            :key="tabIndex"
-            @click="handle_lant_brand_series_tab(tabIndex)"
+        <div class="difference-tables">
+          <div
+            v-for="(differenceItem, differenceIndex) in differenceData.tables"
+            :key="differenceIndex"
+            class="difference-tables-item"
           >
-            <span
-              v-for="(tabspanitem, tabspanindex) in tabItem.name"
-              :key="tabspanindex"
-            >
-              {{ tabspanitem }}
-            </span>
-          </span>
-        </div>
-        <Swiper
-          :loop="true"
-          :modules="[Autoplay]"
-          :autoplay="{
-            delay: 3000,
-          }"
-          @swiper="set_plant_brand_series_ref"
-          @slideChange="on_plant_brand_series_change"
-        >
-          <Swiper-slide
-            v-for="(
-              plant_brand_series_item, plant_brand_series_index
-            ) in Plant_brand_series_data"
-            :key="plant_brand_series_index"
-          >
-            <div class="Plant_brand_series-content">
-              <div>
-                <div>
-                  <span>{{ plant_brand_series_item.name[0] }}</span>
-                  <span>{{
-                    removeSurroundingParentheses(
-                      plant_brand_series_item.name[1]
-                    )
-                  }}</span>
-                </div>
-                <div>
-                  <span v-if="plant_brand_series_item.oldPrice"
-                    >原價￥{{ plant_brand_series_item.oldPrice }}</span
-                  >
-                  <span v-else></span>
-                  <span><i>￥</i>{{ plant_brand_series_item.price }}</span>
-                </div>
-              </div>
-              <div>
-                <div class="Plant_brand_series-content-r">
-                  <div class="item_compare">
-                    <div>
-                      <div>潔淨度</div>
-                      <div>
-                        <img :src="plant_brand_series_item.compare[0]" alt="" />
-                      </div>
-                    </div>
-                    <div>
-                      <div>美白度</div>
-                      <div>
-                        <img :src="plant_brand_series_item.compare[1]" alt="" />
-                      </div>
-                    </div>
-                    <div>
-                      <div>舒適度</div>
-                      <div>
-                        <img :src="plant_brand_series_item.compare[2]" alt="" />
-                      </div>
-                    </div>
-                    <div>
-                      <div>性價比</div>
-                      <div>
-                        <img :src="plant_brand_series_item.compare[3]" alt="" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="Plant_brand_series-content-l">
-                  <img :src="plant_brand_series_item.img" alt="" />
-                </div>
-              </div>
-              <div>
-                <span
-                  v-for="(item, index) in plant_brand_series_item.lists"
-                  :key="index"
+            <div class="item-in">{{ differenceItem.a }}</div>
+            <div class="item-in">
+              <div v-if="differenceItem.b === 'n'" class="item-in-n">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
                 >
-                  {{ item }}
-                </span>
+                  <path
+                    d="M3 27L27 3"
+                    stroke="#FC1682"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M3 27L27 3"
+                    stroke="#4C4C4C"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M27 27L3 3"
+                    stroke="#FC1682"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                  />
+                  <path
+                    d="M27 27L3 3"
+                    stroke="#4C4C4C"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                  />
+                </svg>
               </div>
+              <div v-else-if="differenceItem.b === 'y'" class="item-in-y">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="37"
+                  height="29"
+                  viewBox="0 0 37 29"
+                  fill="none"
+                >
+                  <path
+                    d="M3 15L13.425 26L34 3"
+                    stroke="#4C4C4C"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div v-else>{{ differenceItem.b }}</div>
             </div>
-          </Swiper-slide>
-        </Swiper>
-        <div class="brand_btn">
-          <div class="brand_btn_left" @click="brand_btn('slidePrev')">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="107"
-              height="107"
-              viewBox="0 0 107 107"
-              fill="none"
-            >
-              <g filter="url(#filter0_d_1167_2367)">
-                <circle cx="51.5" cy="51.5" r="49.5" fill="white" />
-              </g>
-              <path
-                d="M59.0859 69.3037L38.999 51.4994L59.0859 33.695"
-                stroke="#FC1682"
-                stroke-width="10"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <defs>
-                <filter
-                  id="filter0_d_1167_2367"
-                  x="0"
-                  y="0"
-                  width="107"
-                  height="107"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB"
+            <div class="item-in">
+              <div v-if="differenceItem.c === 'n'" class="item-in-n">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
                 >
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
+                  <path
+                    d="M3 27L27 3"
+                    stroke="#FC1682"
+                    stroke-width="6"
+                    stroke-linecap="round"
                   />
-                  <feOffset dx="2" dy="2" />
-                  <feGaussianBlur stdDeviation="2" />
-                  <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 0.988235 0 0 0 0 0.0862745 0 0 0 0 0.509804 0 0 0 0.24 0"
+                  <path
+                    d="M3 27L27 3"
+                    stroke="#4C4C4C"
+                    stroke-width="6"
+                    stroke-linecap="round"
                   />
-                  <feBlend
-                    mode="normal"
-                    in2="BackgroundImageFix"
-                    result="effect1_dropShadow_1167_2367"
+                  <path
+                    d="M27 27L3 3"
+                    stroke="#FC1682"
+                    stroke-width="6"
+                    stroke-linecap="round"
                   />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="effect1_dropShadow_1167_2367"
-                    result="shape"
+                  <path
+                    d="M27 27L3 3"
+                    stroke="#4C4C4C"
+                    stroke-width="6"
+                    stroke-linecap="round"
                   />
-                </filter>
-              </defs>
-            </svg>
-          </div>
-          <div class="brand_btn_right" @click="brand_btn('slideNext')">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="107"
-              height="107"
-              viewBox="0 0 107 107"
-              fill="none"
-            >
-              <g filter="url(#filter0_d_1166_2259)">
-                <circle cx="51.5" cy="51.5" r="49.5" fill="white" />
-              </g>
-              <path
-                d="M43 31L65.6154 51.4878L43 73"
-                stroke="#FC1682"
-                stroke-width="9.69231"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-              <defs>
-                <filter
-                  id="filter0_d_1166_2259"
-                  x="0"
-                  y="0"
-                  width="107"
-                  height="107"
-                  filterUnits="userSpaceOnUse"
-                  color-interpolation-filters="sRGB"
+                </svg>
+              </div>
+              <div v-else-if="differenceItem.c === 'y'" class="item-in-y">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="37"
+                  height="29"
+                  viewBox="0 0 37 29"
+                  fill="none"
                 >
-                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                  <feColorMatrix
-                    in="SourceAlpha"
-                    type="matrix"
-                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                    result="hardAlpha"
+                  <path
+                    d="M3 15L13.425 26L34 3"
+                    stroke="#4C4C4C"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
                   />
-                  <feOffset dx="2" dy="2" />
-                  <feGaussianBlur stdDeviation="2" />
-                  <feComposite in2="hardAlpha" operator="out" />
-                  <feColorMatrix
-                    type="matrix"
-                    values="0 0 0 0 0.988235 0 0 0 0 0.0862745 0 0 0 0 0.509804 0 0 0 0.24 0"
+                </svg>
+              </div>
+              <div v-else>{{ differenceItem.c }}</div>
+            </div>
+            <div class="item-in">
+              <div v-if="differenceItem.d === 'n'" class="item-in-n">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                >
+                  <path
+                    d="M3 27L27 3"
+                    stroke="#FC1682"
+                    stroke-width="6"
+                    stroke-linecap="round"
                   />
-                  <feBlend
-                    mode="normal"
-                    in2="BackgroundImageFix"
-                    result="effect1_dropShadow_1166_2259"
+                  <path
+                    d="M3 27L27 3"
+                    stroke="#4C4C4C"
+                    stroke-width="6"
+                    stroke-linecap="round"
                   />
-                  <feBlend
-                    mode="normal"
-                    in="SourceGraphic"
-                    in2="effect1_dropShadow_1166_2259"
-                    result="shape"
+                  <path
+                    d="M27 27L3 3"
+                    stroke="#FC1682"
+                    stroke-width="6"
+                    stroke-linecap="round"
                   />
-                </filter>
-              </defs>
-            </svg>
-          </div>
-        </div>
-        <div class="bottom_info">
-          <div>
-            <span>把握限時優惠</span>
-            <span>現在就來預約我們的洗牙服務吧！</span>
-          </div>
-          <div class="charge-btn">
-            <PageAnimBtnTypeTwo :str="'預約檢查及諮詢'" />
+                  <path
+                    d="M27 27L3 3"
+                    stroke="#4C4C4C"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                  />
+                </svg>
+              </div>
+              <div v-else-if="differenceItem.d === 'y'" class="item-in-y">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="37"
+                  height="29"
+                  viewBox="0 0 37 29"
+                  fill="none"
+                >
+                  <path
+                    d="M3 15L13.425 26L34 3"
+                    stroke="#4C4C4C"
+                    stroke-width="6"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              </div>
+              <div v-else>{{ differenceItem.d }}</div>
+            </div>
           </div>
         </div>
       </div>
-      <div class="brand_mobile" v-if="windowWidth < 768">
-        <div class="dentistryServices-title">
-          <div class="dentistryServices-title-in bb">洗牙技術及類別</div>
-        </div>
-        <div class="brand_mobile_items">
-          <div class="mobile_item_lien">
-            <div
-              v-for="(item_mobile, index) in Plant_brand_series_data"
-              :key="index"
-            >
+      <div class="difference" v-else>
+        <div class="dentistryServices-title difference-title">
+          <div class="dentistryServices-title-in bb difference-title-in">
+            <!-- {{ differenceData.title }} -->
+            洗牙技術及類別
+          </div>
+          <div class="difference-content-list">
+            <div class="difference-content-list-in">
               <div>
                 <div>
-                  <span>{{ item_mobile.name[0] }}</span>
-                  <span>{{
-                    removeSurroundingParentheses(item_mobile.name[1])
-                  }}</span>
-                </div>
-                <div>
-                  <span v-if="item_mobile.oldPrice"
-                    >原價￥{{ item_mobile.oldPrice }}</span
-                  >
-                  <span v-else></span>
-                  <span><i>￥</i>{{ item_mobile.price }}</span>
-                </div>
-              </div>
-              <div>
-                <div>
+                  <div>基礎專業洗牙</div>
                   <div>
-                    <div>
-                      <div>潔淨度</div>
-                      <div>
-                        <img :src="item_mobile.compare[0]" alt="" />
-                      </div>
-                    </div>
-                    <div>
-                      <div>美白度</div>
-                      <div>
-                        <img :src="item_mobile.compare[1]" alt="" />
-                      </div>
-                    </div>
-                    <div>
-                      <div>舒適度</div>
-                      <div>
-                        <img :src="item_mobile.compare[2]" alt="" />
-                      </div>
-                    </div>
-                    <div>
-                      <div>性價比</div>
-                      <div>
-                        <img :src="item_mobile.compare[3]" alt="" />
-                      </div>
-                    </div>
+                    <span>原價 ¥180</span>
+                    <span>¥88</span>
                   </div>
                 </div>
-                <div>
-                  <img :src="item_mobile.img" alt="" />
-                </div>
+                <p>
+                  <span>潔淨度</span>
+                  <span
+                    ><img src="../../assets/images/3star.svg" alt="潔淨度"
+                  /></span>
+                </p>
+                <p>
+                  <span>美白度</span>
+                  <span
+                    ><img src="../../assets/images/2star.svg" alt="美白度"
+                  /></span>
+                </p>
+                <p>
+                  <span>舒適度</span>
+                  <span
+                    ><img src="../../assets/images/3star.svg" alt="舒適度"
+                  /></span>
+                </p>
+                <p>
+                  <span>性價比</span>
+                  <span
+                    ><img src="../../assets/images/5star.svg" alt="性價比"
+                  /></span>
+                </p>
+                <p>超聲波清除牙結石</p>
+                <p>有效預防牙周炎、細菌引起的牙齒疾病</p>
+                <p>有拋光處理</p>
               </div>
+              <div class="list-in-img">
+                <img
+                  src="https://static.cmereye.com/imgs/2024/07/0bb3823f371217d0.png"
+                  alt="基礎專業洗牙"
+                />
+              </div>
+            </div>
+            <div class="difference-content-list-in">
               <div>
-                <span v-for="(item, index) in item_mobile.lists" :key="index">
-                  {{ item }}
-                </span>
+                <div>
+                  <div>菌斑導向專業洗牙</div>
+                  <div>
+                    <span>原價 ¥350</span>
+                    <span>¥168</span>
+                  </div>
+                </div>
+                <p>
+                  <span>潔淨度</span>
+                  <span
+                    ><img src="../../assets/images/4star.svg" alt="潔淨度"
+                  /></span>
+                </p>
+                <p>
+                  <span>美白度</span>
+                  <span
+                    ><img src="../../assets/images/4star.svg" alt="美白度"
+                  /></span>
+                </p>
+                <p>
+                  <span>舒適度</span>
+                  <span
+                    ><img src="../../assets/images/4star.svg" alt="舒適度"
+                  /></span>
+                </p>
+                <p>
+                  <span>性價比</span>
+                  <span
+                    ><img src="../../assets/images/5star.svg" alt="性價比"
+                  /></span>
+                </p>
+                <p>噴砂能深入清潔細小牙縫</p>
+                <p>菌斑導向能及早找出潛在隱患</p>
+                <p>減少一般超聲波洗牙引致的痛楚不適</p>
+                <p>有效清除牙齒上煙、茶、咖啡漬</p>
+              </div>
+              <div class="list-in-img">
+                <img
+                  src="https://static.cmereye.com/imgs/2024/07/02f4a9bb5e2d46a4.png"
+                  alt="菌斑導向專業洗牙 "
+                />
+              </div>
+            </div>
+            <div class="difference-content-list-in">
+              <div>
+                <div>
+                  <div>菌斑導向專業洗牙</div>
+                  <div>
+                    <span></span>
+                    <span>¥550</span>
+                  </div>
+                </div>
+                <p>
+                  <span>潔淨度</span>
+                  <span
+                    ><img src="../../assets/images/5star.svg" alt="潔淨度"
+                  /></span>
+                </p>
+                <p>
+                  <span>美白度</span>
+                  <span
+                    ><img src="../../assets/images/5star.svg" alt="美白度"
+                  /></span>
+                </p>
+                <p>
+                  <span>舒適度</span>
+                  <span
+                    ><img src="../../assets/images/5star.svg" alt="舒適度"
+                  /></span>
+                </p>
+                <p>
+                  <span>性價比</span>
+                  <span
+                    ><img src="../../assets/images/4star.svg" alt="性價比"
+                  /></span>
+                </p>
+                <p>能減緩牙石積聚速度</p>
+                <p>略帶薄荷清香，無鹽不帶咸味</p>
+              </div>
+              <div class="list-in-img">
+                <img
+                  src="https://static.cmereye.com/imgs/2024/07/66502bcf0c7e2de2.png"
+                  alt="菌斑導向專業洗牙 "
+                />
               </div>
             </div>
           </div>
-        </div>
-        <div class="bottom_info">
-          <div>
+          <div class="difference-title-three-in">
             <span>把握限時優惠</span>
-            <span>現在就來預約我們的洗牙服務吧！</span>
+            <span>現在就來預約我們的洗牙服務吧</span>
           </div>
           <div class="charge-btn">
             <PageAnimBtnTypeTwo :str="'預約檢查及諮詢'" />
@@ -825,23 +754,15 @@ const removeSurroundingParentheses = (str) => {
             >
               <div class="step-lists-in-l">
                 <div class="title">
-                  <div>
-                    <img
-                      src="https://static.cmereye.com/imgs/2024/11/3b0a5e9326c68638.png"
-                      alt=""
-                    />
-                  </div>
-                  <div>0{{ stepIndex + 1 }}</div>
+                  <img src="@/assets/images/icon_13.png" alt="" />
+                  {{ stepItem.title }}
                 </div>
                 <div class="image"><img :src="stepItem.img" alt="" /></div>
                 <div class="name">{{ stepItem.name }}</div>
                 <div class="context">{{ stepItem.context }}</div>
               </div>
               <div class="step-lists-in-r">
-                <img
-                  src="https://static.cmereye.com/imgs/2024/11/5e6a778026dfcb28.png"
-                  alt=""
-                />
+                <img src="@/assets/images/icon_12.png" alt="" />
               </div>
             </div>
           </div>
@@ -879,7 +800,7 @@ const removeSurroundingParentheses = (str) => {
           </div>
         </div>
       </div>
-      <div class="charge" style="display: none !important">
+      <div class="charge" v-if="windowWidth > 767">
         <div class="dentistryServices-title charge-title">
           <div class="dentistryServices-title-in bb charge-title-in">
             {{ chargeData.title }}
@@ -1027,13 +948,13 @@ const removeSurroundingParentheses = (str) => {
                   <img :src="careItem.img" :alt="careItem.text" />
                 </div>
               </div>
-              <div class="text" v-html="careItem.text"></div>
+              <div class="text">{{ careItem.text }}</div>
             </div>
           </div>
         </div>
       </div>
-      <ServiceProblem :problem-data="problemData" />
       <serviceCard />
+      <ServiceProblem :problem-data="problemData" />
       <NewAddress />
       <ContactForm-new2 />
     </div>
@@ -1089,7 +1010,7 @@ const removeSurroundingParentheses = (str) => {
   margin-top: 140px;
 }
 .reason {
-  margin-top: 20px;
+  margin-top: 188px;
   &-lists {
     width: 100%;
     max-width: 1656px;
@@ -1132,302 +1053,57 @@ const removeSurroundingParentheses = (str) => {
     }
   }
 }
-.new-reason-lists {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  margin: 55px auto 0;
-  .bg_new_reason {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 725.458px;
-    height: 725.458px;
-    flex-shrink: 0;
-    border-radius: var(--Count, 725.458px);
-    border: var(--Count, 138px) solid var(--Theme-Color, #fc1682);
-    opacity: 0.3;
-  }
-  .item-list {
-    display: grid;
-    justify-items: center;
-    grid-template-columns: repeat(2, 1fr);
-    z-index: 10;
-    gap: 0 180px;
-    position: relative;
-    width: fit-content;
-    & > div:nth-child(1) {
-      grid-column: 1 / 3;
-    }
-    & > div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      width: fit-content;
-    }
-  }
-}
-.Plant_brand_series {
-  margin-top: 80px;
-  position: relative;
-  & > div {
-    align-items: center;
-  }
-  :deep(.swiper) {
-    background: linear-gradient(
-      to bottom,
-      transparent 0%,
-      #fff5f4 12%,
-      #fff5f4 78%,
-      transparent 100%
-    );
-    .swiper-slide:nth-child(2),
-    .swiper-slide:nth-child(3) {
-      .Plant_brand_series-content {
-        & > div:nth-child(1) {
-          & > div:nth-child(1) {
-            position: relative;
-            & > span:nth-child(2) {
-              background: #00aeff !important;
-              position: absolute;
-              width: 80px;
-              height: 80px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              border-radius: 50%;
-              border: 5px solid #b9d9fc;
-              color: var(--White, #fff);
-              text-align: center;
-              font-family: var(--indexFontFamily);
-              font-size: 28px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: 160%; /* 44.8px */
-              letter-spacing: 2.8px;
-              right: -10%;
-              top: 50%;
-              transform: translateY(-50%);
-            }
-          }
-        }
-      }
-    }
-    .swiper-slide:nth-child(3) {
-      .Plant_brand_series-content {
-        & > div:nth-child(1) {
-          & > div:nth-child(1) {
-            position: relative;
-            & > span:nth-child(2) {
-              background: #f90 !important;
-              position: absolute;
-              width: 80px;
-              height: 80px;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              border-radius: 50%;
-              border: 5px solid #ffcd81;
-              color: var(--White, #fff);
-              text-align: center;
-              font-family: var(--indexFontFamily);
-              font-size: 28px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: 160%; /* 44.8px */
-              letter-spacing: 2.8px;
-              right: -10%;
-              top: 50%;
-              transform: translateY(-50%);
-            }
-          }
-        }
-      }
-    }
-  }
-  &-tab {
+.difference {
+  margin-top: 188px;
+  &-tables {
     width: 100%;
-    max-width: 864px;
-    margin: 30px auto;
-    display: flex;
-    & > span {
-      flex: 1;
-      color: var(--indexColor1);
-      font-size: 22px;
-      border-top: 2px solid var(--indexColor1);
-      border-bottom: 2px solid var(--indexColor1);
-      border-left: 2px solid var(--indexColor1);
-      padding: 7px 20px;
-      width: fit-content;
-      white-space: nowrap;
-      text-align: center;
-      cursor: pointer;
-      transition: all 0.3s;
-      &:first-child {
-        border-radius: 5px 0 0 5px;
+    max-width: 1244px;
+    margin: 54px auto 0;
+    border-radius: 60px;
+    overflow: hidden;
+    &-item {
+      display: flex;
+      width: 100%;
+      height: 92px;
+      margin-bottom: 8px;
+      .item-in {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: var(--indexColor2);
+        color: #4d4d4d;
+        font-size: 20px;
+        font-weight: 600;
+        &:nth-of-type(1) {
+          color: var(--indexColor);
+          font-weight: 900;
+        }
+        &:nth-of-type(3) {
+          font-size: 28px;
+          font-weight: 900;
+          background: #fdd3e3;
+        }
+        &:not(:last-child) {
+          margin-right: 8px;
+        }
+      }
+      &:nth-of-type(1) {
+        height: 70px;
+        margin-bottom: 0;
+        .item-in {
+          background: var(--indexColor);
+          color: #fff;
+          font-size: 28px;
+          &:nth-of-type(3) {
+            font-size: 34px;
+            background: var(--indexColor1);
+          }
+        }
       }
       &:last-child {
-        border-radius: 0 5px 5px 0;
-        border-right: 2px solid var(--indexColor1);
+        margin-bottom: 0;
       }
-      &:hover,
-      &.active {
-        background: var(--indexColor1);
-        color: #fff;
-      }
-    }
-  }
-  .brand_btn {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    display: flex;
-    z-index: 10;
-    justify-content: space-around;
-    .brand_btn_left {
-      position: absolute;
-      left: calc((100% - 562px - 495px) / 2);
-      top: 25%;
-      cursor: pointer;
-      z-index: 2;
-    }
-    .brand_btn_right {
-      position: absolute;
-      right: calc((100% - 562px - 495px) / 2);
-      top: 25%;
-      cursor: pointer;
-      z-index: 2;
-    }
-  }
-  .bottom_info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    & > div:nth-child(1) {
-      display: flex;
-      flex-direction: column;
-      color: var(--Theme-Color, #fc1682);
-      text-align: center;
-      font-family: FakePearl;
-      font-size: 30px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 160%; /* 48px */
-      letter-spacing: 3px;
-    }
-  }
-  &-content {
-    width: 100%;
-    max-width: 625px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    padding: 20px 0;
-    & > div:nth-child(1) {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      & > div:nth-child(1) {
-        border-radius: 40px;
-        background: var(--Theme-Color, #fc1682);
-        color: var(--White, #fff);
-        font-family: FakePearl;
-        font-size: 28px;
-        font-style: normal;
-        font-weight: 500;
-        line-height: 160%; /* 44.8px */
-        box-sizing: border-box;
-        padding: 5px 60px;
-      }
-      & > div:nth-child(2) {
-        display: flex;
-        align-items: center;
-        & > span:nth-child(1) {
-          position: relative;
-          color: var(--Grey-Deep, #4d4d4d);
-          text-align: center;
-          font-family: var(--indexFontFamily);
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 160%; /* 32px */
-        }
-        & > span:nth-child(1)::before {
-          content: '';
-          position: absolute;
-          width: 100%;
-          display: inline-block;
-          height: 0.7px;
-          background: #4d4d4d;
-          transform: rotate(-7deg) translateY(-50%);
-          top: 50%;
-        }
-        & > span:nth-child(2) {
-          color: var(--Theme-Color, #fc1682);
-          font-family: var(--indexFontFamily);
-          font-size: 36px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 160%;
-          margin-left: 18px;
-          & > i {
-            color: var(--Theme-Color, #fc1682);
-            font-family: var(--indexFontFamily);
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 160%; /* 44.8px */
-            position: relative;
-            bottom: 2px;
-          }
-        }
-      }
-    }
-    & > div:nth-child(2) {
-      margin-top: 30px;
-      display: flex;
-      justify-content: center;
-      gap: 0 65px;
-      // flex-direction: column;
-      color: var(--Grey-Deep, #4d4d4d);
-      font-family: var(--indexFontFamily);
-      font-size: 26px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 160%; /* 41.6px */
-      letter-spacing: 2.6px;
-      .item_compare {
-        margin-top: 14px;
-        & > div {
-          margin-bottom: 10px;
-          display: flex;
-          align-items: center;
-          gap: 0 12px;
-          color: var(--Theme-Color, #fc1682);
-          font-family: var(--indexFontFamily);
-          font-size: 26px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 160%; /* 41.6px */
-          letter-spacing: 2.6px;
-        }
-      }
-    }
-    & > div:nth-child(3) {
-      display: flex;
-      flex-direction: column;
-      color: var(--Grey-Deep, #4d4d4d);
-      font-family: var(--indexFontFamily);
-      font-size: 26px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 160%; /* 41.6px */
-      letter-spacing: 2.6px;
-      margin: 10px 0;
     }
   }
 }
@@ -1576,13 +1252,10 @@ const removeSurroundingParentheses = (str) => {
       margin-bottom: 92px;
       padding: 0 calc((61 / (1444 + 122)) * 100%);
       width: calc(100% / 3);
-      position: relative;
-      z-index: 5;
       &:nth-of-type(4),
       &:nth-of-type(5) {
         margin-bottom: 0;
       }
-      &:nth-of-type(3),
       &:nth-of-type(6) {
         .step-lists-in-l {
           .image {
@@ -1598,33 +1271,16 @@ const removeSurroundingParentheses = (str) => {
         height: 100%;
         display: flex;
         flex-direction: column;
-        position: relative;
         .title {
-          z-index: 5;
-          position: absolute;
-          left: -8px;
-          top: -8px;
-          & > div:nth-child(1) {
-            position: relative;
-            width: 66px;
-            height: 66px;
-            img {
-              width: 100%;
-              height: 100%;
-            }
-          }
-          & > div:nth-child(2) {
-            color: var(--White, #fff);
-            text-align: center;
-            font-family: var(--indexFontFamily);
-            font-size: 35px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 160%; /* 56px */
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
+          display: flex;
+          align-items: center;
+          font-size: 35px;
+          font-weight: 700;
+          margin-bottom: 15px;
+          color: #4d4d4d;
+          img {
+            height: auto;
+            margin-right: 15px;
           }
         }
         .image {
@@ -1637,41 +1293,30 @@ const removeSurroundingParentheses = (str) => {
           &::after {
             content: '';
             position: absolute;
-            right: -52.5%;
+            right: -17%;
             top: 50%;
-            transform: translate(-50%, -50%);
-            background: url(https://static.cmereye.com/imgs/2024/11/5e6a778026dfcb28.png);
+            transform: translateY(-50%);
+            background: url(@/assets/images/icon_12.png);
             background-size: 100% 100%;
-            width: 148px;
-            height: 50px;
-            z-index: -1;
+            width: 16px;
+            height: 30px;
           }
         }
         .name {
-          color: var(--Theme-Color, #fc1682);
-          font-family: var(--indexFontFamily);
-          font-size: 28px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 160%; /* 44.8px */
-          margin-top: 16px;
-          margin-bottom: 8px;
-          padding: 0;
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-          background: transparent;
+          color: #fff;
+          font-size: 20px;
+          font-weight: 700;
+          background: var(--indexColor1);
+          margin-top: 24px;
+          margin-bottom: 15px;
+          padding: 8px 15px;
+          clip-path: polygon(0 0, 80% 0, 85% 100%, 0 100%);
         }
         .context {
           font-size: 20px;
           font-weight: 700;
           color: #4d4d4d;
-          padding: 0;
-          color: var(--Grey-Deep, #4d4d4d);
-          font-family: 'Noto Sans HK';
-          font-size: 20px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 160%; /* 32px */
-          letter-spacing: 4px;
+          padding: 0 15px;
         }
       }
       &-r {
@@ -1721,33 +1366,21 @@ const removeSurroundingParentheses = (str) => {
   }
 }
 .care {
-  margin-top: 30px;
+  margin-top: 206px;
   padding-bottom: 108px;
   &-lists {
-    // display: flex;
-    // flex-wrap: wrap;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 50px 89px;
+    display: flex;
+    flex-wrap: wrap;
     width: 100%;
     max-width: 819px;
     margin: 54px auto 0;
     &-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 100%;
+      width: calc(100% / 3);
       & > div {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
         .image {
           width: 100%;
           position: relative;
-          // padding: 0 calc((89px / 273px) * 100% / 2);
-          padding: 0;
-          max-width: 184px;
+          padding: 0 calc((89px / 273px) * 100% / 2);
           &-in {
             width: 100%;
             height: 0;
@@ -1767,20 +1400,14 @@ const removeSurroundingParentheses = (str) => {
           }
         }
         .text {
-          color: var(--Grey-Deep, #4d4d4d);
           text-align: center;
-          font-family: var(--indexFontFamily);
-          font-size: 22px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 160%; /* 35.2px */
-          :deep(.pc) {
-            display: none;
-          }
+          font-size: 24px;
+          font-weight: 600;
+          white-space: nowrap;
         }
       }
       &:nth-of-type(n + 4) {
-        margin-top: 0;
+        margin-top: 60px;
       }
       &:nth-of-type(2n + 2) {
         & > div {
@@ -1794,17 +1421,16 @@ const removeSurroundingParentheses = (str) => {
     }
   }
 }
-
 .Medical_sterilization_equipment {
   // background: ;
-  // background: linear-gradient(
-  //   90deg,
-  //   rgba(255, 241, 240, 0) 0%,
-  //   rgba(255, 241, 240, 0.7) 12.5%,
-  //   rgba(255, 241, 240, 0.7) 81.99%,
-  //   rgba(255, 241, 240, 0) 100%
-  // );
-  margin-top: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 241, 240, 0) 0%,
+    rgba(255, 241, 240, 0.7) 12.5%,
+    rgba(255, 241, 240, 0.7) 81.99%,
+    rgba(255, 241, 240, 0) 100%
+  );
+  margin-top: 140px;
   padding: 50px 0 10px;
   &-in {
     margin-top: 60px;
@@ -1866,9 +1492,6 @@ const removeSurroundingParentheses = (str) => {
       }
     }
   }
-}
-:deep(.problem) {
-  margin-top: 0;
 }
 // @media (min-width: 768px) and (max-width: 1300px) {
 //   .step {
@@ -1964,6 +1587,36 @@ const removeSurroundingParentheses = (str) => {
       }
     }
   }
+  .difference {
+    margin-top: 9.7917vw;
+    &-tables {
+      max-width: 64.7917vw;
+      margin: 2.8125vw auto 0;
+      border-radius: 3.125vw;
+      &-item {
+        height: 4.7917vw;
+        margin-bottom: 0.4167vw;
+        .item-in {
+          font-size: 1.0417vw;
+          &:nth-of-type(3) {
+            font-size: 1.4583vw;
+          }
+          &:not(:last-child) {
+            margin-right: 0.4167vw;
+          }
+        }
+        &:nth-of-type(1) {
+          height: 3.6458vw;
+          .item-in {
+            font-size: 1.4583vw;
+            &:nth-of-type(3) {
+              font-size: 1.7708vw;
+            }
+          }
+        }
+      }
+    }
+  }
   .step {
     padding: 3.1771vw 0 5.1563vw;
     margin-top: 7.2917vw;
@@ -1989,16 +1642,8 @@ const removeSurroundingParentheses = (str) => {
               border-radius: 1.5625vw;
             }
             &::after {
-              content: '';
-              position: absolute;
-              left: 115%;
-              top: 50%;
-              transform: translate(-50%);
-              background: url(https://static.cmereye.com/imgs/2024/11/5e6a778026dfcb28.png);
-              background-size: 100% 100%;
-              width: 148px;
-              height: 50px;
-              z-index: -1;
+              width: 0.8333vw;
+              height: 1.5625vw;
             }
           }
           .name {
@@ -2156,117 +1801,9 @@ const removeSurroundingParentheses = (str) => {
       }
     }
   }
-  .Plant_brand_series {
-    margin-top: 80px;
-    position: relative;
-    & > div {
-      align-items: center;
-    }
-    &-tab {
-      width: 100%;
-      max-width: 864px;
-      margin: 30px auto;
-      display: flex;
-      & > span {
-        flex: 1;
-        color: var(--indexColor1);
-        font-size: 22px;
-        border-top: 2px solid var(--indexColor1);
-        border-bottom: 2px solid var(--indexColor1);
-        border-left: 2px solid var(--indexColor1);
-        padding: 7px 0;
-        text-align: center;
-        cursor: pointer;
-        transition: all 0.3s;
-        &:first-child {
-          border-radius: 5px 0 0 5px;
-        }
-        &:last-child {
-          border-radius: 0 5px 5px 0;
-          border-right: 2px solid var(--indexColor1);
-        }
-        &:hover,
-        &.active {
-          background: var(--indexColor1);
-          color: #fff;
-        }
-      }
-    }
-    .brand_btn {
-      position: absolute;
-      top: 55%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 100%;
-      display: flex;
-      z-index: 10;
-      justify-content: space-around;
-      .brand_btn_left {
-        position: absolute;
-        left: calc((100% - 562px - 495px) / 2);
-        top: 25%;
-        cursor: pointer;
-        z-index: 2;
-      }
-      .brand_btn_right {
-        position: absolute;
-        right: calc((100% - 562px - 495px) / 2);
-        top: 25%;
-        cursor: pointer;
-        z-index: 2;
-      }
-    }
-    &-content {
-      width: 100%;
-      max-width: 700px;
-      margin: 0 auto;
-      display: flex;
-      &-l {
-        width: calc(300 / 700 * 100%);
-        margin-right: calc(30 / 695 * 100%);
-        img {
-          width: 100%;
-        }
-      }
-      &-r {
-        flex: 1;
-        & > div {
-          & > img {
-            max-width: 100%;
-          }
-          &:nth-of-type(2) {
-            width: 70%;
-            color: #fff;
-            background: var(--indexColor1);
-            font-size: 30px;
-            line-height: 160%;
-            padding-left: 17px;
-            clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
-            margin: 10px 0;
-          }
-          &:nth-of-type(3) {
-            display: flex;
-            flex-direction: column;
-            span {
-              font-size: 26px;
-              line-height: 1.6;
-              &::before {
-                content: '·';
-                display: inline-block;
-                margin-right: 10px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
 }
 
 @media screen and (max-width: 768px) {
-  :deep(.problem) {
-    margin-top: 45px;
-  }
   :deep(.header-content) {
     .explain_box_mobile {
       margin-right: auto;
@@ -2336,48 +1873,6 @@ const removeSurroundingParentheses = (str) => {
         }
         &:not(:last-child) {
           margin-bottom: 53px;
-        }
-      }
-    }
-  }
-  .new-reason-lists {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    margin: 55px auto 0;
-    .bg_new_reason {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      width: 231.743px;
-      height: 231.743px;
-      flex-shrink: 0;
-      border-radius: var(--Count, 725.458px);
-      border: var(--Count, 38px) solid var(--Theme-Color, #fc1682);
-      opacity: 0.3;
-    }
-    .item-list {
-      display: grid;
-      justify-items: center;
-      grid-template-columns: repeat(2, 1fr);
-      z-index: 10;
-      gap: 0 60px;
-      position: relative;
-      width: fit-content;
-      & > div:nth-child(1) {
-        grid-column: 1 / 3;
-      }
-      & > div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: fit-content;
-        width: 126.608px;
-        height: 127.009px;
-        & > img {
-          width: 100%;
-          height: 100%;
         }
       }
     }
@@ -2492,6 +1987,257 @@ const removeSurroundingParentheses = (str) => {
       }
     }
   }
+  .difference {
+    margin-top: 80px;
+    &-title {
+      &-in {
+        font-size: 26px;
+      }
+    }
+    &-tables {
+      width: auto;
+      margin: 28px 30px 0;
+      border-radius: 20px;
+      &-item {
+        height: 75px;
+        margin-bottom: 2px;
+        .item-in {
+          font-size: 15px;
+          &-n {
+            transform: scale(0.5);
+          }
+          &-y {
+            transform: scale(0.5);
+          }
+          &:nth-of-type(1) {
+            max-width: calc(25% - 4px);
+            box-sizing: border-box;
+            text-align: center;
+          }
+          &:nth-of-type(3) {
+            font-size: 18px;
+          }
+          &:not(:last-child) {
+            margin-right: 2px;
+          }
+        }
+        &:nth-of-type(1) {
+          height: 62px;
+          margin-bottom: 0;
+          .item-in {
+            font-size: 16px;
+            padding: 0 17px;
+            line-height: 1.2;
+            text-align: center;
+            &:nth-of-type(3) {
+              font-size: 20px;
+            }
+          }
+        }
+        &:nth-of-type(2),
+        &:nth-of-type(5),
+        &:nth-of-type(7) {
+          .item-in {
+            &:nth-of-type(1) {
+              padding: 0 20px;
+            }
+          }
+        }
+        &:nth-of-type(3),
+        &:nth-of-type(4) {
+          .item-in {
+            &:nth-of-type(1) {
+              padding: 0 10px;
+            }
+          }
+        }
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+    :deep(.charge-btn) {
+      span {
+        letter-spacing: 5.6px;
+      }
+    }
+  }
+  .difference-content-list {
+    margin: 25px 0 0;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 24px 0;
+    & > div {
+      position: relative;
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 10.5px;
+          & > div:nth-child(1) {
+            position: relative;
+            border-radius: var(--Count, 0px) 20px 20px var(--Count, 0px);
+            background: var(--Theme-Color, #fc1682);
+            box-sizing: border-box;
+            padding: 5px 20px 5px 29px;
+            color: var(--White, #fff);
+            text-align: center;
+            font-family: FakePearl;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 130%; /* 20.8px */
+          }
+          & > div:nth-child(1)::after {
+            content: '';
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: -40px;
+          }
+          & > div:nth-child(2) {
+            padding-right: 28px;
+            & > span:nth-child(1) {
+              color: var(--Grey-Deep, #4d4d4d);
+              text-align: center;
+              font-family: FakePearl;
+              font-size: 9px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 160%; /* 14.4px */
+              position: relative;
+            }
+            & > span:nth-child(1)::before {
+              content: '';
+              display: inline-block;
+              width: 100%;
+              height: 1px;
+              background: #4d4d4d;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%) rotate(-8deg);
+            }
+            & > span:nth-child(2) {
+              color: var(--Theme-Color, #fc1682);
+              font-family: FakePearl;
+              font-size: 26px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 160%;
+              margin-left: 4px;
+              position: relative;
+              z-index: 3;
+            }
+          }
+          & > div:nth-child(2)::before {
+            content: '';
+            display: inline-block;
+            width: 77px;
+            height: 10px;
+            border-radius: 4px var(--Count, 0px) var(--Count, 0px) 4px;
+            background: var(--Skin, #fff1f0);
+            position: absolute;
+            right: 0;
+            top: 25px;
+            z-index: 1;
+          }
+        }
+        & > p:nth-child(2),
+        & > p:nth-child(3),
+        & > p:nth-child(4),
+        & > p:nth-child(5) {
+          display: flex;
+          align-items: center;
+          gap: 0 7px;
+          padding-left: 30px;
+          & > span:nth-child(1) {
+            color: var(--Theme-Color, #fc1682);
+            font-family: FakePearl;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 130%; /* 20.8px */
+          }
+        }
+        & > p:nth-child(6) {
+          margin-top: 10px;
+        }
+        & > p:nth-child(6),
+        & > p:nth-child(7),
+        & > p:nth-child(8),
+        & > p:nth-child(9) {
+          color: var(--Grey-Deep, #4d4d4d);
+          font-family: FakePearl;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 160%; /* 24px */
+          letter-spacing: 1.5px;
+          position: relative;
+          padding-left: 30px;
+        }
+        & > p:nth-child(6)::before,
+        & > p:nth-child(7)::before,
+        & > p:nth-child(8)::before,
+        & > p:nth-child(9)::before {
+          content: '';
+          display: inline-block;
+          position: absolute;
+          width: 6px;
+          height: 6px;
+          background: #4c4c4c;
+          border-radius: 50%;
+          top: 50%;
+          left: 20px;
+          transform: translate(0px, -3px);
+        }
+      }
+      & > div:last-child {
+        position: absolute;
+        top: 40px;
+        right: 30px;
+      }
+    }
+    & > div:nth-child(2) {
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          & > div:nth-child(1)::after {
+            content: '';
+            background: url('../../assets/images/blueTag.svg') no-repeat;
+            background-size: 100%;
+          }
+        }
+      }
+    }
+    & > div:nth-child(3) {
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          & > div:nth-child(1)::after {
+            background: url('../../assets/images/orangeTag.svg') no-repeat;
+            background-size: 100%;
+          }
+        }
+      }
+    }
+  }
+  .difference-title-three-in {
+    margin: 25px 0 15px;
+    display: flex;
+    flex-direction: column;
+    color: var(--Theme-Color, #fc1682);
+    text-align: center;
+    font-family: FakePearl;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 160%; /* 32px */
+  }
   .charge {
     margin-top: 40px;
     &-title {
@@ -2592,40 +2338,41 @@ const removeSurroundingParentheses = (str) => {
   .care {
     margin-top: 80px;
     padding-bottom: 0px;
-    max-width: 100%;
     &-title {
       &-in {
         font-size: 26px;
       }
     }
     &-lists {
-      // width: auto;
-      // margin: 34px 15px 0;
-      gap: 30px 10px;
-      box-sizing: border-box;
-      padding: 0 30px;
+      width: auto;
+      margin: 34px 15px 0;
       &-item {
-        width: 100%;
+        width: calc(100% / 3);
         & > div {
-          width: 100%;
           .image {
-            padding: 0;
+            padding: 0 5px;
           }
           .text {
-            // white-space: pre-wrap;
-            padding: 0 !important;
-            color: var(--Grey-Deep, #4d4d4d);
-            text-align: center;
-            font-family: var(--indexFontFamily);
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 130%; /* 20.8px */
-            :deep(.pc) {
-              display: flex;
-              flex-direction: column;
+            white-space: pre-wrap;
+            font-size: 14px;
+          }
+        }
+        &:nth-of-type(1) {
+          & > div {
+            .text {
+              padding: 0 30px;
             }
           }
+        }
+        &:nth-of-type(3) {
+          & > div {
+            .text {
+              padding: 0 15px;
+            }
+          }
+        }
+        &:nth-of-type(n + 4) {
+          margin-top: 30px;
         }
       }
     }
@@ -2780,272 +2527,6 @@ const removeSurroundingParentheses = (str) => {
   }
   .equipment-two {
     background: var(--Blue-Deep, #00aeff);
-  }
-  .Plant_brand_series {
-    margin-top: 30px;
-    display: none !important;
-    &-tab {
-      padding: 0 30px;
-      & > span {
-        font-size: 15px;
-        line-height: 160%;
-        & > span {
-          display: block;
-        }
-        &:nth-of-type(1) {
-          flex: 1;
-        }
-        &:nth-of-type(2) {
-          flex: 1.2;
-        }
-        &:nth-of-type(3) {
-          flex: 1.4;
-        }
-        &:nth-of-type(4) {
-          flex: 1;
-        }
-        &:nth-of-type(5) {
-          flex: 1.2;
-        }
-        &:hover {
-          background: none;
-          color: var(--indexColor1);
-        }
-        &.active {
-          background: var(--indexColor1);
-          color: #fff;
-        }
-      }
-    }
-    &-content {
-      padding: 0 30px;
-      &-r {
-        & > div {
-          & > img {
-            max-width: 80%;
-          }
-          &:nth-of-type(2) {
-            width: 90%;
-            font-size: 15px;
-            padding: 2px 0 2px 15px;
-            margin: 5px 0;
-            clip-path: polygon(0 0, 87% 0, 100% 100%, 0 100%);
-          }
-          &:nth-of-type(3) {
-            span {
-              font-size: 12px;
-              &::before {
-                margin-right: 6px;
-                font-size: 20px;
-                line-height: 100%;
-                vertical-align: middle;
-                margin-top: -2px;
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  .brand_mobile {
-    margin: 45px auto 55px;
-  }
-  .mobile_item_lien {
-    margin-top: 25px;
-    display: flex;
-    flex-direction: column;
-    & > div {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 35px;
-      & > div {
-        display: flex;
-        justify-content: space-between;
-      }
-      & > div:nth-child(1) {
-        display: flex;
-        align-items: center;
-        & > div:nth-child(1) {
-          border-radius: var(--Count, 0px) 20px 20px var(--Count, 0px);
-          background: var(--Theme-Color, #fc1682);
-          color: var(--White, #fff);
-          text-align: center;
-          font-family: var(--indexFontFamily);
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 500;
-          line-height: 130%; /* 20.8px */
-          box-sizing: border-box;
-          padding: 5px 20px 5px 30px;
-          position: relative;
-        }
-        & > div:nth-child(2) {
-          position: relative;
-          & > span:nth-child(1) {
-            position: relative;
-            color: var(--Grey-Deep, #4d4d4d);
-            text-align: center;
-            font-family: var(--indexFontFamily);
-            font-size: 9px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 160%; /* 14.4px */
-            z-index: 5;
-            right: 15px;
-            bottom: -5px;
-          }
-          & > span:nth-child(1)::after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            display: inline-block;
-            height: 0.7px;
-            transform: rotate(-7deg);
-            background: #4d4d4d;
-            right: 0;
-            top: 50%;
-          }
-          & > span:nth-child(2) {
-            margin-left: 10px;
-            color: var(--Theme-Color, #fc1682);
-            font-family: var(--indexFontFamily);
-            font-size: 26px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 160%;
-            & > i {
-              color: var(--Theme-Color, #fc1682);
-              font-family: var(--indexFontFamily);
-              font-size: 20px;
-              font-style: normal;
-              font-weight: 500;
-              line-height: 160%; /* 32px */
-            }
-            position: relative;
-            right: 20px;
-            z-index: 5;
-            bottom: -5px;
-          }
-        }
-        & > div:nth-child(2)::after {
-          content: '';
-          width: 77px;
-          height: 10px;
-          border-radius: 4px var(--Count, 0px) var(--Count, 0px) 4px;
-          background: var(--Skin, #fff1f0);
-          position: absolute;
-          right: 0;
-          bottom: 0;
-        }
-      }
-      & > div:nth-child(2) {
-        box-sizing: border-box;
-        padding: 7px 30px 0;
-        align-items: center;
-        & > div:nth-child(1) {
-          & > div {
-            display: flex;
-            flex-direction: column;
-            & > div {
-              display: flex;
-              color: var(--Theme-Color, #fc1682);
-              font-family: var(--indexFontFamily);
-              font-size: 16px;
-              font-style: normal;
-              font-weight: 500;
-              line-height: 130%; /* 20.8px */
-              & > div:nth-child(2) {
-                width: 84px;
-                margin-left: 7px;
-                & > img {
-                  width: 100%;
-                  height: 100%;
-                  object-fit: contain;
-                }
-              }
-            }
-          }
-        }
-        & > div:nth-child(2) {
-          width: 130px;
-          height: 130px;
-          & > img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-          }
-        }
-      }
-      & > div:nth-child(3) {
-        display: flex;
-        flex-direction: column;
-        box-sizing: border-box;
-        padding: 0 15px;
-        & > p {
-          color: var(--Grey-Deep, #4d4d4d);
-          font-family: var(--indexFontFamily);
-          font-size: 15px;
-          font-style: normal;
-          font-weight: 400;
-          line-height: 160%; /* 24px */
-          letter-spacing: 1.5px;
-        }
-      }
-    }
-    & > div:nth-child(2) {
-      & > div:nth-child(1) {
-        & > div:nth-child(1) {
-          & > span:nth-child(2) {
-            position: absolute;
-            background: var(--Blue-Deep, #00aeff);
-            border: 5px solid var(--Blue-Light, #b9d9fc);
-            width: 50px;
-            height: 50px;
-            display: flex;
-            border-radius: 50%;
-            justify-content: center;
-            align-items: center;
-            right: -20%;
-            top: 50%;
-            transform: translateY(-50%);
-          }
-        }
-      }
-    }
-    & > div:nth-child(3) {
-      & > div:nth-child(1) {
-        & > div:nth-child(1) {
-          & > span:nth-child(2) {
-            position: absolute;
-            background: var(--Orange, #f90);
-            border: 5px solid #ffcd81;
-            width: 50px;
-            height: 50px;
-            display: flex;
-            border-radius: 50%;
-            justify-content: center;
-            align-items: center;
-            right: -20%;
-            top: 50%;
-            transform: translateY(-50%);
-          }
-        }
-      }
-    }
-  }
-  .bottom_info {
-    & > div:nth-child(1) {
-      color: var(--Theme-Color, #fc1682);
-      text-align: center;
-      font-family: var(--indexFontFamily);
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 160%; /* 32px */
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 20px;
-    }
   }
 }
 </style>
