@@ -65,7 +65,9 @@ onMounted(() => {
 
 <template>
   <div>
-    <PageHeader :headerConfig="headerConfig" :isPageNoBanner="true" />
+    <PageHeader v-if="windowWidth < 768" :headerConfig="headerConfig" :isPageNoBanner="true"  />
+    <PageNewHeaderMenu v-if="windowWidth > 768" :headerConfig="headerConfig" :isPageNoBanner="true"  />
+    <PagePcBannerNoHome v-if="windowWidth > 768" :headerConfig="headerConfig" :isPageNoBanner="true"  />
     <div class="main">
       <div class="index_title smallPageCon">聯絡我們</div>
       <div class="tabNav noTitle smallPageCon">

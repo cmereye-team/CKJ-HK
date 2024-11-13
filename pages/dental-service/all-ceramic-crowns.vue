@@ -181,7 +181,9 @@ onMounted(() => {
 
 <template>
   <div>
-    <PageHeader :headerConfig="headerConfig" btnText="預約免費牙齒檢查" />
+    <PageHeader v-if="windowWidth < 768" :headerConfig="headerConfig" />
+    <PageNewHeaderMenu v-if="windowWidth > 768" :headerConfig="headerConfig" btnText="預約免費牙齒檢查" />
+    <PagePcBannerNoHome v-if="windowWidth > 768" :headerConfig="headerConfig" />
     <div class="pageIn whitebgColor">
       <div class="index_title pageCon">
         {{ $t('pages.dental-service.title') }}

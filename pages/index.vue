@@ -642,7 +642,11 @@ const checkGroupPhoto = () => {
 
 <template>
   <div>
-    <PageNewHeader :headerConfig="headerConfigData" />
+    <PageNewHomeBanner
+      :headerConfig="headerConfigData"
+      v-if="windowWidth > 768"
+    />
+    <PageNewHeader :headerConfig="headerConfigData" v-else />
     <div class="indexPage">
       <!-- 最新消息 -->
       <!-- <LatestNews /> -->

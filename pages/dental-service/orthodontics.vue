@@ -351,7 +351,9 @@ const careData = {
 
 <template>
   <div>
-    <PageHeader :headerConfig="headerConfig" />
+    <PageHeader v-if="windowWidth < 768" :headerConfig="headerConfig" />
+    <PageNewHeaderMenu v-if="windowWidth > 768" :headerConfig="headerConfig" />
+    <PagePcBannerNoHome v-if="windowWidth > 768" :headerConfig="headerConfig" />
     <div class="orthodonticsPage">
       <div class="index_title pageCon">
         {{ $t('pages.dental-service.title') }}
@@ -593,7 +595,7 @@ const careData = {
             </div>
           </div>
         </div>
-        <div class="lastBox-b">
+        <div class="lastBox-b" v-if="windowWidth < 768">
           <PageAnimBtnTypeTwo str="預約免費口腔檢查" />
         </div>
       </div>
@@ -673,7 +675,7 @@ const careData = {
 
 .orthodonticsPage {
   background: #fff;
-  padding: 140px 0;
+  padding: 70px 0;
   position: relative;
   z-index: 1;
 }

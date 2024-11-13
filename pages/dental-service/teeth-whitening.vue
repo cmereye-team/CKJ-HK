@@ -333,7 +333,9 @@ const onSlideChange = (swiper: any) => {
 
 <template>
   <div>
-    <PageHeader :headerConfig="headerConfig" />
+    <PageHeader v-if="windowWidth < 768" :headerConfig="headerConfig" />
+    <PageNewHeaderMenu v-if="windowWidth > 768" :headerConfig="headerConfig" />
+    <PagePcBannerNoHome v-if="windowWidth > 768" :headerConfig="headerConfig" />
     <div class="pageIn whitebgColor">
       <div class="index_title pageCon" v-if="windowWidth < 768">
         {{ $t('pages.dental-service.title') }}

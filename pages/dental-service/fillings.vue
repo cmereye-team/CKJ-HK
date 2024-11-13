@@ -392,7 +392,9 @@ const differData: any = {
 
 <template>
   <div>
-    <PageHeader :headerConfig="headerConfig" />
+    <PageHeader v-if="windowWidth < 768" :headerConfig="headerConfig" />
+    <PageNewHeaderMenu v-if="windowWidth > 768" :headerConfig="headerConfig" />
+    <PagePcBannerNoHome v-if="windowWidth > 768" :headerConfig="headerConfig" />
     <div class="pageIn whitebgColor">
       <div class="index_title pageCon">
         {{ $t('pages.dental-service.title') }}
@@ -665,10 +667,10 @@ const differData: any = {
                 <span>特徵：{{ item.context }}</span>
                 <span></span>
               </div>
-              <div class="name" v-if="windowWidth > 768">
+              <!-- <div class="name" v-if="windowWidth > 768">
                 <img src="@/assets/images/icon_40.svg" alt="" />
                 <span>治療方法：</span>
-              </div>
+              </div> -->
               <div class="list">
                 <div
                   class="list-in"
@@ -680,6 +682,7 @@ const differData: any = {
                   <!-- </div> -->
                   <div class="list-in-text">
                     <h2>
+                      <img src="@/assets/images/icon_40.svg" v-if="windowWidth > 768" alt="" />
                       治療方法：<strong>{{ itemIn.name }}</strong>
                     </h2>
                     <p>{{ itemIn.text }}</p>
@@ -924,6 +927,9 @@ const differData: any = {
               letter-spacing: 3px;
               h2 {
                 font-weight: 500;
+                display: flex;
+                align-items: center;
+                gap: 0 10px;
               }
             }
           }
@@ -2031,6 +2037,9 @@ const differData: any = {
                 h2 {
                   font-size: 4.265vw;
                   margin-bottom: 10px;
+                  flex-direction: column;
+                  justify-content: flex-start;
+                  align-items: flex-start;
                 }
               }
             }

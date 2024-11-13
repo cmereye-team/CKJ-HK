@@ -48,7 +48,8 @@ onMounted(() => {
 
 <template>
   <div>
-    <PageNewHeader :headerConfig="headerConfigData" />
+    <PageNewHomeBanner :headerConfig="headerConfigData" v-if="windowWidth > 768" />
+    <PageNewHeader :headerConfig="headerConfigData" v-else />
     <div class="privacyPolicy">
       <div class="privacyPolicy-title">私隱政策</div>
       <div class="privacyPolicy-context">

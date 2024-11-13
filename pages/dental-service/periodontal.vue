@@ -815,7 +815,9 @@ const imgSrcHandel = (i: any) => {
 
 <template>
   <div>
-    <PageHeader :headerConfig="headerConfig" />
+    <PageHeader v-if="windowWidth < 768" :headerConfig="headerConfig" />
+    <PageNewHeaderMenu v-if="windowWidth > 768" :headerConfig="headerConfig" />
+    <PagePcBannerNoHome v-if="windowWidth > 768" :headerConfig="headerConfig" />
     <div class="pageIn whitebgColor">
       <div class="index_title pageCon">
         {{ $t('pages.dental-service.title') }}
@@ -2222,6 +2224,9 @@ const imgSrcHandel = (i: any) => {
 
 
 <style lang="scss" scoped>
+:deep(.pageIn){
+  padding-top: 70px;
+}
 :deep(.header-content) {
   .explain_box_mobile {
     background: transparent !important;

@@ -217,7 +217,9 @@ onMounted(() => {
 
 <template>
   <div>
-    <PageHeader :headerConfig="headerConfig" /> 
+    <PageHeader v-if="windowWidth < 768" :headerConfig="headerConfig" />
+    <PageNewHeaderMenu v-if="windowWidth > 768" :headerConfig="headerConfig" />
+    <PagePcBannerNoHome v-if="windowWidth > 768" :headerConfig="headerConfig" />
     <div class="health-care-voucher pageIn whitebgColor">
       <div class="smallPageCon health-care-voucher-top">
         <div class="index_title health-care-voucher-title">工聯會專區</div>
