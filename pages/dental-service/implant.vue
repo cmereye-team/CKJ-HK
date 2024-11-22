@@ -130,7 +130,7 @@ const stepData = {
     {
       title: '第1步',
       imgNum: 'https://static.cmereye.com/imgs/2024/07/e0feaceff214278b.png',
-      img: 'https://static.cmereye.com/imgs/2023/09/b881d3776b27ccff.jpg',
+      img: 'https://static.cmereye.com/imgs/2024/11/c9cfd16ffe98ba77.png',
       name: '全面口腔檢查及建立個人化方案',
       context:
         '進行全面口腔檢查、X光或3D電腦掃描，確定植體的安裝位置，需確認患者的身體狀況及病歷',
@@ -138,14 +138,14 @@ const stepData = {
     {
       title: '第2步',
       imgNum: 'https://static.cmereye.com/imgs/2024/07/120738fb56a5d759.png',
-      img: 'https://static.cmereye.com/imgs/2023/09/0b7ef1a0f39e9ca9.jpg',
+      img: 'https://static.cmereye.com/imgs/2024/11/b76a685a5b5b06e5.png',
       name: '注射麻醉藥',
       context: '',
     },
     {
       title: '第3步',
       imgNum: 'https://static.cmereye.com/imgs/2024/07/59c210a9e06a8624.png',
-      img: 'https://static.cmereye.com/imgs/2023/09/599e940cf6a46009.jpg',
+      img: 'https://static.cmereye.com/imgs/2024/11/19f1c8c996003b0a.png',
       name: '把植體植入顎骨',
       context:
         '翻開牙齦在適合安裝的位置鑽孔，植入植體，作為假牙的牙根，有需要時可以利用手術導航系統輔助植入理想位置，再縫合傷口',
@@ -153,14 +153,14 @@ const stepData = {
     {
       title: '第4步',
       imgNum: 'https://static.cmereye.com/imgs/2024/07/dabb11b53d7c5e07.png',
-      img: 'https://static.cmereye.com/imgs/2023/09/915fb53ec41c5511.jpg',
+      img: 'https://static.cmereye.com/imgs/2024/11/27f35ce081557616.png',
       name: '安裝臨時假牙',
       context: '確保植體與牙骨處於良好狀況後，根據客人實際情況，安裝臨時假牙。',
     },
     {
       title: '第5步',
       imgNum: 'https://static.cmereye.com/imgs/2024/07/9b5323760b492f54.png',
-      img: 'https://static.cmereye.com/imgs/2023/09/7096607a2bb3d79e.jpg',
+      img: 'https://static.cmereye.com/imgs/2024/11/2fb534831b2d8d0c.png',
       name: '套上牙冠及微調',
       context:
         '確認植體在顎骨已穩固，套上客人心儀的牙色牙冠，作最後全體牙齒微調。',
@@ -168,7 +168,7 @@ const stepData = {
     {
       title: '第6步',
       imgNum: 'https://static.cmereye.com/imgs/2024/07/90802da91d96398f.png',
-      img: 'https://static.cmereye.com/imgs/2023/09/9e044f535b6a7b46.jpg',
+      img: 'https://static.cmereye.com/imgs/2024/11/33c5a6e28ce445b3.png',
       name: '定期覆診',
       context: '根據客人情況，定期覆診跟進情況。',
     },
@@ -1205,7 +1205,7 @@ const { height } = useWindowSize()
                     alt=""
                   />
                 </div>
-                <div>瑞士士卓曼</div>
+                <div>瑞士士卓曼BLX</div>
                 <div>
                   <p>
                     <span>性價比</span>
@@ -1229,11 +1229,11 @@ const { height } = useWindowSize()
               </div>
             </div>
             <ul>
-              <li>國際頂級植體，價格平香港1/3</li>
-              <li>國際口腔植牙協會推薦</li>
-              <li>癒合時間短，最快4週完成</li>
-              <li>煙酒及糖尿病人士適用</li>
-              <li>全球終身保養</li>
+              <li>獨特植體保留更多骨頭，創傷更小</li>
+              <li>親水性抗發炎，加快骨細胞與植體結合</li>
+              <li>癒合時間最短，最快3-4週完成</li>
+              <li>大量長期文獻支持</li>
+              <li>原廠全球終身保養</li>
             </ul>
           </div>
         </div>
@@ -2019,7 +2019,7 @@ const { height } = useWindowSize()
             width: 100%;
             img {
               width: 100%;
-              border-radius: 30px;
+              border-radius: 0;
             }
           }
           .name {
@@ -2396,7 +2396,7 @@ const { height } = useWindowSize()
           &-b {
             margin-top: 60px;
             img {
-              border-radius: 30px;
+              border-radius: 0;
               margin: 0 auto;
             }
             // div{
@@ -2968,7 +2968,7 @@ const { height } = useWindowSize()
               width: 100%;
               img {
                 width: 100%;
-                border-radius: 30px;
+                border-radius: 0;
               }
             }
             .name {
@@ -3338,7 +3338,7 @@ const { height } = useWindowSize()
             &-b {
               margin-top: 60px;
               img {
-                border-radius: 30px;
+                border-radius: 0;
                 margin: 0 auto;
               }
               // div{

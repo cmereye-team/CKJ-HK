@@ -100,10 +100,10 @@ export default [
       googleMap: 'https://goo.gl/maps/mQgJXrTxvaaLB9Y1A?coh=178572&entry=tt',
       baiduMap: 'https://j.map.baidu.com/a8/8R4c',
       imgLists: [
+        'https://static.cmereye.com/imgs/2024/02/c496ca0c89fcae13.png',
         'https://static.cmereye.com/imgs/2024/03/57dee34750b0c30f.webp',
         'https://static.cmereye.com/imgs/2024/03/beb31d58855ac0b5.jpg',
         'https://static.cmereye.com/imgs/2024/03/f9b66026e251ac3e.jpg',
-        'https://static.cmereye.com/imgs/2024/02/c496ca0c89fcae13.png'
       ]
     },
     {

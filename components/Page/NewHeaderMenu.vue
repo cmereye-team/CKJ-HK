@@ -454,6 +454,18 @@ const changlangsfun = (_type) => {
             display: none;
           }
         }
+        .menuItem::after{
+          content: '';
+          width: 130%;
+          display: inline-block;
+          z-index: 3;
+          height: 50px;
+          background: transparent;
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
         .menuItem:hover {
           & > a {
             span {
@@ -828,6 +840,18 @@ const changlangsfun = (_type) => {
           .menuChild {
             display: none;
           }
+        }
+        .menuItem::after{
+          content: '';
+          width: 130%;
+          display: inline-block;
+          z-index: 3;
+          height: 50px;
+          background: transparent;
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
         }
         .menuItem:hover {
           & > a {
@@ -1208,6 +1232,18 @@ const changlangsfun = (_type) => {
           .menuChild {
             display: none;
           }
+        }
+        .menuItem::after{
+          content: '';
+          width: 120%;
+          display: inline-block;
+          z-index: 3;
+          height: 50px;
+          background: transparent;
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          transform: translateX(-50%);
         }
         .menuItem:hover {
           & > a {
