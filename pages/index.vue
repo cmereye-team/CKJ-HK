@@ -638,6 +638,8 @@ const checkGroupPhoto = () => {
       return groupPhoto.value[0]
   }
 }
+
+const hideDom = ref(false)
 </script>
 
 <template>
@@ -1232,11 +1234,11 @@ const checkGroupPhoto = () => {
               frameborder="0"
             ></iframe>
           </div>
-          <div class="share-item" style="display: none">
+          <div class="share-item" v-if="hideDom">
             <div>
               <div>
                 <div>
-                  <img src="../assets/images/zmm.svg" alt="星級客戶" />
+                  <img src="https://static.cmereye.com/imgs/2024/07/3a0cf1b5a28d2d34.png" alt="星級客戶" />
                 </div>
                 <div>
                   <div class="item-date">17/4/24</div>
@@ -1280,7 +1282,7 @@ const checkGroupPhoto = () => {
               </div>
             </div>
           </div>
-          <div class="in-cen" style="display: none">
+          <div class="in-cen"  v-if="hideDom">
             <div
               class="in-cen-box"
               v-for="(caseSharingItem, caseSharingIndex) in caseSharingLists"

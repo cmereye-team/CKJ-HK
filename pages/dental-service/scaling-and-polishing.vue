@@ -401,7 +401,7 @@ const Plant_brand_series_data = [
     id: '1102',
     name: ['菌斑導向專業洗牙', '(含鹽)'],
     price: '168',
-    oldPrice: '180',
+    oldPrice: '350',
     img: 'https://static.cmereye.com/imgs/2024/11/7d36488bc41e7ad6.png',
     compare: [
       'https://static.cmereye.com/static/ckj/imgs/svg/pc4star.svg',

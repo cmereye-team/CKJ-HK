@@ -1189,7 +1189,7 @@ const contentDom = ref(false)
               frameborder="0"
             ></iframe>
           </div>
-          <div class="share-item" style="display: none">
+          <div class="share-item"  v-if="contentDom">
             <div>
               <div>
                 <div>
@@ -1237,7 +1237,7 @@ const contentDom = ref(false)
               </div>
             </div>
           </div>
-          <div class="in-cen" style="display: none">
+          <div class="in-cen"  v-if="contentDom">
             <div
               class="in-cen-box"
               v-for="(caseSharingItem, caseSharingIndex) in caseSharingLists"
