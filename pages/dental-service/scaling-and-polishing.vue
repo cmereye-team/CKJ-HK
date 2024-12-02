@@ -382,7 +382,8 @@ const Plant_brand_series_data = [
   {
     id: '1101',
     name: ['基礎專業', '洗牙'],
-    price: '88',
+    // price: '88',
+    price: '68', // 圣诞价格
     oldPrice: '180',
     img: 'https://static.cmereye.com/imgs/2024/11/01fd99a1cf216221.png',
     compare: [
@@ -400,7 +401,8 @@ const Plant_brand_series_data = [
   {
     id: '1102',
     name: ['菌斑導向專業洗牙', '(含鹽)'],
-    price: '168',
+    // price: '168',
+    price: '128', // 圣诞价格
     oldPrice: '350',
     img: 'https://static.cmereye.com/imgs/2024/11/7d36488bc41e7ad6.png',
     compare: [
@@ -563,7 +565,10 @@ const removeSurroundingParentheses = (str) => {
                     >原價￥{{ plant_brand_series_item.oldPrice }}</span
                   >
                   <span v-else></span>
-                  <span><i>￥</i>{{ plant_brand_series_item.price }}</span>
+                  <span
+                    ><i>￥</i>{{ plant_brand_series_item.price
+                    }}<i class="icon-emoji">🎅</i></span
+                  >
                 </div>
               </div>
               <div>
@@ -758,7 +763,7 @@ const removeSurroundingParentheses = (str) => {
                     >原價￥{{ item_mobile.oldPrice }}</span
                   >
                   <span v-else></span>
-                  <span><i>￥</i>{{ item_mobile.price }}</span>
+                  <span><i>￥</i>{{ item_mobile.price }}<i>🎅</i></span>
                 </div>
               </div>
               <div>
@@ -1049,6 +1054,18 @@ const removeSurroundingParentheses = (str) => {
 </template>
 
 <style lang="scss" scoped>
+@font-face {
+  font-family: 'Noto Color Emoji';
+  src: url(https://statichk.cmermedical.com/ckj/font/NotoColorEmoji.woff2)
+    format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+.icon-emoji {
+  font-family: Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,
+    'Noto Color Emoji';
+}
 :deep(.header-content) {
   .explain_box_mobile {
     background: transparent !important;

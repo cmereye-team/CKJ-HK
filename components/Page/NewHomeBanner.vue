@@ -178,32 +178,32 @@ let bannerLists = ref([
   {
     name: '灣區長者醫療券banner',
     link: '/health-care-voucher',
-    pc: 'https://static.cmereye.com/imgs/2024/09/2f23c4d8eb771740.webp',
-    mb: 'https://static.cmereye.com/imgs/2024/09/339586940a228423.webp',
+    pc: 'https://statichk.cmermedical.com/ckj/image/5634e643f48b.webp',
+    mb: 'https://statichk.cmermedical.com/ckj/image/c78a85bb03ad.webp',
   },
   {
     name: '愛康健裕亨新店開業優惠banner',
     link: 'https://bit.ly/愛康健裕亨新店開業優惠',
-    pc: 'https://static.cmereye.com/imgs/2024/06/6f26ff5dd22033b4.jpg',
-    mb: 'https://static.cmereye.com/imgs/2024/06/455f973c99656e61.jpg?v=1.2.1',
+    pc: 'https://statichk.cmermedical.com/ckj/image/e7d440f4a3c0.avif',
+    mb: 'https://statichk.cmermedical.com/ckj/image/bde7805c9128.avif?v=1.2.2',
   },
   {
     name: '醫生團隊banner',
     link: '/medical-team',
-    pc: 'https://static.cmereye.com/imgs/2024/04/df1e63bdd93c3504.webp',
-    mb: 'https://static.cmereye.com/imgs/2024/03/f3f241b74364a6b7.jpg?v=1.2.0',
+    pc: 'https://statichk.cmermedical.com/ckj/image/6496eaea84aa.webp',
+    mb: 'https://statichk.cmermedical.com/ckj/image/1b9c12f93b61.webp',
   },
   {
     name: '',
     link: '',
-    pc: 'https://static.cmereye.com/imgs/2024/04/cf5124d2a6d53efd.webp',
-    mb: 'https://static.cmereye.com/imgs/2024/03/4abbdd7326af4cc3.webp',
+    pc: 'https://statichk.cmermedical.com/ckj/image/6d15585d25f4.webp',
+    mb: 'https://statichk.cmermedical.com/ckj/image/1f833657e657.webp',
   },
   {
     name: '福田旗艦店18週年慶典優惠-慶典',
     link: '',
-    pc: 'https://static.cmereye.com/static/ckj/imgs/banner/慶典_Banner_PC.webp',
-    mb: 'https://static.cmereye.com/imgs/2024/07/8a23929f9adb1ba9.png',
+    pc: 'https://statichk.cmermedical.com/ckj/image/81fb2f8bb46d.webp',
+    mb: 'https://statichk.cmermedical.com/ckj/image/88548871a742.webp',
   },
 ])
 onMounted(() => {

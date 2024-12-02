@@ -81,6 +81,20 @@ const checkGroup = () => {
 const disabledDate = (date: any) => {
   return date && date.valueOf() < Date.now() - 86400000
 }
+
+const handleOpen = () => {
+  // 时区选择 UTC +8
+  const now = new Date()
+  now.setHours(9)
+  now.setMinutes(0)
+  now.setSeconds(0)
+  now.setDate(now.getDate() + 1)
+  form.dayOne = now
+  formLoading.value = false
+  form.dayOne = now
+  formLoading.value = false
+  return
+}
 const shortcuts = [
   {
     text: '今天',
@@ -444,9 +458,10 @@ let privacyPolicy = ref(true)
               placeholder="請選擇"
               :disabled-date="disabledDate"
               :shortcuts="shortcuts"
-              format="YYYY/MM/DD"
-              value-format="YYYY-MM-DD"
+              format="YYYY-MM-DD"
+              value-format="YYYY-MM-dd"
               :editable="false"
+              @handleOpen="handleOpen"
             />
           </el-form-item>
           <!-- </el-col> -->
