@@ -459,7 +459,7 @@ let privacyPolicy = ref(true)
               :disabled-date="disabledDate"
               :shortcuts="shortcuts"
               format="YYYY-MM-DD"
-              value-format="YYYY-MM-dd"
+              value-format="YYYY-MM-DD"
               :editable="false"
               @handleOpen="handleOpen"
             />
