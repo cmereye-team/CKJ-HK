@@ -1918,7 +1918,7 @@ svg:hover path {
         overflow: hidden;
         text-overflow: ellipsis;
         padding: 0 20px;
-        font-family: 'FakePearl-Regular', 'NotoSansHans', 'Noto Sans HK', Serif;
+        font-family:  'Noto Sans HK', Serif;
       }
       p {
         color: var(--Grey-Mid, #666);

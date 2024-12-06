@@ -448,7 +448,7 @@ onMounted(() => {
   & > span {
     cursor: pointer;
     color: var(--indexColor1);
-    font-family: 'FakePearl-Regular', 'NotoSansHans', 'Noto Sans HK', Serif;
+    font-family:  'Noto Sans HK', Serif;
   }
 }
 .articlePage {
@@ -488,7 +488,7 @@ onMounted(() => {
   color: var(--indexColor1);
   font-size: 50px;
   & > h1 {
-    font-family: 'FakePearl-Regular', 'NotoSansHans', 'Noto Sans HK', Serif;
+    font-family:  'Noto Sans HK', Serif;
   }
 }
 .content {
@@ -524,9 +524,9 @@ onMounted(() => {
   :deep(.content-text) {
     color: var(--textColor);
     font-size: 20px;
-    font-family: 'FakePearl-Regular', 'NotoSansHans', 'Noto Sans HK', Serif;
+    font-family:  'Noto Sans HK', Serif;
     span {
-      font-family: 'FakePearl-Regular', 'NotoSansHans', 'Noto Sans HK', Serif;
+      font-family:  'Noto Sans HK', Serif;
     }
   }
   :deep(.indexColor) {

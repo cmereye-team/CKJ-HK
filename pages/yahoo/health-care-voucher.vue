@@ -324,7 +324,7 @@ const handleLocale = (l) => {
   if (l == 'zh') {
     var _text = '微软雅黑'
   } else {
-    var _text = "'FakePearl-Regular','幼圆', Serif"
+    var _text = "'Noto Sans HK','幼圆', Serif"
   }
   document.documentElement.style.setProperty('--indexFontFamily', _text)
 }

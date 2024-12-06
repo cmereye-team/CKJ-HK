@@ -526,7 +526,7 @@ const Plant_brand_series_data = [
       'https://static.cmereye.com/static/ckj/imgs/svg/pc5star.svg',
       'https://static.cmereye.com/static/ckj/imgs/svg/pc4star.svg',
     ],
-    nation: 'https://static.cmereye.com/imgs/2024/11/a6616d72b02218a2.png',
+    nation: 'https://static.cmereye.com/imgs/2024/12/4b192ecf9a3770ba.png',
     lists: [
       '· 穩固耐用',
       '· 超親水表面處理，長期穩定',

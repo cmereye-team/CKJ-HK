@@ -176,6 +176,12 @@ const imgBgHeight = ref({
 const isFiexdHeader = ref(false)
 let bannerLists = ref([
   {
+    name: 'CKJ爱康健聖延限時睇牙優惠banner',
+    link: '/health-care-voucher',
+    pc: 'https://statichk.cmermedical.com/ckj/image/367b596eaaa1.avif',
+    mb: 'https://statichk.cmermedical.com/ckj/image/7c04a9e56ac4.avif',
+  },
+  {
     name: '灣區長者醫療券banner',
     link: '/health-care-voucher',
     pc: 'https://statichk.cmermedical.com/ckj/image/5634e643f48b.webp',
@@ -1065,7 +1071,7 @@ const getWindowWidth = () => {
   .explain_page_one {
     position: absolute;
     z-index: 35;
-    bottom: .5% !important;
+    bottom: 0.5% !important;
     font-style: normal;
     font-weight: 500;
     font-size: 20px;
