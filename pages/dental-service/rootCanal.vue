@@ -26,8 +26,8 @@ useHead({
 })
 
 const headerConfig = {
-  img: 'https://ckjhk.com/images/d69e0a71aed5.avif',
-  mbImg: 'https://ckjhk.com/images/c1ce4d342670.avif',
+  img: 'https://ckjhk.com/images/c2afb5768d43.avif',
+  mbImg: 'https://ckjhk.com/images/87a9f941db92.avif',
   bg: '',
   pageName: 'rootCanal-test',
   pcText: [

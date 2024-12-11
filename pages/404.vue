@@ -11,6 +11,23 @@ definePageMeta({
 useHead(() => ({
   title: capitalize(t('pages.404.title')),
 }))
+
+const router = useRouter()
+let _s = ref(4)
+const change_s = () => {
+  clearInterval(_timer)
+  var _timer: any = setInterval(() => {
+    if (_s.value > 0) {
+      _s.value--
+    } else {
+      clearInterval(_timer)
+      router.push({ path: '/' })
+    }
+  }, 1000)
+}
+onMounted(() => {
+  change_s()
+})
 </script>
 
 <template>
@@ -22,7 +39,7 @@ useHead(() => ({
         alt=""
       />
     </div>
-    <nuxt-link to="/" class="black">返回首頁</nuxt-link>
+    <nuxt-link to="/" class="black">{{ _s + 1 }}返回首頁</nuxt-link>
     <div class="menus">
       <serviceCard :isIndexShow="true" />
     </div>

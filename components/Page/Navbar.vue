@@ -149,7 +149,6 @@ onMounted(() => {
 </script>
 
 <template>
-  +++
   <div
     class="navbar-content"
     :style="{

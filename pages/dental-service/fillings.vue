@@ -29,8 +29,8 @@ const introduceJY = {
 }
 
 const headerConfig = {
-  img: 'https://ckjhk.com/images/0d34fd49d3e9.avif',
-  mbImg: 'https://ckjhk.com/images/8afd5024df02.avif',
+  img: 'https://ckjhk.com/images/fbe7cf72e22b.avif',
+  mbImg: 'https://ckjhk.com/images/3e0683137a3a.avif',
   bg: '',
   pageName: 'invisalign-test',
   pcText: [],
