@@ -705,7 +705,7 @@ pages:
           - context: 紧贴小朋友牙齿发育进度，及早作出针对性治疗
           - context: 把握小朋友矫齿黄金期，大大提高改善牙齿排列、面部轮廓、咬字发音等问题的成功率
   404:
-    title: 找不到该页面
+    title: 找不到該頁面
 banners:
   welcome: 你好, 欢迎来到 %{app_name}!
 others:

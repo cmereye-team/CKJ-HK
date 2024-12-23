@@ -669,7 +669,7 @@ const getWindowWidth = () => {
       </div>
       <!-- 水波纹盒子 -->
       <div class="waterBg" :class="headerConfig.pageName"></div>
-      <div class="explain_page_one">優惠只限於網上及電話預約客戶</div>
+      <div class="explain_page_one" style="display: none;">優惠只限於網上及電話預約客戶</div>
     </div>
     <div :class="['dialogBox', { show: _bool }]" @click="_bool = false">
       <div :class="['dialogBox-in', { 'show-in': _bool }]" @click.stop="">

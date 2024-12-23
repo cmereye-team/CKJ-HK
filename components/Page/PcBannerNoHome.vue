@@ -102,7 +102,7 @@ const hideShowText = computed(() => {
           <div>29年專科•專業•專注</div>
           <div><span>港人首選</span>一站式連鎖牙科品牌</div>
         </div>
-        <div v-if="isShowText && hideShowText">
+        <div v-if="isShowText && hideShowText" style="display: none;">
           優惠只限於網上及電話預約客戶
         </div>
       </div>

@@ -730,7 +730,7 @@ pages:
           - context: 緊貼小朋友牙齒發育進度，及早作出針對性治療
           - context: 把握小朋友矯齒黃金期，大大提高改善牙齒排列、面部輪廓、咬字發音等問題的成功率
   404:
-    title: 找不到该页面
+    title: 找不到該頁面
 banners:
   welcome: 你好, 欢迎来到 %{app_name}!
 others:

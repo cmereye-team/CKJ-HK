@@ -304,8 +304,8 @@ const handleopenwechat = () => {
 }
 const showExplain = ref(true)
 const isHealthCare = () => {
-  console.log(route.name,'route.name');
-  
+  console.log(route.name, 'route.name')
+
   if (route.path === '/dental-service/scaling-and-polishing') {
     showExplain.value = true
   } else if (route.name == 'dental-service-implant') {
@@ -499,6 +499,7 @@ const hideDiv = () => {
             : windowWidth > 768
             ? '110px'
             : '0',
+          display: showExplain ? 'none' : 'none',
         }"
       >
         <span>優惠只限於網上及電話預約客戶</span>

@@ -474,6 +474,7 @@ const hideDiv = () => {
       <div
         class="explain_box_mobile"
         v-if="hideDiv()"
+        style="display: none;"
         :style="{
           top: isArticle
             ? windowWidth > 768
