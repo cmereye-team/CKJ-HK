@@ -3,6 +3,7 @@ import { useAppState } from '~/stores/appState'
 import { Autoplay } from 'swiper'
 import { toWhatsApp } from '~/assets/js/common'
 import { useElementBounding, useWindowSize } from '@vueuse/core'
+import { json } from 'stream/consumers'
 const appState = useAppState()
 appState.setDentistryService('implant')
 useHead({
@@ -361,7 +362,10 @@ let showYaAnim = ref(false)
 
 onMounted(() => {
   getWindowWidth()
-  window.addEventListener('resize', getWindowWidth)
+  window.addEventListener('resize', () => {
+    getWindowWidth()
+    windowWidth.value = window.innerWidth
+  })
   window.addEventListener('contextmenu', function (e) {
     e.preventDefault()
   })
@@ -376,6 +380,11 @@ const onSlideImplantCaseChange = (swiper: any) => {
   implantCaseCurrent.value = swiper.realIndex + 1
 }
 
+let implantCaseCurrentMb = ref(1)
+//走马灯事件
+const onSlideImplantCaseChangeMb = (swiper: any) => {
+  implantCaseCurrentMb.value = swiper.realIndex + 1
+}
 let implantCaseSwiperRef = {
   slideToLoop: (a) => {},
   slidePrev: () => {},
@@ -389,7 +398,9 @@ const handleLineCur = (_value: number) => {
 const setImplantCaseSwiperRef = (swiper: any) => {
   implantCaseSwiperRef = swiper
 }
-
+const setImplantCaseSwiperRefMb = (swiper: any) => {
+  implantCaseSwiperRef = swiper
+}
 const handleProcessBtn = (_type: string) => {
   implantCaseSwiperRef[_type]()
 }
@@ -463,6 +474,39 @@ const implantCaseData = [
     ],
   },
 ]
+
+const caseList = [
+  [
+    'https://statichk.cmermedical.com/ckj/image/388682124788.png',
+    'https://statichk.cmermedical.com/ckj/image/5e429609ae9c.png',
+    '',
+    'https://statichk.cmermedical.com/ckj/image/c524a86a8dc2.png',
+  ],
+  [
+    'https://statichk.cmermedical.com/ckj/image/8be97e398483.png',
+    'https://statichk.cmermedical.com/ckj/image/54194ec01244.png',
+    '',
+    'https://statichk.cmermedical.com/ckj/image/e8b5afec09f0.png',
+  ],
+  [
+    'https://statichk.cmermedical.com/ckj/image/dae63c411c7d.png',
+    'https://statichk.cmermedical.com/ckj/image/69785f3ac83d.png',
+    '',
+    'https://statichk.cmermedical.com/ckj/image/c6fc336c9323.png',
+  ],
+  [
+    'https://statichk.cmermedical.com/ckj/image/b78df2644b43.png',
+    'https://statichk.cmermedical.com/ckj/image/69785f3ac83d.png',
+    '',
+    'https://statichk.cmermedical.com/ckj/image/464c808f51db.png',
+  ],
+  [
+    'https://statichk.cmermedical.com/ckj/image/0c035e31f064.png',
+    'https://statichk.cmermedical.com/ckj/image/8fd718ec84be.png',
+    '',
+    'https://statichk.cmermedical.com/ckj/image/08b03ebf3fd1.png',
+  ],
+]
 let yaImgCurrtNum = ref(6)
 const yaImgFu = (_idx, _type) => {
   if (_type) {
@@ -482,6 +526,25 @@ const showImg = () => {
 let Plant_brand_series_cur = ref(0)
 
 const Plant_brand_series_data = [
+  {
+    id: '1106',
+    name: ['瑞士', '士卓曼BLX'],
+    img: 'https://static.cmereye.com/imgs/2024/11/d0491768aa6c1cff.png',
+    logo: 'https://static.cmereye.com/imgs/2024/02/c35e7ba905606dd0.png',
+    compare: [
+      'https://static.cmereye.com/static/ckj/imgs/svg/pc4star.svg',
+      'https://static.cmereye.com/static/ckj/imgs/svg/pc5star.svg',
+      'https://static.cmereye.com/static/ckj/imgs/svg/pc5star.svg',
+    ],
+    nation: 'https://static.cmereye.com/imgs/2024/11/37d07a7454f419a0.png',
+    lists: [
+      '· 獨特植體保留更多骨頭，創傷更小',
+      '· 親水性抗發炎，加快骨細胞與植體結合',
+      '· 癒合時間最短，最快3-4週完成',
+      '· 大量長期文獻支持',
+      '· 原廠全球終身保養',
+    ],
+  },
   {
     id: '1101',
     name: ['美國', '皓聖'],
@@ -567,25 +630,6 @@ const Plant_brand_series_data = [
       '· 癒合時間短，最快4週完成',
       '· 煙酒及糖尿病人士適用',
       '· 全球終身保養',
-    ],
-  },
-  {
-    id: '1106',
-    name: ['瑞士', '士卓曼BLX'],
-    img: 'https://static.cmereye.com/imgs/2024/11/d0491768aa6c1cff.png',
-    logo: 'https://static.cmereye.com/imgs/2024/02/c35e7ba905606dd0.png',
-    compare: [
-      'https://static.cmereye.com/static/ckj/imgs/svg/pc4star.svg',
-      'https://static.cmereye.com/static/ckj/imgs/svg/pc5star.svg',
-      'https://static.cmereye.com/static/ckj/imgs/svg/pc5star.svg',
-    ],
-    nation: 'https://static.cmereye.com/imgs/2024/11/37d07a7454f419a0.png',
-    lists: [
-      '· 獨特植體保留更多骨頭，創傷更小',
-      '· 親水性抗發炎，加快骨細胞與植體結合',
-      '· 癒合時間最短，最快3-4週完成',
-      '· 大量長期文獻支持',
-      '· 原廠全球終身保養',
     ],
   },
 ]
@@ -681,6 +725,38 @@ const confidence_ecommendation_lists = [
 const doctorTeam = ref(null)
 const { top, bottom } = useElementBounding(doctorTeam)
 const { height } = useWindowSize()
+const checkId = ref('101')
+const groupPhoto = ref([
+  'https://static.cmereye.com/imgs/2024/11/d43bcfc01f99a97f.jpg',
+  'https://static.cmereye.com/imgs/2024/11/533cd5d2e1944a98.jpg',
+  'https://static.cmereye.com/imgs/2024/11/dce268191178f65d.jpg',
+  '',
+  'https://static.cmereye.com/imgs/2024/11/43f7fdfa344a8b78.jpg',
+  'https://static.cmereye.com/imgs/2024/11/1877a39445db8018.jpg',
+  '',
+])
+
+const checkGroupPhoto = () => {
+  switch (checkId.value) {
+    case '101':
+      return groupPhoto.value[0]
+    case '102':
+      return groupPhoto.value[1]
+    case '103':
+      return groupPhoto.value[2]
+    case '104':
+      return groupPhoto.value[3]
+    case '105':
+      return groupPhoto.value[4]
+    case '106':
+      return groupPhoto.value[5]
+    case '107':
+      return groupPhoto.value[6]
+
+    default:
+      return groupPhoto.value[0]
+  }
+}
 </script>
 
 <template>
@@ -706,7 +782,7 @@ const { height } = useWindowSize()
           $t(introduceData.tabNavName)
         }}</span>
       </div>
-      <div class="plague">
+      <div class="plague" v-if="windowWidth > 768">
         <div class="plague-in">
           <div class="dentistryServices-title plague-title">
             <div class="dentistryServices-title-in bb plague-title-in">
@@ -726,16 +802,271 @@ const { height } = useWindowSize()
           </div>
         </div>
       </div>
-      <ServiceIntroduceJY :introduceData="introduceJY" />
+      <ServiceIntroduceJY
+        :introduceData="introduceJY"
+        v-if="windowWidth > 768"
+      />
+      <div class="Dental_implant_technology-video" v-if="windowWidth < 768">
+        <div class="youtobe-video">
+          <div class="youtobe-video-in">
+            <iframe
+              width="560"
+              src="https://www.youtube.com/embed/WCbVfokM-iU?si=FBsi3CnSYRK31JwB"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+      <div class="Plant_brand_series" v-if="windowWidth < 768">
+        <div class="dentistryServices-title">
+          <div class="dentistryServices-title-in bb">植體品牌系列</div>
+        </div>
+        <div class="Plant_brand_series-tab" v-if="windowWidth < 768">
+          <span
+            :class="{ active: Plant_brand_series_cur === tabIndex }"
+            v-for="(tabItem, tabIndex) in Plant_brand_series_data"
+            :key="tabIndex"
+            @click="handle_lant_brand_series_tab(tabIndex)"
+          >
+            <span
+              v-for="(tabspanitem, tabspanindex) in tabItem.name"
+              :key="tabspanindex"
+            >
+              {{ tabspanitem }}
+            </span>
+          </span>
+        </div>
+        <div class="Plant_brand_series-tab" v-if="windowWidth > 768">
+          <span
+            :class="{ active: Plant_brand_series_cur === tabIndex }"
+            v-for="(tabItem, tabIndex) in Plant_brand_series_data"
+            :key="tabIndex"
+            @click="handle_lant_brand_series_tab(tabIndex)"
+          >
+            <span
+              v-for="(tabspanitem, tabspanindex) in tabItem.name"
+              :key="tabspanindex"
+            >
+              {{ tabspanitem }}
+            </span>
+          </span>
+        </div>
+        <Swiper
+          :loop="true"
+          :modules="[Autoplay]"
+          :autoplay="{
+            delay: 3000,
+          }"
+          @swiper="set_plant_brand_series_ref"
+          @slideChange="on_plant_brand_series_change"
+        >
+          <Swiper-slide
+            v-for="(
+              plant_brand_series_item, plant_brand_series_index
+            ) in Plant_brand_series_data"
+            :key="plant_brand_series_index"
+          >
+            <div class="Plant_brand_series-content">
+              <div>
+                <div class="Plant_brand_series-content-l">
+                  <div><img :src="plant_brand_series_item.img" alt="" /></div>
+                </div>
+                <div class="Plant_brand_series-content-r">
+                  <div>
+                    <div>
+                      <img :src="plant_brand_series_item.logo" alt="" />
+                    </div>
+                    <div>
+                      <img :src="plant_brand_series_item.nation" alt="" />
+                    </div>
+                    <div class="item_compare">
+                      <div>
+                        <div>性價比</div>
+                        <div>
+                          <img
+                            :src="plant_brand_series_item.compare[0]"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <div>耐用度</div>
+                        <div>
+                          <img
+                            :src="plant_brand_series_item.compare[1]"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <div>客製化</div>
+                        <div>
+                          <img
+                            :src="plant_brand_series_item.compare[2]"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <span
+                  v-for="(item, index) in plant_brand_series_item.lists"
+                  :key="index"
+                >
+                  {{ item }}
+                </span>
+              </div>
+            </div>
+          </Swiper-slide>
+          <div class="btn-right-left">
+            <div @click="brand_btn('slidePrev')">
+              <img
+                src="https://statichk.cmermedical.com/ckj/image/2024122411123501.png"
+                alt=""
+              />
+            </div>
+            <div @click="brand_btn('slideNext')">
+              <img
+                src="https://statichk.cmermedical.com/ckj/image/2024122411125201.png"
+                alt=""
+              />
+            </div>
+          </div>
+        </Swiper>
+        <div class="brand_btn">
+          <div class="brand_btn_left" @click="brand_btn('slidePrev')">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="107"
+              height="107"
+              viewBox="0 0 107 107"
+              fill="none"
+            >
+              <g filter="url(#filter0_d_1167_2367)">
+                <circle cx="51.5" cy="51.5" r="49.5" fill="white" />
+              </g>
+              <path
+                d="M59.0859 69.3037L38.999 51.4994L59.0859 33.695"
+                stroke="#FC1682"
+                stroke-width="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <defs>
+                <filter
+                  id="filter0_d_1167_2367"
+                  x="0"
+                  y="0"
+                  width="107"
+                  height="107"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset dx="2" dy="2" />
+                  <feGaussianBlur stdDeviation="2" />
+                  <feComposite in2="hardAlpha" operator="out" />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0.988235 0 0 0 0 0.0862745 0 0 0 0 0.509804 0 0 0 0.24 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="BackgroundImageFix"
+                    result="effect1_dropShadow_1167_2367"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="effect1_dropShadow_1167_2367"
+                    result="shape"
+                  />
+                </filter>
+              </defs>
+            </svg>
+          </div>
+          <div class="brand_btn_right" @click="brand_btn('slideNext')">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="107"
+              height="107"
+              viewBox="0 0 107 107"
+              fill="none"
+            >
+              <g filter="url(#filter0_d_1166_2259)">
+                <circle cx="51.5" cy="51.5" r="49.5" fill="white" />
+              </g>
+              <path
+                d="M43 31L65.6154 51.4878L43 73"
+                stroke="#FC1682"
+                stroke-width="9.69231"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <defs>
+                <filter
+                  id="filter0_d_1166_2259"
+                  x="0"
+                  y="0"
+                  width="107"
+                  height="107"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset dx="2" dy="2" />
+                  <feGaussianBlur stdDeviation="2" />
+                  <feComposite in2="hardAlpha" operator="out" />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0.988235 0 0 0 0 0.0862745 0 0 0 0 0.509804 0 0 0 0.24 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="BackgroundImageFix"
+                    result="effect1_dropShadow_1166_2259"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="effect1_dropShadow_1166_2259"
+                    result="shape"
+                  />
+                </filter>
+              </defs>
+            </svg>
+          </div>
+        </div>
+      </div>
       <div class="Dental_implant_technology">
         <div class="dentistryServices-title Dental_implant_technology-title">
           <div class="dentistryServices-title-in bb">種植牙技術</div>
         </div>
-
+        <div class="Dental_implant_technology-context" v-if="windowWidth < 768">
+          利用鈦金屬等物料製作成植體，然後植入進行牙槽骨當中，代替牙根以作支撐，然後在上面植入假牙、牙橋或假牙托來填補空缺的牙齒。隨着醫療技術的進步，現在不僅有傳統的植牙方式，還有微創植牙。
+        </div>
         <div class="Dental_implant_technology-context">
           為了提供精准化的種植牙服務，運用先進電腦圖形影像技術，對客戶進行定制化分析。根據口腔內CT掃描和光學掃描的數據，在電腦上重建下顎骨立體模型，旨在確保每次種植的精準性和成功率。
         </div>
-        <div class="Dental_implant_technology-video">
+        <div class="Dental_implant_technology-video" v-if="windowWidth > 768">
           <div class="youtobe-video">
             <div class="youtobe-video-in">
               <iframe
@@ -749,11 +1080,33 @@ const { height } = useWindowSize()
             </div>
           </div>
         </div>
-        <div class="Dental_implant_technology-img">
+        <div class="Dental_implant_technology-img" v-if="windowWidth > 768">
           <img
             src="https://static.cmereye.com/imgs/2024/02/889bd45e5e2ee385.png"
             alt=""
           />
+        </div>
+      </div>
+      <div class="technology" v-if="windowWidth < 768">
+        <div class="dentistryServices-title">
+          <div class="dentistryServices-title-in bb">「即剝即種」技術</div>
+        </div>
+        <div class="technology-in">
+          <div class="technology-in-t">
+            植牙流程需要經歷一段中長期的骨整合與復原，患者可能因為工作狀況或條件不允許，所以無法執行完整的植牙流程，我們會建議患者可以執行即剝即種植牙。
+          </div>
+          <div class="technology-in-img">
+            <img
+              src="https://static.cmereye.com/imgs/2024/04/bd2194046affe383.gif"
+              alt=""
+            />
+          </div>
+          <div class="technology-in-b">
+            此效果會根據個人健康狀況有所差異，需經過專業的療程評估
+          </div>
+        </div>
+        <div class="technology-btn">
+          <PageAnimBtnTypeTwo str="取得免費口腔CT檢查" />
         </div>
       </div>
       <div class="Plant_brand_series" v-if="windowWidth > 768">
@@ -963,282 +1316,7 @@ const { height } = useWindowSize()
           </div>
         </div>
       </div>
-      <div class="brand_mobile" v-if="windowWidth < 768">
-        <div class="dentistryServices-title">
-          <div class="dentistryServices-title-in bb">植體品牌系列</div>
-        </div>
-        <div class="brand_mobile_items">
-          <div>
-            <div>
-              <div>
-                <img
-                  src="https://static.cmereye.com/imgs/2024/07/37d4aef16e4d00a0.png"
-                  alt=""
-                />
-              </div>
-              <div>
-                <div>
-                  <img
-                    src="https://static.cmereye.com/imgs/2024/07/ca3b3ebc455b892f.png"
-                    alt=""
-                  />
-                </div>
-                <div>美國皓聖</div>
-                <div>
-                  <p>
-                    <span>性價比</span>
-                    <span
-                      ><img src="../../assets/images/5star.svg" alt=""
-                    /></span>
-                  </p>
-                  <p>
-                    <span>耐用度</span>
-                    <span
-                      ><img src="../../assets/images/3star.svg" alt=""
-                    /></span>
-                  </p>
-                  <p>
-                    <span>客製化</span>
-                    <span
-                      ><img src="../../assets/images/3star.svg" alt=""
-                    /></span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <ul>
-              <li>經濟實惠，全球暢銷</li>
-              <li>純鈦材料，親和力強</li>
-              <li>特殊螺紋設計，適合即剝即種</li>
-            </ul>
-          </div>
-          <div>
-            <div>
-              <div>
-                <img
-                  src="https://static.cmereye.com/imgs/2024/07/91498e3f9a4adb19.png"
-                  alt=""
-                />
-              </div>
-              <div>
-                <div>
-                  <img
-                    src="https://static.cmereye.com/imgs/2024/07/64f940c14ac835cf.png"
-                    alt=""
-                  />
-                </div>
-                <div>韓國奧齒泰</div>
-                <div>
-                  <p>
-                    <span>性價比</span>
-                    <span
-                      ><img src="../../assets/images/3star.svg" alt=""
-                    /></span>
-                  </p>
-                  <p>
-                    <span>耐用度</span>
-                    <span
-                      ><img src="../../assets/images/3star.svg" alt=""
-                    /></span>
-                  </p>
-                  <p>
-                    <span>客製化</span>
-                    <span
-                      ><img src="../../assets/images/3star.svg" alt=""
-                    /></span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <ul>
-              <li>亞洲人種植首選</li>
-              <li>獲FDA、CE、SFDA三認證</li>
-              <li>體積小，譽為適合亞洲人的植體</li>
-            </ul>
-          </div>
-          <div>
-            <div>
-              <div>
-                <img
-                  src="https://static.cmereye.com/imgs/2024/07/fb7f79997f9b9881.png"
-                  alt=""
-                />
-              </div>
-              <div>
-                <div>
-                  <img
-                    src="https://static.cmereye.com/imgs/2024/07/672e62ecbd5f52ff.png"
-                    alt=""
-                  />
-                </div>
-                <div>瑞典尼奧斯</div>
-                <div>
-                  <p>
-                    <span>性價比</span>
-                    <span
-                      ><img src="../../assets/images/4star.svg" alt=""
-                    /></span>
-                  </p>
-                  <p>
-                    <span>耐用度</span>
-                    <span
-                      ><img src="../../assets/images/5star.svg" alt=""
-                    /></span>
-                  </p>
-                  <p>
-                    <span>客製化</span>
-                    <span
-                      ><img src="../../assets/images/4star.svg" alt=""
-                    /></span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <ul>
-              <li>穩固耐用</li>
-              <li>超親水表面處理，長期穩定</li>
-              <li>調節性能高，適用不同情況</li>
-            </ul>
-          </div>
-          <div>
-            <div>
-              <div>
-                <img
-                  src="https://static.cmereye.com/imgs/2024/07/682df234b160dbb7.png"
-                  alt=""
-                />
-              </div>
-              <div>
-                <div>
-                  <img
-                    src="https://static.cmereye.com/imgs/2024/07/99469581372832b7.png"
-                    alt=""
-                  />
-                </div>
-                <div>德國Ankylos</div>
-                <div>
-                  <p>
-                    <span>性價比</span>
-                    <span
-                      ><img src="../../assets/images/4star.svg" alt=""
-                    /></span>
-                  </p>
-                  <p>
-                    <span>耐用度</span>
-                    <span
-                      ><img src="../../assets/images/4star.svg" alt=""
-                    /></span>
-                  </p>
-                  <p>
-                    <span>客製化</span>
-                    <span
-                      ><img src="../../assets/images/5star.svg" alt=""
-                    /></span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <ul>
-              <li>專利精密設計，穩定出眾，終身保養</li>
-              <li>個人化美學設計，滿意度高</li>
-              <li>完美保存牙骨及組織</li>
-            </ul>
-          </div>
-          <div>
-            <div>
-              <div>
-                <img
-                  src="https://static.cmereye.com/imgs/2024/07/273c0a26b796a509.png"
-                  alt=""
-                />
-              </div>
-              <div>
-                <div>
-                  <img
-                    src="https://static.cmereye.com/imgs/2024/07/fb380b1160ac9312.png"
-                    alt=""
-                  />
-                </div>
-                <div>瑞士士卓曼</div>
-                <div>
-                  <p>
-                    <span>性價比</span>
-                    <span
-                      ><img src="../../assets/images/4star.svg" alt=""
-                    /></span>
-                  </p>
-                  <p>
-                    <span>耐用度</span>
-                    <span
-                      ><img src="../../assets/images/5star.svg" alt=""
-                    /></span>
-                  </p>
-                  <p>
-                    <span>客製化</span>
-                    <span
-                      ><img src="../../assets/images/4star.svg" alt=""
-                    /></span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <ul>
-              <li>國際頂級植體，價格平香港1/3</li>
-              <li>國際口腔植牙協會推薦</li>
-              <li>癒合時間短，最快4週完成</li>
-              <li>煙酒及糖尿病人士適用</li>
-              <li>全球終身保養</li>
-            </ul>
-          </div>
-          <div>
-            <div>
-              <div>
-                <img
-                  src="https://static.cmereye.com/imgs/2024/11/d0491768aa6c1cff.png"
-                  alt=""
-                />
-              </div>
-              <div>
-                <div>
-                  <img
-                    src="https://static.cmereye.com/imgs/2024/07/fb380b1160ac9312.png"
-                    alt=""
-                  />
-                </div>
-                <div>瑞士士卓曼BLX</div>
-                <div>
-                  <p>
-                    <span>性價比</span>
-                    <span
-                      ><img src="../../assets/images/4star.svg" alt=""
-                    /></span>
-                  </p>
-                  <p>
-                    <span>耐用度</span>
-                    <span
-                      ><img src="../../assets/images/5star.svg" alt=""
-                    /></span>
-                  </p>
-                  <p>
-                    <span>客製化</span>
-                    <span
-                      ><img src="../../assets/images/5star.svg" alt=""
-                    /></span>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <ul>
-              <li>獨特植體保留更多骨頭，創傷更小</li>
-              <li>親水性抗發炎，加快骨細胞與植體結合</li>
-              <li>癒合時間最短，最快3-4週完成</li>
-              <li>大量長期文獻支持</li>
-              <li>原廠全球終身保養</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="technology">
+      <div class="technology" v-if="windowWidth > 767">
         <div class="dentistryServices-title">
           <div class="dentistryServices-title-in bb">「即剝即種」技術</div>
         </div>
@@ -1367,8 +1445,7 @@ const { height } = useWindowSize()
           </div>
         </div>
       </div>
-
-      <div class="classify">
+      <div class="classify" v-if="windowWidth > 768">
         <div
           class="dentistryServices-title-in bb notice-title-in classify-title"
         >
@@ -1483,10 +1560,118 @@ const { height } = useWindowSize()
           </div>
         </div>
       </div>
-
-      <div class="doctorTeam" ref="doctorTeam">
+      <div class="classify" v-if="windowWidth < 768">
+        <div
+          class="dentistryServices-title-in bb notice-title-in classify-title"
+        >
+          <span>植牙技術及類別</span>
+        </div>
+        <div class="">
+          <div></div>
+          <div>微創植牙</div>
+          <div>傳統植牙</div>
+          <div></div>
+          <div>
+            <img
+              src="https://statichk.cmermedical.com/smile/2024122414593001.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://statichk.cmermedical.com/smile/2024122414594301.png"
+              alt=""
+            />
+          </div>
+          <div>傷口大小</div>
+          <div>
+            <img
+              src="https://statichk.cmermedical.com/smile/2024122414595601.svg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://statichk.cmermedical.com/smile/2024122415001001.svg"
+              alt=""
+            />
+          </div>
+          <div>腫脹不適</div>
+          <div>
+            <img
+              src="https://statichk.cmermedical.com/smile/2024122414595601.svg"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://statichk.cmermedical.com/smile/2024122415001001.svg"
+              alt=""
+            />
+          </div>
+          <div>手術速度</div>
+          <div>
+            <img
+              src="https://statichk.cmermedical.com/smile/2024122415002701.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://statichk.cmermedical.com/smile/2024122415003601.png"
+              alt=""
+            />
+          </div>
+          <div>復原速度</div>
+          <div>
+            <img
+              src="https://statichk.cmermedical.com/smile/2024122415002701.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://statichk.cmermedical.com/smile/2024122415004801.png"
+              alt=""
+            />
+          </div>
+          <div>特點</div>
+          <div>
+            <span>電腦導航，直接透過手術導板穿透軟組織將植牙放到牙骨裡面</span>
+            <span>可以不用開刀縫針，減低感染風險</span>
+            <span>直接種植於現有顎骨結構，補骨需求小</span>
+          </div>
+          <div>
+            <span
+              >以傳統手術刀切口，手術後需等數個月讓植牙組織與人體結合為一個穩固的基礎，方可安裝人造牙齒</span
+            >
+            <span> 傷口較大需縫合、療合時間較長 </span>
+            <span>如顎骨密度不足或有缺陷，或需進行額外的補骨手術 </span>
+          </div>
+        </div>
+      </div>
+      <div class="Dental_implant_technology-img" v-if="windowWidth < 768">
+        <img
+          src="https://static.cmereye.com/imgs/2024/02/889bd45e5e2ee385.png"
+          alt=""
+        />
+      </div>
+      <div class="doctorTeam" v-if="windowWidth > 768" ref="doctorTeam">
         <!-- <ServiceSpecializedTeam :doctorData="doctorData" /> -->
         <ServiceSpecializedTeamNew :doctorData="doctorData" />
+      </div>
+      <div class="new_doctor" v-if="windowWidth < 768">
+        <div class="implantCase-title dentistryServices-title">
+          <div class="dentistryServices-title-in bb implantCase-title-in">
+            種植專科團隊
+          </div>
+        </div>
+        <div class="group_photo" v-if="checkGroupPhoto()">
+          <img :src="checkGroupPhoto()" alt="" />
+        </div>
+        <div class="team_doctor_everybody">
+          <NewDoctor :id="checkId" />
+        </div>
       </div>
       <div class="implantCase">
         <div class="implantCase-title dentistryServices-title">
@@ -1494,7 +1679,7 @@ const { height } = useWindowSize()
             植牙案例
           </div>
         </div>
-        <div class="implantCase-content">
+        <div class="implantCase-content" v-if="windowWidth > 768">
           <swiper
             class="implantCaseBoxSwiper"
             :loop="true"
@@ -1586,8 +1771,54 @@ const { height } = useWindowSize()
             ></PageSwiperPointLine>
           </div>
         </div>
+        <div class="implantCase-content" v-if="windowWidth < 768">
+          <swiper
+            class="implantCaseBoxSwiper"
+            :loop="true"
+            :autoplay="{
+              delay: 4000,
+            }"
+            @swiper="setImplantCaseSwiperRefMb"
+            @slideChange="onSlideImplantCaseChangeMb"
+          >
+            <swiper-slide v-for="(item, index) in caseList" :key="index">
+              <div class="implantCase-content-in">
+                <div class="afterBefore">
+                  <div>手術前</div>
+                  <div>手術後</div>
+                </div>
+                <div class="itemImgDetails">
+                  <div v-for="(e, i) in item" :key="i">
+                    <img v-if="e" :src="e" alt="" />
+                  </div>
+                </div>
+              </div>
+            </swiper-slide>
+          </swiper>
+          <div class="btnImgCase">
+            <div class="leftBtn" @click="handleProcessBtn('slidePrev')">
+              <img
+                src="https://statichk.cmermedical.com/ckj/image/2024122411123501.png"
+                alt=""
+              />
+            </div>
+            <div class="rightBtn" @click="handleProcessBtn('slideNext')">
+              <img
+                src="https://statichk.cmermedical.com/ckj/image/2024122411125201.png"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="implantCase-content-line">
+            <PageSwiperPointLine
+              :latestNewsNum="caseList.length"
+              :latestNewsCurrent="implantCaseCurrentMb"
+              @changeLineCur="handleLineCur"
+            ></PageSwiperPointLine>
+          </div>
+        </div>
       </div>
-      <div class="confidence_ecommendation">
+      <div class="confidence_ecommendation" v-if="windowWidth > 768">
         <div class="dentistryServices-title">
           <div class="dentistryServices-title-in bb">香港媒體信心推薦</div>
         </div>
@@ -1600,7 +1831,7 @@ const { height } = useWindowSize()
           </div>
         </div>
       </div>
-      <div class="youtobe-video">
+      <div class="youtobe-video" v-if="windowWidth > 768">
         <div class="youtobe-video-in">
           <iframe
             width="560"
@@ -1612,7 +1843,7 @@ const { height } = useWindowSize()
           ></iframe>
         </div>
       </div>
-      <div class="note">
+      <div class="note" v-if="windowWidth > 768">
         <div class="dentistryServices-title note-title">
           <div class="dentistryServices-title-in bb note-title-in">
             {{ $t('pages.dental-service.implant.note.title') }}
@@ -1633,11 +1864,11 @@ const { height } = useWindowSize()
       </div>
       <!-- <ServiceCase v-if="windowWidth > 768" /> -->
       <div class="note-mobile">
-        <div class="index_title">客戶分享</div>
+        <div class="index_title" v-if="windowWidth > 768">客戶分享</div>
         <div class="note-bg-mobile">
           <div>
-            <span>締造自信燦爛笑顏</span>
-            <span>我只揀愛康健！</span>
+            <span v-if="windowWidth > 768">締造自信燦爛笑顏</span>
+            <span v-if="windowWidth > 768">我只揀愛康健！</span>
           </div>
           <div>
             <div>
@@ -1671,6 +1902,74 @@ const { height } = useWindowSize()
             </div>
             <div>
               之前對植牙非常抗拒，但愛康健的醫生非常專業，醫植牙效果很好！特別感謝李美京醫生和顧主任，他們十分用心幫助我，讓我感覺很放心。整體來說，這次植牙體驗非常好，推薦給需要植牙的朋友們！😀
+            </div>
+          </div>
+          <div v-if="windowWidth < 768">
+            <span>締造自信燦爛笑顏</span>
+            <span>我只揀愛康健！</span>
+          </div>
+        </div>
+      </div>
+      <div v-if="windowWidth < 768" class="confidence_ecommendation">
+        <div class="dentistryServices-title">
+          <div class="dentistryServices-title-in bb">香港媒體信心推薦</div>
+        </div>
+        <div class="confidence_ecommendation-in">
+          <div
+            v-for="(item, index) in confidence_ecommendation_lists"
+            :key="index"
+          >
+            <img :src="item" alt="" />
+          </div>
+        </div>
+      </div>
+      <div class="youtobe-video" v-if="windowWidth < 768">
+        <div class="youtobe-video-in">
+          <iframe
+            width="560"
+            src="https://www.youtube.com/embed/u1wuly-2FGA?si=sQaXBCB8NzH482Dm"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <div class="note" v-if="windowWidth < 768">
+        <div class="dentistryServices-title note-title">
+          <div class="dentistryServices-title-in bb note-title-in">
+            {{ $t('pages.dental-service.implant.note.title') }}
+          </div>
+        </div>
+        <div class="noteCard pageCon">
+          <div
+            class="noteCard-in"
+            v-for="(note, noteIndex) in noteLists"
+            :key="noteIndex"
+          >
+            <div class="noteCard-in-image">
+              <img :src="note.img" alt="" />
+            </div>
+            <div class="noteCard-in-name">{{ $t(note.name) }}</div>
+          </div>
+        </div>
+      </div>
+      <div class="plague" v-if="windowWidth < 768">
+        <div class="plague-in">
+          <div class="dentistryServices-title plague-title">
+            <div class="dentistryServices-title-in bb plague-title-in">
+              {{ plagueData.title }}
+            </div>
+          </div>
+          <div class="plague-lists">
+            <div
+              v-for="(plagueItem, plagueIndex) in plagueData.lists"
+              :key="plagueIndex"
+            >
+              <span v-if="plagueItem.type === 'text'">{{
+                plagueItem.context
+              }}</span>
+              <img v-else :src="plagueItem.context" alt="" />
             </div>
           </div>
         </div>
@@ -1831,8 +2130,8 @@ const { height } = useWindowSize()
     &-title {
       order: 1;
       margin: 0 auto;
-      margin-top: 144px;
-      margin-bottom: 50px;
+      margin-top: 75px;
+      margin-bottom: 30px;
     }
     &-video {
       order: 3;
@@ -3578,6 +3877,9 @@ const { height } = useWindowSize()
   }
 }
 @media screen and (max-width: 768px) {
+  :deep(.problem){
+    margin-top: 30px !important;
+  }
   :deep(.explain_box_mobile) {
     top: 0px !important;
     margin-left: 0 !important;
@@ -3794,6 +4096,7 @@ const { height } = useWindowSize()
     }
     .note {
       margin-top: 50px;
+      max-width: 100%;
       &-title {
         &-in {
           font-size: 26px;
@@ -3947,30 +4250,36 @@ const { height } = useWindowSize()
     }
     .Plant_brand_series {
       margin-top: 30px;
-      display: none !important;
+      // display: none !important;
       &-tab {
         padding: 0 30px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0;
         & > span {
           font-size: 15px;
           line-height: 160%;
           & > span {
             display: block;
           }
-          &:nth-of-type(1) {
-            flex: 1;
-          }
-          &:nth-of-type(2) {
-            flex: 1.2;
-          }
-          &:nth-of-type(3) {
-            flex: 1.4;
-          }
-          &:nth-of-type(4) {
-            flex: 1;
-          }
-          &:nth-of-type(5) {
-            flex: 1.2;
-          }
+          // &:nth-of-type(1) {
+          //   flex: 1;
+          // }
+          // &:nth-of-type(2) {
+          //   flex: 1.2;
+          // }
+          // &:nth-of-type(3) {
+          //   flex: 1.4;
+          // }
+          // &:nth-of-type(4) {
+          //   flex: 1;
+          // }
+          // &:nth-of-type(5) {
+          //   flex: 1.2;
+          // }
+          border-left: 2px solid var(--indexColor1);
+          width: 100%;
+          border-bottom: 2px solid var(--indexColor1);
           &:hover {
             background: none;
             color: var(--indexColor1);
@@ -3979,6 +4288,37 @@ const { height } = useWindowSize()
             background: var(--indexColor1);
             color: #fff;
           }
+          border-top: none !important;
+          border-right: none !important;
+          border-radius: 0 !important;
+          white-space: nowrap;
+          box-sizing: border-box;
+          padding: 4px 10px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+        // 选择后3个span
+        & > span:nth-child(1) {
+          // border-right: 2px solid var(--indexColor1);
+          // border-top: 2px solid var(--indexColor1);
+          border-top: 2px solid var(--indexColor1) !important;
+          border-radius: 15px 0 0 0 !important;
+        }
+        & > span:nth-child(2) {
+          border-top: 2px solid var(--indexColor1) !important;
+        }
+        & > span:nth-child(3) {
+          border-top: 2px solid var(--indexColor1) !important;
+          border-right: 2px solid var(--indexColor1) !important;
+          border-radius: 0 15px 0 0 !important;
+        }
+        & > span:nth-child(4) {
+          border-radius: 0 0 0 15px !important;
+        }
+        & > span:nth-child(6) {
+          border-right: 2px solid var(--indexColor1) !important;
+          border-radius: 0 0 15px 0 !important;
         }
       }
       &-content {
@@ -4101,17 +4441,52 @@ const { height } = useWindowSize()
         &-in {
           padding-bottom: 40px;
           position: relative;
-          &:after {
-            content: '';
-            display: inline-block;
-            width: 17px;
-            height: 28px;
-            position: absolute;
-            top: 0px;
-            right: 60px;
-            -webkit-animation: identifier 0.9s infinite;
-            animation: identifier 0.9s infinite;
+          box-sizing: border-box;
+          padding: 0 15px;
+          .afterBefore {
+            display: flex;
+            justify-content: center;
+            gap: 0 120px;
+            margin-bottom: 6px;
+            & > div {
+              font-family: FakePearl;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 160%; /* 32px */
+            }
+            & > div:nth-child(1) {
+              color: var(--Blue-Deep, #00aeff);
+            }
+            & > div:nth-child(2) {
+              color: var(--Theme-Color, #fc1682);
+            }
           }
+          .itemImgDetails {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+          }
+          // &:after {
+          //   content: '';
+          //   display: inline-block;
+          //   width: 17px;
+          //   height: 28px;
+          //   position: absolute;
+          //   top: 0px;
+          //   right: 60px;
+          //   -webkit-animation: identifier 0.9s infinite;
+          //   animation: identifier 0.9s infinite;
+          // }
+        }
+        position: relative;
+        .btnImgCase {
+          position: absolute;
+          top: 40%;
+          display: flex;
+          justify-content: space-between;
+          z-index: 10;
+          width: 100%;
         }
       }
     }
@@ -4283,6 +4658,56 @@ const { height } = useWindowSize()
       }
     }
   }
+  .new_doctor {
+    margin: 52px auto 64px;
+  }
+  .btn-right-left {
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    top: 35%;
+    width: 100%;
+    z-index: 10;
+  }
+  .item_compare {
+    display: flex;
+    flex-direction: column;
+    & > div {
+      display: flex;
+      align-items: center;
+      gap: 0 5px;
+      & > div:nth-child(1) {
+        color: var(--Theme-Color, #fc1682);
+        font-family: FakePearl;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%; /* 20.8px */
+      }
+      & > div:nth-child(2) {
+        max-width: 84px;
+        height: auto;
+        & > img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+  .dentistryServices-title {
+    margin-bottom: 25px;
+  }
+  .Plant_brand_series-content {
+    & > div:nth-child(2) > span {
+      color: var(--Grey-Deep, #4d4d4d);
+      font-family: FakePearl;
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 24px */
+      letter-spacing: 1.5px;
+    }
+  }
   .step-in {
     position: relative;
   }
@@ -4326,11 +4751,83 @@ const { height } = useWindowSize()
     max-width: 100vw !important;
     width: 100vw;
     margin-top: 0 !important;
+    box-sizing: border-box;
+    padding: 0 15px;
+    & > div:nth-child(2) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      position: relative;
+      & > div:nth-child(2),
+      & > div:nth-child(3) {
+        border-radius: 10px 10px 0px 0px;
+        background: var(--Theme-Color, #fc1682);
+        color: var(--White, #fff);
+        text-align: center;
+        font-family: FakePearl;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 130%; /* 20.8px */
+        box-sizing: border-box;
+        padding: 5px 0;
+        white-space: nowrap;
+      }
+      & > div:nth-child(3) {
+        border-radius: 10px 10px 0px 0px;
+        background: var(--Blue-Deep, #00aeff);
+      }
+      & > div:nth-child(7) {
+        border-radius: 10px 0px 0px 0px;
+      }
+      & > div:nth-child(19) {
+        border-radius: 0px 0px 0px 10px;
+      }
+      & > div:nth-child(3n + 1):not(:nth-child(1)):not(:nth-child(4)) {
+        border: 1px solid var(--White, #fff);
+        border-right: 0 !important;
+        background: var(--Pink-Pale, #fee6f1);
+        color: var(--Grey-Deep, #4d4d4d);
+        text-align: center;
+        font-family: FakePearl;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%; /* 19.2px */
+        letter-spacing: 1.2px;
+        box-sizing: border-box;
+        padding: 6px 0;
+        white-space: nowrap;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      & > div:nth-child(3n + 2):not(:nth-child(2)):not(:nth-child(5)),
+      & > div:nth-child(3n + 3):not(:nth-child(3)):not(:nth-child(6)) {
+        & > img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+        }
+        border: 1px solid var(--Skin, #fff1f0);
+        display: flex;
+        flex-direction: column;
+        gap: 10px 0;
+        box-sizing: border-box;
+        padding: 8px 10px;
+        color: var(--Grey-Deep, #4d4d4d);
+        font-family: 'Noto Sans HK';
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 160%; /* 19.2px */
+        letter-spacing: 1.2px;
+      }
+    }
   }
   .classify-item {
     margin: 30px 0 50px;
     display: flex !important;
-    flex-direction: column !important;
+    // flex-direction: column !important;
     gap: 40px 0 !important;
     & > div {
       position: relative;
@@ -4397,27 +4894,6 @@ const { height } = useWindowSize()
         letter-spacing: 1.5px !important;
       }
     }
-    & > div:nth-child(2) {
-      & > div:nth-child(1) {
-        & > div:nth-child(1) {
-          background: var(--Blue-Deep, #00aeff);
-        }
-      }
-    }
-    & > div:last-child {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      color: var(--Theme-Color, #fc1682);
-      text-align: center;
-      font-family: FakePearl;
-      font-size: 15px !important;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 160%; /* 24px */
-      letter-spacing: 1.5px !important;
-      margin: 0 !important;
-    }
   }
   .note-mobile {
     margin-top: 40px;
@@ -4464,7 +4940,9 @@ const { height } = useWindowSize()
       align-items: flex-start !important;
       padding: 0 20px;
 
-      & > div:nth-child(1) {
+      & > div:nth-child(1),
+      & > div:last-child{
+        background: transparent !important;
         margin-top: 20px;
         display: flex;
         flex-direction: column;
@@ -4546,10 +5024,10 @@ const { height } = useWindowSize()
         display: flex;
         justify-content: space-between;
         padding-left: 25px;
-        &>div:nth-child(1){
+        & > div:nth-child(1) {
           width: 150px;
           height: 150px;
-          &>img{
+          & > img {
             width: 100%;
             height: 100%;
             object-fit: contain;
@@ -4711,7 +5189,7 @@ const { height } = useWindowSize()
     & > div:nth-child(6) {
       & > div:nth-child(1) {
         & > div:nth-child(2) {
-          & > div:nth-child(2){
+          & > div:nth-child(2) {
             background: var(--Theme-Color, #fc1682);
           }
           & > div:nth-child(2)::before {
