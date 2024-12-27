@@ -28,9 +28,24 @@ defineProps({
 })
 const menuBoxBool = ref(false)
 const windowWidth = ref(1920)
+
+onMounted(() => {
+  getWindowWidth()
+  console.log(window.innerWidth,'window.innerWidth');
+
+  windowWidth.value = window.innerWidth
+  window.addEventListener('resize', () => {
+    getWindowWidth()
+    windowWidth.value = window.innerWidth
+  })
+  window.addEventListener('contextmenu', function (e) {
+    e.preventDefault()
+  })
+})
 const getWindowWidth = () => {
   windowWidth.value = window.innerWidth
 }
+
 const menuLists: any = [
   {
     name: 'components.header.menuLists.menu_index.name',
@@ -108,10 +123,10 @@ const menuLists: any = [
       //   name: 'components.areaTabs.baoan',
       //   link: '/medical-team',
       // },
-      {
-        name: 'components.areaTabs.longhua',
-        link: '/medical-team',
-      },
+      // {
+      //   name: 'components.areaTabs.longhua',
+      //   link: '/medical-team',
+      // },
     ],
   },
   {
@@ -454,7 +469,7 @@ const changlangsfun = (_type) => {
             display: none;
           }
         }
-        .menuItem::after{
+        .menuItem::after {
           content: '';
           width: 130%;
           display: inline-block;
@@ -841,7 +856,7 @@ const changlangsfun = (_type) => {
             display: none;
           }
         }
-        .menuItem::after{
+        .menuItem::after {
           content: '';
           width: 130%;
           display: inline-block;
@@ -1233,7 +1248,7 @@ const changlangsfun = (_type) => {
             display: none;
           }
         }
-        .menuItem::after{
+        .menuItem::after {
           content: '';
           width: 120%;
           display: inline-block;

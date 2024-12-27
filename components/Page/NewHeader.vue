@@ -99,10 +99,10 @@ const menuLists: any = [
       //   name: 'components.areaTabs.baoan',
       //   link: '/medical-team',
       // },
-      {
-        name: 'components.areaTabs.longhua',
-        link: '/medical-team',
-      },
+      // {
+      //   name: 'components.areaTabs.longhua',
+      //   link: '/medical-team',
+      // },
     ],
   },
   {

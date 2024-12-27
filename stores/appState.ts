@@ -20,7 +20,7 @@ export const useAppState = defineStore('appData', {
       'components.areaTabs.futian',
       'components.areaTabs.nanshan',
       // 'components.areaTabs.baoan',
-      'components.areaTabs.longhua'
+      // 'components.areaTabs.longhua'
     ],
     isShowForm: false,
     langs: 't',
@@ -29,7 +29,7 @@ export const useAppState = defineStore('appData', {
       'fu_tian',
       'nan_shan',
       // 'po_on',
-      'long_hua'
+      // 'long_hua'
     ]
   }),
   actions: {

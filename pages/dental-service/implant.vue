@@ -369,6 +369,8 @@ onMounted(() => {
   window.addEventListener('contextmenu', function (e) {
     e.preventDefault()
   })
+  getWindowWidth()
+  windowWidth.value = window.innerWidth
 })
 const getWindowWidth = () => {
   windowWidth.value = window.innerWidth
@@ -720,6 +722,7 @@ const confidence_ecommendation_lists = [
   'https://static.cmereye.com/imgs/2024/04/92da0e78f2e38668.png',
   'https://static.cmereye.com/imgs/2024/04/84aa355621c9685d.png',
   'https://static.cmereye.com/imgs/2024/04/068ec100a33952ea.png',
+  'https://statichk.cmermedical.com/ckj/image/2024122710023601.png'
 ]
 
 const doctorTeam = ref(null)
@@ -3877,7 +3880,7 @@ const checkGroupPhoto = () => {
   }
 }
 @media screen and (max-width: 768px) {
-  :deep(.problem){
+  :deep(.problem) {
     margin-top: 30px !important;
   }
   :deep(.explain_box_mobile) {
@@ -4757,6 +4760,8 @@ const checkGroupPhoto = () => {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       position: relative;
+      max-width: 331px;
+      overflow: hidden;
       & > div:nth-child(2),
       & > div:nth-child(3) {
         border-radius: 10px 10px 0px 0px;
@@ -4941,7 +4946,7 @@ const checkGroupPhoto = () => {
       padding: 0 20px;
 
       & > div:nth-child(1),
-      & > div:last-child{
+      & > div:last-child {
         background: transparent !important;
         margin-top: 20px;
         display: flex;

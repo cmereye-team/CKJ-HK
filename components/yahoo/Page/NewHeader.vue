@@ -96,10 +96,10 @@ const menuLists: any = [
       //   name: 'components.areaTabs.baoan',
       //   link: '/medical-team',
       // },
-      {
-        name: 'components.areaTabs.longhua',
-        link: '/yahoo/medical-team',
-      },
+      // {
+      //   name: 'components.areaTabs.longhua',
+      //   link: '/yahoo/medical-team',
+      // },
     ],
   },
   {
