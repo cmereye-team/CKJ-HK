@@ -730,7 +730,7 @@ const confidence_ecommendation_lists = [
   'https://static.cmereye.com/imgs/2024/04/92da0e78f2e38668.png',
   'https://static.cmereye.com/imgs/2024/04/84aa355621c9685d.png',
   'https://static.cmereye.com/imgs/2024/04/068ec100a33952ea.png',
-  'https://statichk.cmermedical.com/ckj/image/2024122710023601.png'
+  'https://statichk.cmermedical.com/ckj/image/2024122710023601.png',
 ]
 
 const doctorTeam = ref(null)
@@ -793,6 +793,7 @@ const checkGroupPhoto = () => {
           $t(introduceData.tabNavName)
         }}</span>
       </div>
+      <!--
       <div class="plague" v-if="windowWidth > 768">
         <div class="plague-in">
           <div class="dentistryServices-title plague-title">
@@ -810,6 +811,239 @@ const checkGroupPhoto = () => {
               }}</span>
               <img v-else :src="plagueItem.context" alt="" />
             </div>
+          </div>
+        </div>
+      </div>
+      -->
+      <div class="Dental_implant_technology">
+        <div class="dentistryServices-title Dental_implant_technology-title">
+          <div class="dentistryServices-title-in bb">種植牙技術</div>
+        </div>
+        <div class="Dental_implant_technology-context" v-if="windowWidth < 768">
+          利用鈦金屬等物料製作成植體，然後植入進行牙槽骨當中，代替牙根以作支撐，然後在上面植入假牙、牙橋或假牙托來填補空缺的牙齒。隨着醫療技術的進步，現在不僅有傳統的植牙方式，還有微創植牙。
+        </div>
+        <div class="Dental_implant_technology-context" style="display: none">
+          為了提供精准化的種植牙服務，運用先進電腦圖形影像技術，對客戶進行定制化分析。根據口腔內CT掃描和光學掃描的數據，在電腦上重建下顎骨立體模型，旨在確保每次種植的精準性和成功率。
+        </div>
+        <div class="Dental_implant_technology-video" v-if="windowWidth > 768">
+          <div class="youtobe-video">
+            <div class="youtobe-video-in">
+              <iframe
+                width="560"
+                src="https://www.youtube.com/embed/WCbVfokM-iU?si=FBsi3CnSYRK31JwB"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="Plant_brand_series" v-if="windowWidth > 768">
+        <div class="dentistryServices-title">
+          <div class="dentistryServices-title-in bb">植體品牌系列</div>
+        </div>
+        <div class="Plant_brand_series-tab" v-if="windowWidth > 768">
+          <span
+            :class="{ active: Plant_brand_series_cur === tabIndex }"
+            v-for="(tabItem, tabIndex) in Plant_brand_series_data"
+            :key="tabIndex"
+            @click="handle_lant_brand_series_tab(tabIndex)"
+          >
+            <span
+              v-for="(tabspanitem, tabspanindex) in tabItem.name"
+              :key="tabspanindex"
+            >
+              {{ tabspanitem }}
+            </span>
+          </span>
+        </div>
+        <Swiper
+          :loop="true"
+          :modules="[Autoplay]"
+          :autoplay="{
+            delay: 3000,
+          }"
+          @swiper="set_plant_brand_series_ref"
+          @slideChange="on_plant_brand_series_change"
+        >
+          <Swiper-slide
+            v-for="(
+              plant_brand_series_item, plant_brand_series_index
+            ) in Plant_brand_series_data"
+            :key="plant_brand_series_index"
+          >
+            <div class="Plant_brand_series-content">
+              <div>
+                <div class="Plant_brand_series-content-l">
+                  <div><img :src="plant_brand_series_item.img" alt="" /></div>
+                </div>
+                <div class="Plant_brand_series-content-r">
+                  <div>
+                    <div>
+                      <img :src="plant_brand_series_item.logo" alt="" />
+                    </div>
+                    <div>
+                      <img :src="plant_brand_series_item.nation" alt="" />
+                    </div>
+                    <div class="item_compare">
+                      <div>
+                        <div>性價比</div>
+                        <div>
+                          <img
+                            :src="plant_brand_series_item.compare[0]"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <div>耐用度</div>
+                        <div>
+                          <img
+                            :src="plant_brand_series_item.compare[1]"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <div>
+                        <div>客製化</div>
+                        <div>
+                          <img
+                            :src="plant_brand_series_item.compare[2]"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <span
+                  v-for="(item, index) in plant_brand_series_item.lists"
+                  :key="index"
+                >
+                  {{ item }}
+                </span>
+              </div>
+            </div>
+          </Swiper-slide>
+        </Swiper>
+        <div class="brand_btn">
+          <div class="brand_btn_left" @click="brand_btn('slidePrev')">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="107"
+              height="107"
+              viewBox="0 0 107 107"
+              fill="none"
+            >
+              <g filter="url(#filter0_d_1167_2367)">
+                <circle cx="51.5" cy="51.5" r="49.5" fill="white" />
+              </g>
+              <path
+                d="M59.0859 69.3037L38.999 51.4994L59.0859 33.695"
+                stroke="#FC1682"
+                stroke-width="10"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <defs>
+                <filter
+                  id="filter0_d_1167_2367"
+                  x="0"
+                  y="0"
+                  width="107"
+                  height="107"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset dx="2" dy="2" />
+                  <feGaussianBlur stdDeviation="2" />
+                  <feComposite in2="hardAlpha" operator="out" />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0.988235 0 0 0 0 0.0862745 0 0 0 0 0.509804 0 0 0 0.24 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="BackgroundImageFix"
+                    result="effect1_dropShadow_1167_2367"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="effect1_dropShadow_1167_2367"
+                    result="shape"
+                  />
+                </filter>
+              </defs>
+            </svg>
+          </div>
+          <div class="brand_btn_right" @click="brand_btn('slideNext')">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="107"
+              height="107"
+              viewBox="0 0 107 107"
+              fill="none"
+            >
+              <g filter="url(#filter0_d_1166_2259)">
+                <circle cx="51.5" cy="51.5" r="49.5" fill="white" />
+              </g>
+              <path
+                d="M43 31L65.6154 51.4878L43 73"
+                stroke="#FC1682"
+                stroke-width="9.69231"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <defs>
+                <filter
+                  id="filter0_d_1166_2259"
+                  x="0"
+                  y="0"
+                  width="107"
+                  height="107"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset dx="2" dy="2" />
+                  <feGaussianBlur stdDeviation="2" />
+                  <feComposite in2="hardAlpha" operator="out" />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0.988235 0 0 0 0 0.0862745 0 0 0 0 0.509804 0 0 0 0.24 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="BackgroundImageFix"
+                    result="effect1_dropShadow_1166_2259"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="effect1_dropShadow_1166_2259"
+                    result="shape"
+                  />
+                </filter>
+              </defs>
+            </svg>
           </div>
         </div>
       </div>
@@ -1067,37 +1301,7 @@ const checkGroupPhoto = () => {
           </div>
         </div>
       </div>
-      <div class="Dental_implant_technology">
-        <div class="dentistryServices-title Dental_implant_technology-title">
-          <div class="dentistryServices-title-in bb">種植牙技術</div>
-        </div>
-        <div class="Dental_implant_technology-context" v-if="windowWidth < 768">
-          利用鈦金屬等物料製作成植體，然後植入進行牙槽骨當中，代替牙根以作支撐，然後在上面植入假牙、牙橋或假牙托來填補空缺的牙齒。隨着醫療技術的進步，現在不僅有傳統的植牙方式，還有微創植牙。
-        </div>
-        <div class="Dental_implant_technology-context">
-          為了提供精准化的種植牙服務，運用先進電腦圖形影像技術，對客戶進行定制化分析。根據口腔內CT掃描和光學掃描的數據，在電腦上重建下顎骨立體模型，旨在確保每次種植的精準性和成功率。
-        </div>
-        <div class="Dental_implant_technology-video" v-if="windowWidth > 768">
-          <div class="youtobe-video">
-            <div class="youtobe-video-in">
-              <iframe
-                width="560"
-                src="https://www.youtube.com/embed/WCbVfokM-iU?si=FBsi3CnSYRK31JwB"
-                title="YouTube video player"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
-              ></iframe>
-            </div>
-          </div>
-        </div>
-        <div class="Dental_implant_technology-img" v-if="windowWidth > 768">
-          <img
-            src="https://static.cmereye.com/imgs/2024/02/889bd45e5e2ee385.png"
-            alt=""
-          />
-        </div>
-      </div>
+
       <div class="technology" v-if="windowWidth < 768">
         <div class="dentistryServices-title">
           <div class="dentistryServices-title-in bb">「即剝即種」技術</div>
@@ -1120,7 +1324,7 @@ const checkGroupPhoto = () => {
           <PageAnimBtnTypeTwo str="取得免費口腔CT檢查" />
         </div>
       </div>
-      <div class="Plant_brand_series" v-if="windowWidth > 768">
+      <!-- <div class="Plant_brand_series" v-if="windowWidth > 768">
         <div class="dentistryServices-title">
           <div class="dentistryServices-title-in bb">植體品牌系列</div>
         </div>
@@ -1326,7 +1530,7 @@ const checkGroupPhoto = () => {
             </svg>
           </div>
         </div>
-      </div>
+      </div> -->
       <div class="technology" v-if="windowWidth > 767">
         <div class="dentistryServices-title">
           <div class="dentistryServices-title-in bb">「即剝即種」技術</div>
@@ -1565,10 +1769,10 @@ const checkGroupPhoto = () => {
               <li>如顎骨密度不足或有缺陷，或需進行額外的補骨手術</li>
             </ul>
           </div>
-          <div>
+          <!-- <div>
             <span>*每個人的實際情況存在差異，</span>
             <span>建議諮詢您的牙醫了解最適合方案。</span>
-          </div>
+          </div> -->
         </div>
       </div>
       <div class="classify" v-if="windowWidth < 768">
@@ -1661,17 +1865,17 @@ const checkGroupPhoto = () => {
           </div>
         </div>
       </div>
-      <div class="Dental_implant_technology-img" v-if="windowWidth < 768">
+      <div class="Dental_implant_technology-img">
         <img
           src="https://static.cmereye.com/imgs/2024/02/889bd45e5e2ee385.png"
           alt=""
         />
       </div>
-      <div class="doctorTeam" v-if="windowWidth > 768" ref="doctorTeam">
-        <!-- <ServiceSpecializedTeam :doctorData="doctorData" /> -->
+      <!-- <div class="doctorTeam" v-if="windowWidth > 768" ref="doctorTeam">
+        <ServiceSpecializedTeam :doctorData="doctorData" />
         <ServiceSpecializedTeamNew :doctorData="doctorData" />
-      </div>
-      <div class="new_doctor" v-if="windowWidth < 768">
+      </div> -->
+      <div class="new_doctor">
         <div class="implantCase-title dentistryServices-title">
           <div class="dentistryServices-title-in bb implantCase-title-in">
             種植專科團隊
@@ -1690,7 +1894,7 @@ const checkGroupPhoto = () => {
             植牙案例
           </div>
         </div>
-        <div class="implantCase-content" v-if="windowWidth > 768">
+        <div class="implantCase-content" style="display: none !important">
           <swiper
             class="implantCaseBoxSwiper"
             :loop="true"
@@ -1782,7 +1986,7 @@ const checkGroupPhoto = () => {
             ></PageSwiperPointLine>
           </div>
         </div>
-        <div class="implantCase-content" v-if="windowWidth < 768">
+        <div class="implantCase-content">
           <swiper
             class="implantCaseBoxSwiper"
             :loop="true"
@@ -1965,7 +2169,7 @@ const checkGroupPhoto = () => {
           </div>
         </div>
       </div>
-      <div class="plague" v-if="windowWidth < 768">
+      <div class="plague">
         <div class="plague-in">
           <div class="dentistryServices-title plague-title">
             <div class="dentistryServices-title-in bb plague-title-in">
@@ -2020,6 +2224,23 @@ const checkGroupPhoto = () => {
 }
 :deep(.implantCase-title) {
   align-items: center !important;
+}
+.new_doctor {
+  margin: 62px auto 50px;
+  .group_photo {
+    margin: 62px auto 50px;
+    max-width: 860px;
+  }
+  .team_doctor_everybody {
+    box-sizing: border-box;
+    display: grid;
+    gap: 0 94px;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 64px auto 100px;
+    max-width: 1000px;
+    padding: 0;
+    width: 100%;
+  }
 }
 @media (min-width: 1001px) and (max-width: 1452px) {
   :deep(.header-content-text-implant) {
@@ -2788,6 +3009,12 @@ const checkGroupPhoto = () => {
           height: auto;
         }
       }
+      & > div:last-child {
+        & > img {
+          width: 60%;
+          object-fit: contain;
+        }
+      }
     }
   }
   .technology {
@@ -2971,6 +3198,62 @@ const checkGroupPhoto = () => {
     }
   }
 }
+:deep(.introduce) {
+  .introduce-in {
+    width: fit-content;
+    margin: 20px auto;
+  }
+}
+.afterBefore {
+  display: flex;
+  justify-content: center;
+  gap: 0 500px;
+  margin-bottom: 20px;
+  & > div {
+    color: var(--Blue-Deep, #00aeff);
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 48px */
+    letter-spacing: 3px;
+  }
+  & > div:nth-child(2) {
+    color: var(--Theme-Color, #fc1682);
+  }
+}
+.itemImgDetails {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1140px;
+  justify-items: center;
+  margin: 0 auto;
+  & > div {
+    width: 560px;
+    height: 254px;
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.btnImgCase {
+  position: absolute;
+  top: 45%;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+  width: 100%;
+}
+.rightBtn {
+  position: absolute;
+  right: calc((100% - 1040px - 495px) / 2);
+  top: 25%;
+  cursor: pointer;
+  z-index: 2;
+}
 @media (min-width: 768px) and (max-width: 1920px) {
   .dentistryServices {
     background: #fff;
@@ -3087,7 +3370,7 @@ const checkGroupPhoto = () => {
       &-title {
         order: 1;
         margin: 0 auto;
-        margin-top: 144px;
+        margin-top: 74px;
         margin-bottom: 50px;
       }
       &-video {
@@ -3665,14 +3948,14 @@ const checkGroupPhoto = () => {
         }
         .leftBtn {
           position: absolute;
-          left: calc((100% - 562px - 495px) / 2);
+          left: calc((100% - 862px - 495px) / 2);
           top: 25%;
           cursor: pointer;
           z-index: 2;
         }
         .rightBtn {
           position: absolute;
-          right: calc((100% - 562px - 495px) / 2);
+          right: calc((100% - 862px - 495px) / 2);
           top: 25%;
           cursor: pointer;
           z-index: 2;
@@ -4768,7 +5051,7 @@ const checkGroupPhoto = () => {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       position: relative;
-      max-width: 331px;
+      max-width: 89.74vw;
       overflow: hidden;
       & > div:nth-child(2),
       & > div:nth-child(3) {
