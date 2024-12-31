@@ -198,7 +198,7 @@ const problemData = {
       </div>
       <div class="contact_map">
         <img
-          src="https://static.cmereye.com/imgs/2024/10/8e3b33149bcb34e8.png"
+          src="https://statichk.cmermedical.com/ckj/image/2024123114561501.png"
           alt=""
         />
       </div>

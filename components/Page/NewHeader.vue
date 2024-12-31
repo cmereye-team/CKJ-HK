@@ -175,12 +175,12 @@ const imgBgHeight = ref({
 
 const isFiexdHeader = ref(false)
 let bannerLists = ref([
-  {
-    name: '',
-    link: '',
-    pc: 'https://statichk.cmermedical.com/ckj/image/367b596eaaa1.avif',
-    mb: 'https://statichk.cmermedical.com/ckj/image/7c04a9e56ac4.avif?v=1.0.0',
-  },
+  // {
+  //   name: '',
+  //   link: '',
+  //   pc: 'https://statichk.cmermedical.com/ckj/image/367b596eaaa1.avif',
+  //   mb: 'https://statichk.cmermedical.com/ckj/image/7c04a9e56ac4.avif?v=1.0.0',
+  // },
   {
     name: '灣區長者醫療券banner',
     link: '/health-care-voucher',

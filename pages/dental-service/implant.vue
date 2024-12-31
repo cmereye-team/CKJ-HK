@@ -318,6 +318,14 @@ const problemData = {
       Q: 'pages.dental-service.implant.problem.lists[5].Q',
       A: 'pages.dental-service.implant.problem.lists[5].A',
     },
+    {
+      Q: 'pages.dental-service.implant.problem.lists[6].Q',
+      A: 'pages.dental-service.implant.problem.lists[6].A',
+    },
+    {
+      Q: 'pages.dental-service.implant.problem.lists[7].Q',
+      A: 'pages.dental-service.implant.problem.lists[7].A',
+    },
   ],
 }
 
