@@ -95,7 +95,7 @@ const stepData = {
     {
       title: '第1步',
       titleNum: '1',
-      img: 'https://raw.gitmirror.com/CMER-SZ/picx-images-hosting/master/ckjhk/Rectan427.3rp0grf76uu0.jpg',
+      img: 'https://statichk.cmermedical.com/ckj/image/82e238102f5f.png',
       name: '初步檢查',
       context:
         '會為客人進行初步的口腔檢查，並拍攝全口腔的電腦斷層掃描檢查(CT Scan)及側面的X光照片',
@@ -103,21 +103,21 @@ const stepData = {
     {
       title: '第2步',
       titleNum: '2',
-      img: 'https://raw.gitmirror.com/CMER-SZ/picx-images-hosting/master/ckjhk/Rect456an427.d4qq7c4j1x4.jpg',
+      img: 'https://statichk.cmermedical.com/ckj/image/6bfb78366c02.png',
       name: '策劃療程',
       context: '會根據客人的具體情況，制定出最適合的矯正方案',
     },
     {
       title: '第3步',
       titleNum: '3',
-      img: 'https://raw.gitmirror.com/CMER-SZ/picx-images-hosting/master/ckjhk/Rectangle45583427.35qu7qd8sei0.jpg',
+      img: 'https://statichk.cmermedical.com/ckj/image/0a7cce192120.png',
       name: '口腔治療',
       context: '矯齒前，會先治療客人的口腔疾病，確保牙齒處於健康狀態',
     },
     {
       title: '第4步',
       titleNum: '4',
-      img: 'https://raw.gitmirror.com/CMER-SZ/picx-images-hosting/master/ckjhk/Rectangle84845727.2der2vedis9w.jpg',
+      img: 'https://statichk.cmermedical.com/ckj/image/5123a81414d0.png',
       name: '裝配矯正器',
       context:
         '每種矯正器的裝配方式有所不同，客人需要根據專科主任的建議來進行裝配和保養，以達到理想效果',
@@ -125,7 +125,7 @@ const stepData = {
     {
       title: '第5步',
       titleNum: '5',
-      img: 'https://raw.gitmirror.com/CMER-SZ/picx-images-hosting/master/ckjhk/Rectangle93245235427.3w0l3j7va260.jpg',
+      img: 'https://statichk.cmermedical.com/ckj/image/ebfbfb07c153.png',
       name: '定期覆診',
       context: '完成矯齒療程後，記得定期覆診和持續配戴固定器',
     },
