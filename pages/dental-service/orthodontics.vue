@@ -1217,7 +1217,8 @@ const careData = {
     margin-top: 98px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    // justify-content: space-between;
+    gap: 0 40px;
     &-in {
       display: flex;
       align-items: center;
