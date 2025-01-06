@@ -24,8 +24,8 @@ useHead({
 })
 
 const headerConfig = {
-  img: 'https://ckjhk.com/images/00be1de5411e.avif',
-  mbImg: 'https://ckjhk.com/images/2c3cf1382154.avif',
+  img: 'https://statichk.cmermedical.com/ckj/image/00be1de5411e.avif',
+  mbImg: 'https://statichk.cmermedical.com/ckj/image/2c3cf1382154.avif',
   bg: '',
   pageName: 'scaling-and-polishing-test',
   pcText: [

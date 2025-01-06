@@ -416,7 +416,7 @@ const getWindowWidth = () => {
           ></PageSwiperPointLine>
         </div>
       </div>
-      <div class="waterBg-implant"></div>
+      <!-- <div class="waterBg-implant"></div> -->
       <div class="header-content-text-implant" :class="headerConfig.pageName">
         <div>全程式預約一體化診療服務，</div>
         <div>讓每一位顧客享受 <span>健康微笑之旅。</span></div>
@@ -550,7 +550,7 @@ const getWindowWidth = () => {
         </div>
       </div>
       <!-- 水波纹盒子 -->
-      <div class="waterBg" :class="headerConfig.pageName"></div>
+      <!-- <div class="waterBg" :class="headerConfig.pageName"></div> -->
       <div class="explain_page_one" style="display: none;">優惠只限於網上及電話預約客戶</div>
     </div>
     <div :class="['dialogBox', { show: _bool }]" @click="_bool = false">
@@ -700,7 +700,7 @@ const getWindowWidth = () => {
     z-index: 40;
     width: 100%;
     &.bannerLine {
-      bottom: 10px;
+      bottom: -30px;
       z-index: 41;
       .bannerLine-in {
         width: 250px;

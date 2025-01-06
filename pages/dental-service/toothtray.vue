@@ -39,8 +39,8 @@ const orthodonticsIntroduceData = {
 }
 
 const headerConfig = {
-  img: 'https://ckjhk.com/images/329f9ce858f5.avif',
-  mbImg: 'https://ckjhk.com/images/5d211da94fd1.avif',
+  img: 'https://statichk.cmermedical.com/ckj/image/329f9ce858f5.avif',
+  mbImg: 'https://statichk.cmermedical.com/ckj/image/5d211da94fd1.avif',
   bg: '',
   pageName: 'scaling-and-polishing-test',
   pcText: [],

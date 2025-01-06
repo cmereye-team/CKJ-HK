@@ -333,7 +333,7 @@ const headerData = {
       </div>
     </div>
   </div>
-  <div class="waterBg" :class="headerConfig.pageName"></div>
+  <!-- <div class="waterBg" :class="headerConfig.pageName"></div> -->
   <div :class="['dialogBox', { show: _bool }]" @click="_bool = false">
     <div :class="['dialogBox-in', { 'show-in': _bool }]" @click.stop="">
       <div class="title">WeChat ID已複製</div>

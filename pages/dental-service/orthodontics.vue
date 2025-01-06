@@ -22,8 +22,8 @@ useHead({
 })
 
 const headerConfig = {
-  img: 'https://ckjhk.com/images/ce5f6a83c44e.avif',
-  mbImg: 'https://ckjhk.com/images/d9c879256fb2.avif',
+  img: 'https://statichk.cmermedical.com/ckj/image/ce5f6a83c44e.avif',
+  mbImg: 'https://statichk.cmermedical.com/ckj/image/d9c879256fb2.avif',
   bg: '',
   pageName: 'orthodontics-test',
   pcText: ['追求美學極致，展現最燦爛笑容', '愛康健為愛美的您打造完美面部輪廓'],
@@ -557,7 +557,7 @@ const careData = {
             <div>
               <div>
                 <img
-                  src="https://ckjhk.com/images/20241219011321315141.svg"
+                  src="https://statichk.cmermedical.com/ckj/image/20241219011321315141.svg"
                   alt=""
                 />
               </div>
@@ -3392,7 +3392,7 @@ const careData = {
       }
       & > a::before {
         content: '';
-        background: url(https://ckjhk.com/images/3202412190223503.svg)
+        background: url(https://statichk.cmermedical.com/ckj/image/3202412190223503.svg)
           no-repeat;
         background-size: contain;
         width: 25.64vw;

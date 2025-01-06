@@ -107,7 +107,7 @@ const hideShowText = computed(() => {
         </div>
       </div>
     </div>
-    <div class="waterBg"></div>
+    <!-- <div class="waterBg"></div> -->
   </div>
 </template>
 

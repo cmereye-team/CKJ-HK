@@ -454,7 +454,7 @@ const hideDiv = () => {
       >
         <PageAnimBtnTypeTwo :str="'獲取免費諮詢'" />
       </div>
-      <div
+      <!-- <div
         v-if="
           [
             'implant',
@@ -472,7 +472,7 @@ const hideDiv = () => {
           ].includes(headerConfig.pageName)
         "
         class="waterBg-implant"
-      ></div>
+      ></div> -->
       <div
         v-if="
           [
@@ -745,7 +745,7 @@ const hideDiv = () => {
         </div>
       </div>
       <!-- 水波纹盒子 -->
-      <div class="waterBg" :class="headerConfig.pageName"></div>
+      <!-- <div class="waterBg" :class="headerConfig.pageName"></div> -->
     </div>
     <div :class="['dialogBox', { show: _bool }]" @click="_bool = false">
       <div :class="['dialogBox-in', { 'show-in': _bool }]" @click.stop="">

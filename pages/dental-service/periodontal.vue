@@ -24,8 +24,8 @@ useHead({
 })
 
 const headerConfig = {
-  img: 'https://ckjhk.com/images/c7ddb39c7305.avif',
-  mbImg: 'https://ckjhk.com/images/e194b7c613f5.avif',
+  img: 'https://statichk.cmermedical.com/ckj/image/c7ddb39c7305.avif',
+  mbImg: 'https://statichk.cmermedical.com/ckj/image/e194b7c613f5.avif',
   bg: '',
   pageName: 'periodontal-test',
   pcText: ['健康牙齒，從牙周病治療開始', '保持清新口氣、牙肉年輕'],

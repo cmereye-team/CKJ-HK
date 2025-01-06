@@ -2657,7 +2657,7 @@ const newsmoduleLists = [
     position: relative;
     z-index: 10;
     box-sizing: border-box;
-    padding: 0 8vw;
+    padding: 2vw 8vw;
     max-width: 100%;
     margin: 0 auto;
     margin-top: 2.65vw;

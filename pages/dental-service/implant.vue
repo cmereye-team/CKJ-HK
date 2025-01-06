@@ -25,8 +25,8 @@ useHead({
 })
 
 const headerConfig = {
-  img: 'https://ckjhk.com/images/3e3a95006b26.avif',
-  mbImg: 'https://ckjhk.com/images/8b8bb4885473.avif',
+  img: 'https://statichk.cmermedical.com/ckj/image/3e3a95006b26.avif',
+  mbImg: 'https://statichk.cmermedical.com/ckj/image/8b8bb4885473.avif',
   bg: '',
   pageName: 'implant',
   pcText: ['享受失而復得的喜悅', '重拾完整人生之旅'],
