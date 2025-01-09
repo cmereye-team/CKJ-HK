@@ -21,8 +21,8 @@ useHead({
 })
 
 const headerConfig = {
-  img: 'https://statichk.cmermedical.com/ckj/image/a362b6ba70ee.avif',
-  mbImg: 'https://statichk.cmermedical.com/ckj/image/c9a3964191c9.avif',
+  img: 'https://statichk.cmermedical.com/ckj/service-page/all-ceramic-crowns-pc.webp',
+  mbImg: 'https://statichk.cmermedical.com/ckj/service-page/all-ceramic-crowns-mb.webp',
   bg: '',
   pageName: 'scaling-and-polishing-test',
   pcText: [],

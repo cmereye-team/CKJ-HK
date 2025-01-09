@@ -1,4 +1,4 @@
-import { phoneNum } from '~/assets/js/common'
+import { phoneNum, xiHuaPhoneNum } from '~/assets/js/common'
 
 export default [
   // 罗湖区
@@ -19,6 +19,25 @@ export default [
         'https://static.cmereye.com/imgs/2024/02/2ba7058400f2ed03.png',
         'https://static.cmereye.com/imgs/2024/02/2f20ab9660e0bfa7.webp',
         'https://static.cmereye.com/imgs/2024/02/3cc92ffa0caa8ed1.webp'
+      ]
+    },
+    {
+      id: '106',
+      name: 'contactUs.addressLists.address_106.name',
+      tabname: 'contactUs.addressLists.address_106.tabname',
+      address: 'contactUs.addressLists.address_106.address',
+      time: 'contactUs.addressLists.address_106.time',
+      phone: xiHuaPhoneNum,
+      busRoutes: 'contactUs.addressLists.address_106.busRoutes',
+      metroRoutes: 'contactUs.addressLists.address_106.metroRoutes',
+      addressUrl: 'https://statichk.cmermedical.com/ckj/image/b536e4eb4fe5.webp',
+      googleMap: 'https://goo.gl/maps/HQsN5jNMTeZNbxuf7?coh=178572&entry=tt',
+      baiduMap: 'https://j.map.baidu.com/91/7oOi',
+      imgLists: [
+        'https://statichk.cmermedical.com/ckj/image/b536e4eb4fe5.webp',
+        'https://statichk.cmermedical.com/ckj/image/2e5160eacd60.webp',
+        'https://statichk.cmermedical.com/ckj/image/3c2999258b6a.webp',
+        'https://statichk.cmermedical.com/ckj/image/c9bfbb629f04.webp'
       ]
     },
     {

@@ -46,7 +46,7 @@ const getDetail: any = () => {
   return allAddressLists[appState.areaTabCurNum][currentAddress.value]
 }
 const isHospital = (name: string): boolean => {
-  return name.includes('醫院')
+  return name.includes('深圳愛康健口腔醫院（羅湖）')
 }
 let isShowlxBox = ref(false)
 
@@ -730,12 +730,17 @@ watch(appState, (n, o) => {
           border-right: none;
         }
         &-101 {
-          min-width: 100%;
+          // min-width: 100%;
           border-right: none;
+          // border-top: 2px solid #00aeff !important;
+          border-right: 2px solid #00aeff !important;
         }
         &-102 {
           border-top: 2px solid #00aeff !important;
           border-right: 2px solid #00aeff !important;
+        }
+        &-103 {
+          border-right: none;
         }
         &:hover {
           color: #00aeff;

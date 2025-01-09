@@ -156,11 +156,11 @@ export default defineNuxtConfig({
       ]
     },
     devProxy: {
-      // "/api": {
-      //   target: 'https://admin.ckjhk.com/',
-      //   prependPath: true,
-      //   changeOrigin: true,
-      // },
+      "/api": {
+        target: 'https://admin.ckjhk.com/',
+        prependPath: true,
+        changeOrigin: true,
+      },
       // "/ding": {
       //   target: 'https://oapi.dingtalk.com/',
       //   prependPath: true,

@@ -22,8 +22,8 @@ useHead({
 })
 
 const headerConfig = {
-  img: 'https://statichk.cmermedical.com/ckj/image/7be5e17d2d29.avif',
-  mbImg: 'https://statichk.cmermedical.com/ckj/image/64b34d6aaf8b.avif',
+  img: 'https://statichk.cmermedical.com/ckj/service-page/veneers-pc.webp',
+  mbImg: 'https://statichk.cmermedical.com/ckj/service-page/veneers-mb.webp',
   bg: '',
   pageName: 'veneers-test',
   pcText: ['自訂零死角潔白微笑線', '展現自信微笑'],

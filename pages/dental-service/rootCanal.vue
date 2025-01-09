@@ -26,8 +26,8 @@ useHead({
 })
 
 const headerConfig = {
-  img: 'https://statichk.cmermedical.com/ckj/image/c2afb5768d43.avif',
-  mbImg: 'https://statichk.cmermedical.com/ckj/image/87a9f941db92.avif',
+  img: 'https://statichk.cmermedical.com/ckj/service-page/rootCanal-pc.webp',
+  mbImg: 'https://statichk.cmermedical.com/ckj/service-page/rootCanal-mb.webp',
   bg: '',
   pageName: 'rootCanal-test',
   pcText: [

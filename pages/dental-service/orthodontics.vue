@@ -22,8 +22,8 @@ useHead({
 })
 
 const headerConfig = {
-  img: 'https://statichk.cmermedical.com/ckj/image/ce5f6a83c44e.avif',
-  mbImg: 'https://statichk.cmermedical.com/ckj/image/d9c879256fb2.avif',
+  img: 'https://statichk.cmermedical.com/ckj/service-page/orthodontics-pc.webp',
+  mbImg: 'https://statichk.cmermedical.com/ckj/service-page/orthodontics-mb.webp',
   bg: '',
   pageName: 'orthodontics-test',
   pcText: ['追求美學極致，展現最燦爛笑容', '愛康健為愛美的您打造完美面部輪廓'],

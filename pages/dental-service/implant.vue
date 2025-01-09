@@ -25,14 +25,14 @@ useHead({
 })
 
 const headerConfig = {
-  img: 'https://statichk.cmermedical.com/ckj/image/3e3a95006b26.avif',
-  mbImg: 'https://statichk.cmermedical.com/ckj/image/8b8bb4885473.avif',
+  img: 'https://statichk.cmermedical.com/ckj/service-page/implant-pc.webp',
+  mbImg: 'https://statichk.cmermedical.com/ckj/service-page/implant-mb.webp',
   bg: '',
   pageName: 'implant',
   pcText: ['享受失而復得的喜悅', '重拾完整人生之旅'],
   mbText: ['享受失而復得的喜悅', '重拾完整人生之旅'],
 }
-
+const loading = ref(true)
 const introduceData = {
   title: 'pages.dental-service.implant.introduce.title',
   content: 'pages.dental-service.implant.introduce.content',
@@ -768,6 +768,19 @@ const checkGroupPhoto = () => {
       return groupPhoto.value[0]
   }
 }
+// // 请求 banner 数据
+// const getBannerImg = async () => {
+//   const response = await fetch('/api/api.php/cms/sort/scode/21', {
+//     headers: { 'Content-Type': 'application/json' },
+//     method: 'GET',
+//   })
+//   const data = await response.json()
+//   if (data.code === 1) {
+//     headerConfig.value.img = `https://admin.ckjhk.com/${data.data.pic}`
+//     headerConfig.value.mbImg = `https://admin.ckjhk.com/${data.data.ico}`
+//   }
+// }
+//
 </script>
 
 <template>
@@ -1827,26 +1840,26 @@ const checkGroupPhoto = () => {
           <div>手術速度</div>
           <div>
             <img
-              src="https://statichk.cmermedical.com/smile/2024122415002701.png"
+              src="https://static.cmereye.com/static/ckj/imgs/svg/pc5star.svg"
               alt=""
             />
           </div>
           <div>
             <img
-              src="https://statichk.cmermedical.com/smile/2024122415003601.png"
+              src="https://static.cmereye.com/static/ckj/imgs/svg/pc3star.svg"
               alt=""
             />
           </div>
           <div>復原速度</div>
           <div>
             <img
-              src="https://statichk.cmermedical.com/smile/2024122415002701.png"
+              src="https://static.cmereye.com/static/ckj/imgs/svg/pc5star.svg"
               alt=""
             />
           </div>
           <div>
             <img
-              src="https://statichk.cmermedical.com/smile/2024122415004801.png"
+              src="https://static.cmereye.com/static/ckj/imgs/svg/pc2star.svg"
               alt=""
             />
           </div>
@@ -4760,6 +4773,17 @@ const checkGroupPhoto = () => {
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
+            & > div {
+              width: 170px;
+              height: 76.927px;
+              border-radius: 16.21px;
+              overflow: hidden;
+              & > img {
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+              }
+            }
           }
           // &:after {
           //   content: '';

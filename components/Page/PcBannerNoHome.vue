@@ -208,7 +208,7 @@ const hideShowText = computed(() => {
     }
     .btn-wrapper {
       position: absolute;
-      bottom: 20px;
+      bottom: -20px;
       left: 50%;
       transform: translateX(-50%);
       z-index: 99;
@@ -311,7 +311,7 @@ const hideShowText = computed(() => {
     }
     .btn-wrapper {
       position: absolute;
-      bottom: 20px;
+      bottom: -20px;
       left: 50%;
       transform: translateX(-50%);
       z-index: 99;
