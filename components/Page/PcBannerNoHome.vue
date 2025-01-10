@@ -79,6 +79,7 @@ const hideShowText = computed(() => {
 
 <template>
   <div class="PcBannerNoHome">
+    <slot name="xxxxxxxxxxx-home"></slot>
     <div class="pcBox-wrapper" :class="headerConfig.pageName">
       <div>
         <img

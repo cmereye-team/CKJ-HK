@@ -29,8 +29,9 @@ const introduceJY = {
 }
 
 const headerConfig = {
-  img: 'https://statichk.cmermedical.com/ckj/service-page/fillings-pc.webp',
-  mbImg: 'https://statichk.cmermedical.com/ckj/service-page/fillings-mb.webp',
+  img: 'https://statichk.cmermedical.com/ckj/service-page-test/fillings-pc.png',
+  mbImg:
+    'https://statichk.cmermedical.com/ckj/service-page-test/fillings-mb.png',
   bg: '',
   pageName: 'invisalign-test',
   pcText: [],
@@ -386,15 +387,46 @@ const differData: any = {
     },
   ],
 }
-
 </script>
 
 
 <template>
   <div>
-    <PageHeader v-if="windowWidth < 768" :headerConfig="headerConfig" />
+    <PageHeader v-if="windowWidth < 768" :headerConfig="headerConfig">
+      <template #xxxxxxxxxxx-home>
+        <div class="banner-in-box">
+          <div class="banner-content" style="display: flex">
+            <div class="content-subscribe">網上預約限定優惠</div>
+            <div class="content-title">美國樹脂補牙</div>
+            <div class="content-price">
+              <div></div>
+              <div class="price-style">
+                <img src="../../assets/images/2025011015135902.svg" alt="" />
+              </div>
+              <div>其他物料7折</div>
+            </div>
+          </div>
+        </div>
+      </template>
+    </PageHeader>
     <PageNewHeaderMenu v-if="windowWidth > 768" :headerConfig="headerConfig" />
-    <PagePcBannerNoHome v-if="windowWidth > 768" :headerConfig="headerConfig" />
+    <PagePcBannerNoHome v-if="windowWidth > 768" :headerConfig="headerConfig">
+      <template #xxxxxxxxxxx-home>
+        <div class="banner-in-box">
+          <div class="banner-content" style="display: flex">
+            <div class="content-title">美國樹脂補牙</div>
+            <div class="content-price">
+              <div></div>
+              <div class="price-style">
+                <img src="../../assets/images/2025011015135902.svg" alt="" />
+              </div>
+              <div>其他物料7折</div>
+            </div>
+            <div class="content-subscribe">網上預約限定優惠</div>
+          </div>
+        </div>
+      </template>
+    </PagePcBannerNoHome>
     <div class="pageIn whitebgColor">
       <div class="index_title pageCon">
         {{ $t('pages.dental-service.title') }}
@@ -682,7 +714,11 @@ const differData: any = {
                   <!-- </div> -->
                   <div class="list-in-text">
                     <h2>
-                      <img src="@/assets/images/icon_40.svg" v-if="windowWidth > 768" alt="" />
+                      <img
+                        src="@/assets/images/icon_40.svg"
+                        v-if="windowWidth > 768"
+                        alt=""
+                      />
                       治療方法：<strong>{{ itemIn.name }}</strong>
                     </h2>
                     <p>{{ itemIn.text }}</p>
@@ -802,6 +838,114 @@ const differData: any = {
 </template>
 
 <style lang="scss" scoped>
+.banner-in-box {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 20.83vw;
+  width: 55%;
+  z-index: 10;
+}
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  height: 100%;
+  & > div {
+    display: flex;
+    align-items: flex-end;
+  }
+  .content-title {
+    color: var(--White, #fff);
+    text-align: right;
+    -webkit-text-stroke-width: 0.5;
+    -webkit-text-stroke-color: var(--White, #fff);
+    font-family: FakePearl;
+    font-size: clamp(40px, 5.7vw, 110px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 176px */
+    letter-spacing: 6.6px;
+    position: relative;
+    z-index: 6;
+    bottom: -20px;
+  }
+  .content-title::after {
+    content: '';
+    display: inline-block;
+    width: 98%;
+    height: clamp(10px, 0.7vw, 15px);
+    background: url('../../assets/images/2025010917480102.png') no-repeat;
+    background-size: 100%;
+    position: absolute;
+    bottom: -0.9375vw;
+    box-sizing: border-box;
+    left: 0;
+    right: 0;
+    z-index: 5;
+  }
+  .price-style {
+    width: 19.0625vw;
+    height: 11.145vw;
+    position: relative;
+    right: -70px;
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .content-price {
+    color: var(--White, #fff);
+    text-align: right;
+    font-family: FakePearl;
+    font-size: clamp(30px, 2.9165vw, 56px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 89.6px */
+    & > div:not(:nth-child(2)) {
+      padding-bottom: clamp(30px, 2.9165vw, 56px);
+    }
+    & > div:nth-child(3) {
+      position: relative;
+    }
+    & > div:nth-child(3)::after {
+      position: absolute;
+      left: 0;
+      top: -35%;
+      content: '';
+      background: url('../../assets/images/2025011015135901.svg') no-repeat;
+      width: 200px;
+      height: 30px;
+      background-size: contain;
+    }
+  }
+  .content-subscribe {
+    color: var(--Theme-Color, #fc1682);
+    text-align: center;
+    font-family: FakePearl;
+    font-size: clamp(20px, 2.083vw, 40px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 64px */
+    box-sizing: border-box;
+    padding: 0 20px;
+    width: fit-content;
+    background: url('../../assets/images/2025010917480101.png') no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 7;
+    right: 0;
+    bottom: 10px;
+  }
+}
 :deep(.header-content) {
   .explain_box_mobile {
     background: transparent !important;
@@ -2796,6 +2940,83 @@ const differData: any = {
           padding: 0 8vw;
         }
       }
+    }
+  }
+  .banner-in-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100vw;
+    width: 100%;
+    z-index: 22;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-bottom: 35px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .banner-content {
+    align-items: flex-start;
+    justify-content: flex-end;
+    .content-title {
+      color: var(--White, #fff);
+      text-align: right;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 100%; /* 72px */
+      letter-spacing: 2.7px;
+      position: relative;
+      z-index: 6;
+      bottom: 0;
+    }
+    .content-title::after {
+      content: '';
+      display: inline-block;
+      width: 98%;
+      height: clamp(10px, 0.7vw, 15px);
+      background: url('../../assets/images/2025010917480102.png') no-repeat;
+      background-size: 100%;
+      position: absolute;
+      bottom: -3.9375vw;
+      box-sizing: border-box;
+      left: 0;
+      right: 0;
+      z-index: 5;
+    }
+    .content-price {
+      & > div:not(:nth-child(2)) {
+        padding-bottom: 22px;
+      }
+      & > div:nth-child(3)::after {
+        width: 70.432px;
+        height: 11.461px;
+      }
+    }
+    .price-style {
+      width: 80px;
+      height: 90px;
+      position: relative;
+      right: auto;
+      left: 0;
+      & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .content-subscribe {
+      position: relative;
+      z-index: 10;
+      bottom: -10px;
+      color: var(--Theme-Color, #fc1682);
+      text-align: center;
+      font-family: FakePearl;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 160%;
     }
   }
 }

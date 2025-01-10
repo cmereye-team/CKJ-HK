@@ -29,9 +29,9 @@ useHead({
 })
 
 const headerConfig = ref({
-  img: 'https://static.cmereye.com/imgs/2024/06/b69f2844fcce837a.jpg',
+  img: 'https://statichk.cmermedical.com/ckj/image/15cb7f812916.webp',
   bg: '',
-  mbImg: 'https://static.cmereye.com/imgs/2024/06/c6da280d681f7adb.jpg',
+  mbImg: 'https://statichk.cmermedical.com/ckj/image/e53eb78eddc3.webp',
   pageName: 'health-care-voucher',
   pcText: [],
   mbText: [],
@@ -141,7 +141,8 @@ const pageDetail: any = {
       list: [
         // 'https://static.cmereye.com/imgs/2024/06/3333f1a2e79eeb16.webp',
         // 'https://static.cmereye.com/imgs/2024/09/4229166f41cc2c28.jpg',
-        "https://static.cmereye.com/imgs/2024/11/61472517a1c6f9c1.jpg"
+        // "https://static.cmereye.com/imgs/2024/11/61472517a1c6f9c1.jpg"
+        "https://statichk.cmermedical.com/ckj/image/2ec9eaa43305.webp"
       ],
       className: 'imgone',
     },

@@ -51,7 +51,7 @@ const introduceData = {
   tabNavName: 'pages.brand.course.introduce.tabNavName',
 }
 
-const courseData = {
+const courseData = ref({
   title: 'pages.brand.course.history.title',
   lists: [
     {
@@ -62,6 +62,7 @@ const courseData = {
           context: 'pages.brand.course.history.time_1995.context',
         },
       ],
+      isShow: false,
     },
     {
       timeNode: '2000',
@@ -71,6 +72,7 @@ const courseData = {
           context: 'pages.brand.course.history.time_2000.context',
         },
       ],
+      isShow: false,
     },
     {
       timeNode: '2006',
@@ -80,6 +82,7 @@ const courseData = {
           context: 'pages.brand.course.history.time_2006.context',
         },
       ],
+      isShow: false,
     },
     {
       timeNode: '2008',
@@ -101,6 +104,7 @@ const courseData = {
           context: 'pages.brand.course.history.time_2008.context_11',
         },
       ],
+      isShow: false,
     },
     {
       timeNode: '2009',
@@ -118,6 +122,7 @@ const courseData = {
           context: 'pages.brand.course.history.time_2009.context_7',
         },
       ],
+      isShow: false,
     },
     {
       timeNode: '2010',
@@ -127,6 +132,7 @@ const courseData = {
           context: 'pages.brand.course.history.time_2010.context_4',
         },
       ],
+      isShow: false,
     },
     {
       timeNode: '2011',
@@ -136,6 +142,7 @@ const courseData = {
           context: 'pages.brand.course.history.time_2011.context',
         },
       ],
+      isShow: false,
     },
     {
       timeNode: '2012',
@@ -145,6 +152,7 @@ const courseData = {
           context: 'pages.brand.course.history.time_2012.context',
         },
       ],
+      isShow: false,
     },
     {
       timeNode: '2014',
@@ -154,6 +162,7 @@ const courseData = {
           context: 'pages.brand.course.history.time_2014.context',
         },
       ],
+      isShow: false,
     },
     {
       timeNode: '2015',
@@ -163,6 +172,7 @@ const courseData = {
           context: 'pages.brand.course.history.time_2015.context',
         },
       ],
+      isShow: false,
     },
     {
       timeNode: '2016',
@@ -176,6 +186,7 @@ const courseData = {
           context: 'pages.brand.course.history.time_2016.context_12',
         },
       ],
+      isShow: false,
     },
     {
       timeNode: '2017',
@@ -189,6 +200,7 @@ const courseData = {
           context: 'pages.brand.course.history.time_2017.context_8',
         },
       ],
+      isShow: false,
     },
     {
       timeNode: '2018',
@@ -198,6 +210,7 @@ const courseData = {
           context: 'pages.brand.course.history.time_2018.context',
         },
       ],
+      isShow: false,
     },
     {
       timeNode: '2019',
@@ -207,6 +220,7 @@ const courseData = {
           context: 'pages.brand.course.history.time_2019.context',
         },
       ],
+      isShow: false,
     },
     {
       timeNode: '2020',
@@ -220,6 +234,7 @@ const courseData = {
           context: 'pages.brand.course.history.time_2020.context_12',
         },
       ],
+      isShow: true,
     },
     {
       timeNode: '2021',
@@ -237,6 +252,7 @@ const courseData = {
           context: 'pages.brand.course.history.time_2021.context_12',
         },
       ],
+      isShow: true,
     },
     {
       timeNode: '2022',
@@ -246,6 +262,7 @@ const courseData = {
           context: '榮獲「2022值得網民信賴品牌」稱號',
         },
       ],
+      isShow: true,
     },
     {
       timeNode: '2023',
@@ -263,6 +280,7 @@ const courseData = {
           context: '榮獲「2023年度深圳值得網民信賴品牌」稱號',
         },
       ],
+      isShow: true,
     },
     {
       timeNode: '2024',
@@ -284,11 +302,12 @@ const courseData = {
           context: '香港長者醫療券在深圳愛康健口腔醫院正式使用',
         },
       ],
+      isShow: true,
     },
   ],
-}
+})
 
-let _lists = JSON.parse(JSON.stringify(courseData.lists))
+let _lists = JSON.parse(JSON.stringify(courseData.value.lists))
 let newCourseLists = _lists.reverse()
 
 let currtNum = ref(0)
@@ -313,9 +332,18 @@ const changeSwiper = (swiper) => {
 
 const is_shade = ref(false)
 const shadeOpen = () => {
+  _lists.forEach((item, index) => {
+    item.isShow = true
+  })
   is_shade.value = !is_shade.value
 }
-
+const isShowOldYear = (flag: Boolean) => {
+  if (windowWidth.value > 768) {
+    flag
+  } else {
+    return false
+  }
+}
 let windowWidth = ref(390)
 
 const getWindowWidth = () => {
@@ -325,6 +353,11 @@ const getWindowWidth = () => {
 onMounted(() => {
   getWindowWidth()
   window.addEventListener('resize', getWindowWidth)
+  if (windowWidth.value > 768) {
+    _lists.forEach((item, index) => {
+      item.isShow = true
+    })
+  }
 })
 </script>
 
@@ -510,19 +543,21 @@ onMounted(() => {
           </div>
           <div>
             <div v-for="(item, index) in newCourseLists" :key="index">
-              <div
-                class="new_node_time"
-                :id="`${item.timeNode == 2019 ? 'is_2019' : ''}`"
-              >
-                {{ item.timeNode }}
-              </div>
-              <div
-                v-for="(el, indexI) in item.events"
-                :key="indexI"
-                class="detail"
-              >
-                <div>{{ el.month }}</div>
-                <div v-html="$t(el.context)" class="new_context"></div>
+              <div v-if="item.isShow">
+                <div
+                  class="new_node_time"
+                  :id="`${item.timeNode == 2019 ? 'is_2019' : ''}`"
+                >
+                  {{ item.timeNode }}
+                </div>
+                <div
+                  v-for="(el, indexI) in item.events"
+                  :key="indexI"
+                  class="detail"
+                >
+                  <div>{{ el.month }}</div>
+                  <div v-html="$t(el.context)" class="new_context"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -1060,8 +1095,8 @@ onMounted(() => {
   display: block;
   & > div:nth-child(2) {
     & > div:not(:last-child) {
-      padding-bottom: 16px;
-      border-bottom: 1px solid #fc1682;
+      // padding-bottom: 16px;
+      // border-bottom: 1px solid #fc1682;
     }
     & > div {
       padding-top: 16px;
@@ -1561,7 +1596,7 @@ onMounted(() => {
     align-items: center;
     padding: 145px 0 40px;
     position: absolute;
-    top: 35%;
+    bottom: 0;
     & > div:nth-child(1) {
       color: var(--Theme-Color, #fc1682);
       text-align: justify;
@@ -1580,11 +1615,19 @@ onMounted(() => {
     margin: 0 auto;
     & > div:nth-child(2) {
       & > div:not(:last-child) {
-        padding-bottom: 16px;
-        border-bottom: 1px solid #fc1682;
+        // border-bottom: 1px solid #fc1682;
+        & > div {
+          padding-bottom: 16px;
+          border-bottom: 1px solid #fc1682;
+        }
       }
       & > div {
-        padding-top: 16px;
+        padding: 0;
+        border: 0;
+        & > div {
+          padding-top: 16px;
+          padding-right: 40px;
+        }
       }
     }
   }

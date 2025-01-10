@@ -417,6 +417,7 @@ const hideDiv = () => {
           :src="headerConfig.img"
           alt="banner"
         />
+        <slot name="xxxxxxxxxxx-home"></slot>
       </div>
       <div
         ref="imgBgHeight"
@@ -851,6 +852,7 @@ const hideDiv = () => {
   width: 100%;
   box-sizing: border-box;
   position: relative;
+  z-index: 5;
   &-bgImg {
     width: 100%;
     box-sizing: border-box;
@@ -2158,7 +2160,7 @@ const hideDiv = () => {
     }
     &-bgImg-implant {
       position: relative;
-      top: 16vw;
+      top: 21vw;
       &.rootCanal-test {
         padding-bottom: 10.65vw;
       }

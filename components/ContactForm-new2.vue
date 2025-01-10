@@ -729,7 +729,7 @@ input::-webkit-inner-spin-button {
       & > div:nth-child(1) {
         width: 100%;
         & > div:nth-child(1) {
-          height: 51px;
+          // height: 51px;
           width: 100%;
         }
       }
@@ -824,7 +824,7 @@ input::-webkit-inner-spin-button {
   :deep(.el-input) {
     border: none !important;
     box-shadow: none !important;
-    height: 51px !important;
+    height: 2.5646vw !important;
   }
   :deep(.el-input .is-focus) {
     border: none !important;
@@ -1404,7 +1404,7 @@ li {
         }
         &-content {
           letter-spacing: 0.2708vw;
-          font-size: 0.8333vw;
+          font-size: 14px;
           margin-top: 1.0417vw;
           :deep(.el-radio.el-radio--large .el-radio__label) {
             font-size: 0.8333vw;

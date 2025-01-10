@@ -22,8 +22,9 @@ useHead({
 })
 
 const headerConfig = {
-  img: 'https://statichk.cmermedical.com/ckj/service-page/veneers-pc.webp',
-  mbImg: 'https://statichk.cmermedical.com/ckj/service-page/veneers-mb.webp',
+  img: 'https://statichk.cmermedical.com/ckj/service-page-test/veneers-pc.png',
+  mbImg:
+    'https://statichk.cmermedical.com/ckj/service-page-test/veneers-mb.png',
   bg: '',
   pageName: 'veneers-test',
   pcText: ['自訂零死角潔白微笑線', '展現自信微笑'],
@@ -305,9 +306,44 @@ const caseLists = [
 
 <template>
   <div>
-    <PageHeader v-if="windowWidth < 768" :headerConfig="headerConfig" />
+    <PageHeader v-if="windowWidth < 768" :headerConfig="headerConfig">
+      <template #xxxxxxxxxxx-home>
+        <div class="banner-in-box">
+          <div class="banner-content" style="display: flex">
+            <div class="content-subscribe">網上預約限定優惠</div>
+            <div class="content-title">矯齒(箍牙)</div>
+            <div class="content-remark">追求牙齒美學,展現自信燦爛笑容</div>
+            <div class="content-price">
+              <div>青少年傳統箍牙</div>
+              <div class="price-style">
+                <img src="../../assets/images/2025011014530601.svg" alt="" />
+              </div>
+              <div>起</div>
+            </div>
+          </div>
+        </div>
+      </template>
+    </PageHeader>
     <PageNewHeaderMenu v-if="windowWidth > 768" :headerConfig="headerConfig" />
-    <PagePcBannerNoHome v-if="windowWidth > 768" :headerConfig="headerConfig" />
+    <PagePcBannerNoHome v-if="windowWidth > 768" :headerConfig="headerConfig">
+      <template #xxxxxxxxxxx-home>
+        <div class="banner-in-box">
+          <div class="banner-content" style="display: flex">
+            <div class="content-remark">擁有明星般閃耀笑容</div>
+            <div class="content-title">全瓷貼片</div>
+            <div class="content-price">
+              <div>E.MAX</div>
+              <div class="price-style">
+                <img src="../../assets/images/2025011014530601.svg" alt="" />
+              </div>
+              <div>/顆</div>
+              <div>原價¥3700/顆</div>
+            </div>
+            <div class="content-subscribe">網上預約限定優惠</div>
+          </div>
+        </div>
+      </template>
+    </PagePcBannerNoHome>
     <div class="pageIn whitebgColor">
       <div class="index_title pageCon">
         {{ $t('pages.dental-service.title') }}
@@ -523,6 +559,122 @@ const caseLists = [
 
 
 <style lang="scss" scoped>
+.banner-in-box {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 20.83vw;
+  width: 55%;
+  z-index: 10;
+}
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  height: 100%;
+  & > div {
+    display: flex;
+    align-items: flex-end;
+  }
+  .content-remark {
+    color: var(--White, #fff);
+    text-align: right;
+    font-family: FakePearl;
+    font-size: 34px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 54.4px */
+    letter-spacing: 3.4px;
+  }
+  .content-title {
+    color: var(--White, #fff);
+    text-align: right;
+    -webkit-text-stroke-width: 0.5;
+    -webkit-text-stroke-color: var(--White, #fff);
+    font-family: FakePearl;
+    font-size: clamp(40px, 4.6vw, 110px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 176px */
+    letter-spacing: 6.6px;
+    position: relative;
+    z-index: 6;
+    bottom: -10px;
+  }
+  .content-title::after {
+    content: '';
+    display: inline-block;
+    width: 98%;
+    height: clamp(10px, 0.7vw, 15px);
+    background: url('../../assets/images/2025010917480102.png') no-repeat;
+    background-size: 100%;
+    position: absolute;
+    bottom: -0.9375vw;
+    box-sizing: border-box;
+    left: 0;
+    right: 0;
+    z-index: 5;
+  }
+  .price-style {
+    width: 17.0625vw;
+    height: 10.145vw;
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  .content-price {
+    color: var(--White, #fff);
+    text-align: right;
+    font-family: FakePearl;
+    font-size: clamp(20px, 2.9165vw, 56px);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 100%; /* 89.6px */
+    position: relative;
+    bottom: 5px;
+    & > div:not(:nth-child(2)) {
+      padding-bottom: clamp(20px, 2.9165vw, 56px);
+    }
+    & > div:nth-child(4) {
+      color: var(--White, #fff);
+      text-align: center;
+      font-family: FakePearl;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 32px */
+      letter-spacing: -1px;
+      text-decoration-line: line-through;
+    }
+  }
+  .content-subscribe {
+    color: var(--Theme-Color, #fc1682);
+    text-align: center;
+    font-family: FakePearl;
+    font-size: clamp(20px, 1.583vw, 40px);
+    font-style: normal;
+    font-weight: 600;
+    line-height: 100%; /* 64px */
+    box-sizing: border-box;
+    padding: 0 20px;
+    width: fit-content;
+    background: url('../../assets/images/2025010917480101.png') no-repeat;
+    background-size: contain;
+    background-position: center;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 7;
+    right: 0;
+    bottom: 30px;
+  }
+}
 :deep(.header-content) {
   .explain_box_mobile {
     background: transparent !important;
@@ -1714,6 +1866,87 @@ const caseLists = [
           font-size: 16px;
         }
       }
+    }
+  }
+  .banner-in-box {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100vw;
+    width: 100%;
+    z-index: 22;
+    box-sizing: border-box;
+    padding-left: 20px;
+    padding-bottom: 35px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .banner-content {
+    align-items: flex-start;
+    justify-content: flex-end;
+    .content-remark {
+      color: var(--White, #fff);
+      font-family: FakePearl;
+      font-size: 22px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 160%; /* 38.4px */
+      letter-spacing: -0.48px;
+      position: relative;
+      bottom: -10px;
+    }
+    .content-title {
+      color: var(--White, #fff);
+      text-align: right;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 100%; /* 72px */
+      letter-spacing: 2.7px;
+      position: relative;
+      z-index: 6;
+      bottom: 0;
+    }
+    .content-title::after {
+      content: '';
+      display: inline-block;
+      width: 98%;
+      height: clamp(10px, 0.7vw, 15px);
+      background: url('../../assets/images/2025010917480102.png') no-repeat;
+      background-size: 100%;
+      position: absolute;
+      bottom: -3.9375vw;
+      box-sizing: border-box;
+      left: 0;
+      right: 0;
+      z-index: 5;
+    }
+    .content-price {
+      & > div:not(:nth-child(2)) {
+        padding-bottom: 22px;
+      }
+    }
+    .price-style {
+      width: 150px;
+      height: 90px;
+      & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    .content-subscribe {
+      position: relative;
+      z-index: 10;
+      bottom: -10px;
+      color: var(--Theme-Color, #fc1682);
+      text-align: center;
+      font-family: FakePearl;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 160%;
     }
   }
 }

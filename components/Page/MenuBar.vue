@@ -17,7 +17,7 @@ const menuBar = ref(null)
 
 <template>
   <div class="menuBar" ref="menuBar">
-    <div class="menuBar-in bgColor">
+    <!-- <div class="menuBar-in bgColor">
       <div class="menuBar-in-l">
         <div class="menuBar-box" title="深圳市醫保定點醫院">
           <img src="@/assets/images/icon_38.svg" alt="">
@@ -56,7 +56,7 @@ const menuBar = ref(null)
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 

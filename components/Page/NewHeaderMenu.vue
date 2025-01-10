@@ -1137,8 +1137,8 @@ const changlangsfun = (_type) => {
         font-weight: 400;
         line-height: 160%; /* 35.2px */
         box-sizing: border-box;
-        padding: clamp(8.25px, 0.78125vw, 15px) clamp(25px, 3.125vw, 30px)
-          clamp(8.25px, 0.78125vw, 15px) clamp(11.25px, 0.78125vw, 15px);
+        padding: clamp(8.25px, 0.98125vw, 15px) clamp(25px, 3.125vw, 30px)
+          clamp(8.25px, 0.98125vw, 15px) clamp(11.25px, 0.78125vw, 15px);
         background: var(--Theme-Color, #fc1682);
       }
     }
