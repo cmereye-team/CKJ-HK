@@ -541,7 +541,7 @@ const handleProcessBtn = (_type: string) => {
       }
       & > div:nth-child(2) {
         color: var(--Grey-Deep, #4d4d4d);
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 26px;
         font-style: normal;
         font-weight: 500;
@@ -752,7 +752,7 @@ const handleProcessBtn = (_type: string) => {
           & > span {
             display: inline;
             color: var(--Grey-Deep, #4d4d4d);
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-style: normal;
           }
         }

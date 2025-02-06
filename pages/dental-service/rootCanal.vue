@@ -728,7 +728,7 @@ let newsMessageSwiperRef = {
   .content-remark {
     color: var(--White, #fff);
     text-align: right;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 34px;
     font-style: normal;
     font-weight: 400;
@@ -740,7 +740,7 @@ let newsMessageSwiperRef = {
     text-align: right;
     -webkit-text-stroke-width: 0.5;
     -webkit-text-stroke-color: var(--White, #fff);
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: clamp(45px, 5.7vw, 110px);
     font-style: normal;
     font-weight: 600;
@@ -776,7 +776,7 @@ let newsMessageSwiperRef = {
   .content-price {
     color: var(--White, #fff);
     text-align: right;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: clamp(20px, 2.9165vw, 56px);
     font-style: normal;
     font-weight: 400;
@@ -790,7 +790,7 @@ let newsMessageSwiperRef = {
   .content-subscribe {
     color: var(--Theme-Color, #fc1682);
     text-align: center;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: clamp(20px, 1.583vw, 40px);
     font-style: normal;
     font-weight: 600;
@@ -1555,7 +1555,7 @@ let newsMessageSwiperRef = {
             span {
               color: var(--Grey-Deep, #4d4d4d);
               text-align: justify;
-              font-family: FakePearl;
+          font-family: 'FakePearl-Regular';
               font-size: 3.2vw;
               font-style: normal;
               font-weight: 500;
@@ -1672,7 +1672,7 @@ let newsMessageSwiperRef = {
             padding: 0;
             padding-left: 5px;
             color: var(--Theme-Color, #fc1682);
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 16px;
             font-style: normal;
             font-weight: 600;
@@ -1683,7 +1683,7 @@ let newsMessageSwiperRef = {
             padding-left: 5px;
             color: var(--Grey-Deep, #4d4d4d);
             text-align: justify;
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 12px;
             font-style: normal;
             font-weight: 500;
@@ -1807,7 +1807,7 @@ let newsMessageSwiperRef = {
         width: 100%;
         & > span:nth-child(1) {
           color: var(--Grey-Deep, #4d4d4d);
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 20px;
           font-style: normal;
           font-weight: 600;
@@ -1815,7 +1815,7 @@ let newsMessageSwiperRef = {
         }
         & > span:nth-child(2) {
           color: var(--Theme-Color, #fc1682);
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 26px;
           font-style: normal;
           font-weight: 600;
@@ -1887,7 +1887,7 @@ let newsMessageSwiperRef = {
           min-height: 33.0665vw;
           color: #4d4d4d;
           text-align: justify;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 3.2vw;
           font-style: normal;
           font-weight: 400;
@@ -1970,7 +1970,7 @@ let newsMessageSwiperRef = {
     justify-content: flex-end;
     .content-remark {
       color: var(--White, #fff);
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 22px;
       font-style: normal;
       font-weight: 400;
@@ -2025,7 +2025,7 @@ let newsMessageSwiperRef = {
       bottom: -10px;
       color: var(--Theme-Color, #fc1682);
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 20px;
       font-style: normal;
       font-weight: 600;

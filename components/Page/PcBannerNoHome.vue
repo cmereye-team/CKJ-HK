@@ -220,6 +220,7 @@ const hideShowText = computed(() => {
       z-index: 105;
       display: flex;
       justify-content: flex-end;
+      padding-top: 70px;
       & > div:nth-child(1) {
         max-width: 1450px;
         width: 100%;
@@ -323,6 +324,7 @@ const hideShowText = computed(() => {
       z-index: 105;
       display: flex;
       justify-content: flex-end;
+      padding-top: 120px;
       & > div:nth-child(1) {
         max-width: 1450px;
         width: 80%;
@@ -426,6 +428,7 @@ const hideShowText = computed(() => {
       z-index: 105;
       display: flex;
       justify-content: flex-end;
+      padding-top: 120px;
       & > div:nth-child(1) {
         max-width: 1450px;
         width: 80%;

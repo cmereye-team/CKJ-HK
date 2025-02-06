@@ -618,7 +618,9 @@ const removeSurroundingParentheses = (str) => {
                   <span v-else></span>
                   <span
                     ><i>￥</i>{{ plant_brand_series_item.price
-                    }}<i class="icon-emoji">🎅</i></span
+                    }}
+                    <!-- <i class="icon-emoji">🎅</i> -->
+                    </span
                   >
                 </div>
               </div>
@@ -1129,7 +1131,7 @@ const removeSurroundingParentheses = (str) => {
     text-align: right;
     -webkit-text-stroke-width: 0.5;
     -webkit-text-stroke-color: var(--White, #fff);
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: clamp(40px, 5.7vw, 110px);
     font-style: normal;
     font-weight: 600;
@@ -1167,7 +1169,7 @@ const removeSurroundingParentheses = (str) => {
   .content-price {
     color: var(--White, #fff);
     text-align: right;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: clamp(30px, 2.9165vw, 56px);
     font-style: normal;
     font-weight: 400;
@@ -1178,7 +1180,7 @@ const removeSurroundingParentheses = (str) => {
     & > div:nth-child(4) {
       color: var(--White, #fff);
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 20px;
       font-style: normal;
       font-weight: 400;
@@ -1190,7 +1192,7 @@ const removeSurroundingParentheses = (str) => {
   .content-subscribe {
     color: var(--Theme-Color, #fc1682);
     text-align: center;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: clamp(20px, 2.083vw, 40px);
     font-style: normal;
     font-weight: 400;
@@ -1487,7 +1489,7 @@ const removeSurroundingParentheses = (str) => {
       flex-direction: column;
       color: var(--Theme-Color, #fc1682);
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 30px;
       font-style: normal;
       font-weight: 400;
@@ -1511,7 +1513,7 @@ const removeSurroundingParentheses = (str) => {
         border-radius: 40px;
         background: var(--Theme-Color, #fc1682);
         color: var(--White, #fff);
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 28px;
         font-style: normal;
         font-weight: 500;
@@ -2900,7 +2902,7 @@ const removeSurroundingParentheses = (str) => {
         }
         & > span:nth-child(2) {
           color: var(--Theme-Color, #fc1682);
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 4.1vw;
           font-style: normal;
           font-weight: 600;
@@ -2909,7 +2911,7 @@ const removeSurroundingParentheses = (str) => {
         & > span:nth-child(4) {
           color: var(--Grey-Deep, #4d4d4d);
           text-align: justify;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 3.07vw;
           font-style: normal;
           font-weight: 600;
@@ -2940,7 +2942,7 @@ const removeSurroundingParentheses = (str) => {
     padding: 11px 15px;
     color: var(--White, #fff);
     text-align: justify;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -3272,7 +3274,7 @@ const removeSurroundingParentheses = (str) => {
       }
       & > div:nth-child(4) {
         color: var(--White, #fff);
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -3298,7 +3300,7 @@ const removeSurroundingParentheses = (str) => {
       bottom: -10px;
       color: var(--Theme-Color, #fc1682);
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 20px;
       font-style: normal;
       font-weight: 600;

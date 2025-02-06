@@ -1311,7 +1311,7 @@ const removeSurroundingParentheses = (str) => {
       flex-direction: column;
       color: var(--Theme-Color, #fc1682);
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 30px;
       font-style: normal;
       font-weight: 400;
@@ -1335,7 +1335,7 @@ const removeSurroundingParentheses = (str) => {
         border-radius: 40px;
         background: var(--Theme-Color, #fc1682);
         color: var(--White, #fff);
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 28px;
         font-style: normal;
         font-weight: 500;
@@ -2724,7 +2724,7 @@ const removeSurroundingParentheses = (str) => {
         }
         & > span:nth-child(2) {
           color: var(--Theme-Color, #fc1682);
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 4.1vw;
           font-style: normal;
           font-weight: 600;
@@ -2733,7 +2733,7 @@ const removeSurroundingParentheses = (str) => {
         & > span:nth-child(4) {
           color: var(--Grey-Deep, #4d4d4d);
           text-align: justify;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 3.07vw;
           font-style: normal;
           font-weight: 600;
@@ -2764,7 +2764,7 @@ const removeSurroundingParentheses = (str) => {
     padding: 11px 15px;
     color: var(--White, #fff);
     text-align: justify;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 12px;
     font-style: normal;
     font-weight: 400;

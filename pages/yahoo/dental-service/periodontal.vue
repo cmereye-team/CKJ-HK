@@ -2261,7 +2261,7 @@ const imgSrcHandel = (i: any) => {
       & > div:nth-child(2) {
         color: var(--Theme-Color, #fc1682);
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 50px;
         font-style: normal;
         font-weight: 400;
@@ -2273,7 +2273,7 @@ const imgSrcHandel = (i: any) => {
         & > div:nth-child(2) {
           color: var(--Grey-Deep, #4d4d4d);
           text-align: justify;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 28px;
           font-style: normal;
           font-weight: 500;
@@ -2335,7 +2335,7 @@ const imgSrcHandel = (i: any) => {
       content: '1';
       color: var(--White, #fff);
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 30px;
       font-style: normal;
       font-weight: 400;
@@ -2391,7 +2391,7 @@ const imgSrcHandel = (i: any) => {
       display: flex;
       flex-direction: column;
       color: var(--Grey-Deep, #4d4d4d);
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 50px;
       font-style: normal;
       font-weight: 400;
@@ -2436,7 +2436,7 @@ const imgSrcHandel = (i: any) => {
   & > div:nth-child(1) {
     color: var(--Grey-Deep, #4d4d4d);
     text-align: center;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
@@ -2445,7 +2445,7 @@ const imgSrcHandel = (i: any) => {
   }
   & > div:nth-child(2) {
     color: var(--Theme-Color, #fc1682);
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
@@ -2906,7 +2906,7 @@ const imgSrcHandel = (i: any) => {
   align-items: center;
   & > div:nth-child(1) {
     color: var(--Theme-Color, #fc1682);
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 50px;
     font-style: normal;
     font-weight: 400;
@@ -2936,7 +2936,7 @@ const imgSrcHandel = (i: any) => {
             display: flex;
             align-items: center;
             color: var(--Theme-Color, #fc1682);
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 22px;
             font-style: normal;
             font-weight: 400;
@@ -2944,7 +2944,7 @@ const imgSrcHandel = (i: any) => {
           }
           & > div:nth-child(2) {
             color: var(--Grey-Deep, #4d4d4d);
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 20px;
             font-style: normal;
             font-weight: 400;
@@ -2959,7 +2959,7 @@ const imgSrcHandel = (i: any) => {
         & > a {
           color: var(--Theme-Color, #fc1682);
           text-align: center;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 35px;
           font-style: normal;
           font-weight: 400;
@@ -2986,7 +2986,7 @@ const imgSrcHandel = (i: any) => {
     display: flex;
     justify-content: center;
     color: #358639;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 50px;
     font-style: normal;
     font-weight: 400;
@@ -3059,7 +3059,7 @@ const imgSrcHandel = (i: any) => {
       & > div:nth-child(1) {
         color: var(--Theme-Color, #fc1682);
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 40.857px;
         font-style: normal;
         font-weight: 400;
@@ -3074,7 +3074,7 @@ const imgSrcHandel = (i: any) => {
         margin-top: 22px;
         color: var(--White, #fff);
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 30px;
         font-style: normal;
         font-weight: 400;
@@ -3153,7 +3153,7 @@ const imgSrcHandel = (i: any) => {
       & > div {
         & > div:nth-child(1) {
           color: #fc1682;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 30px;
           font-style: normal;
           font-weight: 400;
@@ -3188,7 +3188,7 @@ const imgSrcHandel = (i: any) => {
   margin: 0 auto;
   & > div {
     color: var(--Grey-Deep, #4d4d4d);
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 26px;
     font-style: normal;
     font-weight: 500;
@@ -3209,7 +3209,7 @@ const imgSrcHandel = (i: any) => {
     padding: 2.665vw 6.665vw 2.665vw 7.2vw;
     color: var(--White, #fff);
     text-align: center;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 26px;
     font-style: normal;
     font-weight: 500;
@@ -3224,7 +3224,7 @@ const imgSrcHandel = (i: any) => {
     text-align: center;
     -webkit-text-stroke-width: 2;
     -webkit-text-stroke-color: #fff;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 26px;
     font-style: normal;
     font-weight: 500;
@@ -3243,7 +3243,7 @@ const imgSrcHandel = (i: any) => {
     grid-row: span 3;
     background: #ffdbb1;
     text-align: center;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 26px;
     font-style: normal;
     font-weight: 500;
@@ -3266,7 +3266,7 @@ const imgSrcHandel = (i: any) => {
       1px 1px 0 #fff;
     background: #fca3a3;
     text-align: center;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 26px;
     font-style: normal;
     font-weight: 500;
@@ -3288,7 +3288,7 @@ const imgSrcHandel = (i: any) => {
   & > div:nth-child(19) {
     text-align: center;
     color: var(--Theme-Color, #fc1682);
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 26px;
     font-style: normal;
     font-weight: 500;
@@ -3320,7 +3320,7 @@ const imgSrcHandel = (i: any) => {
         margin-bottom: 12px;
         color: #fc1682;
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 30px;
         font-style: normal;
         font-weight: 400;
@@ -3378,7 +3378,7 @@ const imgSrcHandel = (i: any) => {
             display: flex;
             align-items: baseline;
             color: var(--Theme-Color, #fc1682);
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 36.754px;
             font-style: normal;
             font-weight: 400;
@@ -3410,7 +3410,7 @@ const imgSrcHandel = (i: any) => {
         margin-bottom: 10px;
         & > div:nth-child(1) {
           color: var(--Theme-Color, #fc1682);
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 25.985px;
           font-style: normal;
           font-weight: 600;
@@ -3477,7 +3477,7 @@ const imgSrcHandel = (i: any) => {
   & > div:nth-child(1) {
     & > div:nth-child(1) {
       color: #fc1682;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 31.392px;
       font-style: normal;
       font-weight: 600;
@@ -3656,7 +3656,7 @@ const imgSrcHandel = (i: any) => {
   position: relative;
   & > div:nth-child(1) {
     color: #14a033;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 32px;
     font-style: normal;
     font-weight: 600;
@@ -3683,7 +3683,7 @@ const imgSrcHandel = (i: any) => {
     color: #14a033;
     text-align: justify;
     /* ServiceList-MB */
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 24px;
     font-style: normal;
     font-weight: 400;
@@ -3705,7 +3705,7 @@ const imgSrcHandel = (i: any) => {
     & > div {
       color: #fc1682;
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 28px;
       font-style: normal;
       font-weight: 600;
@@ -3775,7 +3775,7 @@ const imgSrcHandel = (i: any) => {
     align-items: center;
     & > div:nth-child(1) {
       color: var(--White, #fff);
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 30px;
       font-style: normal;
       font-weight: 400;
@@ -3796,7 +3796,7 @@ const imgSrcHandel = (i: any) => {
         box-shadow: 5.59px 5.59px 0px 0px rgba(252, 22, 130, 0.5);
         color: var(--Theme-Color, #fc1682);
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 26px;
         font-style: normal;
         font-weight: 500;
@@ -3819,7 +3819,7 @@ const imgSrcHandel = (i: any) => {
         box-shadow: 5.59px 5.59px 0px 0px rgba(252, 22, 130, 0.5);
         color: var(--Theme-Color, #fc1682);
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 26px;
         font-style: normal;
         font-weight: 500;
@@ -3843,7 +3843,7 @@ const imgSrcHandel = (i: any) => {
   & > div:nth-child(1) {
     color: var(--Theme-Color, #fc1682);
     text-align: center;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 50px;
     font-style: normal;
     font-weight: 400;
@@ -3884,7 +3884,7 @@ const imgSrcHandel = (i: any) => {
         & > div:nth-child(1) {
           color: #14a033;
           text-align: center;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 20px;
           font-style: normal;
           font-weight: 600;
@@ -3945,7 +3945,7 @@ const imgSrcHandel = (i: any) => {
         & > div:nth-child(1) {
           color: #14a033;
           text-align: center;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 20px;
           font-style: normal;
           font-weight: 600;
@@ -4114,7 +4114,7 @@ const imgSrcHandel = (i: any) => {
   & > span:nth-child(1) {
     color: #fff;
     text-align: center;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 14px;
     font-style: normal;
     font-weight: 500;
@@ -4123,7 +4123,7 @@ const imgSrcHandel = (i: any) => {
   & > span:nth-child(2) {
     color: #fff;
     text-align: center;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -4173,7 +4173,7 @@ const imgSrcHandel = (i: any) => {
         top: 15px;
         color: var(--Theme-Color, #fc1682);
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 35px;
         font-style: normal;
         font-weight: 400;
@@ -4193,7 +4193,7 @@ const imgSrcHandel = (i: any) => {
           left: 60%;
           text-align: left;
           color: var(--Theme-Color, #fc1682);
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 12px;
           font-style: normal;
           font-weight: 400;
@@ -4215,7 +4215,7 @@ const imgSrcHandel = (i: any) => {
         );
         color: var(--White, #fff);
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 26px;
         font-style: normal;
         font-weight: 400;
@@ -4230,7 +4230,7 @@ const imgSrcHandel = (i: any) => {
         flex-direction: column;
         & > span:nth-child(1) {
           color: var(--Grey-Deep, #4d4d4d);
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 26px;
           font-style: normal;
           font-weight: 600;
@@ -4240,7 +4240,7 @@ const imgSrcHandel = (i: any) => {
         & > span:nth-child(2) {
           color: var(--Grey-Deep, #4d4d4d);
           text-align: justify;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 20px;
           font-style: normal;
           font-weight: 400;
@@ -4497,7 +4497,7 @@ const imgSrcHandel = (i: any) => {
         background: var(--Theme-Color, #fc1682);
         color: var(--White, #fff);
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 5.33vw !important;
         font-style: normal;
         font-weight: 400;
@@ -4550,7 +4550,7 @@ const imgSrcHandel = (i: any) => {
           margin: 0;
           margin-top: 6px;
           color: var(--Theme-Color, #fc1682);
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 16px;
           font-style: normal;
           font-weight: 600;
@@ -4662,7 +4662,7 @@ const imgSrcHandel = (i: any) => {
       & > div:nth-child(1) {
         margin: 20px 30px 0;
         color: var(--Grey-Deep, #4d4d4d);
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 16px;
         font-style: normal;
         font-weight: 600;
@@ -4682,7 +4682,7 @@ const imgSrcHandel = (i: any) => {
             background: var(--Theme-Color, #fc1682);
             color: var(--White, #fff);
             text-align: right;
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 16px;
             font-style: normal;
             font-weight: 500;
@@ -4723,7 +4723,7 @@ const imgSrcHandel = (i: any) => {
                 top: -5px;
                 color: #fff;
                 text-align: center;
-                font-family: FakePearl;
+            font-family: 'FakePearl-Regular';
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 600;
@@ -4743,7 +4743,7 @@ const imgSrcHandel = (i: any) => {
             & > div:nth-child(2) {
               & > div:nth-child(1) {
                 color: var(--Grey-Deep, #4d4d4d);
-                font-family: FakePearl;
+            font-family: 'FakePearl-Regular';
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 600;
@@ -4962,7 +4962,7 @@ const imgSrcHandel = (i: any) => {
           & > div:nth-child(1) {
             color: var(--Theme-Color, #fc1682);
             text-align: center;
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 16px;
             font-style: normal;
             font-weight: 600;
@@ -4972,7 +4972,7 @@ const imgSrcHandel = (i: any) => {
           & > div:nth-child(2) {
             color: var(--Grey-Deep, #4d4d4d);
             text-align: justify;
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 12px;
             font-style: normal;
             font-weight: 500;
@@ -5020,7 +5020,7 @@ const imgSrcHandel = (i: any) => {
         display: flex;
         flex-direction: column;
         color: var(--Grey-Deep, #4d4d4d);
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 26px;
         font-style: normal;
         font-weight: 400;
@@ -5176,7 +5176,7 @@ const imgSrcHandel = (i: any) => {
             background: transparent;
             white-space: initial;
             color: var(--Theme-Color, #fc1682);
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 16px;
             font-style: normal;
             font-weight: 600;
@@ -5186,7 +5186,7 @@ const imgSrcHandel = (i: any) => {
           .mobile_text {
             P {
               color: var(--Grey-Deep, #4d4d4d);
-              font-family: FakePearl;
+          font-family: 'FakePearl-Regular';
               font-size: 12px;
               font-style: normal;
               font-weight: 400;
@@ -5256,7 +5256,7 @@ const imgSrcHandel = (i: any) => {
     padding: 0 20px 0 30px;
     & > div:nth-child(1) {
       color: var(--Blue-Deep, #00aeff);
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 20px;
       font-style: normal;
       font-weight: 400;
@@ -5285,7 +5285,7 @@ const imgSrcHandel = (i: any) => {
           & > div:nth-child(2) {
             min-width: 66px;
             color: var(--Theme-Color, #fc1682);
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 15px;
             font-style: normal;
             font-weight: 400;
@@ -5297,7 +5297,7 @@ const imgSrcHandel = (i: any) => {
           display: flex;
           flex-direction: column;
           color: var(--Grey-Deep, #4d4d4d);
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 15px;
           font-style: normal;
           font-weight: 600;
@@ -5320,7 +5320,7 @@ const imgSrcHandel = (i: any) => {
         width: fit-content;
         padding: 10px 30px;
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 20px;
         font-style: normal;
         font-weight: 600;
@@ -5374,7 +5374,7 @@ const imgSrcHandel = (i: any) => {
         left: 0;
         color: var(--Theme-Color, #fc1682);
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 26px !important;
         font-style: normal;
         font-weight: 600;
@@ -5398,7 +5398,7 @@ const imgSrcHandel = (i: any) => {
         width: fit-content;
         color: var(--White, #fff);
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 16px !important;
         font-style: normal;
         font-weight: 400;
@@ -5409,7 +5409,7 @@ const imgSrcHandel = (i: any) => {
         margin-top: 8px;
         color: var(--Grey-Deep, #4d4d4d);
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 12px !important;
         font-style: normal;
         font-weight: 400 !important;
@@ -5447,7 +5447,7 @@ const imgSrcHandel = (i: any) => {
 
           & > div:nth-child(1) {
             color: #fc1682;
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 15px;
             font-style: normal;
             font-weight: 400;
@@ -5480,7 +5480,7 @@ const imgSrcHandel = (i: any) => {
     width: 100%;
     & > div {
       color: var(--Grey-Deep, #4d4d4d);
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 3.2vw;
       width: max-content;
       font-style: normal;
@@ -5505,7 +5505,7 @@ const imgSrcHandel = (i: any) => {
       padding: 2.665vw 6.665vw 2.665vw 7.2vw;
       color: var(--White, #fff);
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 4vw;
       font-style: normal;
       font-weight: 400;
@@ -5518,7 +5518,7 @@ const imgSrcHandel = (i: any) => {
       max-width: 22.133vw;
       background: #ccecbc;
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 3.2vw;
       font-style: normal;
       font-weight: 400;
@@ -5534,7 +5534,7 @@ const imgSrcHandel = (i: any) => {
       grid-row: span 3;
       background: #ffdbb1;
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 3.2vw;
       font-style: normal;
       font-weight: 400;
@@ -5552,7 +5552,7 @@ const imgSrcHandel = (i: any) => {
       border-radius: var(--Count, 0px) var(--Count, 0px) var(--Count, 0px) 20px;
       background: #fca3a3;
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 3.2vw;
       font-style: normal;
       font-weight: 400;
@@ -5574,7 +5574,7 @@ const imgSrcHandel = (i: any) => {
     & > div:nth-child(19) {
       text-align: center;
       color: var(--Theme-Color, #fc1682);
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 3.2vw;
       font-style: normal;
       font-weight: 400;
@@ -5671,7 +5671,7 @@ const imgSrcHandel = (i: any) => {
         padding-left: 4px;
         & > div:nth-child(2) {
           color: var(--Theme-Color, #fc1682);
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 20px !important;
           font-style: normal;
           font-weight: 400 !important;
@@ -5700,7 +5700,7 @@ const imgSrcHandel = (i: any) => {
       align-items: flex-end;
       & > div:nth-child(1) {
         color: var(--Theme-Color, #fc1682);
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 20px !important;
         font-style: normal;
         font-weight: 600 !important;
@@ -5757,7 +5757,7 @@ const imgSrcHandel = (i: any) => {
     & > div:nth-child(1) {
       & > div:nth-child(1) {
         color: #fc1682;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
@@ -5837,7 +5837,7 @@ const imgSrcHandel = (i: any) => {
     align-items: center;
     & > div:nth-child(1) {
       color: #14a033;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 20px;
       font-style: normal;
       font-weight: 400;
@@ -5864,7 +5864,7 @@ const imgSrcHandel = (i: any) => {
       color: #14a033;
       text-align: justify;
       /* ServiceList-MB */
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 15px;
       font-style: normal;
       font-weight: 400;
@@ -5881,7 +5881,7 @@ const imgSrcHandel = (i: any) => {
       & > div {
         color: #fc1682;
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 15px;
         font-style: normal;
         font-weight: 500;
@@ -5944,7 +5944,7 @@ const imgSrcHandel = (i: any) => {
       align-items: center;
       & > div:nth-child(1) {
         color: var(--White, #fff);
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
@@ -5982,7 +5982,7 @@ const imgSrcHandel = (i: any) => {
 
           color: var(--Theme-Color, #fc1682);
           text-align: center;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 15px;
           font-style: normal;
           font-weight: 400;
@@ -6008,7 +6008,7 @@ const imgSrcHandel = (i: any) => {
           padding: 12px 16px;
           color: var(--Theme-Color, #fc1682);
           text-align: center;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 15px;
           font-style: normal;
           font-weight: 400;
@@ -6025,7 +6025,7 @@ const imgSrcHandel = (i: any) => {
     & > div:nth-child(1) {
       color: var(--Theme-Color, #fc1682);
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 20px;
       font-style: normal;
       font-weight: 400;
@@ -6070,7 +6070,7 @@ const imgSrcHandel = (i: any) => {
           & > div:nth-child(1) {
             color: #14a033;
             text-align: center;
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 20px;
             font-style: normal;
             font-weight: 600;
@@ -6120,7 +6120,7 @@ const imgSrcHandel = (i: any) => {
           & > div:nth-child(1) {
             color: #14a033;
             text-align: center;
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 20px;
             font-style: normal;
             font-weight: 600;
@@ -6288,7 +6288,7 @@ const imgSrcHandel = (i: any) => {
     & > span:nth-child(1) {
       color: #fff;
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 14px;
       font-style: normal;
       font-weight: 500;
@@ -6297,7 +6297,7 @@ const imgSrcHandel = (i: any) => {
     & > span:nth-child(2) {
       color: #fff;
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 20px;
       font-style: normal;
       font-weight: 400;
@@ -6346,7 +6346,7 @@ const imgSrcHandel = (i: any) => {
           top: 40px;
           color: var(--Theme-Color, #fc1682);
           text-align: center;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 18px;
           font-style: normal;
           font-weight: 600;
@@ -6364,7 +6364,7 @@ const imgSrcHandel = (i: any) => {
             position: absolute;
             padding-top: 5px;
             color: var(--Theme-Color, #fc1682);
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 10px;
             font-style: normal;
             font-weight: 600;
@@ -6387,7 +6387,7 @@ const imgSrcHandel = (i: any) => {
           );
           color: var(--White, #fff);
           text-align: center;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 15px;
           font-style: normal;
           font-weight: 400;
@@ -6402,7 +6402,7 @@ const imgSrcHandel = (i: any) => {
           flex-direction: column;
           & > span:nth-child(1) {
             color: var(--Grey-Deep, #4d4d4d);
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 15px;
             font-style: normal;
             font-weight: 600;
@@ -6412,7 +6412,7 @@ const imgSrcHandel = (i: any) => {
           & > span:nth-child(2) {
             color: var(--Grey-Deep, #4d4d4d);
             text-align: justify;
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 12px;
             font-style: normal;
             font-weight: 400;
@@ -6442,7 +6442,7 @@ const imgSrcHandel = (i: any) => {
     padding: 6px 20px;
     color: var(--White, #fff);
     text-align: center;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 20px;
     font-style: normal;
     font-weight: 400;

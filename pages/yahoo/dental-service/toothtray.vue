@@ -1602,7 +1602,7 @@ onMounted(() => {
       }
       & > div:nth-child(2) {
         color: var(--Grey-Deep, #4d4d4d);
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 5.33vw;
         font-style: normal;
         font-weight: 400;
@@ -1649,7 +1649,7 @@ onMounted(() => {
       margin: 0 10.65vw;
       color: var(--Theme-Color, #fc1682);
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 15px;
       font-style: normal;
       font-weight: 500;

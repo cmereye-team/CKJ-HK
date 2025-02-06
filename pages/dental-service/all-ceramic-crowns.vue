@@ -409,7 +409,7 @@ onMounted(() => {
   .content-remark {
     color: var(--White, #fff);
     text-align: right;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 28px;
     font-style: normal;
     font-weight: 400;
@@ -421,7 +421,7 @@ onMounted(() => {
     text-align: right;
     -webkit-text-stroke-width: 0.5;
     -webkit-text-stroke-color: var(--White, #fff);
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: clamp(40px, 5.7vw, 110px);
     font-style: normal;
     font-weight: 600;
@@ -457,7 +457,7 @@ onMounted(() => {
   .content-price {
     color: var(--White, #fff);
     text-align: right;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: clamp(20px, 2.9165vw, 56px);
     font-style: normal;
     font-weight: 400;
@@ -471,7 +471,7 @@ onMounted(() => {
   .content-subscribe {
     color: var(--Theme-Color, #fc1682);
     text-align: center;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: clamp(20px, 1.583vw, 40px);
     font-style: normal;
     font-weight: 600;
@@ -541,7 +541,7 @@ onMounted(() => {
         h3 {
           color: var(--indexColor1);
           text-align: center;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 23px;
           font-style: normal;
           font-weight: 500;
@@ -1328,7 +1328,7 @@ onMounted(() => {
     justify-content: flex-end;
     .content-remark {
       color: var(--White, #fff);
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 22px;
       font-style: normal;
       font-weight: 400;
@@ -1383,7 +1383,7 @@ onMounted(() => {
       bottom: -10px;
       color: var(--Theme-Color, #fc1682);
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 20px;
       font-style: normal;
       font-weight: 600;

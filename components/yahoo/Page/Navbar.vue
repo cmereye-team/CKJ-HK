@@ -980,7 +980,7 @@ onMounted(() => {
           }
           & > span:nth-child(2) {
             color: var(--Grey-Deep, #4d4d4d);
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 15px;
             font-style: normal;
             font-weight: 600;

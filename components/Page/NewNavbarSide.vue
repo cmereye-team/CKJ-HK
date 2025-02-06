@@ -185,7 +185,7 @@ const closeHealthCare = () => {
       top: 50%;
       color: #fff;
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 0;
       font-style: normal;
       font-weight: 600;

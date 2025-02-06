@@ -1411,7 +1411,7 @@ let newsMessageSwiperRef = {
             span {
               color: var(--Grey-Deep, #4d4d4d);
               text-align: justify;
-              font-family: FakePearl;
+          font-family: 'FakePearl-Regular';
               font-size: 3.2vw;
               font-style: normal;
               font-weight: 500;
@@ -1528,7 +1528,7 @@ let newsMessageSwiperRef = {
             padding: 0;
             padding-left: 5px;
             color: var(--Theme-Color, #fc1682);
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 16px;
             font-style: normal;
             font-weight: 600;
@@ -1539,7 +1539,7 @@ let newsMessageSwiperRef = {
             padding-left: 5px;
             color: var(--Grey-Deep, #4d4d4d);
             text-align: justify;
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 12px;
             font-style: normal;
             font-weight: 500;
@@ -1663,7 +1663,7 @@ let newsMessageSwiperRef = {
         width: 100%;
         & > span:nth-child(1) {
           color: var(--Grey-Deep, #4d4d4d);
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 20px;
           font-style: normal;
           font-weight: 600;
@@ -1671,7 +1671,7 @@ let newsMessageSwiperRef = {
         }
         & > span:nth-child(2) {
           color: var(--Theme-Color, #fc1682);
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 26px;
           font-style: normal;
           font-weight: 600;
@@ -1743,7 +1743,7 @@ let newsMessageSwiperRef = {
           min-height: 33.0665vw;
           color: #4d4d4d;
           text-align: justify;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 3.2vw;
           font-style: normal;
           font-weight: 400;

@@ -322,7 +322,7 @@ const problemData = {
         h3{
           color: var(--indexColor1);
           text-align: center;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 23px;
           font-style: normal;
           font-weight: 500;

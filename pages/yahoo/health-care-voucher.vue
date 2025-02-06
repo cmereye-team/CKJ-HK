@@ -1382,7 +1382,7 @@ const newsmoduleLists = [
       margin-bottom: 60px;
       color: var(--Theme-Color, #fc1682);
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 30px;
       font-style: normal;
       font-weight: 400;
@@ -1431,7 +1431,7 @@ const newsmoduleLists = [
         padding: clamp(10px, 0.05vw, 30px) 0 15px;
         color: #14a033;
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 30px;
         font-style: normal;
         font-weight: 500;
@@ -1818,7 +1818,7 @@ const newsmoduleLists = [
         display: flex;
         flex-direction: column;
         span {
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
         }
       }
       & > div:nth-child(2) {
@@ -1874,7 +1874,7 @@ const newsmoduleLists = [
         display: flex;
         flex-direction: column;
         span {
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
         }
       }
       & > div:nth-child(2) {
@@ -1915,7 +1915,7 @@ const newsmoduleLists = [
           font-weight: 500;
           line-height: 160%;
           letter-spacing: 3.2px;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
         }
       }
     }
@@ -1935,7 +1935,7 @@ const newsmoduleLists = [
     align-items: center;
     color: #fff;
     text-align: center;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
@@ -1998,7 +1998,7 @@ const newsmoduleLists = [
       & > div:nth-child(1) {
         color: #fc1682;
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 36.075px;
         font-style: normal;
         font-weight: 400;
@@ -2124,7 +2124,7 @@ const newsmoduleLists = [
   h1 {
     color: #fc1682;
     text-align: center;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
@@ -2151,7 +2151,7 @@ const newsmoduleLists = [
       justify-content: center;
       flex-direction: column;
       align-items: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 24px;
       font-style: normal;
       font-weight: 500;
@@ -2174,7 +2174,7 @@ const newsmoduleLists = [
       & > span {
         display: flex;
         color: #4d4d4d;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 19px;
         font-style: normal;
         font-weight: 400;
@@ -2187,7 +2187,7 @@ const newsmoduleLists = [
           border-radius: 50%;
           background: var(--Theme-Color, #fc1682);
           color: #fff;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 24px;
           font-style: normal;
           font-weight: 500;
@@ -2201,7 +2201,7 @@ const newsmoduleLists = [
       }
       & > p {
         color: #808080;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 19px;
         font-style: normal;
         font-weight: 400;
@@ -2629,7 +2629,7 @@ const newsmoduleLists = [
     }
     color: var(--Theme-Color, #fc1682);
     text-align: justify;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 5.33vw;
     font-style: normal;
     font-weight: 400;
@@ -2718,7 +2718,7 @@ const newsmoduleLists = [
           padding: 5.3vw 0 2.65vw;
           color: #14a033;
           text-align: center;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 5.3vw;
           font-style: normal;
           font-weight: 500;
@@ -3210,7 +3210,7 @@ const newsmoduleLists = [
       align-items: center;
       color: #fff;
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 14px;
       font-style: normal;
       font-weight: 500;
@@ -3254,7 +3254,7 @@ const newsmoduleLists = [
         & > div:nth-child(1) {
           color: #fc1682;
           text-align: center;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 36.075px;
           font-style: normal;
           font-weight: 400;
@@ -3528,7 +3528,7 @@ const newsmoduleLists = [
   .new_table_title h1 {
     color: #fc1682;
     text-align: center;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 5.33vw;
     font-style: normal;
     font-weight: 400;
@@ -3567,7 +3567,7 @@ const newsmoduleLists = [
         text-align: center;
         -webkit-text-stroke-width: 2;
         -webkit-text-stroke-color: #fff;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 15px;
         font-style: normal;
         font-weight: 500;
@@ -3587,7 +3587,7 @@ const newsmoduleLists = [
         & > span {
           display: flex;
           color: #4d4d4d;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 12px;
           font-style: normal;
           font-weight: 400;
@@ -3602,7 +3602,7 @@ const newsmoduleLists = [
             border-radius: 50%;
             background: var(--Theme-Color, #fc1682);
             color: #fff;
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 16px;
             font-style: normal;
             font-weight: 500;
@@ -3617,7 +3617,7 @@ const newsmoduleLists = [
         }
         & > p {
           color: #808080;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 12px;
           font-style: normal;
           font-weight: 400;

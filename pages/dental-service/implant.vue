@@ -739,7 +739,7 @@ const { top, bottom } = useElementBounding(doctorTeam)
 const { height } = useWindowSize()
 const checkId = ref('101')
 const groupPhoto = ref([
-  'https://static.cmereye.com/imgs/2024/11/d43bcfc01f99a97f.jpg',
+  'https://statichk.cmermedical.com/ckj/image/2025011310040501.png',
   'https://static.cmereye.com/imgs/2024/11/533cd5d2e1944a98.jpg',
   'https://static.cmereye.com/imgs/2024/11/dce268191178f65d.jpg',
   '',
@@ -789,6 +789,12 @@ const checkGroupPhoto = () => {
     <PageHeader v-if="windowWidth < 768" :headerConfig="headerConfig">
       <template #xxxxxxxxxxx-home>
         <div class="banner-in-box">
+          <div class="banner-image">
+            <img
+              src="https://statichk.cmermedical.com/ckj/image/2025020613460702.svg"
+              alt=""
+            />
+          </div>
           <div class="banner-content" style="display: flex">
             <div class="content-subscribe">網上預約限定優惠</div>
             <div class="content-title">歐美種植牙</div>
@@ -807,6 +813,12 @@ const checkGroupPhoto = () => {
     <PagePcBannerNoHome v-if="windowWidth > 768" :headerConfig="headerConfig">
       <template #xxxxxxxxxxx-home>
         <div class="banner-in-box">
+          <div class="banner-image">
+            <img
+              src="https://statichk.cmermedical.com/ckj/image/2025020613460701.svg"
+              alt=""
+            />
+          </div>
           <div class="banner-content" style="display: flex">
             <div class="content-title">歐美種植牙</div>
             <div class="content-price">
@@ -2302,6 +2314,19 @@ const checkGroupPhoto = () => {
   width: 55%;
   z-index: 10;
 }
+.banner-image {
+  position: absolute;
+  z-index: 10;
+  width: 296px;
+  height: 79px;
+  top: 0;
+  left: 135%;
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
 .banner-content {
   display: flex;
   flex-direction: column;
@@ -2317,7 +2342,7 @@ const checkGroupPhoto = () => {
     text-align: right;
     -webkit-text-stroke-width: 0.5;
     -webkit-text-stroke-color: var(--White, #fff);
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: clamp(40px, 5.7vw, 110px);
     font-style: normal;
     font-weight: 600;
@@ -2353,7 +2378,7 @@ const checkGroupPhoto = () => {
   .content-price {
     color: var(--White, #fff);
     text-align: right;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: clamp(30px, 2.9165vw, 56px);
     font-style: normal;
     font-weight: 400;
@@ -2365,7 +2390,7 @@ const checkGroupPhoto = () => {
   .content-subscribe {
     color: var(--Theme-Color, #fc1682);
     text-align: center;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: clamp(20px, 2.083vw, 40px);
     font-style: normal;
     font-weight: 400;
@@ -2452,7 +2477,7 @@ const checkGroupPhoto = () => {
           align-items: center;
           color: var(--White, #fff);
           text-align: center;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 35px;
           font-style: normal;
           font-weight: 400;
@@ -2678,7 +2703,7 @@ const checkGroupPhoto = () => {
               transform: translate(-50%, -50%);
               color: var(--White, #fff);
               text-align: center;
-              font-family: FakePearl;
+          font-family: 'FakePearl-Regular';
               font-size: 35px;
               font-style: normal;
               font-weight: 400;
@@ -2698,7 +2723,7 @@ const checkGroupPhoto = () => {
             // padding: 8px 0;
             // clip-path: polygon(0 0, 80% 0, 85% 100%, 0 100%);
             color: var(--Theme-Color, #fc1682);
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 28px;
             font-style: normal;
             font-weight: 400;
@@ -2747,7 +2772,7 @@ const checkGroupPhoto = () => {
             padding: 8px 60px;
             color: var(--White, #fff);
             text-align: center;
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 35px;
             font-style: normal;
             font-weight: 400;
@@ -2765,7 +2790,7 @@ const checkGroupPhoto = () => {
                 gap: 0 20px;
                 & > span:nth-child(1) {
                   color: #fc1682;
-                  font-family: FakePearl;
+              font-family: 'FakePearl-Regular';
                   font-size: 30px;
                   font-style: normal;
                   font-weight: 500;
@@ -2787,7 +2812,7 @@ const checkGroupPhoto = () => {
         & > ul {
           margin-top: 30px;
           color: var(--Grey-Deep, #4d4d4d);
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 26px;
           font-style: normal;
           font-weight: 500;
@@ -2810,7 +2835,7 @@ const checkGroupPhoto = () => {
         margin: 120px auto 0;
         color: var(--Theme-Color, #fc1682);
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 26px;
         font-style: normal;
         font-weight: 500;
@@ -2937,7 +2962,7 @@ const checkGroupPhoto = () => {
         display: flex;
         flex-direction: column;
         color: var(--Grey-Deep, #4d4d4d);
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 26px;
         font-style: normal;
         font-weight: 500;
@@ -3218,7 +3243,7 @@ const checkGroupPhoto = () => {
     align-items: center;
     gap: 0 12px;
     color: var(--Theme-Color, #fc1682);
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 26px;
     font-style: normal;
     font-weight: 500;
@@ -3259,7 +3284,7 @@ const checkGroupPhoto = () => {
       grid-column: 1 / 4;
       color: var(--Theme-Color, #fc1682);
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 35px;
       font-style: normal;
       font-weight: 400;
@@ -3288,7 +3313,7 @@ const checkGroupPhoto = () => {
           flex-direction: column;
           & > span:nth-child(1) {
             color: var(--Blue-Deep, #00aeff);
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 28px;
             font-style: normal;
             font-weight: 500;
@@ -3377,7 +3402,6 @@ const checkGroupPhoto = () => {
     }
   }
 }
-
 .btnImgCase {
   position: absolute;
   top: 45%;
@@ -3396,7 +3420,7 @@ const checkGroupPhoto = () => {
 @media (min-width: 768px) and (max-width: 1920px) {
   .dentistryServices {
     background: #fff;
-    padding: 0 0;
+    padding: 120px 0;
     position: relative;
     z-index: 1;
     .tabNav {
@@ -3460,7 +3484,7 @@ const checkGroupPhoto = () => {
             align-items: center;
             color: var(--White, #fff);
             text-align: center;
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 35px;
             font-style: normal;
             font-weight: 400;
@@ -3689,7 +3713,7 @@ const checkGroupPhoto = () => {
                 transform: translate(-50%, -50%);
                 color: var(--White, #fff);
                 text-align: center;
-                font-family: FakePearl;
+            font-family: 'FakePearl-Regular';
                 font-size: 35px;
                 font-style: normal;
                 font-weight: 400;
@@ -3709,7 +3733,7 @@ const checkGroupPhoto = () => {
               // padding: 8px 0;
               // clip-path: polygon(0 0, 80% 0, 85% 100%, 0 100%);
               color: var(--Theme-Color, #fc1682);
-              font-family: FakePearl;
+          font-family: 'FakePearl-Regular';
               font-size: clamp(18px, 1.4583vw, 28px);
               font-style: normal;
               font-weight: 400;
@@ -3759,7 +3783,7 @@ const checkGroupPhoto = () => {
               padding: 8px clamp(20px, 3.125vw, 60px);
               color: var(--White, #fff);
               text-align: center;
-              font-family: FakePearl;
+          font-family: 'FakePearl-Regular';
               font-size: clamp(25px, 1.8229vw, 35px);
               font-style: normal;
               font-weight: 400;
@@ -3777,7 +3801,7 @@ const checkGroupPhoto = () => {
                   gap: 0 20px;
                   & > span:nth-child(1) {
                     color: #fc1682;
-                    font-family: FakePearl;
+                font-family: 'FakePearl-Regular';
                     font-size: clamp(10px, 1.5625vw, 30px);
                     font-style: normal;
                     font-weight: 500;
@@ -3805,7 +3829,7 @@ const checkGroupPhoto = () => {
           & > ul {
             margin-top: clamp(10px, 1.5625vw, 30px);
             color: var(--Grey-Deep, #4d4d4d);
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: clamp(14px, 1.354vw, 26px);
             font-style: normal;
             font-weight: 500;
@@ -3828,7 +3852,7 @@ const checkGroupPhoto = () => {
           margin: clamp(80px, 6.25vw, 120px) auto 0;
           color: var(--Theme-Color, #fc1682);
           text-align: center;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: clamp(14px, 1.354vw, 26px);
           font-style: normal;
           font-weight: 500;
@@ -4230,7 +4254,7 @@ const checkGroupPhoto = () => {
         grid-column: 1 / 4;
         color: var(--Theme-Color, #fc1682);
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 35px;
         font-style: normal;
         font-weight: 400;
@@ -4259,7 +4283,7 @@ const checkGroupPhoto = () => {
             flex-direction: column;
             & > span:nth-child(1) {
               color: var(--Blue-Deep, #00aeff);
-              font-family: FakePearl;
+          font-family: 'FakePearl-Regular';
               font-size: clamp(14px, 1.453vw, 26px);
               font-style: normal;
               font-weight: 500;
@@ -4409,8 +4433,14 @@ const checkGroupPhoto = () => {
       background-size: 100% 100%;
     }
   }
+  .new_doctor {
+    .team_doctor_everybody {
+      display: flex;
+      justify-content: center;
+    }
+  }
   .dentistryServices {
-    padding: 50px 0;
+    padding: 120px 0;
     .tabNav {
       padding: 30px;
       font-size: 1rem;
@@ -4882,7 +4912,7 @@ const checkGroupPhoto = () => {
             gap: 0 120px;
             margin-bottom: 6px;
             & > div {
-              font-family: FakePearl;
+          font-family: 'FakePearl-Regular';
               font-size: 20px;
               font-style: normal;
               font-weight: 400;
@@ -5065,7 +5095,7 @@ const checkGroupPhoto = () => {
           }
           & > span:nth-child(2) {
             color: var(--Theme-Color, #fc1682);
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 4.1vw;
             font-style: normal;
             font-weight: 600;
@@ -5074,7 +5104,7 @@ const checkGroupPhoto = () => {
           & > span:nth-child(4) {
             color: var(--Grey-Deep, #4d4d4d);
             text-align: justify;
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 3.07vw;
             font-style: normal;
             font-weight: 600;
@@ -5122,7 +5152,7 @@ const checkGroupPhoto = () => {
       gap: 0 5px;
       & > div:nth-child(1) {
         color: var(--Theme-Color, #fc1682);
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
@@ -5144,7 +5174,7 @@ const checkGroupPhoto = () => {
   .Plant_brand_series-content {
     & > div:nth-child(2) > span {
       color: var(--Grey-Deep, #4d4d4d);
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 15px;
       font-style: normal;
       font-weight: 400;
@@ -5209,7 +5239,7 @@ const checkGroupPhoto = () => {
         background: var(--Theme-Color, #fc1682);
         color: var(--White, #fff);
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
@@ -5234,7 +5264,7 @@ const checkGroupPhoto = () => {
         background: var(--Pink-Pale, #fee6f1);
         color: var(--Grey-Deep, #4d4d4d);
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
@@ -5283,7 +5313,7 @@ const checkGroupPhoto = () => {
           background: var(--Theme-Color, #fc1682);
           color: var(--White, #fff);
           text-align: center;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 16px !important;
           font-style: normal;
           font-weight: 500;
@@ -5307,7 +5337,7 @@ const checkGroupPhoto = () => {
               align-items: center;
               & > span:nth-child(1) {
                 color: #fc1682;
-                font-family: FakePearl;
+            font-family: 'FakePearl-Regular';
                 font-size: 16px !important;
                 font-style: normal;
                 font-weight: 600;
@@ -5351,7 +5381,7 @@ const checkGroupPhoto = () => {
       width: fit-content;
       position: relative;
       color: var(--Grey-Deep, #4d4d4d);
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 5.12vw;
       font-style: normal;
       line-height: 160%; /* 32px */
@@ -5394,7 +5424,7 @@ const checkGroupPhoto = () => {
         flex-direction: column;
         color: var(--Theme-Color, #fc1682);
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 20px !important;
         font-style: normal;
         font-weight: 500 !important;
@@ -5416,7 +5446,7 @@ const checkGroupPhoto = () => {
             flex-direction: column;
             & > span:nth-child(1) {
               color: var(--Blue-Deep, #00aeff);
-              font-family: FakePearl;
+          font-family: 'FakePearl-Regular';
               font-size: 20px;
               font-style: normal;
               font-weight: 400;
@@ -5492,7 +5522,7 @@ const checkGroupPhoto = () => {
             background: var(--Theme-Color, #fc1682);
             color: var(--White, #fff);
             text-align: right;
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 16px;
             font-style: normal;
             font-weight: 500;
@@ -5511,7 +5541,7 @@ const checkGroupPhoto = () => {
               gap: 0 8px;
               & > span:nth-child(1) {
                 color: var(--Theme-Color, #fc1682);
-                font-family: FakePearl;
+            font-family: 'FakePearl-Regular';
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 600;
@@ -5526,7 +5556,7 @@ const checkGroupPhoto = () => {
         padding-left: 40px;
         list-style: disc;
         color: var(--Grey-Deep, #4d4d4d);
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 15px;
         font-style: normal;
         font-weight: 400;
@@ -5666,6 +5696,19 @@ const checkGroupPhoto = () => {
     align-items: flex-start;
     justify-content: flex-start;
   }
+  .banner-image {
+    position: absolute;
+    z-index: 10;
+    width: 166px;
+    height: 46px;
+    top: 0;
+    left: 15%;
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
   .banner-content {
     align-items: flex-start;
     justify-content: flex-end;
@@ -5715,7 +5758,7 @@ const checkGroupPhoto = () => {
       bottom: -10px;
       color: var(--Theme-Color, #fc1682);
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 20px;
       font-style: normal;
       font-weight: 600;

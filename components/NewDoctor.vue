@@ -269,7 +269,7 @@ const itemList = () => {
           color: #fff;
           text-align: center;
           text-shadow: 0px 4px 4px #fc1682;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 45px;
           font-style: normal;
           font-weight: 400;
@@ -281,7 +281,7 @@ const itemList = () => {
           & > span {
             color: #fff;
             text-align: center;
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 25px;
             font-style: normal;
             font-weight: 400;
@@ -294,7 +294,7 @@ const itemList = () => {
       .item_title_tag {
         color: var(--Grey-Deep, #4d4d4d);
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 26px;
         font-style: normal;
         font-weight: 500;
@@ -364,7 +364,7 @@ const itemList = () => {
           color: var(--White, #fff);
           text-align: center;
           text-shadow: 0px 4px 2px #fc1682;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 18.75px;
           font-style: normal;
           font-weight: 400;
@@ -376,7 +376,7 @@ const itemList = () => {
           & > span {
             color: #fff;
             text-align: center;
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 9.375px;
             font-style: normal;
             font-weight: 400;
@@ -389,7 +389,7 @@ const itemList = () => {
       .item_title_tag {
         color: var(--Grey-Deep, #4d4d4d);
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 9.75px;
         font-style: normal;
         font-weight: 500;

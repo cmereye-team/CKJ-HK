@@ -146,7 +146,7 @@ const activeNames = ref(0)
       margin-top: 7px;
       color: var(--Grey-Deep, #4d4d4d);
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 22px;
       font-style: normal;
       font-weight: 600;

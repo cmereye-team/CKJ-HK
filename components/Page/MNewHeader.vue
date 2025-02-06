@@ -660,7 +660,7 @@ const headerData = {
           background: var(---Green, #00a752);
           color: var(--White, #fff);
           text-align: right;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 3.73vw;
           font-style: normal;
           font-weight: 400;
@@ -670,7 +670,7 @@ const headerData = {
         & > span:nth-child(2) {
           color: var(--Grey-Deep, #4d4d4d);
           text-align: right;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 3.73vw;
           font-style: normal;
           font-weight: 400;
@@ -874,7 +874,7 @@ const headerData = {
       background: var(---Green, #00a752);
       color: var(--White, #fff);
       text-align: right;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 3.73vw;
       font-style: normal;
       font-weight: 400;
@@ -884,7 +884,7 @@ const headerData = {
     & > span:nth-child(2) {
       color: var(--Grey-Deep, #4d4d4d);
       text-align: right;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 3.73vw;
       font-style: normal;
       font-weight: 400;
@@ -907,7 +907,7 @@ const headerData = {
         background: var(---Green, #00a752);
         color: var(--White, #fff);
         text-align: right;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 3.73vw;
         font-style: normal;
         font-weight: 400;
@@ -917,7 +917,7 @@ const headerData = {
       & > span:nth-child(2) {
         color: var(--Grey-Deep, #4d4d4d);
         text-align: right;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 3.73vw;
         font-style: normal;
         font-weight: 400;

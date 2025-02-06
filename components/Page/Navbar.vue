@@ -1039,7 +1039,7 @@ onMounted(() => {
           }
           & > span:nth-child(2) {
             color: var(--Grey-Deep, #4d4d4d);
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 15px;
             font-style: normal;
             font-weight: 600;
@@ -1105,7 +1105,7 @@ onMounted(() => {
           background: var(---Green, #00a752);
           color: var(--White, #fff);
           text-align: center;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 15px;
           font-style: normal;
           font-weight: 400;
@@ -1120,7 +1120,7 @@ onMounted(() => {
           text-align: center;
           -webkit-text-stroke-width: 1;
           -webkit-text-stroke-color: var(--White, #fff);
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 15px;
           font-style: normal;
           font-weight: 400;

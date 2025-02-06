@@ -233,7 +233,7 @@ onMounted(() => {
   letter-spacing: 2.6px;
   a {
     color: var(--Theme-Color, #fc1682);
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 26px;
     font-style: normal;
     font-weight: 500;
@@ -255,7 +255,7 @@ onMounted(() => {
     ul {
       color: var(--Theme-Color, #fc1682);
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 28px;
       font-style: normal;
       font-weight: 500;
@@ -344,7 +344,7 @@ onMounted(() => {
     margin-top: 30px;
     color: var(--Grey-Deep, #4d4d4d);
     text-align: center;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
@@ -381,7 +381,7 @@ onMounted(() => {
     .contact {
       color: var(--Grey-Deep, #4d4d4d);
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 4vw;
       font-style: normal;
       font-weight: 400;
@@ -389,7 +389,7 @@ onMounted(() => {
       letter-spacing: 1.5px;
       a {
         color: var(--Theme-Color, #fc1682);
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 15px;
         font-style: normal;
         font-weight: 400;
@@ -403,7 +403,7 @@ onMounted(() => {
         ul {
           color: var(--Theme-Color, #fc1682);
           text-align: center;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 16px;
           font-style: normal;
           font-weight: 500;

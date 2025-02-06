@@ -812,7 +812,7 @@ onMounted(() => {
   .content-remark {
     color: var(--White, #fff);
     text-align: right;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 28px;
     font-style: normal;
     font-weight: 400;
@@ -824,7 +824,7 @@ onMounted(() => {
     text-align: right;
     -webkit-text-stroke-width: 0.5;
     -webkit-text-stroke-color: var(--White, #fff);
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: clamp(40px, 5.7vw, 110px);
     font-style: normal;
     font-weight: 600;
@@ -860,7 +860,7 @@ onMounted(() => {
   .content-price {
     color: var(--White, #fff);
     text-align: right;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: clamp(20px, 2.5165vw, 56px);
     font-style: normal;
     font-weight: 400;
@@ -874,7 +874,7 @@ onMounted(() => {
   .content-subscribe {
     color: var(--Theme-Color, #fc1682);
     text-align: center;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: clamp(20px, 1.583vw, 40px);
     font-style: normal;
     font-weight: 600;
@@ -1501,7 +1501,7 @@ onMounted(() => {
         p {
           color: var(--Grey-Deep, #4d4d4d);
           text-align: center;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 16px;
           font-style: normal;
           font-weight: 500;
@@ -1528,7 +1528,7 @@ onMounted(() => {
     & > span {
       color: var(--Theme-Color, #fc1682);
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 16px;
       font-style: normal;
       font-weight: 600;
@@ -1565,7 +1565,7 @@ onMounted(() => {
           h3 {
             color: var(--Theme-Color, #fc1682);
             text-align: justify;
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 4.265vw;
             font-style: normal;
             font-weight: 500;
@@ -1619,7 +1619,7 @@ onMounted(() => {
       margin-top: 15px;
       color: var(--Grey-Deep, #4d4d4d);
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 16px;
       font-style: normal;
       font-weight: 500;
@@ -1635,7 +1635,7 @@ onMounted(() => {
     flex-direction: column;
     color: var(--Theme-Color, #fc1682);
     text-align: center;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 16px;
     font-style: normal;
     font-weight: 600;
@@ -1733,7 +1733,7 @@ onMounted(() => {
         padding-bottom: 20px;
         .title {
           color: var(--Theme-Color, #fc1682) !important;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 16px !important;
           font-style: normal;
           font-weight: 600 !important;
@@ -1743,7 +1743,7 @@ onMounted(() => {
         .text {
           color: var(--Grey-Deep, #4d4d4d) !important;
           text-align: justify;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 4.226vw !important;
           font-style: normal;
           font-weight: 600;
@@ -1758,7 +1758,7 @@ onMounted(() => {
       margin-left: 50px;
       color: var(--Grey-Deep, #4d4d4d);
       text-align: justify;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 16px;
       font-style: normal;
       font-weight: 600;
@@ -1818,7 +1818,7 @@ onMounted(() => {
     max-width: 56.265vw;
     color: var(--Theme-Color, #fc1682);
     text-align: justify;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 4.265vw;
     font-style: normal;
     font-weight: 500;
@@ -1890,7 +1890,7 @@ onMounted(() => {
       width: fit-content;
       position: relative;
       color: var(--Grey-Deep, #4d4d4d);
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 20px;
       font-style: normal;
       font-weight: 5.12vw;
@@ -1924,7 +1924,7 @@ onMounted(() => {
         flex-direction: column;
         color: var(--Theme-Color, #fc1682);
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 20px;
         font-style: normal;
         font-weight: 500;
@@ -1945,7 +1945,7 @@ onMounted(() => {
             flex-direction: column;
             & > span:nth-child(1) {
               color: var(--Blue-Deep, #00aeff);
-              font-family: FakePearl;
+          font-family: 'FakePearl-Regular';
               font-size: 5.128vw;
               font-style: normal;
               font-weight: 600;
@@ -2015,7 +2015,7 @@ onMounted(() => {
     justify-content: flex-end;
     .content-remark {
       color: var(--White, #fff);
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 22px;
       font-style: normal;
       font-weight: 400;
@@ -2070,7 +2070,7 @@ onMounted(() => {
       bottom: -10px;
       color: var(--Theme-Color, #fc1682);
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 20px;
       font-style: normal;
       font-weight: 600;

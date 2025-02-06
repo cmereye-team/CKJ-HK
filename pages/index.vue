@@ -608,7 +608,7 @@ onMounted(() => {
 const contentDom = ref(false)
 
 const groupPhoto = ref([
-  'https://static.cmereye.com/imgs/2024/11/d43bcfc01f99a97f.jpg',
+  'https://statichk.cmermedical.com/ckj/image/2025011310040501.png',
   'https://static.cmereye.com/imgs/2024/11/533cd5d2e1944a98.jpg',
   'https://static.cmereye.com/imgs/2024/11/dce268191178f65d.jpg',
   '',
@@ -3026,7 +3026,7 @@ svg:hover path {
             flex-direction: column;
             & > span:nth-child(1) {
               color: var(--Theme-Color, #fc1682);
-              font-family: FakePearl;
+          font-family: 'FakePearl-Regular';
               font-size: 5.12vw;
               font-style: normal;
               font-weight: 600;
@@ -3073,7 +3073,7 @@ svg:hover path {
   }
   .item-title {
     color: var(--Blue-Deep, #00aeff);
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 20px;
     font-style: normal;
     font-weight: 600;

@@ -742,7 +742,7 @@ input::-webkit-inner-spin-button {
       top: -45px;
       left: 15%;
       color: var(--Grey-Deep, #4d4d4d);
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 22px;
       font-style: normal;
       font-weight: 400;
@@ -766,7 +766,7 @@ input::-webkit-inner-spin-button {
       background: var(--White, #fff);
       color: var(--Grey-Deep, #4d4d4d);
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 24px;
       font-style: normal;
       font-weight: 500;
@@ -783,7 +783,7 @@ input::-webkit-inner-spin-button {
       background: var(--Theme-Color, #fc1682);
       color: var(--White, #fff);
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 24px;
       font-style: normal;
       font-weight: 500;
@@ -1106,7 +1106,7 @@ li {
       gap: 0 5px;
       & > label {
         color: #00a752;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-style: normal;
         font-weight: 400;
         line-height: 160%; /* 24px */
@@ -1227,7 +1227,7 @@ li {
         top: -2.275vw;
         left: 15%;
         color: var(--Grey-Deep, #4d4d4d);
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 1.0458vw;
         line-height: 160%; /* 35.2px */
         font-style: normal;
@@ -1268,7 +1268,7 @@ li {
         background: var(--White, #fff);
         color: var(--Grey-Deep, #4d4d4d);
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-style: normal;
         font-weight: 500;
         line-height: 1.8646vw;
@@ -1286,7 +1286,7 @@ li {
         background: var(--Theme-Color, #fc1682);
         color: var(--White, #fff);
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-style: normal;
         font-weight: 500;
         line-height: 1.8646vw;
@@ -1779,7 +1779,7 @@ li {
         top: -5.075vw;
         left: 25%;
         color: var(--Grey-Deep, #4d4d4d);
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 2.665vw;
         line-height: 160%; /* 35.2px */
         font-style: normal;
@@ -1815,7 +1815,7 @@ li {
         background: var(--White, #fff);
         color: var(--Grey-Deep, #4d4d4d);
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 3.2vw;
         font-style: normal;
         font-weight: 500;
@@ -1833,7 +1833,7 @@ li {
         background: var(--Theme-Color, #fc1682);
         color: var(--White, #fff);
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 3.2vw;
         font-style: normal;
         font-weight: 500;

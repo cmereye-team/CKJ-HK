@@ -580,7 +580,7 @@ const getWindowWidth = () => {
         gap: 0 1px;
         color: var(--White, #fff);
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 13.128px;
         font-style: normal;
         font-weight: 400;

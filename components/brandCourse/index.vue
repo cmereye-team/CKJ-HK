@@ -168,7 +168,7 @@ const handleClick = (event, _id) => {
       min-width: 542px;
       & > div:nth-child(1) {
         color: var(--Theme-Color, #fc1682);
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 30px;
         font-style: normal;
         font-weight: 400;
@@ -299,7 +299,7 @@ const handleClick = (event, _id) => {
           color: var(--Theme-Color, #fc1682);
           text-align: justify;
           text-overflow: ellipsis;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 20px;
           font-style: normal;
           font-weight: 400;

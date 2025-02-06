@@ -3045,7 +3045,7 @@ const { height } = useWindowSize()
           }
           & > span:nth-child(2) {
             color: var(--Theme-Color, #fc1682);
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 4.1vw;
             font-style: normal;
             font-weight: 600;
@@ -3054,7 +3054,7 @@ const { height } = useWindowSize()
           & > span:nth-child(4) {
             color: var(--Grey-Deep, #4d4d4d);
             text-align: justify;
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 3.07vw;
             font-style: normal;
             font-weight: 600;
@@ -3125,7 +3125,7 @@ const { height } = useWindowSize()
           background: var(--Theme-Color, #fc1682);
           color: var(--White, #fff);
           text-align: center;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 16px;
           font-style: normal;
           font-weight: 500;
@@ -3148,7 +3148,7 @@ const { height } = useWindowSize()
               align-items: center;
               & > span:nth-child(1) {
                 color: #fc1682;
-                font-family: FakePearl;
+            font-family: 'FakePearl-Regular';
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 600;
@@ -3183,7 +3183,7 @@ const { height } = useWindowSize()
       align-items: center;
       color: var(--Theme-Color, #fc1682);
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 15px;
       font-style: normal;
       font-weight: 600;
@@ -3201,7 +3201,7 @@ const { height } = useWindowSize()
       width: fit-content;
       position: relative;
       color: var(--Grey-Deep, #4d4d4d);
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 20px;
       font-style: normal;
       font-weight: 5.12vw;
@@ -3235,7 +3235,7 @@ const { height } = useWindowSize()
         flex-direction: column;
         color: var(--Theme-Color, #fc1682);
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 20px;
         font-style: normal;
         font-weight: 500;
@@ -3256,7 +3256,7 @@ const { height } = useWindowSize()
             flex-direction: column;
             & > span:nth-child(1) {
               color: var(--Blue-Deep, #00aeff);
-              font-family: FakePearl;
+          font-family: 'FakePearl-Regular';
               font-size: 5.128vw;
               font-style: normal;
               font-weight: 600;
@@ -3330,7 +3330,7 @@ const { height } = useWindowSize()
             background: var(--Theme-Color, #fc1682);
             color: var(--White, #fff);
             text-align: right;
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 16px;
             font-style: normal;
             font-weight: 500;
@@ -3349,7 +3349,7 @@ const { height } = useWindowSize()
               gap: 0 8px;
               & > span:nth-child(1) {
                 color: var(--Theme-Color, #fc1682);
-                font-family: FakePearl;
+            font-family: 'FakePearl-Regular';
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 600;
@@ -3364,7 +3364,7 @@ const { height } = useWindowSize()
         padding-left: 40px;
         list-style: disc;
         color: var(--Grey-Deep, #4d4d4d);
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 15px;
         font-style: normal;
         font-weight: 400;

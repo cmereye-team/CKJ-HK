@@ -862,7 +862,7 @@ const differData: any = {
     text-align: right;
     -webkit-text-stroke-width: 0.5;
     -webkit-text-stroke-color: var(--White, #fff);
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: clamp(40px, 5.7vw, 110px);
     font-style: normal;
     font-weight: 600;
@@ -900,7 +900,7 @@ const differData: any = {
   .content-price {
     color: var(--White, #fff);
     text-align: right;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: clamp(30px, 2.9165vw, 56px);
     font-style: normal;
     font-weight: 400;
@@ -925,7 +925,7 @@ const differData: any = {
   .content-subscribe {
     color: var(--Theme-Color, #fc1682);
     text-align: center;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: clamp(20px, 2.083vw, 40px);
     font-style: normal;
     font-weight: 400;
@@ -2407,14 +2407,14 @@ const differData: any = {
         & > div {
           & > span {
             color: var(--Grey-Deep, #4d4d4d);
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 26px;
             font-style: normal;
             font-weight: 600;
             line-height: 160%; /* 41.6px */
             i {
               color: var(--Theme-Color, #fc1682);
-              font-family: FakePearl;
+          font-family: 'FakePearl-Regular';
               font-size: 26px;
               font-style: normal;
               font-weight: 600;
@@ -2583,7 +2583,7 @@ const differData: any = {
       display: flex;
       flex-direction: column;
       color: var(--Grey-Deep, #4d4d4d);
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 26px;
       font-style: normal;
       font-weight: 400;
@@ -2719,7 +2719,7 @@ const differData: any = {
             background: transparent;
             white-space: initial;
             color: var(--Theme-Color, #fc1682);
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 4.265vw;
             font-style: normal;
             font-weight: 500;
@@ -2800,7 +2800,7 @@ const differData: any = {
     & > span {
       color: var(--Theme-Color, #fc1682);
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 26px;
       font-style: normal;
       font-weight: 600;
@@ -2866,7 +2866,7 @@ const differData: any = {
             background: var(--Theme-Color, #fc1682);
             color: var(--White, #fff);
             text-align: center;
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 15px;
             font-style: normal;
             font-weight: 400;
@@ -3012,7 +3012,7 @@ const differData: any = {
       bottom: -10px;
       color: var(--Theme-Color, #fc1682);
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 20px;
       font-style: normal;
       font-weight: 600;

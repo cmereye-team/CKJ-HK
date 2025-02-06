@@ -1480,7 +1480,7 @@ const hideDiv = () => {
         clamp(15px, 1.0465vw, 20px) clamp(15px, 1.0465vw, 20px);
       color: #fff;
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: clamp(14px, 1.146vw, 22px);
       font-style: normal;
       font-weight: 400;
@@ -1553,7 +1553,7 @@ const hideDiv = () => {
     padding: 2px 4px 2px 6px;
     color: var(--White, #fff);
     text-align: right;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: clamp(10px, 0.7vw, 14px);
     font-style: normal;
     font-weight: 400;
@@ -1565,7 +1565,7 @@ const hideDiv = () => {
   & > span:nth-child(2) {
     color: var(--Grey-Deep, #4d4d4d);
     text-align: right;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: clamp(10px, 0.7vw, 14px);
     font-style: normal;
     font-weight: 400;
@@ -2317,7 +2317,7 @@ const hideDiv = () => {
           background: var(---Green, #00a752);
           color: var(--White, #fff);
           text-align: right;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 3.73vw;
           font-style: normal;
           font-weight: 400;
@@ -2327,7 +2327,7 @@ const hideDiv = () => {
         & > span:nth-child(2) {
           color: var(--Grey-Deep, #4d4d4d);
           text-align: right;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 3.73vw;
           font-style: normal;
           font-weight: 400;
@@ -2531,7 +2531,7 @@ const hideDiv = () => {
       background: var(---Green, #00a752);
       color: var(--White, #fff);
       text-align: right;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 3.73vw;
       font-style: normal;
       font-weight: 400;
@@ -2541,7 +2541,7 @@ const hideDiv = () => {
     & > span:nth-child(2) {
       color: var(--Grey-Deep, #4d4d4d);
       text-align: right;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 3.73vw;
       font-style: normal;
       font-weight: 400;
@@ -2564,7 +2564,7 @@ const hideDiv = () => {
         background: var(---Green, #00a752);
         color: var(--White, #fff);
         text-align: right;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 3.73vw;
         font-style: normal;
         font-weight: 400;
@@ -2574,7 +2574,7 @@ const hideDiv = () => {
       & > span:nth-child(2) {
         color: var(--Grey-Deep, #4d4d4d);
         text-align: right;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 3.73vw;
         font-style: normal;
         font-weight: 400;

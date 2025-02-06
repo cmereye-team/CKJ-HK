@@ -612,7 +612,7 @@ if (process.server) {
     .twenty-three-container-header-one {
       color: var(--White, #fff);
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 35px;
       font-style: normal;
       font-weight: 400;
@@ -633,7 +633,7 @@ if (process.server) {
     .twenty-three-container-header-two-three {
       color: var(--White, #fff);
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 35px;
       font-style: normal;
       font-weight: 400;
@@ -657,7 +657,7 @@ if (process.server) {
     .twenty-three-container-content-one {
       flex: 2;
       color: var(--Theme-Color, #fc1682);
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 22px;
       font-style: normal;
       font-weight: 400;

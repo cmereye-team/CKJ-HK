@@ -877,7 +877,7 @@ li {
       gap: 0 5px;
       & > label {
         color: #00a752;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-style: normal;
         font-weight: 400;
         line-height: 160%; /* 24px */

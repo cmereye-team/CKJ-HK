@@ -2082,7 +2082,7 @@ onMounted(() => {
             padding: 5px 20px 5px 29px;
             color: var(--White, #fff);
             text-align: center;
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 16px;
             font-style: normal;
             font-weight: 500;
@@ -2103,7 +2103,7 @@ onMounted(() => {
             & > span:nth-child(1) {
               color: var(--Grey-Deep, #4d4d4d);
               text-align: center;
-              font-family: FakePearl;
+          font-family: 'FakePearl-Regular';
               font-size: 9px;
               font-style: normal;
               font-weight: 500;
@@ -2123,7 +2123,7 @@ onMounted(() => {
             }
             & > span:nth-child(2) {
               color: var(--Theme-Color, #fc1682);
-              font-family: FakePearl;
+          font-family: 'FakePearl-Regular';
               font-size: 26px;
               font-style: normal;
               font-weight: 600;
@@ -2156,7 +2156,7 @@ onMounted(() => {
           padding-left: 30px;
           & > span:nth-child(1) {
             color: var(--Theme-Color, #fc1682);
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 16px;
             font-style: normal;
             font-weight: 600;
@@ -2171,7 +2171,7 @@ onMounted(() => {
         & > p:nth-child(8),
         & > p:nth-child(9) {
           color: var(--Grey-Deep, #4d4d4d);
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 15px;
           font-style: normal;
           font-weight: 600;
@@ -2230,7 +2230,7 @@ onMounted(() => {
     flex-direction: column;
     color: var(--Theme-Color, #fc1682);
     text-align: center;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 20px;
     font-style: normal;
     font-weight: 600;
@@ -2469,7 +2469,7 @@ onMounted(() => {
         }
         & > span:nth-child(2) {
           color: var(--Theme-Color, #fc1682);
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 4.1vw;
           font-style: normal;
           font-weight: 600;
@@ -2478,7 +2478,7 @@ onMounted(() => {
         & > span:nth-child(4) {
           color: var(--Grey-Deep, #4d4d4d);
           text-align: justify;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 3.07vw;
           font-style: normal;
           font-weight: 600;
@@ -2509,7 +2509,7 @@ onMounted(() => {
     padding: 11px 15px;
     color: var(--White, #fff);
     text-align: justify;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 12px;
     font-style: normal;
     font-weight: 400;

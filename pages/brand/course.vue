@@ -1031,7 +1031,7 @@ onMounted(() => {
     margin-bottom: 45px;
     color: #fc1682;
     text-align: center;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 50px;
     font-style: normal;
     font-weight: 400;
@@ -1220,7 +1220,7 @@ onMounted(() => {
   &-new_text {
     color: var(--Black, #4d4d4d);
     text-align: center;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 28px;
     font-style: normal;
     font-weight: 500;
@@ -1425,7 +1425,7 @@ onMounted(() => {
       }
       & > div:nth-child(2) {
         color: var(--Grey-Deep, #4d4d4d);
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 26px;
         font-style: normal;
         font-weight: 500;
@@ -1541,7 +1541,7 @@ onMounted(() => {
       margin-top: 60px;
       margin-bottom: 15px;
       color: var(--Theme-Color, #fc1682);
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 26px;
       font-style: normal;
       font-weight: 400;
@@ -1549,7 +1549,7 @@ onMounted(() => {
     }
     .new_node_time {
       color: #fc1682;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 20px;
       font-style: normal;
       font-weight: 600;
@@ -1600,7 +1600,7 @@ onMounted(() => {
     & > div:nth-child(1) {
       color: var(--Theme-Color, #fc1682);
       text-align: justify;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 20px;
       font-style: normal;
       font-weight: 400;
@@ -1963,7 +1963,7 @@ onMounted(() => {
           & > span {
             display: inline;
             color: var(--Grey-Deep, #4d4d4d);
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-style: normal;
           }
         }

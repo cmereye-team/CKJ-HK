@@ -1350,7 +1350,7 @@ const careData = {
       .title {
         color: var(--Grey-Deep, #4d4d4d);
         /* Headline-MB */
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 6.933vw;
         font-style: normal;
         font-weight: 400;
@@ -1359,7 +1359,7 @@ const careData = {
       .content {
         color: var(--Grey-Deep, #4d4d4d);
         text-align: justify;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 4.2665vw;
         font-style: normal;
         font-weight: 500;
@@ -1383,7 +1383,7 @@ const careData = {
     content: '';
     color: #fff;
     text-align: center;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 5.33vw;
     font-style: normal;
     font-weight: 400;
@@ -1406,7 +1406,7 @@ const careData = {
     content: '優惠';
     color: #fff;
     text-align: center;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 5.33vw;
     font-style: normal;
     font-weight: 400;
@@ -1482,7 +1482,7 @@ const careData = {
             margin-top: 5.33vw;
             color: var(--Theme-Color, #fc1682);
             text-align: center;
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 4vw;
             font-style: normal;
             font-weight: 400;
@@ -1495,7 +1495,7 @@ const careData = {
             box-sizing: border-box;
             color: var(--Grey-Deep, #4d4d4d);
             text-align: justify;
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 3.2vw;
             font-style: normal;
             font-weight: 400;
@@ -1701,7 +1701,7 @@ const careData = {
             padding: 0;
             padding-left: 5px;
             color: var(--Theme-Color, #fc1682);
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 16px;
             font-style: normal;
             font-weight: 600;
@@ -1712,7 +1712,7 @@ const careData = {
             padding-left: 5px;
             color: var(--Grey-Deep, #4d4d4d);
             text-align: justify;
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 12px;
             font-style: normal;
             font-weight: 500;
@@ -1864,7 +1864,7 @@ const careData = {
         position: absolute;
         color: var(--Grey-Deep, #4d4d4d);
         text-align: justify;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 3.2vw;
         font-style: normal;
         font-weight: 400;
@@ -1913,7 +1913,7 @@ const careData = {
             text-align: center;
             color: var(--Theme-Color, #fc1682);
             text-align: center;
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 12px;
             font-style: normal;
             font-weight: 400;
@@ -1925,7 +1925,7 @@ const careData = {
             margin-left: 1px;
             width: calc((127 / 315) * 100%);
             color: var(--Grey-Deep, #4d4d4d);
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 12px;
             font-style: normal;
             font-weight: 400;
@@ -1939,7 +1939,7 @@ const careData = {
             width: calc((127 / 315) * 100%);
 
             color: var(--Grey-Deep, #4d4d4d);
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 12px;
             font-style: normal;
             font-weight: 400;
@@ -1954,7 +1954,7 @@ const careData = {
             background: #fc1682;
             color: var(--White, #fff);
             text-align: center;
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 15px;
             font-style: normal;
             font-weight: 400;

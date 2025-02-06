@@ -589,7 +589,7 @@ const problemData = {
   justify-content: center;
   & > div:nth-child(1) {
     color: var(--Grey-Deep, #4d4d4d);
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 50px;
     font-style: normal;
     font-weight: 400;
@@ -635,7 +635,7 @@ const problemData = {
   & > div:nth-child(7) {
     width: fit-content;
     color: var(--Grey-Deep, #4d4d4d);
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 30px;
     font-style: normal;
     font-weight: 400;
@@ -670,7 +670,7 @@ const problemData = {
       padding: 12px 60px;
       box-sizing: border-box;
       color: var(--Grey-Deep, #4d4d4d);
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 30px;
       font-style: normal;
       font-weight: 400;
@@ -703,7 +703,7 @@ const problemData = {
       padding: 12px 50px;
       color: var(--Grey-Deep, #4d4d4d);
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 30px;
       font-style: normal;
       font-weight: 400;
@@ -760,7 +760,7 @@ const problemData = {
       box-sizing: border-box;
       padding: 12px 30px;
       color: var(--Grey-Deep, #4d4d4d);
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 30px;
       font-style: normal;
       font-weight: 400;
@@ -782,7 +782,7 @@ const problemData = {
       box-sizing: border-box;
       padding: 12px 30px;
       color: var(--Grey-Deep, #4d4d4d);
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 30px;
       font-style: normal;
       font-weight: 400;
@@ -869,7 +869,7 @@ const problemData = {
     & > div:nth-child(7) {
       width: fit-content;
       color: var(--Grey-Deep, #4d4d4d);
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 4vw;
       font-style: normal;
       font-weight: 400;
@@ -908,7 +908,7 @@ const problemData = {
       padding-right: 0;
       & > div {
         color: var(--Grey-Deep, #4d4d4d);
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 4vw;
         font-style: normal;
         font-weight: 400;
@@ -949,7 +949,7 @@ const problemData = {
         padding: 1.33vw 2.2665vw;
         color: var(--Grey-Deep, #4d4d4d);
         text-align: center;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 3.733vw;
         font-style: normal;
         font-weight: 400;
@@ -1029,7 +1029,7 @@ const problemData = {
         box-sizing: border-box;
         padding: 1.33vw 2.2265vw;
         color: var(--Grey-Deep, #4d4d4d);
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 3.75vw;
         font-style: normal;
         font-weight: 400;
@@ -1051,7 +1051,7 @@ const problemData = {
         box-sizing: border-box;
         padding: 1.33vw 2.133vw;
         color: var(--Grey-Deep, #4d4d4d);
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 3.733vw;
         font-style: normal;
         font-weight: 400;
@@ -1067,7 +1067,7 @@ const problemData = {
     padding: 0 2.665vw;
     & > div:nth-child(1) {
       color: var(--Grey-Deep, #4d4d4d);
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 5.33vw;
       font-style: normal;
       font-weight: 400;

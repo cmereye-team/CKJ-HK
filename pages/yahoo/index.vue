@@ -2966,7 +2966,7 @@ svg:hover path {
             flex-direction: column;
             & > span:nth-child(1) {
               color: var(--Theme-Color, #fc1682);
-              font-family: FakePearl;
+          font-family: 'FakePearl-Regular';
               font-size: 5.12vw;
               font-style: normal;
               font-weight: 600;
@@ -3013,7 +3013,7 @@ svg:hover path {
   }
   .item-title {
     color: var(--Blue-Deep, #00aeff);
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 20px;
     font-style: normal;
     font-weight: 600;

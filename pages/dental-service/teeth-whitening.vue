@@ -888,7 +888,7 @@ const onSlideChange = (swiper: any) => {
   .content-remark {
     color: var(--White, #fff);
     text-align: right;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: 34px;
     font-style: normal;
     font-weight: 400;
@@ -900,7 +900,7 @@ const onSlideChange = (swiper: any) => {
     text-align: right;
     -webkit-text-stroke-width: 0.5;
     -webkit-text-stroke-color: var(--White, #fff);
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: clamp(40px, 4.6vw, 110px);
     font-style: normal;
     font-weight: 600;
@@ -936,7 +936,7 @@ const onSlideChange = (swiper: any) => {
   .content-price {
     color: var(--White, #fff);
     text-align: right;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: clamp(20px, 2.9165vw, 56px);
     font-style: normal;
     font-weight: 400;
@@ -950,7 +950,7 @@ const onSlideChange = (swiper: any) => {
   .content-subscribe {
     color: var(--Theme-Color, #fc1682);
     text-align: center;
-    font-family: FakePearl;
+font-family: 'FakePearl-Regular';
     font-size: clamp(20px, 1.583vw, 40px);
     font-style: normal;
     font-weight: 600;
@@ -1707,7 +1707,7 @@ const onSlideChange = (swiper: any) => {
       top: 0;
       color: var(--Grey-Deep, #4d4d4d);
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 22px;
       font-style: normal;
       font-weight: 400;
@@ -1733,7 +1733,7 @@ const onSlideChange = (swiper: any) => {
         padding: 0 20px;
         color: #4d4d4d;
         text-align: justify;
-        font-family: FakePearl;
+    font-family: 'FakePearl-Regular';
         font-size: 20px;
         font-style: normal;
         font-weight: 400;
@@ -1753,7 +1753,7 @@ const onSlideChange = (swiper: any) => {
         & > div {
           color: var(--Grey-Deep, #4d4d4d);
           text-align: justify;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 20px;
           font-style: normal;
           font-weight: 400;
@@ -2112,7 +2112,7 @@ const onSlideChange = (swiper: any) => {
           margin-top: 10px;
           color: var(--Grey-Deep, #4d4d4d);
           text-align: justify;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: 20px;
           font-style: normal;
           font-weight: 400;
@@ -2131,7 +2131,7 @@ const onSlideChange = (swiper: any) => {
             margin-top: 10px;
             color: var(--Grey-Deep, #4d4d4d);
             text-align: justify;
-            font-family: FakePearl;
+        font-family: 'FakePearl-Regular';
             font-size: 20px;
             font-style: normal;
             font-weight: 400;
@@ -2367,7 +2367,7 @@ const onSlideChange = (swiper: any) => {
         p {
           padding: 0 5px;
           color: #4d4d4d;
-          font-family: FakePearl;
+      font-family: 'FakePearl-Regular';
           font-size: clamp(10px, 3.2vw, 12px);
           font-style: normal;
           font-weight: 400;
@@ -2653,7 +2653,7 @@ const onSlideChange = (swiper: any) => {
     justify-content: flex-end;
     .content-remark {
       color: var(--White, #fff);
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 22px;
       font-style: normal;
       font-weight: 400;
@@ -2708,7 +2708,7 @@ const onSlideChange = (swiper: any) => {
       bottom: -10px;
       color: var(--Theme-Color, #fc1682);
       text-align: center;
-      font-family: FakePearl;
+  font-family: 'FakePearl-Regular';
       font-size: 20px;
       font-style: normal;
       font-weight: 600;
