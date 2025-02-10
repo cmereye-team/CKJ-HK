@@ -22,8 +22,8 @@ useHead({
 })
 
 const headerConfig = {
-  img: 'https://statichk.cmermedical.com/ckj/service-page-test/wisdom-teeth-extraction-pc.png',
-  mbImg: 'https://statichk.cmermedical.com/ckj/service-page-test/wisdom-teeth-extraction-mb.png',
+  img: 'https://statichk.cmermedical.com/ckj/service-page-test/wisdom-teeth-extraction-pc.avif',
+  mbImg: 'https://statichk.cmermedical.com/ckj/service-page-test/wisdom-teeth-extraction-mb.avif',
   bg: '',
   pageName: 'scaling-and-polishing-test',
   pcText: [],

@@ -39,8 +39,8 @@ const orthodonticsIntroduceData = {
 }
 
 const headerConfig = {
-  img: 'https://statichk.cmermedical.com/ckj/service-page-test/toothtray-pc.png',
-  mbImg: 'https://statichk.cmermedical.com/ckj/service-page-test/toothtray-mb.png',
+  img: 'https://statichk.cmermedical.com/ckj/service-page-test/toothtray-pc.avif',
+  mbImg: 'https://statichk.cmermedical.com/ckj/service-page-test/toothtray-mb.avif',
   bg: '',
   pageName: 'scaling-and-polishing-test',
   pcText: [],

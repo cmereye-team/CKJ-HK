@@ -25,8 +25,8 @@ useHead({
 })
 
 const headerConfig = {
-  img: 'https://statichk.cmermedical.com/ckj/service-page-test/children-dentistry-pc.png',
-  mbImg: 'https://statichk.cmermedical.com/ckj/service-page-test/children-dentistry-mb.png',
+  img: 'https://statichk.cmermedical.com/ckj/service-page-test/children-dentistry-pc.avif',
+  mbImg: 'https://statichk.cmermedical.com/ckj/service-page-test/children-dentistry-mb.avif',
   bg: '',
   pageName: 'scaling-and-polishing-test',
   pcText: [],

@@ -24,9 +24,9 @@ useHead({
 })
 
 const headerConfig = {
-  img: 'https://statichk.cmermedical.com/ckj/service-page-test/scaling-and-polishing-pc.png',
+  img: 'https://statichk.cmermedical.com/ckj/service-page-test/scaling-and-polishing-pc.avif',
   mbImg:
-    'https://statichk.cmermedical.com/ckj/service-page-test/scaling-and-polishing-mb.png',
+    'https://statichk.cmermedical.com/ckj/service-page-test/scaling-and-polishing-mb.avif',
   bg: '',
   pageName: 'scaling-and-polishing-test',
   pcText: [

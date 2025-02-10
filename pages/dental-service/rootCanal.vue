@@ -26,8 +26,9 @@ useHead({
 })
 
 const headerConfig = {
-  img: 'https://statichk.cmermedical.com/ckj/service-page-test/rootCanal-pc.png',
-  mbImg: 'https://statichk.cmermedical.com/ckj/service-page-test/rootCanal-mb.png',
+  img: 'https://statichk.cmermedical.com/ckj/service-page-test/rootCanal-pc.avif',
+  mbImg:
+    'https://statichk.cmermedical.com/ckj/service-page-test/rootCanal-mb.avif',
   bg: '',
   pageName: 'rootCanal-test',
   pcText: [
@@ -363,9 +364,15 @@ let newsMessageSwiperRef = {
 
 <template>
   <div>
-    <PageHeader v-if="windowWidth < 768" :headerConfig="headerConfig" >
+    <PageHeader v-if="windowWidth < 768" :headerConfig="headerConfig">
       <template #xxxxxxxxxxx-home>
         <div class="banner-in-box">
+          <div class="banner-image">
+            <img
+              src="https://statichk.cmermedical.com/ckj/image/2025021016084501.svg"
+              alt=""
+            />
+          </div>
           <div class="banner-content" style="display: flex">
             <div class="content-subscribe">網上預約限定優惠</div>
             <div class="content-title">根管治療</div>
@@ -382,9 +389,15 @@ let newsMessageSwiperRef = {
       </template>
     </PageHeader>
     <PageNewHeaderMenu v-if="windowWidth > 768" :headerConfig="headerConfig" />
-    <PagePcBannerNoHome v-if="windowWidth > 768" :headerConfig="headerConfig" >
+    <PagePcBannerNoHome v-if="windowWidth > 768" :headerConfig="headerConfig">
       <template #xxxxxxxxxxx-home>
         <div class="banner-in-box">
+          <div class="banner-image">
+            <img
+              src="https://statichk.cmermedical.com/ckj/image/2025021016084502.svg"
+              alt=""
+            />
+          </div>
           <div class="banner-content" style="display: flex">
             <div class="content-remark">同你一齊守護健康牙齒</div>
             <div class="content-title">根管治療</div>
@@ -715,6 +728,19 @@ let newsMessageSwiperRef = {
   width: 55%;
   z-index: 10;
 }
+.banner-image {
+  position: absolute;
+  z-index: 10;
+  width: 296px;
+  height: 79px;
+  top: 0;
+  left: 135%;
+  & > img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
 .banner-content {
   display: flex;
   flex-direction: column;
@@ -728,7 +754,7 @@ let newsMessageSwiperRef = {
   .content-remark {
     color: var(--White, #fff);
     text-align: right;
-font-family: 'FakePearl-Regular';
+    font-family: 'FakePearl-Regular';
     font-size: 34px;
     font-style: normal;
     font-weight: 400;
@@ -740,7 +766,7 @@ font-family: 'FakePearl-Regular';
     text-align: right;
     -webkit-text-stroke-width: 0.5;
     -webkit-text-stroke-color: var(--White, #fff);
-font-family: 'FakePearl-Regular';
+    font-family: 'FakePearl-Regular';
     font-size: clamp(45px, 5.7vw, 110px);
     font-style: normal;
     font-weight: 600;
@@ -776,7 +802,7 @@ font-family: 'FakePearl-Regular';
   .content-price {
     color: var(--White, #fff);
     text-align: right;
-font-family: 'FakePearl-Regular';
+    font-family: 'FakePearl-Regular';
     font-size: clamp(20px, 2.9165vw, 56px);
     font-style: normal;
     font-weight: 400;
@@ -790,7 +816,7 @@ font-family: 'FakePearl-Regular';
   .content-subscribe {
     color: var(--Theme-Color, #fc1682);
     text-align: center;
-font-family: 'FakePearl-Regular';
+    font-family: 'FakePearl-Regular';
     font-size: clamp(20px, 1.583vw, 40px);
     font-style: normal;
     font-weight: 600;
@@ -1555,7 +1581,7 @@ font-family: 'FakePearl-Regular';
             span {
               color: var(--Grey-Deep, #4d4d4d);
               text-align: justify;
-          font-family: 'FakePearl-Regular';
+              font-family: 'FakePearl-Regular';
               font-size: 3.2vw;
               font-style: normal;
               font-weight: 500;
@@ -1672,7 +1698,7 @@ font-family: 'FakePearl-Regular';
             padding: 0;
             padding-left: 5px;
             color: var(--Theme-Color, #fc1682);
-        font-family: 'FakePearl-Regular';
+            font-family: 'FakePearl-Regular';
             font-size: 16px;
             font-style: normal;
             font-weight: 600;
@@ -1683,7 +1709,7 @@ font-family: 'FakePearl-Regular';
             padding-left: 5px;
             color: var(--Grey-Deep, #4d4d4d);
             text-align: justify;
-        font-family: 'FakePearl-Regular';
+            font-family: 'FakePearl-Regular';
             font-size: 12px;
             font-style: normal;
             font-weight: 500;
@@ -1807,7 +1833,7 @@ font-family: 'FakePearl-Regular';
         width: 100%;
         & > span:nth-child(1) {
           color: var(--Grey-Deep, #4d4d4d);
-      font-family: 'FakePearl-Regular';
+          font-family: 'FakePearl-Regular';
           font-size: 20px;
           font-style: normal;
           font-weight: 600;
@@ -1815,7 +1841,7 @@ font-family: 'FakePearl-Regular';
         }
         & > span:nth-child(2) {
           color: var(--Theme-Color, #fc1682);
-      font-family: 'FakePearl-Regular';
+          font-family: 'FakePearl-Regular';
           font-size: 26px;
           font-style: normal;
           font-weight: 600;
@@ -1887,7 +1913,7 @@ font-family: 'FakePearl-Regular';
           min-height: 33.0665vw;
           color: #4d4d4d;
           text-align: justify;
-      font-family: 'FakePearl-Regular';
+          font-family: 'FakePearl-Regular';
           font-size: 3.2vw;
           font-style: normal;
           font-weight: 400;
@@ -1965,12 +1991,25 @@ font-family: 'FakePearl-Regular';
     align-items: flex-start;
     justify-content: flex-start;
   }
+  .banner-image {
+    position: absolute;
+    z-index: 10;
+    width: 42.56vw;
+    height: 11.79vw;
+    top: 0;
+    left: 15%;
+    & > img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
   .banner-content {
     align-items: flex-start;
     justify-content: flex-end;
     .content-remark {
       color: var(--White, #fff);
-  font-family: 'FakePearl-Regular';
+      font-family: 'FakePearl-Regular';
       font-size: 22px;
       font-style: normal;
       font-weight: 400;
@@ -2025,7 +2064,7 @@ font-family: 'FakePearl-Regular';
       bottom: -10px;
       color: var(--Theme-Color, #fc1682);
       text-align: center;
-  font-family: 'FakePearl-Regular';
+      font-family: 'FakePearl-Regular';
       font-size: 20px;
       font-style: normal;
       font-weight: 600;

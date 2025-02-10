@@ -22,9 +22,9 @@ useHead({
 })
 
 const headerConfig = {
-  img: 'https://statichk.cmermedical.com/ckj/service-page-test/general-oral-examination-pc.png',
+  img: 'https://statichk.cmermedical.com/ckj/service-page-test/general-oral-examination-pc.avif',
   mbImg:
-    'https://statichk.cmermedical.com/ckj/service-page-test/general-oral-examination-mb.png',
+    'https://statichk.cmermedical.com/ckj/service-page-test/general-oral-examination-mb.avif',
   bg: '',
   pageName: 'scaling-and-polishing-test',
   pcText: [],
