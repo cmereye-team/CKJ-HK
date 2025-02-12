@@ -103,7 +103,7 @@ const hideShowText = computed(() => {
           <div>29年專科•專業•專注</div>
           <div><span>港人首選</span>一站式連鎖牙科品牌</div>
         </div>
-        <div v-if="isShowText && hideShowText" style="display: none;">
+        <div v-if="isShowText && hideShowText" style="display: none">
           優惠只限於網上及電話預約客戶
         </div>
       </div>
@@ -221,10 +221,12 @@ const hideShowText = computed(() => {
       display: flex;
       justify-content: flex-end;
       padding-top: 70px;
+      pointer-events: none;
       & > div:nth-child(1) {
         max-width: 1450px;
         width: 100%;
         margin: 0 auto;
+        pointer-events: none;
         & > div:nth-child(1) {
           display: flex;
           flex-direction: column;
@@ -232,6 +234,7 @@ const hideShowText = computed(() => {
           color: #666;
           font-size: clamp(14px, 2.6vw, 28px);
           font-weight: 700;
+          pointer-events: none;
           span {
             color: var(--indexColor1);
           }
@@ -325,10 +328,12 @@ const hideShowText = computed(() => {
       display: flex;
       justify-content: flex-end;
       padding-top: 120px;
+      pointer-events: none;
       & > div:nth-child(1) {
         max-width: 1450px;
         width: 80%;
         margin: 0 auto;
+        pointer-events: none;
         & > div:nth-child(1) {
           display: flex;
           flex-direction: column;
@@ -336,6 +341,7 @@ const hideShowText = computed(() => {
           color: #666;
           font-size: clamp(10px, 2.6vw, 20px);
           font-weight: 700;
+          pointer-events: none;
           span {
             color: var(--indexColor1);
           }
@@ -429,11 +435,14 @@ const hideShowText = computed(() => {
       display: flex;
       justify-content: flex-end;
       padding-top: 120px;
+      pointer-events: none;
       & > div:nth-child(1) {
         max-width: 1450px;
         width: 80%;
         margin: 0 auto;
+        pointer-events: none;
         & > div:nth-child(1) {
+          pointer-events: none;
           display: flex;
           flex-direction: column;
           align-items: flex-end;

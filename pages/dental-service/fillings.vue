@@ -431,7 +431,7 @@ const differData: any = {
       <div class="index_title pageCon">
         {{ $t('pages.dental-service.title') }}
       </div>
-      <div class="tabNav pageCon">
+      <!-- <div class="tabNav pageCon">
         <nuxt-link :to="'/'" title="深圳愛康健口腔醫院" alt="深圳愛康健口腔醫院"
           ><span>{{ $t('pages.index.title') }}</span></nuxt-link
         >
@@ -444,7 +444,7 @@ const differData: any = {
         <span :title="$t(orthodonticsIntroduceData.tabNavName)">{{
           $t(orthodonticsIntroduceData.tabNavName)
         }}</span>
-      </div>
+      </div> -->
       <!-- <ServiceIntroduce :introduceData="orthodonticsIntroduceData" /> -->
       <div class="The_benefits_of_resin_filling_teeth">
         <div class="dentistryServices-title reason-title">

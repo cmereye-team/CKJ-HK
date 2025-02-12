@@ -1443,6 +1443,9 @@ let newsMessageSwiperRef = {
     margin-left: 0 !important;
     margin-right: auto !important;
   }
+  :deep(.pageIn) {
+    margin-top: 30px;
+  }
   :deep(.header-content) {
     .explain_box_mobile {
       align-items: flex-end;

@@ -505,7 +505,7 @@ const removeSurroundingParentheses = (str) => {
       <div class="index_title pageCon">
         {{ $t('pages.dental-service.title') }}
       </div>
-      <div class="tabNav pageCon">
+      <!-- <div class="tabNav pageCon">
         <nuxt-link :to="'/'" title="深圳愛康健口腔醫院" alt="深圳愛康健口腔醫院"
           ><span>{{ $t('pages.index.title') }}</span></nuxt-link
         >
@@ -518,7 +518,7 @@ const removeSurroundingParentheses = (str) => {
         <span :title="$t(orthodonticsIntroduceData.tabNavName)">{{
           $t(orthodonticsIntroduceData.tabNavName)
         }}</span>
-      </div>
+      </div> -->
       <!-- <ServiceIntroduce :introduce-data="orthodonticsIntroduceData" />
         <div class="reason">
           <div class="dentistryServices-title reason-title">
@@ -2452,6 +2452,9 @@ font-family: 'FakePearl-Regular';
       top: 0px;
       z-index: 35px;
     }
+  }
+  :deep(.index_title ) {
+    margin-top: 30px;
   }
   :deep(.header-content) {
     .explain_box_mobile {

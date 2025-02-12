@@ -36,7 +36,7 @@ onMounted(() => {
         backgroundSize: 'auto 100%',
       }"
     >
-      <div class="tabNav noTitle pageCon mobile_new">
+      <!-- <div class="tabNav noTitle pageCon mobile_new">
         <nuxt-link :to="'/'" title="深圳愛康健口腔醫院" alt="深圳愛康健口腔醫院"
           ><span>{{ $t('pages.index.title') }}</span></nuxt-link
         >
@@ -49,7 +49,7 @@ onMounted(() => {
         <span :title="$t(introduceData.tabNavName)">{{
           $t(introduceData.tabNavName)
         }}</span>
-      </div>
+      </div> -->
       <div class="introduce_content">
         <div class="introduce-in-t mbBox">
           <img :src="introduceData.mbImg" alt="" />
@@ -78,6 +78,7 @@ onMounted(() => {
 <style lang="scss" scoped>
 .introduce_content {
   position: relative;
+  margin-top: 30px;
 }
 .introduce {
   &-in {

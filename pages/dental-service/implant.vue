@@ -793,6 +793,7 @@ const checkGroupPhoto = () => {
             <img
               src="https://statichk.cmermedical.com/ckj/image/2025020613460702.svg"
               alt=""
+              loading="lazy"
             />
           </div>
           <div class="banner-content" style="display: flex">
@@ -801,7 +802,7 @@ const checkGroupPhoto = () => {
             <div class="content-price">
               <div>即減</div>
               <div class="price-style">
-                <img src="../../assets/images/2025011009501001.svg" alt="" />
+                <img src="../../assets/images/2025011009501001.svg" loading="lazy" alt="" />
               </div>
               <div>/顆</div>
             </div>
@@ -815,8 +816,9 @@ const checkGroupPhoto = () => {
         <div class="banner-in-box">
           <div class="banner-image">
             <img
-              src="https://statichk.cmermedical.com/ckj/image/2025020613460701.svg"
-              alt=""
+            src="https://statichk.cmermedical.com/ckj/image/2025020613460701.svg"
+            alt=""
+            loading="lazy"
             />
           </div>
           <div class="banner-content" style="display: flex">
@@ -824,7 +826,7 @@ const checkGroupPhoto = () => {
             <div class="content-price">
               <div>即減</div>
               <div class="price-style">
-                <img src="../../assets/images/2025011009501001.svg" alt="" />
+                <img src="../../assets/images/2025011009501001.svg" loading="lazy" alt="" />
               </div>
               <div>/顆</div>
             </div>
@@ -837,7 +839,7 @@ const checkGroupPhoto = () => {
       <div class="index_title pageCon">
         {{ $t('pages.dental-service.title') }}
       </div>
-      <div class="tabNav pageCon">
+      <!-- <div class="tabNav pageCon">
         <nuxt-link :to="'/'" title="深圳愛康健口腔醫院" alt="深圳愛康健口腔醫院"
           ><span>{{ $t('pages.index.title') }}</span></nuxt-link
         >
@@ -850,7 +852,7 @@ const checkGroupPhoto = () => {
         <span :title="$t(introduceData.tabNavName)">{{
           $t(introduceData.tabNavName)
         }}</span>
-      </div>
+      </div> -->
       <!--
       <div class="plague" v-if="windowWidth > 768">
         <div class="plague-in">
@@ -935,15 +937,15 @@ const checkGroupPhoto = () => {
             <div class="Plant_brand_series-content">
               <div>
                 <div class="Plant_brand_series-content-l">
-                  <div><img :src="plant_brand_series_item.img" alt="" /></div>
+                  <div><img :src="plant_brand_series_item.img" loading="lazy" alt="" /></div>
                 </div>
                 <div class="Plant_brand_series-content-r">
                   <div>
                     <div>
-                      <img :src="plant_brand_series_item.logo" alt="" />
+                      <img :src="plant_brand_series_item.logo" loading="lazy" alt="" />
                     </div>
                     <div>
-                      <img :src="plant_brand_series_item.nation" alt="" />
+                      <img :src="plant_brand_series_item.nation" loading="lazy" alt="" />
                     </div>
                     <div class="item_compare">
                       <div>
@@ -952,6 +954,7 @@ const checkGroupPhoto = () => {
                           <img
                             :src="plant_brand_series_item.compare[0]"
                             alt=""
+                            loading="lazy"
                           />
                         </div>
                       </div>
@@ -961,6 +964,7 @@ const checkGroupPhoto = () => {
                           <img
                             :src="plant_brand_series_item.compare[1]"
                             alt=""
+                            loading="lazy"
                           />
                         </div>
                       </div>
@@ -970,6 +974,7 @@ const checkGroupPhoto = () => {
                           <img
                             :src="plant_brand_series_item.compare[2]"
                             alt=""
+                            loading="lazy"
                           />
                         </div>
                       </div>
@@ -1175,15 +1180,15 @@ const checkGroupPhoto = () => {
             <div class="Plant_brand_series-content">
               <div>
                 <div class="Plant_brand_series-content-l">
-                  <div><img :src="plant_brand_series_item.img" alt="" /></div>
+                  <div><img :src="plant_brand_series_item.img" loading="lazy" alt="" /></div>
                 </div>
                 <div class="Plant_brand_series-content-r">
                   <div>
                     <div>
-                      <img :src="plant_brand_series_item.logo" alt="" />
+                      <img :src="plant_brand_series_item.logo" loading="lazy" alt="" />
                     </div>
                     <div>
-                      <img :src="plant_brand_series_item.nation" alt="" />
+                      <img :src="plant_brand_series_item.nation" loading="lazy" alt="" />
                     </div>
                     <div class="item_compare">
                       <div>
@@ -1192,6 +1197,7 @@ const checkGroupPhoto = () => {
                           <img
                             :src="plant_brand_series_item.compare[0]"
                             alt=""
+                            loading="lazy"
                           />
                         </div>
                       </div>
@@ -1201,6 +1207,7 @@ const checkGroupPhoto = () => {
                           <img
                             :src="plant_brand_series_item.compare[1]"
                             alt=""
+                            loading="lazy"
                           />
                         </div>
                       </div>
@@ -1210,6 +1217,7 @@ const checkGroupPhoto = () => {
                           <img
                             :src="plant_brand_series_item.compare[2]"
                             alt=""
+                            loading="lazy"
                           />
                         </div>
                       </div>
@@ -1232,12 +1240,14 @@ const checkGroupPhoto = () => {
               <img
                 src="https://statichk.cmermedical.com/ckj/image/2024122411123501.png"
                 alt=""
+                loading="lazy"
               />
             </div>
             <div @click="brand_btn('slideNext')">
               <img
                 src="https://statichk.cmermedical.com/ckj/image/2024122411125201.png"
                 alt=""
+                loading="lazy"
               />
             </div>
           </div>
@@ -1372,6 +1382,7 @@ const checkGroupPhoto = () => {
             <img
               src="https://static.cmereye.com/imgs/2024/04/bd2194046affe383.gif"
               alt=""
+              loading="lazy"
             />
           </div>
           <div class="technology-in-b">
@@ -1601,6 +1612,7 @@ const checkGroupPhoto = () => {
             <img
               src="https://static.cmereye.com/imgs/2024/04/bd2194046affe383.gif"
               alt=""
+              loading="lazy"
             />
           </div>
           <div class="technology-in-b">
@@ -1668,11 +1680,12 @@ const checkGroupPhoto = () => {
                     <img
                       src="https://static.cmereye.com/imgs/2024/11/3b0a5e9326c68638.png"
                       alt=""
+                      loading="lazy"
                     />
                   </div>
                   <div>0{{ stepIndex + 1 }}</div>
                 </div>
-                <div class="image"><img :src="stepItem.img" alt="" /></div>
+                <div class="image"><img :src="stepItem.img" loading="lazy" alt="" /></div>
                 <div class="name">{{ stepItem.name }}</div>
                 <div class="context">{{ stepItem.context }}</div>
               </div>
@@ -1680,6 +1693,7 @@ const checkGroupPhoto = () => {
                 <img
                   src="https://static.cmereye.com/imgs/2024/11/5e6a778026dfcb28.png"
                   alt=""
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -1690,30 +1704,33 @@ const checkGroupPhoto = () => {
               :key="stepIndex"
             >
               <div>
-                <img :src="stepItem.img" alt="" />
+                <img :src="stepItem.img" loading="lazy" alt="" />
                 <span>{{ stepItem.name }}</span
                 ><br />
                 <span>{{ stepItem.context }}</span>
               </div>
-              <div><img :src="stepItem.imgNum" alt="" /></div>
+              <div><img :src="stepItem.imgNum" loading="lazy" alt="" /></div>
             </div>
           </div>
           <div class="step-bg step-mobile-bg-one" v-if="windowWidth < 767">
             <img
               src="https://static.cmereye.com/imgs/2024/07/0f9506f5f2e7252f.png"
               alt=""
+              loading="lazy"
             />
           </div>
           <div class="step-bg step-mobile-bg-two" v-if="windowWidth < 767">
             <img
               src="https://static.cmereye.com/imgs/2024/07/6d29b5a6949eb591.png"
               alt=""
+              loading="lazy"
             />
           </div>
           <div class="step-bg step-mobile-bg-three" v-if="windowWidth < 767">
             <img
               src="https://static.cmereye.com/imgs/2024/07/2c52c0d9059dac7d.png"
               alt=""
+              loading="lazy"
             />
           </div>
         </div>
@@ -1737,6 +1754,7 @@ const checkGroupPhoto = () => {
                         style="padding-left: 3px"
                         src="../../assets/images/2blood.svg"
                         alt=""
+                        loading="lazy"
                     /></span>
                   </p>
                   <p>
@@ -1746,18 +1764,19 @@ const checkGroupPhoto = () => {
                         style="padding-left: 3px"
                         src="../../assets/images/2blood.svg"
                         alt=""
+                        loading="lazy"
                     /></span>
                   </p>
                   <p>
                     <span>手術速度</span>
                     <span
-                      ><img src="../../assets/images/5star.svg" alt=""
+                      ><img src="../../assets/images/5star.svg" loading="lazy" alt=""
                     /></span>
                   </p>
                   <p>
                     <span>復原速度</span>
                     <span
-                      ><img src="../../assets/images/5star.svg" alt=""
+                      ><img src="../../assets/images/5star.svg" loading="lazy" alt=""
                     /></span>
                   </p>
                 </div>
@@ -1765,6 +1784,7 @@ const checkGroupPhoto = () => {
                   <img
                     src="https://static.cmereye.com/imgs/2024/11/bcd3ee26b3fa9cef.png"
                     alt="微創植牙"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -1787,6 +1807,7 @@ const checkGroupPhoto = () => {
                         style="padding-left: 3px"
                         src="../../assets/images/5blood.svg"
                         alt=""
+                        loading="lazy"
                     /></span>
                   </p>
                   <p>
@@ -1796,18 +1817,19 @@ const checkGroupPhoto = () => {
                         style="padding-left: 3px"
                         src="../../assets/images/4blood.svg"
                         alt=""
+                        loading="lazy"
                     /></span>
                   </p>
                   <p>
                     <span>手術速度</span>
                     <span
-                      ><img src="../../assets/images/3star.svg" alt=""
+                      ><img src="../../assets/images/3star.svg" loading="lazy" alt=""
                     /></span>
                   </p>
                   <p>
                     <span>復原速度</span>
                     <span
-                      ><img src="../../assets/images/2star.svg" alt=""
+                      ><img src="../../assets/images/2star.svg" loading="lazy" alt=""
                     /></span>
                   </p>
                 </div>
@@ -1815,6 +1837,7 @@ const checkGroupPhoto = () => {
                   <img
                     src="https://static.cmereye.com/imgs/2024/11/4591094d74d5db03.png"
                     alt="傳統植牙"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -1848,12 +1871,14 @@ const checkGroupPhoto = () => {
             <img
               src="https://statichk.cmermedical.com/smile/2024122414593001.png"
               alt=""
+              loading="lazy"
             />
           </div>
           <div>
             <img
               src="https://statichk.cmermedical.com/smile/2024122414594301.png"
               alt=""
+              loading="lazy"
             />
           </div>
           <div>傷口大小</div>
@@ -1861,12 +1886,14 @@ const checkGroupPhoto = () => {
             <img
               src="https://statichk.cmermedical.com/smile/2024122414595601.svg"
               alt=""
+              loading="lazy"
             />
           </div>
           <div>
             <img
               src="https://statichk.cmermedical.com/smile/2024122415001001.svg"
               alt=""
+              loading="lazy"
             />
           </div>
           <div>腫脹不適</div>
@@ -1874,12 +1901,14 @@ const checkGroupPhoto = () => {
             <img
               src="https://statichk.cmermedical.com/smile/2024122414595601.svg"
               alt=""
+              loading="lazy"
             />
           </div>
           <div>
             <img
               src="https://statichk.cmermedical.com/smile/2024122415001001.svg"
               alt=""
+              loading="lazy"
             />
           </div>
           <div>手術速度</div>
@@ -1887,12 +1916,14 @@ const checkGroupPhoto = () => {
             <img
               src="https://static.cmereye.com/static/ckj/imgs/svg/pc5star.svg"
               alt=""
+              loading="lazy"
             />
           </div>
           <div>
             <img
               src="https://static.cmereye.com/static/ckj/imgs/svg/pc3star.svg"
               alt=""
+              loading="lazy"
             />
           </div>
           <div>復原速度</div>
@@ -1900,12 +1931,14 @@ const checkGroupPhoto = () => {
             <img
               src="https://static.cmereye.com/static/ckj/imgs/svg/pc5star.svg"
               alt=""
+              loading="lazy"
             />
           </div>
           <div>
             <img
               src="https://static.cmereye.com/static/ckj/imgs/svg/pc2star.svg"
               alt=""
+              loading="lazy"
             />
           </div>
           <div>特點</div>
@@ -1927,6 +1960,7 @@ const checkGroupPhoto = () => {
         <img
           src="https://static.cmereye.com/imgs/2024/02/889bd45e5e2ee385.png"
           alt=""
+          loading="lazy"
         />
       </div>
       <!-- <div class="doctorTeam" v-if="windowWidth > 768" ref="doctorTeam">
@@ -1940,7 +1974,7 @@ const checkGroupPhoto = () => {
           </div>
         </div>
         <div class="group_photo" v-if="checkGroupPhoto()">
-          <img :src="checkGroupPhoto()" alt="" />
+          <img :src="checkGroupPhoto()" loading="lazy" alt="" />
         </div>
         <div class="team_doctor_everybody">
           <NewDoctor :id="checkId" />
@@ -1994,6 +2028,7 @@ const checkGroupPhoto = () => {
                           : implantCaseItem.dataLists[0].imgs[0]
                       "
                       alt=""
+                      loading="lazy"
                       v-if="windowWidth > 768"
                     />
                     <img
@@ -2004,6 +2039,7 @@ const checkGroupPhoto = () => {
                         opacity: yaImgCurrtNum === implantCaseIndex ? 0 : 1,
                       }"
                       :src="implantCaseItem.dataLists[1].imgs[0]"
+                      loading="lazy"
                     />
                     <img
                       class="rightMbIcon"
@@ -2011,6 +2047,7 @@ const checkGroupPhoto = () => {
                       alt=""
                       @touchstart="yaImgFu(implantCaseIndex, true)"
                       @touchend="yaImgFu(implantCaseIndex, false)"
+                      loading="lazy"
                     />
                   </div>
                   <div
@@ -2021,6 +2058,7 @@ const checkGroupPhoto = () => {
                     <img
                       src="https://static.cmereye.com/imgs/2024/11/a6ee3442fce7e3e6.png"
                       alt=""
+                      loading="lazy"
                     />
                   </div>
                   <!-- <div>
@@ -2031,6 +2069,7 @@ const checkGroupPhoto = () => {
                   <img
                     :class="{ firstBox: implantCaseIndex === 0 }"
                     :src="implantCaseItem.dataLists[1].imgs[1]"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -2062,7 +2101,7 @@ const checkGroupPhoto = () => {
                 </div>
                 <div class="itemImgDetails">
                   <div v-for="(e, i) in item" :key="i">
-                    <img v-if="e" :src="e" alt="" />
+                    <img v-if="e" :src="e" alt="" loading="lazy" />
                   </div>
                 </div>
               </div>
@@ -2073,12 +2112,14 @@ const checkGroupPhoto = () => {
               <img
                 src="https://statichk.cmermedical.com/ckj/image/2024122411123501.png"
                 alt=""
+                loading="lazy"
               />
             </div>
             <div class="rightBtn" @click="handleProcessBtn('slideNext')">
               <img
                 src="https://statichk.cmermedical.com/ckj/image/2024122411125201.png"
                 alt=""
+                loading="lazy"
               />
             </div>
           </div>
@@ -2100,7 +2141,7 @@ const checkGroupPhoto = () => {
             v-for="(item, index) in confidence_ecommendation_lists"
             :key="index"
           >
-            <img :src="item" alt="" />
+            <img :src="item" alt="" loading="lazy" />
           </div>
         </div>
       </div>
@@ -2108,11 +2149,12 @@ const checkGroupPhoto = () => {
         <div class="youtobe-video-in">
           <iframe
             width="560"
-            src="https://www.youtube.com/embed/u1wuly-2FGA?si=sQaXBCB8NzH482Dm"
+            src="https://www.youtube.com/embed/Q7sHcjs6oCs?si=qlzP3TG-3iLk_po6"
             title="YouTube video player"
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
+            loading="lazy"
           ></iframe>
         </div>
       </div>
@@ -2129,7 +2171,7 @@ const checkGroupPhoto = () => {
             :key="noteIndex"
           >
             <div class="noteCard-in-image">
-              <img :src="note.img" alt="" />
+              <img :src="note.img" loading="lazy" alt="" />
             </div>
             <div class="noteCard-in-name">{{ $t(note.name) }}</div>
           </div>
@@ -2192,7 +2234,7 @@ const checkGroupPhoto = () => {
             v-for="(item, index) in confidence_ecommendation_lists"
             :key="index"
           >
-            <img :src="item" alt="" />
+            <img :src="item" loading="lazy" alt="" />
           </div>
         </div>
       </div>
@@ -2205,6 +2247,7 @@ const checkGroupPhoto = () => {
             frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen
+            loading="lazy"
           ></iframe>
         </div>
       </div>
@@ -2221,7 +2264,7 @@ const checkGroupPhoto = () => {
             :key="noteIndex"
           >
             <div class="noteCard-in-image">
-              <img :src="note.img" alt="" />
+              <img :src="note.img" loading="lazy" alt="" />
             </div>
             <div class="noteCard-in-name">{{ $t(note.name) }}</div>
           </div>
@@ -2242,7 +2285,7 @@ const checkGroupPhoto = () => {
               <span v-if="plagueItem.type === 'text'">{{
                 plagueItem.context
               }}</span>
-              <img v-else :src="plagueItem.context" alt="" />
+              <img v-else :src="plagueItem.context" loading="lazy" alt="" />
             </div>
           </div>
         </div>

@@ -259,7 +259,7 @@ onMounted(() => {
       <div class="index_title pageCon">
         {{ $t('pages.dental-service.title') }}
       </div>
-      <div class="tabNav pageCon">
+      <!-- <div class="tabNav pageCon">
         <nuxt-link :to="'/'" title="深圳愛康健口腔醫院" alt="深圳愛康健口腔醫院"
           ><span>{{ $t('pages.index.title') }}</span></nuxt-link
         >
@@ -272,7 +272,7 @@ onMounted(() => {
         <span :title="$t(introduceData.tabNavName)">{{
           $t(introduceData.tabNavName)
         }}</span>
-      </div>
+      </div> -->
       <div class="services">
         <div class="dentistryServices-title">
           <div class="dentistryServices-title-in bb">兒童牙科服務</div>
