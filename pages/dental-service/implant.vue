@@ -32,6 +32,7 @@ const headerConfig = {
   pageName: 'implant',
   pcText: ['享受失而復得的喜悅', '重拾完整人生之旅'],
   mbText: ['享受失而復得的喜悅', '重拾完整人生之旅'],
+  linkBtn: `https://wa.me/85269338128?text=取得種植牙免費CT檢查`
 }
 const loading = ref(true)
 const introduceData = {
@@ -45,7 +46,7 @@ const introduceData = {
 const introduceJY = {
   title: 'pages.dental-service.implant.introduce.title',
   content: 'pages.dental-service.implant.introduce.content',
-  mbImg: 'https://static.cmereye.com/imgs/2023/05/2bc3a5d449c9b42e.jpg',
+  mbImg: 'https://statichk.cmermedical.com/ckj/image/937cb2532ba2.avif',
   pcImg: 'https://static.cmereye.com/imgs/2024/02/212030a5fca0b0de.png',
 }
 
@@ -132,7 +133,7 @@ const stepData = {
     {
       title: '第1步',
       imgNum: 'https://static.cmereye.com/imgs/2024/07/e0feaceff214278b.png',
-      img: 'https://static.cmereye.com/imgs/2024/11/c9cfd16ffe98ba77.png',
+      img: 'https://statichk.cmermedical.com/ckj/image/c73d9b16c9e4.avif',
       name: '全面口腔檢查及建立個人化方案',
       context:
         '進行全面口腔檢查、X光或3D電腦掃描，確定植體的安裝位置，需確認患者的身體狀況及病歷',
@@ -140,14 +141,14 @@ const stepData = {
     {
       title: '第2步',
       imgNum: 'https://static.cmereye.com/imgs/2024/07/120738fb56a5d759.png',
-      img: 'https://static.cmereye.com/imgs/2024/11/b76a685a5b5b06e5.png',
+      img: 'https://statichk.cmermedical.com/ckj/image/1fa0c1bed6c1.avif',
       name: '注射麻醉藥',
       context: '',
     },
     {
       title: '第3步',
       imgNum: 'https://static.cmereye.com/imgs/2024/07/59c210a9e06a8624.png',
-      img: 'https://static.cmereye.com/imgs/2024/11/19f1c8c996003b0a.png',
+      img: 'https://statichk.cmermedical.com/ckj/image/c15bae966799.avif',
       name: '把植體植入顎骨',
       context:
         '翻開牙齦在適合安裝的位置鑽孔，植入植體，作為假牙的牙根，有需要時可以利用手術導航系統輔助植入理想位置，再縫合傷口',
@@ -155,14 +156,14 @@ const stepData = {
     {
       title: '第4步',
       imgNum: 'https://static.cmereye.com/imgs/2024/07/dabb11b53d7c5e07.png',
-      img: 'https://static.cmereye.com/imgs/2024/11/27f35ce081557616.png',
+      img: 'https://statichk.cmermedical.com/ckj/image/3895c8fc526e.avif',
       name: '安裝臨時假牙',
       context: '確保植體與牙骨處於良好狀況後，根據客人實際情況，安裝臨時假牙。',
     },
     {
       title: '第5步',
       imgNum: 'https://static.cmereye.com/imgs/2024/07/9b5323760b492f54.png',
-      img: 'https://static.cmereye.com/imgs/2024/11/2fb534831b2d8d0c.png',
+      img: 'https://statichk.cmermedical.com/ckj/image/943073b1e2ce.avif',
       name: '套上牙冠及微調',
       context:
         '確認植體在顎骨已穩固，套上客人心儀的牙色牙冠，作最後全體牙齒微調。',
@@ -170,7 +171,7 @@ const stepData = {
     {
       title: '第6步',
       imgNum: 'https://static.cmereye.com/imgs/2024/07/90802da91d96398f.png',
-      img: 'https://static.cmereye.com/imgs/2024/11/33c5a6e28ce445b3.png',
+      img: 'https://statichk.cmermedical.com/ckj/image/125ad30de23a.avif',
       name: '定期覆診',
       context: '根據客人情況，定期覆診跟進情況。',
     },
@@ -488,34 +489,34 @@ const implantCaseData = [
 
 const caseList = [
   [
-    'https://statichk.cmermedical.com/ckj/image/388682124788.png',
-    'https://statichk.cmermedical.com/ckj/image/5e429609ae9c.png',
+    'https://statichk.cmermedical.com/ckj/image/fd5c9be2f67c.avif',
+    'https://statichk.cmermedical.com/ckj/image/68369a186871.avif',
     '',
-    'https://statichk.cmermedical.com/ckj/image/c524a86a8dc2.png',
+    'https://statichk.cmermedical.com/ckj/image/782e38399fdb.avif',
   ],
   [
-    'https://statichk.cmermedical.com/ckj/image/8be97e398483.png',
-    'https://statichk.cmermedical.com/ckj/image/54194ec01244.png',
+    'https://statichk.cmermedical.com/ckj/image/44206182e74b.avif',
+    'https://statichk.cmermedical.com/ckj/image/bb1575aaa523.avif',
     '',
-    'https://statichk.cmermedical.com/ckj/image/e8b5afec09f0.png',
+    'https://statichk.cmermedical.com/ckj/image/318b905eb6a9.avif',
   ],
   [
-    'https://statichk.cmermedical.com/ckj/image/dae63c411c7d.png',
-    'https://statichk.cmermedical.com/ckj/image/69785f3ac83d.png',
+    'https://statichk.cmermedical.com/ckj/image/d01df20587d8.avif',
+    'https://statichk.cmermedical.com/ckj/image/a39f91f126c1.avif',
     '',
-    'https://statichk.cmermedical.com/ckj/image/c6fc336c9323.png',
+    'https://statichk.cmermedical.com/ckj/image/92aff26ec699.avif',
   ],
   [
-    'https://statichk.cmermedical.com/ckj/image/b78df2644b43.png',
-    'https://statichk.cmermedical.com/ckj/image/69785f3ac83d.png',
+    'https://statichk.cmermedical.com/ckj/image/8d7594d7f374.avif',
+    'https://statichk.cmermedical.com/ckj/image/a39f91f126c1.avif',
     '',
-    'https://statichk.cmermedical.com/ckj/image/464c808f51db.png',
+    'https://statichk.cmermedical.com/ckj/image/e7e481d32375.avif',
   ],
   [
-    'https://statichk.cmermedical.com/ckj/image/0c035e31f064.png',
-    'https://statichk.cmermedical.com/ckj/image/8fd718ec84be.png',
+    'https://statichk.cmermedical.com/ckj/image/67e8e433e933.avif',
+    'https://statichk.cmermedical.com/ckj/image/4076f4f20383.avif',
     '',
-    'https://statichk.cmermedical.com/ckj/image/08b03ebf3fd1.png',
+    'https://statichk.cmermedical.com/ckj/image/e5858b632521.avif',
   ],
 ]
 let yaImgCurrtNum = ref(6)
@@ -739,7 +740,7 @@ const { top, bottom } = useElementBounding(doctorTeam)
 const { height } = useWindowSize()
 const checkId = ref('101')
 const groupPhoto = ref([
-  'https://statichk.cmermedical.com/ckj/image/2025011310040501.png',
+  'https://statichk.cmermedical.com/ckj/image/ffca67be82b4.avif',
   'https://static.cmereye.com/imgs/2024/11/533cd5d2e1944a98.jpg',
   'https://static.cmereye.com/imgs/2024/11/dce268191178f65d.jpg',
   '',
@@ -802,7 +803,11 @@ const checkGroupPhoto = () => {
             <div class="content-price">
               <div>即減</div>
               <div class="price-style">
-                <img src="../../assets/images/2025011009501001.svg" loading="lazy" alt="" />
+                <img
+                  src="../../assets/images/2025011009501001.svg"
+                  loading="lazy"
+                  alt=""
+                />
               </div>
               <div>/顆</div>
             </div>
@@ -816,9 +821,9 @@ const checkGroupPhoto = () => {
         <div class="banner-in-box">
           <div class="banner-image">
             <img
-            src="https://statichk.cmermedical.com/ckj/image/2025020613460701.svg"
-            alt=""
-            loading="lazy"
+              src="https://statichk.cmermedical.com/ckj/image/2025020613460701.svg"
+              alt=""
+              loading="lazy"
             />
           </div>
           <div class="banner-content" style="display: flex">
@@ -826,7 +831,11 @@ const checkGroupPhoto = () => {
             <div class="content-price">
               <div>即減</div>
               <div class="price-style">
-                <img src="../../assets/images/2025011009501001.svg" loading="lazy" alt="" />
+                <img
+                  src="../../assets/images/2025011009501001.svg"
+                  loading="lazy"
+                  alt=""
+                />
               </div>
               <div>/顆</div>
             </div>
@@ -937,15 +946,29 @@ const checkGroupPhoto = () => {
             <div class="Plant_brand_series-content">
               <div>
                 <div class="Plant_brand_series-content-l">
-                  <div><img :src="plant_brand_series_item.img" loading="lazy" alt="" /></div>
+                  <div>
+                    <img
+                      :src="plant_brand_series_item.img"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </div>
                 </div>
                 <div class="Plant_brand_series-content-r">
                   <div>
                     <div>
-                      <img :src="plant_brand_series_item.logo" loading="lazy" alt="" />
+                      <img
+                        :src="plant_brand_series_item.logo"
+                        loading="lazy"
+                        alt=""
+                      />
                     </div>
                     <div>
-                      <img :src="plant_brand_series_item.nation" loading="lazy" alt="" />
+                      <img
+                        :src="plant_brand_series_item.nation"
+                        loading="lazy"
+                        alt=""
+                      />
                     </div>
                     <div class="item_compare">
                       <div>
@@ -1180,15 +1203,29 @@ const checkGroupPhoto = () => {
             <div class="Plant_brand_series-content">
               <div>
                 <div class="Plant_brand_series-content-l">
-                  <div><img :src="plant_brand_series_item.img" loading="lazy" alt="" /></div>
+                  <div>
+                    <img
+                      :src="plant_brand_series_item.img"
+                      loading="lazy"
+                      alt=""
+                    />
+                  </div>
                 </div>
                 <div class="Plant_brand_series-content-r">
                   <div>
                     <div>
-                      <img :src="plant_brand_series_item.logo" loading="lazy" alt="" />
+                      <img
+                        :src="plant_brand_series_item.logo"
+                        loading="lazy"
+                        alt=""
+                      />
                     </div>
                     <div>
-                      <img :src="plant_brand_series_item.nation" loading="lazy" alt="" />
+                      <img
+                        :src="plant_brand_series_item.nation"
+                        loading="lazy"
+                        alt=""
+                      />
                     </div>
                     <div class="item_compare">
                       <div>
@@ -1390,7 +1427,10 @@ const checkGroupPhoto = () => {
           </div>
         </div>
         <div class="technology-btn">
-          <PageAnimBtnTypeTwo str="取得預約口腔CT檢查" />
+          <PageAnimBtnTypeTwo
+            :link="`https://wa.me/85269338128?text=取得種植牙免費CT檢查`"
+            str="取得預約口腔CT檢查"
+          />
         </div>
       </div>
       <!-- <div class="Plant_brand_series" v-if="windowWidth > 768">
@@ -1620,7 +1660,7 @@ const checkGroupPhoto = () => {
           </div>
         </div>
         <div class="technology-btn">
-          <PageAnimBtnTypeTwo str="取得免費口腔CT檢查" />
+          <PageAnimBtnTypeTwo  :link="`https://wa.me/85269338128?text=取得種植牙免費CT檢查`" str="取得免費口腔CT檢查" />
         </div>
       </div>
       <!-- <div class="notice" v-if="windowWidth > 767">
@@ -1685,7 +1725,9 @@ const checkGroupPhoto = () => {
                   </div>
                   <div>0{{ stepIndex + 1 }}</div>
                 </div>
-                <div class="image"><img :src="stepItem.img" loading="lazy" alt="" /></div>
+                <div class="image">
+                  <img :src="stepItem.img" loading="lazy" alt="" />
+                </div>
                 <div class="name">{{ stepItem.name }}</div>
                 <div class="context">{{ stepItem.context }}</div>
               </div>
@@ -1770,13 +1812,19 @@ const checkGroupPhoto = () => {
                   <p>
                     <span>手術速度</span>
                     <span
-                      ><img src="../../assets/images/5star.svg" loading="lazy" alt=""
+                      ><img
+                        src="../../assets/images/5star.svg"
+                        loading="lazy"
+                        alt=""
                     /></span>
                   </p>
                   <p>
                     <span>復原速度</span>
                     <span
-                      ><img src="../../assets/images/5star.svg" loading="lazy" alt=""
+                      ><img
+                        src="../../assets/images/5star.svg"
+                        loading="lazy"
+                        alt=""
                     /></span>
                   </p>
                 </div>
@@ -1823,13 +1871,19 @@ const checkGroupPhoto = () => {
                   <p>
                     <span>手術速度</span>
                     <span
-                      ><img src="../../assets/images/3star.svg" loading="lazy" alt=""
+                      ><img
+                        src="../../assets/images/3star.svg"
+                        loading="lazy"
+                        alt=""
                     /></span>
                   </p>
                   <p>
                     <span>復原速度</span>
                     <span
-                      ><img src="../../assets/images/2star.svg" loading="lazy" alt=""
+                      ><img
+                        src="../../assets/images/2star.svg"
+                        loading="lazy"
+                        alt=""
                     /></span>
                   </p>
                 </div>
@@ -1868,15 +1922,15 @@ const checkGroupPhoto = () => {
           <div>傳統植牙</div>
           <div></div>
           <div>
-            <img
-              src="https://statichk.cmermedical.com/smile/2024122414593001.png"
+            <img 
+              src="https://statichk.cmermedical.com/ckj/image/f662a2c2f358.avif"
               alt=""
               loading="lazy"
             />
           </div>
           <div>
             <img
-              src="https://statichk.cmermedical.com/smile/2024122414594301.png"
+              src="https://statichk.cmermedical.com/ckj/image/7086304752d3.avif"
               alt=""
               loading="lazy"
             />
@@ -2385,7 +2439,7 @@ const checkGroupPhoto = () => {
     text-align: right;
     -webkit-text-stroke-width: 0.5;
     -webkit-text-stroke-color: var(--White, #fff);
-font-family: 'FakePearl-Regular';
+    font-family: 'FakePearl-Regular';
     font-size: clamp(40px, 5.7vw, 110px);
     font-style: normal;
     font-weight: 600;
@@ -2421,7 +2475,7 @@ font-family: 'FakePearl-Regular';
   .content-price {
     color: var(--White, #fff);
     text-align: right;
-font-family: 'FakePearl-Regular';
+    font-family: 'FakePearl-Regular';
     font-size: clamp(30px, 2.9165vw, 56px);
     font-style: normal;
     font-weight: 400;
@@ -2433,7 +2487,7 @@ font-family: 'FakePearl-Regular';
   .content-subscribe {
     color: var(--Theme-Color, #fc1682);
     text-align: center;
-font-family: 'FakePearl-Regular';
+    font-family: 'FakePearl-Regular';
     font-size: clamp(20px, 2.083vw, 40px);
     font-style: normal;
     font-weight: 400;
@@ -2520,7 +2574,7 @@ font-family: 'FakePearl-Regular';
           align-items: center;
           color: var(--White, #fff);
           text-align: center;
-      font-family: 'FakePearl-Regular';
+          font-family: 'FakePearl-Regular';
           font-size: 35px;
           font-style: normal;
           font-weight: 400;
@@ -2746,7 +2800,7 @@ font-family: 'FakePearl-Regular';
               transform: translate(-50%, -50%);
               color: var(--White, #fff);
               text-align: center;
-          font-family: 'FakePearl-Regular';
+              font-family: 'FakePearl-Regular';
               font-size: 35px;
               font-style: normal;
               font-weight: 400;
@@ -2766,7 +2820,7 @@ font-family: 'FakePearl-Regular';
             // padding: 8px 0;
             // clip-path: polygon(0 0, 80% 0, 85% 100%, 0 100%);
             color: var(--Theme-Color, #fc1682);
-        font-family: 'FakePearl-Regular';
+            font-family: 'FakePearl-Regular';
             font-size: 28px;
             font-style: normal;
             font-weight: 400;
@@ -2815,7 +2869,7 @@ font-family: 'FakePearl-Regular';
             padding: 8px 60px;
             color: var(--White, #fff);
             text-align: center;
-        font-family: 'FakePearl-Regular';
+            font-family: 'FakePearl-Regular';
             font-size: 35px;
             font-style: normal;
             font-weight: 400;
@@ -2833,7 +2887,7 @@ font-family: 'FakePearl-Regular';
                 gap: 0 20px;
                 & > span:nth-child(1) {
                   color: #fc1682;
-              font-family: 'FakePearl-Regular';
+                  font-family: 'FakePearl-Regular';
                   font-size: 30px;
                   font-style: normal;
                   font-weight: 500;
@@ -2855,7 +2909,7 @@ font-family: 'FakePearl-Regular';
         & > ul {
           margin-top: 30px;
           color: var(--Grey-Deep, #4d4d4d);
-      font-family: 'FakePearl-Regular';
+          font-family: 'FakePearl-Regular';
           font-size: 26px;
           font-style: normal;
           font-weight: 500;
@@ -2878,7 +2932,7 @@ font-family: 'FakePearl-Regular';
         margin: 120px auto 0;
         color: var(--Theme-Color, #fc1682);
         text-align: center;
-    font-family: 'FakePearl-Regular';
+        font-family: 'FakePearl-Regular';
         font-size: 26px;
         font-style: normal;
         font-weight: 500;
@@ -3005,7 +3059,7 @@ font-family: 'FakePearl-Regular';
         display: flex;
         flex-direction: column;
         color: var(--Grey-Deep, #4d4d4d);
-    font-family: 'FakePearl-Regular';
+        font-family: 'FakePearl-Regular';
         font-size: 26px;
         font-style: normal;
         font-weight: 500;
@@ -3286,7 +3340,7 @@ font-family: 'FakePearl-Regular';
     align-items: center;
     gap: 0 12px;
     color: var(--Theme-Color, #fc1682);
-font-family: 'FakePearl-Regular';
+    font-family: 'FakePearl-Regular';
     font-size: 26px;
     font-style: normal;
     font-weight: 500;
@@ -3327,7 +3381,7 @@ font-family: 'FakePearl-Regular';
       grid-column: 1 / 4;
       color: var(--Theme-Color, #fc1682);
       text-align: center;
-  font-family: 'FakePearl-Regular';
+      font-family: 'FakePearl-Regular';
       font-size: 35px;
       font-style: normal;
       font-weight: 400;
@@ -3356,7 +3410,7 @@ font-family: 'FakePearl-Regular';
           flex-direction: column;
           & > span:nth-child(1) {
             color: var(--Blue-Deep, #00aeff);
-        font-family: 'FakePearl-Regular';
+            font-family: 'FakePearl-Regular';
             font-size: 28px;
             font-style: normal;
             font-weight: 500;
@@ -3527,7 +3581,7 @@ font-family: 'FakePearl-Regular';
             align-items: center;
             color: var(--White, #fff);
             text-align: center;
-        font-family: 'FakePearl-Regular';
+            font-family: 'FakePearl-Regular';
             font-size: 35px;
             font-style: normal;
             font-weight: 400;
@@ -3756,7 +3810,7 @@ font-family: 'FakePearl-Regular';
                 transform: translate(-50%, -50%);
                 color: var(--White, #fff);
                 text-align: center;
-            font-family: 'FakePearl-Regular';
+                font-family: 'FakePearl-Regular';
                 font-size: 35px;
                 font-style: normal;
                 font-weight: 400;
@@ -3776,7 +3830,7 @@ font-family: 'FakePearl-Regular';
               // padding: 8px 0;
               // clip-path: polygon(0 0, 80% 0, 85% 100%, 0 100%);
               color: var(--Theme-Color, #fc1682);
-          font-family: 'FakePearl-Regular';
+              font-family: 'FakePearl-Regular';
               font-size: clamp(18px, 1.4583vw, 28px);
               font-style: normal;
               font-weight: 400;
@@ -3826,7 +3880,7 @@ font-family: 'FakePearl-Regular';
               padding: 8px clamp(20px, 3.125vw, 60px);
               color: var(--White, #fff);
               text-align: center;
-          font-family: 'FakePearl-Regular';
+              font-family: 'FakePearl-Regular';
               font-size: clamp(25px, 1.8229vw, 35px);
               font-style: normal;
               font-weight: 400;
@@ -3844,7 +3898,7 @@ font-family: 'FakePearl-Regular';
                   gap: 0 20px;
                   & > span:nth-child(1) {
                     color: #fc1682;
-                font-family: 'FakePearl-Regular';
+                    font-family: 'FakePearl-Regular';
                     font-size: clamp(10px, 1.5625vw, 30px);
                     font-style: normal;
                     font-weight: 500;
@@ -3872,7 +3926,7 @@ font-family: 'FakePearl-Regular';
           & > ul {
             margin-top: clamp(10px, 1.5625vw, 30px);
             color: var(--Grey-Deep, #4d4d4d);
-        font-family: 'FakePearl-Regular';
+            font-family: 'FakePearl-Regular';
             font-size: clamp(14px, 1.354vw, 26px);
             font-style: normal;
             font-weight: 500;
@@ -3895,7 +3949,7 @@ font-family: 'FakePearl-Regular';
           margin: clamp(80px, 6.25vw, 120px) auto 0;
           color: var(--Theme-Color, #fc1682);
           text-align: center;
-      font-family: 'FakePearl-Regular';
+          font-family: 'FakePearl-Regular';
           font-size: clamp(14px, 1.354vw, 26px);
           font-style: normal;
           font-weight: 500;
@@ -4297,7 +4351,7 @@ font-family: 'FakePearl-Regular';
         grid-column: 1 / 4;
         color: var(--Theme-Color, #fc1682);
         text-align: center;
-    font-family: 'FakePearl-Regular';
+        font-family: 'FakePearl-Regular';
         font-size: 35px;
         font-style: normal;
         font-weight: 400;
@@ -4326,7 +4380,7 @@ font-family: 'FakePearl-Regular';
             flex-direction: column;
             & > span:nth-child(1) {
               color: var(--Blue-Deep, #00aeff);
-          font-family: 'FakePearl-Regular';
+              font-family: 'FakePearl-Regular';
               font-size: clamp(14px, 1.453vw, 26px);
               font-style: normal;
               font-weight: 500;
@@ -4955,7 +5009,7 @@ font-family: 'FakePearl-Regular';
             gap: 0 120px;
             margin-bottom: 6px;
             & > div {
-          font-family: 'FakePearl-Regular';
+              font-family: 'FakePearl-Regular';
               font-size: 20px;
               font-style: normal;
               font-weight: 400;
@@ -5138,7 +5192,7 @@ font-family: 'FakePearl-Regular';
           }
           & > span:nth-child(2) {
             color: var(--Theme-Color, #fc1682);
-        font-family: 'FakePearl-Regular';
+            font-family: 'FakePearl-Regular';
             font-size: 4.1vw;
             font-style: normal;
             font-weight: 600;
@@ -5147,7 +5201,7 @@ font-family: 'FakePearl-Regular';
           & > span:nth-child(4) {
             color: var(--Grey-Deep, #4d4d4d);
             text-align: justify;
-        font-family: 'FakePearl-Regular';
+            font-family: 'FakePearl-Regular';
             font-size: 3.07vw;
             font-style: normal;
             font-weight: 600;
@@ -5195,7 +5249,7 @@ font-family: 'FakePearl-Regular';
       gap: 0 5px;
       & > div:nth-child(1) {
         color: var(--Theme-Color, #fc1682);
-    font-family: 'FakePearl-Regular';
+        font-family: 'FakePearl-Regular';
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
@@ -5217,7 +5271,7 @@ font-family: 'FakePearl-Regular';
   .Plant_brand_series-content {
     & > div:nth-child(2) > span {
       color: var(--Grey-Deep, #4d4d4d);
-  font-family: 'FakePearl-Regular';
+      font-family: 'FakePearl-Regular';
       font-size: 15px;
       font-style: normal;
       font-weight: 400;
@@ -5282,7 +5336,7 @@ font-family: 'FakePearl-Regular';
         background: var(--Theme-Color, #fc1682);
         color: var(--White, #fff);
         text-align: center;
-    font-family: 'FakePearl-Regular';
+        font-family: 'FakePearl-Regular';
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
@@ -5307,7 +5361,7 @@ font-family: 'FakePearl-Regular';
         background: var(--Pink-Pale, #fee6f1);
         color: var(--Grey-Deep, #4d4d4d);
         text-align: center;
-    font-family: 'FakePearl-Regular';
+        font-family: 'FakePearl-Regular';
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
@@ -5356,7 +5410,7 @@ font-family: 'FakePearl-Regular';
           background: var(--Theme-Color, #fc1682);
           color: var(--White, #fff);
           text-align: center;
-      font-family: 'FakePearl-Regular';
+          font-family: 'FakePearl-Regular';
           font-size: 16px !important;
           font-style: normal;
           font-weight: 500;
@@ -5380,7 +5434,7 @@ font-family: 'FakePearl-Regular';
               align-items: center;
               & > span:nth-child(1) {
                 color: #fc1682;
-            font-family: 'FakePearl-Regular';
+                font-family: 'FakePearl-Regular';
                 font-size: 16px !important;
                 font-style: normal;
                 font-weight: 600;
@@ -5424,7 +5478,7 @@ font-family: 'FakePearl-Regular';
       width: fit-content;
       position: relative;
       color: var(--Grey-Deep, #4d4d4d);
-  font-family: 'FakePearl-Regular';
+      font-family: 'FakePearl-Regular';
       font-size: 5.12vw;
       font-style: normal;
       line-height: 160%; /* 32px */
@@ -5467,7 +5521,7 @@ font-family: 'FakePearl-Regular';
         flex-direction: column;
         color: var(--Theme-Color, #fc1682);
         text-align: center;
-    font-family: 'FakePearl-Regular';
+        font-family: 'FakePearl-Regular';
         font-size: 20px !important;
         font-style: normal;
         font-weight: 500 !important;
@@ -5489,7 +5543,7 @@ font-family: 'FakePearl-Regular';
             flex-direction: column;
             & > span:nth-child(1) {
               color: var(--Blue-Deep, #00aeff);
-          font-family: 'FakePearl-Regular';
+              font-family: 'FakePearl-Regular';
               font-size: 20px;
               font-style: normal;
               font-weight: 400;
@@ -5565,7 +5619,7 @@ font-family: 'FakePearl-Regular';
             background: var(--Theme-Color, #fc1682);
             color: var(--White, #fff);
             text-align: right;
-        font-family: 'FakePearl-Regular';
+            font-family: 'FakePearl-Regular';
             font-size: 16px;
             font-style: normal;
             font-weight: 500;
@@ -5584,7 +5638,7 @@ font-family: 'FakePearl-Regular';
               gap: 0 8px;
               & > span:nth-child(1) {
                 color: var(--Theme-Color, #fc1682);
-            font-family: 'FakePearl-Regular';
+                font-family: 'FakePearl-Regular';
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 600;
@@ -5599,7 +5653,7 @@ font-family: 'FakePearl-Regular';
         padding-left: 40px;
         list-style: disc;
         color: var(--Grey-Deep, #4d4d4d);
-    font-family: 'FakePearl-Regular';
+        font-family: 'FakePearl-Regular';
         font-size: 15px;
         font-style: normal;
         font-weight: 400;
@@ -5801,7 +5855,7 @@ font-family: 'FakePearl-Regular';
       bottom: -10px;
       color: var(--Theme-Color, #fc1682);
       text-align: center;
-  font-family: 'FakePearl-Regular';
+      font-family: 'FakePearl-Regular';
       font-size: 20px;
       font-style: normal;
       font-weight: 600;

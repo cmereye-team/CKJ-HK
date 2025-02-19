@@ -217,7 +217,7 @@ const itemList = () => {
         <div class="item_btn">
           <PageAnimBtnTypeTwo
             str="線上諮詢"
-            :link="`https://wa.me/85269338128?text=Hello愛康健,我想查詢牙科服務`"
+            :link="`https://wa.me/85269338128?text=取得種植牙免費CT檢查`"
           />
         </div>
       </div>

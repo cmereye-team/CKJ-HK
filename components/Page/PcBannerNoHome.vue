@@ -19,6 +19,10 @@ defineProps({
     type: String,
     default: '',
   },
+  linkBtn:{
+    type: String,
+    default: '',
+  },
   isPageNoBanner: {
     type: Boolean,
     default: false,
@@ -95,7 +99,7 @@ const hideShowText = computed(() => {
       />
     </div>
     <div class="btn-wrapper">
-      <PageAnimBtnTypeTwo :str="btnText || '免費網上預約'" />
+      <PageAnimBtnTypeTwo :str="btnText || '免費網上預約'" :link="headerConfig.linkBtn" />
     </div>
     <div class="text-wrapper" v-if="isShowTextAll">
       <div>
