@@ -60,7 +60,7 @@ const handleDoctor = () => {}
               </div>
               <div class="doctorContent-btn">
                 <!-- <span @click="toWhatsApp">線上諮詢</span> -->
-                <PageAnimBtnTypeTwo typeClass="smallmb" str="線上諮詢" />
+                <PageAnimBtnTypeTwo typeClass="smallmb" :link="`https://wa.me/85269338128?text=Hello愛康健我想預約洗牙`" str="線上諮詢" />
               </div>
             </div>
           </SwiperSlide>

@@ -34,6 +34,7 @@ const headerConfig = {
     '愛牙愛己，愛康健細心守護您牙齒健康',
   ],
   mbText: ['定期洗牙', '全方位清潔口腔盲點'],
+  linkBtn: `https://wa.me/85269338128?text=Hello愛康健我想預約洗牙`,
 }
 
 const orthodonticsIntroduceData = {
@@ -617,11 +618,9 @@ const removeSurroundingParentheses = (str) => {
                   >
                   <span v-else></span>
                   <span
-                    ><i>￥</i>{{ plant_brand_series_item.price
-                    }}
+                    ><i>￥</i>{{ plant_brand_series_item.price }}
                     <!-- <i class="icon-emoji">🎅</i> -->
-                    </span
-                  >
+                  </span>
                 </div>
               </div>
               <div>
@@ -790,7 +789,7 @@ const removeSurroundingParentheses = (str) => {
             <span>現在就來預約我們的洗牙服務吧！</span>
           </div>
           <div class="charge-btn">
-            <PageAnimBtnTypeTwo :str="'預約檢查及諮詢'" />
+            <PageAnimBtnTypeTwo :str="'預約檢查及諮詢'" :link="`https://wa.me/85269338128?text=Hello愛康健我想預約洗牙`" />
           </div>
         </div>
       </div>
@@ -1131,7 +1130,7 @@ const removeSurroundingParentheses = (str) => {
     text-align: right;
     -webkit-text-stroke-width: 0.5;
     -webkit-text-stroke-color: var(--White, #fff);
-font-family: 'FakePearl-Regular';
+    font-family: 'FakePearl-Regular';
     font-size: clamp(40px, 5.7vw, 110px);
     font-style: normal;
     font-weight: 600;
@@ -1169,7 +1168,7 @@ font-family: 'FakePearl-Regular';
   .content-price {
     color: var(--White, #fff);
     text-align: right;
-font-family: 'FakePearl-Regular';
+    font-family: 'FakePearl-Regular';
     font-size: clamp(30px, 2.9165vw, 56px);
     font-style: normal;
     font-weight: 400;
@@ -1180,7 +1179,7 @@ font-family: 'FakePearl-Regular';
     & > div:nth-child(4) {
       color: var(--White, #fff);
       text-align: center;
-  font-family: 'FakePearl-Regular';
+      font-family: 'FakePearl-Regular';
       font-size: 20px;
       font-style: normal;
       font-weight: 400;
@@ -1192,7 +1191,7 @@ font-family: 'FakePearl-Regular';
   .content-subscribe {
     color: var(--Theme-Color, #fc1682);
     text-align: center;
-font-family: 'FakePearl-Regular';
+    font-family: 'FakePearl-Regular';
     font-size: clamp(20px, 2.083vw, 40px);
     font-style: normal;
     font-weight: 400;
@@ -1489,7 +1488,7 @@ font-family: 'FakePearl-Regular';
       flex-direction: column;
       color: var(--Theme-Color, #fc1682);
       text-align: center;
-  font-family: 'FakePearl-Regular';
+      font-family: 'FakePearl-Regular';
       font-size: 30px;
       font-style: normal;
       font-weight: 400;
@@ -1513,7 +1512,7 @@ font-family: 'FakePearl-Regular';
         border-radius: 40px;
         background: var(--Theme-Color, #fc1682);
         color: var(--White, #fff);
-    font-family: 'FakePearl-Regular';
+        font-family: 'FakePearl-Regular';
         font-size: 28px;
         font-style: normal;
         font-weight: 500;
@@ -2453,7 +2452,7 @@ font-family: 'FakePearl-Regular';
       z-index: 35px;
     }
   }
-  :deep(.index_title ) {
+  :deep(.index_title) {
     margin-top: 30px;
   }
   :deep(.header-content) {
@@ -2905,7 +2904,7 @@ font-family: 'FakePearl-Regular';
         }
         & > span:nth-child(2) {
           color: var(--Theme-Color, #fc1682);
-      font-family: 'FakePearl-Regular';
+          font-family: 'FakePearl-Regular';
           font-size: 4.1vw;
           font-style: normal;
           font-weight: 600;
@@ -2914,7 +2913,7 @@ font-family: 'FakePearl-Regular';
         & > span:nth-child(4) {
           color: var(--Grey-Deep, #4d4d4d);
           text-align: justify;
-      font-family: 'FakePearl-Regular';
+          font-family: 'FakePearl-Regular';
           font-size: 3.07vw;
           font-style: normal;
           font-weight: 600;
@@ -2945,7 +2944,7 @@ font-family: 'FakePearl-Regular';
     padding: 11px 15px;
     color: var(--White, #fff);
     text-align: justify;
-font-family: 'FakePearl-Regular';
+    font-family: 'FakePearl-Regular';
     font-size: 12px;
     font-style: normal;
     font-weight: 400;
@@ -3277,7 +3276,7 @@ font-family: 'FakePearl-Regular';
       }
       & > div:nth-child(4) {
         color: var(--White, #fff);
-    font-family: 'FakePearl-Regular';
+        font-family: 'FakePearl-Regular';
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -3303,7 +3302,7 @@ font-family: 'FakePearl-Regular';
       bottom: -10px;
       color: var(--Theme-Color, #fc1682);
       text-align: center;
-  font-family: 'FakePearl-Regular';
+      font-family: 'FakePearl-Regular';
       font-size: 20px;
       font-style: normal;
       font-weight: 600;
