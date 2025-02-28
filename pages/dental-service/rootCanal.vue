@@ -26,9 +26,9 @@ useHead({
 })
 
 const headerConfig = {
-  img: 'https://statichk.cmermedical.com/ckj/service-page-test/rootCanal-pc.avif',
+  img: 'https://static.ckjhk.com/ckj-image/33f37ed17527.webp',
   mbImg:
-    'https://statichk.cmermedical.com/ckj/service-page-test/rootCanal-mb.avif',
+    'https://static.ckjhk.com/ckj-image/f9f786be0dfe.webp',
   bg: '',
   pageName: 'rootCanal-test',
   pcText: [
@@ -720,6 +720,7 @@ let newsMessageSwiperRef = {
 
 <style lang="scss" scoped>
 .banner-in-box {
+  display: none !important;
   position: absolute;
   top: 50%;
   left: 0;
@@ -1981,6 +1982,7 @@ let newsMessageSwiperRef = {
     margin-top: 30px;
   }
   .banner-in-box {
+    display: none !important;
     position: absolute;
     bottom: 0;
     left: 0;

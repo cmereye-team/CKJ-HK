@@ -22,9 +22,9 @@ useHead({
 })
 
 const headerConfig = {
-  img: 'https://statichk.cmermedical.com/ckj/service-page-test/veneers-pc.avif',
+  img: 'https://static.ckjhk.com/ckj-image/5d2041a47bc5.webp',
   mbImg:
-    'https://statichk.cmermedical.com/ckj/service-page-test/veneers-mb.avif',
+    'https://static.ckjhk.com/ckj-image/8d15ae86c89e.webp',
   bg: '',
   pageName: 'veneers-test',
   pcText: ['自訂零死角潔白微笑線', '展現自信微笑'],
@@ -560,6 +560,7 @@ const caseLists = [
 
 <style lang="scss" scoped>
 .banner-in-box {
+  display: none !important;
   position: absolute;
   top: 50%;
   left: 0;
@@ -1869,6 +1870,7 @@ font-family: 'FakePearl-Regular';
     }
   }
   .banner-in-box {
+    display: none !important;
     position: absolute;
     bottom: 0;
     left: 0;

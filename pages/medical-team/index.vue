@@ -287,7 +287,7 @@ onMounted(() => {
                       >{{ jobItem }}</span
                     >
                   </div>
-                  <div class="detail-4">
+                  <div class="detail-4" v-if="doctorItem.newSkilled">
                     <span>擅長項目：</span>
                     <span>
                       {{ doctorItem.newSkilled }}

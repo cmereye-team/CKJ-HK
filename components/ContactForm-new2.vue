@@ -427,7 +427,7 @@ let privacyPolicy = ref(true)
     <div id="contactUsFormNav"></div>
     <div class="contactForm-bg">
       <div class="contactForm-title">
-        <span>立即預約牙科診症</span>
+        <span>AI智能預約及查詢系統</span>
         <span>（星期一至日 9:00am – 6:30pm）</span>
       </div>
       <div class="contactForm-in">

@@ -29,9 +29,9 @@ const introduceJY = {
 }
 
 const headerConfig = {
-  img: 'https://statichk.cmermedical.com/ckj/service-page-test/fillings-pc.avif',
+  img: 'https://static.ckjhk.com/ckj-image/2bd9dad3fafb.webp',
   mbImg:
-    'https://statichk.cmermedical.com/ckj/service-page-test/fillings-mb.avif',
+    'https://static.ckjhk.com/ckj-image/04f7c6f31d73.webp',
   bg: '',
   pageName: 'invisalign-test',
   pcText: [],
@@ -839,6 +839,7 @@ const differData: any = {
 
 <style lang="scss" scoped>
 .banner-in-box {
+  display: none !important;
   position: absolute;
   top: 50%;
   left: 0;
@@ -2943,6 +2944,7 @@ font-family: 'FakePearl-Regular';
     }
   }
   .banner-in-box {
+    display: none !important;
     position: absolute;
     bottom: 0;
     left: 0;

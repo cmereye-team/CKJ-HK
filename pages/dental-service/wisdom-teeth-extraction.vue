@@ -22,8 +22,8 @@ useHead({
 })
 
 const headerConfig = {
-  img: 'https://statichk.cmermedical.com/ckj/service-page-test/wisdom-teeth-extraction-pc.avif',
-  mbImg: 'https://statichk.cmermedical.com/ckj/service-page-test/wisdom-teeth-extraction-mb.avif',
+  img: 'https://static.ckjhk.com/ckj-image/cf46e3758a4b.webp',
+  mbImg: 'https://static.ckjhk.com/ckj-image/6b6a544c18ea.webp',
   bg: '',
   pageName: 'scaling-and-polishing-test',
   pcText: [],
@@ -791,6 +791,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .banner-in-box {
+  display: none !important;
   position: absolute;
   top: 50%;
   left: 0;
@@ -1997,6 +1998,7 @@ font-family: 'FakePearl-Regular';
     }
   }
   .banner-in-box {
+    display: none !important;
     position: absolute;
     bottom: 0;
     left: 0;

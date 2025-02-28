@@ -24,9 +24,9 @@ useHead({
 })
 
 const headerConfig = {
-  img: 'https://statichk.cmermedical.com/ckj/service-page-test/scaling-and-polishing-pc.avif',
+  img: 'https://static.ckjhk.com/ckj-image/72d8c5563b02.webp',
   mbImg:
-    'https://statichk.cmermedical.com/ckj/service-page-test/scaling-and-polishing-mb.avif',
+    'https://static.ckjhk.com/ckj-image/f5e99be8d7ed.webp',
   bg: '',
   pageName: 'scaling-and-polishing-test',
   pcText: [
@@ -400,8 +400,8 @@ const Plant_brand_series_data = [
   {
     id: '1101',
     name: ['基礎專業', '洗牙'],
-    // price: '88',
-    price: '68', // 圣诞价格
+    price: '88',
+    // price: '68', // 圣诞价格
     oldPrice: '180',
     img: 'https://static.cmereye.com/imgs/2024/11/01fd99a1cf216221.png',
     compare: [
@@ -419,8 +419,8 @@ const Plant_brand_series_data = [
   {
     id: '1102',
     name: ['菌斑導向專業洗牙', '(含鹽)'],
-    // price: '168',
-    price: '128', // 圣诞价格
+    price: '168',
+    // price: '128', // 圣诞价格
     oldPrice: '350',
     img: 'https://static.cmereye.com/imgs/2024/11/7d36488bc41e7ad6.png',
     compare: [
@@ -815,7 +815,7 @@ const removeSurroundingParentheses = (str) => {
                     >原價￥{{ item_mobile.oldPrice }}</span
                   >
                   <span v-else></span>
-                  <span><i>￥</i>{{ item_mobile.price }}<i>🎅</i></span>
+                  <span><i>￥</i>{{ item_mobile.price }}<i></i></span>
                 </div>
               </div>
               <div>
@@ -1107,6 +1107,7 @@ const removeSurroundingParentheses = (str) => {
 
 <style lang="scss" scoped>
 .banner-in-box {
+  display: none !important;
   position: absolute;
   top: 50%;
   left: 0;
@@ -3228,6 +3229,7 @@ const removeSurroundingParentheses = (str) => {
     }
   }
   .banner-in-box {
+  display: none !important;
     position: absolute;
     bottom: 0;
     left: 0;

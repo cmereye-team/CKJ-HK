@@ -39,8 +39,8 @@ const orthodonticsIntroduceData = {
 }
 
 const headerConfig = {
-  img: 'https://statichk.cmermedical.com/ckj/service-page-test/toothtray-pc.avif',
-  mbImg: 'https://statichk.cmermedical.com/ckj/service-page-test/toothtray-mb.avif',
+  img: 'https://static.ckjhk.com/ckj-image/2b7f2ded9b7e.webp',
+  mbImg: 'https://static.ckjhk.com/ckj-image/cc4723d4dece.webp',
   bg: '',
   pageName: 'scaling-and-polishing-test',
   pcText: [],
@@ -833,6 +833,7 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 .banner-in-box {
+  display: none !important;
   position: absolute;
   top: 50%;
   left: 0;
@@ -2122,6 +2123,7 @@ font-family: 'FakePearl-Regular';
     font-size: 5.3334vw;
   }
   .banner-in-box {
+    display: none !important;
     position: absolute;
     bottom: 0;
     left: 0;
